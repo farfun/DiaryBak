@@ -10,7 +10,7 @@ title: good good study day day up
 email: 1007530194@qq.com
 description: > # this means to ignore newlines until "baseurl:"
     The world is indeed a stage and we are merely players.
-baseurl: /blog-cn  # the subpath of your site, e.g. /blog
+baseurl: /  # the subpath of your site, e.g. /blog
 lang: "en"
 url:  # the base hostname & protocol for your site
 twitter_username: 1007530194
