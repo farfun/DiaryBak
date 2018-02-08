@@ -1,0 +1,9 @@
+{
+  "title": "Markdown",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "$$sim(u,v) = |N(u) \\cap N(v)| / (\\sqrt{|N(u)|} * \\sqrt{|N(v)|})$$\n\n\n\n\n $$sim(u,v) = \\sum_{w \\in N(u) \\cap N(v)} 1 / |N(w)|$$\n \n  $$sim(u,v) = |N(u) \\cap N(v)| / |N(u) \\cup N(v)|$$\n  \n  $$sim(u,v) = |N(u) \\cap N(v)|$$\n  \n  \n  $$sim(u,v) = \\sum_{w \\in N(u) \\cap N(v)} 1 / lg(|N(w)|) /(\\sqrt{|N(v)|} * \\sqrt{1 + ||N(v)| - |N(u)|})$$"
+    }
+  ]
+}

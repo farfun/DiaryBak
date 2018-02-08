@@ -1,0 +1,9 @@
+{
+  "title": "标签二级页",
+  "cells": [
+    {
+      "type": "text",
+      "data": "店铺过滤<div><br></div><div><br></div><div><br></div><div>看过的标签</div><div>Key userId</div><div>Value tagId_page_time</div><div><br></div><div><div><br></div><div>看过的店铺 &nbsp;保存六小时吧</div><div>Key userId</div><div>Value shopId_shopId &nbsp;(存500个店铺)</div></div><div><br></div><div><br></div><div><br></div><div>看过标签的店铺 &nbsp; 保存1个小时</div><div>Key userId_tagId</div><div>Value time;page1:shopId_shopId_shopId,page2:shopId_shopId</div><div><br></div><div><br></div><div>标签店铺<br></div><div>召回 &nbsp;这个标签的所有店铺 &nbsp; Hera获取所有店铺</div><div>过滤 &nbsp;过滤请求过的店铺 &nbsp; &nbsp; &nbsp; 过滤当前page前的所有店铺</div><div>排序 &nbsp;看过的店铺，往后排 &nbsp;&nbsp;</div><div><br></div><div><br></div><div>重复请求 &nbsp; 一小时内有记录的，再次请求会直接读历史数据</div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div>"
+    }
+  ]
+}
