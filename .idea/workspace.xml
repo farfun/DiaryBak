@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dd812bb5-d92d-442c-ba5d-56d41b5654b8" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ami-selection.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/aws-homepage.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/aws-signin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/aws-signup.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/bing.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cat.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cat_tinted.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cat_tinted_imshow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/challenges.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/classify.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/classifydemo.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cloud-create-instance-screen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cloud-dashboard-screen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cloud-external-ip.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cloud-for-free.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cloud-instance-dashboard-screen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cloud-instance-started.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cloud-launching-screen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cloud-networking-external-ip-address.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cloud-networking-external-ip-naming.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cloud-networking-external-ip.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cloud-networking-firewall-rule-create.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cloud-networking-firewall-rule.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cnn/cnn.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cnn/convnet.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cnn/depthcol.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cnn/maxpool.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cnn/pool.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cnn/stride.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cnn/weights.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cnnvis/act1.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cnnvis/act2.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cnnvis/filt1.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cnnvis/filt2.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cnnvis/occlude.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cnnvis/pool5max.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cnnvis/tsne.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/community-AMIs.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/create-instance-screen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/crossval.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cveg.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/cvplot.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/dataflow.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ec2-dashboard.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/eg/spiral_linear.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/eg/spiral_net.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/eg/spiral_raw.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/google-cloud-create-image-screenshot.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/google-cloud-instance-gpus.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/google-cloud-quotas-form.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/google-cloud-quotas-screen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/google-cloud-select-cloud-storage.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/google-cloud-select-custom-image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/imagemap.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/instance-selection.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/instances-page.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ipython-tutorial/file-browser.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ipython-tutorial/notebook-1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ipython-tutorial/notebook-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ipython-tutorial/notebook-3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ipython-tutorial/notebook-error.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ipython-tutorial/save-notebook.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/jupyter-screen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/key-pair-create.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/key-pair.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/knn.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/launch-screen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/launching-screen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/map.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/margin.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/nn.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/nn1/alexplot.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/nn1/layer_sizes.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/nn1/neural_net.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/nn1/neural_net2.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/nn1/neuron.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/nn1/neuron_model.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/nn1/reg_strengths.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/nn1/relu.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/nn1/sigmoid.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/nn1/tanh.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/nn2/cifar10pca.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/nn2/dropout.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/nn2/prepro1.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/nn2/prepro2.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/nn3/accuracies.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/nn3/cnnweights.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/nn3/gridsearchbad.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/nn3/learningrates.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/nn3/loss.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/nn3/nesterov.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/nn3/updates.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/nn3/values.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/nn3/weights.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/nneg.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/pixels_embed_cifar10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/pixels_embed_cifar10_big.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/pixelspace.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/sadpuppy_nocredits.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/samenorm.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/sine.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/sine_cosine.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/sine_cosine_subplot.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/stepsize.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/svm1d.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/svm_all.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/svm_one.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/svmbowl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/svmvssoftmax.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/templates.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/terminal-coursework.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/terminal-development.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/terminal-my.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/terminal-shared.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/trainset.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/wb.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/create-instance-screen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_includes/footer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_includes/head.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_includes/header.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_layouts/default.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_layouts/page.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_layouts/post.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/conv-demo/external/d3.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/conv-demo/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/conv-demo/utils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignment2_google_cloud.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignments/2015/assignment1.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignments/2015/assignment2.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignments/2015/assignment3.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignments/2016/assignment1.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignments/2016/assignment2.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignments/2016/assignment3.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignments/2017/assignment1.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignments/2017/assignment2.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assignments/2017/assignment3.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aws-tutorial.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classification.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/convnet-tips.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/convolutional-networks.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/main.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/google_cloud_tutorial.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ipython-tutorial.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/linear-classify.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/neural-networks-1.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/neural-networks-2.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/neural-networks-3.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/neural-networks-case-study.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/optimization-1.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/optimization-2.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/overview.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/poster.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-numpy-tutorial.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/terminal-tutorial.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/transfer-learning.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/understanding-cnn.md" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cover.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/markdown.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/zepto.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/posts/about.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/posts/index.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/posts/resources/08D470990F94E04CF5A4C299D5874F23.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/posts/resources/12CA0A69703321FE180C23BF3EB3690B.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/posts/resources/2091A935ECF2550EAF3A106570FF4970.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/posts/resources/2CC0236218560646D69F23ABD0DFD8BC.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/posts/resources/37B60D37F22C96F4799E12DDFD5BA57C.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/posts/resources/3AC1024A06BE1D9B6347FC963C0631C5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/posts/resources/3DF702219FAB3D997C113012298E0B5B.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/posts/resources/46014C1E2CF1D2096356492A25FA4E65.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/posts/resources/4890A8C8D95988FA07C0F2154B8B223C.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/posts/resources/596F2A3AA6B0D2E9EF7538C7B250AB5B.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/posts/resources/7441D20DF105CFF10DCB926B8B7380A4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/posts/resources/A6EDB9F486AB76784C9CD471837B8692.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/posts/resources/A8CBFF96632AF44A6A0733E066F44780.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/posts/resources/AB0C4F727AD239EE048C29EB0708F1AD.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/posts/resources/B09FB49C5D844A1ADCFC4ED9B25FEF63.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/posts/resources/C600263112CE718CA9367014B64911EA.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/posts/resources/D231DB6E7EDF57F21A861A719B67A0F3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/posts/resources/D781F389FBC8D4B602BA0A40057BD2A6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/posts/resources/E1CBF10CFDF71B3AA15940714647AC5D.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/posts/resources/E5C6604C652228E2659FB60948F3328C.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/posts/resources/F053CB7891B83299A3A0D214D15821F3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/posts/resume.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/posts/加速神经网络.md" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/latex.md" afterPath="$PROJECT_DIR$/latex.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/resources/4A3B4A39AB8E5C556359147B882B4788.gif" afterPath="$PROJECT_DIR$/assets/nn3/opt1.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/resources/5D5166A3D3712E7C03AF74B1CCACBEAC.gif" afterPath="$PROJECT_DIR$/assets/nn3/opt2.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="加速神经网络.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/diary/quiver/深度学习2/加速神经网络.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SECOND">
+              <first_editor relative-caret-position="165">
+                <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/i/fastclick.js" />
+        <option value="$PROJECT_DIR$/i/i.css" />
+        <option value="$PROJECT_DIR$/i/itorr2.js" />
+        <option value="$PROJECT_DIR$/i/templet.js" />
+        <option value="$PROJECT_DIR$/i/md.js" />
+        <option value="$PROJECT_DIR$/i/gitblog.js" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/posts/about.md" />
+        <option value="$PROJECT_DIR$/js/markdown.js" />
+        <option value="$PROJECT_DIR$/js/zepto.min.js" />
+        <option value="$PROJECT_DIR$/posts/index.md" />
+        <option value="$PROJECT_DIR$/index.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="723" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Diary" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Diary" type="462c0819:PsiDirectoryNode" />
+              <item name="diary" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="settings.saveactions" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/posts" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dd812bb5-d92d-442c-ba5d-56d41b5654b8" name="Default" comment="" />
+      <created>1518056823854</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1518056823854</updated>
+    </task>
+    <task id="LOCAL-00001" summary="add">
+      <created>1518059471671</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1518059471671</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add">
+      <created>1518059743267</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1518059743267</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add">
+      <created>1518060102928</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1518060102928</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add">
+      <created>1518060356080</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1518060356080</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add">
+      <created>1518060615622</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1518060615622</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add">
+      <created>1518061438204</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1518061438204</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add">
+      <created>1518071135924</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1518071135924</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add">
+      <created>1518071308690</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1518071308690</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add">
+      <created>1518072536842</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1518072536842</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add">
+      <created>1518073031500</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1518073031500</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1280" height="723" extended-state="0" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3231018" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add" />
+    <option name="LAST_COMMIT_MESSAGE" value="add" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/i/fastclick.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="170" column="39" lean-forward="true" selection-start-line="170" selection-start-column="39" selection-end-line="170" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/i/templet.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/i/md.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="661" column="0" lean-forward="true" selection-start-line="661" selection-start-column="0" selection-end-line="661" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/markdown/javascript_数组排序详细分析.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="15">
+            <caret line="1" column="18" lean-forward="true" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/i/itorr2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="250" column="28" lean-forward="false" selection-start-line="250" selection-start-column="28" selection-end-line="250" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/i/i.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="191" column="0" lean-forward="true" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diary/quiver/深度学习/加速神经网络.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diary/quiver/深度学习2/latex语法.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/i/gitblog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="95" column="13" lean-forward="false" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posts/resume.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-773">
+            <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diary/quiver/深度学习2/加速神经网络.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SECOND">
+          <first_editor relative-caret-position="165">
+            <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="142">
+            <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posts/about.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="90">
+            <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posts/加速神经网络.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="226">
+            <caret line="119" column="12" lean-forward="true" selection-start-line="119" selection-start-column="12" selection-end-line="119" selection-end-column="12" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posts/latex.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/zepto.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/markdown.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posts/index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="375">
+            <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/latex.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
