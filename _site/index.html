@@ -1,483 +1,376 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
   <head>
     <meta charset="utf-8">
-    <title>寂寞先生</title>
-    
-    <meta name="author" content="牛">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CS231n Convolutional Neural Networks for Visual Recognition</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Course materials and notes for Stanford class CS231n: Convolutional Neural Networks for Visual Recognition.">
+    <link rel="canonical" href="http://localhost:4000/">
 
-    <!-- Enable responsive viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
-    <!-- Le styles -->
-    <link href="/assets/themes//bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
-    <link href="/assets/themes//css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
-    <link href="/assets/themes//css/prettify.css" rel="stylesheet" type="text/css">
-    <script src="/assets/themes//js/prettify.js"></script>
-    <!-- Le fav and touch icons -->
-  <!-- Update these with your own images
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-  -->
+    <!-- Google tracking -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-    <!-- atom & rss feed -->
-    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
-    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
-    
-<!--    font-awesome-->
-<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  
-  </head>
+        ga('create', 'UA-46895817-2', 'auto');
+        ga('send', 'pageview');
 
-  <body onload="prettyPrint()">
-    <div class="navbar">
-      <div class="navbar-inner">
-       <div class="nav-narrow">
-          <a class="brand" href="/"><span class="fa fa-mortar-board (alias)">nothing</span></a>
-          <ul class="nav">
-            
-            
-            
+    </script>
 
 
-  
-    
-      
-      	
-      	<li><a href="/archive">文章</a></li>
-      	
-      
-    
-  
-    
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/categories">分类</a></li>
-      	
-      
-    
-  
-    
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/pages">页面</a></li>
-      	
-      
-    
-  
-    
-      
-    
-  
-    
-      
-    
-  
-    
-      
-      	
-      	<li><a href="/tags">标签</a></li>
-      	
-      
-    
-  
+</head>
 
 
+    <body>
 
-          </ul>
+    <header class="site-header">
+
+    <div class="wrap title-wrap">
+        <a class="site-title" href="/">CS231n Convolutional Neural Networks for Visual Recognition</a>
+    </div>
+    <style>
+        table {
+            border-left: 1px solid #000000;
+            border-top: 1px solid #000000;
+            width: 100%;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+
+        table th {
+            text-align: center;
+        }
+
+        table th, td {
+            border-right: 1px solid #000000;
+            border-bottom: 1px solid #000000;
+        }
+    </style>
+</header>
+
+
+    <div class="page-content">
+      <div class="wrap">
+      <div>
+
+    These notes accompany the Stanford CS class <a href="http://cs231n.stanford.edu/">CS231n: Convolutional Neural
+    Networks for Visual Recognition</a>.
+    <br>
+    For questions/concerns/bug reports contact <a href="http://cs.stanford.edu/people/jcjohns/">Justin Johnson</a>
+    regarding the assignments, or contact <a href="http://cs.stanford.edu/people/karpathy/">Andrej Karpathy</a>
+    regarding the course notes. You can also submit a pull request directly to our <a
+        href="https://github.com/cs231n/cs231n.github.io">git repo</a>.
+    <br>
+    We encourage the use of the <a href="https://hypothes.is/">hypothes.is</a> extension to annote comments and discuss
+    these notes inline.
+</div>
+
+<div class="home">
+    <div class="materials-wrap">
+        <div class="module-header">Spring 2017 Assignments</div>
+
+        <div class="materials-item">
+            <a href="assignments2017/assignment1/">
+                Assignment #1: Image Classification, kNN, SVM, Softmax, Neural Network
+            </a>
         </div>
+
+        <div class="materials-item">
+            <a href="assignments2017/assignment2/">
+                Assignment #2: Fully-Connected Nets, Batch Normalization, Dropout,
+                Convolutional Nets
+            </a>
+        </div>
+
+        <div class="materials-item">
+            <a href="assignments2017/assignment3/">
+                Assignment #3: Image Captioning with Vanilla RNNs, Image Captioning
+                with LSTMs, Network Visualization, Style Transfer, Generative Adversarial Networks
+            </a>
+        </div>
+
+        <!--
+        <div class="module-header">Winter 2016 Assignments</div>
+
+        <div class="materials-item">
+          <a href="assignments2016/assignment1/">
+            Assignment #1: Image Classification, kNN, SVM, Softmax, Neural Network
+          </a>
+        </div>
+
+        <div class="materials-item">
+          <a href="assignments2016/assignment2/">
+            Assignment #2: Fully-Connected Nets, Batch Normalization, Dropout,
+            Convolutional Nets
+          </a>
+        </div>
+
+        <div class="materials-item">
+          <a href="assignments2016/assignment3/">
+            Assignment #3: Recurrent Neural Networks, Image Captioning,
+            Image Gradients, DeepDream
+          </a>
+        </div>
+        -->
+
+        <!--
+        <div class="module-header">Winter 2015 Assignments</div>
+
+        <div class="materials-item">
+          <a href="assignment1/">
+            Assignment #1: Image Classification, kNN, SVM, Softmax
+          </a>
+        </div>
+
+        <div class="materials-item">
+          <a href="assignment2/">
+            Assignment #2: Neural Networks, ConvNets I
+          </a>
+        </div>
+
+        <div class="materials-item">
+          <a href="assignment3/">
+            Assignment #3: ConvNets II, Transfer Learning, Visualization
+          </a>
+        </div>
+      -->
+
+        <div class="module-header">Module 0: Preparation</div>
+
+        <div class="materials-item">
+            <a href="python-numpy-tutorial/">
+                Python / Numpy Tutorial
+            </a>
+        </div>
+
+        <div class="materials-item">
+            <a href="ipython-tutorial/">
+                IPython Notebook Tutorial
+            </a>
+        </div>
+        <!--
+            <div class="materials-item">
+              <a href="terminal-tutorial/">
+                Terminal.com Tutorial
+              </a>
+            </div>
+        -->
+        <div class="materials-item">
+            <a href="gce-tutorial/">
+                Google Cloud Tutorial
+            </a>
+        </div>
+
+        <div class="materials-item">
+            <a href="gce-tutorial-gpus/">
+                Google Cloud with GPUs Tutorial (for assignment 2 onwards)
+            </a>
+        </div>
+        <div class="materials-item">
+            <a href="aws-tutorial/">
+                AWS Tutorial
+            </a>
+        </div>
+
+        <!-- hardcoding items here to force a specific order -->
+        <div class="module-header">Module 1: Neural Networks</div>
+
+        <div class="materials-item">
+            <a href="classification/">
+                Image Classification: Data-driven Approach, k-Nearest Neighbor, train/val/test splits
+            </a>
+            <div class="kw">
+                L1/L2 distances, hyperparameter search, cross-validation
+            </div>
+        </div>
+
+        <div class="materials-item">
+            <a href="linear-classify/">
+                Linear classification: Support Vector Machine, Softmax
+            </a>
+            <div class="kw">
+                parameteric approach, bias trick, hinge loss, cross-entropy loss, L2 regularization, web demo
+            </div>
+        </div>
+
+        <div class="materials-item">
+            <a href="optimization-1/">
+                Optimization: Stochastic Gradient Descent
+            </a>
+            <div class="kw">
+                optimization landscapes, local search, learning rate, analytic/numerical gradient
+            </div>
+        </div>
+
+        <div class="materials-item">
+            <a href="optimization-2/">
+                Backpropagation, Intuitions
+            </a>
+            <div class="kw">
+                chain rule interpretation, real-valued circuits, patterns in gradient flow
+            </div>
+        </div>
+
+        <div class="materials-item">
+            <a href="neural-networks-1/">
+                Neural Networks Part 1: Setting up the Architecture
+            </a>
+            <div class="kw">
+                model of a biological neuron, activation functions, neural net architecture, representational power
+            </div>
+        </div>
+
+        <div class="materials-item">
+            <a href="neural-networks-2/">
+                Neural Networks Part 2: Setting up the Data and the Loss
+            </a>
+            <div class="kw">
+                preprocessing, weight initialization, batch normalization, regularization (L2/dropout), loss functions
+            </div>
+        </div>
+
+        <div class="materials-item">
+            <a href="neural-networks-3/">
+                Neural Networks Part 3: Learning and Evaluation
+            </a>
+            <div class="kw">
+                gradient checks, sanity checks, babysitting the learning process, momentum (+nesterov), second-order
+                methods, Adagrad/RMSprop, hyperparameter optimization, model ensembles
+            </div>
+        </div>
+
+        <div class="materials-item">
+            <a href="latex/">
+                latex-example
+            </a>
+            <div class="kw">
+                gradient checks, sanity checks, babysitting the learning process, momentum (+nesterov), second-order
+                methods, Adagrad/RMSprop, hyperparameter optimization, model ensembles
+            </div>
+        </div>
+
+        <div class="materials-item">
+            <a href="neural-networks-case-study/">
+                Putting it together: Minimal Neural Network Case Study
+            </a>
+            <div class="kw">
+                minimal 2D toy data example
+            </div>
+        </div>
+
+        <div class="module-header">Module 2: Convolutional Neural Networks</div>
+
+        <div class="materials-item">
+            <a href="convolutional-networks/">
+                Convolutional Neural Networks: Architectures, Convolution / Pooling Layers
+            </a>
+            <div class="kw">
+                layers, spatial arrangement, layer patterns, layer sizing patterns, AlexNet/ZFNet/VGGNet case studies,
+                computational considerations
+            </div>
+        </div>
+
+        <div class="materials-item">
+            <a href="understanding-cnn/">
+                Understanding and Visualizing Convolutional Neural Networks
+            </a>
+            <div class="kw">
+                tSNE embeddings, deconvnets, data gradients, fooling ConvNets, human comparisons
+            </div>
+        </div>
+
+        <div class="materials-item">
+            <a href="transfer-learning/">
+                Transfer Learning and Fine-tuning Convolutional Neural Networks
+            </a>
+        </div>
+
+    </div>
+</div>
+
       </div>
     </div>
 
-    <div class="container-narrow">
+    <footer class="site-footer">
 
-      <div class="content">
+  <div class="wrap">
+
+    <div class="footer-col-1 column">
+      <ul>
         
-<!--
-<div class="page-header">
-  <h1>寂寞先生  <small>这，是一个寂寞的世界……</small></h1>
-</div>
--->
-
-<div class="row-fluid">
-  <div class="span12">
-    
-
-<div class = "card">
-        <div  class = "date_label">
-            <div class="day_month">
-                05/20
-                </div>
-                <div class="year">
-                2014
-                </div>
-            </div> 
-        <h1>收藏颜色的工具</h1>
-
-<hr />
-
-<p><img src="http://enml.github.io/blog/image/collect_color.jpg" alt="collect_color" /></p>
-
-<p>用了三个小时完成了上图的功能，满足了我的需求。</p>
-
-<p>只要在输入框输入颜色数值，便可记录到数据库，并把颜色作为该数值背景色输出页面。</p>
-
-
-    <div class = "read_more">
-        <a class="fa fa-link" href="/2014/05/20/collect_color">  查看全文&hellip;</a>
+        <li>
+          <a href="https://github.com/cs231n">
+            <span class="icon github">
+              <svg version="1.1" class="github-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+                <path fill-rule="evenodd" clip-rule="evenodd" fill="#C2C2C2" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761
+                c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32
+                c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472
+                c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037
+                C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65
+                c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261
+                c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082
+                c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129
+                c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+              </svg>
+            </span>
+            <span class="username">cs231n</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/cs231n">
+            <span class="icon twitter">
+              <svg version="1.1" class="twitter-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+                <path fill="#C2C2C2" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27
+                c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767
+                c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206
+                C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271
+                c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469
+                c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+              </svg>
+            </span>
+            <span class="username">cs231n</span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:karpathy@cs.stanford.edu">karpathy@cs.stanford.edu</a>
+        </li>
+      </ul>
     </div>
-    
-</div>
 
-
-
-
-<div class = "card">
-        <div  class = "date_label">
-            <div class="day_month">
-                05/10
-                </div>
-                <div class="year">
-                2014
-                </div>
-            </div> 
-        <h1>Template</h1>
-
-<hr />
-
-<p><strong>在view里面，我们获取了相关的数据，但我们的目的是将数据呈现出来。</strong></p>
-
-<p>于是：</p>
-
-<p><strong>1.首先我们想到的是直接把数据硬编码到html代码里面，然后通过<code>HttpResponse</code>对象传递给浏览器进行渲染：</strong></p>
-
-<pre><code>from django.http import HttpResponse
-import datetime
-
-def current_datetime(request):
-    now = datetime.datetime.now()
-    html = "&lt;html&gt;&lt;body&gt;It is now %s.&lt;/body&gt;&lt;/html&gt;" % now
-    return HttpResponse(html)
-</code></pre>
-
-
-    <div class = "read_more">
-        <a class="fa fa-link" href="/2014/05/10/template">  查看全文&hellip;</a>
+    <div class="footer-col-2 column">
+        
     </div>
-    
-</div>
 
-
-
-
-<div class = "card">
-        <div  class = "date_label">
-            <div class="day_month">
-                05/03
-                </div>
-                <div class="year">
-                2014
-                </div>
-            </div> 
-        <h1>view传递context的方式</h1>
-
-<hr />
-
-<p><strong> 通过view的render()方法填充template可以有以下方式：</strong></p>
-
-<p>1.适合于数据量小且静态的数据。在template中直接使用相关键值为标签：
-<code></code></p>
-
-<pre><code>def test1(request):
-    return render(request,'test/raw.htm',{
-                'name':'Enm',
-                'age':22,
-                'company': 'Outdoor Equipment',
-                'ship_date': datetime.datetime.now(),
-                'ordered_warranty': False})
-</code></pre>
-
-
-    <div class = "read_more">
-        <a class="fa fa-link" href="/2014/05/03/view_render">  查看全文&hellip;</a>
+    <div class="footer-col-3 column">
+      
     </div>
-    
-</div>
-
-
-
-
-<div class = "card">
-        <div  class = "date_label">
-            <div class="day_month">
-                04/27
-                </div>
-                <div class="year">
-                2014
-                </div>
-            </div> 
-        <h1>install jekyll 流程</h1>
-
-<hr />
-
-<ul>
-<li><p>首先下载<code>ruby</code><a href="http://rubyinstaller.org/downloads/">安装ruby download</a> ，然后下载<strong>DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe</strong>。安装完<code>ruby</code>后，再安装<code>rubyGems</code>:运行<code>gem update --system</code>即可。</p></li>
-<li><p>解压DevKit，然后命令行cd到该目录，运行</p></li>
-</ul>
-
-
-
-    <div class = "read_more">
-        <a class="fa fa-link" href="/2014/04/27/install-jekyll">  查看全文&hellip;</a>
-    </div>
-    
-</div>
-
-
-
-
-<div class = "card">
-        <div  class = "date_label">
-            <div class="day_month">
-                04/25
-                </div>
-                <div class="year">
-                2014
-                </div>
-            </div> 
-        <h1>Python list的一些技巧</h1>
-
-<hr />
-
-<p>列表相邻元素压缩器</p>
-
-<pre><code>&gt;&gt;&gt; a = [1, 2, 3, 4, 5, 6]
-&gt;&gt;&gt; zip(*([iter(a)] * 2))
-[(1, 2), (3, 4), (5, 6)]
-&gt;&gt;&gt; group_adjacent = lambda a, k: zip(*([iter(a)] * k))
-&gt;&gt;&gt; group_adjacent(a, 3)
-[(1, 2, 3), (4, 5, 6)]
-&gt;&gt;&gt; group_adjacent(a, 2)
-[(1, 2), (3, 4), (5, 6)]
-&gt;&gt;&gt; group_adjacent(a, 1)
-[(1,), (2,), (3,), (4,), (5,), (6,)]
-&gt;&gt;&gt; zip(a[::2], a[1::2])
-[(1, 2), (3, 4), (5, 6)]
-&gt;&gt;&gt; zip(a[::3], a[1::3], a[2::3])
-[(1, 2, 3), (4, 5, 6)]
-&gt;&gt;&gt; group_adjacent = lambda a, k: zip(*(a[i::k] for i in range(k)))
-&gt;&gt;&gt; group_adjacent(a, 3)
-[(1, 2, 3), (4, 5, 6)]
-&gt;&gt;&gt; group_adjacent(a, 2)
-[(1, 2), (3, 4), (5, 6)]
-&gt;&gt;&gt; group_adjacent(a, 1)
-[(1,), (2,), (3,), (4,), (5,), (6,)]
-</code></pre>
-
-
-    <div class = "read_more">
-        <a class="fa fa-link" href="/2014/04/25/python-code">  查看全文&hellip;</a>
-    </div>
-    
-</div>
-
-
-
-
-<div class = "card">
-        <div  class = "date_label">
-            <div class="day_month">
-                04/24
-                </div>
-                <div class="year">
-                2014
-                </div>
-            </div> 
-        <h1>jekyll加载图片的路径问题</h1>
-
-<hr />
-
-<p>　一开始使用根目录<code>/assets/…/img/bg.png</code>的方式，在localhost调试成功，但在github pages失败。
-　后来试了一下当前目录方式<code>./img/bg.png</code>成功。也可以用<code>img/bg.png</code>表示当前目录。</p>
-
-
-    <div class = "read_more">
-        <a class="fa fa-link" href="/2014/04/24/directory">  查看全文&hellip;</a>
-    </div>
-    
-</div>
-
-
-
-
-<div class = "card">
-        <div  class = "date_label">
-            <div class="day_month">
-                04/23
-                </div>
-                <div class="year">
-                2014
-                </div>
-            </div> 
-        <h1>完成基于jekyll的第一个blog</h1>
-
-<hr />
-
-<p>　今天差不多把blog完成了，这是我第一个基于jekyll的blog，定制了主题，修改了相关配置，以及解决了中文bug。现在把这5天的心得分享一下：</p>
-
-<ul>
-<li>首先是中文问题，这个困扰我了很久，也花费了不少时间，不过最后总算找到解决办法。给我最大的感触就是，即使碰壁，也得硬着头皮找下去，如果放弃，那就前功尽弃了。</li>
-</ul>
-
-
-
-    <div class = "read_more">
-        <a class="fa fa-link" href="/2014/04/23/finish-jekyll">  查看全文&hellip;</a>
-    </div>
-    
-</div>
-
-
-
-
-<div class = "card">
-        <div  class = "date_label">
-            <div class="day_month">
-                04/23
-                </div>
-                <div class="year">
-                2014
-                </div>
-            </div> 
-        <h1>解决invalid byte sequence in GBK</h1>
-
-<hr />
-
-<p>　jekyll对中文的支持不太好，导致经常出现乱码甚至无法运行<code>jekyll server</code>命令。解决post内容乱码问题可以通过修改convertible.rb文件的第27行：</p>
-
-<pre><code>self.content = File.read(File.join(base, name));
-</code></pre>
-
-<p>为</p>
-
-<pre><code>self.content = File.read(File.join(base, name), :encoding =&gt; "utf-8");
-</code></pre>
-
-<p>　原因File.read()可能采用系统默认编码读取文件，中文系统为GBK，但markdown文件均为utf-8编码，所以导致无法正确展现中文。</p>
-
-
-    <div class = "read_more">
-        <a class="fa fa-link" href="/2014/04/23/chinese-messy-code">  查看全文&hellip;</a>
-    </div>
-    
-</div>
-
-
-
-
-<div class = "card">
-        <div  class = "date_label">
-            <div class="day_month">
-                04/21
-                </div>
-                <div class="year">
-                2014
-                </div>
-            </div> 
-        <h1>谁将取代智能手机</h1>
-
-<hr />
-
-<p><img src="http://www.wccbr.com/wp-content/uploads/2013/03/Robot_Wallpaper_1.jpg" alt="robot" /></p>
-
-<h3><strong>智能手表</strong></h3>
-
-<p>　现在手表被炒的很热，但以目前来看，手表只是一个辅佐设备；注定手表不可能超越智能手机。手表的特点在于屏幕小，便携，查看信息快速直接；但屏幕小也是它的极限性（屏幕扩大了跟智能手机就没差别了），决定了它不适合发展成独立的终端，你能想象拿着手表刷微博看知乎发邮件吗？</p>
-
-
-    <div class = "read_more">
-        <a class="fa fa-link" href="/2014/04/21/future">  查看全文&hellip;</a>
-    </div>
-    
-</div>
-
-
-
-
-<div class = "card">
-        <div  class = "date_label">
-            <div class="day_month">
-                01/12
-                </div>
-                <div class="year">
-                2011
-                </div>
-            </div> 
-        <h1>js 算出某值以内的质数</h1>
-
-<hr />
-
-<pre class="prettyprint linenums">
-    //算出 num 以内的所有质数
- 
-function prime(num){
-    var list = [];
-    for(var i = 2; i <= num; i++){ list.push(i); } //create a Array
-    
-    for(var i = 0; i < list.length; i++){
-        for(var j = 2; j < list[i]; j++){
-            if(list[i] % j == 0){
-                list.splice(i,1); //delete the non prime number.it will change the index of other elements
-                j = 2; //由于splice导致list[i+1]的index变为i,因此把j置为2以便对list[i+1]进行重新计算
-        }
-    }
-}
-</pre>
-
-
-    <div class = "read_more">
-        <a class="fa fa-link" href="/2011/01/12/prime">  查看全文&hellip;</a>
-    </div>
-    
-</div>
-
-
-
 
   </div>
-</div>
+
+</footer>
 
 
-      </div>
-      
-      <footer class="card clearfix">
-        <span style="font-size:30px;"class="fa fa-github pull-left"></span><a href="https://github.com/enml/blog/tree/jekyll-blog" style="display:inline-block;padding-right:80px;border-right:1px solid #bbb">fork me on GitHub</a>
-        <p class="pull-right">&copy; 2011 牛
-          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
-        </p>
-        
-      </footer>
-
-    </div>
-
-    
-  </body>
+    <!-- mathjax -->
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </body>
 </html>
-
