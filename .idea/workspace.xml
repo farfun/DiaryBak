@@ -2,83 +2,144 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd812bb5-d92d-442c-ba5d-56d41b5654b8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/404.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/History.markdown" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Rakefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_config.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/JB/analytics" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/JB/analytics-providers/getclicky" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/JB/analytics-providers/google" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/JB/analytics-providers/mixpanel" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/JB/analytics-providers/piwik" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/JB/categories_list" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/JB/comments" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/JB/comments-providers/disqus" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/JB/comments-providers/facebook" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/JB/comments-providers/intensedebate" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/JB/comments-providers/livefyre" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/JB/liquid_raw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/JB/pages_list" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/JB/posts_collate" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/JB/setup" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/JB/sharing" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/JB/tags_list" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/themes/twitter/default.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/themes/twitter/page.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/themes/twitter/post.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/themes/twitter/settings.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_layouts/category_archive.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_layouts/default.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_layouts/page.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_layouts/post.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_plugins/debug.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2011-01-12-prime.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2014-04-20-githubpages.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2014-04-21-future.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2014-04-23-chinese-messy-code.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2014-04-23-finish-jekyll.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2014-04-24-directory.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2014-04-25-python-code.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2014-04-27-install-jekyll.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2014-05-03-view_render.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2014-05-10-template.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/2014-05-20-collect_color.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/2011/01/12/prime.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/2014/04/21/future.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/2014/04/23/chinese-messy-code.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/2014/04/23/finish-jekyll.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/2014/04/24/directory.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/2014/04/25/python-code.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/2014/04/27/install-jekyll.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/2014/05/03/view_render.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/2014/05/10/template.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/2014/05/20/collect_color.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/404.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/History.markdown" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/archive.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/themes/twitter/bootstrap/img/card_bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/themes/twitter/bootstrap/img/date_label_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/themes/twitter/bootstrap/img/date_label_small_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/themes/twitter/bootstrap/img/glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/themes/twitter/bootstrap/img/glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/themes/twitter/bootstrap/img/shadow_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/themes/twitter/bootstrap/img/shadow_middle_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/themes/twitter/bootstrap/img/shadow_small_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/themes/twitter/css/img/body_bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/themes/twitter/css/img/body_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/themes/twitter/css/img/body_bg1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/themes/twitter/css/img/card_bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/themes/twitter/css/img/date_label_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/themes/twitter/css/img/date_label_small_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/themes/twitter/css/img/postbg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/themes/twitter/css/img/shadow_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/themes/twitter/css/prettify.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/themes/twitter/css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/themes/twitter/js/prettify.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/atom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/categories.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/Readme.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/ami-selection.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/aws-homepage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/aws-signin.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/aws-signup.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/bing.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cat.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cat_tinted.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cat_tinted_imshow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/challenges.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/classify.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/classifydemo.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cloud-create-instance-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cloud-dashboard-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cloud-external-ip.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cloud-for-free.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cloud-instance-dashboard-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cloud-instance-started.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cloud-launching-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cloud-networking-external-ip-address.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cloud-networking-external-ip-naming.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cloud-networking-external-ip.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cloud-networking-firewall-rule-create.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cloud-networking-firewall-rule.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cnn/cnn.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cnn/convnet.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cnn/depthcol.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cnn/maxpool.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cnn/pool.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cnn/stride.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cnn/weights.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cnnvis/act1.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cnnvis/act2.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cnnvis/filt1.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cnnvis/filt2.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cnnvis/occlude.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cnnvis/pool5max.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cnnvis/tsne.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/community-AMIs.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/conv-demo/external/d3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/conv-demo/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/conv-demo/utils.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/create-instance-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/crossval.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cveg.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/cvplot.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/dataflow.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/ec2-dashboard.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/eg/spiral_linear.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/eg/spiral_net.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/eg/spiral_raw.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/google-cloud-create-image-screenshot.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/google-cloud-instance-gpus.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/google-cloud-quotas-form.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/google-cloud-quotas-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/google-cloud-select-cloud-storage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/google-cloud-select-custom-image.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/imagemap.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/instance-selection.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/instances-page.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/ipython-tutorial/file-browser.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/ipython-tutorial/notebook-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/ipython-tutorial/notebook-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/ipython-tutorial/notebook-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/ipython-tutorial/notebook-error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/ipython-tutorial/save-notebook.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/jupyter-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/key-pair-create.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/key-pair.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/knn.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/launch-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/launching-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/map.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/margin.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nn.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nn1/alexplot.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nn1/layer_sizes.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nn1/neural_net.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nn1/neural_net2.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nn1/neuron.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nn1/neuron_model.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nn1/reg_strengths.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nn1/relu.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nn1/sigmoid.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nn1/tanh.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nn2/cifar10pca.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nn2/dropout.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nn2/prepro1.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nn2/prepro2.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nn3/accuracies.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nn3/cnnweights.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nn3/gridsearchbad.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nn3/learningrates.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nn3/loss.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nn3/nesterov.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nn3/opt1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nn3/opt2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nn3/updates.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nn3/values.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nn3/weights.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/nneg.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/pixels_embed_cifar10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/pixels_embed_cifar10_big.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/pixelspace.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/sadpuppy_nocredits.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/samenorm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/sine.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/sine_cosine.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/sine_cosine_subplot.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/stepsize.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/svm1d.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/svm_all.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/svm_one.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/svmbowl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/svmvssoftmax.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/templates.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/terminal-coursework.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/terminal-development.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/terminal-my.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/terminal-shared.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/trainset.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assets/wb.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assignments2015/assignment1/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assignments2015/assignment2/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assignments2015/assignment3/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assignments2016/assignment1/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assignments2016/assignment2/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assignments2016/assignment3/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assignments2017/assignment1/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assignments2017/assignment2/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/assignments2017/assignment3/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/aws-tutorial/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/classification/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/convnet-tips/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/convolutional-networks/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/create-instance-screen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/css/main.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/_site/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/content.json" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/_site/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/meta.json" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/_site/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/1AA2D38B130E8EB6B4FCA11E6FD536FC.jpg" afterPath="" />
@@ -725,6 +786,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/_site/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/FABE685F-D170-4B8F-AB4F-5CD50B91C50C.qvnote/resources/1FC1261E-1109-47E7-A62D-4268E55AD526.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/_site/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/meta.json" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/_site/data/quiver/Quiver.qvlibrary/meta.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/diary/quiver/深度学习2/latex语法.md" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/_site/diary/quiver/深度学习2/resources/08D470990F94E04CF5A4C299D5874F23.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/_site/diary/quiver/深度学习2/resources/12CA0A69703321FE180C23BF3EB3690B.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/_site/diary/quiver/深度学习2/resources/2091A935ECF2550EAF3A106570FF4970.jpg" afterPath="" />
@@ -749,46 +811,24 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/_site/diary/quiver/深度学习2/resources/E5C6604C652228E2659FB60948F3328C.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/_site/diary/quiver/深度学习2/resources/F053CB7891B83299A3A0D214D15821F3.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/_site/diary/quiver/深度学习2/加速神经网络.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/image/collect_color.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/gce-tutorial-gpus/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/gce-tutorial/index.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/pages.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/pygments.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/rss.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/sitemap.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/tags.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/archive.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/themes/twitter/bootstrap/img/card_bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/themes/twitter/bootstrap/img/date_label_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/themes/twitter/bootstrap/img/date_label_small_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/themes/twitter/bootstrap/img/glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/themes/twitter/bootstrap/img/glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/themes/twitter/bootstrap/img/shadow_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/themes/twitter/bootstrap/img/shadow_middle_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/themes/twitter/bootstrap/img/shadow_small_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/themes/twitter/css/img/body_bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/themes/twitter/css/img/body_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/themes/twitter/css/img/body_bg1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/themes/twitter/css/img/card_bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/themes/twitter/css/img/date_label_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/themes/twitter/css/img/date_label_small_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/themes/twitter/css/img/postbg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/themes/twitter/css/img/shadow_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/themes/twitter/css/prettify.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/themes/twitter/css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/themes/twitter/js/prettify.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/atom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/categories.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/changelog.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/collect_color.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pygments.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rss.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sitemap.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tags.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_site/diary/quiver/深度学习2/latex语法.md" afterPath="$PROJECT_DIR$/latex.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/ipython-tutorial/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/latex/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/linear-classify/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/neural-networks-1/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/neural-networks-2/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/neural-networks-3/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/neural-networks-case-study/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/optimization-1/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/optimization-2/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/overview/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/poster-session/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/python-numpy-tutorial/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/terminal-tutorial/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/transfer-learning/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/understanding-cnn/index.html" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -1078,7 +1118,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="723" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1086,7 +1125,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22617124" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22617124" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
