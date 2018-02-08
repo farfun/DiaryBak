@@ -1,0 +1,9 @@
+{
+  "title": "matrix",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "\\begin{gather*}\n\\begin{matrix} 1&0\\\\ 0&-1 \\end{matrix}~~~~~\n\\begin{pmatrix} 2&0\\\\ 0&-1 \\end{pmatrix}~~~~~\n\\begin{Bmatrix} 3&0\\\\ 0&-1 \\end{Bmatrix}\\\\\n\\begin{bmatrix} 4&0\\\\ 0&-1 \\end{bmatrix} ~~~~~\n\\begin{vmatrix} 5&0\\\\ 0&-1 \\end{vmatrix}~~~~~\n\\begin{Vmatrix} 6&0\\\\ 0&-1 \\end{Vmatrix}\n\\end{gather*}\n"
+    }
+  ]
+}

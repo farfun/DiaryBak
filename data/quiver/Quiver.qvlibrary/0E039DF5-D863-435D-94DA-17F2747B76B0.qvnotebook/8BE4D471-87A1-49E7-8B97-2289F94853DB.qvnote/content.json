@@ -1,0 +1,9 @@
+{
+  "title": "付款成功页商品推荐",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<div>输入</div><div><br></div><div>付款的商品列表</div><div><br></div><div>逻辑，i2i买了还买，可以通过关联规则筛选</div><div><br></div><div><br></div><div><br></div><div><br></div><div><img src=\"quiver-image-url/BEBB7F724D5958BFE3D10531557E9177.jpg\" width=\"850\" height=\"512\"><br></div><div><br></div><div><br></div><div><br></div>"
+    }
+  ]
+}
