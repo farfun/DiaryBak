@@ -100,7 +100,7 @@ var
         if (!gitConfig.ssh)
             return console.error('请设置 gitConfig.ssh 地址')
 
-        gitConfig.url = gitConfig.ssh.match(/[\w\-_]+\/[\w\-_]+\.github\.io/i) + ''
+        gitConfig.url = gitConfig.ssh.match(/[\w\-_]+\/[\w\-_]+\.Diary\.git/i) + ''
 
 
         setTimeout(function () {
