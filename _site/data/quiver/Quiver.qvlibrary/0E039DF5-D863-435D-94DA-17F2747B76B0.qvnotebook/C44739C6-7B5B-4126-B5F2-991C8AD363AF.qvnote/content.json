@@ -1,0 +1,9 @@
+{
+  "title": "12.11-12.15",
+  "cells": [
+    {
+      "type": "text",
+      "data": "标签推荐<div>7862</div><div><br></div><div>qinsiming 对数据</div><div><br></div><div><br></div><div><br></div><div>标签下的店铺流</div><div><br></div><div><br></div><div>个性化标签推荐</div><div>用户-店铺:score JOIN 店铺-标签 &nbsp; —&gt; &nbsp;用户-标签:score</div><div>按照标签偏好度进行排序</div><div><br></div><div><br></div><div>标签详情页店铺流</div><div>标签-店铺 JOIN 店铺:score &nbsp;—&gt; 标签-店铺:score</div><div>按店铺质量分排序</div><div><br></div><div><br></div><div><br></div><div><br></div>"
+    }
+  ]
+}

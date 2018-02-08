@@ -1,0 +1,9 @@
+{
+  "title": "12.18-12.22",
+  "cells": [
+    {
+      "type": "text",
+      "data": "<div>标签详情页店铺流</div><div>开发那边提了两个bug，现已修复</div><div>&nbsp; &nbsp;1️⃣：店铺分页</div><div>&nbsp; &nbsp;2️⃣：标签详情页里面的店铺的标签，不包含当前标签页的标签</div><div><br></div><div><br></div><div><br></div><div><br></div><div>周三 热销积分商品</div><div><br></div><div><br></div><div><br></div><div>标签详情页 ，由店铺点击进去的，需要将该店铺置顶</div><div><br></div><div><br></div>"
+    }
+  ]
+}

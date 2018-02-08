@@ -1,0 +1,9 @@
+{
+  "title": "12.4-12.8",
+  "cells": [
+    {
+      "type": "text",
+      "data": "热销商品优化<div>1 &nbsp;离线类目偏好，计算浏览，点击，搜索，收藏等行为的类目偏好</div><div>2 7日销量排行榜，改为1日，1日数量不够，改为2日，逐次递增</div><div>3 部分商品只在特定地区卖，针对用户地区做过滤</div><div>4&nbsp;</div><div><br></div><div><br></div><div><br></div><div><br></div><div>过滤</div><div>取1日销量榜前6</div><div>取2日销量榜前6</div><div><br></div><div><br></div><div><br></div><div><br></div><div>货源热销商品推荐接口</div><div><a href=\"http://docs.vdian.net/pages/viewpage.action?pageId=57709287\">http://docs.vdian.net/pages/viewpage.action?pageId=57709287</a><br></div><div><br></div><div><br></div><div><br></div>"
+    }
+  ]
+}

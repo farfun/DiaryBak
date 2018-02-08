@@ -1,0 +1,9 @@
+{
+  "title": "最小二乘法",
+  "cells": [
+    {
+      "type": "markdown",
+      "data": "#最小二乘法\n\n我们从矩阵的角度来理解： \n首先我们给出一个矩阵中的定义： \n\n$$R(A)=\\{Ax|x∈R^n\\},A∈R^{n×n}$$\n\n有了上面的定义之后，我们就可以写出最小二乘问题的矩阵形式： \n$$∃b∉R(A),b∈R^n,\\min_{x∈R^n}\\parallel Ax−b\\parallel _2$$\n\n用bi格高一点的说法来说，就是求在欧几里得空间中以2-范数作为距离，使得向量Ax与b之间距离最小的x。 \n我们的目标是求： \n$$min_{x∈R^n}\\parallel Ax−\\parallel_2$$\n\n当然我们知道，使得距离最小的向量x与使得距离平方最小的向量x是相同的，于是我们可以将所求的目标改写为： \n$$min_{x∈R^n}{\\parallel Ax−b\\parallel_2}^2$$\n\n结合一些矩阵、行列式的知识，我们知道： \n$${\\parallel Ax−b\\parallel_2}^2=(Ax−b)^T∗(Ax−b)$$\n根据我们大一学过的高数知识，我们知道，求最极值问题直接对应的就是导数为零，因此我们试图将所给出的原式的矩阵形式求导：\n\n不过首先我们需要补充矩阵微积分(matrix calculus)的一些知识 \n(PS:是矩阵微积分吧…我没有翻译错吧….) \n\n$$\\frac {\\partial x^Ta}{\\partial x}=\\frac {\\partial a^Tx}{\\partial x}=a$$\n$$\\frac {\\partial x^TAx}{\\partial x}=Ax+A^Tx$$\n\n如果矩阵A是对称的(symmetric matrix): \n$$Ax+A^Tx=2Ax$$\n接下来，我们对原式化简并求其对x的导数： \n\n$${∥Ax−b∥_2}^2=x^TA^TAx−b^TAx−x^TA^Tb+b^Tb$$\n\n求导得到： \n$$\\frac {\\partial{\\parallel Ax−b\\parallel}^2}{\\partial x}=2A^TAx−2A^Tb=0$$\n\n于是我们就得到了，最小二乘法解的矩阵形式： \n$$x=(A^TA)^{−1}A^Tb$$\n当然了，这里是最简答的线性最小二乘法，还有更为复杂的非线性以及矩阵A不满秩的情况(hdq说他老师能默写出这个过程…)，等以后有时间了，我会再补充上去的。\n\n "
+    }
+  ]
+}
