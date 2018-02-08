@@ -2,169 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd812bb5-d92d-442c-ba5d-56d41b5654b8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/ami-selection.png" afterPath="$PROJECT_DIR$/assets/ami-selection.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/aws-homepage.png" afterPath="$PROJECT_DIR$/assets/aws-homepage.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/aws-signin.png" afterPath="$PROJECT_DIR$/assets/aws-signin.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/aws-signup.png" afterPath="$PROJECT_DIR$/assets/aws-signup.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/bing.jpg" afterPath="$PROJECT_DIR$/assets/bing.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cat.jpg" afterPath="$PROJECT_DIR$/assets/cat.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cat_tinted.jpg" afterPath="$PROJECT_DIR$/assets/cat_tinted.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cat_tinted_imshow.png" afterPath="$PROJECT_DIR$/assets/cat_tinted_imshow.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/challenges.jpeg" afterPath="$PROJECT_DIR$/assets/challenges.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/classify.png" afterPath="$PROJECT_DIR$/assets/classify.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/classifydemo.jpeg" afterPath="$PROJECT_DIR$/assets/classifydemo.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cloud-create-instance-screen.png" afterPath="$PROJECT_DIR$/assets/cloud-create-instance-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cloud-dashboard-screen.png" afterPath="$PROJECT_DIR$/assets/cloud-dashboard-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cloud-external-ip.png" afterPath="$PROJECT_DIR$/assets/cloud-external-ip.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cloud-for-free.png" afterPath="$PROJECT_DIR$/assets/cloud-for-free.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cloud-instance-dashboard-screen.png" afterPath="$PROJECT_DIR$/assets/cloud-instance-dashboard-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cloud-instance-started.png" afterPath="$PROJECT_DIR$/assets/cloud-instance-started.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cloud-launching-screen.png" afterPath="$PROJECT_DIR$/assets/cloud-launching-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cloud-networking-external-ip-address.png" afterPath="$PROJECT_DIR$/assets/cloud-networking-external-ip-address.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cloud-networking-external-ip-naming.png" afterPath="$PROJECT_DIR$/assets/cloud-networking-external-ip-naming.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cloud-networking-external-ip.png" afterPath="$PROJECT_DIR$/assets/cloud-networking-external-ip.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cloud-networking-firewall-rule-create.png" afterPath="$PROJECT_DIR$/assets/cloud-networking-firewall-rule-create.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cloud-networking-firewall-rule.png" afterPath="$PROJECT_DIR$/assets/cloud-networking-firewall-rule.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cnn/cnn.jpeg" afterPath="$PROJECT_DIR$/assets/cnn/cnn.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cnn/convnet.jpeg" afterPath="$PROJECT_DIR$/assets/cnn/convnet.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cnn/depthcol.jpeg" afterPath="$PROJECT_DIR$/assets/cnn/depthcol.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cnn/maxpool.jpeg" afterPath="$PROJECT_DIR$/assets/cnn/maxpool.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cnn/pool.jpeg" afterPath="$PROJECT_DIR$/assets/cnn/pool.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cnn/stride.jpeg" afterPath="$PROJECT_DIR$/assets/cnn/stride.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cnn/weights.jpeg" afterPath="$PROJECT_DIR$/assets/cnn/weights.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cnnvis/act1.jpeg" afterPath="$PROJECT_DIR$/assets/cnnvis/act1.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cnnvis/act2.jpeg" afterPath="$PROJECT_DIR$/assets/cnnvis/act2.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cnnvis/filt1.jpeg" afterPath="$PROJECT_DIR$/assets/cnnvis/filt1.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cnnvis/filt2.jpeg" afterPath="$PROJECT_DIR$/assets/cnnvis/filt2.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cnnvis/occlude.jpeg" afterPath="$PROJECT_DIR$/assets/cnnvis/occlude.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cnnvis/pool5max.jpeg" afterPath="$PROJECT_DIR$/assets/cnnvis/pool5max.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cnnvis/tsne.jpeg" afterPath="$PROJECT_DIR$/assets/cnnvis/tsne.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/community-AMIs.png" afterPath="$PROJECT_DIR$/assets/community-AMIs.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/create-instance-screen.png" afterPath="$PROJECT_DIR$/assets/create-instance-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/crossval.jpeg" afterPath="$PROJECT_DIR$/assets/crossval.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cveg.jpeg" afterPath="$PROJECT_DIR$/assets/cveg.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/cvplot.png" afterPath="$PROJECT_DIR$/assets/cvplot.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/dataflow.jpeg" afterPath="$PROJECT_DIR$/assets/dataflow.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/ec2-dashboard.png" afterPath="$PROJECT_DIR$/assets/ec2-dashboard.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/eg/spiral_linear.png" afterPath="$PROJECT_DIR$/assets/eg/spiral_linear.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/eg/spiral_net.png" afterPath="$PROJECT_DIR$/assets/eg/spiral_net.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/eg/spiral_raw.png" afterPath="$PROJECT_DIR$/assets/eg/spiral_raw.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/google-cloud-create-image-screenshot.png" afterPath="$PROJECT_DIR$/assets/google-cloud-create-image-screenshot.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/google-cloud-instance-gpus.png" afterPath="$PROJECT_DIR$/assets/google-cloud-instance-gpus.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/google-cloud-quotas-form.png" afterPath="$PROJECT_DIR$/assets/google-cloud-quotas-form.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/google-cloud-quotas-screen.png" afterPath="$PROJECT_DIR$/assets/google-cloud-quotas-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/google-cloud-select-cloud-storage.png" afterPath="$PROJECT_DIR$/assets/google-cloud-select-cloud-storage.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/google-cloud-select-custom-image.png" afterPath="$PROJECT_DIR$/assets/google-cloud-select-custom-image.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/imagemap.jpg" afterPath="$PROJECT_DIR$/assets/imagemap.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/instance-selection.png" afterPath="$PROJECT_DIR$/assets/instance-selection.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/instances-page.png" afterPath="$PROJECT_DIR$/assets/instances-page.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/ipython-tutorial/file-browser.png" afterPath="$PROJECT_DIR$/assets/ipython-tutorial/file-browser.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/ipython-tutorial/notebook-1.png" afterPath="$PROJECT_DIR$/assets/ipython-tutorial/notebook-1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/ipython-tutorial/notebook-2.png" afterPath="$PROJECT_DIR$/assets/ipython-tutorial/notebook-2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/ipython-tutorial/notebook-3.png" afterPath="$PROJECT_DIR$/assets/ipython-tutorial/notebook-3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/ipython-tutorial/notebook-error.png" afterPath="$PROJECT_DIR$/assets/ipython-tutorial/notebook-error.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/ipython-tutorial/save-notebook.png" afterPath="$PROJECT_DIR$/assets/ipython-tutorial/save-notebook.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/jupyter-screen.png" afterPath="$PROJECT_DIR$/assets/jupyter-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/key-pair-create.png" afterPath="$PROJECT_DIR$/assets/key-pair-create.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/key-pair.png" afterPath="$PROJECT_DIR$/assets/key-pair.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/knn.jpeg" afterPath="$PROJECT_DIR$/assets/knn.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/launch-screen.png" afterPath="$PROJECT_DIR$/assets/launch-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/launching-screen.png" afterPath="$PROJECT_DIR$/assets/launching-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/map.png" afterPath="$PROJECT_DIR$/assets/map.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/margin.jpg" afterPath="$PROJECT_DIR$/assets/margin.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nn.jpg" afterPath="$PROJECT_DIR$/assets/nn.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nn1/alexplot.jpeg" afterPath="$PROJECT_DIR$/assets/nn1/alexplot.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nn1/layer_sizes.jpeg" afterPath="$PROJECT_DIR$/assets/nn1/layer_sizes.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nn1/neural_net.jpeg" afterPath="$PROJECT_DIR$/assets/nn1/neural_net.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nn1/neural_net2.jpeg" afterPath="$PROJECT_DIR$/assets/nn1/neural_net2.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nn1/neuron.png" afterPath="$PROJECT_DIR$/assets/nn1/neuron.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nn1/neuron_model.jpeg" afterPath="$PROJECT_DIR$/assets/nn1/neuron_model.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nn1/reg_strengths.jpeg" afterPath="$PROJECT_DIR$/assets/nn1/reg_strengths.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nn1/relu.jpeg" afterPath="$PROJECT_DIR$/assets/nn1/relu.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nn1/sigmoid.jpeg" afterPath="$PROJECT_DIR$/assets/nn1/sigmoid.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nn1/tanh.jpeg" afterPath="$PROJECT_DIR$/assets/nn1/tanh.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nn2/cifar10pca.jpeg" afterPath="$PROJECT_DIR$/assets/nn2/cifar10pca.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nn2/dropout.jpeg" afterPath="$PROJECT_DIR$/assets/nn2/dropout.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nn2/prepro1.jpeg" afterPath="$PROJECT_DIR$/assets/nn2/prepro1.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nn2/prepro2.jpeg" afterPath="$PROJECT_DIR$/assets/nn2/prepro2.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nn3/accuracies.jpeg" afterPath="$PROJECT_DIR$/assets/nn3/accuracies.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nn3/cnnweights.jpg" afterPath="$PROJECT_DIR$/assets/nn3/cnnweights.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nn3/gridsearchbad.jpeg" afterPath="$PROJECT_DIR$/assets/nn3/gridsearchbad.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nn3/learningrates.jpeg" afterPath="$PROJECT_DIR$/assets/nn3/learningrates.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nn3/loss.jpeg" afterPath="$PROJECT_DIR$/assets/nn3/loss.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nn3/nesterov.jpeg" afterPath="$PROJECT_DIR$/assets/nn3/nesterov.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nn3/opt1.gif" afterPath="$PROJECT_DIR$/assets/nn3/opt1.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nn3/opt2.gif" afterPath="$PROJECT_DIR$/assets/nn3/opt2.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nn3/updates.jpeg" afterPath="$PROJECT_DIR$/assets/nn3/updates.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nn3/values.jpeg" afterPath="$PROJECT_DIR$/assets/nn3/values.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nn3/weights.jpeg" afterPath="$PROJECT_DIR$/assets/nn3/weights.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/nneg.jpeg" afterPath="$PROJECT_DIR$/assets/nneg.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/pixels_embed_cifar10.jpg" afterPath="$PROJECT_DIR$/assets/pixels_embed_cifar10.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/pixels_embed_cifar10_big.jpg" afterPath="$PROJECT_DIR$/assets/pixels_embed_cifar10_big.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/pixelspace.jpeg" afterPath="$PROJECT_DIR$/assets/pixelspace.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/sadpuppy_nocredits.png" afterPath="$PROJECT_DIR$/assets/sadpuppy_nocredits.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/samenorm.png" afterPath="$PROJECT_DIR$/assets/samenorm.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/sine.png" afterPath="$PROJECT_DIR$/assets/sine.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/sine_cosine.png" afterPath="$PROJECT_DIR$/assets/sine_cosine.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/sine_cosine_subplot.png" afterPath="$PROJECT_DIR$/assets/sine_cosine_subplot.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/stepsize.jpg" afterPath="$PROJECT_DIR$/assets/stepsize.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/svm1d.png" afterPath="$PROJECT_DIR$/assets/svm1d.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/svm_all.jpg" afterPath="$PROJECT_DIR$/assets/svm_all.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/svm_one.jpg" afterPath="$PROJECT_DIR$/assets/svm_one.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/svmbowl.png" afterPath="$PROJECT_DIR$/assets/svmbowl.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/svmvssoftmax.png" afterPath="$PROJECT_DIR$/assets/svmvssoftmax.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/templates.jpg" afterPath="$PROJECT_DIR$/assets/templates.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/terminal-coursework.jpg" afterPath="$PROJECT_DIR$/assets/terminal-coursework.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/terminal-development.jpg" afterPath="$PROJECT_DIR$/assets/terminal-development.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/terminal-my.jpg" afterPath="$PROJECT_DIR$/assets/terminal-my.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/terminal-shared.jpg" afterPath="$PROJECT_DIR$/assets/terminal-shared.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/trainset.jpg" afterPath="$PROJECT_DIR$/assets/trainset.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/wb.jpeg" afterPath="$PROJECT_DIR$/assets/wb.jpeg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/create-instance-screen.png" afterPath="$PROJECT_DIR$/create-instance-screen.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LICENSE" afterPath="$PROJECT_DIR$/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Readme.md" afterPath="$PROJECT_DIR$/Readme.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/footer.html" afterPath="$PROJECT_DIR$/_includes/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/head.html" afterPath="$PROJECT_DIR$/_includes/head.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/header.html" afterPath="$PROJECT_DIR$/_includes/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/default.html" afterPath="$PROJECT_DIR$/_layouts/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/page.html" afterPath="$PROJECT_DIR$/_layouts/page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/post.html" afterPath="$PROJECT_DIR$/_layouts/post.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/conv-demo/external/d3.min.js" afterPath="$PROJECT_DIR$/assets/conv-demo/external/d3.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/conv-demo/index.html" afterPath="$PROJECT_DIR$/assets/conv-demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/conv-demo/utils.js" afterPath="$PROJECT_DIR$/assets/conv-demo/utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment2_google_cloud.md" afterPath="$PROJECT_DIR$/assignment2_google_cloud.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignments/2015/assignment1.md" afterPath="$PROJECT_DIR$/assignments/2015/assignment1.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignments/2015/assignment2.md" afterPath="$PROJECT_DIR$/assignments/2015/assignment2.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignments/2015/assignment3.md" afterPath="$PROJECT_DIR$/assignments/2015/assignment3.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignments/2016/assignment1.md" afterPath="$PROJECT_DIR$/assignments/2016/assignment1.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignments/2016/assignment2.md" afterPath="$PROJECT_DIR$/assignments/2016/assignment2.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignments/2016/assignment3.md" afterPath="$PROJECT_DIR$/assignments/2016/assignment3.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignments/2017/assignment1.md" afterPath="$PROJECT_DIR$/assignments/2017/assignment1.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignments/2017/assignment2.md" afterPath="$PROJECT_DIR$/assignments/2017/assignment2.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignments/2017/assignment3.md" afterPath="$PROJECT_DIR$/assignments/2017/assignment3.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aws-tutorial.md" afterPath="$PROJECT_DIR$/aws-tutorial.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classification.md" afterPath="$PROJECT_DIR$/classification.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/convnet-tips.md" afterPath="$PROJECT_DIR$/convnet-tips.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/convolutional-networks.md" afterPath="$PROJECT_DIR$/convolutional-networks.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/google_cloud_tutorial.md" afterPath="$PROJECT_DIR$/google_cloud_tutorial.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ipython-tutorial.md" afterPath="$PROJECT_DIR$/ipython-tutorial.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/linear-classify.md" afterPath="$PROJECT_DIR$/linear-classify.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neural-networks-1.md" afterPath="$PROJECT_DIR$/neural-networks-1.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neural-networks-2.md" afterPath="$PROJECT_DIR$/neural-networks-2.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neural-networks-3.md" afterPath="$PROJECT_DIR$/neural-networks-3.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neural-networks-case-study.md" afterPath="$PROJECT_DIR$/neural-networks-case-study.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/optimization-1.md" afterPath="$PROJECT_DIR$/optimization-1.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/optimization-2.md" afterPath="$PROJECT_DIR$/optimization-2.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/overview.md" afterPath="$PROJECT_DIR$/overview.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poster.md" afterPath="$PROJECT_DIR$/poster.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python-numpy-tutorial.md" afterPath="$PROJECT_DIR$/python-numpy-tutorial.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/terminal-tutorial.md" afterPath="$PROJECT_DIR$/terminal-tutorial.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/transfer-learning.md" afterPath="$PROJECT_DIR$/transfer-learning.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/understanding-cnn.md" afterPath="$PROJECT_DIR$/understanding-cnn.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -175,7 +14,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="加速神经网络.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="加速神经网络.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/diary/quiver/深度学习2/加速神经网络.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SECOND">
@@ -188,7 +27,45 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="footer.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_includes/footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="61" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3986">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>github_username</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -208,6 +85,7 @@
         <option value="$PROJECT_DIR$/js/zepto.min.js" />
         <option value="$PROJECT_DIR$/posts/index.md" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/_config.yml" />
       </list>
     </option>
   </component>
@@ -248,6 +126,16 @@
             <path>
               <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
               <item name="Diary" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Diary" type="462c0819:PsiDirectoryNode" />
+              <item name="_includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Diary" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
@@ -370,16 +258,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="723" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3231018" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3231018" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -388,7 +278,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -427,14 +316,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
           <caret line="661" column="0" lean-forward="true" selection-start-line="661" selection-start-column="0" selection-end-line="661" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -594,6 +475,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/head.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/diary/quiver/深度学习2/加速神经网络.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SECOND">
@@ -602,6 +491,62 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/default.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="61" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3986">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
