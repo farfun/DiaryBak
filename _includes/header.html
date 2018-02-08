@@ -1,24 +1,22 @@
-<header class="site-header">
+<header class="main-header content-wrapper">
 
-    <div class="wrap title-wrap">
-        <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
-    </div>
-    <style>
-        table {
-            border-left: 1px solid #000000;
-            border-top: 1px solid #000000;
-            width: 100%;
-            word-wrap: break-word;
-            word-break: break-all;
-        }
+  <input type="checkbox" id="menu-checkbox" />
 
-        table th {
-            text-align: center;
-        }
+  <nav class="center-wrapper nav-main">
 
-        table th, td {
-            border-right: 1px solid #000000;
-            border-bottom: 1px solid #000000;
-        }
-    </style>
+    <a class="blog-logo" href="{{ site.baseurl }}/">{{ site.title }}</a>
+
+    <a href="https://github.com/{{ site.github_username}}">GitHub</a>
+
+    {% for my_page in site.pages %}
+      {% if my_page.active %}
+        <a href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+      {% endif %}
+    {% endfor %}
+
+    <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
+
+    <label for="menu-checkbox" class="toggle-button" data-open="☰" data-close="☰" onclick></label>
+  </nav>
+
 </header>
