@@ -6,17 +6,17 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: good good study day day up
-email: 1007530194@qq.com
+title: Liu-Cheng Xu
+email: xuliuchengxlc@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
     The world is indeed a stage and we are merely players.
-baseurl: /  # the subpath of your site, e.g. /blog
+baseurl: /Diary  # the subpath of your site, e.g. /blog
 lang: "en"
 url:  # the base hostname & protocol for your site
-twitter_username: 1007530194
-github_username:  niult
+twitter_username:
+github_username:  liuchengxu
 disqus_username:
-google_analytics:
+google_analytics: UA-73260325-3
 
 # Build settings
 markdown: kramdown

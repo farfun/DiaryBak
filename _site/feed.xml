@@ -1,22 +1,18 @@
----
-        layout: null
-        ---
-        <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>good good study day day up</title>
-        <description>The world is indeed a stage and we are merely players.
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Liu-Cheng Xu</title>
+    <description>The world is indeed a stage and we are merely players.
 </description>
-        <link>http://localhost:4000//</link>
-        <atom:link href="http://localhost:4000//feed.xml" rel="self"
-        type="application/rss+xml"/>
-        <pubDate>Thu, 08 Feb 2018 20:28:40 +0800</pubDate>
-        <lastBuildDate>Thu, 08 Feb 2018 20:28:40 +0800</lastBuildDate>
-        <generator>Jekyll v3.7.2</generator>
-        
-        <item>
-            <title>为什么以太坊不仅仅是一个加密货币</title>
-            <description>&lt;p&gt;尽管比特币（Bitcoin）和以太坊（Ethereum）是经常被一起提及的两个词，但实际上，比特币与以太坊有着很大的区别。它们唯一的共同点是，以太坊也是一个在区块链之上运行的加密资产。&lt;/p&gt;
+    <link>http://localhost:4000/Diary/</link>
+    <atom:link href="http://localhost:4000/Diary/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 08 Feb 2018 20:36:21 +0800</pubDate>
+    <lastBuildDate>Thu, 08 Feb 2018 20:36:21 +0800</lastBuildDate>
+    <generator>Jekyll v3.7.2</generator>
+    
+      <item>
+        <title>为什么以太坊不仅仅是一个加密货币</title>
+        <description>&lt;p&gt;尽管比特币（Bitcoin）和以太坊（Ethereum）是经常被一起提及的两个词，但实际上，比特币与以太坊有着很大的区别。它们唯一的共同点是，以太坊也是一个在区块链之上运行的加密资产。&lt;/p&gt;
 
 &lt;p&gt;与比特币仅仅是一个加密货币不同，以太坊还有很多其他特性。正是这些特性，才使得以太坊成为了一个去中心化的超级电脑。&lt;/p&gt;
 
@@ -157,20 +153,20 @@
 &lt;a href=&quot;https://hackernoon.com/wtf-is-ethereum-c65e0d67ac09&quot;&gt;WTF is Ethereum?
 The ultimate guide to understand why Ethereum is not just another cryptocurrency.&lt;/a&gt;&lt;/p&gt;
 </description>
-            <pubDate>Mon, 25 Sep 2017 00:00:00 +0800</pubDate>
-            <link>http://localhost:4000//posts/ethereum-ultimate-guide/</link>
-            <guid isPermaLink="true">http://localhost:4000//posts/ethereum-ultimate-guide/</guid>
-            
-            <category>Ethereum</category>
-            
-            
-            <category>posts</category>
-            
-        </item>
+        <pubDate>Mon, 25 Sep 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/Diary/posts/ethereum-ultimate-guide/</link>
+        <guid isPermaLink="true">http://localhost:4000/Diary/posts/ethereum-ultimate-guide/</guid>
         
-        <item>
-            <title>简单了解 Tendermint</title>
-            <description>&lt;p&gt;Tendermint 是什么?&lt;/p&gt;
+        <category>Ethereum</category>
+        
+        
+        <category>posts</category>
+        
+      </item>
+    
+      <item>
+        <title>简单了解 Tendermint</title>
+        <description>&lt;p&gt;Tendermint 是什么?&lt;/p&gt;
 
 &lt;h3 id=&quot;来自一段-slack-对话&quot;&gt;来自一段 slack 对话&lt;/h3&gt;
 
@@ -264,7 +260,7 @@ The ultimate guide to understand why Ethereum is not just another cryptocurrency
 
 &lt;p&gt;很显然，在创建区块链时，应用的设计者需要非常小心地设计他们的消息处理，这个架构提供一个范例。下图阐释了通过 ABCI 的消息流：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;//assets/images/posts/tendermint-abci.png&quot; alt=&quot;abci&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/Diary/assets/images/posts/tendermint-abci.png&quot; alt=&quot;abci&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;关于确定性的说明&quot;&gt;关于确定性的说明&lt;/h3&gt;
 
@@ -287,7 +283,7 @@ The ultimate guide to understand why Ethereum is not just another cryptocurrency
 
 &lt;p&gt;Tendermint 是一个易于理解，大部分操作为异步的 BFT 共识协议。下图是一个简单的状态机，它展示了协议遵循的规则：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;//assets/images/posts/tendermint-state-machine.png&quot; alt=&quot;abci&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/Diary/assets/images/posts/tendermint-state-machine.png&quot; alt=&quot;abci&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;协议中的参与者叫着 “验证人”（validator）。他们轮流对交易区块进行提议，并对这些区块进行投票。区块会被提交到链上，每一个块占据一个“高度”（height）。提交块可能会失败，如果失败，协议就会开始下一轮的提交，并且一个新的验证人会继续提交那个高度的区块。要想成功提交一个块，需要有两个阶段的投票：“预投票”（pre-vote）和“预提交”（pre-commit）。在同一轮提交中，只有超过 2/3 的验证人对同一个块进行了预提交，这个块才能被提交到链上。&lt;/p&gt;
 
@@ -312,20 +308,20 @@ The ultimate guide to understand why Ethereum is not just another cryptocurrency
 
 &lt;p&gt;原文：&lt;a href=&quot;https://tendermint.com/intro&quot;&gt;Tendermint intro&lt;/a&gt;&lt;/p&gt;
 </description>
-            <pubDate>Fri, 18 Aug 2017 00:00:00 +0800</pubDate>
-            <link>http://localhost:4000//posts/tendermint/</link>
-            <guid isPermaLink="true">http://localhost:4000//posts/tendermint/</guid>
-            
-            <category>consensus</category>
-            
-            
-            <category>posts</category>
-            
-        </item>
+        <pubDate>Fri, 18 Aug 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/Diary/posts/tendermint/</link>
+        <guid isPermaLink="true">http://localhost:4000/Diary/posts/tendermint/</guid>
         
-        <item>
-            <title>用表情符号解释比特币 (1)</title>
-            <description>&lt;p&gt;&lt;img src=&quot;//assets/images/posts/bitcoin-explained-1.png&quot; alt=&quot;1&quot; /&gt;&lt;/p&gt;
+        <category>consensus</category>
+        
+        
+        <category>posts</category>
+        
+      </item>
+    
+      <item>
+        <title>用表情符号解释比特币 (1)</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/Diary/assets/images/posts/bitcoin-explained-1.png&quot; alt=&quot;1&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;比特币是一个存储和消费数字货币的革命性方式，并且有着变革其他领域的潜力。无须成为一个数学家或密码学家, 你就可以理解它是怎么回事。当开始看到整个系统是如何形成时，你可能会变得十分兴奋。本文是三篇系列文章中的第一篇。&lt;/p&gt;
 
@@ -333,7 +329,7 @@ The ultimate guide to understand why Ethereum is not just another cryptocurrency
 
 &lt;p&gt;但是记住：我仍然拥有一份拷贝。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;//assets/images/posts/bitcoin-explained-2.gif&quot; alt=&quot;2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/Diary/assets/images/posts/bitcoin-explained-2.gif&quot; alt=&quot;2&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;这就是典型地在互联网上数字信息的移动。你并不是真的 &lt;strong&gt;转移（transfer）&lt;/strong&gt; 内容，而是对它进行了 &lt;strong&gt;拷贝（copy）&lt;/strong&gt;。直到目前为止，这种方式都十分行得通：但是这可能有点不太恰当，毕竟复制一首歌或是一部电影并不太可能会对经济造成危害。&lt;/p&gt;
 
@@ -341,7 +337,7 @@ The ultimate guide to understand why Ethereum is not just another cryptocurrency
 
 &lt;p&gt;如果我给你发送一美元，非常重要的一点是，我无法保留这一美元的副本。通过邮件来产生无限的数字货币，可能一开始看起来很有吸引力，但是如果每个人都开始这么干的话会发生什么事情呢？这会导致肆虐的货币膨胀，从而使得经济因此崩塌。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;//assets/images/posts/bitcoin-explained-3.png&quot; alt=&quot;3&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/Diary/assets/images/posts/bitcoin-explained-3.png&quot; alt=&quot;3&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;传统上，在有线传输和使用借记卡的世界里，数字货币是由中心化机构进行跟踪以防止复制。比如说，银行的数据库会确认谁到底拥有了多少钱。这个系统依赖于中心化的机构，我们大都已经熟悉这个概念。当然，这个中心化机构对我们的钱有着绝对的控制权，因为我们的钱只是银行数据库里的一个数字而已。&lt;/p&gt;
 
@@ -357,7 +353,7 @@ The ultimate guide to understand why Ethereum is not just another cryptocurrency
 
 &lt;p&gt;在比特币网络中，所有交易都永久记录于一个长长的列表之中，这个列表就叫做区块链。区块链并不是由一个中心的权威机构保护的秘密列表。它是一个分布式的公开列表，每个参与其中的计算机都有一个备份。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;//assets/images/posts/bitcoin-explained-4.png&quot; alt=&quot;4&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/Diary/assets/images/posts/bitcoin-explained-4.png&quot; alt=&quot;4&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;比特币区块链是&lt;strong&gt;不可更改&lt;/strong&gt;，&lt;strong&gt;公开&lt;/strong&gt;，&lt;strong&gt;分布式&lt;/strong&gt;的账簿：&lt;/p&gt;
 
@@ -383,7 +379,7 @@ The ultimate guide to understand why Ethereum is not just another cryptocurrency
 
 &lt;h3 id=&quot;一个比特币是如何诞生的&quot;&gt;一个比特币是如何诞生的&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;//assets/images/posts/bitcoin-explained-5.png&quot; alt=&quot;5&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/Diary/assets/images/posts/bitcoin-explained-5.png&quot; alt=&quot;5&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;美元是由美国政府印刷的，其他传统货币也是由它们的政府发行而来。很久以前，美元是由在美国财政部等量的黄金支持的。在那段时间，要想创造更多货币就需要更多等量的黄金，因此挖黄金十分流行。&lt;/p&gt;
 
@@ -400,7 +396,7 @@ The ultimate guide to understand why Ethereum is not just another cryptocurrency
 
 &lt;h3 id=&quot;初见哈希&quot;&gt;初见哈希&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;//assets/images/posts/bitcoin-explained-6.png&quot; alt=&quot;6&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/Diary/assets/images/posts/bitcoin-explained-6.png&quot; alt=&quot;6&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;一个哈希就是一个数字指纹，因为它唯一识别了一串数字信息 – 无论该信息是一张图片，一个图片相册，一部电影，一串密码，文本，还是其他的任何内容。它是由数字信息经过一个叫做“哈希”的过程衍生而来。它的形式可以是一串字母，数字和其他符号。&lt;/p&gt;
 
@@ -410,7 +406,7 @@ The ultimate guide to understand why Ethereum is not just another cryptocurrency
 
 &lt;p&gt;举个例子，我们用叫做 &lt;a href=&quot;https://en.wikipedia.org/wiki/SHA-2&quot;&gt;SHA-256&lt;/a&gt; 的一个哈希函数来计算一个小狗图片的哈希。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;//assets/images/posts/bitcoin-explained-7.jpeg&quot; alt=&quot;7&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/Diary/assets/images/posts/bitcoin-explained-7.jpeg&quot; alt=&quot;7&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;显然，大家应该都能看得出，这张小狗的图片不会是 Facebook 的违禁图片。不过，Facebook 里面的人不会真的去看这张照片，而是使用相关程序检测这张图片的哈希，如下：&lt;/p&gt;
 
@@ -423,7 +419,7 @@ The ultimate guide to understand why Ethereum is not just another cryptocurrency
 
 &lt;p&gt;哈希函数一个非常有趣的特性是，只要我们稍微改变一下输入，输出就会完全不同。比如，如果我们改变这张图片的一个像素点，在小狗的眼睛上面放一个跳蚤大的黑色像素点：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;//assets/images/posts/bitcoin-explained-8.png&quot; alt=&quot;8&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/Diary/assets/images/posts/bitcoin-explained-8.png&quot; alt=&quot;8&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;尽管只是改了一个像素值，但是再次对图片进行哈希，我们会得到一个完全不同的哈希值，：&lt;/p&gt;
 
@@ -434,15 +430,15 @@ The ultimate guide to understand why Ethereum is not just another cryptocurrency
 
 &lt;p&gt;现在，接下来我们应该使用真实内容和真实的哈希值了，但是由于哈希的表现形式不太友好，肉眼很难进行鉴别和区分。故而，我们使用表情符号（emoji）来代表输入和输出。在上面的例子中，我们用猫脸来表示输入（content to be hashed）,绶带表示输出（结果哈希）：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;//assets/images/posts/bitcoin-explained-9.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/Diary/assets/images/posts/bitcoin-explained-9.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;想象Facebook在两张违禁图片 🚫  和 ❌ , 执行一个哈希函数，得到结果哈希  💩  和 💀 。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;//assets/images/posts/bitcoin-explained-10.png&quot; alt=&quot;9&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/Diary/assets/images/posts/bitcoin-explained-10.png&quot; alt=&quot;9&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;然后，有人上传了一张图片 ? ，因为 Facebook 还不知道它是否违规，所以 Facebook 会调用程序对图片进行哈希，结果是&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;//assets/images/posts/bitcoin-explained-11.png&quot; alt=&quot;10&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/Diary/assets/images/posts/bitcoin-explained-11.png&quot; alt=&quot;10&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;尽管没有人真的去用肉眼观测过这张图片，但是 Facebook 已经知道它属于违禁图片，因此图片的哈希匹配了。没有人需要去直接查看新上传的输入，只要它有着与已有违禁图片的相同哈希，我们就认为这是违规图片。&lt;/p&gt;
 
@@ -452,20 +448,20 @@ The ultimate guide to understand why Ethereum is not just another cryptocurrency
 
 &lt;p&gt;原文：&lt;a href=&quot;https://medium.com/@tessr/making-money-530d2bb2b8f7&quot;&gt;Bitcoin Explained (with Emoji)&lt;/a&gt;&lt;/p&gt;
 </description>
-            <pubDate>Sun, 30 Jul 2017 00:00:00 +0800</pubDate>
-            <link>http://localhost:4000//posts/bitcoin-explained-1/</link>
-            <guid isPermaLink="true">http://localhost:4000//posts/bitcoin-explained-1/</guid>
-            
-            <category>bitcoin</category>
-            
-            
-            <category>posts</category>
-            
-        </item>
+        <pubDate>Sun, 30 Jul 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/Diary/posts/bitcoin-explained-1/</link>
+        <guid isPermaLink="true">http://localhost:4000/Diary/posts/bitcoin-explained-1/</guid>
         
-        <item>
-            <title>用异步协程写一个爬虫 (2)</title>
-            <description>&lt;p&gt;本文译自： &lt;a href=&quot;http://www.aosabook.org/en/500L/a-web-crawler-with-asyncio-coroutines.html&quot;&gt;A Web Crawler With asyncio Coroutines&lt;/a&gt;。&lt;/p&gt;
+        <category>bitcoin</category>
+        
+        
+        <category>posts</category>
+        
+      </item>
+    
+      <item>
+        <title>用异步协程写一个爬虫 (2)</title>
+        <description>&lt;p&gt;本文译自： &lt;a href=&quot;http://www.aosabook.org/en/500L/a-web-crawler-with-asyncio-coroutines.html&quot;&gt;A Web Crawler With asyncio Coroutines&lt;/a&gt;。&lt;/p&gt;
 
 &lt;p&gt;在上一篇的最后, 我们提到了多线程与异步的一些问题, 下面来介绍一下 Python 的协程(coroutines), 它兼具了多线程与异步的一些优点.&lt;/p&gt;
 
@@ -536,7 +532,7 @@ The ultimate guide to understand why Ethereum is not just another cryptocurrency
 &lt;span class=&quot;s&quot;&gt;'foo'&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;//assets/images/posts/function-calls.png&quot; alt=&quot;function-calls&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/Diary/assets/images/posts/function-calls.png&quot; alt=&quot;function-calls&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;现在开始设置 Python 生成器的阶段，它使用了同样的 building  block - code objects and stack frames - 效果非凡。&lt;/p&gt;
 
@@ -574,7 +570,7 @@ The ultimate guide to understand why Ethereum is not just another cryptocurrency
 
 &lt;p&gt;对 &lt;code class=&quot;highlighter-rouge&quot;&gt;gen_fn&lt;/code&gt; 的调用的所有生成器都指向同样的代码。但是每一个都拥有自己的 stack frame. 这个 stack frame 并不是任何真正的栈，它位于堆内存并且等待被使用:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;//assets/images/posts/generator.png&quot; alt=&quot;function-calls&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/Diary/assets/images/posts/generator.png&quot; alt=&quot;function-calls&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;frame 有一个 “最近指令 (last instruction)” 指针，它最近执行最多的指令。开始的时候，最近指令指针为 -1， 表示生成器还没有开始：&lt;/p&gt;
 
@@ -873,7 +869,7 @@ The ultimate guide to understand why Ethereum is not just another cryptocurrency
 
 &lt;p&gt;当 &lt;code class=&quot;highlighter-rouge&quot;&gt;read&lt;/code&gt; 生成一个 future, task 通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;yield from&lt;/code&gt; 语句的通道接收 future, 更准确地说，就想好事 future 直接产生自 &lt;code class=&quot;highlighter-rouge&quot;&gt;fetch&lt;/code&gt;. 当循环解析一个 future, task 将它的结果发送给 &lt;code class=&quot;highlighter-rouge&quot;&gt;fetch&lt;/code&gt;, 并且值被 &lt;code class=&quot;highlighter-rouge&quot;&gt;read&lt;/code&gt; 所接收, 跟 task 直接驱动 &lt;code class=&quot;highlighter-rouge&quot;&gt;read&lt;/code&gt; 一样:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;//assets/images/posts/yield-from.png&quot; alt=&quot;yield-from&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/Diary/assets/images/posts/yield-from.png&quot; alt=&quot;yield-from&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;为了完善我们的协程实现， 我们去除一个缺点： 当等待一个 future 时使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;yield&lt;/code&gt;, 但是当它委托给一个子协程时使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;yield from&lt;/code&gt;. 如果无论当一个协程何时暂停，我们都使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;yield from&lt;/code&gt; 就更好了。那么一个协程就不再需要考虑它所等待的是一个什么类型的东西.&lt;/p&gt;
 
@@ -927,20 +923,20 @@ The ultimate guide to understand why Ethereum is not just another cryptocurrency
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-            <pubDate>Sat, 10 Jun 2017 00:00:00 +0800</pubDate>
-            <link>http://localhost:4000//posts/a-web-crawer-with-a-asyncio-coroutines-2/</link>
-            <guid isPermaLink="true">http://localhost:4000//posts/a-web-crawer-with-a-asyncio-coroutines-2/</guid>
-            
-            <category>crawer</category>
-            
-            
-            <category>posts</category>
-            
-        </item>
+        <pubDate>Sat, 10 Jun 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/Diary/posts/a-web-crawer-with-a-asyncio-coroutines-2/</link>
+        <guid isPermaLink="true">http://localhost:4000/Diary/posts/a-web-crawer-with-a-asyncio-coroutines-2/</guid>
         
-        <item>
-            <title>用异步协程写一个爬虫 (1)</title>
-            <description>&lt;p&gt;本文译自： &lt;a href=&quot;http://www.aosabook.org/en/500L/a-web-crawler-with-asyncio-coroutines.html&quot;&gt;A Web Crawler With asyncio Coroutines&lt;/a&gt;.&lt;/p&gt;
+        <category>crawer</category>
+        
+        
+        <category>posts</category>
+        
+      </item>
+    
+      <item>
+        <title>用异步协程写一个爬虫 (1)</title>
+        <description>&lt;p&gt;本文译自： &lt;a href=&quot;http://www.aosabook.org/en/500L/a-web-crawler-with-asyncio-coroutines.html&quot;&gt;A Web Crawler With asyncio Coroutines&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;由于本文篇幅很长, 在阅读本文之前不妨看一下 &lt;a href=&quot;https://www.zhihu.com/question/20899988&quot;&gt;如何入门 Python 爬虫&lt;/a&gt; 了解爬虫的基本概念, 有时间再继续阅读.&lt;/p&gt;
 
@@ -1280,17 +1276,16 @@ Exception: parse error
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-            <pubDate>Tue, 23 May 2017 00:00:00 +0800</pubDate>
-            <link>http://localhost:4000//posts/a-web-crawer-with-a-asyncio-coroutines-1/</link>
-            <guid isPermaLink="true">http://localhost:4000//posts/a-web-crawer-with-a-asyncio-coroutines-1/</guid>
-            
-            <category>crawer</category>
-            
-            
-            <category>posts</category>
-            
-        </item>
+        <pubDate>Tue, 23 May 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/Diary/posts/a-web-crawer-with-a-asyncio-coroutines-1/</link>
+        <guid isPermaLink="true">http://localhost:4000/Diary/posts/a-web-crawer-with-a-asyncio-coroutines-1/</guid>
         
-    </channel>
+        <category>crawer</category>
+        
+        
+        <category>posts</category>
+        
+      </item>
+    
+  </channel>
 </rss>
-
