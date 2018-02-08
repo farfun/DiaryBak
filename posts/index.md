@@ -1,21 +1,16 @@
 #Gowithwind的日志索引
 >A strong man can save himself. A great man can save another. 
 
-
-##[我的简历 2014/9/28](index.html?resume)
+##深度学习
++[test](index.html?about)
 
 
 #技术
 + [tornado热部署](index.html?tornado-hot-deploy)
 + [vim 学习](index.html?vim-learn)
 + [一个不到30行的可运行python http proxy](index.html?nano-proxy)
-+ [待迁移](index.html?vim-learn)
-+ [待迁移](index.html?vim-learn)
-+ [待迁移](index.html?vim-learn)
-+ [待迁移](index.html?vim-learn)
-+ [待迁移](index.html?vim-learn)
-+ [待迁移](index.html?vim-learn)
-+ [待迁移](index.html?vim-learn)
++ [待迁移](index.html?加速神经网络.md)
++ [待迁移](index.html?latex语法.md)
 + [待迁移](index.html?vim-learn)
 + [待迁移](index.html?vim-learn)
 + [待迁移](index.html?vim-learn)

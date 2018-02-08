@@ -11,11 +11,11 @@
     },
     {
       "type": "text",
-      "data": "URLs are automatically detected when you paste them into a text cell, for example, <a href=\"http://www.apple.com\">http://www.apple.com</a>."
+      "data": "<p>URLs are automatically detected when you paste them into a text cell, for example, <a href=\"http://www.apple.com\">http://www.apple.com</a>.</p>\n"
     },
     {
       "type": "text",
-      "data": "Another useful feature is <b>Linked Notes</b>. You can create a note link using the menu item “Copy Note Link” (⌃⌥⌘C) under the “Note” menu.<div><br><div><br></div><div><div><a href=\"quiver-note-url/9686AA1A-A5E9-41FF-9260-C3E0D0E9D4CB\">02 - Cell Types</a><br></div><div><a href=\"quiver-note-url/EDFC03DD-4E78-4405-A560-4A902FCE4312\">03 - Cell Operations</a></div></div><div><br></div><div>This is a nice way to cross reference your notes. A linked note can be in a different notebook, too.</div></div>"
+      "data": "<p>Another useful feature is **Linked Notes**. You can create a note link using the menu item “Copy Note Link” (⌃⌥⌘C) under the “Note” menu.</p>\n<p><a href=\"quiver-note-url/9686AA1A-A5E9-41FF-9260-C3E0D0E9D4CB\">02 - Cell Types</a></p>\n<p><a href=\"quiver-note-url/EDFC03DD-4E78-4405-A560-4A902FCE4312\">03 - Cell Operations</a></p>\n<p>This is a nice way to cross reference your notes. A linked note can be in a different notebook, too.</p>\n"
     },
     {
       "type": "text",
