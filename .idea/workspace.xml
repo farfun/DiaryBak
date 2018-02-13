@@ -3,39 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="dd812bb5-d92d-442c-ba5d-56d41b5654b8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/aside.html" afterPath="$PROJECT_DIR$/_includes/aside.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/footer.html" afterPath="$PROJECT_DIR$/_includes/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/google_analytics.html" afterPath="$PROJECT_DIR$/_includes/google_analytics.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/head.html" afterPath="$PROJECT_DIR$/_includes/head.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/header.html" afterPath="$PROJECT_DIR$/_includes/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/mathjax.html" afterPath="$PROJECT_DIR$/_includes/mathjax.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/compress.html" afterPath="$PROJECT_DIR$/_layouts/compress.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/default.html" afterPath="$PROJECT_DIR$/_layouts/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/page.html" afterPath="$PROJECT_DIR$/_layouts/page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/post.html" afterPath="$PROJECT_DIR$/_layouts/post.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/about/index.html" afterPath="$PROJECT_DIR$/_site/about/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/data/quiver/Quiver.qvlibrary/0863E58D-2902-47D1-A4D2-57B430BF27E1.qvnotebook/74D3E5FD-F3AD-4A74-8999-BF47DFDD72AF.qvnote/content.json" afterPath="$PROJECT_DIR$/_site/data/quiver/Quiver.qvlibrary/0863E58D-2902-47D1-A4D2-57B430BF27E1.qvnotebook/74D3E5FD-F3AD-4A74-8999-BF47DFDD72AF.qvnote/content.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/data/quiver/Quiver.qvlibrary/0863E58D-2902-47D1-A4D2-57B430BF27E1.qvnotebook/74D3E5FD-F3AD-4A74-8999-BF47DFDD72AF.qvnote/meta.json" afterPath="$PROJECT_DIR$/_site/data/quiver/Quiver.qvlibrary/0863E58D-2902-47D1-A4D2-57B430BF27E1.qvnotebook/74D3E5FD-F3AD-4A74-8999-BF47DFDD72AF.qvnote/meta.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/feed.xml" afterPath="$PROJECT_DIR$/_site/feed.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/posts/a-web-crawer-with-a-asyncio-coroutines-1/index.html" afterPath="$PROJECT_DIR$/_site/posts/a-web-crawer-with-a-asyncio-coroutines-1/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/posts/a-web-crawer-with-a-asyncio-coroutines-2/index.html" afterPath="$PROJECT_DIR$/_site/posts/a-web-crawer-with-a-asyncio-coroutines-2/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/posts/bias-variance/index.html" afterPath="$PROJECT_DIR$/_site/posts/bias-variance/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/posts/bitcoin-explained-1/index.html" afterPath="$PROJECT_DIR$/_site/posts/bitcoin-explained-1/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/posts/dive-into-gradient-decent/index.html" afterPath="$PROJECT_DIR$/_site/posts/dive-into-gradient-decent/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/posts/ethereum-ultimate-guide/index.html" afterPath="$PROJECT_DIR$/_site/posts/ethereum-ultimate-guide/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/posts/index.html" afterPath="$PROJECT_DIR$/_site/posts/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/posts/latex语法/index.html" afterPath="$PROJECT_DIR$/_site/posts/latex语法/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/posts/nosql-in-python/index.html" afterPath="$PROJECT_DIR$/_site/posts/nosql-in-python/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/posts/perceptron/index.html" afterPath="$PROJECT_DIR$/_site/posts/perceptron/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/posts/quick-latex/index.html" afterPath="$PROJECT_DIR$/_site/posts/quick-latex/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/posts/tendermint/index.html" afterPath="$PROJECT_DIR$/_site/posts/tendermint/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0863E58D-2902-47D1-A4D2-57B430BF27E1.qvnotebook/74D3E5FD-F3AD-4A74-8999-BF47DFDD72AF.qvnote/content.json" afterPath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0863E58D-2902-47D1-A4D2-57B430BF27E1.qvnotebook/74D3E5FD-F3AD-4A74-8999-BF47DFDD72AF.qvnote/content.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0863E58D-2902-47D1-A4D2-57B430BF27E1.qvnotebook/74D3E5FD-F3AD-4A74-8999-BF47DFDD72AF.qvnote/meta.json" afterPath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0863E58D-2902-47D1-A4D2-57B430BF27E1.qvnotebook/74D3E5FD-F3AD-4A74-8999-BF47DFDD72AF.qvnote/meta.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feed.xml" afterPath="$PROJECT_DIR$/feed.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts.html" afterPath="$PROJECT_DIR$/posts.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,11 +24,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="491">
               <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_includes/footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_includes/header.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -69,6 +67,8 @@
       <find>/assets</find>
       <find>baseurl</find>
       <find>blog_cn</find>
+      <find>assets/js</find>
+      <find>assets</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -102,7 +102,6 @@
         <option value="$PROJECT_DIR$/feed.xml" />
         <option value="$PROJECT_DIR$/posts.html" />
         <option value="$PROJECT_DIR$/_includes/aside.html" />
-        <option value="$PROJECT_DIR$/_includes/footer.html" />
         <option value="$PROJECT_DIR$/_includes/google_analytics.html" />
         <option value="$PROJECT_DIR$/_includes/head.html" />
         <option value="$PROJECT_DIR$/_includes/header.html" />
@@ -112,6 +111,7 @@
         <option value="$PROJECT_DIR$/_layouts/page.html" />
         <option value="$PROJECT_DIR$/_layouts/post.html" />
         <option value="$PROJECT_DIR$/_config.yml" />
+        <option value="$PROJECT_DIR$/_includes/footer.html" />
       </list>
     </option>
   </component>
@@ -152,6 +152,16 @@
             <path>
               <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
               <item name="Diary" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Diary" type="462c0819:PsiDirectoryNode" />
+              <item name="_includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Diary" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -309,17 +319,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/markdown/javascript_数组排序详细分析.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="15">
-            <caret line="1" column="18" lean-forward="true" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/i/itorr2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="573">
@@ -684,50 +683,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/aside.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="4" lean-forward="false" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/feed.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/head.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/google_analytics.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -772,10 +731,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_site/posts/latex语法/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="0" column="80806" lean-forward="false" selection-start-line="0" selection-start-column="80806" selection-end-line="0" selection-end-column="80806" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="491">
           <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/aside.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/google_analytics.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/head.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
           <folding />
         </state>
       </provider>
