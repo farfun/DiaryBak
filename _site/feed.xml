@@ -1,18 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Liu-Cheng Xu</title>
-    <description>The world is indeed a stage and we are merely players.
+---
+        layout: null
+        ---
+        <?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Niult</title>
+        <description>The world is indeed a stage and we are merely players.
 </description>
-    <link>http://localhost:4000/Diary/</link>
-    <atom:link href="http://localhost:4000/Diary/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 08 Feb 2018 21:07:28 +0800</pubDate>
-    <lastBuildDate>Thu, 08 Feb 2018 21:07:28 +0800</lastBuildDate>
-    <generator>Jekyll v3.7.2</generator>
-    
-      <item>
-        <title>从零开始 LaTeX 快速入门</title>
-        <description>&lt;p&gt;http://zh.wikipedia.org/wiki/Help:MATH
+        <link>http://localhost:4000/Diary/</link>
+        <atom:link href="http://localhost:4000/Diary/feed.xml" rel="self"
+        type="application/rss+xml"/>
+        <pubDate>Tue, 13 Feb 2018 16:46:28 +0800</pubDate>
+        <lastBuildDate>Tue, 13 Feb 2018 16:46:28 +0800</lastBuildDate>
+        <generator>Jekyll v3.7.2</generator>
+        
+        <item>
+            <title>从零开始 LaTeX 快速入门</title>
+            <description>&lt;p&gt;http://zh.wikipedia.org/wiki/Help:MATH
 函数、符号及特殊字符&lt;/p&gt;
 
 &lt;h1 id=&quot;声调&quot;&gt;声调&lt;/h1&gt;
@@ -3094,20 +3098,20 @@ $\Bigg ( \bigg [ \Big { \big \langle \left | | x | \right | \big \rangle \Big } 
 　　&lt;/p&gt;
 
 </description>
-        <pubDate>Mon, 01 Oct 2018 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/Diary/posts/latex%E8%AF%AD%E6%B3%95/</link>
-        <guid isPermaLink="true">http://localhost:4000/Diary/posts/latex%E8%AF%AD%E6%B3%95/</guid>
+            <pubDate>Mon, 01 Oct 2018 00:00:00 +0800</pubDate>
+            <link>http://localhost:4000/Diary/posts/latex%E8%AF%AD%E6%B3%95/</link>
+            <guid isPermaLink="true">http://localhost:4000/Diary/posts/latex%E8%AF%AD%E6%B3%95/</guid>
+            
+            <category>LaTeX</category>
+            
+            
+            <category>posts</category>
+            
+        </item>
         
-        <category>LaTeX</category>
-        
-        
-        <category>posts</category>
-        
-      </item>
-    
-      <item>
-        <title>为什么以太坊不仅仅是一个加密货币</title>
-        <description>&lt;p&gt;尽管比特币（Bitcoin）和以太坊（Ethereum）是经常被一起提及的两个词，但实际上，比特币与以太坊有着很大的区别。它们唯一的共同点是，以太坊也是一个在区块链之上运行的加密资产。&lt;/p&gt;
+        <item>
+            <title>为什么以太坊不仅仅是一个加密货币</title>
+            <description>&lt;p&gt;尽管比特币（Bitcoin）和以太坊（Ethereum）是经常被一起提及的两个词，但实际上，比特币与以太坊有着很大的区别。它们唯一的共同点是，以太坊也是一个在区块链之上运行的加密资产。&lt;/p&gt;
 
 &lt;p&gt;与比特币仅仅是一个加密货币不同，以太坊还有很多其他特性。正是这些特性，才使得以太坊成为了一个去中心化的超级电脑。&lt;/p&gt;
 
@@ -3248,20 +3252,20 @@ $\Bigg ( \bigg [ \Big { \big \langle \left | | x | \right | \big \rangle \Big } 
 &lt;a href=&quot;https://hackernoon.com/wtf-is-ethereum-c65e0d67ac09&quot;&gt;WTF is Ethereum?
 The ultimate guide to understand why Ethereum is not just another cryptocurrency.&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Mon, 25 Sep 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/Diary/posts/ethereum-ultimate-guide/</link>
-        <guid isPermaLink="true">http://localhost:4000/Diary/posts/ethereum-ultimate-guide/</guid>
+            <pubDate>Mon, 25 Sep 2017 00:00:00 +0800</pubDate>
+            <link>http://localhost:4000/Diary/posts/ethereum-ultimate-guide/</link>
+            <guid isPermaLink="true">http://localhost:4000/Diary/posts/ethereum-ultimate-guide/</guid>
+            
+            <category>Ethereum</category>
+            
+            
+            <category>posts</category>
+            
+        </item>
         
-        <category>Ethereum</category>
-        
-        
-        <category>posts</category>
-        
-      </item>
-    
-      <item>
-        <title>简单了解 Tendermint</title>
-        <description>&lt;p&gt;Tendermint 是什么?&lt;/p&gt;
+        <item>
+            <title>简单了解 Tendermint</title>
+            <description>&lt;p&gt;Tendermint 是什么?&lt;/p&gt;
 
 &lt;h3 id=&quot;来自一段-slack-对话&quot;&gt;来自一段 slack 对话&lt;/h3&gt;
 
@@ -3403,20 +3407,20 @@ The ultimate guide to understand why Ethereum is not just another cryptocurrency
 
 &lt;p&gt;原文：&lt;a href=&quot;https://tendermint.com/intro&quot;&gt;Tendermint intro&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Fri, 18 Aug 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/Diary/posts/tendermint/</link>
-        <guid isPermaLink="true">http://localhost:4000/Diary/posts/tendermint/</guid>
+            <pubDate>Fri, 18 Aug 2017 00:00:00 +0800</pubDate>
+            <link>http://localhost:4000/Diary/posts/tendermint/</link>
+            <guid isPermaLink="true">http://localhost:4000/Diary/posts/tendermint/</guid>
+            
+            <category>consensus</category>
+            
+            
+            <category>posts</category>
+            
+        </item>
         
-        <category>consensus</category>
-        
-        
-        <category>posts</category>
-        
-      </item>
-    
-      <item>
-        <title>用表情符号解释比特币 (1)</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/Diary/assets/images/posts/bitcoin-explained-1.png&quot; alt=&quot;1&quot; /&gt;&lt;/p&gt;
+        <item>
+            <title>用表情符号解释比特币 (1)</title>
+            <description>&lt;p&gt;&lt;img src=&quot;/Diary/assets/images/posts/bitcoin-explained-1.png&quot; alt=&quot;1&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;比特币是一个存储和消费数字货币的革命性方式，并且有着变革其他领域的潜力。无须成为一个数学家或密码学家, 你就可以理解它是怎么回事。当开始看到整个系统是如何形成时，你可能会变得十分兴奋。本文是三篇系列文章中的第一篇。&lt;/p&gt;
 
@@ -3543,20 +3547,20 @@ The ultimate guide to understand why Ethereum is not just another cryptocurrency
 
 &lt;p&gt;原文：&lt;a href=&quot;https://medium.com/@tessr/making-money-530d2bb2b8f7&quot;&gt;Bitcoin Explained (with Emoji)&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sun, 30 Jul 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/Diary/posts/bitcoin-explained-1/</link>
-        <guid isPermaLink="true">http://localhost:4000/Diary/posts/bitcoin-explained-1/</guid>
+            <pubDate>Sun, 30 Jul 2017 00:00:00 +0800</pubDate>
+            <link>http://localhost:4000/Diary/posts/bitcoin-explained-1/</link>
+            <guid isPermaLink="true">http://localhost:4000/Diary/posts/bitcoin-explained-1/</guid>
+            
+            <category>bitcoin</category>
+            
+            
+            <category>posts</category>
+            
+        </item>
         
-        <category>bitcoin</category>
-        
-        
-        <category>posts</category>
-        
-      </item>
-    
-      <item>
-        <title>用异步协程写一个爬虫 (2)</title>
-        <description>&lt;p&gt;本文译自： &lt;a href=&quot;http://www.aosabook.org/en/500L/a-web-crawler-with-asyncio-coroutines.html&quot;&gt;A Web Crawler With asyncio Coroutines&lt;/a&gt;。&lt;/p&gt;
+        <item>
+            <title>用异步协程写一个爬虫 (2)</title>
+            <description>&lt;p&gt;本文译自： &lt;a href=&quot;http://www.aosabook.org/en/500L/a-web-crawler-with-asyncio-coroutines.html&quot;&gt;A Web Crawler With asyncio Coroutines&lt;/a&gt;。&lt;/p&gt;
 
 &lt;p&gt;在上一篇的最后, 我们提到了多线程与异步的一些问题, 下面来介绍一下 Python 的协程(coroutines), 它兼具了多线程与异步的一些优点.&lt;/p&gt;
 
@@ -4018,16 +4022,17 @@ The ultimate guide to understand why Ethereum is not just another cryptocurrency
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Sat, 10 Jun 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/Diary/posts/a-web-crawer-with-a-asyncio-coroutines-2/</link>
-        <guid isPermaLink="true">http://localhost:4000/Diary/posts/a-web-crawer-with-a-asyncio-coroutines-2/</guid>
+            <pubDate>Sat, 10 Jun 2017 00:00:00 +0800</pubDate>
+            <link>http://localhost:4000/Diary/posts/a-web-crawer-with-a-asyncio-coroutines-2/</link>
+            <guid isPermaLink="true">http://localhost:4000/Diary/posts/a-web-crawer-with-a-asyncio-coroutines-2/</guid>
+            
+            <category>crawer</category>
+            
+            
+            <category>posts</category>
+            
+        </item>
         
-        <category>crawer</category>
-        
-        
-        <category>posts</category>
-        
-      </item>
-    
-  </channel>
+    </channel>
 </rss>
+

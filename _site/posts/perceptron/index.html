@@ -1,4 +1,172 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title> Perceptron algorithm</title><meta name="description" content="(图片来自 python-machine-learning)"><link rel="canonical" href="http://localhost:4000/Diary/posts/perceptron/"><link rel="alternate" type="application/rss+xml" title="Liu-Cheng Xu" href="http://localhost:4000/Diary/feed.xml"><link href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|Roboto+Condensed:700&subset=latin' rel='stylesheet' type='text/css'><link rel="stylesheet" href="http://localhost:4000/Diary/assets/css/main.css"><link rel="shortcut icon" href="/assets/images/x.gif"><meta property="og:url" content="http://localhost:4000/posts/perceptron/"><meta property="og:type" content="website"><meta property="og:title" content="感知器"><meta property="og:description" content="Perceptron algorithm"><meta property="og:site_name" content="Liu-Cheng Xu"><meta name="twitter:card" content="summary"><meta name="twitter:url" content="http://localhost:4000/posts/perceptron/"><meta name="twitter:title" content="感知器"><meta name="twitter:description" content="Perceptron algorithm"><meta property="og:image" content="http://localhost:4000/assets/images/bg.svg"><meta name="twitter:image" content="http://localhost:4000/assets/images/bg.svg"> <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ], processEscapes: true, skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'], }, TeX: { equationNumbers: { autoNumber: "AMS" } } }); MathJax.Hub.Queue(function() { var all = MathJax.Hub.getAllJax(), i; for(i=0; i < all.length; i += 1) { all[i].SourceElement().parentNode.className += ' has-jax'; } }); </script> <script type="text/javascript" async src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script> <script type="text/javascript" charset="utf-8"> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments) },i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-73260325-3', 'auto'); ga('send', 'pageview'); </script><body><div id="shadow"></div><header class="main-header content-wrapper"> <input type="checkbox" id="menu-checkbox" /><nav class="center-wrapper nav-main"> <a class="blog-logo" href="/Diary/">Liu-Cheng Xu</a> <a href="https://github.com/liuchengxu">GitHub</a> <a href="/Diary/about/">About</a> <a href="/Diary/feed.xml">RSS</a> <label for="menu-checkbox" class="toggle-button" data-open="☰" data-close="☰" onclick></label></nav></header><main class="content-wrapper"><article class="post"><h1 class="post-title">感知器</h1><p class="post-meta"> <time datetime="2017-01-01">01-01-2017</time><div class="post-content"><p><img src="https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch02/images/02_04.png?raw=true" alt="perceptron" /> (图片来自 python-machine-learning)<p>感知器算法 <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> 步骤大致如下：<ol><li>将权重初始化为 0 或一个很小的随机数。<li>对于每个训练样本 $x^{(i)}$ 执行下列操作：<ol><li>计算输出值 $\hat{y}$ 。<li>更新权重。</ol></ol><p>这里的输出值, 就是由我们预先定义的单位阶跃函数 (unit step function) 所预测得出的类别标签。权重向量 $\mathbf{w}$ 中的每一个权重 $w_j$ 的更新公式为：<p>\begin{equation} w_j := w_j + \Delta w_j \end{equation}<p>$\Delta w_j$ 被用来更新权重 $w_j$ , 其计算公式如下：<p>\begin{equation} \Delta w_j = \eta \left(y^{(i)} - \hat{y}^{(i)}\right)x_j^{(i)} \end{equation}<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<pre<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    
+      Perceptron algorithm
+    
+ </title>
+
+  <meta name="description" content="(图片来自 python-machine-learning)">
+
+  <link rel="canonical" href="http://localhost:4000/Diary/posts/perceptron/">
+  <link rel="alternate" type="application/rss+xml" title="Niult" href="http://localhost:4000/Diary/feed.xml">
+
+  <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|Roboto+Condensed:700&subset=latin' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://localhost:4000/Diary/assets/css/main.css">
+  <link rel="shortcut icon" href="/assets/images/x.gif">
+
+  <meta property="og:url" content="http://localhost:4000/posts/perceptron/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="感知器">
+  <meta property="og:description" content="Perceptron algorithm">
+  <meta property="og:site_name" content="Niult">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="http://localhost:4000/posts/perceptron/">
+  <meta name="twitter:title" content="感知器">
+  <meta name="twitter:description" content="Perceptron algorithm">
+
+  
+    <meta property="og:image" content="http://localhost:4000/assets/images/bg.svg">
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/bg.svg">
+  
+
+  
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+       tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      },
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+     });
+     MathJax.Hub.Queue(function() {
+       var all = MathJax.Hub.getAllJax(), i;
+       for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+
+</script>
+<script type="text/javascript" async
+        src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+
+  
+  
+  <script type="text/javascript" charset="utf-8">
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-73260325-3', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+  
+
+
+
+
+<body>
+<div id="shadow"></div>
+
+<header class="main-header content-wrapper">
+
+    <input type="checkbox" id="menu-checkbox"/>
+
+    <nav class="center-wrapper nav-main">
+
+        <a class="blog-logo" href="/Diary/">Niult</a>
+
+        <a href="https://github.com/1007530194">GitHub</a>
+
+        
+        
+        <a href="/Diary/about/">About</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        <a href="/Diary/feed.xml">RSS</a>
+
+        <label for="menu-checkbox" class="toggle-button" data-open="☰" data-close="☰" onclick></label>
+   </nav>
+
+</header>
+
+
+
+<main class="content-wrapper">
+    <article class="post">
+
+    <h1 class="post-title">感知器</h1>
+
+    <p class="post-meta">
+        <time datetime=" 2017-01-01
+        ">01-01-2017</time>
+
+        
+    
+
+    <div class="post-content">
+
+        <p><img src="https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch02/images/02_04.png?raw=true" alt="perceptron" />
+(图片来自 python-machine-learning)
+
+<p>感知器算法 <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> 步骤大致如下：
+
+<ol>
+  <li>将权重初始化为 0 或一个很小的随机数。
+  <li>对于每个训练样本 $x^{(i)}$ 执行下列操作：
+    <ol>
+      <li>计算输出值 $\hat{y}$ 。
+      <li>更新权重。
+   </ol>
+  
+</ol>
+
+<p>这里的输出值, 就是由我们预先定义的单位阶跃函数 (unit step function) 所预测得出的类别标签。权重向量 $\mathbf{w}$ 中的每一个权重 $w_j$ 的更新公式为：
+
+<p>\begin{equation}
+w_j := w_j + \Delta w_j
+\end{equation}
+
+<p>$\Delta w_j$ 被用来更新权重 $w_j$ , 其计算公式如下：
+
+<p>\begin{equation}
+\Delta w_j = \eta \left(y^{(i)} - \hat{y}^{(i)}\right)x_j^{(i)}
+\end{equation}
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
 
 
 <span class="k">class</span> <span class="nc">Perceptron</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
@@ -58,4 +226,6 @@
     <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
         <span class="s">"""Return class label after unit step"""</span>
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">net_input</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</code></pre></div></div><p>参考资料:<div class="footnotes"><ol><li id="fn:1"><p><a href="https://github.com/rasbt/python-machine-learning-book">python machine learning</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></ol></div><a class="link-to-post" href="/Diary/posts/bias-variance/"> <span class="link-to-post__next">&#10535; &nbsp;Next post</span> <span class="link-to-post__title">偏差与方差</span> </a> <a class="link-to-post" href="/Diary/posts/dive-into-gradient-decent/"> <span class="link-to-post__prev">&#10535; &nbsp;Previous post</span> <span class="link-to-post__title">理解梯度下降</span> </a></div></article></main><footer class="blog-footer content-wrapper"><p>&copy; <span class="full-year"></span> Liu-Cheng Xu</footer><script src="/assets/js/scripts.js"></script> <script type="text/javascript" charset="utf-8"> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments) },i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-73260325-3', 'auto'); ga('send', 'pageview'); </script>
+</code></pre></div></div><p>参考资料: <div class="footnotes"> <ol> <li id="fn:1"> <p><a href="https://github.com/rasbt/python-machine-learning-book">python machine learning</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></ol></div><a class="link-to-post" href="/Diary/posts/bias-variance/"> <span class="link-to-post__next">&#10535; &nbsp;Next post</span> <span class="link-to-post__title">偏差与方差</span> </a> <a class="link-to-post" href="/Diary/posts/dive-into-gradient-decent/"> <span class="link-to-post__prev">&#10535; &nbsp;Previous post</span> <span class="link-to-post__title">理解梯度下降</span> </a></div></article></main><footer class="blog-footer content-wrapper"> <p>&copy; <span class="full-year"></span> Niult</footer><script src="/assets/js/scripts.js"></script> <script type="text/javascript" charset="utf-8"> (function (i, s, o, g, r, a, m) { i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m) })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga'); ga('create', 'UA-73260325-3', 'auto'); ga('send', 'pageview'); </script>
+
+
