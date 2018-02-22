@@ -21,8 +21,8 @@ google_analytics: UA-73260325-3
 # Build settings
 markdown: kramdown
 
-highlighter: pygments
-#highlighter: rouge
+#highlighter: pygments
+highlighter: rouge
 
 relative_permalinks: false
 #permalink: pretty
