@@ -4,9 +4,11 @@
 
     <nav class="center-wrapper nav-main">
 
+        <a class="blog-logo" href="{{ site.baseurl }}/">首页</a>
         <a class="blog-logo" href="{{ site.baseurl }}/">{{ site.title }}</a>
 
         <a href="https://github.com/{{ site.github_username}}">GitHub</a>
+
 
         {% for my_page in site.pages %}
         {% if my_page.active %}
@@ -14,9 +16,10 @@
         {% endif %}
         {% endfor %}
 
-        <!--a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a-->
 
         <label for="menu-checkbox" class="toggle-button" data-open="☰" data-close="☰" onclick></label>
+
+
     </nav>
 
 </header>

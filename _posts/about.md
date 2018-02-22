@@ -1,10 +1,7 @@
 ---
 layout: page
-title: "About"
-crawlertitle: "brief description of the author"
+title: About
 categories: posts
-summary: "About me"
-active: about
 ---
 
 <img name='name_cn' style="width=80px; height:60px;"  src="{{ site.images }}/name_cn.png" />

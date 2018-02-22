@@ -6,10 +6,10 @@ a {
   text-decoration: none;
   j:hover,
   &:focus,
-  &:active { text-decoration: none; }
+  &:active {
+    text-decoration: none;
+  }
 }
-
-
 
 /*
 * Toggle Button
@@ -61,14 +61,11 @@ a {
   content: attr(data-close);
 }
 
-
-
-@media screen and (min-width: $md-break-point){
+@media screen and (min-width: $md-break-point) {
   .toggle-button {
     display: none;
   }
 }
-
 
 /*
 * Header
@@ -81,8 +78,6 @@ a {
   top: 0;
   border-bottom: 1px solid #ddd;
 }
-
-
 
 /*
 * Header Navigation
@@ -120,8 +115,6 @@ a {
   }
 }
 
-
-
 /*
 * Logotypes
 * ========================================================================== */
@@ -139,8 +132,6 @@ a {
     font-weight: bold;
   }
 }
-
-
 
 /*
 * Aside
@@ -172,7 +163,9 @@ a {
     position: relative;
     margin-right: 5px;
     text-decoration: none;
-    &:hover { text-decoration: underline; }
+    &:hover {
+      text-decoration: underline;
+    }
     &:not(:last-child):after {
       content: " , ";
       position: absolute;
@@ -186,8 +179,6 @@ a {
   width: 100%;
   height: 100vh;
 }
-
-
 
 /*
 * Article
@@ -213,63 +204,76 @@ main {
 }
 
 @media screen and (max-width: 500px) {
-    .category {display: none}
+  .category {
+    display: none
   }
+}
 
-.list-item a{
-    float: none;
-    color: #7788aa;
-    width: auto;
-    padding-left: 1.6em;
-    overflow: hidden;
-    text-align: left;
-    overflow: hidden;
-    display: -webkit-box;
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
+.list-item a {
+  float: none;
+  color: #7788aa;
+  width: auto;
+  padding-left: 1.6em;
+  overflow: hidden;
+  text-align: left;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 
 .list-item a:link {
-    text-decoration: none;
-    -moz-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    -webkit-transition: all 0.2s ease;
-    -ms-transition: all 0.2s ease;
-    transition: all 0.2s ease;
+  text-decoration: none;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
-.list-item a:hover{
-    color: #10ae58;
+.list-item a:hover {
+  color: #10ae58;
+}
+
+.list-right {
+  text-align: right;
+  float: right;
+  width: 25%;
+  font-size: 14px;
+  margin-left: 0.5em;
+  color: #999999;
+  text-transform: lowercase;
 }
 
 .list-left {
-    float: none;
-    width: auto;
-    padding-left: 1.6em;
-    overflow: hidden;
-    text-align: left;
+  float: none;
+  width: auto;
+  padding-left: 1.6em;
+  overflow: hidden;
+  text-align: left;
 }
 
 .list-date {
-    text-align: right;
-    float: right;
-    width: 25%;
-    font-size: 14px;
-    margin-left: 0.5em;
-    color: #999999;
-    text-transform: lowercase;
+  text-align: right;
+  float: right;
+  width: 25%;
+  font-size: 14px;
+  margin-left: 0.5em;
+  color: #999999;
+  text-transform: lowercase;
 }
 
 .category {
-    color: #aaaaaa;
-    font-style: italic;
-    font-size: 14px;
-    margin-left: 8px;
+  color: #aaaaaa;
+  font-style: italic;
+  font-size: 14px;
+  margin-left: 8px;
 }
+
 article {
   padding: 2em 1em;
-  font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif,"\5b8b\4f53";
+  font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif, "\5b8b\4f53";
   img,
   embed,
   object,
@@ -287,7 +291,9 @@ article {
     clear: both;
   }
 
-  h1 { margin-top: 0; }
+  h1 {
+    margin-top: 0;
+  }
 
   img {
     max-width: 100%;
@@ -301,10 +307,10 @@ article {
 }
 
 article.index-page {
-    margin-left: -20px;
-    padding: 0 10px 20px 0;
-    font-size: 16px;
-    font-family: "ComputerModern", Georgia, Palatino, "Century Schoolbook L", "Times New Roman", Times, serif;
+  margin-left: -20px;
+  padding: 0 10px 20px 0;
+  font-size: 16px;
+  font-family: "ComputerModern", Georgia, Palatino, "Century Schoolbook L", "Times New Roman", Times, serif;
 }
 
 .post-meta {
@@ -323,7 +329,6 @@ article.index-page {
   }
 
 }
-
 
 /*
 * Archive
@@ -356,8 +361,6 @@ article.index-page {
   display: none;
 }
 
-
-
 /*
 * Footer
 * ========================================================================== */
@@ -377,8 +380,6 @@ article.index-page {
   margin-left: -20px;
 }
 
-
-
 /*
 * Next/Previous Posts
 * ========================================================================== */
@@ -392,7 +393,9 @@ article.index-page {
   text-align: center;
   border: 1px solid #ddd;
   transition: border-color .5s ease-in 0s;
-  &:hover { border-color: #0D243B; }
+  &:hover {
+    border-color: #0D243B;
+  }
 
   &__prev, &__next {
     font-size: .8em;
