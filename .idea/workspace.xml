@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd812bb5-d92d-442c-ba5d-56d41b5654b8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/about.md" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/08D470990F94E04CF5A4C299D5874F23.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/12CA0A69703321FE180C23BF3EB3690B.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/2091A935ECF2550EAF3A106570FF4970.jpg" afterPath="" />
@@ -27,12 +26,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/C773A31C-ABF9-4D03-9DA6-F31ED1F3C68A.qvnotebook/962AF200-B92B-4385-AE47-973CE2079D70.qvnote/content.json" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/C773A31C-ABF9-4D03-9DA6-F31ED1F3C68A.qvnotebook/962AF200-B92B-4385-AE47-973CE2079D70.qvnote/meta.json" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/C773A31C-ABF9-4D03-9DA6-F31ED1F3C68A.qvnotebook/meta.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/65b4688c2eeb3a41daf3c1e5ac9f8b1e8a81e7c4/_layout.scssc" afterPath="$PROJECT_DIR$/.sass-cache/65b4688c2eeb3a41daf3c1e5ac9f8b1e8a81e7c4/_layout.scssc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/65b4688c2eeb3a41daf3c1e5ac9f8b1e8a81e7c4/_normalize.scssc" afterPath="$PROJECT_DIR$/.sass-cache/65b4688c2eeb3a41daf3c1e5ac9f8b1e8a81e7c4/_normalize.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/header.html" afterPath="$PROJECT_DIR$/_includes/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/about.md" afterPath="$PROJECT_DIR$/_posts/about.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/_sass/_layout.scss" afterPath="$PROJECT_DIR$/assets/_sass/_layout.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/_sass/_normalize.scss" afterPath="$PROJECT_DIR$/assets/_sass/_normalize.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
@@ -62,10 +56,10 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+            <state relative-caret-position="512">
+              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding>
-                <element signature="n#style#0;n#i#0;n#a#0;n#div#1;n#article#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#a#0;n#div#0;n#article#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#i#0;n#a#0;n#div#1;n#ul#0;n#article#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -85,8 +79,8 @@
       <file leaf-file-name="_normalize.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/_sass/_normalize.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="80" column="3" lean-forward="false" selection-start-line="80" selection-start-column="3" selection-end-line="80" selection-end-column="3" />
+            <state relative-caret-position="404">
+              <caret line="76" column="7" lean-forward="false" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -896,18 +890,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/_sass/_normalize.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="80" column="3" lean-forward="false" selection-start-line="80" selection-start-column="3" selection-end-line="80" selection-end-column="3" />
+        <state relative-caret-position="404">
+          <caret line="76" column="7" lean-forward="false" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        <state relative-caret-position="512">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#i#0;n#a#0;n#div#1;n#article#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#div#0;n#article#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#i#0;n#a#0;n#div#1;n#ul#0;n#article#0;n#!!top" expanded="true" />
           </folding>
         </state>

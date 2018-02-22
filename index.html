@@ -10,20 +10,11 @@ summary: "Life is a long road"
 
     {% for category in site.categories %}
 
-
-    <div class='list-right'>
-        <small>{{ category | last | size }}</small>
-    </div>
     <div class="list-left">
-        <a href="{{ post.url | prepend: site.baseurl }}"><i style="padding-right:4px;"> ○ </i>{{ post.title }}
-            <big>{{ category | first }}</big>
+        <a href="{{ post.url | prepend: site.baseurl }}"><i style="padding-right:4px;">
+            <h1>{{ category | first }}</h1></i>
         </a>
     </div>
-
-    <div class="list-left">
-        <h2>{{ category | first }} -- {{ category | last | size }}</h2>
-    </div>
-
 
     <ul class="arc-list">
         {% for post in category.last %}
@@ -39,7 +30,6 @@ summary: "Life is a long road"
         {% endfor %}
     </ul>
     {% endfor %}
-
 
 </article>
 
