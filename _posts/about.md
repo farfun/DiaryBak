@@ -9,7 +9,7 @@ active: about
 
 <img name='name_cn' style="width=80px; height:60px;"  src="{{ site.images }}/name_cn.png" />
 
-### Liu-Cheng Xu
+### Niult
 
 Email: xuliuchengxlc#gmail.com
 

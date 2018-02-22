@@ -14,11 +14,11 @@ root = '/Users/weidian/workspace/gouye/cs231n.github.io/'
 
 def solve_title(data, index):
     if "layout: page" in data:
-        data = "layout: post\n"
+        data = "layout: page\n"
 
     if "permalink" in data:
         data = data.replace("permalink", "title")
-        data.replace("\\", "")
+        data = data.replace("/", "")
     # 添加类目
     if index == 2:
         data = "categories: posts/cs231n-ch\nmath: y\n" + data

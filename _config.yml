@@ -24,11 +24,8 @@ markdown: kramdown
 highlighter: pygments
 #highlighter: rouge
 
-#paginate: 5
-
 relative_permalinks: false
-
-#文件路径
+#permalink: pretty
 permalink: /:categories/:title.html
 
 # Posts settings
@@ -42,12 +39,6 @@ compress_html:
   comments: ["<!-- ", " -->"]
   clippings: all
   endings: all
-
-
-kramdown:
-  #input: GFM
-  auto_ids: true
-  syntax_highlighter: rouge
 
 
 sass:
