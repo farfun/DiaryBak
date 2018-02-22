@@ -65,7 +65,7 @@ if __name__ == '__main__':
 
         if dir.endswith('md'):
             print dir
-            solve(dir)
+            # solve(dir)
 
     data = "aaa233233bbb"
     data2 = "(23|333)"

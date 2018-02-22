@@ -22,9 +22,9 @@ google_analytics: UA-73260325-3
 markdown: kramdown
 
 #highlighter: pygments
-highlighter: rouge
+#highlighter: rouge
 
-relative_permalinks: false
+#relative_permalinks: false
 #permalink: pretty
 permalink: /:categories/:title.html
 
@@ -42,9 +42,13 @@ compress_html:
 
 
 sass:
-  sass_dir: assets/_sass
+  sass_dir: assets/css
   style: compressed
 
 
 images: '/assets/images'
 
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
