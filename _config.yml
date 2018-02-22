@@ -20,8 +20,16 @@ google_analytics: UA-73260325-3
 
 # Build settings
 markdown: kramdown
+
+highlighter: pygments
+#highlighter: rouge
+
+#paginate: 5
+
 relative_permalinks: false
-permalink: /:categories/:title/
+
+#文件路径
+permalink: /:categories/:title.html
 
 # Posts settings
 future: true
@@ -36,9 +44,16 @@ compress_html:
   endings: all
 
 
+kramdown:
+  #input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+
+
 sass:
   sass_dir: assets/_sass
   style: compressed
 
 
 images: '/assets/images'
+

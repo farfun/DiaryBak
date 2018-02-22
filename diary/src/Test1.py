@@ -14,14 +14,14 @@ root = '/Users/weidian/workspace/gouye/cs231n.github.io/'
 
 def solve_title(data, index):
     if "layout: page" in data:
-        data = data
         data = "layout: post\n"
 
     if "permalink" in data:
-        data = data.replace("permalink: ", "permalink: /posts/cs231n")
+        data = data.replace("permalink", "title")
+        data.replace("\\", "")
     # 添加类目
     if index == 2:
-        data = "categories: posts\n" + data
+        data = "categories: posts/cs231n-ch\nmath: y\n" + data
 
     return data
 
@@ -30,7 +30,7 @@ def solve_context(data):
     # 公式
     data = data.replace('\\\\(', '$')
     data = data.replace('\\\\)', '$')
-    if ("/assets/" in data) and re.search("(jpg|png|jpeg)", data):
+    if ("/assets/" in data) and re.search("(jpg|png|jpeg|gif)", data):
         data = data.replace("/assets/", "/Diary/assets/images/cs231n/")
     return data
 
@@ -38,7 +38,8 @@ def solve_context(data):
 def solve(path):
     print path
     f1 = open(root + path, 'r')
-    f2 = open('/Users/weidian/Documents/Diary/_posts/cs231n/2018-02-21-' + path, 'w')
+    # f2 = open('/Users/weidian/Documents/Diary/_posts/cs231n/2018-02-21-' + path, 'w')
+    f2 = open('/Users/weidian/Documents/Diary/_posts/cs231n-ch/2018-02-21-ch' + path, 'w')
 
     index = 0
     index2 = 0
