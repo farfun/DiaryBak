@@ -1,8 +1,8 @@
 ---
-layout: page
-title: AWS Tutorial
 categories: posts
-permalink: /aws-tutorial/
+layout: post
+title: AWS Tutorial
+permalink: /posts/cs231n/aws-tutorial/
 ---
 For GPU instances, we also have an Amazon Machine Image (AMI) that you can use
 to launch GPU instances on Amazon EC2. This tutorial goes through how to set up
@@ -22,7 +22,7 @@ Console" button. It will direct you to a signup page which looks like the
 following.
 
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/aws-signup.png'>
+  <img src='/Diary/assets/images/cs231n/aws-signup.png'>
 </div>
 
 Select the "I am a new user" checkbox, click the "Sign in using our secure
@@ -35,13 +35,13 @@ click on "Sign In to the Console", and this time sign in using your username and
 password.
 
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/aws-signin.png'>
+  <img src='/Diary/assets/images/cs231n/aws-signin.png'>
 </div>
 
 Once you have signed in, you will be greeted by a page like this:
 
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/aws-homepage.png'>
+  <img src='/Diary/assets/images/cs231n/aws-homepage.png'>
 </div>
 
 Make sure that the region information on the top right is set to N. California.
@@ -56,14 +56,14 @@ Next, click on the EC2 link (first link under the Compute category). You will go
 to a dashboard page like this:
 
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/ec2-dashboard.png'>
+  <img src='/Diary/assets/images/cs231n/ec2-dashboard.png'>
 </div>
 
 Click the blue "Launch Instance" button, and you will be redirected to a page
 like the following:
 
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/ami-selection.png'>
+  <img src='/Diary/assets/images/cs231n/ami-selection.png'>
 </div>
 
 Click on the "Community AMIs" link on the left sidebar, and search for "cs231n"
@@ -72,19 +72,19 @@ in the search box. You should be able to see the AMI
 AMI, and continue to the next step to choose your instance type.
 
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/community-AMIs.png'>
+  <img src='/Diary/assets/images/cs231n/community-AMIs.png'>
 </div>
 
 Choose the instance type `g2.2xlarge`, and click on "Review and Launch".
 
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/instance-selection.png'>
+  <img src='/Diary/assets/images/cs231n/instance-selection.png'>
 </div>
 
 In the next page, click on Launch.
 
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/launch-screen.png'>
+  <img src='/Diary/assets/images/cs231n/launch-screen.png'>
 </div>
 
 You will be then prompted to create or use an existing key-pair. If you already
@@ -95,11 +95,11 @@ somewhere that you won't accidentally delete. Remember that there is **NO WAY**
 to get to your instance if you lose your key. 
 
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/key-pair.png'>
+  <img src='/Diary/assets/images/cs231n/key-pair.png'>
 </div>
 
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/key-pair-create.png'>
+  <img src='/Diary/assets/images/cs231n/key-pair-create.png'>
 </div>
 
 Once you download your key, you should change the permissions of the key to
@@ -114,7 +114,7 @@ After this is done, click on "Launch Instances", and you should see a screen
 showing that your instances are launching:
 
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/launching-screen.png'>
+  <img src='/Diary/assets/images/cs231n/launching-screen.png'>
 </div>
 
 Click on "View Instances" to see your instance state. It should change to
@@ -122,7 +122,7 @@ Click on "View Instances" to see your instance state. It should change to
 are now ready to ssh into the instance.
 
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/instances-page.png'>
+  <img src='/Diary/assets/images/cs231n/instances-page.png'>
 </div>
 
 First, note down the Public IP of the instance from the instance listing. Then,

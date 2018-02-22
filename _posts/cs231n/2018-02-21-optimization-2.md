@@ -1,7 +1,7 @@
 ---
-layout: page
-permalink: /optimization-2/
 categories: posts
+layout: post
+permalink: /posts/cs231n/optimization-2/
 ---
 
 Table of Contents:

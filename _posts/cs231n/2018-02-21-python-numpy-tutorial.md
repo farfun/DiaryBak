@@ -1,8 +1,8 @@
 ---
-layout: page
-title: Python Numpy Tutorial
 categories: posts
-permalink: /python-numpy-tutorial/
+layout: post
+title: Python Numpy Tutorial
+permalink: /posts/cs231n/python-numpy-tutorial/
 ---
 
 <!--
@@ -976,8 +976,8 @@ imsave('assets/cat_tinted.jpg', img_tinted)
 ```
 
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/cat.jpg'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/cat_tinted.jpg'>
+  <img src='/Diary/assets/images/cs231n/cat.jpg'>
+  <img src='/Diary/assets/images/cs231n/cat_tinted.jpg'>
   <div class='figcaption'>
     Left: The original image.
     Right: The tinted and resized image.
@@ -1055,7 +1055,7 @@ plt.show()  # You must call plt.show() to make graphics appear.
 Running this code produces the following plot:
 
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/sine.png'>
+  <img src='/Diary/assets/images/cs231n/sine.png'>
 </div>
 
 With just a little bit of extra work we can easily plot multiple lines
@@ -1080,7 +1080,7 @@ plt.legend(['Sine', 'Cosine'])
 plt.show()
 ```
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/sine_cosine.png'>
+  <img src='/Diary/assets/images/cs231n/sine_cosine.png'>
 </div>
 
 You can read much more about the `plot` function
@@ -1119,7 +1119,7 @@ plt.show()
 ```
 
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/sine_cosine_subplot.png'>
+  <img src='/Diary/assets/images/cs231n/sine_cosine_subplot.png'>
 </div>
 
 You can read much more about the `subplot` function
@@ -1153,5 +1153,5 @@ plt.show()
 ```
 
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/cat_tinted_imshow.png'>
+  <img src='/Diary/assets/images/cs231n/cat_tinted_imshow.png'>
 </div>

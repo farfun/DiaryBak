@@ -1,8 +1,8 @@
 ---
-layout: page
-title: Terminal.com Tutorial
 categories: posts
-permalink: /terminal-tutorial/
+layout: post
+title: Terminal.com Tutorial
+permalink: /posts/cs231n/terminal-tutorial/
 ---
 For the assignments, we offer an option to use [Terminal](https://www.stanfordterminalcloud.com) for developing and testing your implementations. Notice that we're not using the main Terminal.com site but a subdomain which has been assigned specifically for this class. [Terminal](https://www.stanfordterminalcloud.com) is an online computing platform that allows us to access pre-configured command line environments. Note that, it's not required to use [Terminal](https://www.stanfordterminalcloud.com) for your assignments; however, it might make life easier with all the required dependencies and development toolkits configured for you.
 
@@ -13,25 +13,25 @@ For each assignment, we will provide you a link to a shared terminal snapshot. T
 Here's an example of what a snapshot page looked like for an assignment in 2015:
 
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/terminal-shared.jpg'>
+  <img src='/Diary/assets/images/cs231n/terminal-shared.jpg'>
 </div>
 
 Yours will look similar. Click the "Start" button on the lower right corner. This will clone the shared snapshot to your own account. Now you should be able to find the terminal under the [My Terminals](https://www.stanfordterminalcloud.com/terminals) tab.
 
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/terminal-my.jpg'>
+  <img src='/Diary/assets/images/cs231n/terminal-my.jpg'>
 </div>
 
 Yours will look similar. You are all set! To work on the assignments, click the link to your terminal (shown in the red box in the above image). This link will open up the user interface layer over an AWS machine. It will look something similar to this:
 
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/terminal-development.jpg'>
+  <img src='/Diary/assets/images/cs231n/terminal-development.jpg'>
 </div>
 
 We have set up the Jupyter Notebook and other dependencies in the terminal. Launch a new console window with the small + sign (if you don't already have one), navigate around and look for the assignment folder and code. Launch a Jupyer notebook and work on the assignment. If your're a student enrolled in the class you will submit your assignment through Coursework:
 
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/terminal-coursework.jpg'>
+  <img src='/Diary/assets/images/cs231n/terminal-coursework.jpg'>
 </div>
 
 For more information about [Terminal](https://www.stanfordterminalcloud.com), check out the [FAQ](https://www.stanfordterminalcloud.com/faq) page.

@@ -1,7 +1,7 @@
 ---
-layout: page
-permalink: /neural-networks-3/
 categories: posts
+layout: post
+permalink: /posts/cs231n/neural-networks-3/
 ---
 
 Table of Contents:
@@ -109,8 +109,8 @@ The x-axis of the plots below are always in units of epochs, which measure how m
 The first quantity that is useful to track during training is the loss, as it is evaluated on the individual batches during the forward pass. Below is a cartoon diagram showing the loss over time, and especially what the shape might tell you about the learning rate:
 
 <div class="fig figcenter fighighlight">
-  <img src="{{site.baseurl}}{{site.images}}/cs231n/nn3/learningrates.jpeg" width="49%">
-  <img src="{{site.baseurl}}{{site.images}}/cs231n/nn3/loss.jpeg" width="49%">
+  <img src="/Diary/assets/images/cs231n/nn3/learningrates.jpeg" width="49%">
+  <img src="/Diary/assets/images/cs231n/nn3/loss.jpeg" width="49%">
   <div class="figcaption">
     <b>Left:</b> A cartoon depicting the effects of different learning rates. With low learning rates the improvements will be linear. With high learning rates they will start to look more exponential. Higher learning rates will decay the loss faster, but they get stuck at worse values of loss (green line). This is because there is too much "energy" in the optimization and the parameters are bouncing around chaotically, unable to settle in a nice spot in the optimization landscape. <b>Right:</b> An example of a typical loss function over time, while training a small network on CIFAR-10 dataset. This loss function looks reasonable (it might indicate a slightly too small learning rate based on its speed of decay, but it's hard to say), and also indicates that the batch size might be a little too low (since the cost is a little too noisy).
   </div>
@@ -129,7 +129,7 @@ Sometimes loss functions can look funny [lossfunctions.tumblr.com](http://lossfu
 The second important quantity to track while training a classifier is the validation/training accuracy. This plot can give you valuable insights into the amount of overfitting in your model:
 
 <div class="fig figleft fighighlight">
-  <img src="{{site.baseurl}}{{site.images}}/cs231n/nn3/accuracies.jpeg">
+  <img src="/Diary/assets/images/cs231n/nn3/accuracies.jpeg">
   <div class="figcaption">
     The gap between the training and validation accuracy indicates the amount of overfitting. Two possible cases are shown in the diagram on the left. The blue validation error curve shows very small validation accuracy compared to the training accuracy, indicating strong overfitting (note, it's possible for the validation accuracy to even start to go down after some point). When you see this in practice you probably want to increase regularization (stronger L2 weight penalty, more dropout, etc.) or collect more data. The other possible case is when the validation accuracy tracks the training accuracy fairly well. This case indicates that your model capacity is not high enough: make the model larger by increasing the number of parameters.
   </div>
@@ -167,8 +167,8 @@ An incorrect initialization can slow down or even completely stall the learning 
 Lastly, when one is working with image pixels it can be helpful and satisfying to plot the first-layer features visually:
 
 <div class="fig figcenter fighighlight">
-  <img src="{{site.baseurl}}{{site.images}}/cs231n/nn3/weights.jpeg" width="43%" style="margin-right:10px;">
-  <img src="{{site.baseurl}}{{site.images}}/cs231n/nn3/cnnweights.jpg" width="49%">
+  <img src="/Diary/assets/images/cs231n/nn3/weights.jpeg" width="43%" style="margin-right:10px;">
+  <img src="/Diary/assets/images/cs231n/nn3/cnnweights.jpg" width="49%">
   <div class="figcaption">
     Examples of visualized weights for the first layer of a neural network. <b>Left</b>: Noisy features indicate could be a symptom: Unconverged network, improperly set learning rate, very low weight regularization penalty. <b>Right:</b> Nice, smooth, clean and diverse features are a good indication that the training is proceeding well.
   </div>
@@ -214,7 +214,7 @@ Here we see an introduction of a `v` variable that is initialized at zero, and a
 The core idea behind Nesterov momentum is that when the current parameter vector is at some position `x`, then looking at the momentum update above, we know that the momentum term alone (i.e. ignoring the second term with the gradient) is about to nudge the parameter vector by `mu * v`. Therefore, if we are about to compute the gradient, we can treat the future approximate position `x + mu * v` as a "lookahead" - this is a point in the vicinity of where we are soon going to end up. Hence, it makes sense to compute the gradient at `x + mu * v` instead of at the "old/stale" position `x`. 
 
 <div class="fig figcenter fighighlight">
-  <img src="{{site.baseurl}}{{site.images}}/cs231n/nn3/nesterov.jpeg">
+  <img src="/Diary/assets/images/cs231n/nn3/nesterov.jpeg">
   <div class="figcaption">
     Nesterov momentum. Instead of evaluating gradient at the current position (red circle), we know that our momentum is about to carry us to the tip of the green arrow. With Nesterov momentum we therefore instead evaluate the gradient at this "looked-ahead" position.
   </div>
@@ -357,7 +357,7 @@ But as we saw, there are many more relatively less sensitive hyperparameters, fo
 **Prefer random search to grid search**. As argued by Bergstra and Bengio in [Random Search for Hyper-Parameter Optimization](http://www.jmlr.org/papers/volume13/bergstra12a/bergstra12a.pdf), "randomly chosen trials are more efficient for hyper-parameter optimization than trials on a grid". As it turns out, this is also usually easier to implement.
 
 <div class="fig figcenter fighighlight">
-  <img src="{{site.baseurl}}{{site.images}}/cs231n/nn3/gridsearchbad.jpeg" width="50%">
+  <img src="/Diary/assets/images/cs231n/nn3/gridsearchbad.jpeg" width="50%">
   <div class="figcaption">
     Core illustration from <a href="http://www.jmlr.org/papers/volume13/bergstra12a/bergstra12a.pdf">Random Search for Hyper-Parameter Optimization</a> by Bergstra and Bengio. It is very often the case that some of the hyperparameters matter much more than others (e.g. top hyperparam vs. left one in this figure). Performing random search rather than grid search allows you to much more precisely discover good values for the important ones.
   </div>

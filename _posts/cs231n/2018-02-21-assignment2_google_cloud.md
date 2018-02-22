@@ -1,8 +1,8 @@
 ---
-layout: page
-title: Google Cloud Tutorial Part 2 (with GPUs)
 categories: posts
-permalink: /gce-tutorial-gpus/
+layout: post
+title: Google Cloud Tutorial Part 2 (with GPUs)
+permalink: /posts/cs231n/gce-tutorial-gpus/
 ---
 # Google Cloud Tutorial (Part 2 With GPUs) #
 This tutorial assumes that you have already gone through the first Google Cloud tutorial for assignment 1 [here](http://cs231n.github.io/gce-tutorial/ "title"). The first tutorial takes you through the process of setting up a Google Cloud account, launching a VM instance, accessing Jupyter Notebook from your local computer, working on assignment 1 on your VM instance, and transferring files to your local computer. While you created a VM instance without a GPU in the first tutorial, this one walks you through the necessary steps to create an instance with a GPU, and use our provided disk images to work on assignment 2. If you haven't already done so, we advise you to go through the first tutorial to be comfortable with the process of creating an instance with the right configurations and accessing Jupyter Notebook from your local computer.
@@ -14,12 +14,12 @@ Everyone enrolled in the class should have received $100 Google Cloud credits by
 To start an instance with a GPU (for the first time) you first need to request an increase in the number of GPUs you can use. To do this, go to your console, click on the **Computer Engine** button and select the **Quotas** menu. You will see a page that looks like the one below. 
 
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/google-cloud-quotas-screen.png'>
+  <img src='/Diary/assets/images/cs231n/google-cloud-quotas-screen.png'>
 </div>
 
 Click on the blue **Request Increase** button. This opens a new tab with a long form titled **Google Compute Engine Quota Change Request Form** (see screenshot below). 
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/google-cloud-quotas-form.png'>
+  <img src='/Diary/assets/images/cs231n/google-cloud-quotas-form.png'>
 </div>
 
 Fill out the required portions of the form and put a value of **1** in the **Total Number of GPU dies** section. You only need to do this for the **us-west1** region... don't request GPUs anywhere else, since all your instances should also live in us-west1. 
@@ -34,13 +34,13 @@ For the remaining assignments and the project, we provide you with disks contain
 ### Creating a Custom Image Using Our Disk ###
 To create your custom image using our provided disk, go to **Compute Engine**, then **Images** and click on the blue **Create Image** button at the top of the page. See the screenshot below.
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/google-cloud-create-image-screenshot.png'>
+  <img src='/Diary/assets/images/cs231n/google-cloud-create-image-screenshot.png'>
 </div>
 
 Enter your preferred name in the **Name** field. Mine is called **final-cs231n**. Select cloud storage file for **Source**, enter **cs231n-files/cs231n_image.tar.gz** as the **Cloud Storage file** and click on the blue **Create** button. See the screenshot below. It will take a few minutes for your image to be created (about 10-15 in our experience, though your mileage may vary). 
 
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/google-cloud-select-cloud-storage.png'>
+  <img src='/Diary/assets/images/cs231n/google-cloud-select-cloud-storage.png'>
 </div>
 
 ### Starting Your Instance with Your Custom Image ###
@@ -49,13 +49,13 @@ To start your instance using our provided disk, go to **VM Instances** and click
 Make sure to provision 1 GPU to your instance by clicking **Customize** in the **Machine Type** box, as in the screenshot below:
 
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/google-cloud-instance-gpus.png'>
+  <img src='/Diary/assets/images/cs231n/google-cloud-instance-gpus.png'>
 </div>
 
 Instead of selecting an entry in **OS images** for **Boot disk**, select **Custom images** and the custom image that you created above. Mine is **final-cs231n**. See the screenshot below. 
 
 <div class='fig figcenter fighighlight'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/google-cloud-select-custom-image.png'>
+  <img src='/Diary/assets/images/cs231n/google-cloud-select-custom-image.png'>
 </div>
 
 It should take about 5 minutes for the instance to get created. You should now be able to launch your instance with our custom image. The custom disk is 40GB and uses Ubuntu 16.04 LTS. 

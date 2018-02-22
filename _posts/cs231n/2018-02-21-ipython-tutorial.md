@@ -1,8 +1,8 @@
 ---
-layout: page
-title: IPython Tutorial
 categories: posts
-permalink: /ipython-tutorial/
+layout: post
+title: IPython Tutorial
+permalink: /posts/cs231n/ipython-tutorial/
 ---
 
 ***(Note: some of the screenshots here may be out-of-date. However, this should still prove
@@ -35,13 +35,13 @@ see a screen like this, showing all available IPython notebooks in the current
 directory:
 
 <div class='fig figcenter'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/ipython-tutorial/file-browser.png'>
+  <img src='/Diary/assets/images/cs231n/ipython-tutorial/file-browser.png'>
 </div>
 
 If you click through to a notebook file, you will see a screen like this:
 
 <div class='fig figcenter'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/ipython-tutorial/notebook-1.png'>
+  <img src='/Diary/assets/images/cs231n/ipython-tutorial/notebook-1.png'>
 </div>
 
 An IPython notebook is made up of a number of **cells**. Each cell can contain
@@ -51,14 +51,14 @@ will be displayed beneath the cell. For example, after running the first cell
 the notebook looks like this:
 
 <div class='fig figcenter'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/ipython-tutorial/notebook-2.png'>
+  <img src='/Diary/assets/images/cs231n/ipython-tutorial/notebook-2.png'>
 </div>
 
 Global variables are shared between cells. Executing the second cell thus gives
 the following result:
 
 <div class='fig figcenter'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/ipython-tutorial/notebook-3.png'>
+  <img src='/Diary/assets/images/cs231n/ipython-tutorial/notebook-3.png'>
 </div>
 
 By convention, IPython notebooks are expected to be run from top to bottom.
@@ -66,14 +66,14 @@ Failing to execute some cells or executing cells out of order can result in
 errors:
 
 <div class='fig figcenter'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/ipython-tutorial/notebook-error.png'>
+  <img src='/Diary/assets/images/cs231n/ipython-tutorial/notebook-error.png'>
 </div>
 
 After you have modified an IPython notebook for one of the assignments by
 modifying or executing some of its cells, remember to **save your changes!**
 
 <div class='fig figcenter'>
-  <img src='{{site.baseurl}}{{site.images}}/cs231n/ipython-tutorial/save-notebook.png'>
+  <img src='/Diary/assets/images/cs231n/ipython-tutorial/save-notebook.png'>
 </div>
 
 This has only been a brief introduction to IPython notebooks, but it should

@@ -1,7 +1,7 @@
 ---
-layout: page
-permalink: /convnet-tips/
 categories: posts
+layout: post
+permalink: /posts/cs231n/convnet-tips/
 ---
 
 <a name='overfitting'></a>

@@ -1,7 +1,7 @@
 ---
-layout: page
-permalink: /transfer-learning/
 categories: posts
+layout: post
+permalink: /posts/cs231n/transfer-learning/
 ---
 
 (These notes are currently in draft form and under development)
