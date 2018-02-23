@@ -2,18 +2,123 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd812bb5-d92d-442c-ba5d-56d41b5654b8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/main2.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/test/resources/4D9957AC1C47F408A72903F88BFA71AA.png" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/_sass/_base.scss" afterPath="$PROJECT_DIR$/assets/css/_base.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/_sass/_layout.scss" afterPath="$PROJECT_DIR$/assets/css/_layout.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/_sass/_media-queries.scss" afterPath="$PROJECT_DIR$/assets/css/_media-queries.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/_sass/_normalize.scss" afterPath="$PROJECT_DIR$/assets/css/_normalize.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/_sass/_syntax-highlighting.scss" afterPath="$PROJECT_DIR$/assets/css/_syntax-highlighting.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/_sass/_variables.scss" afterPath="$PROJECT_DIR$/assets/css/_variables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/diary/src/MoveFileFromQuiver.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-chReadme.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-chassignment2_google_cloud.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-chaws-tutorial.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-chclassification.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-chconvnet-tips.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-chconvolutional-networks.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-chgoogle_cloud_tutorial.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-chipython-tutorial.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-chlinear-classify.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-chneural-networks-1.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-chneural-networks-2.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-chneural-networks-3.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-chneural-networks-case-study.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-choptimization-1.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-choptimization-2.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-choverview.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-chposter.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-chpython-numpy-tutorial.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-chterminal-tutorial.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-chtransfer-learning.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-chunderstanding-cnn.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/misc/resume.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/misc/zhihu/home.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/misc/zhihu/img/captcha.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/misc/zhihu/img/captcha2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/misc/zhihu/img/captcha_post.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/misc/zhihu/img/zhihu_verification_code.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/misc/zhihu/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/misc/zhihu/theme-readtheorg.setup" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/misc/zhihu/zhihu.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/misc/zhihu/zhihu.org" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/content.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/meta.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/28A308A65B43D79482C913803F349716.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/380CCC0D4D199CFFD500EBF7FC0C4372.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/4A3B4A39AB8E5C556359147B882B4788.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/4A872DE11C02A75D67B41589277DFB41.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/51413BDB27611C662B51276272C68995.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/5D5166A3D3712E7C03AF74B1CCACBEAC.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/60A0586D705EF58B2D4BA3BF32B22E81.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/61D75E1756CC5602FAC98F2DE621002F.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/62F8D6CAC0120E34CAC75B59A467B1D8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/65557FBC4666F6860E9AC0B08EC9B685.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/708A51228DA494776B74735EC028E3FD.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/7226C5013D1A99B48B87A8581E7379BB.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/76BCC65FF39FB153D377EEF08FABEB16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/7D52076FFBB1E332682537CEEB788BD2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/84A1AC5C2FA921A2784D469346D1D851.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/89C59F13E558DAD2713CCA7B6CB5FD80.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/9067DB549B85EC3538AD9058537A45DE.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/98F724EDF6695476F6B38F7F172B59F5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/BE69409D8ECB330D775F9E6F1E99A239.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/C35D038B0248ABF30B395DE3269B693E.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/C4472E7C9D6311A83E4DFDC89E18861A.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/CAFCC5C7DD337F8D51C6DDE9AEC380DC.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/E1644E189E5C83CBB068B268ECE0D0A5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/0116657F-7A86-49EE-9988-1F73F533229F.qvnote/content.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/0116657F-7A86-49EE-9988-1F73F533229F.qvnote/meta.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/0845AC7E-9DEE-419B-8C9B-5BC3094328C5.qvnote/content.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/0845AC7E-9DEE-419B-8C9B-5BC3094328C5.qvnote/meta.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/0E8B1249-DFDF-4154-A02E-A4953D17D1FF.qvnote/content.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/0E8B1249-DFDF-4154-A02E-A4953D17D1FF.qvnote/meta.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/13DA3E59-8222-4E80-B960-944BEBC1FF53.qvnote/content.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/13DA3E59-8222-4E80-B960-944BEBC1FF53.qvnote/meta.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/2B487B72-94E9-46E0-AD59-6CEA0D57748B.qvnote/content.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/2B487B72-94E9-46E0-AD59-6CEA0D57748B.qvnote/meta.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/341C1F53-627F-432B-BA67-B2091D2F99B0.qvnote/content.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/341C1F53-627F-432B-BA67-B2091D2F99B0.qvnote/meta.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/48ED96A6-ABD5-47F5-A1A2-921E4CB4D048.qvnote/content.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/48ED96A6-ABD5-47F5-A1A2-921E4CB4D048.qvnote/meta.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/4FD262C5-010E-4C08-811C-E999F079AFD2.qvnote/content.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/4FD262C5-010E-4C08-811C-E999F079AFD2.qvnote/meta.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/58022516-755F-4DA1-A22C-FA1843C3034B.qvnote/content.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/58022516-755F-4DA1-A22C-FA1843C3034B.qvnote/meta.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/6348ED44-2030-4169-87D9-0AC49B8589B8.qvnote/content.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/6348ED44-2030-4169-87D9-0AC49B8589B8.qvnote/meta.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/6BB4236F-8506-485A-A990-A2CE35188520.qvnote/content.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/6BB4236F-8506-485A-A990-A2CE35188520.qvnote/meta.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/A0F53AD2-D4CD-4E6C-9F5C-1EAD8EF0E97B.qvnote/content.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/A0F53AD2-D4CD-4E6C-9F5C-1EAD8EF0E97B.qvnote/meta.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/A6095CEE-6D8B-47F3-A293-1D9064EE5218.qvnote/content.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/A6095CEE-6D8B-47F3-A293-1D9064EE5218.qvnote/meta.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/B4134FF9-2E87-45E2-977E-AFFD7CCA3A97.qvnote/content.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/B4134FF9-2E87-45E2-977E-AFFD7CCA3A97.qvnote/meta.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/B8685436-013F-4DC4-99FE-72E470B5FFAB.qvnote/content.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/B8685436-013F-4DC4-99FE-72E470B5FFAB.qvnote/meta.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/BB5C2FAF-F4EF-425F-954A-DF544C499396.qvnote/content.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/BB5C2FAF-F4EF-425F-954A-DF544C499396.qvnote/meta.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/CE5B896D-F00D-4E76-8EBB-9F9BE5CBD0B4.qvnote/content.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/CE5B896D-F00D-4E76-8EBB-9F9BE5CBD0B4.qvnote/meta.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/D01813C8-9AB9-4786-9EC9-F70BD46102FB.qvnote/content.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/D01813C8-9AB9-4786-9EC9-F70BD46102FB.qvnote/meta.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/E2BC1CE6-211E-4878-BAB1-C3364383F4EA.qvnote/content.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/E2BC1CE6-211E-4878-BAB1-C3364383F4EA.qvnote/meta.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/E5723C33-8CDF-4363-8687-B965F52D9AB0.qvnote/content.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/E5723C33-8CDF-4363-8687-B965F52D9AB0.qvnote/meta.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/FBA5DA50-400A-474F-887E-54689DC372EF.qvnote/content.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/FBA5DA50-400A-474F-887E-54689DC372EF.qvnote/meta.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/815E5A02-521C-4E45-B337-4979AD9CF877.qvnotebook/meta.json" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/pdf/bias-variance.pdf" afterPath="$PROJECT_DIR$/assets/pdf/bias-variance.pdf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/saveactions_settings.xml" afterPath="$PROJECT_DIR$/.idea/saveactions_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/footer.html" afterPath="$PROJECT_DIR$/_includes/footer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/head.html" afterPath="$PROJECT_DIR$/_includes/head.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/header.html" afterPath="$PROJECT_DIR$/_includes/header.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/mathjax.html" afterPath="$PROJECT_DIR$/_includes/mathjax.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/test/2018-02-21-testtest.md" afterPath="$PROJECT_DIR$/_posts/test/2018-02-21-testtest.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/main.css" afterPath="$PROJECT_DIR$/assets/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/main.css.map" afterPath="$PROJECT_DIR$/assets/css/main.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/main.scss" afterPath="$PROJECT_DIR$/assets/css/main.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/rouge.css" afterPath="$PROJECT_DIR$/assets/css/rouge.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/scripts.js" afterPath="$PROJECT_DIR$/assets/js/scripts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/040C49F6-7D7B-483C-838F-EEDFD4FCD48B.qvnote/content.json" afterPath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/040C49F6-7D7B-483C-838F-EEDFD4FCD48B.qvnote/content.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/040C49F6-7D7B-483C-838F-EEDFD4FCD48B.qvnote/meta.json" afterPath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/040C49F6-7D7B-483C-838F-EEDFD4FCD48B.qvnote/meta.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/meta.json" afterPath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/meta.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diary/src/Test1.py" afterPath="$PROJECT_DIR$/diary/src/Test1.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,42 +129,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Diary$MoveFileFromQuiver.coverage" NAME="MoveFileFromQuiver Coverage Results" MODIFIED="1519363968646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diary/src" />
     <SUITE FILE_PATH="coverage/Diary$server.coverage" NAME="server Coverage Results" MODIFIED="1519026357862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Editor" />
-    <SUITE FILE_PATH="coverage/Diary$Test1.coverage" NAME="Test1 Coverage Results" MODIFIED="1519283480218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diary/src" />
+    <SUITE FILE_PATH="coverage/Diary$Test1.coverage" NAME="Test1 Coverage Results" MODIFIED="1519356574170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diary/src" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/css/main.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testtest.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_site/posts/test/testtest.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -97,6 +172,9 @@
       <find>list-left</find>
       <find>small</find>
       <find>&lt;small</find>
+      <find>misc</find>
+      <find>pdf</find>
+      <find>res</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/Editor</dir>
@@ -111,13 +189,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/_includes/footer.html" />
-        <option value="$PROJECT_DIR$/_layouts/default.html" />
-        <option value="$PROJECT_DIR$/diary/quiver/深度学习3/data.html" />
-        <option value="$PROJECT_DIR$/_includes/MathJax.js" />
-        <option value="$PROJECT_DIR$/_includes/mathjax.html" />
-        <option value="$PROJECT_DIR$/_posts/2018-10-01-latex语法.md" />
-        <option value="$PROJECT_DIR$/_posts/2018-01-13-latex语法.md" />
         <option value="$PROJECT_DIR$/_site/posts/cs231n /convolutional-networks/index.html" />
         <option value="$PROJECT_DIR$/_site/posts/cs231n/convnet-tips/index.html" />
         <option value="$PROJECT_DIR$/_layouts/page.html" />
@@ -144,7 +215,6 @@
         <option value="$PROJECT_DIR$/_posts/example/2018-10-01-latex语法.md" />
         <option value="$PROJECT_DIR$/_site/posts/index.html" />
         <option value="$PROJECT_DIR$/_site/posts/cs231n-ch/chneural-networks-1.html" />
-        <option value="$PROJECT_DIR$/diary/src/Test1.py" />
         <option value="$PROJECT_DIR$/_site/posts/cs231n-ch/chgoogle_cloud_tutorial.html" />
         <option value="$PROJECT_DIR$/_site/posts/cs231n-ch/chconvnet-tips.html" />
         <option value="$PROJECT_DIR$/_site/posts/cs231n-ch/chclassification.html" />
@@ -153,15 +223,23 @@
         <option value="$PROJECT_DIR$/about.md" />
         <option value="$PROJECT_DIR$/_site/index.html" />
         <option value="$PROJECT_DIR$/_posts/about.md" />
-        <option value="$PROJECT_DIR$/_includes/header.html" />
         <option value="$PROJECT_DIR$/assets/_sass/_layout.scss" />
         <option value="$PROJECT_DIR$/assets/_sass/_normalize.scss" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/assets/css/main.css" />
-        <option value="$PROJECT_DIR$/assets/css/main.scss" />
+        <option value="$PROJECT_DIR$/_site/posts.html" />
+        <option value="$PROJECT_DIR$/_includes/header.html" />
+        <option value="$PROJECT_DIR$/assets/js/scripts.js" />
         <option value="$PROJECT_DIR$/_posts/test/2018-02-21-testtest.md" />
-        <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_site/posts/test/testtest.html" />
+        <option value="$PROJECT_DIR$/diary/src/Test1.py" />
+        <option value="$PROJECT_DIR$/_posts/tensorflow/如何选择优化器 optimizer.md" />
+        <option value="$PROJECT_DIR$/diary/src/MoveFileFromQuiver.py" />
+        <option value="$PROJECT_DIR$/assets/css/main.scss" />
+        <option value="$PROJECT_DIR$/_includes/mathjax.html" />
+        <option value="$PROJECT_DIR$/_includes/head.html" />
+        <option value="$PROJECT_DIR$/_config.yml" />
+        <option value="$PROJECT_DIR$/_includes/footer.html" />
       </list>
     </option>
   </component>
@@ -171,9 +249,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="268" />
-    <option name="y" value="27" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="2" />
+    <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="723" />
   </component>
@@ -205,13 +283,7 @@
             <path>
               <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
               <item name="Diary" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Diary" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="_includes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -223,7 +295,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="Settings.Markdown.Preview" />
+    <property name="settings.editor.selected.configurable" value="settings.saveactions" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
@@ -235,10 +307,11 @@
       <recent name="$PROJECT_DIR$/assets/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets/css" />
-      <recent name="$PROJECT_DIR$/_posts" />
-      <recent name="$PROJECT_DIR$/_posts/example" />
-      <recent name="$PROJECT_DIR$/posts" />
+      <recent name="$PROJECT_DIR$/_posts/temp/tensorflow/resource" />
+      <recent name="$PROJECT_DIR$/_posts/temp/tensorflow" />
+      <recent name="$PROJECT_DIR$/_posts/temp/resource" />
+      <recent name="$PROJECT_DIR$/_posts/temp" />
+      <recent name="$PROJECT_DIR$/_posts/tensorflow" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -253,7 +326,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Test1">
+  <component name="RunManager" selected="Python.MoveFileFromQuiver">
+    <configuration name="MoveFileFromQuiver" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/diary/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Diary" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/diary/src/MoveFileFromQuiver.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="Test1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -290,14 +381,16 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Python.server" />
       <item index="1" class="java.lang.String" itemvalue="Python.Test1" />
+      <item index="2" class="java.lang.String" itemvalue="Python.MoveFileFromQuiver" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python.Test1" />
-        <item index="1" class="java.lang.String" itemvalue="Python.server" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Python.MoveFileFromQuiver" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Test1" />
+        <item index="2" class="java.lang.String" itemvalue="Python.server" />
       </list>
     </recent_temporary>
   </component>
@@ -386,17 +479,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2" y="23" width="1280" height="723" extended-state="6" />
-    <editor active="true" />
+    <frame x="2" y="23" width="1280" height="723" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18659128" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16235864" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27948305" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27544427" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -440,147 +532,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-chipython-tutorial.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-chneural-networks-2.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-chneural-networks-1.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="345">
-            <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-chaws-tutorial.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-chconvnet-tips.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/diary/src/Test1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="15" lean-forward="false" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
-          <folding>
-            <element signature="e#159#168#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_site/posts/example/bias-variance.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_site/posts/example/a-web-crawer-with-a-asyncio-coroutines-2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_site/posts/example/a-web-crawer-with-a-asyncio-coroutines-1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_site/posts/example/bitcoin-explained-1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_site/posts/example/dive-into-gradient-decent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_site/posts/example/latex语法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11022">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_site/posts/example/ethereum-ultimate-guide.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2352">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_site/posts/example/nosql-in-python.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_site/posts/example/perceptron.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_site/posts/example/tendermint.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2622">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_site/posts/example/quick-latex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_site/posts/cs231n-ch/chassignment2_google_cloud/index.html" />
-    <entry file="file://$PROJECT_DIR$/_site/posts/cs231n-ch/chaws-tutorial/index.html" />
     <entry file="file://$PROJECT_DIR$/_site/posts/cs231n-ch/chaws-tutorial.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -614,14 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/feed.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE" />
     <entry file="file://$PROJECT_DIR$/archive.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -631,14 +574,6 @@
             <folding />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/head.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -681,13 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/default.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -700,17 +628,6 @@
         <state relative-caret-position="-1872">
           <caret line="239" column="20" lean-forward="false" selection-start-line="239" selection-start-column="20" selection-end-line="239" selection-end-column="20" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#i#0;n#a#0;n#div#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#i#0;n#a#0;n#div#1;n#ul#0;n#article#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -753,24 +670,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#4433#4439#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/_syntax-highlighting.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2704">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/rouge.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2314">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -794,33 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/test/2018-02-21-testtest.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="547">
-            <caret line="184" column="0" lean-forward="false" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/main2.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -829,10 +701,261 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_site/posts/test/testtest.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_site/posts.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feed.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/_syntax-highlighting.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/rouge.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2644">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/misc/zhihu/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/misc/zhihu/zhihu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-739">
+          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_site/posts/test/testtest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <marker date="1519365689000" expanded="true" signature="25777:25836" ph="..." />
+            <marker date="1519365689000" expanded="true" signature="25777:25844" ph="..." />
+            <marker date="1519365689000" expanded="true" signature="24344:24959" ph="..." />
+            <marker date="1519365689000" expanded="true" signature="24344:24967" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/temp/tensorflow/如何选择优化器 optimizer.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="168">
+            <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="264" column="4" lean-forward="false" selection-start-line="264" selection-start-column="4" selection-end-line="264" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/example/2017-04-23-bias-variance.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="270">
+            <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/example/2017-01-01-perceptron.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/tensorflow/如何选择优化器 optimizer.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="45">
+            <caret line="3" column="15" lean-forward="false" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/tensorflow/2018-02-23-如何选择优化器 optimizer.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="183">
+            <caret line="304" column="39" lean-forward="false" selection-start-line="304" selection-start-column="36" selection-end-line="304" selection-end-column="39" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="2" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/MathJax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="38" lean-forward="false" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/head.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diary/src/MoveFileFromQuiver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="e#171#180#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/google_analytics.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/aside.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="12" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/mathjax.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/test/2018-02-21-testtest.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="472">
+            <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diary/src/Test1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="44" column="14" lean-forward="false" selection-start-line="44" selection-start-column="14" selection-end-line="45" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
           <folding />
         </state>
       </provider>

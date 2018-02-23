@@ -39,7 +39,7 @@ def solve(path):
     print path
     f1 = open(root + path, 'r')
     # f2 = open('/Users/weidian/Documents/Diary/_posts/cs231n/2018-02-21-' + path, 'w')
-    f2 = open('/Users/weidian/Documents/Diary/_posts/cs231n-ch/2018-02-21-ch' + path, 'w')
+    f2 = open('/Users/weidian/Documents/Diary/_posts/cs231n-ch/2018-02-21-ch-' + path, 'w')
 
     index = 0
     index2 = 0
@@ -65,7 +65,7 @@ if __name__ == '__main__':
 
         if dir.endswith('md'):
             print dir
-            # solve(dir)
+            solve(dir)
 
     data = "aaa233233bbb"
     data2 = "(23|333)"
