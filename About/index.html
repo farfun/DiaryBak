@@ -43,6 +43,8 @@
 
     </script>
     <script src="../js/base.js"></script>
+      <script src="../mathjaxhelper.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       <script src="../search/require.js"></script>
       <script src="../search/search.js"></script> 
 </head>
@@ -59,11 +61,21 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
-    <div class="wm-article-nav">
-      <a href="../Cheatsheet/" class="btn btn-xs btn-default pull-left">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../Cheatsheet/" class="btn btn-xs btn-link">
+    <div class="wm-article-nav pull-right">
+      <a href="../Cheatsheet/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../Cheatsheet/" class="btn btn-xs btn-link">
         Cheatsheet
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="./" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="./" class="btn btn-xs btn-link">
+        About
       </a>
     </div>
     
@@ -77,16 +89,16 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <h3 id="1">1. 安装环境</h3>
 <p>首先安装<a href="https://www.continuum.io/downloads">科学计算包 Anaconda</a>，其中已经包含了很多科学计算机、数据处理相关的 Python 包，也包括 Jupyter 在内（如果只需要 Jupyter 普通的 Python 执行环境和 Markdown 编辑器功能，可跳过这一步，直接单独安装 Jupyter）。</p>
 <p>可以通过<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/">清华大学 TUNA 镜像源</a>下载，具体参考<a href="https://github.com/rainyear/lolita/issues/26">《用 conda 管理 Python 开发环境》</a>。安装完成之后可以通过 <code>conda</code> 命令管理 Python 开发环境：</p>
-<pre><code class="sh">conda info
+<div class="highlight"><pre><span></span>conda info
 Using Anaconda Cloud api site https://api.anaconda.org
 Current conda install:
 
              platform : osx-64
-        conda version : 4.0.8
-  conda-build version : 1.19.0
-       python version : 3.5.1.final.0
-     requests version : 2.10.0
-     root environment : /Users/rainy/anaconda  (writable)
+        conda version : <span class="m">4</span>.0.8
+  conda-build version : <span class="m">1</span>.19.0
+       python version : <span class="m">3</span>.5.1.final.0
+     requests version : <span class="m">2</span>.10.0
+     root environment : /Users/rainy/anaconda  <span class="o">(</span>writable<span class="o">)</span>
   default environment : /Users/rainy/anaconda
      envs directories : /Users/rainy/anaconda/envs
         package cache : /Users/rainy/anaconda/pkgs
@@ -96,68 +108,68 @@ Current conda install:
                         https://repo.continuum.io/pkgs/pro/noarch/
           config file : None
     is foreign system : False
-</code></pre>
+</pre></div>
 
 <p>从默认环境生成一个新的独立环境：</p>
-<pre><code class="sh">conda env crate -n dhub --clone root
+<div class="highlight"><pre><span></span>conda env crate -n dhub --clone root
 
-source activate dhub
-# discarding /Users/rainy/anaconda/bin from PATH
-# prepending /Users/rainy/anaconda/envs/dhub/bin to PATH
-</code></pre>
+<span class="nb">source</span> activate dhub
+<span class="c1"># discarding /Users/rainy/anaconda/bin from PATH</span>
+<span class="c1"># prepending /Users/rainy/anaconda/envs/dhub/bin to PATH</span>
+</pre></div>
 
 <p>安装 <a href="http://www.mkdocs.org/">MkDocs</a>：</p>
-<pre><code class="sh">pip install mkdocs -i http://pypi.douban.com/simple --trusted-host=pypi.douban.com
-</code></pre>
+<div class="highlight"><pre><span></span>pip install mkdocs -i http://pypi.douban.com/simple --trusted-host<span class="o">=</span>pypi.douban.com
+</pre></div>
 
 <h3 id="2-github-pages">2. 创建 GitHub Pages 仓库</h3>
 <p>根据 GitHub ID 创建一个 <code>&lt;username&gt;.github.io</code> 的公开仓库，即可以通过 <code>http://username.github.io</code> 访问该仓库下的静态文档。创建其它仓库，如 <code>project</code>，可以通过 <code>http://username.github.io/project/</code> 访问该仓库下的 <code>gh-pages</code> 分支。</p>
 <h3 id="3-mkdocs">3. <code>mkdocs</code> 命令</h3>
 <p>创建新的 <code>mkdocs</code> 项目：</p>
-<pre><code class="sh">mkdocs init data-blog
-cd data-blog
+<div class="highlight"><pre><span></span>mkdocs init data-blog
+<span class="nb">cd</span> data-blog
 git init
 git remote add origin git@github.com:rainyear/data-blog.git
 
-tree -L 1
+tree -L <span class="m">1</span>
 .
 ├── LICENSE
 ├── README.md
 ├── docs
 ├── mkdocs.yml
-</code></pre>
+</pre></div>
 
 <p>其中 <code>Markdown</code> 文件保存在 <code>docs/</code> 目录下，并通过配置文件 <code>mkdocs.yml</code> 决定生成的静态网站的结构：</p>
-<pre><code class="sh">cat mkdocs.yml
+<div class="highlight"><pre><span></span>cat mkdocs.yml
 
 pages:
-- {Home: index.md}
+- <span class="o">{</span>Home: index.md<span class="o">}</span>
 site_name: Data Lab
 theme: flatly
-</code></pre>
+</pre></div>
 
 <h3 id="4-jupyter">4. 创建、修改 Jupyter 配置文件</h3>
-<pre><code class="sh">mkdir config jupyters
+<div class="highlight"><pre><span></span>mkdir config jupyters
 jupyter notebook --generate-config
 cp ~/.jupyter/jupyter_notebook_config.py config/
-</code></pre>
+</pre></div>
 
 <p>修改 <code>jupyter_notebook_config.py</code>：</p>
-<pre><code class="py">def output_post_save(model, os_path, contents_manager):
-  pass
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">output_post_save</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">os_path</span><span class="p">,</span> <span class="n">contents_manager</span><span class="p">):</span>
+  <span class="k">pass</span>
 
-c.FileContentsManager.root_dir = 'jupyters'
-c.FileContentsManager.post_save_hook = output_post_save
-</code></pre>
+<span class="n">c</span><span class="o">.</span><span class="n">FileContentsManager</span><span class="o">.</span><span class="n">root_dir</span> <span class="o">=</span> <span class="s1">&#39;jupyters&#39;</span>
+<span class="n">c</span><span class="o">.</span><span class="n">FileContentsManager</span><span class="o">.</span><span class="n">post_save_hook</span> <span class="o">=</span> <span class="n">output_post_save</span>
+</pre></div>
 
 <p><code>c.FileContentsManager.post_save_hook</code> 用于设置 Jupyter 文档保存的时候触发的操作，这里通过 <code>jupyter-nbconvert</code> 命令将当前的 Jupyter 文档转换为 Markdown 并保存到 <code>docs/</code> 目录，并更新 <code>mkdocs.yml</code> 配置文件（具体代码可以查看 <a href="https://github.com/rainyear/data-blog/blob/master/config/jupyter_notebook_config.py">jupyter_notebook_config.py</a>）。</p>
 <p>打开 Jupyter Notebook：</p>
-<pre><code class="sh">jupyter notebook --config config/jupyter_notebook_config.py
-</code></pre>
+<div class="highlight"><pre><span></span>jupyter notebook --config config/jupyter_notebook_config.py
+</pre></div>
 
 <h3 id="5-github-pages">5. 发布到 GitHub Pages</h3>
 <p>在本地执行 <code>mkdocs serve</code> 可以在本地查看生成的静态网站：</p>
-<pre><code class="sh">tree -L 2
+<div class="highlight"><pre><span></span>tree -L <span class="m">2</span>
 .
 ├── LICENSE
 ├── README.md
@@ -172,7 +184,7 @@ c.FileContentsManager.post_save_hook = output_post_save
 │   ├── Cheatsheet.ipynb
 │   └── Home.md
 ├── mkdocs.yml
-</code></pre>
+</pre></div>
 
 <p>在每次文档保存之后，<code>jupyters/</code> 目录下的文档将自动转换为 Markdown 并保存在 <code>docs/</code> 目录，其中子目录将以类别的形式呈现在网站上：</p>
 <p><img alt="" src="http://qncdn.rainy.im/jupyter_editor.png" /></p>
@@ -184,11 +196,21 @@ c.FileContentsManager.post_save_hook = output_post_save
 
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
-    <div class="wm-article-nav">
-      <a href="../Cheatsheet/" class="btn btn-xs btn-default pull-left">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../Cheatsheet/" class="btn btn-xs btn-link">
+    <div class="wm-article-nav pull-right">
+      <a href="../Cheatsheet/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../Cheatsheet/" class="btn btn-xs btn-link">
         Cheatsheet
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="./" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="./" class="btn btn-xs btn-link">
+        About
       </a>
     </div>
     
