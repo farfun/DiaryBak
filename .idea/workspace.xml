@@ -2,870 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd812bb5-d92d-442c-ba5d-56d41b5654b8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/深度学习/resources/dlbook_cn_chapter1.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/深度学习/resources/dlbook_cn_chapter10.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/深度学习/resources/dlbook_cn_chapter11.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/深度学习/resources/dlbook_cn_chapter12.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/深度学习/resources/dlbook_cn_chapter13.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/深度学习/resources/dlbook_cn_chapter14.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/深度学习/resources/dlbook_cn_chapter15.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/深度学习/resources/dlbook_cn_chapter16.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/深度学习/resources/dlbook_cn_chapter17.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/深度学习/resources/dlbook_cn_chapter18.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/深度学习/resources/dlbook_cn_chapter19.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/深度学习/resources/dlbook_cn_chapter2.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/深度学习/resources/dlbook_cn_chapter20.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/深度学习/resources/dlbook_cn_chapter3.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/深度学习/resources/dlbook_cn_chapter4.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/深度学习/resources/dlbook_cn_chapter5.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/深度学习/resources/dlbook_cn_chapter6.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/深度学习/resources/dlbook_cn_chapter7.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/深度学习/resources/dlbook_cn_chapter8.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/深度学习/resources/dlbook_cn_chapter9.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/深度学习/resources/dlbook_cn_v0.5-beta.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/深度学习/resources/dlbook_cn_参考文献.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/深度学习/resources/dlbook_cn_目录.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/images/favicon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/AboutMe.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/00naive-bayes-discuss.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/01.机器学习基础.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/02.k-近邻算法.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/03.决策树.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/04.朴素贝叶斯.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/05.Logistic回归.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/06.0.支持向量机.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/06.1.支持向量机的几个通俗理解.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/07.集成方法-随机森林和AdaBoost.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/08.预测数值型数据-回归.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/09.树回归.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/10.k-means聚类.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/11.使用Apriori算法进行关联分析.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/12.使用FP-growth算法来高效发现频繁项集.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/13.利用PCA来简化数据.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/14.利用SVD简化数据.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/15.大数据与MapReduce.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/16.推荐系统.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/深度学习/DeepLearning.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/tensorflow/如何选择优化器 optimizer.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/深度学习/10分钟上手Pandas.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/深度学习/主成分分析-2.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/深度学习/主成分分析.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/深度学习/最小二乘法.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/深度学习/矩阵求导.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-Readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-assignment2_google_cloud.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-aws-tutorial.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-classification.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-convnet-tips.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-convolutional-networks.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-google_cloud_tutorial.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-ipython-tutorial.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-linear-classify.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-neural-networks-2.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-neural-networks-3.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-neural-networks-case-study.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-optimization-2.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-overview.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-python-numpy-tutorial.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-terminal-tutorial.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-transfer-learning.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-understanding-cnn.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-Readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-assignment2_google_cloud.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-aws-tutorial.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-classification.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-convnet-tips.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-convolutional-networks.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-google_cloud_tutorial.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-ipython-tutorial.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-linear-classify.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-neural-networks-1.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-neural-networks-2.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-neural-networks-3.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-neural-networks-case-study.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-optimization-1.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-optimization-2.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-overview.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-poster.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-python-numpy-tutorial.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-terminal-tutorial.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-transfer-learning.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-understanding-cnn.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example/2016-01-30-quick-latex.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example/2016-04-15-dive-into-gradient-decent.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example/2017-01-01-perceptron.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example/2017-04-23-bias-variance.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example/2017-05-12-nosql-in-python.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example/2017-05-23-a-web-crawer-with-a-asyncio-coroutines-1.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example/2017-06-10-a-web-crawer-with-a-asyncio-coroutines-2.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example/2017-08-18-tendermint.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example/2017-09-25-ethereum-ultimate-guide.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example/2018-01-13-latex语法.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example/2018-10-01-latex语法.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2015-03-26-sublimeLinter.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2015-04-06-arrays-similar.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2015-04-12-Syncing-a-fork.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2015-04-15-baidu-ife-1.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2015-05-18-front-end-tools.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2015-05-20-scope.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2015-06-12-JavaScript-this.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2015-06-15-JavaScript-Object-Oriented.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2015-06-17-web-app.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2015-06-18-weinre.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2015-07-24-low-IE-click-empty-block-bug.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2015-12-31-History-API.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2016-06-07-JavaScript-good-parts-note1.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2016-06-08-JavaScript-good-parts-note2.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2016-06-10-JavaScript-good-parts-note3.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2016-07-07-git-clone-not-master-branch.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2016-11-22-js-create-file-and-download.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2016-11-25-how-to-write-a-count-down.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/日常/test/testtest.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/日常/常用/latex语法.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/日常/常用工具/10分钟上手Pandas.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/404.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/images/icons/bitbucket.4ebea66e.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/images/icons/github.a4034fb1.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/images/icons/gitlab.348cdb3a.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/javascripts/application.189d7058.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/javascripts/lunr/lunr.da.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/javascripts/lunr/lunr.de.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/javascripts/lunr/lunr.du.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/javascripts/lunr/lunr.es.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/javascripts/lunr/lunr.fi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/javascripts/lunr/lunr.fr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/javascripts/lunr/lunr.hu.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/javascripts/lunr/lunr.it.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/javascripts/lunr/lunr.jp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/javascripts/lunr/lunr.multi.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/javascripts/lunr/lunr.no.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/javascripts/lunr/lunr.pt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/javascripts/lunr/lunr.ro.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/javascripts/lunr/lunr.ru.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/javascripts/lunr/lunr.stemmer.support.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/javascripts/lunr/lunr.sv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/javascripts/lunr/lunr.tr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/javascripts/lunr/tinyseg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/javascripts/modernizr.1aa3b519.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/stylesheets/application-palette.6079476c.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/stylesheets/application.78aab2dc.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/base.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/main.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/mkdocs_theme.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/footer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/header.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/hero.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/integrations/analytics.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/integrations/disqus.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/language.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/language/ar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/language/ca.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/language/da.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/language/de.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/language/en.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/language/es.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/language/fa.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/language/fr.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/language/he.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/language/hu.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/language/it.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/language/ja.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/language/kr.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/language/nl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/language/no.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/language/pl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/language/pt.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/language/ru.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/language/sv.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/language/tr.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/language/uk.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/language/vi.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/language/zh-Hant.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/language/zh.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/nav-item.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/nav.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/search.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/social.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/source.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/tabs-item.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/tabs.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/toc-item.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/partials/toc.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/books/DeepLearning.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/tensorflow/如何选择优化器 optimizer.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/test/testtest.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/常用/latex语法.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/常用工具/10分钟上手Pandas.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/机器学习实战/00naive-bayes-discuss.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/机器学习实战/01.机器学习基础.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/机器学习实战/02.k-近邻算法.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/机器学习实战/03.决策树.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/机器学习实战/04.朴素贝叶斯.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/机器学习实战/05.Logistic回归.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/机器学习实战/06.0.支持向量机.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/机器学习实战/06.1.支持向量机的几个通俗理解.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/机器学习实战/07.集成方法-随机森林和AdaBoost.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/机器学习实战/08.预测数值型数据-回归.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/机器学习实战/09.树回归.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/机器学习实战/10.k-means聚类.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/机器学习实战/11.使用Apriori算法进行关联分析.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/机器学习实战/12.使用FP-growth算法来高效发现频繁项集.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/机器学习实战/13.利用PCA来简化数据.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/机器学习实战/14.利用SVD简化数据.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/机器学习实战/15.大数据与MapReduce.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/机器学习实战/16.推荐系统.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/10分钟上手Pandas.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/1AA2D38B130E8EB6B4FCA11E6FD536FC.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/1C2F2B8D41CE8A162010C55DC174AA82.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/1FEC91E3C19437FA1A142526EF7D3472.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/242C54A98F0B61CA36D87C702C3F2372.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/319CEC768D2D05E4AF569A3635F4D14E.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/37A328214BFC9BDB75F73A5CA3EABE17.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/3A779DD6C1FE66C388F69A77C911B5C8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/4145690EACEA8CA4F1B5760EE0B77D09.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/463BD2513E78D91E4336BD3E977CC681.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/492B41A3AB2E81224EBCE0B2D275B99A (1).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/492B41A3AB2E81224EBCE0B2D275B99A.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/4D873FCCD7FA0C25450A186D82C6DF52.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/4EE05BAB3CE8C243E39BFF13C16B1AC3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/52AEA613A2327DCFC85873E5106194A1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/567AB2A67AC7AB594144F91ABD9E1164.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/5B9FEF5E943B82B179028AC100CBF468.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/61A4BB5869A472F901258735BEAF70B0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/6311003EC0AB4B6090F449FF4F02ED59.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/66BEABE38971597F36AB4F7BBF788AA5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/67EA539D3B60F74AA93BA6ABD6958D08.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/6876282D3A28997E054FBECBB8C251EF.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/6982652D0714C2C2B1DE20D04979AF23.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/69D88091D516A0064551D8F2881A2EDE.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/72A253894762F3360E735532E86FBBF4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/73A584A79F6B881C96F7D6EBE1488B54.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/745EFEBF20DB540F740231A40BDDB93F.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/75D505A58D5B23BD4ED7207C087B5F04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/76D9BCEC64BFCC5381ECC2E3E1AE31AE.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/7895887E9B9E285689A63D381E0F1DED.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/88CD04F0F7824346A051B9899AD4AD0C.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/8D90FF4FA2A8A73A23B6D3C61E0892AA.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/9855D67C9F3647DC082A83D06F277494.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/9AE45D505BB5FA976AC76A42B6D89227.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/9D5E659DF66FC15E23F2030FC56D7E41.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/B1A76A5DD5CBF7038828C6B8B2F27DA3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/B912D0B49B333C84810B9F42FDC2C371.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/B96C0EBC0E38C68850DC072A41D4144B.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/B9DA6A4845C16156E47AD335D18EA6E0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/BF3AE035A8B7E2564F73AED4603E1520.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/D501436FE83B8D4B25450A022482D5A4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/DA34EBDDA776378A81AB97551EC955E5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/DB0C770D8DD55E5A433B6306D7085BF3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/DB20D997144CF9996852C476A8DAD68F.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/E3BB7229FE186AD66453CB55DC592D2E.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/E3F2CDC77D07F2B67E553E5509E9DC00.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/E578D1F44B5105769765DA185C78FA67.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/EF5167A0E01E8F9A623E79F0ABEFCF09.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/EFCC9AD8E9BC39738EE632040917A49D.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/EFFB9F8B22BE1164FFAC6ECA32189919.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/F08BE5320B509F0294C2FFA7A78149F0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/resources/F1D8D0B4A5EC505A658C80C322D4AE65.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/主成分分析-2.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/主成分分析.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/最小二乘法.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/深度学习/矩阵求导.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/2018-02-21-ch-Readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/2018-02-21-ch-assignment2_google_cloud.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/2018-02-21-ch-aws-tutorial.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/2018-02-21-ch-classification.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/2018-02-21-ch-convnet-tips.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/2018-02-21-ch-convolutional-networks.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/2018-02-21-ch-google_cloud_tutorial.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/2018-02-21-ch-ipython-tutorial.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/2018-02-21-ch-linear-classify.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/2018-02-21-ch-neural-networks-2.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/2018-02-21-ch-neural-networks-3.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/2018-02-21-ch-neural-networks-case-study.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/2018-02-21-ch-optimization-2.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/2018-02-21-ch-overview.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/2018-02-21-ch-python-numpy-tutorial.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/2018-02-21-ch-terminal-tutorial.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/2018-02-21-ch-transfer-learning.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/2018-02-21-ch-understanding-cnn.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/2018-02-21-en-Readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/2018-02-21-en-assignment2_google_cloud.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/2018-02-21-en-aws-tutorial.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/2018-02-21-en-classification.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/2018-02-21-en-convnet-tips.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/2018-02-21-en-convolutional-networks.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/2018-02-21-en-google_cloud_tutorial.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/2018-02-21-en-ipython-tutorial.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/2018-02-21-en-linear-classify.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/2018-02-21-en-neural-networks-1.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/2018-02-21-en-neural-networks-2.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/2018-02-21-en-neural-networks-3.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/2018-02-21-en-neural-networks-case-study.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/2018-02-21-en-optimization-1.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/2018-02-21-en-optimization-2.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/2018-02-21-en-overview.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/2018-02-21-en-poster.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/2018-02-21-en-python-numpy-tutorial.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/2018-02-21-en-terminal-tutorial.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/2018-02-21-en-transfer-learning.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/2018-02-21-en-understanding-cnn.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example/2016-01-30-quick-latex.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example/2016-04-15-dive-into-gradient-decent.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example/2017-01-01-perceptron.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example/2017-04-23-bias-variance.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example/2017-05-12-nosql-in-python.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example/2017-05-23-a-web-crawer-with-a-asyncio-coroutines-1.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example/2017-06-10-a-web-crawer-with-a-asyncio-coroutines-2.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example/2017-08-18-tendermint.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example/2017-09-25-ethereum-ultimate-guide.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example/2018-01-13-latex语法.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example/2018-10-01-latex语法.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example2/2015-03-26-sublimeLinter.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example2/2015-04-06-arrays-similar.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example2/2015-04-12-Syncing-a-fork.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example2/2015-04-15-baidu-ife-1.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example2/2015-05-18-front-end-tools.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example2/2015-05-20-scope.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example2/2015-06-12-JavaScript-this.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example2/2015-06-15-JavaScript-Object-Oriented.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example2/2015-06-17-web-app.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example2/2015-06-18-weinre.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example2/2015-07-24-low-IE-click-empty-block-bug.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example2/2015-12-31-History-API.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example2/2016-06-07-JavaScript-good-parts-note1.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example2/2016-06-08-JavaScript-good-parts-note2.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example2/2016-06-10-JavaScript-good-parts-note3.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example2/2016-07-07-git-clone-not-master-branch.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example2/2016-11-22-js-create-file-and-download.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/转载/example2/2016-11-25-how-to-write-a-count-down.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site/css/base.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site/css/bootstrap-custom.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site/css/font-awesome-4.5.0.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site/css/highlight.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site/img/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site/img/grid.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site/js/base.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site/js/bootstrap-3.0.3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site/js/highlight.pack.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site/js/jquery-1.10.2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site/search/lunr.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site/search/mustache.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site/search/require.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site/search/search-results-template.mustache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site/search/search.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/site/search/text.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/About.md" afterPath="$PROJECT_DIR$/docs/工具/About.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/Cheatsheet.md" afterPath="$PROJECT_DIR$/docs/工具/Cheatsheet.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/tensorflow/resources/28A308A65B43D79482C913803F349716.png" afterPath="$PROJECT_DIR$/docs/学习/tensorflow/resources/28A308A65B43D79482C913803F349716.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/tensorflow/resources/4A3B4A39AB8E5C556359147B882B4788.gif" afterPath="$PROJECT_DIR$/docs/学习/tensorflow/resources/4A3B4A39AB8E5C556359147B882B4788.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/tensorflow/resources/5D5166A3D3712E7C03AF74B1CCACBEAC.gif" afterPath="$PROJECT_DIR$/docs/学习/tensorflow/resources/5D5166A3D3712E7C03AF74B1CCACBEAC.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/tensorflow/resources/62F8D6CAC0120E34CAC75B59A467B1D8.png" afterPath="$PROJECT_DIR$/docs/学习/tensorflow/resources/62F8D6CAC0120E34CAC75B59A467B1D8.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/tensorflow/resources/76BCC65FF39FB153D377EEF08FABEB16.png" afterPath="$PROJECT_DIR$/docs/学习/tensorflow/resources/76BCC65FF39FB153D377EEF08FABEB16.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/tensorflow/resources/98F724EDF6695476F6B38F7F172B59F5.png" afterPath="$PROJECT_DIR$/docs/学习/tensorflow/resources/98F724EDF6695476F6B38F7F172B59F5.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/tensorflow/resources/BE69409D8ECB330D775F9E6F1E99A239.png" afterPath="$PROJECT_DIR$/docs/学习/tensorflow/resources/BE69409D8ECB330D775F9E6F1E99A239.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/1.MLFoundation/ml_algorithm.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/1.MLFoundation/ml_algorithm.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/1.MLFoundation/机器学习基础-选择算法.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/1.MLFoundation/机器学习基础-选择算法.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/1.MLFoundation/机器学习基础-首页.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/1.MLFoundation/机器学习基础-首页.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/1.MLFoundation/机器学习基础训练过程.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/1.MLFoundation/机器学习基础训练过程.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/10.KMeans/K-Means_首页.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/10.KMeans/K-Means_首页.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/10.KMeans/apachecn-bikmeans-run-result-1.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/10.KMeans/apachecn-bikmeans-run-result-1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/10.KMeans/apachecn-k-means-run-result-1.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/10.KMeans/apachecn-k-means-run-result-1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/10.KMeans/apachecn-k-means-term-1.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/10.KMeans/apachecn-k-means-term-1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/10.KMeans/apachecn-kmeans-partial-best-result-1.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/10.KMeans/apachecn-kmeans-partial-best-result-1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/11.Apriori/Apriori流程图.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/11.Apriori/Apriori流程图.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/11.Apriori/apachecn_apriori_association_demo_1.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/11.Apriori/apachecn_apriori_association_demo_1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/11.Apriori/apachecn_apriori_goods_all_1.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/11.Apriori/apachecn_apriori_goods_all_1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/11.Apriori/apachecn_apriori_homepage.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/11.Apriori/apachecn_apriori_homepage.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/11.Apriori/apachecn_apriori_not_frequent_item_sets_demo_1.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/11.Apriori/apachecn_apriori_not_frequent_item_sets_demo_1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/11.Apriori/apachecn_association_rule_demo_1.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/11.Apriori/apachecn_association_rule_demo_1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/11.Apriori/交易清单.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/11.Apriori/交易清单.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/11.Apriori/所有可能的项集组合.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/11.Apriori/所有可能的项集组合.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/11.Apriori/第十一章--Apriori算法进行关联分析.xlsx" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/11.Apriori/第十一章--Apriori算法进行关联分析.xlsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/11.Apriori/非频繁项集.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/11.Apriori/非频繁项集.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/12.FP-growth/apachecn_fp_growth_homepage.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/12.FP-growth/apachecn_fp_growth_homepage.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/12.FP-growth/步骤1-3.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/12.FP-growth/步骤1-3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/12.FP-growth/步骤4-5.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/12.FP-growth/步骤4-5.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/12.FP-growth/步骤6-1.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/12.FP-growth/步骤6-1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/12.FP-growth/步骤6-2.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/12.FP-growth/步骤6-2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/12.FP-growth/步骤7-1.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/12.FP-growth/步骤7-1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/12.FP-growth/步骤7-2.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/12.FP-growth/步骤7-2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/13.PCA/PCA分析数据过程.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/13.PCA/PCA分析数据过程.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/13.PCA/利用PCA简化数据_首页.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/13.PCA/利用PCA简化数据_首页.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/13.PCA/应用PCA降维.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/13.PCA/应用PCA降维.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/14.SVD/SVD_推荐系统_主题空间案例1.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/14.SVD/SVD_推荐系统_主题空间案例1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/14.SVD/SVD公式的测试案例.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/14.SVD/SVD公式的测试案例.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/14.SVD/svd_headPage.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/14.SVD/svd_headPage.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/14.SVD/使用SVD简化数据-LSI举例.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/14.SVD/使用SVD简化数据-LSI举例.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/14.SVD/使用SVD简化数据-SVD公式.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/14.SVD/使用SVD简化数据-SVD公式.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/14.SVD/使用SVD简化数据-基于物品相似度.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/14.SVD/使用SVD简化数据-基于物品相似度.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/14.SVD/使用SVD简化数据-基于用户相似度.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/14.SVD/使用SVD简化数据-基于用户相似度.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/14.SVD/基于SVD.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/14.SVD/基于SVD.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/14.SVD/基于物品相似度.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/14.SVD/基于物品相似度.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/14.SVD/欧式距离的计算方式.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/14.SVD/欧式距离的计算方式.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/14.SVD/项目数据导入.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/14.SVD/项目数据导入.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/15.BigData_MapReduce/mr_1_cluster.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/15.BigData_MapReduce/mr_1_cluster.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/15.BigData_MapReduce/mr_headPage.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/15.BigData_MapReduce/mr_headPage.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/16.RecommendedSystem/基于知识的推荐.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/16.RecommendedSystem/基于知识的推荐.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/16.RecommendedSystem/推荐方法对比.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/16.RecommendedSystem/推荐方法对比.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/2.KNN/Thumbs.db" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/2.KNN/Thumbs.db" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/2.KNN/arctan_arccot.gif" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/2.KNN/arctan_arccot.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/2.KNN/knn-0-headpage.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/2.KNN/knn-0-headpage.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/2.KNN/knn-1-movie.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/2.KNN/knn-1-movie.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/2.KNN/knn_1.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/2.KNN/knn_1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/2.KNN/knn_2.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/2.KNN/knn_2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/2.KNN/knn_2_handWriting.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/2.KNN/knn_2_handWriting.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/2.KNN/knn_3.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/2.KNN/knn_3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/2.KNN/knn_4.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/2.KNN/knn_4.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/2.KNN/knn_headPage_xy.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/2.KNN/knn_headPage_xy.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/2.KNN/knn_later_1.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/2.KNN/knn_later_1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/2.KNN/knn_later_2.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/2.KNN/knn_later_2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/2.KNN/knn_later_3.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/2.KNN/knn_later_3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/2.KNN/knn_later_4.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/2.KNN/knn_later_4.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/2.KNN/knn_matplotlib_2.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/2.KNN/knn_matplotlib_2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/3.DecisionTree/DT_海洋生物数据.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/3.DecisionTree/DT_海洋生物数据.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/3.DecisionTree/DecisionTree_headPage_xy.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/3.DecisionTree/DecisionTree_headPage_xy.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/3.DecisionTree/DecisionTree_headpage.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/3.DecisionTree/DecisionTree_headpage.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/3.DecisionTree/Matplotlib绘制树形图.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/3.DecisionTree/Matplotlib绘制树形图.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/3.DecisionTree/决策树-流程图.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/3.DecisionTree/决策树-流程图.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/3.DecisionTree/决策树划分数据集时的数据路径.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/3.DecisionTree/决策树划分数据集时的数据路径.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/3.DecisionTree/决策树流程介绍图.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/3.DecisionTree/决策树流程介绍图.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/3.DecisionTree/熵的计算公式.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/3.DecisionTree/熵的计算公式.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/4.NaiveBayesian/NB_2.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/4.NaiveBayesian/NB_2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/4.NaiveBayesian/NB_3.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/4.NaiveBayesian/NB_3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/4.NaiveBayesian/NB_4.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/4.NaiveBayesian/NB_4.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/4.NaiveBayesian/NB_5.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/4.NaiveBayesian/NB_5.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/4.NaiveBayesian/NB_6.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/4.NaiveBayesian/NB_6.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/4.NaiveBayesian/NB_7.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/4.NaiveBayesian/NB_7.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/4.NaiveBayesian/NavieBayesian_headPage_xy.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/4.NaiveBayesian/NavieBayesian_headPage_xy.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/4.NaiveBayesian/朴素贝叶斯_首页.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/4.NaiveBayesian/朴素贝叶斯_首页.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/4.NaiveBayesian/朴素贝叶斯示例数据分布.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/4.NaiveBayesian/朴素贝叶斯示例数据分布.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/4.NaiveBayesian/贝叶斯条件概率.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/4.NaiveBayesian/贝叶斯条件概率.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/LR_1.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/LR_1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/LR_10.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/LR_10.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/LR_11.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/LR_11.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/LR_12.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/LR_12.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/LR_13.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/LR_13.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/LR_14.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/LR_14.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/LR_15.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/LR_15.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/LR_16.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/LR_16.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/LR_17.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/LR_17.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/LR_18.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/LR_18.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/LR_19.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/LR_19.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/LR_2.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/LR_2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/LR_20.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/LR_20.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/LR_21.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/LR_21.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/LR_3.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/LR_3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/LR_4.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/LR_4.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/LR_5.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/LR_5.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/LR_6.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/LR_6.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/LR_7.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/LR_7.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/LR_8.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/LR_8.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/LR_9.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/LR_9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/LogisticRegression_headPage_xy.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/LogisticRegression_headPage_xy.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/Logistic回归Sigmoid函数.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/Logistic回归Sigmoid函数.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/Logistic回归首页.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/Logistic回归首页.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/拟合程度示例图.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/拟合程度示例图.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/拟合程度较好示例图.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/拟合程度较好示例图.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/方向导数和梯度.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/方向导数和梯度.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/梯度上升算法.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/梯度上升算法.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/欠拟合示例图.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/欠拟合示例图.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/5.Logistic/过拟合示例图.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/5.Logistic/过拟合示例图.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/SVM_1.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/SVM_1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/SVM_2_separating-hyperplane.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/SVM_2_separating-hyperplane.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/SVM_3_linearly-separable.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/SVM_3_linearly-separable.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/SVM_4_point2line-distance.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/SVM_4_point2line-distance.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/SVM_4_point2line-distance.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/SVM_4_point2line-distance.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/SVM_5_Lagrangemultiplier.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/SVM_5_Lagrangemultiplier.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/SVM_6_radial-basis-function.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/SVM_6_radial-basis-function.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/SVM_松弛变量.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/SVM_松弛变量.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/alpha.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/alpha.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/b.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/b.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/hu_1.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/hu_1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/hu_10.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/hu_10.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/hu_2.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/hu_2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/hu_3.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/hu_3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/hu_4.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/hu_4.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/hu_5.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/hu_5.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/hu_6.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/hu_6.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/hu_7.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/hu_7.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/hu_8.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/hu_8.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/hu_9.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/hu_9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/k_1.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/k_1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/k_10.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/k_10.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/k_11.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/k_11.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/k_12.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/k_12.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/k_13.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/k_13.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/k_14.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/k_14.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/k_15.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/k_15.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/k_16.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/k_16.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/k_2.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/k_2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/k_3.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/k_3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/k_4.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/k_4.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/k_5.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/k_5.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/k_6.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/k_6.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/k_7.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/k_7.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/k_8.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/k_8.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/k_9.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/k_9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/ml_map.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/ml_map.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/story_1.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/story_1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/story_2.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/story_2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/story_3.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/story_3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/story_4.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/story_4.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/story_5.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/story_5.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/story_6.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/story_6.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/story_7.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/story_7.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/story_8.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/story_8.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/supportVector.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/supportVector.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/supportVector公式.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/supportVector公式.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/svm_2.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/svm_2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/w.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/w.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/6.SVM/松弛变量.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/6.SVM/松弛变量.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/7.AdaBoost/ROC曲线.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/7.AdaBoost/ROC曲线.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/7.AdaBoost/adaboost_alpha.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/7.AdaBoost/adaboost_alpha.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/7.AdaBoost/adaboost_code-flow-chart.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/7.AdaBoost/adaboost_code-flow-chart.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/7.AdaBoost/adaboost_headPage.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/7.AdaBoost/adaboost_headPage.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/7.AdaBoost/adaboost_illustration.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/7.AdaBoost/adaboost_illustration.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/7.AdaBoost/代价函数.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/7.AdaBoost/代价函数.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/7.AdaBoost/过拟合.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/7.AdaBoost/过拟合.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/7.AdaBoost/过拟合图解.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/7.AdaBoost/过拟合图解.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/7.RandomForest/数据重抽样.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/7.RandomForest/数据重抽样.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/7.RandomForest/特征重抽样.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/7.RandomForest/特征重抽样.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/LinearR_1.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/LinearR_1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/LinearR_10.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/LinearR_10.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/LinearR_11.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/LinearR_11.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/LinearR_12.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/LinearR_12.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/LinearR_13.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/LinearR_13.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/LinearR_14.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/LinearR_14.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/LinearR_15.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/LinearR_15.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/LinearR_16.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/LinearR_16.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/LinearR_17.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/LinearR_17.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/LinearR_18.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/LinearR_18.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/LinearR_19.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/LinearR_19.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/LinearR_2.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/LinearR_2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/LinearR_20.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/LinearR_20.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/LinearR_21.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/LinearR_21.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/LinearR_22.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/LinearR_22.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/LinearR_23.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/LinearR_23.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/LinearR_3.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/LinearR_3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/LinearR_4.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/LinearR_4.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/LinearR_5.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/LinearR_5.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/LinearR_6.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/LinearR_6.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/LinearR_7.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/LinearR_7.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/LinearR_8.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/LinearR_8.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/LinearR_9.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/LinearR_9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/局部加权线性回归效果图.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/局部加权线性回归效果图.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/岭回归示例图.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/岭回归示例图.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/线性回归效果图.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/线性回归效果图.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/逐步线性回归示例图.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/逐步线性回归示例图.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/8.Regression/预测数值型数据回归首页.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/8.Regression/预测数值型数据回归首页.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/9.TreeRegression/CART构建数据集回归树的简单数据集.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/9.TreeRegression/CART构建数据集回归树的简单数据集.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/9.TreeRegression/GUI更好的示例图.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/9.TreeRegression/GUI更好的示例图.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/9.TreeRegression/GUI示例图.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/9.TreeRegression/GUI示例图.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/9.TreeRegression/RegTree_1.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/9.TreeRegression/RegTree_1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/9.TreeRegression/RegTree_2.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/9.TreeRegression/RegTree_2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/9.TreeRegression/RegTree_3.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/9.TreeRegression/RegTree_3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/9.TreeRegression/RegTree_4.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/9.TreeRegression/RegTree_4.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/9.TreeRegression/RegTree_5.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/9.TreeRegression/RegTree_5.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/9.TreeRegression/TreeRegression_headPage_xy.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/9.TreeRegression/TreeRegression_headPage_xy.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/9.TreeRegression/树回归首页.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/9.TreeRegression/树回归首页.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/9.TreeRegression/模型树示例图.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/9.TreeRegression/模型树示例图.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/9.TreeRegression/测试回归树的分段常数数据集.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/9.TreeRegression/测试回归树的分段常数数据集.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/MainPage/ApacheCM-ML-WangYiYunKeTang.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/MainPage/ApacheCM-ML-WangYiYunKeTang.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/MainPage/ApacheCM-ML-youku.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/MainPage/ApacheCM-ML-youku.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/MainPage/ApacheCN-ML-AcFun.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/MainPage/ApacheCN-ML-AcFun.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/MainPage/ApacheCN-ML-bilibili-compare.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/MainPage/ApacheCN-ML-bilibili-compare.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/MainPage/ApacheCN-ML-bilibili.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/MainPage/ApacheCN-ML-bilibili.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/MainPage/ApacheCN-group.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/MainPage/ApacheCN-group.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/faq/faq_1.png" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/faq/faq_1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/report_20170408/2017-04-08_第一期的总结_1.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/report_20170408/2017-04-08_第一期的总结_1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/report_20170408/2017-04-08_第一期的总结_10.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/report_20170408/2017-04-08_第一期的总结_10.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/report_20170408/2017-04-08_第一期的总结_11.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/report_20170408/2017-04-08_第一期的总结_11.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/report_20170408/2017-04-08_第一期的总结_12.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/report_20170408/2017-04-08_第一期的总结_12.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/report_20170408/2017-04-08_第一期的总结_13.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/report_20170408/2017-04-08_第一期的总结_13.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/report_20170408/2017-04-08_第一期的总结_2.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/report_20170408/2017-04-08_第一期的总结_2.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/report_20170408/2017-04-08_第一期的总结_3.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/report_20170408/2017-04-08_第一期的总结_3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/report_20170408/2017-04-08_第一期的总结_4.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/report_20170408/2017-04-08_第一期的总结_4.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/report_20170408/2017-04-08_第一期的总结_5.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/report_20170408/2017-04-08_第一期的总结_5.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/report_20170408/2017-04-08_第一期的总结_6.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/report_20170408/2017-04-08_第一期的总结_6.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/report_20170408/2017-04-08_第一期的总结_7.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/report_20170408/2017-04-08_第一期的总结_7.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/report_20170408/2017-04-08_第一期的总结_8.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/report_20170408/2017-04-08_第一期的总结_8.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/机器学习实战/resources/report_20170408/2017-04-08_第一期的总结_9.jpg" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/resources/report_20170408/2017-04-08_第一期的总结_9.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/深度学习/矩阵分解.md" afterPath="$PROJECT_DIR$/docs/学习/深度学习/矩阵分解.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/2018-02-21-ch-neural-networks-1.md" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-neural-networks-1.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/2018-02-21-ch-optimization-1.md" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-optimization-1.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/2018-02-21-ch-poster.md" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-poster.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/ami-selection.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/ami-selection.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/aws-homepage.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/aws-homepage.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/aws-signin.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/aws-signin.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/aws-signup.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/aws-signup.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/bing.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/bing.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cat.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cat.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cat_tinted.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cat_tinted.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cat_tinted_imshow.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cat_tinted_imshow.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/challenges.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/challenges.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/classify.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/classify.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/classifydemo.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/classifydemo.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cloud-create-instance-screen.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cloud-create-instance-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cloud-dashboard-screen.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cloud-dashboard-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cloud-external-ip.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cloud-external-ip.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cloud-for-free.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cloud-for-free.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cloud-instance-dashboard-screen.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cloud-instance-dashboard-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cloud-instance-started.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cloud-instance-started.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cloud-launching-screen.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cloud-launching-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cloud-networking-external-ip-address.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cloud-networking-external-ip-address.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cloud-networking-external-ip-naming.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cloud-networking-external-ip-naming.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cloud-networking-external-ip.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cloud-networking-external-ip.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cloud-networking-firewall-rule-create.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cloud-networking-firewall-rule-create.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cloud-networking-firewall-rule.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cloud-networking-firewall-rule.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cnn/cnn.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cnn/cnn.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cnn/convnet.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cnn/convnet.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cnn/depthcol.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cnn/depthcol.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cnn/maxpool.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cnn/maxpool.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cnn/pool.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cnn/pool.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cnn/stride.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cnn/stride.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cnn/weights.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cnn/weights.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cnnvis/act1.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cnnvis/act1.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cnnvis/act2.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cnnvis/act2.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cnnvis/filt1.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cnnvis/filt1.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cnnvis/filt2.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cnnvis/filt2.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cnnvis/occlude.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cnnvis/occlude.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cnnvis/pool5max.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cnnvis/pool5max.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cnnvis/tsne.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cnnvis/tsne.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/community-AMIs.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/community-AMIs.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/conv-demo/external/d3.min.js" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/conv-demo/external/d3.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/conv-demo/index.html" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/conv-demo/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/conv-demo/utils.js" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/conv-demo/utils.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/create-instance-screen.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/create-instance-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/crossval.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/crossval.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cveg.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cveg.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/cvplot.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/cvplot.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/dataflow.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/dataflow.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/ec2-dashboard.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/ec2-dashboard.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/eg/spiral_linear.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/eg/spiral_linear.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/eg/spiral_net.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/eg/spiral_net.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/eg/spiral_raw.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/eg/spiral_raw.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/google-cloud-create-image-screenshot.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/google-cloud-create-image-screenshot.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/google-cloud-instance-gpus.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/google-cloud-instance-gpus.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/google-cloud-quotas-form.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/google-cloud-quotas-form.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/google-cloud-quotas-screen.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/google-cloud-quotas-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/google-cloud-select-cloud-storage.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/google-cloud-select-cloud-storage.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/google-cloud-select-custom-image.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/google-cloud-select-custom-image.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/imagemap.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/imagemap.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/instance-selection.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/instance-selection.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/instances-page.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/instances-page.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/ipython-tutorial/file-browser.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/ipython-tutorial/file-browser.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/ipython-tutorial/notebook-1.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/ipython-tutorial/notebook-1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/ipython-tutorial/notebook-2.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/ipython-tutorial/notebook-2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/ipython-tutorial/notebook-3.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/ipython-tutorial/notebook-3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/ipython-tutorial/notebook-error.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/ipython-tutorial/notebook-error.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/ipython-tutorial/save-notebook.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/ipython-tutorial/save-notebook.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/jupyter-screen.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/jupyter-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/key-pair-create.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/key-pair-create.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/key-pair.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/key-pair.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/knn.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/knn.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/launch-screen.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/launch-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/launching-screen.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/launching-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/map.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/map.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/margin.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/margin.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nn.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nn.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nn1/alexplot.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nn1/alexplot.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nn1/layer_sizes.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nn1/layer_sizes.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nn1/neural_net.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nn1/neural_net.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nn1/neural_net2.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nn1/neural_net2.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nn1/neuron.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nn1/neuron.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nn1/neuron_model.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nn1/neuron_model.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nn1/reg_strengths.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nn1/reg_strengths.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nn1/relu.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nn1/relu.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nn1/sigmoid.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nn1/sigmoid.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nn1/tanh.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nn1/tanh.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nn2/cifar10pca.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nn2/cifar10pca.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nn2/dropout.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nn2/dropout.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nn2/prepro1.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nn2/prepro1.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nn2/prepro2.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nn2/prepro2.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nn3/accuracies.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nn3/accuracies.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nn3/cnnweights.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nn3/cnnweights.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nn3/gridsearchbad.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nn3/gridsearchbad.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nn3/learningrates.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nn3/learningrates.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nn3/loss.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nn3/loss.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nn3/nesterov.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nn3/nesterov.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nn3/opt1.gif" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nn3/opt1.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nn3/opt2.gif" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nn3/opt2.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nn3/updates.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nn3/updates.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nn3/values.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nn3/values.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nn3/weights.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nn3/weights.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/nneg.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/nneg.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/pixels_embed_cifar10.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/pixels_embed_cifar10.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/pixels_embed_cifar10_big.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/pixels_embed_cifar10_big.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/pixelspace.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/pixelspace.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/sadpuppy_nocredits.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/sadpuppy_nocredits.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/samenorm.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/samenorm.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/sine.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/sine.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/sine_cosine.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/sine_cosine.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/sine_cosine_subplot.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/sine_cosine_subplot.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/stepsize.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/stepsize.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/svm1d.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/svm1d.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/svm_all.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/svm_all.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/svm_one.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/svm_one.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/svmbowl.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/svmbowl.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/svmvssoftmax.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/svmvssoftmax.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/templates.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/templates.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/terminal-coursework.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/terminal-coursework.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/terminal-development.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/terminal-development.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/terminal-my.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/terminal-my.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/terminal-shared.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/terminal-shared.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/trainset.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/trainset.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-ch/resources/wb.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/resources/wb.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/ami-selection.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/ami-selection.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/aws-homepage.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/aws-homepage.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/aws-signin.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/aws-signin.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/aws-signup.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/aws-signup.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/bing.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/bing.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cat.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cat.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cat_tinted.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cat_tinted.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cat_tinted_imshow.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cat_tinted_imshow.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/challenges.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/challenges.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/classify.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/classify.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/classifydemo.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/classifydemo.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cloud-create-instance-screen.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cloud-create-instance-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cloud-dashboard-screen.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cloud-dashboard-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cloud-external-ip.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cloud-external-ip.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cloud-for-free.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cloud-for-free.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cloud-instance-dashboard-screen.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cloud-instance-dashboard-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cloud-instance-started.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cloud-instance-started.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cloud-launching-screen.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cloud-launching-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cloud-networking-external-ip-address.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cloud-networking-external-ip-address.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cloud-networking-external-ip-naming.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cloud-networking-external-ip-naming.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cloud-networking-external-ip.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cloud-networking-external-ip.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cloud-networking-firewall-rule-create.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cloud-networking-firewall-rule-create.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cloud-networking-firewall-rule.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cloud-networking-firewall-rule.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cnn/cnn.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cnn/cnn.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cnn/convnet.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cnn/convnet.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cnn/depthcol.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cnn/depthcol.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cnn/maxpool.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cnn/maxpool.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cnn/pool.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cnn/pool.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cnn/stride.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cnn/stride.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cnn/weights.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cnn/weights.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cnnvis/act1.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cnnvis/act1.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cnnvis/act2.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cnnvis/act2.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cnnvis/filt1.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cnnvis/filt1.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cnnvis/filt2.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cnnvis/filt2.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cnnvis/occlude.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cnnvis/occlude.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cnnvis/pool5max.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cnnvis/pool5max.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cnnvis/tsne.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cnnvis/tsne.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/community-AMIs.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/community-AMIs.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/conv-demo/external/d3.min.js" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/conv-demo/external/d3.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/conv-demo/index.html" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/conv-demo/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/conv-demo/utils.js" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/conv-demo/utils.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/create-instance-screen.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/create-instance-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/crossval.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/crossval.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cveg.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cveg.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/cvplot.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/cvplot.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/dataflow.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/dataflow.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/ec2-dashboard.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/ec2-dashboard.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/eg/spiral_linear.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/eg/spiral_linear.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/eg/spiral_net.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/eg/spiral_net.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/eg/spiral_raw.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/eg/spiral_raw.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/google-cloud-create-image-screenshot.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/google-cloud-create-image-screenshot.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/google-cloud-instance-gpus.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/google-cloud-instance-gpus.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/google-cloud-quotas-form.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/google-cloud-quotas-form.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/google-cloud-quotas-screen.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/google-cloud-quotas-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/google-cloud-select-cloud-storage.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/google-cloud-select-cloud-storage.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/google-cloud-select-custom-image.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/google-cloud-select-custom-image.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/imagemap.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/imagemap.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/instance-selection.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/instance-selection.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/instances-page.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/instances-page.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/ipython-tutorial/file-browser.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/ipython-tutorial/file-browser.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/ipython-tutorial/notebook-1.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/ipython-tutorial/notebook-1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/ipython-tutorial/notebook-2.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/ipython-tutorial/notebook-2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/ipython-tutorial/notebook-3.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/ipython-tutorial/notebook-3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/ipython-tutorial/notebook-error.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/ipython-tutorial/notebook-error.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/ipython-tutorial/save-notebook.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/ipython-tutorial/save-notebook.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/jupyter-screen.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/jupyter-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/key-pair-create.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/key-pair-create.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/key-pair.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/key-pair.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/knn.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/knn.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/launch-screen.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/launch-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/launching-screen.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/launching-screen.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/map.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/map.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/margin.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/margin.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nn.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nn.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nn1/alexplot.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nn1/alexplot.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nn1/layer_sizes.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nn1/layer_sizes.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nn1/neural_net.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nn1/neural_net.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nn1/neural_net2.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nn1/neural_net2.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nn1/neuron.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nn1/neuron.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nn1/neuron_model.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nn1/neuron_model.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nn1/reg_strengths.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nn1/reg_strengths.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nn1/relu.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nn1/relu.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nn1/sigmoid.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nn1/sigmoid.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nn1/tanh.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nn1/tanh.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nn2/cifar10pca.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nn2/cifar10pca.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nn2/dropout.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nn2/dropout.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nn2/prepro1.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nn2/prepro1.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nn2/prepro2.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nn2/prepro2.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nn3/accuracies.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nn3/accuracies.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nn3/cnnweights.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nn3/cnnweights.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nn3/gridsearchbad.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nn3/gridsearchbad.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nn3/learningrates.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nn3/learningrates.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nn3/loss.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nn3/loss.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nn3/nesterov.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nn3/nesterov.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nn3/opt1.gif" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nn3/opt1.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nn3/opt2.gif" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nn3/opt2.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nn3/updates.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nn3/updates.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nn3/values.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nn3/values.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nn3/weights.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nn3/weights.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/nneg.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/nneg.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/pixels_embed_cifar10.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/pixels_embed_cifar10.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/pixels_embed_cifar10_big.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/pixels_embed_cifar10_big.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/pixelspace.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/pixelspace.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/sadpuppy_nocredits.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/sadpuppy_nocredits.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/samenorm.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/samenorm.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/sine.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/sine.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/sine_cosine.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/sine_cosine.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/sine_cosine_subplot.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/sine_cosine_subplot.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/stepsize.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/stepsize.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/svm1d.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/svm1d.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/svm_all.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/svm_all.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/svm_one.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/svm_one.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/svmbowl.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/svmbowl.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/svmvssoftmax.png" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/svmvssoftmax.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/templates.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/templates.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/terminal-coursework.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/terminal-coursework.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/terminal-development.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/terminal-development.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/terminal-my.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/terminal-my.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/terminal-shared.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/terminal-shared.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/trainset.jpg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/trainset.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/cs231n-en/resources/wb.jpeg" afterPath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/resources/wb.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/example/2017-07-28-fork-exec-source.md" afterPath="$PROJECT_DIR$/docs/学习/转载/example/2017-07-28-fork-exec-source.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/example/2017-07-30-bitcoin-explained-1.md" afterPath="$PROJECT_DIR$/docs/学习/转载/example/2017-07-30-bitcoin-explained-1.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/example2/2015-02-10-welcome-to-jekyll.markdown" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2015-02-10-welcome-to-jekyll.markdown" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/example2/2015-02-12-create-my-blog-with-jekyll.md" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2015-02-12-create-my-blog-with-jekyll.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/example2/2015-03-21-teach-girlfriend-html-css.md" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2015-03-21-teach-girlfriend-html-css.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/example2/2015-04-22-baidu-ife-2-javascript.md" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2015-04-22-baidu-ife-2-javascript.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/example2/2015-06-11-JavaScript-function.md" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2015-06-11-JavaScript-function.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/example2/2015-06-14-JavaScript-closure.md" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2015-06-14-JavaScript-closure.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/example2/2015-07-09-JavaScript-Net.md" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2015-07-09-JavaScript-Net.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/example2/2016-03-12-jekyll-theme-version-2.0.md" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2016-03-12-jekyll-theme-version-2.0.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/example2/2016-05-06-regular-expression-group.md" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2016-05-06-regular-expression-group.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/example2/2016-06-14-how-to-use-babel.md" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2016-06-14-how-to-use-babel.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/转载/example2/2016-10-16-shuffle-algorithm.md" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/2016-10-16-shuffle-algorithm.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diary/src/GetAll.py" afterPath="$PROJECT_DIR$/diary/src/GetAll.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mkdocs.bak.yml" afterPath="$PROJECT_DIR$/mkdocs.bak.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mkdocs.yml" afterPath="$PROJECT_DIR$/mkdocs.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/sitemap.xml" afterPath="$PROJECT_DIR$/site/sitemap.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -882,35 +19,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GetAll.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/diary/src/GetAll.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="81" column="37" lean-forward="false" selection-start-line="81" selection-start-column="37" selection-end-line="81" selection-end-column="37" />
-              <folding>
-                <element signature="e#159#168#0" expanded="true" />
-                <element signature="e#1510#1908#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mkdocs.bak.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mkdocs.bak.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="87" column="16" lean-forward="false" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mkdocs.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mkdocs.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-              <folding />
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="15">
+                <caret line="1" column="42" lean-forward="false" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -1024,7 +141,6 @@
         <option value="$PROJECT_DIR$/docs/tensorflow/如何选择优化器 optimizer.md" />
         <option value="$PROJECT_DIR$/docs/深度学习/10分钟上手Pandas.md" />
         <option value="$PROJECT_DIR$/docs/深度学习/矩阵求导.md" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/material/assets/stylesheets/application.78aab2dc.css" />
         <option value="$PROJECT_DIR$/material/assets/stylesheets/application-palette.6079476c.css" />
         <option value="$PROJECT_DIR$/docs/转载/cs231n-en/2018-02-21-en-optimization-2.md" />
@@ -1036,6 +152,7 @@
         <option value="$PROJECT_DIR$/mkdocs.bak.yml" />
         <option value="$PROJECT_DIR$/diary/src/GetAll.py" />
         <option value="$PROJECT_DIR$/mkdocs.yml" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -1081,19 +198,6 @@
               <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
               <item name="Diary" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Diary" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="学习" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Diary" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="学习" type="462c0819:PsiDirectoryNode" />
-              <item name="转载" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1308,12 +412,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="723" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25955415" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3789809" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32471728" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1388,7 +493,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="259">
             <caret line="33" column="3" lean-forward="true" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1399,7 +503,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="75">
             <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1416,7 +519,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="63" column="4" lean-forward="false" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1424,7 +526,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
           <caret line="414" column="4" lean-forward="false" selection-start-line="414" selection-start-column="4" selection-end-line="414" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1453,7 +554,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1462,7 +562,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="-306">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1473,7 +572,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="217">
             <caret line="98" column="13" lean-forward="false" selection-start-line="98" selection-start-column="4" selection-end-line="98" selection-end-column="13" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1484,7 +582,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="138">
             <caret line="3237" column="0" lean-forward="true" selection-start-line="3237" selection-start-column="0" selection-end-line="3237" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1495,7 +592,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="-3230">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1506,7 +602,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="114">
             <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1517,7 +612,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="114">
             <caret line="50" column="244" lean-forward="false" selection-start-line="50" selection-start-column="244" selection-end-line="50" selection-end-column="244" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1528,7 +622,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="-27">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1539,7 +632,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="-27">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1550,7 +642,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="114">
             <caret line="77" column="569" lean-forward="false" selection-start-line="77" selection-start-column="565" selection-end-line="77" selection-end-column="569" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1561,7 +652,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="-27">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1572,7 +662,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1583,18 +672,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="-1041">
             <caret line="233" column="0" lean-forward="true" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="52">
-            <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1604,7 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1612,7 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="3284" column="29" lean-forward="true" selection-start-line="3284" selection-start-column="29" selection-end-line="3284" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1620,7 +695,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="54" lean-forward="false" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1628,7 +702,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1644,7 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
           <caret line="44" column="32" lean-forward="false" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1652,7 +724,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1660,27 +731,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
           <caret line="49" column="25" lean-forward="false" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/books/DeepLearning2.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/books/DeepLearning2.md" />
     <entry file="file://$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-optimization-2.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="105">
             <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1691,7 +750,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="135">
             <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1702,7 +760,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1713,7 +770,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="105">
             <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1724,7 +780,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="75">
             <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1735,7 +790,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="-241">
             <caret line="9" column="2" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1746,7 +800,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="90">
             <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1757,7 +810,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="280">
             <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1768,7 +820,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="116">
             <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1779,7 +830,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="256">
             <caret line="95" column="18" lean-forward="true" selection-start-line="95" selection-start-column="18" selection-end-line="95" selection-end-column="18" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1793,27 +843,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-transfer-learning/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-transfer-learning/index.html" />
     <entry file="file://$PROJECT_DIR$/material/mkdocs_theme.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-767">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mkdocs.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1821,7 +855,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1829,7 +862,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2792">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1841,6 +873,25 @@
             <element signature="e#159#168#0" expanded="true" />
             <element signature="e#1510#1908#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mkdocs.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="15">
+            <caret line="1" column="42" lean-forward="false" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
