@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>最小二乘法.md - DataLab</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../..">DataLab</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../..">Home</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../About/">About</a>
+</li>
+                            
+<li >
+    <a href="../../Cheatsheet/">Cheatsheet</a>
+</li>
+                            
+<li >
+    <a href="../../Index/">Index</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">常用 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../常用/2018-02-23-latex语法/">latex语法.md</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">常用工具 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../常用工具/2018-02-24-10分钟上手Pandas/">10分钟上手Pandas.md</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">机器学习实战 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../机器学习实战/2017-01-01-1.机器学习基础/">1.机器学习基础.md</a>
+</li>
+                            
+<li >
+    <a href="../../机器学习实战/2017-02-01-2.k-近邻算法/">2.k-近邻算法.md</a>
+</li>
+                            
+<li >
+    <a href="../../机器学习实战/2017-03-01-3.决策树/">3.决策树.md</a>
+</li>
+                            
+<li >
+    <a href="../../机器学习实战/2017-04-01-4.朴素贝叶斯/">4.朴素贝叶斯.md</a>
+</li>
+                            
+<li >
+    <a href="../../机器学习实战/2017-04-02-naive-bayes-discuss/">naive-bayes-discuss.md</a>
+</li>
+                            
+<li >
+    <a href="../../机器学习实战/2017-05-01-5.Logistic回归/">5.Logistic回归.md</a>
+</li>
+                            
+<li >
+    <a href="../../机器学习实战/2017-06-01-6.支持向量机/">6.支持向量机.md</a>
+</li>
+                            
+<li >
+    <a href="../../机器学习实战/2017-06-02-6.1.支持向量机的几个通俗理解/">6.1.支持向量机的几个通俗理解.md</a>
+</li>
+                            
+<li >
+    <a href="../../机器学习实战/2017-07-01-7.集成方法-随机森林和AdaBoost/">7.集成方法-随机森林和AdaBoost.md</a>
+</li>
+                            
+<li >
+    <a href="../../机器学习实战/2017-09-01-9.树回归/">9.树回归.md</a>
+</li>
+                            
+<li >
+    <a href="../../机器学习实战/2017-10-01-10.k-means聚类/">10.k-means聚类.md</a>
+</li>
+                            
+<li >
+    <a href="../../机器学习实战/2017-11-01-11.使用Apriori算法进行关联分析/">11.使用Apriori算法进行关联分析.md</a>
+</li>
+                            
+<li >
+    <a href="../../机器学习实战/2017-12-01-12.使用FP-growth算法来高效发现频繁项集/">12.使用FP-growth算法来高效发现频繁项集.md</a>
+</li>
+                            
+<li >
+    <a href="../../机器学习实战/2018-01-01-13.利用PCA来简化数据/">13.利用PCA来简化数据.md</a>
+</li>
+                            
+<li >
+    <a href="../../机器学习实战/2018-02-01-14.利用SVD简化数据/">14.利用SVD简化数据.md</a>
+</li>
+                            
+<li >
+    <a href="../../机器学习实战/2018-03-01-15.大数据与MapReduce/">15.大数据与MapReduce.md</a>
+</li>
+                            
+<li >
+    <a href="../../机器学习实战/2018-04-01-16.推荐系统/">16.推荐系统.md</a>
+</li>
+                            
+<li >
+    <a href="../../机器学习实战/预测数值型数据,回归/">8.预测数值型数据：回归.md</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">深度学习 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../2018-02-23-10分钟上手Pandas/">10分钟上手Pandas.md</a>
+</li>
+                            
+<li >
+    <a href="../2018-02-23-主成分分析 (2)/">主成分分析 (2).md</a>
+</li>
+                            
+<li >
+    <a href="../2018-02-23-主成分分析/">主成分分析.md</a>
+</li>
+                            
+<li class="active">
+    <a href="./">最小二乘法.md</a>
+</li>
+                            
+<li >
+    <a href="../2018-02-23-矩阵分解/">2018 02 23 矩阵分解</a>
+</li>
+                            
+<li >
+    <a href="../2018-02-23-矩阵求导/">2018 02 23 矩阵求导</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../2018-02-23-主成分分析/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../2018-02-23-矩阵分解/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#_1">最小二乘法</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<ul>
+<li>content
+{:toc}</li>
+</ul>
+<h1 id="_1">最小二乘法</h1>
+<p>我们从矩阵的角度来理解： 
+首先我们给出一个矩阵中的定义： </p>
+<div>
+<div class="MathJax_Preview">R(A)=\{Ax|x∈R^n\},A∈R^{n×n}</div>
+<script type="math/tex; mode=display">R(A)=\{Ax|x∈R^n\},A∈R^{n×n}</script>
+</div>
+<p>有了上面的定义之后，我们就可以写出最小二乘问题的矩阵形式： 
+<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">∃b∉R(A),b∈R^n,\min_{x∈R^n}\parallel Ax−b\parallel _2</span><script type="math/tex">∃b∉R(A),b∈R^n,\min_{x∈R^n}\parallel Ax−b\parallel _2</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">∃b∉R(A),b∈R^n,\min_{x∈R^n}\parallel Ax−b\parallel _2</span><script type="math/tex">∃b∉R(A),b∈R^n,\min_{x∈R^n}\parallel Ax−b\parallel _2</script></span></script></span></p>
+<p>用bi格高一点的说法来说，就是求在欧几里得空间中以2-范数作为距离，使得向量Ax与b之间距离最小的x。 
+我们的目标是求： 
+<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">min_{x∈R^n}\parallel Ax−\parallel_2</span><script type="math/tex">min_{x∈R^n}\parallel Ax−\parallel_2</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">min_{x∈R^n}\parallel Ax−\parallel_2</span><script type="math/tex">min_{x∈R^n}\parallel Ax−\parallel_2</script></span></script></span></p>
+<p>当然我们知道，使得距离最小的向量x与使得距离平方最小的向量x是相同的，于是我们可以将所求的目标改写为： 
+<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">min_{x∈R^n}{\parallel Ax−b\parallel_2}^2</span><script type="math/tex">min_{x∈R^n}{\parallel Ax−b\parallel_2}^2</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">min_{x∈R^n}{\parallel Ax−b\parallel_2}^2</span><script type="math/tex">min_{x∈R^n}{\parallel Ax−b\parallel_2}^2</script></span></script></span></p>
+<p>结合一些矩阵、行列式的知识，我们知道： 
+<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">{\parallel Ax−b\parallel_2}^2=(Ax−b)^T∗(Ax−b)</span><script type="math/tex">{\parallel Ax−b\parallel_2}^2=(Ax−b)^T∗(Ax−b)</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">{\parallel Ax−b\parallel_2}^2=(Ax−b)^T∗(Ax−b)</span><script type="math/tex">{\parallel Ax−b\parallel_2}^2=(Ax−b)^T∗(Ax−b)</script></span></script></span>
+根据我们大一学过的高数知识，我们知道，求最极值问题直接对应的就是导数为零，因此我们试图将所给出的原式的矩阵形式求导：</p>
+<p>不过首先我们需要补充矩阵微积分(matrix calculus)的一些知识 
+(PS:是矩阵微积分吧…我没有翻译错吧….) </p>
+<div>
+<div class="MathJax_Preview">\frac {\partial x^Ta}{\partial x}=\frac {\partial a^Tx}{\partial x}=a$$
+$$\frac {\partial x^TAx}{\partial x}=Ax+A^Tx</div>
+<script type="math/tex; mode=display">\frac {\partial x^Ta}{\partial x}=\frac {\partial a^Tx}{\partial x}=a$$
+$$\frac {\partial x^TAx}{\partial x}=Ax+A^Tx</script>
+</div>
+<p>如果矩阵A是对称的(symmetric matrix): 
+<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">Ax+A^Tx=2Ax</span><script type="math/tex">Ax+A^Tx=2Ax</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">Ax+A^Tx=2Ax</span><script type="math/tex">Ax+A^Tx=2Ax</script></span></script></span>
+接下来，我们对原式化简并求其对x的导数： </p>
+<div>
+<div class="MathJax_Preview">{∥Ax−b∥_2}^2=x^TA^TAx−b^TAx−x^TA^Tb+b^Tb</div>
+<script type="math/tex; mode=display">{∥Ax−b∥_2}^2=x^TA^TAx−b^TAx−x^TA^Tb+b^Tb</script>
+</div>
+<p>求导得到： 
+<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\frac {\partial{\parallel Ax−b\parallel}^2}{\partial x}=2A^TAx−2A^Tb=0</span><script type="math/tex">\frac {\partial{\parallel Ax−b\parallel}^2}{\partial x}=2A^TAx−2A^Tb=0</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\frac {\partial{\parallel Ax−b\parallel}^2}{\partial x}=2A^TAx−2A^Tb=0</span><script type="math/tex">\frac {\partial{\parallel Ax−b\parallel}^2}{\partial x}=2A^TAx−2A^Tb=0</script></span></script></span></p>
+<p>于是我们就得到了，最小二乘法解的矩阵形式： 
+<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">x=(A^TA)^{−1}A^Tb</span><script type="math/tex">x=(A^TA)^{−1}A^Tb</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">x=(A^TA)^{−1}A^Tb</span><script type="math/tex">x=(A^TA)^{−1}A^Tb</script></span></script></span>
+当然了，这里是最简答的线性最小二乘法，还有更为复杂的非线性以及矩阵A不满秩的情况(hdq说他老师能默写出这个过程…)，等以后有时间了，我会再补充上去的。</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '../..';</script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/extra.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="../../search/require.js"></script>
+        <script src="../../search/search.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>&larr;</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>&rarr;</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </body>
+</html>

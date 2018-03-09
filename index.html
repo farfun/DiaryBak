@@ -1,201 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  
-  
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="None">
-    
-    
-    <link rel="shortcut icon" href="./img/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>Data Lab</title>
-    <link href="./css/bootstrap-3.3.7.min.css" rel="stylesheet">
-    <link href="./css/font-awesome-4.7.0.css" rel="stylesheet">
-    <link href="./css/base.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/highlight.css">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-
-    <script src="./js/jquery-3.2.1.min.js"></script>
-    <script src="./js/bootstrap-3.3.7.min.js"></script>
-    <script src="./js/highlight.pack.js"></script>
-    
-      <script src="./js/elasticlunr.min.js"></script>
-    
-    <base target="_top">
-    <script>
-      var base_url = '.';
-      var is_top_frame = (window === window.parent);
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
         
-        var pageToc = [
-          {title: "Welcome to My Data Lab", url: "#welcome-to-my-data-lab", children: [
-              {title: "0. Requirements", url: "#0-requirements" },
-              {title: "1. Setup Env", url: "#1-setup-env" },
-              {title: "2. Start Jupyter", url: "#2-start-jupyter" },
-              {title: "3. Deploy to GitHub Pages", url: "#3-deploy-to-github-pages" },
-          ]},
-        ];
-
-    </script>
-    <script src="./js/base.js"></script>
-      <script src="./mathjaxhelper.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-      <script src="./search/require.js"></script>
-      <script src="./search/search.js"></script> 
-</head>
-
-<body>
-<script>
-if (is_top_frame) { $('body').addClass('wm-top-page'); }
-</script>
-
-<nav class="navbar wm-page-top-frame">
-  <div class="container-fluid wm-top-container">
-    
-    <div class="wm-top-tool pull-right wm-vcenter">
-      <form class="dropdown wm-vcentered" id="wm-search-form" action="./search.html">
         
-        <button id="wm-search-show" class="btn btn-sm btn-default" type="submit"
-          ><i class="fa fa-search" aria-hidden="true"></i></button>
+        <link rel="shortcut icon" href="./img/favicon.ico">
+        <title>DataLab</title>
+        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="./css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="./css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/highlight.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
 
-        <div class="input-group input-group-sm wm-top-search">
-          <input type="text" name="q" class="form-control" id="mkdocs-search-query" placeholder="Search">
-          <span class="input-group-btn" role="search">
-            
-            <button class="btn btn-default dropdown-toggle collapse" data-toggle="dropdown" type="button"><span class="caret"></span></button>
-            <ul id="mkdocs-search-results" class="dropdown-menu dropdown-menu-right"></ul>
-            <button id="wm-search-go" class="btn btn-default" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-          </span>
+        <script src="./js/jquery-1.10.2.min.js"></script>
+        <script src="./js/bootstrap-3.0.3.min.js"></script>
+        <script src="./js/highlight.pack.js"></script> 
+    </head>
+
+    <body class="homepage">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href=".">DataLab</a>
         </div>
-      </form>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li class="active">
+    <a href=".">Home</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="About/">About</a>
+</li>
+                            
+<li >
+    <a href="Cheatsheet/">Cheatsheet</a>
+</li>
+                            
+<li >
+    <a href="Index/">Index</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">常用 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="常用/2018-02-23-latex语法/">2018 02 23 latex语法</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">常用工具 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="常用工具/2018-02-24-10分钟上手Pandas/">2018 02 24 10分钟上手Pandas</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">机器学习实战 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="机器学习实战/2017-01-01-1.机器学习基础/">2017 01 01 1.机器学习基础</a>
+</li>
+                            
+<li >
+    <a href="机器学习实战/2017-02-01-2.k-近邻算法/">2017 02 01 2.k 近邻算法</a>
+</li>
+                            
+<li >
+    <a href="机器学习实战/2017-03-01-3.决策树/">2017 03 01 3.决策树</a>
+</li>
+                            
+<li >
+    <a href="机器学习实战/2017-04-01-4.朴素贝叶斯/">2017 04 01 4.朴素贝叶斯</a>
+</li>
+                            
+<li >
+    <a href="机器学习实战/2017-04-02-naive-bayes-discuss/">2017 04 02 naive bayes discuss</a>
+</li>
+                            
+<li >
+    <a href="机器学习实战/2017-05-01-5.Logistic回归/">2017 05 01 5.Logistic回归</a>
+</li>
+                            
+<li >
+    <a href="机器学习实战/2017-06-01-6.支持向量机/">2017 06 01 6.支持向量机</a>
+</li>
+                            
+<li >
+    <a href="机器学习实战/2017-06-02-6.1.支持向量机的几个通俗理解/">2017 06 02 6.1.支持向量机的几个通俗理解</a>
+</li>
+                            
+<li >
+    <a href="机器学习实战/2017-07-01-7.集成方法-随机森林和AdaBoost/">2017 07 01 7.集成方法 随机森林和AdaBoost</a>
+</li>
+                            
+<li >
+    <a href="机器学习实战/2017-09-01-9.树回归/">2017 09 01 9.树回归</a>
+</li>
+                            
+<li >
+    <a href="机器学习实战/2017-10-01-10.k-means聚类/">2017 10 01 10.k means聚类</a>
+</li>
+                            
+<li >
+    <a href="机器学习实战/2017-11-01-11.使用Apriori算法进行关联分析/">2017 11 01 11.使用Apriori算法进行关联分析</a>
+</li>
+                            
+<li >
+    <a href="机器学习实战/2017-12-01-12.使用FP-growth算法来高效发现频繁项集/">2017 12 01 12.使用FP growth算法来高效发现频繁项集</a>
+</li>
+                            
+<li >
+    <a href="机器学习实战/2018-01-01-13.利用PCA来简化数据/">2018 01 01 13.利用PCA来简化数据</a>
+</li>
+                            
+<li >
+    <a href="机器学习实战/2018-02-01-14.利用SVD简化数据/">2018 02 01 14.利用SVD简化数据</a>
+</li>
+                            
+<li >
+    <a href="机器学习实战/2018-03-01-15.大数据与MapReduce/">2018 03 01 15.大数据与MapReduce</a>
+</li>
+                            
+<li >
+    <a href="机器学习实战/2018-04-01-16.推荐系统/">2018 04 01 16.推荐系统</a>
+</li>
+                            
+<li >
+    <a href="机器学习实战/预测数值型数据,回归/">预测数值型数据,回归</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">深度学习 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="深度学习/2018-02-23-10分钟上手Pandas/">2018 02 23 10分钟上手Pandas</a>
+</li>
+                            
+<li >
+    <a href="深度学习/2018-02-23-主成分分析 (2)/">2018 02 23 主成分分析 (2)</a>
+</li>
+                            
+<li >
+    <a href="深度学习/2018-02-23-主成分分析/">2018 02 23 主成分分析</a>
+</li>
+                            
+<li >
+    <a href="深度学习/2018-02-23-最小二乘法/">2018 02 23 最小二乘法</a>
+</li>
+                            
+<li >
+    <a href="深度学习/2018-02-23-矩阵分解/">2018 02 23 矩阵分解</a>
+</li>
+                            
+<li >
+    <a href="深度学习/2018-02-23-矩阵求导/">2018 02 23 矩阵求导</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li class="disabled">
+                        <a rel="next" >
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="About/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
     </div>
+</div>
 
-    
-    <div class="wm-top-tool wm-vcenter pull-right wm-small-left">
-      <button id="wm-toc-button" type="button" class="btn btn-sm btn-default wm-vcentered"><i class="fa fa-th-list" aria-hidden="true"></i></button>
-    </div>
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#welcome-to-my-data-lab">Welcome to My Data Lab</a></li>
+            <li><a href="#0-requirements">0. Requirements</a></li>
+            <li><a href="#1-setup-env">1. Setup Env</a></li>
+            <li><a href="#2-start-jupyter">2. Start Jupyter</a></li>
+            <li><a href="#3-deploy-to-github-pages">3. Deploy to GitHub Pages</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
 
-    
-    
-
-    
-    <a href="" class="wm-top-brand wm-top-link wm-vcenter">
-      
-      <div class="wm-top-title">
-        Data Lab<br>
-        
-      </div>
-    </a>
-  </div>
-</nav>
-
-  <div id="main-content" class="wm-page-top-frame">
-    
-<nav class="wm-toc-pane">
-  
-  <ul class="wm-toctree">
-        <li class="wm-toc-li wm-toc-lev1 "><a href="." class="wm-article-link wm-toc-text">Home</a>
-</li>
-        <li class="wm-toc-li wm-toc-lev1 "><a href="Cheatsheet/" class="wm-article-link wm-toc-text">Cheatsheet</a>
-</li>
-        <li class="wm-toc-li wm-toc-lev1 "><a href="About/" class="wm-article-link wm-toc-text">About</a>
-</li>
-        <li class="wm-toc-li wm-toc-lev1 "><a href="." class="wm-article-link wm-toc-text">Introduction</a>
-</li>
-        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">User Guide</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev2 "><a href="Cheatsheet/" class="wm-article-link wm-toc-text">Cheatsheet</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev2 "><a href="About/" class="wm-article-link wm-toc-text">About</a>
-</li>
-      <li class="wm-toc-li wm-toc-lev2 "><a href="常用/2018-02-23-latex语法/" class="wm-article-link wm-toc-text">2018 02 23 latex语法</a>
-</li>
-  </ul>
-</li>
-
-        <li class="wm-toc-li wm-toc-lev1 "><a href="About/" class="wm-article-link wm-toc-text">About</a>
-</li>
-        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Home</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev2 "><a href="About/" class="wm-article-link wm-toc-text">About</a>
-</li>
-  </ul>
-</li>
-
-        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Home</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev2 "><a href="Cheatsheet/" class="wm-article-link wm-toc-text">Cheatsheet</a>
-</li>
-  </ul>
-</li>
-
-        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Home</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev2 "><a href="Index/" class="wm-article-link wm-toc-text">Index</a>
-</li>
-  </ul>
-</li>
-
-        <li class="wm-toc-li wm-toc-lev1 "><span class="wm-toc-text">Home</span>
-</li>
-        <li class="wm-toc-li wm-toc-lev1 "><span class="wm-toc-text">Home</span>
-</li>
-        <li class="wm-toc-li wm-toc-lev1 "><span class="wm-toc-text">Home</span>
-</li>
-        <li class="wm-toc-li wm-toc-lev1 "><span class="wm-toc-text">Home</span>
-</li>
-        <li class="wm-toc-li wm-toc-lev1 "><span class="wm-toc-text">Home</span>
-</li>
-  </ul>
-</nav>
-
-    <div class="wm-content-pane">
-      <iframe class="wm-article" name="article"></iframe>
-    </div>
-  </div>
-
-<div class="container-fluid wm-page-content">
-    
-
-  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
-    
-    <div class="wm-article-nav pull-right">
-      <a href="Cheatsheet/" class="btn btn-xs btn-default pull-right">
-        Next
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-      <a href="Cheatsheet/" class="btn btn-xs btn-link">
-        Cheatsheet
-      </a>
-    </div>
-    
-    <div class="wm-article-nav">
-      <a href="About/" class="btn btn-xs btn-default pull-left">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="About/" class="btn btn-xs btn-link">
-        About
-      </a>
-    </div>
-    
-  </div>
-
-    
-
-    <h2 id="welcome-to-my-data-lab">Welcome to My Data Lab</h2>
+<h2 id="welcome-to-my-data-lab">Welcome to My Data Lab</h2>
 <h3 id="0-requirements">0. Requirements</h3>
 <ol>
 <li><a href="http://conda.pydata.org/">conda</a></li>
@@ -215,43 +250,89 @@ pip install mkdocs
 
 <h3 id="3-deploy-to-github-pages">3. Deploy to GitHub Pages</h3>
 <div class="highlight"><pre><span></span>mkdocs gh-deploy --clean
-</pre></div>
+</pre></div></div>
+        </div>
 
-  <br>
-    
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '.';</script>
+        <script src="./js/base.js"></script>
+        <script src="./javascripts/extra.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="./search/require.js"></script>
+        <script src="./search/search.js"></script>
 
-  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
-    
-    <div class="wm-article-nav pull-right">
-      <a href="Cheatsheet/" class="btn btn-xs btn-default pull-right">
-        Next
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      </a>
-      <a href="Cheatsheet/" class="btn btn-xs btn-link">
-        Cheatsheet
-      </a>
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
     </div>
-    
-    <div class="wm-article-nav">
-      <a href="About/" class="btn btn-xs btn-default pull-left">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="About/" class="btn btn-xs btn-link">
-        About
-      </a>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>&larr;</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>&rarr;</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
     </div>
-    
-  </div>
-
-    <br>
 </div>
 
-<footer class="col-md-12 wm-page-content">
-  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
-</footer>
 
-</body>
+    </body>
 </html>
+
 <!--
 MkDocs version : 0.17.3
-Build Date UTC : 2018-03-08 15:16:15
+Build Date UTC : 2018-03-09 12:29:32
 -->

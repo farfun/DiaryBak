@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>14.利用SVD简化数据.md - DataLab</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../..">DataLab</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../..">Home</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../About/">About</a>
+</li>
+                            
+<li >
+    <a href="../../Cheatsheet/">Cheatsheet</a>
+</li>
+                            
+<li >
+    <a href="../../Index/">Index</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">常用 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../常用/2018-02-23-latex语法/">latex语法.md</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">常用工具 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../常用工具/2018-02-24-10分钟上手Pandas/">10分钟上手Pandas.md</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">机器学习实战 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../2017-01-01-1.机器学习基础/">1.机器学习基础.md</a>
+</li>
+                            
+<li >
+    <a href="../2017-02-01-2.k-近邻算法/">2.k-近邻算法.md</a>
+</li>
+                            
+<li >
+    <a href="../2017-03-01-3.决策树/">3.决策树.md</a>
+</li>
+                            
+<li >
+    <a href="../2017-04-01-4.朴素贝叶斯/">4.朴素贝叶斯.md</a>
+</li>
+                            
+<li >
+    <a href="../2017-04-02-naive-bayes-discuss/">naive-bayes-discuss.md</a>
+</li>
+                            
+<li >
+    <a href="../2017-05-01-5.Logistic回归/">5.Logistic回归.md</a>
+</li>
+                            
+<li >
+    <a href="../2017-06-01-6.支持向量机/">6.支持向量机.md</a>
+</li>
+                            
+<li >
+    <a href="../2017-06-02-6.1.支持向量机的几个通俗理解/">6.1.支持向量机的几个通俗理解.md</a>
+</li>
+                            
+<li >
+    <a href="../2017-07-01-7.集成方法-随机森林和AdaBoost/">7.集成方法-随机森林和AdaBoost.md</a>
+</li>
+                            
+<li >
+    <a href="../2017-09-01-9.树回归/">9.树回归.md</a>
+</li>
+                            
+<li >
+    <a href="../2017-10-01-10.k-means聚类/">10.k-means聚类.md</a>
+</li>
+                            
+<li >
+    <a href="../2017-11-01-11.使用Apriori算法进行关联分析/">11.使用Apriori算法进行关联分析.md</a>
+</li>
+                            
+<li >
+    <a href="../2017-12-01-12.使用FP-growth算法来高效发现频繁项集/">12.使用FP-growth算法来高效发现频繁项集.md</a>
+</li>
+                            
+<li >
+    <a href="../2018-01-01-13.利用PCA来简化数据/">13.利用PCA来简化数据.md</a>
+</li>
+                            
+<li class="active">
+    <a href="./">14.利用SVD简化数据.md</a>
+</li>
+                            
+<li >
+    <a href="../2018-03-01-15.大数据与MapReduce/">2018 03 01 15.大数据与MapReduce</a>
+</li>
+                            
+<li >
+    <a href="../2018-04-01-16.推荐系统/">2018 04 01 16.推荐系统</a>
+</li>
+                            
+<li >
+    <a href="../预测数值型数据,回归/">预测数值型数据,回归</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">深度学习 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../深度学习/2018-02-23-10分钟上手Pandas/">2018 02 23 10分钟上手Pandas</a>
+</li>
+                            
+<li >
+    <a href="../../深度学习/2018-02-23-主成分分析 (2)/">2018 02 23 主成分分析 (2)</a>
+</li>
+                            
+<li >
+    <a href="../../深度学习/2018-02-23-主成分分析/">2018 02 23 主成分分析</a>
+</li>
+                            
+<li >
+    <a href="../../深度学习/2018-02-23-最小二乘法/">2018 02 23 最小二乘法</a>
+</li>
+                            
+<li >
+    <a href="../../深度学习/2018-02-23-矩阵分解/">2018 02 23 矩阵分解</a>
+</li>
+                            
+<li >
+    <a href="../../深度学习/2018-02-23-矩阵求导/">2018 02 23 矩阵求导</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../2018-01-01-13.利用PCA来简化数据/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../2018-03-01-15.大数据与MapReduce/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#14-svd">第14章 利用SVD简化数据</a></li>
+            <li><a href="#svd">SVD 概述</a></li>
+            <li><a href="#svd_1">SVD 场景</a></li>
+            <li><a href="#svd_2">SVD 原理</a></li>
+            <li><a href="#_1">推荐系统</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<ul>
+<li>content
+{:toc}</li>
+</ul>
+<h1 id="14-svd">第14章 利用SVD简化数据</h1>
+<p><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script></p>
+<h2 id="svd">SVD 概述</h2>
+<div class="highlight"><pre><span></span>奇异值分解（SVD, Singular Value Decomposition）:
+    提取信息的一种方法，可以把 SVD 看成是从噪声数据中抽取相关特征。从生物信息学到金融学，SVD 是提取信息的强大工具。
+</pre></div>
+
+<h2 id="svd_1">SVD 场景</h2>
+<blockquote>
+<p>信息检索-隐性语义检索（Lstent Semantic Indexing, LSI）或 隐形语义分析（Latent Semantic Analysis, LSA）</p>
+</blockquote>
+<p>隐性语义索引：矩阵 = 文档 + 词语
+* 是最早的 SVD 应用之一，我们称利用 SVD 的方法为隐性语义索引（LSI）或隐性语义分析（LSA）。</p>
+<p>![LSA举例]({{ site.baseurl }}{{ site.images }}/MachineLearninginAction/14.SVD/使用SVD简化数据-LSI举例.png)</p>
+<blockquote>
+<p>推荐系统</p>
+</blockquote>
+<ol>
+<li>利用 SVD 从数据中构建一个主题空间。</li>
+<li>再在该空间下计算其相似度。(从高维-低维空间的转化，在低维空间来计算相似度，SVD 提升了推荐系统的效率。)</li>
+</ol>
+<p>![主题空间案例1]({{ site.baseurl }}{{ site.images }}/MachineLearninginAction/14.SVD/SVD_推荐系统_主题空间案例1.jpg)</p>
+<ul>
+<li>上图右边标注的为一组共同特征，表示美式 BBQ 空间；另一组在上图右边未标注的为日式食品 空间。</li>
+</ul>
+<blockquote>
+<p>图像压缩</p>
+</blockquote>
+<p>例如：<code>32*32=1024 =&gt; 32*2+2*1+32*2=130</code>(2*1表示去掉了除对角线的0), 几乎获得了10倍的压缩比。</p>
+<p>![SVD公式]({{ site.baseurl }}{{ site.images }}/MachineLearninginAction/14.SVD/使用SVD简化数据-SVD公式.jpg)</p>
+<h2 id="svd_2">SVD 原理</h2>
+<h3 id="svd_3">SVD 工作原理</h3>
+<blockquote>
+<p>矩阵分解</p>
+</blockquote>
+<ul>
+<li>矩阵分解是将数据矩阵分解为多个独立部分的过程。</li>
+<li>矩阵分解可以将原始矩阵表示成新的易于处理的形式，这种新形式是两个或多个矩阵的乘积。（类似代数中的因数分解）</li>
+<li>举例：如何将12分解成两个数的乘积？（1，12）、（2，6）、（3，4）都是合理的答案。</li>
+</ul>
+<blockquote>
+<p>SVD 是矩阵分解的一种类型，也是矩阵分解最常见的技术</p>
+</blockquote>
+<ul>
+<li>SVD 将原始的数据集矩阵 Data 分解成三个矩阵 U、∑、V</li>
+<li>举例：如果原始矩阵 \(Data_{m*n}\) 是m行n列，<ul>
+<li>\(U_{m*n}\) 表示m行n列</li>
+<li>\(∑_{m*k}\) 表示m行k列</li>
+<li>\(V_{k*n}\) 表示k行n列。</li>
+</ul>
+</li>
+</ul>
+<p>\(Data_{m*n} = U_{m*k} * ∑<em>{k*k} * V</em>{k*n}\)</p>
+<p>![SVD公式]({{ site.baseurl }}{{ site.images }}/MachineLearninginAction/14.SVD/使用SVD简化数据-SVD公式.jpg)</p>
+<p>具体的案例：（大家可以试着推导一下：<a href="https://wenku.baidu.com/view/b7641217866fb84ae45c8d17.html">https://wenku.baidu.com/view/b7641217866fb84ae45c8d17.html</a> ）</p>
+<p>![SVD公式]({{ site.baseurl }}{{ site.images }}/MachineLearninginAction/14.SVD/SVD公式的测试案例.jpg)</p>
+<ul>
+<li>上述分解中会构建出一个矩阵∑，该矩阵只有对角元素，其他元素均为0(近似于0)。另一个惯例就是，∑的对角元素是从大到小排列的。这些对角元素称为奇异值。</li>
+<li>奇异值与特征值(PCA 数据中重要特征)是有关系的。这里的奇异值就是矩阵 \(Data * Data^T\) 特征值的平方根。</li>
+<li>普遍的事实：在某个奇异值的数目(r 个=&gt;奇异值的平方和累加到总值的90%以上)之后，其他的奇异值都置为0(近似于0)。这意味着数据集中仅有 r 个重要特征，而其余特征则都是噪声或冗余特征。</li>
+</ul>
+<h3 id="svd_4">SVD 算法特点</h3>
+<div class="highlight"><pre><span></span>优点：简化数据，去除噪声，优化算法的结果
+缺点：数据的转换可能难以理解
+使用的数据类型：数值型数据
+</pre></div>
+
+<h2 id="_1">推荐系统</h2>
+<h3 id="_2">推荐系统 概述</h3>
+<p><code>推荐系统是利用电子商务网站向客户提供商品信息和建议，帮助用户决定应该购买什么产品，模拟销售人员帮助客户完成购买过程。</code></p>
+<h3 id="_3">推荐系统 场景</h3>
+<ol>
+<li>Amazon 会根据顾客的购买历史向他们推荐物品</li>
+<li>Netflix 会向其用户推荐电影</li>
+<li>新闻网站会对用户推荐新闻频道</li>
+</ol>
+<h3 id="_4">推荐系统 要点</h3>
+<blockquote>
+<p>基于协同过滤(collaborative filtering) 的推荐引擎</p>
+</blockquote>
+<ul>
+<li>利用Python 实现 SVD(Numpy 有一个称为 linalg 的线性代数工具箱)</li>
+<li>协同过滤：是通过将用户和其他用户的数据进行对比来实现推荐的。</li>
+<li>当知道了两个用户或两个物品之间的相似度，我们就可以利用已有的数据来预测未知用户的喜好。</li>
+</ul>
+<blockquote>
+<p>基于物品的相似度和基于用户的相似度：物品比较少则选择物品相似度，用户比较少则选择用户相似度。【矩阵还是小一点好计算】</p>
+</blockquote>
+<ul>
+<li>基于物品的相似度：计算物品之间的距离。【耗时会随物品数量的增加而增加】</li>
+<li>由于物品A和物品C 相似度(相关度)很高，所以给买A的人推荐C。</li>
+</ul>
+<p>![SVD公式]({{ site.baseurl }}{{ site.images }}/MachineLearninginAction/14.SVD/使用SVD简化数据-基于物品相似度.png)</p>
+<ul>
+<li>基于用户的相似度：计算用户之间的距离。【耗时会随用户数量的增加而增加】</li>
+<li>由于用户A和用户C 相似度(相关度)很高，所以A和C是兴趣相投的人，对于C买的物品就会推荐给A。</li>
+</ul>
+<p>![SVD公式]({{ site.baseurl }}{{ site.images }}/MachineLearninginAction/14.SVD/使用SVD简化数据-基于用户相似度.png)</p>
+<blockquote>
+<p>相似度计算</p>
+</blockquote>
+<ul>
+<li>inA, inB 对应的是 列向量</li>
+<li>欧氏距离：指在m维空间中两个点之间的真实距离，或者向量的自然长度（即该点到原点的距离）。二维或三维中的欧氏距离就是两点之间的实际距离。<ul>
+<li>相似度= 1/(1+欧式距离)</li>
+<li><code>相似度= 1.0/(1.0 + la.norm(inA - inB))</code></li>
+<li>物品对越相似，它们的相似度值就越大。</li>
+</ul>
+</li>
+<li>皮尔逊相关系数：度量的是两个向量之间的相似度。<ul>
+<li>相似度= 0.5 + 0.5*corrcoef() 【皮尔逊相关系数的取值范围从 -1 到 +1，通过函数0.5 + 0.5*corrcoef()这个函数计算，把值归一化到0到1之间】</li>
+<li><code>相似度= 0.5 + 0.5 * corrcoef(inA, inB, rowvar = 0)[0][1]</code></li>
+<li>相对欧氏距离的优势：它对用户评级的量级并不敏感。</li>
+</ul>
+</li>
+<li>余弦相似度：计算的是两个向量夹角的余弦值。<ul>
+<li>余弦值 = (A·B)/(||A||·||B||) 【余弦值的取值范围也在-1到+1之间】</li>
+<li>相似度= 0.5 + 0.5*余弦值</li>
+<li><code>相似度= 0.5 + 0.5*( float(inA.T*inB) / la.norm(inA)*la.norm(inB))</code></li>
+<li>如果夹角为90度，则相似度为0；如果两个向量的方向相同，则相似度为1.0。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>推荐系统的评价</p>
+</blockquote>
+<ul>
+<li>采用交叉测试的方法。【拆分数据为训练集和测试集】</li>
+<li>推荐引擎评价的指标： 最小均方根误差(Root mean squared error, RMSE)，也称标准误差(Standard error)，就是计算均方误差的平均值然后取其平方根。<ul>
+<li>如果RMSE=1, 表示相差1个星级；如果RMSE=2.5, 表示相差2.5个星级。</li>
+</ul>
+</li>
+</ul>
+<h3 id="_5">推荐系统 原理</h3>
+<ul>
+<li>推荐系统的工作过程：给定一个用户，系统会为此用户返回N个最好的推荐菜。</li>
+<li>实现流程大致如下：<ol>
+<li>寻找用户没有评级的菜肴，即在用户-物品矩阵中的0值。</li>
+<li>在用户没有评级的所有物品中，对每个物品预计一个可能的评级分数。这就是说：我们认为用户可能会对物品的打分（这就是相似度计算的初衷）。</li>
+<li>对这些物品的评分从高到低进行排序，返回前N个物品。</li>
+</ol>
+</li>
+</ul>
+<h3 id="_6">项目案例: 餐馆菜肴推荐系统</h3>
+<h4 id="_7">项目概述</h4>
+<p><code>假如一个人在家决定外出吃饭，但是他并不知道该到哪儿去吃饭，该点什么菜。推荐系统可以帮他做到这两点。</code></p>
+<h4 id="_8">开发流程</h4>
+<blockquote>
+<p>收集 并 准备数据</p>
+</blockquote>
+<p>![SVD 矩阵]({{ site.baseurl }}{{ site.images }}/MachineLearninginAction/14.SVD/项目数据导入.jpg)</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">loadExData3</span><span class="p">():</span>
+    <span class="c1"># 利用SVD提高推荐效果，菜肴矩阵</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    行：代表人</span>
+<span class="sd">    列：代表菜肴名词</span>
+<span class="sd">    值：代表人对菜肴的评分，0表示未评分</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span><span class="p">[[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+           <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+</pre></div>
+
+<blockquote>
+<p>分析数据: 这里不做过多的讨论(当然此处可以对比不同距离之间的差别)</p>
+<p>训练算法: 通过调用 recommend() 函数进行推荐</p>
+</blockquote>
+<p>recommend() 会调用 基于物品相似度 或者是 基于SVD，得到推荐的物品评分。</p>
+<ul>
+<li>1.基于物品相似度</li>
+</ul>
+<p>![基于物品相似度]({{ site.baseurl }}{{ site.images }}/MachineLearninginAction/14.SVD/基于物品相似度.jpg)</p>
+<p>![欧式距离的计算方式]({{ site.baseurl }}{{ site.images }}/MachineLearninginAction/14.SVD/欧式距离的计算方式.jpg)</p>
+<div class="highlight"><pre><span></span><span class="c1"># 基于物品相似度的推荐引擎</span>
+<span class="k">def</span> <span class="nf">standEst</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">simMeas</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;standEst(计算某用户未评分物品中，以对该物品和其他物品评分的用户的物品相似度，然后进行综合评分)</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        dataMat         训练数据集</span>
+<span class="sd">        user            用户编号</span>
+<span class="sd">        simMeas         相似度计算方法</span>
+<span class="sd">        item            未评分的物品编号</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        ratSimTotal/simTotal     评分（0～5之间的值）</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># 得到数据集中的物品数目</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">shape</span><span class="p">(</span><span class="n">dataMat</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="c1"># 初始化两个评分值</span>
+    <span class="n">simTotal</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">ratSimTotal</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="c1"># 遍历行中的每个物品（对用户评过分的物品进行遍历，并将它与其他物品进行比较）</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">userRating</span> <span class="o">=</span> <span class="n">dataMat</span><span class="p">[</span><span class="n">user</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span>
+        <span class="c1"># 如果某个物品的评分值为0，则跳过这个物品</span>
+        <span class="k">if</span> <span class="n">userRating</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="c1"># 寻找两个用户都评级的物品</span>
+        <span class="c1"># 变量 overLap 给出的是两个物品当中已经被评分的那个元素的索引ID</span>
+        <span class="c1"># logical_and 计算x1和x2元素的真值。</span>
+        <span class="n">overLap</span> <span class="o">=</span> <span class="n">nonzero</span><span class="p">(</span><span class="n">logical_and</span><span class="p">(</span><span class="n">dataMat</span><span class="p">[:,</span> <span class="n">item</span><span class="p">]</span><span class="o">.</span><span class="n">A</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">dataMat</span><span class="p">[:,</span> <span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">A</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="c1"># 如果相似度为0，则两着没有任何重合元素，终止本次循环</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">overLap</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">similarity</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c1"># 如果存在重合的物品，则基于这些重合物重新计算相似度。</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">similarity</span> <span class="o">=</span> <span class="n">simMeas</span><span class="p">(</span><span class="n">dataMat</span><span class="p">[</span><span class="n">overLap</span><span class="p">,</span> <span class="n">item</span><span class="p">],</span> <span class="n">dataMat</span><span class="p">[</span><span class="n">overLap</span><span class="p">,</span> <span class="n">j</span><span class="p">])</span>
+        <span class="c1"># print &#39;the %d and %d similarity is : %f&#39;(iten,j,similarity)</span>
+        <span class="c1"># 相似度会不断累加，每次计算时还考虑相似度和当前用户评分的乘积</span>
+        <span class="c1"># similarity  用户相似度，   userRating 用户评分</span>
+        <span class="n">simTotal</span> <span class="o">+=</span> <span class="n">similarity</span>
+        <span class="n">ratSimTotal</span> <span class="o">+=</span> <span class="n">similarity</span> <span class="o">*</span> <span class="n">userRating</span>
+    <span class="k">if</span> <span class="n">simTotal</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="c1"># 通过除以所有的评分总和，对上述相似度评分的乘积进行归一化，使得最后评分在0~5之间，这些评分用来对预测值进行排序</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">ratSimTotal</span><span class="o">/</span><span class="n">simTotal</span>
+</pre></div>
+
+<ul>
+<li>2.基于SVD(参考地址：<a href="http://www.codeweblog.com/svd-%E7%AC%94%E8%AE%B0/">http://www.codeweblog.com/svd-%E7%AC%94%E8%AE%B0/</a>)</li>
+</ul>
+<p>![基于SVD.png]({{ site.baseurl }}{{ site.images }}/MachineLearninginAction/14.SVD/基于SVD.png)</p>
+<div class="highlight"><pre><span></span><span class="c1"># 基于SVD的评分估计</span>
+<span class="c1"># 在recommend() 中，这个函数用于替换对standEst()的调用，该函数对给定用户给定物品构建了一个评分估计值</span>
+<span class="k">def</span> <span class="nf">svdEst</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">simMeas</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;svdEst(计算某用户未评分物品中，以对该物品和其他物品评分的用户的物品相似度，然后进行综合评分)</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        dataMat         训练数据集</span>
+<span class="sd">        user            用户编号</span>
+<span class="sd">        simMeas         相似度计算方法</span>
+<span class="sd">        item            未评分的物品编号</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        ratSimTotal/simTotal     评分（0～5之间的值）</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># 物品数目</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">shape</span><span class="p">(</span><span class="n">dataMat</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="c1"># 对数据集进行SVD分解</span>
+    <span class="n">simTotal</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">ratSimTotal</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="c1"># 奇异值分解</span>
+    <span class="c1"># 在SVD分解之后，我们只利用包含了90%能量值的奇异值，这些奇异值会以NumPy数组的形式得以保存</span>
+    <span class="n">U</span><span class="p">,</span> <span class="n">Sigma</span><span class="p">,</span> <span class="n">VT</span> <span class="o">=</span> <span class="n">la</span><span class="o">.</span><span class="n">svd</span><span class="p">(</span><span class="n">dataMat</span><span class="p">)</span>
+
+    <span class="c1"># # 分析 Sigma 的长度取值</span>
+    <span class="c1"># analyse_data(Sigma, 20)</span>
+
+    <span class="c1"># 如果要进行矩阵运算，就必须要用这些奇异值构建出一个对角矩阵</span>
+    <span class="n">Sig4</span> <span class="o">=</span> <span class="n">mat</span><span class="p">(</span><span class="n">eye</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">*</span> <span class="n">Sigma</span><span class="p">[:</span> <span class="mi">4</span><span class="p">])</span>
+    <span class="c1"># 利用U矩阵将物品转换到低维空间中，构建转换后的物品(物品+4个主要的特征)</span>
+    <span class="n">xformedItems</span> <span class="o">=</span> <span class="n">dataMat</span><span class="o">.</span><span class="n">T</span> <span class="o">*</span> <span class="n">U</span><span class="p">[:,</span> <span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="o">*</span> <span class="n">Sig4</span><span class="o">.</span><span class="n">I</span>
+    <span class="c1"># 对于给定的用户，for循环在用户对应行的元素上进行遍历，</span>
+    <span class="c1"># 这和standEst()函数中的for循环的目的一样，只不过这里的相似度计算时在低维空间下进行的。</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">userRating</span> <span class="o">=</span> <span class="n">dataMat</span><span class="p">[</span><span class="n">user</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">userRating</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">j</span> <span class="o">==</span> <span class="n">item</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="c1"># 相似度的计算方法也会作为一个参数传递给该函数</span>
+        <span class="n">similarity</span> <span class="o">=</span> <span class="n">simMeas</span><span class="p">(</span><span class="n">xformedItems</span><span class="p">[</span><span class="n">item</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">xformedItems</span><span class="p">[</span><span class="n">j</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+        <span class="c1"># for 循环中加入了一条print语句，以便了解相似度计算的进展情况。如果觉得累赘，可以去掉</span>
+        <span class="k">print</span> <span class="s1">&#39;the </span><span class="si">%d</span><span class="s1"> and </span><span class="si">%d</span><span class="s1"> similarity is: </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">similarity</span><span class="p">)</span>
+        <span class="c1"># 对相似度不断累加求和</span>
+        <span class="n">simTotal</span> <span class="o">+=</span> <span class="n">similarity</span>
+        <span class="c1"># 对相似度及对应评分值的乘积求和</span>
+        <span class="n">ratSimTotal</span> <span class="o">+=</span> <span class="n">similarity</span> <span class="o">*</span> <span class="n">userRating</span>
+    <span class="k">if</span> <span class="n">simTotal</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># 计算估计评分</span>
+        <span class="k">return</span> <span class="n">ratSimTotal</span><span class="o">/</span><span class="n">simTotal</span>
+</pre></div>
+
+<p>排序获取最后的推荐结果</p>
+<div class="highlight"><pre><span></span><span class="c1"># recommend()函数，就是推荐引擎，它默认调用standEst()函数，产生了最高的N个推荐结果。</span>
+<span class="c1"># 如果不指定N的大小，则默认值为3。该函数另外的参数还包括相似度计算方法和估计方法</span>
+<span class="k">def</span> <span class="nf">recommend</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">simMeas</span><span class="o">=</span><span class="n">cosSim</span><span class="p">,</span> <span class="n">estMethod</span><span class="o">=</span><span class="n">standEst</span><span class="p">):</span>
+    <span class="c1"># 寻找未评级的物品</span>
+    <span class="c1"># 对给定的用户建立一个未评分的物品列表</span>
+    <span class="n">unratedItems</span> <span class="o">=</span> <span class="n">nonzero</span><span class="p">(</span><span class="n">dataMat</span><span class="p">[</span><span class="n">user</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">A</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="c1"># 如果不存在未评分物品，那么就退出函数</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">unratedItems</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;you rated everything&#39;</span>
+    <span class="c1"># 物品的编号和评分值</span>
+    <span class="n">itemScores</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># 在未评分物品上进行循环</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">unratedItems</span><span class="p">:</span>
+        <span class="n">estimatedScore</span> <span class="o">=</span> <span class="n">estMethod</span><span class="p">(</span><span class="n">dataMat</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">simMeas</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>
+        <span class="c1"># 寻找前N个未评级物品，调用standEst()来产生该物品的预测得分，该物品的编号和估计值会放在一个元素列表itemScores中</span>
+        <span class="n">itemScores</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">item</span><span class="p">,</span> <span class="n">estimatedScore</span><span class="p">))</span>
+        <span class="c1"># 按照估计得分，对该列表进行排序并返回。列表逆排序，第一个值就是最大值</span>
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">itemScores</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">jj</span><span class="p">:</span> <span class="n">jj</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)[:</span> <span class="n">N</span><span class="p">]</span>
+</pre></div>
+
+<blockquote>
+<p>测试 和 项目调用，可直接参考我们的代码</p>
+</blockquote>
+<p><a href="https://github.com/apachecn/MachineLearning/blob/master/src/python/14.SVD/svdRecommend.py">完整代码地址</a>: <a href="https://github.com/apachecn/MachineLearning/blob/master/src/python/14.SVD/svdRecommend.py">https://github.com/apachecn/MachineLearning/blob/master/src/python/14.SVD/svdRecommend.py</a></p>
+<h4 id="_9">要点补充</h4>
+<blockquote>
+<p>基于内容(content-based)的推荐</p>
+</blockquote>
+<ol>
+<li>通过各种标签来标记菜肴</li>
+<li>将这些属性作为相似度计算所需要的数据</li>
+<li>这就是：基于内容的推荐。</li>
+</ol>
+<blockquote>
+<p>构建推荐引擎面临的挑战</p>
+</blockquote>
+<p>问题
+* 1）在大规模的数据集上，SVD分解会降低程序的速度
+* 2）存在其他很多规模扩展性的挑战性问题，比如矩阵的表示方法和计算相似度得分消耗资源。
+* 3）如何在缺乏数据时给出好的推荐-称为冷启动【简单说：用户不会喜欢一个无效的物品，而用户不喜欢的物品又无效】</p>
+<p>建议
+* 1）在大型系统中，SVD分解(可以在程序调入时运行一次)每天运行一次或者其频率更低，并且还要离线运行。
+* 2）在实际中，另一个普遍的做法就是离线计算并保存相似度得分。(物品相似度可能被用户重复的调用)
+* 3）冷启动问题，解决方案就是将推荐看成是搜索问题，通过各种标签／属性特征进行<code>基于内容的推荐</code>。</p>
+<h3 id="svd_5">项目案例: 基于 SVD 的图像压缩</h3>
+<blockquote>
+<p>收集 并 准备数据</p>
+</blockquote>
+<p>将文本数据转化为矩阵</p>
+<div class="highlight"><pre><span></span><span class="c1"># 加载并转换数据</span>
+<span class="k">def</span> <span class="nf">imgLoadData</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="n">myl</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1"># 打开文本文件，并从文件以数组方式读入字符</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
+        <span class="n">newRow</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">32</span><span class="p">):</span>
+            <span class="n">newRow</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+        <span class="n">myl</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">newRow</span><span class="p">)</span>
+    <span class="c1"># 矩阵调入后，就可以在屏幕上输出该矩阵</span>
+    <span class="n">myMat</span> <span class="o">=</span> <span class="n">mat</span><span class="p">(</span><span class="n">myl</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">myMat</span>
+</pre></div>
+
+<blockquote>
+<p>分析数据: 分析 Sigma 的长度个数</p>
+</blockquote>
+<p>通常保留矩阵 80% ～ 90% 的能量，就可以得到重要的特征并去除噪声。</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">analyse_data</span><span class="p">(</span><span class="n">Sigma</span><span class="p">,</span> <span class="n">loopNum</span><span class="o">=</span><span class="mi">20</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;analyse_data(分析 Sigma 的长度取值)</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        Sigma         Sigma的值</span>
+<span class="sd">        loopNum       循环次数</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># 总方差的集合（总能量值）</span>
+    <span class="n">Sig2</span> <span class="o">=</span> <span class="n">Sigma</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">SigmaSum</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">Sig2</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">loopNum</span><span class="p">):</span>
+        <span class="n">SigmaI</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">Sig2</span><span class="p">[:</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        根据自己的业务情况，就行处理，设置对应的 Singma 次数</span>
+
+<span class="sd">        通常保留矩阵 80% ～ 90% 的能量，就可以得到重要的特征并取出噪声。</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">print</span> <span class="s1">&#39;主成分：</span><span class="si">%s</span><span class="s1">, 方差占比：</span><span class="si">%s%%</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;2.0f&#39;</span><span class="p">),</span> <span class="n">format</span><span class="p">(</span><span class="n">SigmaI</span><span class="o">/</span><span class="n">SigmaSum</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span> <span class="s1">&#39;4.2f&#39;</span><span class="p">))</span>
+</pre></div>
+
+<blockquote>
+<p>使用算法: 对比使用 SVD 前后的数据差异对比，对于存储大家可以试着写写</p>
+</blockquote>
+<p>例如：<code>32*32=1024 =&gt; 32*2+2*1+32*2=130</code>(2*1表示去掉了除对角线的0), 几乎获得了10倍的压缩比。</p>
+<div class="highlight"><pre><span></span><span class="c1"># 打印矩阵</span>
+<span class="k">def</span> <span class="nf">printMat</span><span class="p">(</span><span class="n">inMat</span><span class="p">,</span> <span class="n">thresh</span><span class="o">=</span><span class="mf">0.8</span><span class="p">):</span>
+    <span class="c1"># 由于矩阵保护了浮点数，因此定义浅色和深色，遍历所有矩阵元素，当元素大于阀值时打印1，否则打印0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">32</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">32</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">float</span><span class="p">(</span><span class="n">inMat</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">k</span><span class="p">])</span> <span class="o">&gt;</span> <span class="n">thresh</span><span class="p">:</span>
+                <span class="k">print</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">print</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="k">print</span> <span class="s1">&#39;&#39;</span>
+
+
+<span class="c1"># 实现图像压缩，允许基于任意给定的奇异值数目来重构图像</span>
+<span class="k">def</span> <span class="nf">imgCompress</span><span class="p">(</span><span class="n">numSV</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">thresh</span><span class="o">=</span><span class="mf">0.8</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;imgCompress( )</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        numSV       Sigma长度   </span>
+<span class="sd">        thresh      判断的阈值</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># 构建一个列表</span>
+    <span class="n">myMat</span> <span class="o">=</span> <span class="n">imgLoadData</span><span class="p">(</span><span class="s1">&#39;input/14.SVD/0_5.txt&#39;</span><span class="p">)</span>
+
+    <span class="k">print</span> <span class="s2">&quot;****original matrix****&quot;</span>
+    <span class="c1"># 对原始图像进行SVD分解并重构图像e</span>
+    <span class="n">printMat</span><span class="p">(</span><span class="n">myMat</span><span class="p">,</span> <span class="n">thresh</span><span class="p">)</span>
+
+    <span class="c1"># 通过Sigma 重新构成SigRecom来实现</span>
+    <span class="c1"># Sigma是一个对角矩阵，因此需要建立一个全0矩阵，然后将前面的那些奇异值填充到对角线上。</span>
+    <span class="n">U</span><span class="p">,</span> <span class="n">Sigma</span><span class="p">,</span> <span class="n">VT</span> <span class="o">=</span> <span class="n">la</span><span class="o">.</span><span class="n">svd</span><span class="p">(</span><span class="n">myMat</span><span class="p">)</span>
+    <span class="c1"># SigRecon = mat(zeros((numSV, numSV)))</span>
+    <span class="c1"># for k in range(numSV):</span>
+    <span class="c1">#     SigRecon[k, k] = Sigma[k]</span>
+
+    <span class="c1"># 分析插入的 Sigma 长度</span>
+    <span class="n">analyse_data</span><span class="p">(</span><span class="n">Sigma</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+
+    <span class="n">SigRecon</span> <span class="o">=</span> <span class="n">mat</span><span class="p">(</span><span class="n">eye</span><span class="p">(</span><span class="n">numSV</span><span class="p">)</span> <span class="o">*</span> <span class="n">Sigma</span><span class="p">[:</span> <span class="n">numSV</span><span class="p">])</span>
+    <span class="n">reconMat</span> <span class="o">=</span> <span class="n">U</span><span class="p">[:,</span> <span class="p">:</span><span class="n">numSV</span><span class="p">]</span> <span class="o">*</span> <span class="n">SigRecon</span> <span class="o">*</span> <span class="n">VT</span><span class="p">[:</span><span class="n">numSV</span><span class="p">,</span> <span class="p">:]</span>
+    <span class="k">print</span> <span class="s2">&quot;****reconstructed matrix using </span><span class="si">%d</span><span class="s2"> singular values *****&quot;</span> <span class="o">%</span> <span class="n">numSV</span>
+    <span class="n">printMat</span><span class="p">(</span><span class="n">reconMat</span><span class="p">,</span> <span class="n">thresh</span><span class="p">)</span>
+</pre></div>
+
+<p><a href="https://github.com/apachecn/MachineLearning/blob/master/src/python/14.SVD/svdRecommend.py">完整代码地址</a>: <a href="https://github.com/apachecn/MachineLearning/blob/master/src/python/14.SVD/svdRecommend.py">https://github.com/apachecn/MachineLearning/blob/master/src/python/14.SVD/svdRecommend.py</a></p>
+<hr />
+<ul>
+<li><strong>作者：<a href="http://cwiki.apachecn.org/display/~jiangzhonglian">片刻</a> <a href="http://cwiki.apachecn.org/display/~lihuisong">1988</a></strong></li>
+<li><a href="https://github.com/apachecn/MachineLearning">GitHub地址</a>: <a href="https://github.com/apachecn/MachineLearning">https://github.com/apachecn/MachineLearning</a></li>
+<li><strong>版权声明：欢迎转载学习 =&gt; 请标注信息来源于 <a href="http://www.apachecn.org/">ApacheCN</a></strong></li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '../..';</script>
+        <script src="../../js/base.js"></script>
+        <script src="../../javascripts/extra.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="../../search/require.js"></script>
+        <script src="../../search/search.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>&larr;</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>&rarr;</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </body>
+</html>
