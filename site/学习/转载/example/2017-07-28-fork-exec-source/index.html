@@ -1,0 +1,2528 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Nothing is impossible">
+      
+      
+        <link rel="canonical" href="https://1007530194.github.io/Diary/学习/转载/example/2017-07-28-fork-exec-source/">
+      
+      
+        <meta name="author" content="NiuLiangtao">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.0">
+    
+    
+      
+        <title>2017 07 28 fork exec source - Blog of NiuLiangtao</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.78aab2dc.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#fork" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://1007530194.github.io/Diary/" title="Blog of NiuLiangtao" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Blog of NiuLiangtao
+              </span>
+              <span class="md-header-nav__topic">
+                2017 07 28 fork exec source
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/1007530194/Diary" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      1007530194/Diary
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../../.." title="Home" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../AboutMe/" title="Home" class="md-tabs__link">
+          Home
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../书籍/机器学习实战/00naive-bayes-discuss/" title="书籍" class="md-tabs__link">
+          书籍
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../tensorflow/如何选择优化器 optimizer/" title="学习" class="md-tabs__link">
+          学习
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../工具/About/" title="工具" class="md-tabs__link">
+          工具
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../日常/test/testtest/" title="日常" class="md-tabs__link">
+          日常
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    Blog of NiuLiangtao
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/1007530194/Diary" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      1007530194/Diary
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Home
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Home
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../AboutMe/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../要做的/" title="要做的" class="md-nav__link">
+      要做的
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      书籍
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        书籍
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      机器学习实战
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        机器学习实战
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/00naive-bayes-discuss/" title="naive-bayes-discuss" class="md-nav__link">
+      naive-bayes-discuss
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/01.机器学习基础/" title="1.机器学习基础" class="md-nav__link">
+      1.机器学习基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/02.k-近邻算法/" title="2.k-近邻算法" class="md-nav__link">
+      2.k-近邻算法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/03.决策树/" title="3.决策树" class="md-nav__link">
+      3.决策树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/04.朴素贝叶斯/" title="4.朴素贝叶斯" class="md-nav__link">
+      4.朴素贝叶斯
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/05.Logistic回归/" title="5.Logistic回归" class="md-nav__link">
+      5.Logistic回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/06.0.支持向量机/" title="6.支持向量机" class="md-nav__link">
+      6.支持向量机
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/06.1.支持向量机的几个通俗理解/" title="6.1.支持向量机的几个通俗理解" class="md-nav__link">
+      6.1.支持向量机的几个通俗理解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/07.集成方法-随机森林和AdaBoost/" title="7.集成方法-随机森林和AdaBoost" class="md-nav__link">
+      7.集成方法-随机森林和AdaBoost
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/08.预测数值型数据-回归/" title="8.预测数值型数据：回归" class="md-nav__link">
+      8.预测数值型数据：回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/09.树回归/" title="9.树回归" class="md-nav__link">
+      9.树回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/10.k-means聚类/" title="10.k-means聚类" class="md-nav__link">
+      10.k-means聚类
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/11.使用Apriori算法进行关联分析/" title="11.使用Apriori算法进行关联分析" class="md-nav__link">
+      11.使用Apriori算法进行关联分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/12.使用FP-growth算法来高效发现频繁项集/" title="12.使用FP-growth算法来高效发现频繁项集" class="md-nav__link">
+      12.使用FP-growth算法来高效发现频繁项集
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/13.利用PCA来简化数据/" title="13.利用PCA来简化数据" class="md-nav__link">
+      13.利用PCA来简化数据
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/14.利用SVD简化数据/" title="14.利用SVD简化数据" class="md-nav__link">
+      14.利用SVD简化数据
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/15.大数据与MapReduce/" title="15.大数据与MapReduce" class="md-nav__link">
+      15.大数据与MapReduce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/16.推荐系统/" title="16.推荐系统" class="md-nav__link">
+      16.推荐系统
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      深度学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        深度学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/深度学习/DeepLearning/" title="深度学习中文版" class="md-nav__link">
+      深度学习中文版
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      tensorflow
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        tensorflow
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tensorflow/如何选择优化器 optimizer/" title="如何选择优化器 optimizer" class="md-nav__link">
+      如何选择优化器 optimizer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      深度学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        深度学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/10分钟上手Pandas/" title="10分钟上手Pandas" class="md-nav__link">
+      10分钟上手Pandas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
+      主成分分析 (2)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/主成分分析/" title="主成分分析" class="md-nav__link">
+      主成分分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/最小二乘法/" title="最小二乘法" class="md-nav__link">
+      最小二乘法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
+      矩阵分解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
+      矩阵求导
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" checked>
+    
+    <label class="md-nav__link" for="nav-4-3">
+      转载
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        转载
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-1" type="checkbox" id="nav-4-3-1">
+    
+    <label class="md-nav__link" for="nav-4-3-1">
+      cs231n-ch
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-1">
+        cs231n-ch
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/2018-02-21-ch-assignment2_google_cloud/" title="Google Cloud Tutorial Part 2 (with GPUs)" class="md-nav__link">
+      Google Cloud Tutorial Part 2 (with GPUs)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/2018-02-21-ch-aws-tutorial/" title="aws-tutorial" class="md-nav__link">
+      aws-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/2018-02-21-ch-classification/" title="classification" class="md-nav__link">
+      classification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/2018-02-21-ch-convnet-tips/" title="convnet-tips" class="md-nav__link">
+      convnet-tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/2018-02-21-ch-convolutional-networks/" title="convolutional-networks" class="md-nav__link">
+      convolutional-networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/2018-02-21-ch-google_cloud_tutorial/" title="Google Cloud Tutorial gce-tutorial" class="md-nav__link">
+      Google Cloud Tutorial gce-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/2018-02-21-ch-ipython-tutorial/" title="IPython Tutorial ipython-tutorial" class="md-nav__link">
+      IPython Tutorial ipython-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/2018-02-21-ch-linear-classify/" title="线性分类" class="md-nav__link">
+      线性分类
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/2018-02-21-ch-neural-networks-1/" title="neural-networks-1" class="md-nav__link">
+      neural-networks-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/2018-02-21-ch-neural-networks-2/" title="neural-networks-2" class="md-nav__link">
+      neural-networks-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/2018-02-21-ch-neural-networks-3/" title="neural-networks-3" class="md-nav__link">
+      neural-networks-3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/2018-02-21-ch-neural-networks-case-study/" title="neural-networks-case-study" class="md-nav__link">
+      neural-networks-case-study
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/2018-02-21-ch-optimization-1/" title="optimization-1" class="md-nav__link">
+      optimization-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/2018-02-21-ch-optimization-2/" title="optimization-2" class="md-nav__link">
+      optimization-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/2018-02-21-ch-overview/" title="Overview of Computer Vision and Visual Recognition overview" class="md-nav__link">
+      Overview of Computer Vision and Visual Recognition overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/2018-02-21-ch-poster/" title="CS231n Poster Session poster-session" class="md-nav__link">
+      CS231n Poster Session poster-session
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/2018-02-21-ch-python-numpy-tutorial/" title="Python Numpy Tutorial python-numpy-tutorial" class="md-nav__link">
+      Python Numpy Tutorial python-numpy-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/2018-02-21-ch-Readme/" title="2018 02 21 ch Readme" class="md-nav__link">
+      2018 02 21 ch Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/2018-02-21-ch-terminal-tutorial/" title="Terminal.com Tutorial terminal-tutorial" class="md-nav__link">
+      Terminal.com Tutorial terminal-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/2018-02-21-ch-transfer-learning/" title="transfer-learning" class="md-nav__link">
+      transfer-learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/2018-02-21-ch-understanding-cnn/" title="understanding-cnn" class="md-nav__link">
+      understanding-cnn
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-2" type="checkbox" id="nav-4-3-2">
+    
+    <label class="md-nav__link" for="nav-4-3-2">
+      cs231n-en
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-2">
+        cs231n-en
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-assignment2_google_cloud/" title="Google Cloud Tutorial Part 2 (with GPUs)" class="md-nav__link">
+      Google Cloud Tutorial Part 2 (with GPUs)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-aws-tutorial/" title="aws-tutorial" class="md-nav__link">
+      aws-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-classification/" title="classification" class="md-nav__link">
+      classification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-convnet-tips/" title="convnet-tips" class="md-nav__link">
+      convnet-tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-convolutional-networks/" title="convolutional-networks" class="md-nav__link">
+      convolutional-networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-google_cloud_tutorial/" title="Google Cloud Tutorial" class="md-nav__link">
+      Google Cloud Tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-ipython-tutorial/" title="IPython Tutorial ipython-tutorial" class="md-nav__link">
+      IPython Tutorial ipython-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-linear-classify/" title="linear-classify" class="md-nav__link">
+      linear-classify
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-neural-networks-1/" title="neural-networks-1" class="md-nav__link">
+      neural-networks-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-neural-networks-2/" title="neural-networks-2" class="md-nav__link">
+      neural-networks-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-neural-networks-3/" title="neural-networks-3" class="md-nav__link">
+      neural-networks-3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-neural-networks-case-study/" title="neural-networks-case-study" class="md-nav__link">
+      neural-networks-case-study
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-optimization-1/" title="optimization-1" class="md-nav__link">
+      optimization-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-optimization-2/" title="optimization-2" class="md-nav__link">
+      optimization-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-overview/" title="Overview of Computer Vision and Visual Recognition overview" class="md-nav__link">
+      Overview of Computer Vision and Visual Recognition overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-poster/" title="CS231n Poster Session poster-session" class="md-nav__link">
+      CS231n Poster Session poster-session
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-python-numpy-tutorial/" title="Python Numpy Tutorial python-numpy-tutorial" class="md-nav__link">
+      Python Numpy Tutorial python-numpy-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-Readme/" title="2018 02 21 en Readme" class="md-nav__link">
+      2018 02 21 en Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-terminal-tutorial/" title="Terminal.com Tutorial terminal-tutorial" class="md-nav__link">
+      Terminal.com Tutorial terminal-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-transfer-learning/" title="transfer-learning" class="md-nav__link">
+      transfer-learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-understanding-cnn/" title="understanding-cnn" class="md-nav__link">
+      understanding-cnn
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-3" type="checkbox" id="nav-4-3-3" checked>
+    
+    <label class="md-nav__link" for="nav-4-3-3">
+      example
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-3">
+        example
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2016-01-30-quick-latex/" title="2016 01 30 quick latex" class="md-nav__link">
+      2016 01 30 quick latex
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2016-04-15-dive-into-gradient-decent/" title="理解梯度下降" class="md-nav__link">
+      理解梯度下降
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2017-01-01-perceptron/" title=""感知器"" class="md-nav__link">
+      "感知器"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2017-04-23-bias-variance/" title="2017 04 23 bias variance" class="md-nav__link">
+      2017 04 23 bias variance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2017-05-12-nosql-in-python/" title="2017 05 12 nosql in python" class="md-nav__link">
+      2017 05 12 nosql in python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2017-05-23-a-web-crawer-with-a-asyncio-coroutines-1/" title="2017 05 23 a web crawer with a asyncio coroutines 1" class="md-nav__link">
+      2017 05 23 a web crawer with a asyncio coroutines 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2017-06-10-a-web-crawer-with-a-asyncio-coroutines-2/" title="2017 06 10 a web crawer with a asyncio coroutines 2" class="md-nav__link">
+      2017 06 10 a web crawer with a asyncio coroutines 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        2017 07 28 fork exec source
+      </label>
+    
+    <a href="./" title="2017 07 28 fork exec source" class="md-nav__link md-nav__link--active">
+      2017 07 28 fork exec source
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fork" title="fork" class="md-nav__link">
+    fork
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exec" title="exec" class="md-nav__link">
+    exec
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source" title="source" class="md-nav__link">
+    source
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fork_1" title="fork" class="md-nav__link">
+    fork
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exec_1" title="exec" class="md-nav__link">
+    exec
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source_1" title="source" class="md-nav__link">
+    source
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2017-07-30-bitcoin-explained-1/" title="2017 07 30 bitcoin explained 1" class="md-nav__link">
+      2017 07 30 bitcoin explained 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2017-08-18-tendermint/" title="2017 08 18 tendermint" class="md-nav__link">
+      2017 08 18 tendermint
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2017-09-25-ethereum-ultimate-guide/" title="2017 09 25 ethereum ultimate guide" class="md-nav__link">
+      2017 09 25 ethereum ultimate guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2018-01-13-latex语法/" title="2018 01 13 latex语法" class="md-nav__link">
+      2018 01 13 latex语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2018-10-01-latex语法/" title="2018 10 01 latex语法" class="md-nav__link">
+      2018 10 01 latex语法
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-4" type="checkbox" id="nav-4-3-4">
+    
+    <label class="md-nav__link" for="nav-4-3-4">
+      example2
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-4">
+        example2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2015-02-12-create-my-blog-with-jekyll/" title="2015 02 12 create my blog with jekyll" class="md-nav__link">
+      2015 02 12 create my blog with jekyll
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2015-03-21-teach-girlfriend-html-css/" title="2015 03 21 teach girlfriend html css" class="md-nav__link">
+      2015 03 21 teach girlfriend html css
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2015-03-26-sublimeLinter/" title="2015 03 26 sublimeLinter" class="md-nav__link">
+      2015 03 26 sublimeLinter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2015-04-06-arrays-similar/" title="2015 04 06 arrays similar" class="md-nav__link">
+      2015 04 06 arrays similar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2015-04-12-Syncing-a-fork/" title="2015 04 12 Syncing a fork" class="md-nav__link">
+      2015 04 12 Syncing a fork
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2015-04-15-baidu-ife-1/" title="2015 04 15 baidu ife 1" class="md-nav__link">
+      2015 04 15 baidu ife 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2015-04-22-baidu-ife-2-javascript/" title="2015 04 22 baidu ife 2 javascript" class="md-nav__link">
+      2015 04 22 baidu ife 2 javascript
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2015-05-18-front-end-tools/" title="2015 05 18 front end tools" class="md-nav__link">
+      2015 05 18 front end tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2015-05-20-scope/" title="2015 05 20 scope" class="md-nav__link">
+      2015 05 20 scope
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2015-06-11-JavaScript-function/" title="2015 06 11 JavaScript function" class="md-nav__link">
+      2015 06 11 JavaScript function
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2015-06-12-JavaScript-this/" title="2015 06 12 JavaScript this" class="md-nav__link">
+      2015 06 12 JavaScript this
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2015-06-14-JavaScript-closure/" title="2015 06 14 JavaScript closure" class="md-nav__link">
+      2015 06 14 JavaScript closure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2015-06-15-JavaScript-Object-Oriented/" title="2015 06 15 JavaScript Object Oriented" class="md-nav__link">
+      2015 06 15 JavaScript Object Oriented
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2015-06-17-web-app/" title="2015 06 17 web app" class="md-nav__link">
+      2015 06 17 web app
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2015-06-18-weinre/" title="2015 06 18 weinre" class="md-nav__link">
+      2015 06 18 weinre
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2015-07-09-JavaScript-Net/" title="2015 07 09 JavaScript Net" class="md-nav__link">
+      2015 07 09 JavaScript Net
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2015-07-24-low-IE-click-empty-block-bug/" title="2015 07 24 low IE click empty block bug" class="md-nav__link">
+      2015 07 24 low IE click empty block bug
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2015-12-31-History-API/" title="2015 12 31 History API" class="md-nav__link">
+      2015 12 31 History API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2016-03-12-jekyll-theme-version-2.0/" title="2016 03 12 jekyll theme version 2.0" class="md-nav__link">
+      2016 03 12 jekyll theme version 2.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2016-05-06-regular-expression-group/" title="2016 05 06 regular expression group" class="md-nav__link">
+      2016 05 06 regular expression group
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2016-06-07-JavaScript-good-parts-note1/" title="2016 06 07 JavaScript good parts note1" class="md-nav__link">
+      2016 06 07 JavaScript good parts note1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2016-06-08-JavaScript-good-parts-note2/" title="2016 06 08 JavaScript good parts note2" class="md-nav__link">
+      2016 06 08 JavaScript good parts note2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2016-06-10-JavaScript-good-parts-note3/" title="2016 06 10 JavaScript good parts note3" class="md-nav__link">
+      2016 06 10 JavaScript good parts note3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2016-06-14-how-to-use-babel/" title="2016 06 14 how to use babel" class="md-nav__link">
+      2016 06 14 how to use babel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2016-07-07-git-clone-not-master-branch/" title="2016 07 07 git clone not master branch" class="md-nav__link">
+      2016 07 07 git clone not master branch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2016-10-16-shuffle-algorithm/" title="2016 10 16 shuffle algorithm" class="md-nav__link">
+      2016 10 16 shuffle algorithm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2016-11-22-js-create-file-and-download/" title="2016 11 22 js create file and download" class="md-nav__link">
+      2016 11 22 js create file and download
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example2/2016-11-25-how-to-write-a-count-down/" title="2016 11 25 how to write a count down" class="md-nav__link">
+      2016 11 25 how to write a count down
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../工具/About/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../工具/Cheatsheet/" title="Cheatsheet" class="md-nav__link">
+      Cheatsheet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="" title="文章" class="md-nav__link">
+      文章
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      日常
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        日常
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1">
+    
+    <label class="md-nav__link" for="nav-7-1">
+      test
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-1">
+        test
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../日常/test/testtest/" title="Testtest" class="md-nav__link">
+      Testtest
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2">
+    
+    <label class="md-nav__link" for="nav-7-2">
+      常用
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-2">
+        常用
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../日常/常用/latex语法/" title="Latex语法" class="md-nav__link">
+      Latex语法
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      常用工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        常用工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../日常/常用工具/10分钟上手Pandas/" title="10分钟上手Pandas" class="md-nav__link">
+      10分钟上手Pandas
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fork" title="fork" class="md-nav__link">
+    fork
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exec" title="exec" class="md-nav__link">
+    exec
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source" title="source" class="md-nav__link">
+    source
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fork_1" title="fork" class="md-nav__link">
+    fork
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exec_1" title="exec" class="md-nav__link">
+    exec
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source_1" title="source" class="md-nav__link">
+    source
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>2017 07 28 fork exec source</h1>
+                
+                <hr />
+<ul>
+<li>content
+{:toc}</li>
+</ul>
+<p>先来说一下主要以下有几种方式：</p>
+<ul>
+<li><strong>fork</strong>: 如果脚本有执行权限的话，<code>path/to/foo.sh</code>。如果没有，<code>sh path/to/foo.sh</code>。</li>
+<li><strong>exec</strong>: <code>exec path/to/foo.sh</code></li>
+<li><strong>source</strong>: <code>source path/to/foo.sh</code></li>
+</ul>
+<h3 id="fork">fork<a class="headerlink" href="#fork" title="Permanent link">&para;</a></h3>
+<p><code>fork</code> 是最普通的, 就是直接在脚本里面用 <code>path/to/foo.sh</code> 来调用
+ foo.sh 这个脚本，比如如果是 foo.sh 在当前目录下，就是 <code>./foo.sh</code>。运行的时候 terminal 会新开一个子 Shell 执行脚本 foo.sh，子 Shell 执行的时候, 父 Shell 还在。子 Shell 执行完毕后返回父 Shell。 子 Shell 从父 Shell 继承环境变量，但是子 Shell 中的环境变量不会带回父 Shell。</p>
+<h3 id="exec">exec<a class="headerlink" href="#exec" title="Permanent link">&para;</a></h3>
+<p><code>exec</code> 与 <code>fork</code> 不同，不需要新开一个子 Shell 来执行被调用的脚本.  被调用的脚本与父脚本在同一个 Shell 内执行。但是使用 <code>exec</code> 调用一个新脚本以后, 父脚本中 <code>exec</code> 行之后的内容就不会再执行了。这是 <code>exec</code> 和 <code>source</code> 的区别.</p>
+<h3 id="source">source<a class="headerlink" href="#source" title="Permanent link">&para;</a></h3>
+<p>与 <code>fork</code> 的区别是不新开一个子 Shell 来执行被调用的脚本，而是在同一个 Shell 中执行. 所以被调用的脚本中声明的变量和环境变量, 都可以在主脚本中进行获取和使用。</p>
+<p>其实从命名上可以感知到其中的细微区别，下面通过两个脚本来体会三种调用方式的不同:</p>
+<p>第一个脚本，我们命名为 <code>1.sh</code>:</p>
+<div class="codehilite"><pre><span></span><span class="ch">#!/usr/bin/env bash</span>
+
+<span class="nv">A</span><span class="o">=</span><span class="m">1</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;before exec/source/fork: PID for 1.sh = </span><span class="nv">$$</span><span class="s2">&quot;</span>
+
+<span class="nb">export</span> A
+<span class="nb">echo</span> <span class="s2">&quot;In 1.sh: variable A=</span><span class="nv">$A</span><span class="s2">&quot;</span>
+
+<span class="k">case</span> <span class="nv">$1</span> in
+        --exec<span class="o">)</span>
+                <span class="nb">echo</span> -e <span class="s2">&quot;==&gt; using exec…\n&quot;</span>
+                <span class="nb">exec</span> ./2.sh <span class="p">;;</span>
+        --source<span class="o">)</span>
+                <span class="nb">echo</span> -e <span class="s2">&quot;==&gt; using source…\n&quot;</span>
+                . ./2.sh <span class="p">;;</span>
+        *<span class="o">)</span>
+                <span class="nb">echo</span> -e <span class="s2">&quot;==&gt; using fork by default…\n&quot;</span>
+                ./2.sh <span class="p">;;</span>
+<span class="k">esac</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;after exec/source/fork: PID for 1.sh = </span><span class="nv">$$</span><span class="s2">&quot;</span>
+<span class="nb">echo</span> -e <span class="s2">&quot;In 1.sh: variable A=</span><span class="nv">$A</span><span class="s2">\n&quot;</span>
+</pre></div>
+
+<p>第二个脚本，我们命名为 <code>2.sh</code>：</p>
+<div class="codehilite"><pre><span></span><span class="ch">#!/usr/bin/env bash</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;PID for 2.sh = </span><span class="nv">$$</span><span class="s2">&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;In 2.sh get variable A=</span><span class="nv">$A</span><span class="s2"> from 1.sh&quot;</span>
+
+<span class="nv">A</span><span class="o">=</span><span class="m">2</span>
+<span class="nb">export</span> A
+
+<span class="nb">echo</span> -e <span class="s2">&quot;In 2.sh: variable A=</span><span class="nv">$A</span><span class="s2">\n&quot;</span>
+</pre></div>
+
+<p>注：这两个脚本中的参数 <code>$$</code> 用于返回脚本的 PID , 也就是进程 ID。这个例子是想通过显示 PID 判断两个脚本是分开执行还是同一进程里执行，也就是是否有新开子 Shell。当执行完脚本 <code>2.sh</code> 后，脚本 <code>1.sh</code> 后面的内容是否还执行。</p>
+<p><code>chmod +x 1.sh 2.sh</code> 给两个脚本加上可执行权限后执行情况：</p>
+<h3 id="fork_1">fork<a class="headerlink" href="#fork_1" title="Permanent link">&para;</a></h3>
+<p>![fork]({{ site.baseurl }}{{ site.images }}/posts/fork.png)</p>
+<p><code>fork</code> 方式可以看出，两个脚本都执行了，运行顺序为1-2-1，从两者的 PID 值(1.sh PID=82266, 2.sh PID=82267)，可以看出，两个脚本是分成两个进程运行的。</p>
+<h3 id="exec_1">exec<a class="headerlink" href="#exec_1" title="Permanent link">&para;</a></h3>
+<p>![exec]({{ site.baseurl }}{{ site.images }}/posts/exec.png)</p>
+<p><code>exec</code> 方式运行的结果是，2.sh 执行完成后，不再回到 1.sh。运行顺序为 1-2。从 PID 值看，两者是在同一进程 PID=82287 中运行的。</p>
+<h3 id="source_1">source<a class="headerlink" href="#source_1" title="Permanent link">&para;</a></h3>
+<p>![source]({{ site.baseurl }}{{ site.images }}/posts/source.png)</p>
+<p>source方式的结果是两者在同一进程里运行。该方式相当于把两个脚本先合并再运行。</p>
+<table>
+<thead>
+<tr>
+<th align="center">Command</th>
+<th align="center">Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">fork</td>
+<td align="center">新开一个子 Shell 执行，子 Shell 可以从父 Shell 继承环境变量，但是子 Shell 中的环境变量不会带回给父 Shell。</td>
+</tr>
+<tr>
+<td align="center">exec</td>
+<td align="center">在同一个 Shell 内执行，但是父脚本中 <code>exec</code> 行之后的内容就不会再执行了</td>
+</tr>
+<tr>
+<td align="center">source</td>
+<td align="center">在同一个 Shell 中执行，在被调用的脚本中声明的变量和环境变量, 都可以在主脚本中进行获取和使用，相当于合并两个脚本在执行。</td>
+</tr>
+</tbody>
+</table>
+<p>参考：
+- <a href="http://www.361way.com/shell-process/1126.html">在shell脚本中调用另一个脚本的三种不同方法(fork, exec, source)</a></p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../2017-06-10-a-web-crawer-with-a-asyncio-coroutines-2/" title="2017 06 10 a web crawer with a asyncio coroutines 2" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                2017 06 10 a web crawer with a asyncio coroutines 2
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../2017-07-30-bitcoin-explained-1/" title="2017 07 30 bitcoin explained 1" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                2017 07 30 bitcoin explained 1
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2018 Martin Donath
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="http://struct.cc" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/1007530194" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/1007530194" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/1007530194" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.189d7058.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../../../.."}})</script>
+      
+        <script src="../../../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

@@ -1,0 +1,4082 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Nothing is impossible">
+      
+      
+        <link rel="canonical" href="https://1007530194.github.io/Diary/学习/深度学习/10分钟上手Pandas/">
+      
+      
+        <meta name="author" content="NiuLiangtao">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.0">
+    
+    
+      
+        <title>10分钟上手Pandas</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.78aab2dc.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://1007530194.github.io/Diary/" title="Blog of NiuLiangtao" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Blog of NiuLiangtao
+              </span>
+              <span class="md-header-nav__topic">
+                10分钟上手Pandas
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/1007530194/Diary" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      1007530194/Diary
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../.." title="Home" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../AboutMe/" title="Home" class="md-tabs__link">
+          Home
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../书籍/机器学习实战/00naive-bayes-discuss/" title="书籍" class="md-tabs__link">
+          书籍
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../tensorflow/如何选择优化器 optimizer/" title="学习" class="md-tabs__link">
+          学习
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../工具/About/" title="工具" class="md-tabs__link">
+          工具
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../日常/test/testtest/" title="日常" class="md-tabs__link">
+          日常
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    Blog of NiuLiangtao
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/1007530194/Diary" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      1007530194/Diary
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Home
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Home
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../AboutMe/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../要做的/" title="要做的" class="md-nav__link">
+      要做的
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      书籍
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        书籍
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      机器学习实战
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        机器学习实战
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/00naive-bayes-discuss/" title="naive-bayes-discuss" class="md-nav__link">
+      naive-bayes-discuss
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/01.机器学习基础/" title="1.机器学习基础" class="md-nav__link">
+      1.机器学习基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/02.k-近邻算法/" title="2.k-近邻算法" class="md-nav__link">
+      2.k-近邻算法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/03.决策树/" title="3.决策树" class="md-nav__link">
+      3.决策树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/04.朴素贝叶斯/" title="4.朴素贝叶斯" class="md-nav__link">
+      4.朴素贝叶斯
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/05.Logistic回归/" title="5.Logistic回归" class="md-nav__link">
+      5.Logistic回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/06.0.支持向量机/" title="6.支持向量机" class="md-nav__link">
+      6.支持向量机
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/06.1.支持向量机的几个通俗理解/" title="6.1.支持向量机的几个通俗理解" class="md-nav__link">
+      6.1.支持向量机的几个通俗理解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/07.集成方法-随机森林和AdaBoost/" title="7.集成方法-随机森林和AdaBoost" class="md-nav__link">
+      7.集成方法-随机森林和AdaBoost
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/08.预测数值型数据-回归/" title="8.预测数值型数据：回归" class="md-nav__link">
+      8.预测数值型数据：回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/09.树回归/" title="9.树回归" class="md-nav__link">
+      9.树回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/10.k-means聚类/" title="10.k-means聚类" class="md-nav__link">
+      10.k-means聚类
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/11.使用Apriori算法进行关联分析/" title="11.使用Apriori算法进行关联分析" class="md-nav__link">
+      11.使用Apriori算法进行关联分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/12.使用FP-growth算法来高效发现频繁项集/" title="12.使用FP-growth算法来高效发现频繁项集" class="md-nav__link">
+      12.使用FP-growth算法来高效发现频繁项集
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/13.利用PCA来简化数据/" title="13.利用PCA来简化数据" class="md-nav__link">
+      13.利用PCA来简化数据
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/14.利用SVD简化数据/" title="14.利用SVD简化数据" class="md-nav__link">
+      14.利用SVD简化数据
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/15.大数据与MapReduce/" title="15.大数据与MapReduce" class="md-nav__link">
+      15.大数据与MapReduce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/16.推荐系统/" title="16.推荐系统" class="md-nav__link">
+      16.推荐系统
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      深度学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        深度学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/深度学习/DeepLearning/" title="深度学习中文版" class="md-nav__link">
+      深度学习中文版
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      tensorflow
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        tensorflow
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tensorflow/如何选择优化器 optimizer/" title="如何选择优化器 optimizer" class="md-nav__link">
+      如何选择优化器 optimizer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" checked>
+    
+    <label class="md-nav__link" for="nav-4-2">
+      深度学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        深度学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+    <a href="./" title="10分钟上手Pandas" class="md-nav__link md-nav__link--active">
+      10分钟上手Pandas
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../主成分分析-2/" title="主成分分析 2" class="md-nav__link">
+      主成分分析 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../主成分分析/" title="主成分分析" class="md-nav__link">
+      主成分分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../最小二乘法/" title="最小二乘法" class="md-nav__link">
+      最小二乘法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../矩阵分解/" title="矩阵分解" class="md-nav__link">
+      矩阵分解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../矩阵求导/" title="矩阵求导" class="md-nav__link">
+      矩阵求导
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      转载
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        转载
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-1" type="checkbox" id="nav-4-3-1">
+    
+    <label class="md-nav__link" for="nav-4-3-1">
+      cs231n-ch
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-1">
+        cs231n-ch
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-ch/2018-02-21-ch-assignment2_google_cloud/" title="2018 02 21 ch assignment2 google cloud" class="md-nav__link">
+      2018 02 21 ch assignment2 google cloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-ch/2018-02-21-ch-aws-tutorial/" title="2018 02 21 ch aws tutorial" class="md-nav__link">
+      2018 02 21 ch aws tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-ch/2018-02-21-ch-classification/" title="2018 02 21 ch classification" class="md-nav__link">
+      2018 02 21 ch classification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-ch/2018-02-21-ch-convnet-tips/" title="2018 02 21 ch convnet tips" class="md-nav__link">
+      2018 02 21 ch convnet tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-ch/2018-02-21-ch-convolutional-networks/" title="2018 02 21 ch convolutional networks" class="md-nav__link">
+      2018 02 21 ch convolutional networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-ch/2018-02-21-ch-google_cloud_tutorial/" title="2018 02 21 ch google cloud tutorial" class="md-nav__link">
+      2018 02 21 ch google cloud tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-ch/2018-02-21-ch-ipython-tutorial/" title="2018 02 21 ch ipython tutorial" class="md-nav__link">
+      2018 02 21 ch ipython tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-ch/2018-02-21-ch-linear-classify/" title="2018 02 21 ch linear classify" class="md-nav__link">
+      2018 02 21 ch linear classify
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-ch/2018-02-21-ch-neural-networks-1/" title="2018 02 21 ch neural networks 1" class="md-nav__link">
+      2018 02 21 ch neural networks 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-ch/2018-02-21-ch-neural-networks-2/" title="2018 02 21 ch neural networks 2" class="md-nav__link">
+      2018 02 21 ch neural networks 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-ch/2018-02-21-ch-neural-networks-3/" title="2018 02 21 ch neural networks 3" class="md-nav__link">
+      2018 02 21 ch neural networks 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-ch/2018-02-21-ch-neural-networks-case-study/" title="2018 02 21 ch neural networks case study" class="md-nav__link">
+      2018 02 21 ch neural networks case study
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-ch/2018-02-21-ch-optimization-1/" title="2018 02 21 ch optimization 1" class="md-nav__link">
+      2018 02 21 ch optimization 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-ch/2018-02-21-ch-optimization-2/" title="2018 02 21 ch optimization 2" class="md-nav__link">
+      2018 02 21 ch optimization 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-ch/2018-02-21-ch-overview/" title="2018 02 21 ch overview" class="md-nav__link">
+      2018 02 21 ch overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-ch/2018-02-21-ch-poster/" title="2018 02 21 ch poster" class="md-nav__link">
+      2018 02 21 ch poster
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-ch/2018-02-21-ch-python-numpy-tutorial/" title="2018 02 21 ch python numpy tutorial" class="md-nav__link">
+      2018 02 21 ch python numpy tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-ch/2018-02-21-ch-Readme/" title="2018 02 21 ch Readme" class="md-nav__link">
+      2018 02 21 ch Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-ch/2018-02-21-ch-terminal-tutorial/" title="2018 02 21 ch terminal tutorial" class="md-nav__link">
+      2018 02 21 ch terminal tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-ch/2018-02-21-ch-transfer-learning/" title="2018 02 21 ch transfer learning" class="md-nav__link">
+      2018 02 21 ch transfer learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-ch/2018-02-21-ch-understanding-cnn/" title="2018 02 21 ch understanding cnn" class="md-nav__link">
+      2018 02 21 ch understanding cnn
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-2" type="checkbox" id="nav-4-3-2">
+    
+    <label class="md-nav__link" for="nav-4-3-2">
+      cs231n-en
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-2">
+        cs231n-en
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-en/2018-02-21-en-assignment2_google_cloud/" title="2018 02 21 en assignment2 google cloud" class="md-nav__link">
+      2018 02 21 en assignment2 google cloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-en/2018-02-21-en-aws-tutorial/" title="2018 02 21 en aws tutorial" class="md-nav__link">
+      2018 02 21 en aws tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-en/2018-02-21-en-classification/" title="2018 02 21 en classification" class="md-nav__link">
+      2018 02 21 en classification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-en/2018-02-21-en-convnet-tips/" title="2018 02 21 en convnet tips" class="md-nav__link">
+      2018 02 21 en convnet tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-en/2018-02-21-en-convolutional-networks/" title="2018 02 21 en convolutional networks" class="md-nav__link">
+      2018 02 21 en convolutional networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-en/2018-02-21-en-google_cloud_tutorial/" title="2018 02 21 en google cloud tutorial" class="md-nav__link">
+      2018 02 21 en google cloud tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-en/2018-02-21-en-ipython-tutorial/" title="2018 02 21 en ipython tutorial" class="md-nav__link">
+      2018 02 21 en ipython tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-en/2018-02-21-en-linear-classify/" title="2018 02 21 en linear classify" class="md-nav__link">
+      2018 02 21 en linear classify
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-en/2018-02-21-en-neural-networks-1/" title="2018 02 21 en neural networks 1" class="md-nav__link">
+      2018 02 21 en neural networks 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-en/2018-02-21-en-neural-networks-2/" title="2018 02 21 en neural networks 2" class="md-nav__link">
+      2018 02 21 en neural networks 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-en/2018-02-21-en-neural-networks-3/" title="2018 02 21 en neural networks 3" class="md-nav__link">
+      2018 02 21 en neural networks 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-en/2018-02-21-en-neural-networks-case-study/" title="2018 02 21 en neural networks case study" class="md-nav__link">
+      2018 02 21 en neural networks case study
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-en/2018-02-21-en-optimization-1/" title="2018 02 21 en optimization 1" class="md-nav__link">
+      2018 02 21 en optimization 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-en/2018-02-21-en-optimization-2/" title="2018 02 21 en optimization 2" class="md-nav__link">
+      2018 02 21 en optimization 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-en/2018-02-21-en-overview/" title="2018 02 21 en overview" class="md-nav__link">
+      2018 02 21 en overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-en/2018-02-21-en-poster/" title="2018 02 21 en poster" class="md-nav__link">
+      2018 02 21 en poster
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-en/2018-02-21-en-python-numpy-tutorial/" title="2018 02 21 en python numpy tutorial" class="md-nav__link">
+      2018 02 21 en python numpy tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-en/2018-02-21-en-Readme/" title="2018 02 21 en Readme" class="md-nav__link">
+      2018 02 21 en Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-en/2018-02-21-en-terminal-tutorial/" title="2018 02 21 en terminal tutorial" class="md-nav__link">
+      2018 02 21 en terminal tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-en/2018-02-21-en-transfer-learning/" title="2018 02 21 en transfer learning" class="md-nav__link">
+      2018 02 21 en transfer learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/cs231n-en/2018-02-21-en-understanding-cnn/" title="2018 02 21 en understanding cnn" class="md-nav__link">
+      2018 02 21 en understanding cnn
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-3" type="checkbox" id="nav-4-3-3">
+    
+    <label class="md-nav__link" for="nav-4-3-3">
+      example
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-3">
+        example
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example/2016-01-30-quick-latex/" title="2016 01 30 quick latex" class="md-nav__link">
+      2016 01 30 quick latex
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example/2016-04-15-dive-into-gradient-decent/" title="2016 04 15 dive into gradient decent" class="md-nav__link">
+      2016 04 15 dive into gradient decent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example/2017-01-01-perceptron/" title="2017 01 01 perceptron" class="md-nav__link">
+      2017 01 01 perceptron
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example/2017-04-23-bias-variance/" title="2017 04 23 bias variance" class="md-nav__link">
+      2017 04 23 bias variance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example/2017-05-12-nosql-in-python/" title="2017 05 12 nosql in python" class="md-nav__link">
+      2017 05 12 nosql in python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example/2017-05-23-a-web-crawer-with-a-asyncio-coroutines-1/" title="2017 05 23 a web crawer with a asyncio coroutines 1" class="md-nav__link">
+      2017 05 23 a web crawer with a asyncio coroutines 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example/2017-06-10-a-web-crawer-with-a-asyncio-coroutines-2/" title="2017 06 10 a web crawer with a asyncio coroutines 2" class="md-nav__link">
+      2017 06 10 a web crawer with a asyncio coroutines 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example/2017-07-28-fork-exec-source/" title="2017 07 28 fork exec source" class="md-nav__link">
+      2017 07 28 fork exec source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example/2017-07-30-bitcoin-explained-1/" title="2017 07 30 bitcoin explained 1" class="md-nav__link">
+      2017 07 30 bitcoin explained 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example/2017-08-18-tendermint/" title="2017 08 18 tendermint" class="md-nav__link">
+      2017 08 18 tendermint
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example/2017-09-25-ethereum-ultimate-guide/" title="2017 09 25 ethereum ultimate guide" class="md-nav__link">
+      2017 09 25 ethereum ultimate guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example/2018-01-13-latex语法/" title="2018 01 13 latex语法" class="md-nav__link">
+      2018 01 13 latex语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example/2018-10-01-latex语法/" title="2018 10 01 latex语法" class="md-nav__link">
+      2018 10 01 latex语法
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-4" type="checkbox" id="nav-4-3-4">
+    
+    <label class="md-nav__link" for="nav-4-3-4">
+      example2
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-4">
+        example2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2015-02-12-create-my-blog-with-jekyll/" title="2015 02 12 create my blog with jekyll" class="md-nav__link">
+      2015 02 12 create my blog with jekyll
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2015-03-21-teach-girlfriend-html-css/" title="2015 03 21 teach girlfriend html css" class="md-nav__link">
+      2015 03 21 teach girlfriend html css
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2015-03-26-sublimeLinter/" title="2015 03 26 sublimeLinter" class="md-nav__link">
+      2015 03 26 sublimeLinter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2015-04-06-arrays-similar/" title="2015 04 06 arrays similar" class="md-nav__link">
+      2015 04 06 arrays similar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2015-04-12-Syncing-a-fork/" title="2015 04 12 Syncing a fork" class="md-nav__link">
+      2015 04 12 Syncing a fork
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2015-04-15-baidu-ife-1/" title="2015 04 15 baidu ife 1" class="md-nav__link">
+      2015 04 15 baidu ife 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2015-04-22-baidu-ife-2-javascript/" title="2015 04 22 baidu ife 2 javascript" class="md-nav__link">
+      2015 04 22 baidu ife 2 javascript
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2015-05-18-front-end-tools/" title="2015 05 18 front end tools" class="md-nav__link">
+      2015 05 18 front end tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2015-05-20-scope/" title="2015 05 20 scope" class="md-nav__link">
+      2015 05 20 scope
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2015-06-11-JavaScript-function/" title="2015 06 11 JavaScript function" class="md-nav__link">
+      2015 06 11 JavaScript function
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2015-06-12-JavaScript-this/" title="2015 06 12 JavaScript this" class="md-nav__link">
+      2015 06 12 JavaScript this
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2015-06-14-JavaScript-closure/" title="2015 06 14 JavaScript closure" class="md-nav__link">
+      2015 06 14 JavaScript closure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2015-06-15-JavaScript-Object-Oriented/" title="2015 06 15 JavaScript Object Oriented" class="md-nav__link">
+      2015 06 15 JavaScript Object Oriented
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2015-06-17-web-app/" title="2015 06 17 web app" class="md-nav__link">
+      2015 06 17 web app
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2015-06-18-weinre/" title="2015 06 18 weinre" class="md-nav__link">
+      2015 06 18 weinre
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2015-07-09-JavaScript-Net/" title="2015 07 09 JavaScript Net" class="md-nav__link">
+      2015 07 09 JavaScript Net
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2015-07-24-low-IE-click-empty-block-bug/" title="2015 07 24 low IE click empty block bug" class="md-nav__link">
+      2015 07 24 low IE click empty block bug
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2015-12-31-History-API/" title="2015 12 31 History API" class="md-nav__link">
+      2015 12 31 History API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2016-03-12-jekyll-theme-version-2.0/" title="2016 03 12 jekyll theme version 2.0" class="md-nav__link">
+      2016 03 12 jekyll theme version 2.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2016-05-06-regular-expression-group/" title="2016 05 06 regular expression group" class="md-nav__link">
+      2016 05 06 regular expression group
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2016-06-07-JavaScript-good-parts-note1/" title="2016 06 07 JavaScript good parts note1" class="md-nav__link">
+      2016 06 07 JavaScript good parts note1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2016-06-08-JavaScript-good-parts-note2/" title="2016 06 08 JavaScript good parts note2" class="md-nav__link">
+      2016 06 08 JavaScript good parts note2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2016-06-10-JavaScript-good-parts-note3/" title="2016 06 10 JavaScript good parts note3" class="md-nav__link">
+      2016 06 10 JavaScript good parts note3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2016-06-14-how-to-use-babel/" title="2016 06 14 how to use babel" class="md-nav__link">
+      2016 06 14 how to use babel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2016-07-07-git-clone-not-master-branch/" title="2016 07 07 git clone not master branch" class="md-nav__link">
+      2016 07 07 git clone not master branch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2016-10-16-shuffle-algorithm/" title="2016 10 16 shuffle algorithm" class="md-nav__link">
+      2016 10 16 shuffle algorithm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2016-11-22-js-create-file-and-download/" title="2016 11 22 js create file and download" class="md-nav__link">
+      2016 11 22 js create file and download
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../转载/example2/2016-11-25-how-to-write-a-count-down/" title="2016 11 25 how to write a count down" class="md-nav__link">
+      2016 11 25 how to write a count down
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../工具/About/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../工具/Cheatsheet/" title="Cheatsheet" class="md-nav__link">
+      Cheatsheet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="" title="文章" class="md-nav__link">
+      文章
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      日常
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        日常
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1">
+    
+    <label class="md-nav__link" for="nav-7-1">
+      test
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-1">
+        test
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../日常/test/testtest/" title="Testtest" class="md-nav__link">
+      Testtest
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2">
+    
+    <label class="md-nav__link" for="nav-7-2">
+      常用
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-2">
+        常用
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../日常/常用/latex语法/" title="Latex语法" class="md-nav__link">
+      Latex语法
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      常用工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        常用工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../日常/常用工具/10分钟上手Pandas/" title="10分钟上手Pandas" class="md-nav__link">
+      10分钟上手Pandas
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>10分钟上手Pandas</h1>
+                
+                <p><a href="http://pandas.pydata.org/pandas-docs/stable/10min.html">原文地址</a></p>
+<p>这是关于pandas的一个简短的介绍，主要面向的是新手用户。你可以在<a href="http://pandas.pydata.org/pandas-docs/stable/cookbook.html#cookbook">Cookbook</a>查看更多复杂的使用方式。</p>
+<p>通常情况下，我们按照下面这种方式引入：</p>
+<p>In [1]: import pandas as pd</p>
+<p>In [2]: import numpy as np</p>
+<p>In [3]: import matplotlib.pyplot as plt</p>
+<p>## <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#%E5%AF%B9%E8%B1%A1%E5%88%9B%E5%BB%BA" title="对象创建"></a>对象创建</p>
+<p>见<a href="http://pandas.pydata.org/pandas-docs/stable/dsintro.html#dsintro">数据结构介绍部分</a>。</p>
+<p>通过传入一个list的数值来创建一个<code>Series</code>，pandas会创建一个默认的整数索引:</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>In [4]: s = pd.Series([1,3,5,np.nan,6,8])</p>
+<p>In [5]: s</p>
+<p>Out[5]:</p>
+<p>0 1.0</p>
+<p>1 3.0</p>
+<p>2 5.0</p>
+<p>3 NaN</p>
+<p>4 6.0</p>
+<p>5 8.0</p>
+<p>dtype: float64</p>
+<p>通过传入一个numpy数组来创建一个’DataFrame’，带有一个datetime的索引以及标签列:</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>15</p>
+<p>16</p>
+<p>17</p>
+<p>18</p>
+<p>19</p>
+<p>In [6]: dates = pd.date\_range('20130101', periods=6)</p>
+<p>In [7]: dates</p>
+<p>Out[7]:</p>
+<p>DatetimeIndex(['2013-01-01', '2013-01-02', '2013-01-03', '2013-01-04',</p>
+<p>'2013-01-05', '2013-01-06'],</p>
+<p>dtype='datetime64[ns]', freq='D')</p>
+<p>In [8]: df = pd.DataFrame(np.random.randn(6,4), index=dates, columns=list('ABCD'))</p>
+<p>In [9]: df</p>
+<p>Out[9]:</p>
+<p>A B C D</p>
+<p>2013-01-01 0.469112 -0.282863 -1.509059 -1.135632</p>
+<p>2013-01-02 1.212112 -0.173215 0.119209 -1.044236</p>
+<p>2013-01-03 -0.861849 -2.104569 -0.494929 1.071804</p>
+<p>2013-01-04 0.721555 -0.706771 -1.039575 0.271860</p>
+<p>2013-01-05 -0.424972 0.567020 0.276232 -1.087401</p>
+<p>2013-01-06 -0.673690 0.113648 -1.478427 0.524988</p>
+<p>通过传入一个可以转换为类series（series-like）的字典对象来创建一个<code>DataFrame</code>:</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>15</p>
+<p>In [10]: df2 = pd.DataFrame({ 'A' : 1.,</p>
+<p>....: 'B' : pd.Timestamp('20130102'),</p>
+<p>....: 'C' : pd.Series(1,index=list(range(4)),dtype='float32'),</p>
+<p>....: 'D' : np.array([3] \* 4,dtype='int32'),</p>
+<p>....: 'E' : pd.Categorical(["test","train","test","train"]),</p>
+<p>....: 'F' : 'foo' })</p>
+<p>....:</p>
+<p>In [11]: df2</p>
+<p>Out[11]:</p>
+<p>A B C D E F</p>
+<p>0 1.0 2013-01-02 1.0 3 test foo</p>
+<p>1 1.0 2013-01-02 1.0 3 train foo</p>
+<p>2 1.0 2013-01-02 1.0 3 test foo</p>
+<p>3 1.0 2013-01-02 1.0 3 train foo</p>
+<p>查看不同列的数据类型：</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>In [12]: df2.dtypes</p>
+<p>Out[12]:</p>
+<p>A float64</p>
+<p>B datetime64[ns]</p>
+<p>C float32</p>
+<p>D int32</p>
+<p>E category</p>
+<p>F object</p>
+<p>dtype: object</p>
+<p>如果你正在使用IPython，使用Tab自动补全功能会自动识别所有的属性以及自定义的列，下图中是所有能够被自动识别的属性的一个子集：</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>In [13]: df2.\</p>
+<p>df2.A df2.bool</p>
+<p>df2.abs df2.boxplot</p>
+<p>df2.add df2.C</p>
+<p>df2.add\_prefix df2.clip</p>
+<p>df2.add\_suffix df2.clip\_lower</p>
+<p>df2.align df2.clip\_upper</p>
+<p>df2.all df2.columns</p>
+<p>df2.any df2.combine</p>
+<p>df2.append df2.combine\_first</p>
+<p>df2.apply df2.compound</p>
+<p>df2.applymap df2.consolidate</p>
+<p>df2.D</p>
+<p>正如你所看的，这里的列<code>A</code>,<code>B</code>,<code>C</code>和<code>D</code>是自动补全的，为了简洁，其余的属性被截断。</p>
+<p>## <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE" title="查看数据"></a>查看数据</p>
+<p>详情请参阅:<a href="http://pandas.pydata.org/pandas-docs/stable/basics.html#basics">Basics section</a></p>
+<p>查看frame中头部和尾部的行：</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>15</p>
+<p>In [14]: df.head()</p>
+<p>Out[14]:</p>
+<p>A B C D</p>
+<p>2013-01-01 0.469112 -0.282863 -1.509059 -1.135632</p>
+<p>2013-01-02 1.212112 -0.173215 0.119209 -1.044236</p>
+<p>2013-01-03 -0.861849 -2.104569 -0.494929 1.071804</p>
+<p>2013-01-04 0.721555 -0.706771 -1.039575 0.271860</p>
+<p>2013-01-05 -0.424972 0.567020 0.276232 -1.087401</p>
+<p>In [15]: df.tail(3)</p>
+<p>Out[15]:</p>
+<p>A B C D</p>
+<p>2013-01-04 0.721555 -0.706771 -1.039575 0.271860</p>
+<p>2013-01-05 -0.424972 0.567020 0.276232 -1.087401</p>
+<p>2013-01-06 -0.673690 0.113648 -1.478427 0.524988</p>
+<p>显示索引，列和底层numpy数据:</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>15</p>
+<p>16</p>
+<p>17</p>
+<p>In [16]: df.index</p>
+<p>Out[16]:</p>
+<p>DatetimeIndex(['2013-01-01', '2013-01-02', '2013-01-03', '2013-01-04',</p>
+<p>'2013-01-05', '2013-01-06'],</p>
+<p>dtype='datetime64[ns]', freq='D')</p>
+<p>In [17]: df.columns</p>
+<p>Out[17]: Index(['A', 'B', 'C', 'D'], dtype='object')</p>
+<p>In [18]: df.values</p>
+<p>Out[18]:</p>
+<p>array([[ 0.4691, -0.2829, -1.5091, -1.1356],</p>
+<p>[ 1.2121, -0.1732, 0.1192, -1.0442],</p>
+<p>[-0.8618, -2.1046, -0.4949, 1.0718],</p>
+<p>[ 0.7216, -0.7068, -1.0396, 0.2719],</p>
+<p>[-0.425 , 0.567 , 0.2762, -1.0874],</p>
+<p>[-0.6737, 0.1136, -1.4784, 0.525 ]])</p>
+<p><code>describe()</code>函数对于数据的快速统计汇总：</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>In [19]: df.describe()</p>
+<p>Out[19]:</p>
+<p>A B C D</p>
+<p>count 6.000000 6.000000 6.000000 6.000000</p>
+<p>mean 0.073711 -0.431125 -0.687758 -0.233103</p>
+<p>std 0.843157 0.922818 0.779887 0.973118</p>
+<p>min -0.861849 -2.104569 -1.509059 -1.135632</p>
+<p>25% -0.611510 -0.600794 -1.368714 -1.076610</p>
+<p>50% 0.022070 -0.228039 -0.767252 -0.386188</p>
+<p>75% 0.658444 0.041933 -0.034326 0.461706</p>
+<p>max 1.212112 0.567020 0.276232 1.071804</p>
+<p>对数据的转置：</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>In [20]: df.T</p>
+<p>Out[20]:</p>
+<p>2013-01-01 2013-01-02 2013-01-03 2013-01-04 2013-01-05 2013-01-06</p>
+<p>A 0.469112 1.212112 -0.861849 0.721555 -0.424972 -0.673690</p>
+<p>B -0.282863 -0.173215 -2.104569 -0.706771 0.567020 0.113648</p>
+<p>C -1.509059 0.119209 -0.494929 -1.039575 0.276232 -1.478427</p>
+<p>D -1.135632 -1.044236 1.071804 0.271860 -1.087401 0.524988</p>
+<p>按轴进行排序</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>In [21]: df.sort\_index(axis=1, ascending=False)</p>
+<p>Out[21]:</p>
+<p>D C B A</p>
+<p>2013-01-01 -1.135632 -1.509059 -0.282863 0.469112</p>
+<p>2013-01-02 -1.044236 0.119209 -0.173215 1.212112</p>
+<p>2013-01-03 1.071804 -0.494929 -2.104569 -0.861849</p>
+<p>2013-01-04 0.271860 -1.039575 -0.706771 0.721555</p>
+<p>2013-01-05 -1.087401 0.276232 0.567020 -0.424972</p>
+<p>2013-01-06 0.524988 -1.478427 0.113648 -0.673690</p>
+<p>按值进行排序</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>In [22]: df.sort\_values(by='B')</p>
+<p>Out[22]:</p>
+<p>A B C D</p>
+<p>2013-01-03 -0.861849 -2.104569 -0.494929 1.071804</p>
+<p>2013-01-04 0.721555 -0.706771 -1.039575 0.271860</p>
+<p>2013-01-01 0.469112 -0.282863 -1.509059 -1.135632</p>
+<p>2013-01-02 1.212112 -0.173215 0.119209 -1.044236</p>
+<p>2013-01-06 -0.673690 0.113648 -1.478427 0.524988</p>
+<p>2013-01-05 -0.424972 0.567020 0.276232 -1.087401</p>
+<p>## <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#%E9%80%89%E6%8B%A9" title="选择"></a>选择</p>
+<p>> **注意：**虽然用于选择和设置的标准的Python/Numpy表达式非常直观，可用于交互式工作，但对于生产代码，我们推荐优化的pandas数据访问方法<code>.at</code>，<code>.iat</code>，<code>.loc</code>，<code>.iloc</code>和<code>.ix</code>。</p>
+<p>详情请参阅<a href="http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing">Indexing and Selecing Data</a>和 <a href="http://pandas.pydata.org/pandas-docs/stable/advanced.html#advanced">MultiIndex / Advanced Indexing</a>。</p>
+<p>### <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#%E8%8E%B7%E5%8F%96" title="获取"></a>获取</p>
+<p>选择一个单独的列，这将会返回一个<code>Series</code>，等同于<code>df.A</code>：</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>In [23]: df['A']</p>
+<p>Out[23]:</p>
+<p>2013-01-01 0.469112</p>
+<p>2013-01-02 1.212112</p>
+<p>2013-01-03 -0.861849</p>
+<p>2013-01-04 0.721555</p>
+<p>2013-01-05 -0.424972</p>
+<p>2013-01-06 -0.673690</p>
+<p>Freq: D, Name: A, dtype: float64</p>
+<p>通过<code>[]</code>进行选择，这将会对行进行切片:</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>In [24]: df[0:3]</p>
+<p>Out[24]:</p>
+<p>A B C D</p>
+<p>2013-01-01 0.469112 -0.282863 -1.509059 -1.135632</p>
+<p>2013-01-02 1.212112 -0.173215 0.119209 -1.044236</p>
+<p>2013-01-03 -0.861849 -2.104569 -0.494929 1.071804</p>
+<p>In [25]: df['20130102':'20130104']</p>
+<p>Out[25]:</p>
+<p>A B C D</p>
+<p>2013-01-02 1.212112 -0.173215 0.119209 -1.044236</p>
+<p>2013-01-03 -0.861849 -2.104569 -0.494929 1.071804</p>
+<p>2013-01-04 0.721555 -0.706771 -1.039575 0.271860</p>
+<p>### <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#%E9%80%9A%E8%BF%87%E6%A0%87%E7%AD%BE%E9%80%89%E6%8B%A9" title="通过标签选择"></a>通过标签选择</p>
+<p>详情请参加<a href="http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-label">Selection by Label</a></p>
+<p>使用标签获取横截面</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>In [26]: df.loc[dates[0]]</p>
+<p>Out[26]:</p>
+<p>A 0.469112</p>
+<p>B -0.282863</p>
+<p>C -1.509059</p>
+<p>D -1.135632</p>
+<p>Name: 2013-01-01 00:00:00, dtype: float64</p>
+<p>通过标签选择多轴</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>In [27]: df.loc[:,['A','B']]</p>
+<p>Out[27]:</p>
+<p>A B</p>
+<p>2013-01-01 0.469112 -0.282863</p>
+<p>2013-01-02 1.212112 -0.173215</p>
+<p>2013-01-03 -0.861849 -2.104569</p>
+<p>2013-01-04 0.721555 -0.706771</p>
+<p>2013-01-05 -0.424972 0.567020</p>
+<p>2013-01-06 -0.673690 0.113648</p>
+<p>显示包括两个端点的标签切片：</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>In [28]: df.loc['20130102':'20130104',['A','B']]</p>
+<p>Out[28]:</p>
+<p>A B</p>
+<p>2013-01-02 1.212112 -0.173215</p>
+<p>2013-01-03 -0.861849 -2.104569</p>
+<p>2013-01-04 0.721555 -0.706771</p>
+<p>减少返回的对象的尺寸:</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>In [29]: df.loc['20130102',['A','B']]</p>
+<p>Out[29]:</p>
+<p>A 1.212112</p>
+<p>B -0.173215</p>
+<p>Name: 2013-01-02 00:00:00, dtype: float64</p>
+<p>获得标量值</p>
+<p>1</p>
+<p>2</p>
+<p>In [30]: df.loc[dates[0],'A']</p>
+<p>Out[30]: 0.46911229990718628</p>
+<p>快速访问一个标量（与上一个方法等价）</p>
+<p>1</p>
+<p>2</p>
+<p>In [31]: <a href="http://df.at">df.at</a>[dates[0],'A']</p>
+<p>Out[31]: 0.46911229990718628</p>
+<p>### <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#%E6%8C%89%E4%BD%8D%E7%BD%AE%E9%80%89%E6%8B%A9" title="按位置选择"></a>按位置选择</p>
+<p>详情请参阅<a href="http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-integer">Selection by Position</a></p>
+<p>通过传入的整数位置来选择：</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>In [32]: df.iloc[3]</p>
+<p>Out[32]:</p>
+<p>A 0.721555</p>
+<p>B -0.706771</p>
+<p>C -1.039575</p>
+<p>D 0.271860</p>
+<p>Name: 2013-01-04 00:00:00, dtype: float64</p>
+<p>可以做类似numpy/python的整数切片操作</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>In [33]: df.iloc[3:5,0:2]</p>
+<p>Out[33]:</p>
+<p>A B</p>
+<p>2013-01-04 0.721555 -0.706771</p>
+<p>2013-01-05 -0.424972 0.567020</p>
+<p>可以做类似于numpy/python风格的列出指定索引位置的行列列表的操作</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>In [34]: df.iloc[[1,2,4],[0,2]]</p>
+<p>Out[34]:</p>
+<p>A C</p>
+<p>2013-01-02 1.212112 0.119209</p>
+<p>2013-01-03 -0.861849 -0.494929</p>
+<p>2013-01-05 -0.424972 0.276232</p>
+<p>选择具体的行</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>In [35]: df.iloc[1:3,:]</p>
+<p>Out[35]:</p>
+<p>A B C D</p>
+<p>2013-01-02 1.212112 -0.173215 0.119209 -1.044236</p>
+<p>2013-01-03 -0.861849 -2.104569 -0.494929 1.071804</p>
+<p>选择具体的列</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>In [36]: df.iloc[:,1:3]</p>
+<p>Out[36]:</p>
+<p>B C</p>
+<p>2013-01-01 -0.282863 -1.509059</p>
+<p>2013-01-02 -0.173215 0.119209</p>
+<p>2013-01-03 -2.104569 -0.494929</p>
+<p>2013-01-04 -0.706771 -1.039575</p>
+<p>2013-01-05 0.567020 0.276232</p>
+<p>2013-01-06 0.113648 -1.478427</p>
+<p>明确地获取一个值</p>
+<p>1</p>
+<p>2</p>
+<p>In [37]: df.iloc[1,1]</p>
+<p>Out[37]: -0.17321464905330858</p>
+<p>快速访问一个标量（等同于上面的方法）</p>
+<p>1</p>
+<p>2</p>
+<p>In [38]: df.iat[1,1]</p>
+<p>Out[38]: -0.17321464905330858</p>
+<p>### <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#%E5%B8%83%E5%B0%94%E7%B4%A2%E5%BC%95%E6%93%8D%E4%BD%9C" title="布尔索引操作"></a>布尔索引操作</p>
+<p>使用单一列的值来选取数据</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>In [39]: df[df.A \> 0]</p>
+<p>Out[39]:</p>
+<p>A B C D</p>
+<p>2013-01-01 0.469112 -0.282863 -1.509059 -1.135632</p>
+<p>2013-01-02 1.212112 -0.173215 0.119209 -1.044236</p>
+<p>2013-01-04 0.721555 -0.706771 -1.039575 0.271860</p>
+<p>从DataFrame选取符合布尔判断条件的数据</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>In [40]: df[df \> 0]</p>
+<p>Out[40]:</p>
+<p>A B C D</p>
+<p>2013-01-01 0.469112 NaN NaN NaN</p>
+<p>2013-01-02 1.212112 NaN 0.119209 NaN</p>
+<p>2013-01-03 NaN NaN NaN 1.071804</p>
+<p>2013-01-04 0.721555 NaN NaN 0.271860</p>
+<p>2013-01-05 NaN 0.567020 0.276232 NaN</p>
+<p>2013-01-06 NaN 0.113648 NaN 0.524988</p>
+<p>使用<code>isin()</code>方法来过滤：</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>15</p>
+<p>16</p>
+<p>17</p>
+<p>18</p>
+<p>19</p>
+<p>In [41]: df2 = df.copy()</p>
+<p>In [42]: df2['E'] = ['one', 'one','two','three','four','three']</p>
+<p>In [43]: df2</p>
+<p>Out[43]:</p>
+<p>A B C D E</p>
+<p>2013-01-01 0.469112 -0.282863 -1.509059 -1.135632 one</p>
+<p>2013-01-02 1.212112 -0.173215 0.119209 -1.044236 one</p>
+<p>2013-01-03 -0.861849 -2.104569 -0.494929 1.071804 two</p>
+<p>2013-01-04 0.721555 -0.706771 -1.039575 0.271860 three</p>
+<p>2013-01-05 -0.424972 0.567020 0.276232 -1.087401 four</p>
+<p>2013-01-06 -0.673690 0.113648 -1.478427 0.524988 three</p>
+<p>In [44]: df2[df2['E'].isin(['two','four'])]</p>
+<p>Out[44]:</p>
+<p>A B C D E</p>
+<p>2013-01-03 -0.861849 -2.104569 -0.494929 1.071804 two</p>
+<p>2013-01-05 -0.424972 0.567020 0.276232 -1.087401 four</p>
+<p>### <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#%E8%AE%BE%E7%BD%AE%E6%95%B0%E6%8D%AE" title="设置数据"></a>设置数据</p>
+<p>设置新列，自动按索引排列数据</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>In [45]: s1 = pd.Series([1,2,3,4,5,6], index=pd.date\_range('20130102', periods=6))</p>
+<p>In [46]: s1</p>
+<p>Out[46]:</p>
+<p>2013-01-02 1</p>
+<p>2013-01-03 2</p>
+<p>2013-01-04 3</p>
+<p>2013-01-05 4</p>
+<p>2013-01-06 5</p>
+<p>2013-01-07 6</p>
+<p>Freq: D, dtype: int64</p>
+<p>In [47]: df['F'] = s1</p>
+<p>通过标签来设定数据</p>
+<p>1</p>
+<p>In [48]: <a href="http://df.at">df.at</a>[dates[0],'A'] = 0</p>
+<p>通过位置索引来设定数据</p>
+<p>1</p>
+<p>In [49]: df.iat[0,1] = 0</p>
+<p>通过分配一个numpy数组来设定数据</p>
+<p>1</p>
+<p>In [50]: df.loc[:,'D'] = np.array([5] \* len(df))</p>
+<p>之前操作的结果</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>In [51]: df</p>
+<p>Out[51]:</p>
+<p>A B C D F</p>
+<p>2013-01-01 0.000000 0.000000 -1.509059 5 NaN</p>
+<p>2013-01-02 1.212112 -0.173215 0.119209 5 1.0</p>
+<p>2013-01-03 -0.861849 -2.104569 -0.494929 5 2.0</p>
+<p>2013-01-04 0.721555 -0.706771 -1.039575 5 3.0</p>
+<p>2013-01-05 -0.424972 0.567020 0.276232 5 4.0</p>
+<p>2013-01-06 -0.673690 0.113648 -1.478427 5 5.0</p>
+<p>带有<code>where</code>操作的设值</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>In [52]: df2 = df.copy()</p>
+<p>In [53]: df2[df2 \> 0] = -df2</p>
+<p>In [54]: df2</p>
+<p>Out[54]:</p>
+<p>A B C D F</p>
+<p>2013-01-01 0.000000 0.000000 -1.509059 -5 NaN</p>
+<p>2013-01-02 -1.212112 -0.173215 -0.119209 -5 -1.0</p>
+<p>2013-01-03 -0.861849 -2.104569 -0.494929 -5 -2.0</p>
+<p>2013-01-04 -0.721555 -0.706771 -1.039575 -5 -3.0</p>
+<p>2013-01-05 -0.424972 -0.567020 -0.276232 -5 -4.0</p>
+<p>2013-01-06 -0.673690 -0.113648 -1.478427 -5 -5.0</p>
+<p>## <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#%E7%BC%BA%E5%A4%B1%E5%80%BC%E5%A4%84%E7%90%86" title="缺失值处理"></a>缺失值处理</p>
+<p>pandas主要使用<code>np.nan</code>来代表缺失数据。这些值将默认不会包含在计算中，详情请参阅<a href="http://pandas.pydata.org/pandas-docs/stable/missing_data.html#missing-data">Missing Data section</a></p>
+<p>Reindexing允许您更改/添加/删除指定轴上的索引。这将返回数据的副本。</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>In [55]: df1 = df.reindex(index=dates[0:4], columns=list(df.columns) + ['E'])</p>
+<p>In [56]: df1.loc[dates[0]:dates[1],'E'] = 1</p>
+<p>In [57]: df1</p>
+<p>Out[57]:</p>
+<p>A B C D F E</p>
+<p>2013-01-01 0.000000 0.000000 -1.509059 5 NaN 1.0</p>
+<p>2013-01-02 1.212112 -0.173215 0.119209 5 1.0 1.0</p>
+<p>2013-01-03 -0.861849 -2.104569 -0.494929 5 2.0 NaN</p>
+<p>2013-01-04 0.721555 -0.706771 -1.039575 5 3.0 NaN</p>
+<p>删除所有具有缺失值的数据</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>In [58]: df1.dropna(how='any')</p>
+<p>Out[58]:</p>
+<p>A B C D F E</p>
+<p>2013-01-02 1.212112 -0.173215 0.119209 5 1.0 1.0</p>
+<p>填充缺失数据</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>In [59]: df1.fillna(value=5)</p>
+<p>Out[59]:</p>
+<p>A B C D F E</p>
+<p>2013-01-01 0.000000 0.000000 -1.509059 5 5.0 1.0</p>
+<p>2013-01-02 1.212112 -0.173215 0.119209 5 1.0 1.0</p>
+<p>2013-01-03 -0.861849 -2.104569 -0.494929 5 2.0 5.0</p>
+<p>2013-01-04 0.721555 -0.706771 -1.039575 5 3.0 5.0</p>
+<p>获取值为nan的布尔值掩码</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>In [60]: pd.isna(df1)</p>
+<p>Out[60]:</p>
+<p>A B C D F E</p>
+<p>2013-01-01 False False False False True False</p>
+<p>2013-01-02 False False False False False False</p>
+<p>2013-01-03 False False False False False True</p>
+<p>2013-01-04 False False False False False True</p>
+<p>## <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C" title="相关操作"></a>相关操作</p>
+<p>详情请参阅<a href="http://pandas.pydata.org/pandas-docs/stable/basics.html#basics-binop">Basic section on Binary Ops</a></p>
+<p>### <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#%E7%BB%9F%E8%AE%A1" title="统计"></a>统计</p>
+<p>一般操作不包括丢失的数据。</p>
+<p>执行描述性统计操作(沿数值方向求均值)</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>In [61]: df.mean()</p>
+<p>Out[61]:</p>
+<p>A -0.004474</p>
+<p>B -0.383981</p>
+<p>C -0.687758</p>
+<p>D 5.000000</p>
+<p>F 3.000000</p>
+<p>dtype: float64</p>
+<p>在另一个轴上做相同的操作(沿水平方向求均值)</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>In [62]: df.mean(1)</p>
+<p>Out[62]:</p>
+<p>2013-01-01 0.872735</p>
+<p>2013-01-02 1.431621</p>
+<p>2013-01-03 0.707731</p>
+<p>2013-01-04 1.395042</p>
+<p>2013-01-05 1.883656</p>
+<p>2013-01-06 1.592306</p>
+<p>Freq: D, dtype: float64</p>
+<p>使用具有不同维度且需要对齐的对象进行操作。另外，pandas会沿指定的尺寸自动广播。</p>
+<p>> 注意：1-np.nan 输出结果为NaN</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>15</p>
+<p>16</p>
+<p>17</p>
+<p>18</p>
+<p>19</p>
+<p>20</p>
+<p>21</p>
+<p>In [63]: s = pd.Series([1,3,5,np.nan,6,8], index=dates).shift(2)</p>
+<p>In [64]: s</p>
+<p>Out[64]:</p>
+<p>2013-01-01 NaN</p>
+<p>2013-01-02 NaN</p>
+<p>2013-01-03 1.0</p>
+<p>2013-01-04 3.0</p>
+<p>2013-01-05 5.0</p>
+<p>2013-01-06 NaN</p>
+<p>Freq: D, dtype: float64</p>
+<p>In [65]: df.sub(s, axis='index')</p>
+<p>Out[65]:</p>
+<p>A B C D F</p>
+<p>2013-01-01 NaN NaN NaN NaN NaN</p>
+<p>2013-01-02 NaN NaN NaN NaN NaN</p>
+<p>2013-01-03 -1.861849 -3.104569 -1.494929 4.0 1.0</p>
+<p>2013-01-04 -2.278445 -3.706771 -4.039575 2.0 0.0</p>
+<p>2013-01-05 -5.424972 -4.432980 -4.723768 0.0 -1.0</p>
+<p>2013-01-06 NaN NaN NaN NaN NaN</p>
+<p>### <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#%E5%BA%94%E7%94%A8" title="应用"></a>应用</p>
+<p>将函数应用于数据</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>15</p>
+<p>16</p>
+<p>17</p>
+<p>18</p>
+<p>19</p>
+<p>\# 累加操作</p>
+<p>In [66]: df.apply(np.cumsum)</p>
+<p>Out[66]:</p>
+<p>A B C D F</p>
+<p>2013-01-01 0.000000 0.000000 -1.509059 5 NaN</p>
+<p>2013-01-02 1.212112 -0.173215 -1.389850 10 1.0</p>
+<p>2013-01-03 0.350263 -2.277784 -1.884779 15 3.0</p>
+<p>2013-01-04 1.071818 -2.984555 -2.924354 20 6.0</p>
+<p>2013-01-05 0.646846 -2.417535 -2.648122 25 10.0</p>
+<p>2013-01-06 -0.026844 -2.303886 -4.126549 30 15.0</p>
+<p>In [67]: df.apply(lambda x: x.max() - x.min())</p>
+<p>Out[67]:</p>
+<p>A 2.073961</p>
+<p>B 2.671590</p>
+<p>C 1.785291</p>
+<p>D 0.000000</p>
+<p>F 4.000000</p>
+<p>dtype: float64</p>
+<p>### <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#%E7%9B%B4%E6%96%B9%E5%9B%BE" title="直方图"></a>直方图</p>
+<p>详情请参阅<a href="http://pandas.pydata.org/pandas-docs/stable/basics.html#basics-discretization">Histogramming and Discretization</a></p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>15</p>
+<p>16</p>
+<p>17</p>
+<p>18</p>
+<p>19</p>
+<p>20</p>
+<p>21</p>
+<p>22</p>
+<p>23</p>
+<p>In [68]: s = pd.Series(np.random.randint(0, 7, size=10))</p>
+<p>In [69]: s</p>
+<p>Out[69]:</p>
+<p>0 4</p>
+<p>1 2</p>
+<p>2 1</p>
+<p>3 2</p>
+<p>4 6</p>
+<p>5 4</p>
+<p>6 4</p>
+<p>7 6</p>
+<p>8 4</p>
+<p>9 4</p>
+<p>dtype: int64</p>
+<p>In [70]: s.value\_counts()</p>
+<p>Out[70]:</p>
+<p>4 5</p>
+<p>6 2</p>
+<p>2 2</p>
+<p>1 1</p>
+<p>dtype: int64</p>
+<p>### <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%96%B9%E6%B3%95" title="字符串方法"></a>字符串方法</p>
+<p>Series对象在其str属性中配备了一组字符串处理方法，可以很容易的应用到数组中的每个元素，如下段代码所示。更多详情请参考：<a href="http://pandas.pydata.org/pandas-docs/stable/text.html#text-string-methods">Vectorized String Methods</a></p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>In [71]: s = pd.Series(['A', 'B', 'C', 'Aaba', 'Baca', np.nan, 'CABA', 'dog', 'cat'])</p>
+<p>In [72]: s.str.lower()</p>
+<p>Out[72]:</p>
+<p>0 a</p>
+<p>1 b</p>
+<p>2 c</p>
+<p>3 aaba</p>
+<p>4 baca</p>
+<p>5 NaN</p>
+<p>6 caba</p>
+<p>7 dog</p>
+<p>8 cat</p>
+<p>dtype: object</p>
+<p>## <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#%E5%90%88%E5%B9%B6" title="合并"></a>合并</p>
+<p>### <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#Concat" title="Concat"></a>Concat</p>
+<p>Pandas提供了大量的方法能够轻松的对Series，DataFrame和Panel对象进行各种符合各种逻辑关系的合并操作。</p>
+<p>具体请参阅：<a href="http://pandas.pydata.org/pandas-docs/stable/merging.html#merging">Merging section</a></p>
+<p>通过使用<code>concat()</code>来将pandas对象链接起来：</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>15</p>
+<p>16</p>
+<p>17</p>
+<p>18</p>
+<p>19</p>
+<p>20</p>
+<p>21</p>
+<p>22</p>
+<p>23</p>
+<p>24</p>
+<p>25</p>
+<p>26</p>
+<p>27</p>
+<p>28</p>
+<p>29</p>
+<p>30</p>
+<p>31</p>
+<p>32</p>
+<p>In [73]: df = pd.DataFrame(np.random.randn(10, 4))</p>
+<p>In [74]: df</p>
+<p>Out[74]:</p>
+<p>0 1 2 3</p>
+<p>0 -0.548702 1.467327 -1.015962 -0.483075</p>
+<p>1 1.637550 -1.217659 -0.291519 -1.745505</p>
+<p>2 -0.263952 0.991460 -0.919069 0.266046</p>
+<p>3 -0.709661 1.669052 1.037882 -1.705775</p>
+<p>4 -0.919854 -0.042379 1.247642 -0.009920</p>
+<p>5 0.290213 0.495767 0.362949 1.548106</p>
+<p>6 -1.131345 -0.089329 0.337863 -0.945867</p>
+<p>7 -0.932132 1.956030 0.017587 -0.016692</p>
+<p>8 -0.575247 0.254161 -1.143704 0.215897</p>
+<p>9 1.193555 -0.077118 -0.408530 -0.862495</p>
+<p>\# break it into pieces</p>
+<p>In [75]: pieces = [df[:3], df[3:7], df[7:]]</p>
+<p>In [76]: pd.concat(pieces)</p>
+<p>Out[76]:</p>
+<p>0 1 2 3</p>
+<p>0 -0.548702 1.467327 -1.015962 -0.483075</p>
+<p>1 1.637550 -1.217659 -0.291519 -1.745505</p>
+<p>2 -0.263952 0.991460 -0.919069 0.266046</p>
+<p>3 -0.709661 1.669052 1.037882 -1.705775</p>
+<p>4 -0.919854 -0.042379 1.247642 -0.009920</p>
+<p>5 0.290213 0.495767 0.362949 1.548106</p>
+<p>6 -1.131345 -0.089329 0.337863 -0.945867</p>
+<p>7 -0.932132 1.956030 0.017587 -0.016692</p>
+<p>8 -0.575247 0.254161 -1.143704 0.215897</p>
+<p>9 1.193555 -0.077118 -0.408530 -0.862495</p>
+<p>### <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#Join" title="Join"></a>Join</p>
+<p>类似于SQL类型的合并</p>
+<p>具体请参阅：<a href="http://pandas.pydata.org/pandas-docs/stable/merging.html#merging-join">Database style joining</a></p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>15</p>
+<p>16</p>
+<p>17</p>
+<p>18</p>
+<p>19</p>
+<p>20</p>
+<p>21</p>
+<p>22</p>
+<p>23</p>
+<p>In [77]: left = pd.DataFrame({'key': ['foo', 'foo'], 'lval': [1, 2]})</p>
+<p>In [78]: right = pd.DataFrame({'key': ['foo', 'foo'], 'rval': [4, 5]})</p>
+<p>In [79]: left</p>
+<p>Out[79]:</p>
+<p>key lval</p>
+<p>0 foo 1</p>
+<p>1 foo 2</p>
+<p>In [80]: right</p>
+<p>Out[80]:</p>
+<p>key rval</p>
+<p>0 foo 4</p>
+<p>1 foo 5</p>
+<p>In [81]: pd.merge(left, right, on='key')</p>
+<p>Out[81]:</p>
+<p>key lval rval</p>
+<p>0 foo 1 4</p>
+<p>1 foo 1 5</p>
+<p>2 foo 2 4</p>
+<p>3 foo 2 5</p>
+<p>另一个可以给出的例子是：</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>15</p>
+<p>16</p>
+<p>17</p>
+<p>18</p>
+<p>19</p>
+<p>20</p>
+<p>21</p>
+<p>In [82]: left = pd.DataFrame({'key': ['foo', 'bar'], 'lval': [1, 2]})</p>
+<p>In [83]: right = pd.DataFrame({'key': ['foo', 'bar'], 'rval': [4, 5]})</p>
+<p>In [84]: left</p>
+<p>Out[84]:</p>
+<p>key lval</p>
+<p>0 foo 1</p>
+<p>1 bar 2</p>
+<p>In [85]: right</p>
+<p>Out[85]:</p>
+<p>key rval</p>
+<p>0 foo 4</p>
+<p>1 bar 5</p>
+<p>In [86]: pd.merge(left, right, on='key')</p>
+<p>Out[86]:</p>
+<p>key lval rval</p>
+<p>0 foo 1 4</p>
+<p>1 bar 2 5</p>
+<p>### <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#Append" title="Append"></a>Append</p>
+<p>将一行连接到一个DataFrame上。</p>
+<p>详情请参阅<a href="http://pandas.pydata.org/pandas-docs/stable/merging.html#merging-concatenation">Appending</a></p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>15</p>
+<p>16</p>
+<p>17</p>
+<p>18</p>
+<p>19</p>
+<p>20</p>
+<p>21</p>
+<p>22</p>
+<p>23</p>
+<p>24</p>
+<p>25</p>
+<p>26</p>
+<p>27</p>
+<p>28</p>
+<p>In [87]: df = pd.DataFrame(np.random.randn(8, 4), columns=['A','B','C','D'])</p>
+<p>In [88]: df</p>
+<p>Out[88]:</p>
+<p>A B C D</p>
+<p>0 1.346061 1.511763 1.627081 -0.990582</p>
+<p>1 -0.441652 1.211526 0.268520 0.024580</p>
+<p>2 -1.577585 0.396823 -0.105381 -0.532532</p>
+<p>3 1.453749 1.208843 -0.080952 -0.264610</p>
+<p>4 -0.727965 -0.589346 0.339969 -0.693205</p>
+<p>5 -0.339355 0.593616 0.884345 1.591431</p>
+<p>6 0.141809 0.220390 0.435589 0.192451</p>
+<p>7 -0.096701 0.803351 1.715071 -0.708758</p>
+<p>In [89]: s = df.iloc[3]</p>
+<p>In [90]: df.append(s, ignore\_index=True)</p>
+<p>Out[90]:</p>
+<p>A B C D</p>
+<p>0 1.346061 1.511763 1.627081 -0.990582</p>
+<p>1 -0.441652 1.211526 0.268520 0.024580</p>
+<p>2 -1.577585 0.396823 -0.105381 -0.532532</p>
+<p>3 1.453749 1.208843 -0.080952 -0.264610</p>
+<p>4 -0.727965 -0.589346 0.339969 -0.693205</p>
+<p>5 -0.339355 0.593616 0.884345 1.591431</p>
+<p>6 0.141809 0.220390 0.435589 0.192451</p>
+<p>7 -0.096701 0.803351 1.715071 -0.708758</p>
+<p>8 1.453749 1.208843 -0.080952 -0.264610</p>
+<p>## <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#%E5%88%86%E7%BB%84%EF%BC%88Grouping%EF%BC%89" title="分组（Grouping）"></a>分组（Grouping）</p>
+<p>对于”group by”操作，我们通常是指以下一个或多个操作步骤：</p>
+<p>* **（Splitting）**按照一些规则将数据分为不同的组；</p>
+<p>* **（Applying）**对于每组数据分别执行一个函数；</p>
+<p>* **（Combining）**将结果组合到一个数据结构中；</p>
+<p>详情请参阅<a href="http://pandas.pydata.org/pandas-docs/stable/groupby.html#groupby">Grouping section</a></p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>15</p>
+<p>16</p>
+<p>17</p>
+<p>18</p>
+<p>19</p>
+<p>In [91]: df = pd.DataFrame({'A' : ['foo', 'bar', 'foo', 'bar',</p>
+<p>....: 'foo', 'bar', 'foo', 'foo'],</p>
+<p>....: 'B' : ['one', 'one', 'two', 'three',</p>
+<p>....: 'two', 'two', 'one', 'three'],</p>
+<p>....: 'C' : np.random.randn(8),</p>
+<p>....: 'D' : np.random.randn(8)})</p>
+<p>....:</p>
+<p>In [92]: df</p>
+<p>Out[92]:</p>
+<p>A B C D</p>
+<p>0 foo one -1.202872 -0.055224</p>
+<p>1 bar one -1.814470 2.395985</p>
+<p>2 foo two 1.018601 1.552825</p>
+<p>3 bar three -0.595447 0.166599</p>
+<p>4 foo two 1.395433 0.047609</p>
+<p>5 bar two -0.392670 -0.136473</p>
+<p>6 foo one 0.007207 -0.561757</p>
+<p>7 foo three 1.928123 -1.623033</p>
+<p>分组，然后将函数总和<code>sum</code>应用于结果组。</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>In [93]: df.groupby('A').sum()</p>
+<p>Out[93]:</p>
+<p>C D</p>
+<p>A</p>
+<p>bar -2.802588 2.42611</p>
+<p>foo 3.146492 -0.63958</p>
+<p>按多列分组会形成一个分层索引，然后我们应用这个函数。</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>In [94]: df.groupby(['A','B']).sum()</p>
+<p>Out[94]:</p>
+<p>C D</p>
+<p>A B</p>
+<p>bar one -1.814470 2.395985</p>
+<p>three -0.595447 0.166599</p>
+<p>two -0.392670 -0.136473</p>
+<p>foo one -1.195665 -0.616981</p>
+<p>three 1.928123 -1.623033</p>
+<p>two 2.414034 1.600434</p>
+<p>## <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#Reshaping" title="Reshaping"></a>Reshaping</p>
+<p>详情请参阅<a href="http://pandas.pydata.org/pandas-docs/stable/advanced.html#advanced-hierarchical">Hierarchical Indexing</a>和<a href="http://pandas.pydata.org/pandas-docs/stable/reshaping.html#reshaping-stacking">Reshaping</a>。</p>
+<p>### <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#Stack" title="Stack"></a>Stack</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>15</p>
+<p>16</p>
+<p>17</p>
+<p>18</p>
+<p>19</p>
+<p>20</p>
+<p>In [95]: tuples = list(zip(\*[['bar', 'bar', 'baz', 'baz',</p>
+<p>....: 'foo', 'foo', 'qux', 'qux'],</p>
+<p>....: ['one', 'two', 'one', 'two',</p>
+<p>....: 'one', 'two', 'one', 'two']]))</p>
+<p>....:</p>
+<p>In [96]: index = pd.MultiIndex.from\_tuples(tuples, names=['first', 'second'])</p>
+<p>In [97]: df = pd.DataFrame(np.random.randn(8, 2), index=index, columns=['A', 'B'])</p>
+<p>In [98]: df2 = df[:4]</p>
+<p>In [99]: df2</p>
+<p>Out[99]:</p>
+<p>A B</p>
+<p>first second</p>
+<p>bar one 0.029399 -0.542108</p>
+<p>two 0.282696 -0.087302</p>
+<p>baz one -1.575170 1.771208</p>
+<p>two 0.816482 1.100230</p>
+<p><code>stack()</code>方法“压缩”了DataFrame列中的级别。</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>In [100]: stacked = df2.stack()</p>
+<p>In [101]: stacked</p>
+<p>Out[101]:</p>
+<p>first second</p>
+<p>bar one A 0.029399</p>
+<p>B -0.542108</p>
+<p>two A 0.282696</p>
+<p>B -0.087302</p>
+<p>baz one A -1.575170</p>
+<p>B 1.771208</p>
+<p>two A 0.816482</p>
+<p>B 1.100230</p>
+<p>dtype: float64</p>
+<p>对于“堆叠的(stacked)”DataFrame或Series（以MultiIndex为索引），<code>stack()</code>的反向操作是<code>unstack()</code>，默认情况下，它将卸载**最后一层**：</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>15</p>
+<p>16</p>
+<p>17</p>
+<p>18</p>
+<p>19</p>
+<p>20</p>
+<p>21</p>
+<p>22</p>
+<p>23</p>
+<p>24</p>
+<p>25</p>
+<p>26</p>
+<p>In [102]: stacked.unstack()</p>
+<p>Out[102]:</p>
+<p>A B</p>
+<p>first second</p>
+<p>bar one 0.029399 -0.542108</p>
+<p>two 0.282696 -0.087302</p>
+<p>baz one -1.575170 1.771208</p>
+<p>two 0.816482 1.100230</p>
+<p>In [103]: stacked.unstack(1)</p>
+<p>Out[103]:</p>
+<p>second one two</p>
+<p>first</p>
+<p>bar A 0.029399 0.282696</p>
+<p>B -0.542108 -0.087302</p>
+<p>baz A -1.575170 0.816482</p>
+<p>B 1.771208 1.100230</p>
+<p>In [104]: stacked.unstack(0)</p>
+<p>Out[104]:</p>
+<p>first bar baz</p>
+<p>second</p>
+<p>one A 0.029399 -1.575170</p>
+<p>B -0.542108 1.771208</p>
+<p>two A 0.282696 0.816482</p>
+<p>B -0.087302 1.100230</p>
+<p>### <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#%E6%95%B0%E6%8D%AE%E9%80%8F%E8%A7%86%E8%A1%A8" title="数据透视表"></a>数据透视表</p>
+<p>详情请参阅<a href="http://pandas.pydata.org/pandas-docs/stable/reshaping.html#reshaping-pivot">Pivot Tables</a></p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>15</p>
+<p>16</p>
+<p>17</p>
+<p>18</p>
+<p>19</p>
+<p>20</p>
+<p>21</p>
+<p>22</p>
+<p>In [105]: df = pd.DataFrame({'A' : ['one', 'one', 'two', 'three'] \* 3,</p>
+<p>.....: 'B' : ['A', 'B', 'C'] \* 4,</p>
+<p>.....: 'C' : ['foo', 'foo', 'foo', 'bar', 'bar', 'bar'] \* 2,</p>
+<p>.....: 'D' : np.random.randn(12),</p>
+<p>.....: 'E' : np.random.randn(12)})</p>
+<p>.....:</p>
+<p>In [106]: df</p>
+<p>Out[106]:</p>
+<p>A B C D E</p>
+<p>0 one A foo 1.418757 -0.179666</p>
+<p>1 one B foo -1.879024 1.291836</p>
+<p>2 two C foo 0.536826 -0.009614</p>
+<p>3 three A bar 1.006160 0.392149</p>
+<p>4 one B bar -0.029716 0.264599</p>
+<p>5 one C bar -1.146178 -0.057409</p>
+<p>6 two A foo 0.100900 -1.425638</p>
+<p>7 three B foo -1.035018 1.024098</p>
+<p>8 one C foo 0.314665 -0.106062</p>
+<p>9 one A bar -0.773723 1.824375</p>
+<p>10 two B bar -1.170653 0.595974</p>
+<p>11 three C bar 0.648740 1.167115</p>
+<p>我们可以很容易地从这些数据生成数据透视表：</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>In [107]: pd.pivot\_table(df, values='D', index=['A', 'B'], columns=['C'])</p>
+<p>Out[107]:</p>
+<p>C bar foo</p>
+<p>A B</p>
+<p>one A -0.773723 1.418757</p>
+<p>B -0.029716 -1.879024</p>
+<p>C -1.146178 0.314665</p>
+<p>three A 1.006160 NaN</p>
+<p>B NaN -1.035018</p>
+<p>C 0.648740 NaN</p>
+<p>two A NaN 0.100900</p>
+<p>B -1.170653 NaN</p>
+<p>C NaN 0.536826</p>
+<p>## <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97" title="时间序列"></a>时间序列</p>
+<p>Pandas在对频率转换进行重新采样时拥有简单、强大且高效的功能（如将按秒采样的数据转换为按5分钟为单位进行采样的数据）。这种操作在金融领域非常常见。</p>
+<p>详情请参阅<a href="http://pandas.pydata.org/pandas-docs/stable/timeseries.html#timeseries">Time Series section</a></p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>In [108]: rng = pd.date\_range('1/1/2012', periods=100, freq='S')</p>
+<p>In [109]: ts = pd.Series(np.random.randint(0, 500, len(rng)), index=rng)</p>
+<p>In [110]: ts.resample('5Min').sum()</p>
+<p>Out[110]:</p>
+<p>2012-01-01 25083</p>
+<p>Freq: 5T, dtype: int64</p>
+<p>时区表示</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>15</p>
+<p>16</p>
+<p>17</p>
+<p>18</p>
+<p>19</p>
+<p>20</p>
+<p>21</p>
+<p>22</p>
+<p>23</p>
+<p>In [111]: rng = pd.date\_range('3/6/2012 00:00', periods=5, freq='D')</p>
+<p>In [112]: ts = pd.Series(np.random.randn(len(rng)), rng)</p>
+<p>In [113]: ts</p>
+<p>Out[113]:</p>
+<p>2012-03-06 0.464000</p>
+<p>2012-03-07 0.227371</p>
+<p>2012-03-08 -0.496922</p>
+<p>2012-03-09 0.306389</p>
+<p>2012-03-10 -2.290613</p>
+<p>Freq: D, dtype: float64</p>
+<p>In [114]: ts\_utc = <a href="http://ts.tz">ts.tz</a>\_localize('UTC')</p>
+<p>In [115]: ts\_utc</p>
+<p>Out[115]:</p>
+<p>2012-03-06 00:00:00+00:00 0.464000</p>
+<p>2012-03-07 00:00:00+00:00 0.227371</p>
+<p>2012-03-08 00:00:00+00:00 -0.496922</p>
+<p>2012-03-09 00:00:00+00:00 0.306389</p>
+<p>2012-03-10 00:00:00+00:00 -2.290613</p>
+<p>Freq: D, dtype: float64</p>
+<p>转换成其他时区</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>In [116]: ts\_utc.tz\_convert('US/Eastern')</p>
+<p>Out[116]:</p>
+<p>2012-03-05 19:00:00-05:00 0.464000</p>
+<p>2012-03-06 19:00:00-05:00 0.227371</p>
+<p>2012-03-07 19:00:00-05:00 -0.496922</p>
+<p>2012-03-08 19:00:00-05:00 0.306389</p>
+<p>2012-03-09 19:00:00-05:00 -2.290613</p>
+<p>Freq: D, dtype: float64</p>
+<p>在时间跨度表示之间进行转换</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>15</p>
+<p>16</p>
+<p>17</p>
+<p>18</p>
+<p>19</p>
+<p>20</p>
+<p>21</p>
+<p>22</p>
+<p>23</p>
+<p>24</p>
+<p>25</p>
+<p>26</p>
+<p>27</p>
+<p>28</p>
+<p>29</p>
+<p>30</p>
+<p>31</p>
+<p>32</p>
+<p>In [117]: rng = pd.date\_range('1/1/2012', periods=5, freq='M')</p>
+<p>In [118]: ts = pd.Series(np.random.randn(len(rng)), index=rng)</p>
+<p>In [119]: ts</p>
+<p>Out[119]:</p>
+<p>2012-01-31 -1.134623</p>
+<p>2012-02-29 -1.561819</p>
+<p>2012-03-31 -0.260838</p>
+<p>2012-04-30 0.281957</p>
+<p>2012-05-31 1.523962</p>
+<p>Freq: M, dtype: float64</p>
+<p>In [120]: ps = <a href="http://ts.to">ts.to</a>\_period()</p>
+<p>In [121]: ps</p>
+<p>Out[121]:</p>
+<p>2012-01 -1.134623</p>
+<p>2012-02 -1.561819</p>
+<p>2012-03 -0.260838</p>
+<p>2012-04 0.281957</p>
+<p>2012-05 1.523962</p>
+<p>Freq: M, dtype: float64</p>
+<p>In [122]: <a href="http://ps.to">ps.to</a>\_timestamp()</p>
+<p>Out[122]:</p>
+<p>2012-01-01 -1.134623</p>
+<p>2012-02-01 -1.561819</p>
+<p>2012-03-01 -0.260838</p>
+<p>2012-04-01 0.281957</p>
+<p>2012-05-01 1.523962</p>
+<p>Freq: MS, dtype: float64</p>
+<p>周期和时间戳之间的转换可以使用一些方便的算术功能。在下面的例子中，我们将季度结束时间从11月份转换为季末结束时的上午9点：</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>In [123]: prng = pd.period\_range('1990Q1', '2000Q4', freq='Q-NOV')</p>
+<p>In [124]: ts = pd.Series(np.random.randn(len(prng)), prng)</p>
+<p>In [125]: ts.index = (prng.asfreq('M', 'e') + 1).asfreq('H', 's') + 9</p>
+<p>In [126]: ts.head()</p>
+<p>Out[126]:</p>
+<p>1990-03-01 09:00 -0.902937</p>
+<p>1990-06-01 09:00 0.068159</p>
+<p>1990-09-01 09:00 -0.057873</p>
+<p>1990-12-01 09:00 -0.368204</p>
+<p>1991-03-01 09:00 -1.144073</p>
+<p>Freq: H, dtype: float64</p>
+<p>## <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#Categorical" title="Categorical"></a>Categorical</p>
+<p>pandas可以在DataFrame中引入categorical数据。详情请参阅<a href="http://pandas.pydata.org/pandas-docs/stable/categorical.html#categorical">categorical introduction</a>和<a href="http://pandas.pydata.org/pandas-docs/stable/api.html#api-categorical">API documentation</a>。</p>
+<p>1</p>
+<p>In [127]: df = pd.DataFrame({"id":[1,2,3,4,5,6], "raw\_grade":['a', 'b', 'b', 'a', 'a', 'e']})</p>
+<p>将原始的grade转换为Categorical数据类型：</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>In [128]: df["grade"] = df["raw\_grade"].astype("category")</p>
+<p>In [129]: df["grade"]</p>
+<p>Out[129]:</p>
+<p>0 a</p>
+<p>1 b</p>
+<p>2 b</p>
+<p>3 a</p>
+<p>4 a</p>
+<p>5 e</p>
+<p>Name: grade, dtype: category</p>
+<p>Categories (3, object): [a, b, e]</p>
+<p>将类别重命名为更有意义的名称</p>
+<p>1</p>
+<p>In [130]: df["grade"].cat.categories = ["very good", "good", "very bad"]</p>
+<p>重新排列类别并同时添加缺少的类别（Series .cat下的方法默认返回一个新的系列）。</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>In [131]: df["grade"] = df["grade"].cat.set\_categories(["very bad", "bad", "medium", "good", "very good"])</p>
+<p>In [132]: df["grade"]</p>
+<p>Out[132]:</p>
+<p>0 very good</p>
+<p>1 good</p>
+<p>2 good</p>
+<p>3 very good</p>
+<p>4 very good</p>
+<p>5 very bad</p>
+<p>Name: grade, dtype: category</p>
+<p>Categories (5, object): [very bad, bad, medium, good, very good]</p>
+<p>排序是按类别排序的，而不是词汇顺序。</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>In [133]: df.sort\_values(by="grade")</p>
+<p>Out[133]:</p>
+<p>id raw\_grade grade</p>
+<p>5 6 e very bad</p>
+<p>1 2 b good</p>
+<p>2 3 b good</p>
+<p>0 1 a very good</p>
+<p>3 4 a very good</p>
+<p>4 5 a very good</p>
+<p>## <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#%E7%94%BB%E5%9B%BE" title="画图"></a>画图</p>
+<p><a href="http://pandas.pydata.org/pandas-docs/stable/visualization.html#visualization">Plotting</a>文档</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>In [135]: ts = pd.Series(np.random.randn(1000), index=pd.date\_range('1/1/2000', periods=1000))</p>
+<p>In [136]: ts = ts.cumsum()</p>
+<p>In [137]: ts.plot()</p>
+<p>Out[137]: \</p>
+<p><a href="http://pandas.pydata.org/pandas-docs/stable/_images/series_plot_basic.png"><img alt="" src="../resources/6311003EC0AB4B6090F449FF4F02ED59.png" /></a></p>
+<p>在DataFrame上，<code>plot()</code>方便绘制所有带标签的列：</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>In [138]: df = pd.DataFrame(np.random.randn(1000, 4), index=ts.index,</p>
+<p>.....: columns=['A', 'B', 'C', 'D'])</p>
+<p>.....:</p>
+<p>In [139]: df = df.cumsum()</p>
+<p>In [140]: plt.figure(); df.plot(); plt.legend(loc='best')</p>
+<p>Out[140]: \</p>
+<p><a href="http://pandas.pydata.org/pandas-docs/stable/_images/frame_plot_basic.png"><img alt="" src="../resources/EF5167A0E01E8F9A623E79F0ABEFCF09.png" /></a></p>
+<p>## <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#%E5%AF%BC%E5%85%A5%E5%92%8C%E4%BF%9D%E5%AD%98%E6%95%B0%E6%8D%AE" title="导入和保存数据"></a>导入和保存数据</p>
+<p>### <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#CSV" title="CSV"></a>CSV</p>
+<p><a href="http://pandas.pydata.org/pandas-docs/stable/io.html#io-store-in-csv">Writing to a csv file</a></p>
+<p>1</p>
+<p>In [141]: <a href="http://df.to">df.to</a>\_csv('foo.csv')</p>
+<p><a href="http://pandas.pydata.org/pandas-docs/stable/io.html#io-read-csv-table">Reading from a csv file</a></p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>15</p>
+<p>16</p>
+<p>17</p>
+<p>18</p>
+<p>19</p>
+<p>20</p>
+<p>In [142]: pd.read\_csv('foo.csv')</p>
+<p>Out[142]:</p>
+<p>Unnamed: 0 A B C D</p>
+<p>0 2000-01-01 0.266457 -0.399641 -0.219582 1.186860</p>
+<p>1 2000-01-02 -1.170732 -0.345873 1.653061 -0.282953</p>
+<p>2 2000-01-03 -1.734933 0.530468 2.060811 -0.515536</p>
+<p>3 2000-01-04 -1.555121 1.452620 0.239859 -1.156896</p>
+<p>4 2000-01-05 0.578117 0.511371 0.103552 -2.428202</p>
+<p>5 2000-01-06 0.478344 0.449933 -0.741620 -1.962409</p>
+<p>6 2000-01-07 1.235339 -0.091757 -1.543861 -1.084753</p>
+<p>.. ... ... ... ... ...</p>
+<p>993 2002-09-20 -10.628548 -9.153563 -7.883146 28.313940</p>
+<p>994 2002-09-21 -10.390377 -8.727491 -6.399645 30.914107</p>
+<p>995 2002-09-22 -8.985362 -8.485624 -4.669462 31.367740</p>
+<p>996 2002-09-23 -9.558560 -8.781216 -4.499815 30.518439</p>
+<p>997 2002-09-24 -9.902058 -9.340490 -4.386639 30.105593</p>
+<p>998 2002-09-25 -10.216020 -9.480682 -3.933802 29.758560</p>
+<p>999 2002-09-26 -11.856774 -10.671012 -3.216025 29.369368</p>
+<p>[1000 rows x 5 columns]</p>
+<p>### <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#HDF5" title="HDF5"></a>HDF5</p>
+<p>从<a href="http://pandas.pydata.org/pandas-docs/stable/io.html#io-hdf5">HDFStores</a>读取和写入数据</p>
+<p>写入HDF5存储：</p>
+<p>1</p>
+<p>In [143]: <a href="http://df.to">df.to</a>\_hdf('foo.h5','df')</p>
+<p>从HDF5存储中读取：</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>15</p>
+<p>16</p>
+<p>17</p>
+<p>18</p>
+<p>19</p>
+<p>20</p>
+<p>In [144]: pd.read\_hdf('foo.h5','df')</p>
+<p>Out[144]:</p>
+<p>A B C D</p>
+<p>2000-01-01 0.266457 -0.399641 -0.219582 1.186860</p>
+<p>2000-01-02 -1.170732 -0.345873 1.653061 -0.282953</p>
+<p>2000-01-03 -1.734933 0.530468 2.060811 -0.515536</p>
+<p>2000-01-04 -1.555121 1.452620 0.239859 -1.156896</p>
+<p>2000-01-05 0.578117 0.511371 0.103552 -2.428202</p>
+<p>2000-01-06 0.478344 0.449933 -0.741620 -1.962409</p>
+<p>2000-01-07 1.235339 -0.091757 -1.543861 -1.084753</p>
+<p>... ... ... ... ...</p>
+<p>2002-09-20 -10.628548 -9.153563 -7.883146 28.313940</p>
+<p>2002-09-21 -10.390377 -8.727491 -6.399645 30.914107</p>
+<p>2002-09-22 -8.985362 -8.485624 -4.669462 31.367740</p>
+<p>2002-09-23 -9.558560 -8.781216 -4.499815 30.518439</p>
+<p>2002-09-24 -9.902058 -9.340490 -4.386639 30.105593</p>
+<p>2002-09-25 -10.216020 -9.480682 -3.933802 29.758560</p>
+<p>2002-09-26 -11.856774 -10.671012 -3.216025 29.369368</p>
+<p>[1000 rows x 4 columns]</p>
+<p>### <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#Excel" title="Excel"></a>Excel</p>
+<p>从<a href="http://pandas.pydata.org/pandas-docs/stable/io.html#io-excel">MS Excel</a>中读取和写入数据</p>
+<p>写入一个excel文件</p>
+<p>1</p>
+<p>In [145]: <a href="http://df.to">df.to</a>\_excel('foo.xlsx', sheet\_name='Sheet1')</p>
+<p>读取一个excel文件</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>6</p>
+<p>7</p>
+<p>8</p>
+<p>9</p>
+<p>10</p>
+<p>11</p>
+<p>12</p>
+<p>13</p>
+<p>14</p>
+<p>15</p>
+<p>16</p>
+<p>17</p>
+<p>18</p>
+<p>19</p>
+<p>20</p>
+<p>In [146]: pd.read\_excel('foo.xlsx', 'Sheet1', index\_col=None, na\_values=['NA'])</p>
+<p>Out[146]:</p>
+<p>A B C D</p>
+<p>2000-01-01 0.266457 -0.399641 -0.219582 1.186860</p>
+<p>2000-01-02 -1.170732 -0.345873 1.653061 -0.282953</p>
+<p>2000-01-03 -1.734933 0.530468 2.060811 -0.515536</p>
+<p>2000-01-04 -1.555121 1.452620 0.239859 -1.156896</p>
+<p>2000-01-05 0.578117 0.511371 0.103552 -2.428202</p>
+<p>2000-01-06 0.478344 0.449933 -0.741620 -1.962409</p>
+<p>2000-01-07 1.235339 -0.091757 -1.543861 -1.084753</p>
+<p>... ... ... ... ...</p>
+<p>2002-09-20 -10.628548 -9.153563 -7.883146 28.313940</p>
+<p>2002-09-21 -10.390377 -8.727491 -6.399645 30.914107</p>
+<p>2002-09-22 -8.985362 -8.485624 -4.669462 31.367740</p>
+<p>2002-09-23 -9.558560 -8.781216 -4.499815 30.518439</p>
+<p>2002-09-24 -9.902058 -9.340490 -4.386639 30.105593</p>
+<p>2002-09-25 -10.216020 -9.480682 -3.933802 29.758560</p>
+<p>2002-09-26 -11.856774 -10.671012 -3.216025 29.369368</p>
+<p>[1000 rows x 4 columns]</p>
+<p>## <a href="http://studyai.site/2017/11/30/10%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8BPandas/#%E9%99%B7%E9%98%B1" title="陷阱"></a>陷阱</p>
+<p>如果你正在尝试一个操作，你会看到一个异常：</p>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>\>\>\> if pd.Series([False, True, False]):</p>
+<p>print("I was true")</p>
+<p>Traceback</p>
+<p>...</p>
+<p>ValueError: The truth value of an array is ambiguous. Use a.empty, a.any() or a.all().</p>
+<p>请参阅<a href="http://pandas.pydata.org/pandas-docs/stable/basics.html#basics-compare">Comparisons</a>以获取解释以及如何处理。</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../tensorflow/如何选择优化器 optimizer/" title="如何选择优化器 optimizer" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                如何选择优化器 optimizer
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../主成分分析-2/" title="主成分分析 2" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                主成分分析 2
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2018 Martin Donath
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="http://struct.cc" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/1007530194" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/1007530194" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/1007530194" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.189d7058.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../../.."}})</script>
+      
+        <script src="../../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
