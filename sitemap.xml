@@ -2,10 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     
+    <url>
+     <loc>https://1007530194.github.io/Diary//</loc>
+     <lastmod>2018-03-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
         
     <url>
-     <loc>/</loc>
-     <lastmod>2018-03-09</lastmod>
+     <loc>https://1007530194.github.io/Diary//AboutMe/</loc>
+     <lastmod>2018-03-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://1007530194.github.io/Diary//</loc>
+     <lastmod>2018-03-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://1007530194.github.io/Diary//要做的/</loc>
+     <lastmod>2018-03-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -14,20 +34,14 @@
     
         
     <url>
-     <loc>/About/</loc>
-     <lastmod>2018-03-09</lastmod>
+     <loc>https://1007530194.github.io/Diary/</loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/Cheatsheet/</loc>
-     <lastmod>2018-03-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/Index/</loc>
-     <lastmod>2018-03-09</lastmod>
+     <loc>https://1007530194.github.io/Diary/</loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -36,8 +50,14 @@
     
         
     <url>
-     <loc>/常用/2018-02-23-latex语法/</loc>
-     <lastmod>2018-03-09</lastmod>
+     <loc>https://1007530194.github.io/Diary/</loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://1007530194.github.io/Diary/</loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -46,160 +66,44 @@
     
         
     <url>
-     <loc>/常用工具/2018-02-24-10分钟上手Pandas/</loc>
-     <lastmod>2018-03-09</lastmod>
+     <loc>https://1007530194.github.io/Diary//工具/About/</loc>
+     <lastmod>2018-03-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://1007530194.github.io/Diary//工具/Cheatsheet/</loc>
+     <lastmod>2018-03-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     
 
     
-        
     <url>
-     <loc>/机器学习实战/2017-01-01-1.机器学习基础/</loc>
-     <lastmod>2018-03-09</lastmod>
+     <loc>https://1007530194.github.io/Diary/</loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    <url>
-     <loc>/机器学习实战/2017-02-01-2.k-近邻算法/</loc>
-     <lastmod>2018-03-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/机器学习实战/2017-03-01-3.决策树/</loc>
-     <lastmod>2018-03-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/机器学习实战/2017-04-01-4.朴素贝叶斯/</loc>
-     <lastmod>2018-03-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/机器学习实战/2017-04-02-naive-bayes-discuss/</loc>
-     <lastmod>2018-03-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/机器学习实战/2017-05-01-5.Logistic回归/</loc>
-     <lastmod>2018-03-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/机器学习实战/2017-06-01-6.支持向量机/</loc>
-     <lastmod>2018-03-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/机器学习实战/2017-06-02-6.1.支持向量机的几个通俗理解/</loc>
-     <lastmod>2018-03-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/机器学习实战/2017-07-01-7.集成方法-随机森林和AdaBoost/</loc>
-     <lastmod>2018-03-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/机器学习实战/2017-09-01-9.树回归/</loc>
-     <lastmod>2018-03-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/机器学习实战/2017-10-01-10.k-means聚类/</loc>
-     <lastmod>2018-03-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/机器学习实战/2017-11-01-11.使用Apriori算法进行关联分析/</loc>
-     <lastmod>2018-03-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/机器学习实战/2017-12-01-12.使用FP-growth算法来高效发现频繁项集/</loc>
-     <lastmod>2018-03-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/机器学习实战/2018-01-01-13.利用PCA来简化数据/</loc>
-     <lastmod>2018-03-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/机器学习实战/2018-02-01-14.利用SVD简化数据/</loc>
-     <lastmod>2018-03-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/机器学习实战/2018-03-01-15.大数据与MapReduce/</loc>
-     <lastmod>2018-03-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/机器学习实战/2018-04-01-16.推荐系统/</loc>
-     <lastmod>2018-03-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/机器学习实战/预测数值型数据,回归/</loc>
-     <lastmod>2018-03-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
     
 
     
         
     <url>
-     <loc>/深度学习/2018-02-23-10分钟上手Pandas/</loc>
-     <lastmod>2018-03-09</lastmod>
+     <loc>https://1007530194.github.io/Diary/</loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/深度学习/2018-02-23-主成分分析 (2)/</loc>
-     <lastmod>2018-03-09</lastmod>
+     <loc>https://1007530194.github.io/Diary/</loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/深度学习/2018-02-23-主成分分析/</loc>
-     <lastmod>2018-03-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/深度学习/2018-02-23-最小二乘法/</loc>
-     <lastmod>2018-03-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/深度学习/2018-02-23-矩阵分解/</loc>
-     <lastmod>2018-03-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>/深度学习/2018-02-23-矩阵求导/</loc>
-     <lastmod>2018-03-09</lastmod>
+     <loc>https://1007530194.github.io/Diary/</loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         

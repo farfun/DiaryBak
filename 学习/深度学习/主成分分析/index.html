@@ -1,0 +1,1446 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Nothing is impossible">
+      
+      
+        <link rel="canonical" href="https://1007530194.github.io/Diary/学习/深度学习/主成分分析/">
+      
+      
+        <meta name="author" content="NiuLiangtao">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.0">
+    
+    
+      
+        <title>主成分分析</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.78aab2dc.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#pca" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://1007530194.github.io/Diary/" title="Blog of NiuLiangtao" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Blog of NiuLiangtao
+              </span>
+              <span class="md-header-nav__topic">
+                主成分分析
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/1007530194/Diary" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      1007530194/Diary
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../.." title="Home" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../AboutMe/" title="Home" class="md-tabs__link">
+          Home
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../书籍/机器学习实战/00naive-bayes-discuss/" title="书籍" class="md-tabs__link">
+          书籍
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../tensorflow/如何选择优化器 optimizer/" title="学习" class="md-tabs__link">
+          学习
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../工具/About/" title="工具" class="md-tabs__link">
+          工具
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../日常/test/testtest/" title="日常" class="md-tabs__link">
+          日常
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    Blog of NiuLiangtao
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/1007530194/Diary" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      1007530194/Diary
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Home
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Home
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../AboutMe/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../要做的/" title="要做的" class="md-nav__link">
+      要做的
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      书籍
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        书籍
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      机器学习实战
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        机器学习实战
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/00naive-bayes-discuss/" title="naive-bayes-discuss" class="md-nav__link">
+      naive-bayes-discuss
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/01.机器学习基础/" title="1.机器学习基础" class="md-nav__link">
+      1.机器学习基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/02.k-近邻算法/" title="2.k-近邻算法" class="md-nav__link">
+      2.k-近邻算法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/03.决策树/" title="3.决策树" class="md-nav__link">
+      3.决策树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/04.朴素贝叶斯/" title="4.朴素贝叶斯" class="md-nav__link">
+      4.朴素贝叶斯
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/05.Logistic回归/" title="5.Logistic回归" class="md-nav__link">
+      5.Logistic回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/06.0.支持向量机/" title="6.支持向量机" class="md-nav__link">
+      6.支持向量机
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/06.1.支持向量机的几个通俗理解/" title="6.1.支持向量机的几个通俗理解" class="md-nav__link">
+      6.1.支持向量机的几个通俗理解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/07.集成方法-随机森林和AdaBoost/" title="7.集成方法-随机森林和AdaBoost" class="md-nav__link">
+      7.集成方法-随机森林和AdaBoost
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/08.预测数值型数据-回归/" title="8.预测数值型数据：回归" class="md-nav__link">
+      8.预测数值型数据：回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/09.树回归/" title="9.树回归" class="md-nav__link">
+      9.树回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/10.k-means聚类/" title="10.k-means聚类" class="md-nav__link">
+      10.k-means聚类
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/11.使用Apriori算法进行关联分析/" title="11.使用Apriori算法进行关联分析" class="md-nav__link">
+      11.使用Apriori算法进行关联分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/12.使用FP-growth算法来高效发现频繁项集/" title="12.使用FP-growth算法来高效发现频繁项集" class="md-nav__link">
+      12.使用FP-growth算法来高效发现频繁项集
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/13.利用PCA来简化数据/" title="13.利用PCA来简化数据" class="md-nav__link">
+      13.利用PCA来简化数据
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/14.利用SVD简化数据/" title="14.利用SVD简化数据" class="md-nav__link">
+      14.利用SVD简化数据
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/15.大数据与MapReduce/" title="15.大数据与MapReduce" class="md-nav__link">
+      15.大数据与MapReduce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/机器学习实战/16.推荐系统/" title="16.推荐系统" class="md-nav__link">
+      16.推荐系统
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      深度学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        深度学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../书籍/深度学习/DeepLearning/" title="深度学习中文版" class="md-nav__link">
+      深度学习中文版
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      tensorflow
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        tensorflow
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tensorflow/如何选择优化器 optimizer/" title="如何选择优化器 optimizer" class="md-nav__link">
+      如何选择优化器 optimizer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" checked>
+    
+    <label class="md-nav__link" for="nav-4-2">
+      深度学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        深度学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../10分钟上手Pandas/" title="10分钟上手Pandas" class="md-nav__link">
+      10分钟上手Pandas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
+      主成分分析 (2)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        主成分分析
+      </label>
+    
+    <a href="./" title="主成分分析" class="md-nav__link md-nav__link--active">
+      主成分分析
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#146" title="1. 相关背景" class="md-nav__link">
+    1. 相关背景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#246" title="2. 问题描述" class="md-nav__link">
+    2. 问题描述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#346" title="3. 数据降维" class="md-nav__link">
+    3. 数据降维
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../最小二乘法/" title="最小二乘法" class="md-nav__link">
+      最小二乘法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../矩阵分解/" title="矩阵分解" class="md-nav__link">
+      矩阵分解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../矩阵求导/" title="矩阵求导" class="md-nav__link">
+      矩阵求导
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../工具/About/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../工具/Cheatsheet/" title="Cheatsheet" class="md-nav__link">
+      Cheatsheet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="" title="文章" class="md-nav__link">
+      文章
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      日常
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        日常
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1">
+    
+    <label class="md-nav__link" for="nav-7-1">
+      test
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-1">
+        test
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../日常/test/testtest/" title="Testtest" class="md-nav__link">
+      Testtest
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2">
+    
+    <label class="md-nav__link" for="nav-7-2">
+      常用
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-2">
+        常用
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../日常/常用/latex语法/" title="Latex语法" class="md-nav__link">
+      Latex语法
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      常用工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        常用工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../日常/常用工具/10分钟上手Pandas/" title="10分钟上手Pandas" class="md-nav__link">
+      10分钟上手Pandas
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#146" title="1. 相关背景" class="md-nav__link">
+    1. 相关背景
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#246" title="2. 问题描述" class="md-nav__link">
+    2. 问题描述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#346" title="3. 数据降维" class="md-nav__link">
+    3. 数据降维
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <p>转载请声明出处：<a href="http://blog.csdn.net/zhongkelee/article/details/44064401">http://blog.csdn.net/zhongkelee/article/details/44064401</a></p>
+<h1 id="pca"><strong>一、PCA简介</strong><a class="headerlink" href="#pca" title="Permanent link">&para;</a></h1>
+<h2 id="146"><strong>1. 相关背景</strong><a class="headerlink" href="#146" title="Permanent link">&para;</a></h2>
+<p>上完陈恩红老师的《机器学习与知识发现》和季海波老师的《矩阵代数》两门课之后，颇有体会。最近在做主成分分析和奇异值分解方面的项目，所以记录一下心得体会。</p>
+<p>在许多领域的研究与应用中，往往需要对反映事物的多个变量进行大量的观测，收集大量数据以便进行分析寻找规律。多变量大样本无疑会为研究和应用提供了丰富的信息，但也在一定程度上增加了数据采集的工作量，更重要的是在多数情况下，许多变量之间可能存在相关性，从而增加了问题分析的复杂性，同时对分析带来不便。如果分别对每个指标进行分析，分析往往是孤立的，而不是综合的。盲目减少指标会损失很多信息，容易产生错误的结论。</p>
+<p>因此需要找到一个合理的方法，在减少需要分析的指标同时，尽量减少原指标包含信息的损失，以达到对所收集数据进行全面分析的目的。由于各变量间存在一定的相关关系，因此有可能用较少的综合指标分别综合存在于各变量中的各类信息。主成分分析与因子分析就属于这类降维的方法。</p>
+<h2 id="246">2. 问题描述<a class="headerlink" href="#246" title="Permanent link">&para;</a></h2>
+<p>下表1是某些学生的语文、数学、物理、化学成绩统计：</p>
+<p><img alt="" src="../resources/B9DA6A4845C16156E47AD335D18EA6E0.jpg" /></p>
+<p>首先，假设这些科目成绩不相关，也就是说某一科目考多少分与其他科目没有关系。那么一眼就能看出来，数学、物理、化学这三门课的成绩构成了这组数据的主成分（很显然，数学作为第一主成分，因为数学成绩拉的最开）。为什么一眼能看出来？因为坐标轴选对了！下面再看一组学生的数学、物理、化学、语文、历史、英语成绩统计，见表2，还能不能一眼看出来：</p>
+<p><img alt="" src="../resources/69D88091D516A0064551D8F2881A2EDE.jpg" /></p>
+<p>数据太多了，以至于看起来有些凌乱！也就是说，无法直接看出这组数据的主成分，因为在坐标系下这组数据分布的很散乱。究其原因，是因为无法拨开遮住肉眼的迷雾~如果把这些数据在相应的空间中表示出来，也许你就能换一个观察角度找出主成分。如下图1所示：</p>
+<p><img alt="" src="../resources/DB0C770D8DD55E5A433B6306D7085BF3.jpg" /></p>
+<p>但是，对于更高维的数据，能想象其分布吗？就算能描述分布，如何精确地找到这些主成分的轴？如何衡量你提取的主成分到底占了整个数据的多少信息？所以，我们就要用到主成分分析的处理方法。</p>
+<h2 id="346">3. 数据降维<a class="headerlink" href="#346" title="Permanent link">&para;</a></h2>
+<p>为了说明什么是数据的主成分，先从数据降维说起。数据降维是怎么回事儿？假设三维空间中有一系列点，这些点分布在一个过原点的斜面上，如果你用自然坐标系x,y,z这三个轴来表示这组数据的话，需要使用三个维度，而事实上，这些点的分布仅仅是在一个二维的平面上，那么，问题出在哪里？如果你再仔细想想，能不能把x,y,z坐标系旋转一下，使数据所在平面与x,y平面重合？这就对了！如果把旋转后的坐标系记为x',y',z'，那么这组数据的表示只用x'和y'两个维度表示即可！当然了，如果想恢复原来的表示方式，那就得把这两个坐标之间的变换矩阵存下来。这样就能把数据维度降下来了！但是，我们要看到这个过程的本质，如果把这些数据按行或者按列排成一个矩阵，那么这个矩阵的秩就是2！这些数据之间是有相关性的，这些数据构成的过原点的向量的最大线性无关组包含2个向量，这就是为什么一开始就假设平面过原点的原因！那么如果平面不过原点呢？这就是数据中心化的缘故！将坐标原点平移到数据中心，这样原本不相关的数据在这个新坐标系中就有相关性了！有趣的是，三点一定共面，也就是说三维空间中任意三点中心化后都是线性相关的，一般来讲n维空间中的n个点一定能在一个n-1维子空间中分析！</p>
+<p>上一段文字中，认为把数据降维后并没有丢弃任何东西，因为这些数据在平面以外的第三个维度的分量都为0。现在，假设这些数据在z'轴有一个很小的抖动，那么我们仍然用上述的二维表示这些数据，理由是我们可以认为这两个轴的信息是数据的主成分，而这些信息对于我们的分析已经足够了，z'轴上的抖动很有可能是噪声，也就是说本来这组数据是有相关性的，噪声的引入，导致了数据不完全相关，但是，这些数据在z'轴上的分布与原点构成的夹角非常小，也就是说在z'轴上有很大的相关性，综合这些考虑，就可以认为数据在x',y' 轴上的投影构成了数据的主成分！</p>
+<p>课堂上老师谈到的特征选择的问题，其实就是要剔除的特征主要是和类标签无关的特征。而这里的特征很多是和类标签有关的，但里面存在噪声或者冗余。在这种情况下，需要一种特征降维的方法来减少特征数，减少噪音和冗余，减少过度拟合的可能性。</p>
+<p>PCA的思想是将n维特征映射到k维上（k\&lt;n），这k维是全新的正交特征。这k维特征称为主成分，是重新构造出来的k维特征，而不是简单地从n维特征中去除其余n-k维特征。</p>
+<h1 id="pca_1">二、PCA实例<a class="headerlink" href="#pca_1" title="Permanent link">&para;</a></h1>
+<p>现在假设有一组数据如下：</p>
+<p><img alt="" src="../resources/75D505A58D5B23BD4ED7207C087B5F04.jpg" /></p>
+<p>行代表了样例，列代表特征，这里有10个样例，每个样例两个特征。可以这样认为，有10篇文档，x是10篇文档中“learn”出现的TF-IDF，y是10篇文档中“study”出现的TF-IDF。
+<strong>第一步</strong>，分别求x和y的平均值，然后对于所有的样例，都减去对应的均值。这里x的均值是1.81，y的均值是1.91，那么一个样例减去均值后即为（0.69,0.49），得到</p>
+<p><img alt="" src="../resources/8D90FF4FA2A8A73A23B6D3C61E0892AA.jpg" /></p>
+<p><strong>第二步</strong>，求特征协方差矩阵，如果数据是3维，那么协方差矩阵是</p>
+<div>
+<div class="MathJax_Preview">C 
+=\begin{pmatrix}  
+   cov(x,x) &amp; cov(x,y) &amp; cov(x,z)
+\\ cov(y,x) &amp; cov(y,y) &amp; cov(y,z)
+\\ cov(z,x) &amp; cov(z,y) &amp; cov(z,z)
+\end{pmatrix}</div>
+<script type="math/tex; mode=display">C 
+=\begin{pmatrix}  
+   cov(x,x) & cov(x,y) & cov(x,z)
+\\ cov(y,x) & cov(y,y) & cov(y,z)
+\\ cov(z,x) & cov(z,y) & cov(z,z)
+\end{pmatrix}</script>
+</div>
+<p>这里只有<span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>和<span><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>，求解得</p>
+<div>
+<div class="MathJax_Preview">cov =\begin{pmatrix}  0.6166 &amp; 0.6154 \\ 0.6154 &amp; 0.7166 \end{pmatrix}</div>
+<script type="math/tex; mode=display">cov =\begin{pmatrix}  0.6166 & 0.6154 \\ 0.6154 & 0.7166 \end{pmatrix}</script>
+</div>
+<p>对角线上分别是<span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>和<span><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>的方差，非对角线上是协方差。协方差是衡量两个变量同时变化的变化程度。协方差大于0表示<span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>和<span><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>若一个增，另一个也增；小于0表示一个增，一个减。如果<span><span class="MathJax_Preview">ｘ</span><script type="math/tex">ｘ</script></span>和<span><span class="MathJax_Preview">ｙ</span><script type="math/tex">ｙ</script></span>是统计独立的，那么二者之间的协方差就是０；但是协方差是０，并不能说明<span><span class="MathJax_Preview">ｘ</span><script type="math/tex">ｘ</script></span>和<span><span class="MathJax_Preview">ｙ</span><script type="math/tex">ｙ</script></span>是独立的。协方差绝对值越大，两者对彼此的影响越大，反之越小。协方差是没有单位的量，因此，如果同样的两个变量所采用的量纲发生变化，它们的协方差也会产生树枝上的变化。</p>
+<p><strong>第三步</strong>，求协方差的特征值和特征向量，得到</p>
+<div>
+<div class="MathJax_Preview">eigenvalues =\begin{pmatrix}  0.0491 \\ 1.2840 \end{pmatrix}$$
+$$eigenvalues =\begin{pmatrix}  -0.7352 &amp; -0.6779  \\ 0.6779 &amp; -0.7352 \end{pmatrix}</div>
+<script type="math/tex; mode=display">eigenvalues =\begin{pmatrix}  0.0491 \\ 1.2840 \end{pmatrix}$$
+$$eigenvalues =\begin{pmatrix}  -0.7352 & -0.6779  \\ 0.6779 & -0.7352 \end{pmatrix}</script>
+</div>
+<p>上面是两个特征值，下面是对应的特征向量，特征值<span><span class="MathJax_Preview">0.0491</span><script type="math/tex">0.0491</script></span>对应特征向量为
+ <span><span class="MathJax_Preview">(-0.7352, 0.6779)^T</span><script type="math/tex">(-0.7352, 0.6779)^T</script></span> <a href="http://images.cnblogs.com/cnblogs_com/jerrylead/201104/201104182110418392.png"></a>，这里的特征向量都归一化为单位向量。</p>
+<p><strong>第四步</strong>，将特征值按照从大到小的顺序排序，选择其中最大的<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>个，然后将其对应的<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>个特征向量分别作为列向量组成特征向量矩阵。</p>
+<p>这里特征值只有两个，我们选择其中最大的那个，这里是1.2840 ，对应的特征向量是<span><span class="MathJax_Preview">(-0.6779, -0.7352)^T</span><script type="math/tex">(-0.6779, -0.7352)^T</script></span>。</p>
+<p><strong>第五步</strong>，将样本点投影到选取的特征向量上。假设样例数为m，特征数为n，减去均值后的样本矩阵为DataAdjust(m*n)，协方差矩阵是n*n，选取的k个特征向量组成的矩阵为EigenVectors(n*k)。那么投影后的数据FinalData为</p>
+<p>FinalData(10*1) = DataAdjust(10*2矩阵) x 特征向量(-0.677873399, -0.735178656)T</p>
+<p>得到的结果是</p>
+<p><img alt="" src="../resources/6982652D0714C2C2B1DE20D04979AF23.jpg" /> </p>
+<p>这样，就将原始样例的n维特征变成了k维，这k维就是原始特征在k维上的投影。</p>
+<p>上面的数据可以认为是learn和study特征融合为一个新的特征叫做LS特征，该特征基本上代表了这两个特征。上述过程如下图2描述：</p>
+<p><img alt="" src="../resources/492B41A3AB2E81224EBCE0B2D275B99A.jpg" /></p>
+<p>正号表示预处理后的样本点，斜着的两条线就分别是正交的特征向量（由于协方差矩阵是对称的，因此其特征向量正交），最后一步的矩阵乘法就是将原始样本点分别往特征向量对应的轴上做投影。</p>
+<p>整个PCA过程貌似及其简单，就是求协方差的特征值和特征向量，然后做数据转换。但是有没有觉得很神奇，为什么求协方差的特征向量就是最理想的k维向量？其背后隐藏的意义是什么？整个PCA的意义是什么？</p>
+<h1 id="pca_2">三、PCA推导<a class="headerlink" href="#pca_2" title="Permanent link">&para;</a></h1>
+<p>先看下面这幅图：</p>
+<p><img alt="" src="../resources/D501436FE83B8D4B25450A022482D5A4.jpg" /></p>
+<p>在第一部分中，我们举了一个学生成绩的例子，里面的数据点是六维的，即每个观测值是6维空间中的一个点。我们希望将6维空间用低维空间表示。</p>
+<p>先假定只有二维，即只有两个变量，它们由横坐标和纵坐标所代表；因此每个观测值都有相应于这两个坐标轴的两个坐标值；如果这些数据形成一个椭圆形状的点阵，那么这个椭圆有一个长轴和一个短轴。在短轴方向上，数据变化很少；在极端的情况，短轴如果退化成一点，那只有在长轴的方向才能够解释这些点的变化了；这样，由二维到一维的降维就自然完成了。</p>
+<p>上图中，u1就是主成分方向，然后在二维空间中取和u1方向正交的方向，就是u2的方向。则n个数据在u1轴的离散程度最大（方差最大），数据在u1上的投影代表了原始数据的绝大部分信息，即使不考虑u2，信息损失也不多。而且，u1、u2不相关。只考虑u1时，二维降为一维。</p>
+<p>椭圆的长短轴相差得越大，降维也越有道理。</p>
+<h2 id="146_1">1. 最大方差理论<a class="headerlink" href="#146_1" title="Permanent link">&para;</a></h2>
+<p>在信号处理中认为信号具有较大的方差，噪声有较小的方差，信噪比就是信号与噪声的方差比，越大越好。如前面的图，样本在u1上的投影方差较大，在u2上的投影方差较小，那么可认为u2上的投影是由噪声引起的。</p>
+<p>因此我们认为，最好的k维特征是将n维样本点转换为k维后，每一维上的样本方差都很大。</p>
+<p>比如我们将下图中的5个点投影到某一维上，这里用一条过原点的直线表示（数据已经中心化）：</p>
+<p><img alt="" src="../resources/67EA539D3B60F74AA93BA6ABD6958D08.jpg" /></p>
+<p>假设我们选择两条不同的直线做投影，那么左右两条中哪个好呢？根据我们之前的方差最大化理论，左边的好，因为投影后的样本点之间方差最大（也可以说是投影的绝对值之和最大）。</p>
+<p>计算投影的方法见下图5：</p>
+<p><img alt="" src="../resources/4EE05BAB3CE8C243E39BFF13C16B1AC3.jpg" /></p>
+<p>图中，红色点表示样例<a href="http://images.cnblogs.com/cnblogs_com/jerrylead/201104/201104182110531216.png"></a>，蓝色点表示在u上的投影，u是直线的斜率也是直线的方向向量，而且是单位向量。蓝色点是<a href="http://images.cnblogs.com/cnblogs_com/jerrylead/201104/201104182110559971.png"></a>在u上的投影点，离原点的距离是<a href="http://images.cnblogs.com/cnblogs_com/jerrylead/201104/201104182110554921.png"></a>\&lt;x,u>（即xTu<a href="http://images.cnblogs.com/cnblogs_com/jerrylead/201104/201104182110567397.png"></a>或者uTx<a href="http://images.cnblogs.com/cnblogs_com/jerrylead/201104/201104182110566458.png"></a>）。</p>
+<h2 id="246_1">2. 最小二乘法<a class="headerlink" href="#246_1" title="Permanent link">&para;</a></h2>
+<p>我们使用最小二乘法来确定各个主轴（主成分）的方向。
+ 对给定的一组数据（下面的阐述中，向量一般均指列向量）：
+<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\{\vec{\boldsymbol z_1},\vec{\boldsymbol z_2},...,\vec{\boldsymbol z_n} \}</span><script type="math/tex">\{\vec{\boldsymbol z_1},\vec{\boldsymbol z_2},...,\vec{\boldsymbol z_n} \}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\{\vec{\boldsymbol z_1},\vec{\boldsymbol z_2},...,\vec{\boldsymbol z_n} \}</span><script type="math/tex">\{\vec{\boldsymbol z_1},\vec{\boldsymbol z_2},...,\vec{\boldsymbol z_n} \}</script></span></script></span>
+ 其数据中心位于:
+$$ \overrightarrow{\boldsymbol{\mu}} = \frac{1}{n}\sum^n_{i=1}\vec{\boldsymbol z_i}$$
+ 数据中心化（将坐标原点移到样本点的中心点）：
+<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\{\vec{\boldsymbol x_1},\vec{\boldsymbol x_2},...,\vec{\boldsymbol x_n} \}=\{\vec{\boldsymbol z_1}-\overrightarrow{\boldsymbol{\mu}},\vec{\boldsymbol z_2}-\overrightarrow{\boldsymbol{\mu}},...,\vec{\boldsymbol z_n}-\overrightarrow{\boldsymbol{\mu}} \}</span><script type="math/tex">\{\vec{\boldsymbol x_1},\vec{\boldsymbol x_2},...,\vec{\boldsymbol x_n} \}=\{\vec{\boldsymbol z_1}-\overrightarrow{\boldsymbol{\mu}},\vec{\boldsymbol z_2}-\overrightarrow{\boldsymbol{\mu}},...,\vec{\boldsymbol z_n}-\overrightarrow{\boldsymbol{\mu}} \}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\{\vec{\boldsymbol x_1},\vec{\boldsymbol x_2},...,\vec{\boldsymbol x_n} \}=\{\vec{\boldsymbol z_1}-\overrightarrow{\boldsymbol{\mu}},\vec{\boldsymbol z_2}-\overrightarrow{\boldsymbol{\mu}},...,\vec{\boldsymbol z_n}-\overrightarrow{\boldsymbol{\mu}} \}</span><script type="math/tex">\{\vec{\boldsymbol x_1},\vec{\boldsymbol x_2},...,\vec{\boldsymbol x_n} \}=\{\vec{\boldsymbol z_1}-\overrightarrow{\boldsymbol{\mu}},\vec{\boldsymbol z_2}-\overrightarrow{\boldsymbol{\mu}},...,\vec{\boldsymbol z_n}-\overrightarrow{\boldsymbol{\mu}} \}</script></span></script></span>
+ 中心化后的数据在第一主轴u1方向上分布散的最开，也就是说在u1方向上的投影的绝对值之和最大（也可以说方差最大），计算投影的方法上面已经阐述，就是将x与u1做内积，由于只需要求u1的方向，所以设u1也是单位向量。</p>
+<p>在这里，也就是最大化下式：
+$$ \frac{1}{n}\sum^n_{i=1}\vec{\boldsymbol x_i}\vec{\boldsymbol{u_1}} $$
+ 由矩阵代数相关知识可知，可以对绝对值符号项进行平方处理，比较方便。所以进而就是最大化下式：
+$$ \frac{1}{n}\sum^n_{i=1} \left| \vec{\boldsymbol x_i} \cdot \vec{\boldsymbol{u_1}} \right|^2
+ = \frac{1}{n}\sum^n_{i=1} \left( \vec{\boldsymbol x_i} \cdot \vec{\boldsymbol{u_1}} \right)^2 $$</p>
+<p>两个向量做内积，可以转化成矩阵乘法：
+ <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\vec{\boldsymbol x_i} \cdot \vec{\boldsymbol{u_1}} 
+ ={\boldsymbol x_i}^T {\boldsymbol{u_1}}</span><script type="math/tex">\vec{\boldsymbol x_i} \cdot \vec{\boldsymbol{u_1}} 
+ ={\boldsymbol x_i}^T {\boldsymbol{u_1}}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\vec{\boldsymbol x_i} \cdot \vec{\boldsymbol{u_1}} 
+ ={\boldsymbol x_i}^T {\boldsymbol{u_1}}</span><script type="math/tex">\vec{\boldsymbol x_i} \cdot \vec{\boldsymbol{u_1}} 
+ ={\boldsymbol x_i}^T {\boldsymbol{u_1}}</script></span></script></span></p>
+<p>所以目标函数可以表示为：
+ $$\frac{1}{n}\sum^n_{i=1} \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)^2 $$
+<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\begin{pmatrix} \\ \\ \\   \\ \\ \\ \\ \\ \\ \\ \\ \\  \end{pmatrix}</span><script type="math/tex">\begin{pmatrix} \\ \\ \\   \\ \\ \\ \\ \\ \\ \\ \\ \\  \end{pmatrix}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\begin{pmatrix} \\ \\ \\   \\ \\ \\ \\ \\ \\ \\ \\ \\  \end{pmatrix}</span><script type="math/tex">\begin{pmatrix} \\ \\ \\   \\ \\ \\ \\ \\ \\ \\ \\ \\  \end{pmatrix}</script></span></script></span></p>
+<p>括号里面就是矩阵乘法表示向量内积，由于列向量转置以后是行向量，行向量乘以列向量得到一个数，一个数的转置还是其本身，所以又可以将目标函数化为：
+<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\frac{1}{n}\sum^n_{i=1} \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)^2 
+=\frac{1}{n}\sum^n_{i=1} \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)^T \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)
+\\=\frac{1}{n}\sum^n_{i=1} {\boldsymbol{u_1}}^T {\boldsymbol x_i} {\boldsymbol x_i}^T {\boldsymbol{u_1}}
+\\=\frac{1}{n}{\boldsymbol{u_1}}^T \left( \sum^n_{i=1}  {\boldsymbol x_i} {\boldsymbol x_i}^T \right) {\boldsymbol{u_1}}
+\\=\frac{1}{n}{\boldsymbol{u_1}}^T XX^T {\boldsymbol{u_1}}</span><script type="math/tex">\frac{1}{n}\sum^n_{i=1} \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)^2 
+=\frac{1}{n}\sum^n_{i=1} \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)^T \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)
+\\=\frac{1}{n}\sum^n_{i=1} {\boldsymbol{u_1}}^T {\boldsymbol x_i} {\boldsymbol x_i}^T {\boldsymbol{u_1}}
+\\=\frac{1}{n}{\boldsymbol{u_1}}^T \left( \sum^n_{i=1}  {\boldsymbol x_i} {\boldsymbol x_i}^T \right) {\boldsymbol{u_1}}
+\\=\frac{1}{n}{\boldsymbol{u_1}}^T XX^T {\boldsymbol{u_1}}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\frac{1}{n}\sum^n_{i=1} \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)^2 
+=\frac{1}{n}\sum^n_{i=1} \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)^T \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)
+\\=\frac{1}{n}\sum^n_{i=1} {\boldsymbol{u_1}}^T {\boldsymbol x_i} {\boldsymbol x_i}^T {\boldsymbol{u_1}}
+\\=\frac{1}{n}{\boldsymbol{u_1}}^T \left( \sum^n_{i=1}  {\boldsymbol x_i} {\boldsymbol x_i}^T \right) {\boldsymbol{u_1}}
+\\=\frac{1}{n}{\boldsymbol{u_1}}^T XX^T {\boldsymbol{u_1}}</span><script type="math/tex">\frac{1}{n}\sum^n_{i=1} \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)^2 
+=\frac{1}{n}\sum^n_{i=1} \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)^T \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)
+\\=\frac{1}{n}\sum^n_{i=1} {\boldsymbol{u_1}}^T {\boldsymbol x_i} {\boldsymbol x_i}^T {\boldsymbol{u_1}}
+\\=\frac{1}{n}{\boldsymbol{u_1}}^T \left( \sum^n_{i=1}  {\boldsymbol x_i} {\boldsymbol x_i}^T \right) {\boldsymbol{u_1}}
+\\=\frac{1}{n}{\boldsymbol{u_1}}^T XX^T {\boldsymbol{u_1}}</script></span></script></span></p>
+<p>其中的<span><span class="MathJax_Preview">{\boldsymbol{u_1}}^T XX^T {\boldsymbol{u_1}}</span><script type="math/tex">{\boldsymbol{u_1}}^T XX^T {\boldsymbol{u_1}}</script></span>就是一个二次型，
+ 我们假设 <span><span class="MathJax_Preview">XX^T</span><script type="math/tex">XX^T</script></span> 的某一特征值为<span><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span>，对应的特征向量为$\xi $，有
+<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">(XX^T)^T=XX^T</span><script type="math/tex">(XX^T)^T=XX^T</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">(XX^T)^T=XX^T</span><script type="math/tex">(XX^T)^T=XX^T</script></span></script></span>
+<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">XX^T\xi=\lambda\xi</span><script type="math/tex">XX^T\xi=\lambda\xi</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">XX^T\xi=\lambda\xi</span><script type="math/tex">XX^T\xi=\lambda\xi</script></span></script></span>
+<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">(XX^T\xi)^T\xi=(\lambda\xi)^T\xi</span><script type="math/tex">(XX^T\xi)^T\xi=(\lambda\xi)^T\xi</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">(XX^T\xi)^T\xi=(\lambda\xi)^T\xi</span><script type="math/tex">(XX^T\xi)^T\xi=(\lambda\xi)^T\xi</script></span></script></span>
+<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\xi^TXX^T\xi=\lambda\xi^T\xi</span><script type="math/tex">\xi^TXX^T\xi=\lambda\xi^T\xi</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\xi^TXX^T\xi=\lambda\xi^T\xi</span><script type="math/tex">\xi^TXX^T\xi=\lambda\xi^T\xi</script></span></script></span>
+<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\xi^TXX^T\xi = (X^T\xi)^T(X^T\xi) =\lVert X^T\xi\rVert^2 = \lambda\xi^T\xi = \lambda\lVert\xi\rVert^2 \ge 0</span><script type="math/tex">\xi^TXX^T\xi = (X^T\xi)^T(X^T\xi) =\lVert X^T\xi\rVert^2 = \lambda\xi^T\xi = \lambda\lVert\xi\rVert^2 \ge 0</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\xi^TXX^T\xi = (X^T\xi)^T(X^T\xi) =\lVert X^T\xi\rVert^2 = \lambda\xi^T\xi = \lambda\lVert\xi\rVert^2 \ge 0</span><script type="math/tex">\xi^TXX^T\xi = (X^T\xi)^T(X^T\xi) =\lVert X^T\xi\rVert^2 = \lambda\xi^T\xi = \lambda\lVert\xi\rVert^2 \ge 0</script></span></script></span>
+ <img alt="" src="../resources/B1A76A5DD5CBF7038828C6B8B2F27DA3.jpg" /></p>
+<p>所以<img alt="" src="../resources/B96C0EBC0E38C68850DC072A41D4144B.jpg" />，<img alt="" src="../resources/DA34EBDDA776378A81AB97551EC955E5.jpg" />是半正定的对称矩阵，即<img alt="" src="../resources/B912D0B49B333C84810B9F42FDC2C371.jpg" />是半正定阵的二次型，由矩阵代数知识得出，目标函数存在最大值！</p>
+<p>下面我们求解最大值、取得最大值时u1的方向这两个问题。</p>
+<p>先解决第一个问题，对于向量x的二范数平方为:</p>
+<p><img alt="" src="../resources/1FEC91E3C19437FA1A142526EF7D3472.jpg" /></p>
+<p>同样，目标函数也可以表示成映射后的向量的二范数平方：</p>
+<p><img alt="" src="../resources/E3F2CDC77D07F2B67E553E5509E9DC00.jpg" /></p>
+<p>把二次型化成一个范数的形式，由于u1取单位向量，最大化目标函数的基本问题也就转化为：对一个矩阵，它对一个向量做变换，变换前后的向量的模长伸缩尺度如何才能最大？我们有矩阵代数中的定理知，向量经矩阵映射前后的向量长度之比的最大值就是这个矩阵的最大奇异值，即：</p>
+<p><img alt="" src="../resources/61A4BB5869A472F901258735BEAF70B0.jpg" /></p>
+<p>式中，<img alt="" src="../resources/1C2F2B8D41CE8A162010C55DC174AA82.jpg" />是矩阵A的最大奇异值（亦是矩阵A的二范数），它等于<img alt="" src="../resources/745EFEBF20DB540F740231A40BDDB93F.jpg" />（或<img alt="" src="../resources/EFFB9F8B22BE1164FFAC6ECA32189919.jpg" />）的最大特征值开平方。</p>
+<p>针对本问题来说，<img alt="" src="../resources/DA34EBDDA776378A81AB97551EC955E5.jpg" />是半正定对称阵，也就意味着它的特征值都大于等于0，且不同特征值对应的特征向量是正交的，构成所在空间的一组单位正交基。</p>
+<p>再解决第二个问题，对一般情况，设对称阵<img alt="" src="../resources/EFCC9AD8E9BC39738EE632040917A49D.jpg" />的n个特征值分别为：</p>
+<p><img alt="" src="../resources/3A779DD6C1FE66C388F69A77C911B5C8.jpg" /></p>
+<p>相应的单位特征向量为：</p>
+<p><img alt="" src="../resources/9AE45D505BB5FA976AC76A42B6D89227.jpg" /></p>
+<p>任取一个向量x，用特征向量构成的空间中的这组基表示为：</p>
+<p><img alt="" src="../resources/E3BB7229FE186AD66453CB55DC592D2E.jpg" /></p>
+<p>则：</p>
+<p><img alt="" src="../resources/66BEABE38971597F36AB4F7BBF788AA5.jpg" /></p>
+<p>所以：</p>
+<p><img alt="" src="../resources/9855D67C9F3647DC082A83D06F277494.jpg" /></p>
+<p>针对第二个问题，我们取上式中的<img alt="" src="../resources/4D873FCCD7FA0C25450A186D82C6DF52.jpg" />，目标函数<img alt="" src="../resources/B912D0B49B333C84810B9F42FDC2C371.jpg" />取得最大值，也就是<img alt="" src="../resources/F08BE5320B509F0294C2FFA7A78149F0.jpg" />的最大特征值时，对应的特征向量的方向，就是第一主成分u1的方向！（第二主成分的方向为<img alt="" src="../resources/DA34EBDDA776378A81AB97551EC955E5.jpg" />的第二大特征值对应的特征向量的方向，以此类推）。</p>
+<p>证明完毕。</p>
+<p>主成分所占整个信息的百分比可用下式计算：</p>
+<p><img alt="" src="../resources/37A328214BFC9BDB75F73A5CA3EABE17.jpg" /></p>
+<p>式中分母为<img alt="" src="../resources/DA34EBDDA776378A81AB97551EC955E5.jpg" />所有奇异值平方和，分子为所选取的前k大奇异值平方和。</p>
+<p>有些研究工作表明，所选的主轴总长度占所有主轴长度之和的大约85% 即可，其实，这只是一个大体的说法，具体选多少个，要看实际情况而定。</p>
+<h2 id="3">3.意义<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p>PCA将n个特征降维到k个，可以用来进行数据压缩，例如100维的向量最后可以用10维来表示，那么压缩率为90%。同样图像处理领域的KL变换使用PCA做图像压缩，人脸检测和匹配。比如如下摘自另一篇<a href="http://blog.csdn.net/mpbchina/article/details/7384425">博客</a>上的Matlab实验结果：</p>
+<p><img alt="" src="../resources/F1D8D0B4A5EC505A658C80C322D4AE65.jpg" /></p>
+<p><img alt="" src="../resources/88CD04F0F7824346A051B9899AD4AD0C.jpg" /></p>
+<p><img alt="" src="../resources/242C54A98F0B61CA36D87C702C3F2372.jpg" /></p>
+<p>可见测试样本为人脸的样本的重建误差显然小于非人脸的重建误差。</p>
+<p>另外PCA还可以联系奇异值分解（SVD），来用于预测矩阵中缺失的元素，可以应用到评分预测等实际项目中。详见后续SVD的博客。</p>
+<p>有问题或者想法可以和我交流：<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#108;&#105;&#99;&#104;&#117;&#110;&#99;&#104;&#117;&#110;&#52;&#46;&#48;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#108;&#105;&#99;&#104;&#117;&#110;&#99;&#104;&#117;&#110;&#52;&#46;&#48;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></p>
+<p><strong>转载请声明出处：</strong><a href="http://blog.csdn.net/zhongkelee/article/details/44064401"><strong><a href="http://blog.csdn.net/zhongkelee/article/details/44064401">http://blog.csdn.net/zhongkelee/article/details/44064401</a></strong></a></p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../主成分分析-2/" title="主成分分析 (2)" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                主成分分析 (2)
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../最小二乘法/" title="最小二乘法" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                最小二乘法
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2018 Martin Donath
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="http://struct.cc" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/1007530194" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/1007530194" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/1007530194" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.189d7058.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../../.."}})</script>
+      
+        <script src="../../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

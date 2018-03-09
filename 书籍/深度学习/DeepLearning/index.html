@@ -1,0 +1,1570 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Nothing is impossible">
+      
+      
+        <link rel="canonical" href="https://1007530194.github.io/Diary/书籍/深度学习/DeepLearning/">
+      
+      
+        <meta name="author" content="NiuLiangtao">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.0">
+    
+    
+      
+        <title>深度学习中文版</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.78aab2dc.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://1007530194.github.io/Diary/" title="Blog of NiuLiangtao" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Blog of NiuLiangtao
+              </span>
+              <span class="md-header-nav__topic">
+                深度学习中文版
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/1007530194/Diary" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      1007530194/Diary
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../.." title="Home" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../AboutMe/" title="Home" class="md-tabs__link">
+          Home
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../机器学习实战/00naive-bayes-discuss/" title="书籍" class="md-tabs__link">
+          书籍
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../学习/tensorflow/如何选择优化器 optimizer/" title="学习" class="md-tabs__link">
+          学习
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../工具/About/" title="工具" class="md-tabs__link">
+          工具
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../日常/test/testtest/" title="日常" class="md-tabs__link">
+          日常
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    Blog of NiuLiangtao
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/1007530194/Diary" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      1007530194/Diary
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Home
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Home
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../AboutMe/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../要做的/" title="要做的" class="md-nav__link">
+      要做的
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      书籍
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        书籍
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      机器学习实战
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        机器学习实战
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../机器学习实战/00naive-bayes-discuss/" title="naive-bayes-discuss" class="md-nav__link">
+      naive-bayes-discuss
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../机器学习实战/01.机器学习基础/" title="1.机器学习基础" class="md-nav__link">
+      1.机器学习基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../机器学习实战/02.k-近邻算法/" title="2.k-近邻算法" class="md-nav__link">
+      2.k-近邻算法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../机器学习实战/03.决策树/" title="3.决策树" class="md-nav__link">
+      3.决策树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../机器学习实战/04.朴素贝叶斯/" title="4.朴素贝叶斯" class="md-nav__link">
+      4.朴素贝叶斯
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../机器学习实战/05.Logistic回归/" title="5.Logistic回归" class="md-nav__link">
+      5.Logistic回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../机器学习实战/06.0.支持向量机/" title="6.支持向量机" class="md-nav__link">
+      6.支持向量机
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../机器学习实战/06.1.支持向量机的几个通俗理解/" title="6.1.支持向量机的几个通俗理解" class="md-nav__link">
+      6.1.支持向量机的几个通俗理解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../机器学习实战/07.集成方法-随机森林和AdaBoost/" title="7.集成方法-随机森林和AdaBoost" class="md-nav__link">
+      7.集成方法-随机森林和AdaBoost
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../机器学习实战/08.预测数值型数据-回归/" title="8.预测数值型数据：回归" class="md-nav__link">
+      8.预测数值型数据：回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../机器学习实战/09.树回归/" title="9.树回归" class="md-nav__link">
+      9.树回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../机器学习实战/10.k-means聚类/" title="10.k-means聚类" class="md-nav__link">
+      10.k-means聚类
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../机器学习实战/11.使用Apriori算法进行关联分析/" title="11.使用Apriori算法进行关联分析" class="md-nav__link">
+      11.使用Apriori算法进行关联分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../机器学习实战/12.使用FP-growth算法来高效发现频繁项集/" title="12.使用FP-growth算法来高效发现频繁项集" class="md-nav__link">
+      12.使用FP-growth算法来高效发现频繁项集
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../机器学习实战/13.利用PCA来简化数据/" title="13.利用PCA来简化数据" class="md-nav__link">
+      13.利用PCA来简化数据
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../机器学习实战/14.利用SVD简化数据/" title="14.利用SVD简化数据" class="md-nav__link">
+      14.利用SVD简化数据
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../机器学习实战/15.大数据与MapReduce/" title="15.大数据与MapReduce" class="md-nav__link">
+      15.大数据与MapReduce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../机器学习实战/16.推荐系统/" title="16.推荐系统" class="md-nav__link">
+      16.推荐系统
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" checked>
+    
+    <label class="md-nav__link" for="nav-3-2">
+      深度学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        深度学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+    <a href="./" title="深度学习中文版" class="md-nav__link md-nav__link--active">
+      深度学习中文版
+    </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      tensorflow
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        tensorflow
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../学习/tensorflow/如何选择优化器 optimizer/" title="如何选择优化器 optimizer" class="md-nav__link">
+      如何选择优化器 optimizer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      深度学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        深度学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../学习/深度学习/10分钟上手Pandas/" title="10分钟上手Pandas" class="md-nav__link">
+      10分钟上手Pandas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../学习/深度学习/主成分分析-2/" title="主成分分析 2" class="md-nav__link">
+      主成分分析 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../学习/深度学习/主成分分析/" title="主成分分析" class="md-nav__link">
+      主成分分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../学习/深度学习/最小二乘法/" title="最小二乘法" class="md-nav__link">
+      最小二乘法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../学习/深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
+      矩阵分解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../学习/深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
+      矩阵求导
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../工具/About/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../工具/Cheatsheet/" title="Cheatsheet" class="md-nav__link">
+      Cheatsheet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="" title="文章" class="md-nav__link">
+      文章
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      日常
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        日常
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1">
+    
+    <label class="md-nav__link" for="nav-7-1">
+      test
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-1">
+        test
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../日常/test/testtest/" title="Testtest" class="md-nav__link">
+      Testtest
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2">
+    
+    <label class="md-nav__link" for="nav-7-2">
+      常用
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-2">
+        常用
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../日常/常用/latex语法/" title="Latex语法" class="md-nav__link">
+      Latex语法
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      常用工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        常用工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../日常/常用工具/10分钟上手Pandas/" title="10分钟上手Pandas" class="md-nav__link">
+      10分钟上手Pandas
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="_1">深度学习中文版<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="_2"><a href="../resources/dlbook_cn_v0.5-beta.pdf">全文</a><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<h1 id="_3"><a href="../resources/dlbook_cn_目录.pdf">目录</a><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h1>
+<p>数学符号                </p>
+<h1 id="_4"><a href="../resources/dlbook_cn_chapter1.pdf">第一章 引言</a><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h1>
+<p>1.1 本书面向的读者     10  <br />
+1.2 深度学习的历史趋势       11  <br />
+1.2.1   神经网络的众多名称和命运变迁      12  <br />
+1.2.2   与日俱增的数据量        17  <br />
+1.2.3   与日俱增的模型规模       19  <br />
+1.2.4   与日俱增的精度、复杂度和对现实世界的冲击        22    </p>
+<p>第一部分    应用数学与机器学习基础     25  </p>
+<h1 id="_5"><a href="../resources/dlbook_cn_chapter2.pdf">第二章 线性代数</a><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
+<p>2.1 标量、向量、矩阵和张量     27  <br />
+2.2 矩阵和向量相乘     29  <br />
+2.3 单位矩阵和逆矩阵        31  <br />
+2.4 线性相关和生成子空间      32  <br />
+2.5 范数      34  <br />
+2.6 特殊类型的矩阵和向量      36  <br />
+2.7 特征分解        37  <br />
+2.8 奇异值分解       39  <br />
+2.9 Moore-Penrose伪逆     40  <br />
+2.1 迹运算     41  <br />
+2.11    行列式     42  <br />
+2.12    实例:主成分分析        42    </p>
+<h1 id="_6"><a href="../resources/dlbook_cn_chapter3.pdf">第三章 概率与信息论</a><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h1>
+<p>3.1 为什么要使用概率?       47  <br />
+3.2 随机变量        49  <br />
+3.3 概率分布        50  <br />
+3.3.1   离散型变量和概率质量函数        50  <br />
+3.3.2   连续型变量和概率密度函数        51  <br />
+3.4 边缘概率        52  <br />
+3.5 条件概率        52  <br />
+3.6 条件概率的链式法则       53  <br />
+3.7 独立性和条件独立性       53  <br />
+3.8 期望、方差和协方差       54  <br />
+3.9 常用概率分布      55  <br />
+3.9.1   Bernoulli分布     56  <br />
+3.9.2   Multinoulli分布       56  <br />
+3.9.3   高斯分布        57  <br />
+3.9.4   指数分布和Laplace分布      58  <br />
+3.9.5   Dirac分布和经验分布        59  <br />
+3.9.6   分布的混合       59  <br />
+3.1 常用函数的有用性质       61  <br />
+3.11    贝叶斯规则       63  <br />
+3.12    连续型变量的技术细节      64  <br />
+3.13    信息论     65  <br />
+3.14    结构化概率模型     69    </p>
+<h1 id="_7"><a href="../resources/dlbook_cn_chapter4.pdf">第四章  数值计算</a><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h1>
+<p>4.1 上溢和下溢       72  <br />
+4.2 病态条件        73  <br />
+4.3 基于梯度的优化方法       74  <br />
+4.3.1   梯度之上:Jacobian和Hessian矩阵     77  <br />
+4.4 约束优化        82  <br />
+4.5 实例:线性最小二乘       85    </p>
+<h1 id="_8"><a href="../resources/dlbook_cn_chapter5.pdf">第五章  机器学习基础</a><a class="headerlink" href="#_8" title="Permanent link">&para;</a></h1>
+<p>5.1 学习算法        87  <br />
+5.1.1   任务T     88  <br />
+5.1.2   性能度量P       91  <br />
+5.1.3   经验E     92  <br />
+5.1.4   示例:线性回归     94  <br />
+5.2 容量、过拟合和欠拟合      97  <br />
+5.2.1   没有免费午餐定理        102 <br />
+5.2.2   正则化     104 <br />
+5.3 超参数和验证集     105 <br />
+5.3.1   交叉验证        106 <br />
+5.4 估计、偏差和方差        108 <br />
+5.4.1   点估计     108 <br />
+5.4.2   偏差      109 <br />
+5.4.3   方差和标准差      111 <br />
+5.4.4   权衡偏差和方差以最小化均方误差     113 <br />
+5.4.5   一致性     114 <br />
+5.5 最大似然估计      115 <br />
+5.5.1   条件对数似然和均方误差     116 <br />
+5.5.2   最大似然的性质     117 <br />
+5.6 贝叶斯统计       118 <br />
+5.6.1   最大后验(MAP)估计     121 <br />
+5.7 监督学习算法      122 <br />
+5.7.1   概率监督学习      122 <br />
+5.7.2   支持向量机       123 <br />
+5.7.3   其他简单的监督学习算法     125 <br />
+5.8 无监督学习算法     128 <br />
+5.8.1   主成分分析       128 <br />
+5.8.2   k-均值聚类      131 <br />
+5.9 随机梯度下降      132 <br />
+5.1 构建机器学习算法        133 <br />
+5.11    促使深度学习发展的挑战     134 <br />
+5.11.1  维数灾难        135 <br />
+5.11.2  局部不变性和平滑正则化     135 <br />
+5.11.3  流形学习        139   </p>
+<p>第二部分    深度网络:现代实践       143   </p>
+<h1 id="_9"><a href="../resources/dlbook_cn_chapter6.pdf">第六章  深度前馈网络</a><a class="headerlink" href="#_9" title="Permanent link">&para;</a></h1>
+<p>6.1 实例:学习XOR        148 <br />
+6.2 基于梯度的学习     152 <br />
+6.2.1   代价函数        153 <br />
+6.2.1.1 使用最大似然学习条件分布        154 <br />
+6.2.1.2 学习条件统计量     155 <br />
+6.2.2   输出单元        156 <br />
+6.2.2.1 用于高斯输出分布的线性单元       156 <br />
+6.2.2.2 用于Bernoulli输出分布的sigmoid单元       157 <br />
+6.2.2.3 用于Multinoulli输出分布的softmax单元     159 <br />
+6.2.2.4 其他的输出类型     162 <br />
+6.3 隐藏单元        165 <br />
+6.3.1   整流线性单元及其扩展      166 <br />
+6.3.2   logisticsigmoid与双曲正切函数      168 <br />
+6.3.3   其他隐藏单元      169 <br />
+6.4 架构设计        17  <br />
+6.4.1   万能近似性质和深度       171 <br />
+6.4.2   其他架构上的考虑        174 <br />
+6.5 反向传播和其他的微分算法        175 <br />
+6.5.1   计算图     176 <br />
+6.5.2   微积分中的链式法则       178 <br />
+6.5.3   递归地使用链式法则来实现反向传播        179 <br />
+6.6             <br />
+6.5.4   全连接MLP中的反向传播计算      181 <br />
+6.5.5   符号到符号的导数        182 <br />
+6.5.6   一般化的反向传播        185 <br />
+6.5.7   实例:用于MLP训练的反向传播     188 <br />
+6.5.8   复杂化     190 <br />
+6.5.9   深度学习界以外的微分      191 <br />
+6.5.10  高阶微分        193 <br />
+历史小记    0.193             </p>
+<h1 id="_10"><a href="../resources/dlbook_cn_chapter7.pdf">第七章  深度学习中的正则化</a><a class="headerlink" href="#_10" title="Permanent link">&para;</a></h1>
+<p>7.1 参数范数惩罚      198 <br />
+7.1.1   L2参数正则化     199 <br />
+7.1.2   L1参数正则化     202 <br />
+7.2 作为约束的范数惩罚       204 <br />
+7.3 正则化和欠约束问题       206 <br />
+7.4 数据集增强       207 <br />
+7.5 噪声鲁棒性       208 <br />
+7.5.1   向输出目标注入噪声       209 <br />
+7.6 半监督学习       209 <br />
+7.7 多任务学习       210 <br />
+7.8 提前终止        211 <br />
+7.9 参数绑定和参数共享       217 <br />
+7.9.1   卷积神经网络      218 <br />
+7.1 稀疏表示        218 <br />
+7.11    Bagging和其他集成方法      22  <br />
+7.12    Dropout     222 <br />
+7.13    对抗训练        23  <br />
+7.14    切面距离、正切传播和流形正切分类器       232   </p>
+<h1 id="_11"><a href="../resources/dlbook_cn_chapter8.pdf">第八章  深度模型中的优化</a><a class="headerlink" href="#_11" title="Permanent link">&para;</a></h1>
+<p>8.1 学习和纯优化有什么不同     235 <br />
+8.1.1   经验风险最小化     236 <br />
+8.1.2   代理损失函数和提前终止     237 <br />
+8.1.3   批量算法和小批量算法      237 <br />
+8.2 神经网络优化中的挑战      241 <br />
+8.2.1   病态      242 <br />
+8.2.2   局部极小值       243 <br />
+8.2.3   高原、鞍点和其他平坦区域        244 <br />
+8.2.4   悬崖和梯度爆炸     246 <br />
+8.2.5   长期依赖        247 <br />
+8.2.6   非精确梯度       248 <br />
+8.2.7   局部和全局结构间的弱对应        248 <br />
+8.2.8   优化的理论限制     250 <br />
+8.3 基本算法        251 <br />
+8.3.1   随机梯度下降      251 <br />
+8.3.2   动量      253 <br />
+8.3.3   Nesterov动量      256 <br />
+8.4 参数初始化策略     256 <br />
+8.5 自适应学习率算法        261 <br />
+8.5.1   AdaGrad     261 <br />
+8.5.2   RMSProp     262 <br />
+8.5.3   Adam        262 <br />
+8.5.4   选择正确的优化算法       263 <br />
+8.6 二阶近似方法      265 <br />
+8.6.1   牛顿法     266 <br />
+8.6.2   共轭梯度        267 <br />
+8.6.3   BFGS        270 <br />
+8.7 优化策略和元算法        271 <br />
+8.7.1   批标准化        271 <br />
+8.7.2   坐标下降        274 <br />
+8.7.3   Polyak平均        274 <br />
+8.7.4   监督预训练       275 <br />
+8.7.5   设计有助于优化的模型      277 <br />
+8.7.6   延拓法和课程学习        278   </p>
+<h1 id="_12"><a href="../resources/dlbook_cn_chapter9.pdf">第九章  卷积网络</a><a class="headerlink" href="#_12" title="Permanent link">&para;</a></h1>
+<p>9.1 卷积运算        282 <br />
+9.2 动机      285 <br />
+9.3 池化      290 <br />
+9.4 卷积与池化作为一种无限强的先验     295 <br />
+9.5 基本卷积函数的变体       296 <br />
+9.6 结构化输出       306 <br />
+9.7 数据类型        307 <br />
+9.8 高效的卷积算法     309 <br />
+9.9 随机或无监督的特征       31  <br />
+9.1 卷积网络的神经科学基础     311 <br />
+9.11    卷积网络与深度学习的历史        317   </p>
+<h1 id="_13"><a href="../resources/dlbook_cn_chapter10.pdf">第十章  序列建模:循环和递归网络</a><a class="headerlink" href="#_13" title="Permanent link">&para;</a></h1>
+<p>10.1    展开计算图       320 <br />
+10.2    循环神经网络      323 <br />
+10.2.1  导师驱动过程和输出循环网络       326 <br />
+10.2.2  计算循环神经网络的梯度     328 <br />
+10.2.3  作为有向图模型的循环网络        330 <br />
+10.2.4  基于上下文的RNN序列建模       334 <br />
+10.3    双向RNN       336 <br />
+10.4    基于编码-解码的序列到序列架构     338 <br />
+10.5    深度循环网络      34  <br />
+10.6    递归神经网络      341 <br />
+10.7    长期依赖的挑战     343 <br />
+10.8    回声状态网络      345 <br />
+10.9    渗漏单元和其他多时间尺度的策略     347 <br />
+10.9.1  时间维度的跳跃连接       347 <br />
+10.9.2  渗漏单元和一系列不同时间尺度      348 <br />
+10.9.3  删除连接        348 <br />
+10.1    长短期记忆和其他门控RNN       349 <br />
+10.10.1 LSTM        349 <br />
+10.10.2 其他门控RNN     351 <br />
+10.11   优化长期依赖      352 <br />
+10.11.1 截断梯度        353 <br />
+10.11.2 引导信息流的正则化       355 <br />
+10.12外显记忆   0.355             </p>
+<h1 id="_14"><a href="../resources/dlbook_cn_chapter11.pdf">第十一章 实践方法论</a><a class="headerlink" href="#_14" title="Permanent link">&para;</a></h1>
+<p>11.1    性能度量        36  <br />
+11.2    默认的基准模型     362 <br />
+11.3    决定是否收集更多数据      363 <br />
+11.4    选择超参数       364 <br />
+11.4.1  手动调整超参数     364 <br />
+11.4.2  自动超参数优化算法       367 <br />
+11.4.3  网格搜索        368 <br />
+11.4.4  随机搜索        369 <br />
+11.4.5  基于模型的超参数优化      37  <br />
+11.5    调试策略        371 <br />
+11.6    示例:多位数字识别       374   </p>
+<h1 id="_15"><a href="../resources/dlbook_cn_chapter12.pdf">第十二章 应用</a><a class="headerlink" href="#_15" title="Permanent link">&para;</a></h1>
+<p>12.1    大规模深度学习     377 <br />
+12.1.1  快速的CPU实现        378 <br />
+12.1.2  GPU实现       378 <br />
+12.1.3  大规模的分布式实现       380 <br />
+12.1.4  模型压缩        381 <br />
+12.1.5  动态结构        382 <br />
+12.1.6  深度网络的专用硬件实现     384 <br />
+12.2    计算机视觉       385 <br />
+12.2.1  预处理     385 <br />
+12.2.1.1对比度归一化  0.386           <br />
+12.2.2  数据集增强       389 <br />
+12.3    语音识别        39  <br />
+12.4    自然语言处理      392 <br />
+12.4.1  n-gram      392 <br />
+12.4.2  神经语言模型      394 <br />
+12.4.3  高维输出        396 <br />
+12.4.3.1使用短列表   396         <br />
+12.4.3.2分层Softmax   0.397           <br />
+12.4.3.3    重要采样        399 <br />
+12.4.3.4    噪声对比估计和排名损失     401 <br />
+12.4.4  结合n-gram和神经语言模型     401 <br />
+12.4.5  神经机器翻译      402 <br />
+12.4.5.1    使用注意力机制并对齐数据片段      403 <br />
+12.4.6  历史展望        406 <br />
+12.5    其他应用        407 <br />
+12.5.1  推荐系统        407 <br />
+12.5.1.1探索与利用   409         <br />
+12.5.2  知识表示、推理和回答      41  <br />
+12.5.2.1    知识、联系和回答        41    </p>
+<p>第三部分    深度学习研究      414   </p>
+<h1 id="_16"><a href="../resources/dlbook_cn_chapter13.pdf">第十三章 线性因子模型</a><a class="headerlink" href="#_16" title="Permanent link">&para;</a></h1>
+<p>13.1    概率PCA和因子分析      418 <br />
+13.2    独立成分分析      419 <br />
+13.3    慢特征分析       421 <br />
+13.4    稀疏编码        423 <br />
+13.5    PCA的流形解释        426   </p>
+<h1 id="_17"><a href="../resources/dlbook_cn_chapter14.pdf">第十四章 自编码器</a><a class="headerlink" href="#_17" title="Permanent link">&para;</a></h1>
+<p>14.1    欠完备自编码器     430 <br />
+14.2    正则自编码器      431 <br />
+14.2.1  稀疏自编码器      431 <br />
+14.2.2  去噪自编码器      433 <br />
+14.2.3  惩罚导数作为正则        434 <br />
+14.3    表示能力、层的大小和深度        434 <br />
+14.4    随机编码器和解码器       435 <br />
+14.5    去噪自编码器      436 <br />
+14.5.1  得分估计        437 <br />
+14.5.2  历史展望        440 <br />
+14.6    使用自编码器学习流形      440 <br />
+14.7    收缩自编码器      445 <br />
+14.8    预测稀疏分解      447 <br />
+14.9    自编码器的应用     448   </p>
+<h1 id="_18"><a href="../resources/dlbook_cn_chapter15.pdf">第十五章 表示学习</a><a class="headerlink" href="#_18" title="Permanent link">&para;</a></h1>
+<p>15.1    贪心逐层无监督预训练      450 <br />
+15.1.1  何时以及为何无监督预训练有效?     452 <br />
+15.2    迁移学习和领域自适应      457 <br />
+15.3    半监督解释因果关系       461 <br />
+15.4    分布式表示       466 <br />
+15.5    得益于深度的指数增益      471 <br />
+15.6    提供发现潜在原因的线索     472   </p>
+<h1 id="_19"><a href="../resources/dlbook_cn_chapter16.pdf">第十六章 深度学习中的结构化概率模型</a><a class="headerlink" href="#_19" title="Permanent link">&para;</a></h1>
+<p>16.1    非结构化建模的挑战       476 <br />
+16.2    使用图描述模型结构       479 <br />
+16.2.1  有向模型        480 <br />
+16.2.2  无向模型        482 <br />
+16.2.3  配分函数        484 <br />
+16.2.4  基于能量的模型     485 <br />
+16.2.5  分离和d-分离     487 <br />
+16.2.6  在有向模型和无向模型中转换       49  <br />
+16.2.7  因子图     493 <br />
+16.3    从图模型中采样     494 <br />
+16.4    结构化建模的优势        495 <br />
+16.5    学习依赖关系      496 <br />
+16.6    推断和近似推断     497 <br />
+16.7    结构化概率模型的深度学习方法      498 <br />
+16.7.1  实例:受限玻尔兹曼机      499   </p>
+<h1 id="_20"><a href="../resources/dlbook_cn_chapter17.pdf">第十七章 蒙特卡罗方法</a><a class="headerlink" href="#_20" title="Permanent link">&para;</a></h1>
+<p>17.1    采样和蒙特卡罗方法       502 <br />
+17.1.1  为什么需要采样?        502 <br />
+17.1.2  蒙特卡罗采样的基础       503 <br />
+17.2    重要采样        504 <br />
+17.3    马尔可夫链蒙特卡罗方法     506 <br />
+17.4    Gibbs采样     510 <br />
+17.5    不同的峰值之间的混合挑战        511 <br />
+17.5.1  不同峰值之间通过回火来混合       513 <br />
+17.5.2  深度也许会有助于混合      514   </p>
+<h1 id="_21"><a href="../resources/dlbook_cn_chapter18.pdf">第十八章 直面配分函数</a><a class="headerlink" href="#_21" title="Permanent link">&para;</a></h1>
+<p>18.1    对数似然梯度      516 <br />
+18.2    随机最大似然和对比散度     518 <br />
+18.3    伪似然     524 <br />
+18.4    得分匹配和比率匹配       526 <br />
+18.5    去噪得分匹配      528 <br />
+18.6    噪声对比估计      529 <br />
+18.7    估计配分函数      531 <br />
+18.7.1  退火重要采样      533 <br />
+18.7.2  桥式采样        536   </p>
+<h1 id="_22"><a href="../resources/dlbook_cn_chapter19.pdf">第十九章 近似推断</a><a class="headerlink" href="#_22" title="Permanent link">&para;</a></h1>
+<p>19.1    把推断视作优化问题       539 <br />
+19.2    期望最大化       541 <br />
+19.3    最大后验推断和稀疏编码     542 <br />
+19.4    变分推断和变分学习       544 <br />
+19.4.1  离散型潜变量      545 <br />
+19.4.2  变分法     551 <br />
+19.4.3  连续型潜变量      554 <br />
+19.4.4  学习和推断之间的相互作用        556 <br />
+19.5    学成近似推断      556 <br />
+19.5.1  醒眠算法        557 <br />
+19.5.2  学成推断的其他形式       557   </p>
+<h1 id="_23"><a href="../resources/dlbook_cn_chapter20.pdf">第二十章 深度生成模型</a><a class="headerlink" href="#_23" title="Permanent link">&para;</a></h1>
+<p>20.1    玻尔兹曼机       559 <br />
+20.2    受限玻尔兹曼机     561 <br />
+20.2.1  条件分布        562 <br />
+20.2.2  训练受限玻尔兹曼机       563 <br />
+20.3    深度信念网络      564 <br />
+20.4    深度玻尔兹曼机     566 <br />
+20.4.1  有趣的性质       568 <br />
+20.4.2  DBM均匀场推断        569 <br />
+20.4.3  DBM的参数学习        571 <br />
+20.4.4  逐层预训练       572 <br />
+20.4.5  联合训练深度玻尔兹曼机     574 <br />
+20.5    实值数据上的玻尔兹曼机     578 <br />
+20.5.1  Gaussian-BernoulliRBM       578 <br />
+20.5.2  条件协方差的无向模型      579 <br />
+20.6    卷积玻尔兹曼机     583 <br />
+20.7    用于结构化或序列输出的玻尔兹曼机        585 <br />
+20.8    其他玻尔兹曼机     586 <br />
+20.9    通过随机操作的反向传播     587 <br />
+20.9.1  通过离散随机操作的反向传播       588 <br />
+20.1    有向生成网络      591 <br />
+20.10.1 sigmoid信念网络     591 <br />
+20.10.2 可微生成器网络     592 <br />
+20.10.3 变分自编码器      594 <br />
+20.10.4 生成式对抗网络     597 <br />
+20.10.5 生成矩匹配网络     600 <br />
+20.10.6 卷积生成网络      601 <br />
+20.10.7 自回归网络       602 <br />
+20.10.8 线性自回归网络     602 <br />
+20.10.9 神经自回归网络     603 <br />
+20.10.10    NADE        604   </p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../机器学习实战/16.推荐系统/" title="16.推荐系统" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                16.推荐系统
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../../学习/tensorflow/如何选择优化器 optimizer/" title="如何选择优化器 optimizer" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                如何选择优化器 optimizer
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2018 Martin Donath
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="http://struct.cc" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/1007530194" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/1007530194" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/1007530194" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.189d7058.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../../.."}})</script>
+      
+        <script src="../../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
