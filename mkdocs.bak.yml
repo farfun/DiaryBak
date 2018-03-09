@@ -9,7 +9,7 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+      emoji_generator: pymdownx.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.magiclink
   - pymdownx.mark
@@ -20,12 +20,8 @@ markdown_extensions:
   - pymdownx.tilde
 
 site_name: DataLab
+
 theme: windmill
 
 pages:
-- Home: [Cheatsheet.Md]
-- Home: [About.Md,Cheatsheet.Md,Index.Md,常用/2018-02-23-latex语法.md]
-- 常用: [About.Md,Cheatsheet.Md,Index.Md,常用/2018-02-23-latex语法.md]
-- {Home: index.md}
-- {Cheatsheet: Cheatsheet.md}
-- {About: About.md}
+- Home: [index.md]

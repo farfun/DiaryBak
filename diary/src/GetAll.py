@@ -5,7 +5,7 @@
 # @Site    : 
 # @File    : GetAll.py
 # @Software: PyCharm
-import codecs
+import io
 import os
 
 import yaml
@@ -14,110 +14,63 @@ pjoin = os.path.join
 _BLOG_ROOT = os.path.abspath(pjoin(os.path.dirname(__file__), os.path.pardir))
 _DEFAULT_CATEGORY = 'Home'
 root = '/Users/weidian/Documents/Diary/'
-yml_path_bak = root+"mkdocs.bak.yml"
-yml_path = root+"mkdocs.yml"
-doc_path = root+"docs/"
+yml_path_bak = root + "mkdocs.bak.yml"
+yml_path = root + "mkdocs.yml"
+doc_path = root + "docs/"
 
 
-def getPath():
-    pages = {}
-    home = []
-    pages["Home"] = home
-    for file_name in os.listdir(doc_path):
-        file_path = doc_path + file_name
-        if ".md" in file_name:
-            home.append(file_name.title())
-        elif os.path.isdir(file_path):
-            cate = file_name
-            cate_list = []
-            pages[cate] = cate_list
-            for file2 in os.listdir(file_path):
-                if ".md" in file2:
-                    text = cate + "/" + file2
-                    cate_list.append(text)
-    return pages
+def check_contain_chinese(check_str):
+    for ch in check_str.decode('utf-8'):
+        if u'\u4e00' <= ch <= u'\u9fff':
+            return True
+    return False
 
 
-def output_post_save(path):
-    print ("output_post_save")
-
-    fr = open(yml_path_bak, "r")
-    fw = open(yml_path, "w")
-
-    for line in fr.readlines():
-        fw.write(line)
-        print line
-        if "pages" in line:
-            break
-
-    fr.close()
-
-    for key in path:
-        line = "- " + key + ": "
-        print (type(line))
-        print (isinstance(line, str))
-        print line
-
-        fw.write(str(line))
-    fw.close()
-    print (isinstance(path, dict))
-
-    data=[1,2]
-    print (isinstance(data, list))
-
-def dict_str(records):
-    res = ""
-    for record in records:
-        res
+def encode(check_str):
+    if check_contain_chinese(check_str):
+        return unicode(check_str, "utf-8")
+    else:
+        return check_str
 
 
 def output_post_save2():
     print ("\n\noutput_post_save\n\n")
+    with io.open(yml_path_bak, "r", encoding="utf-8") as docs:
+        data = yaml.safe_load(docs)
 
-    fp = codecs.open(yml_path_bak, "r", "utf-8")
-    document = fp.read()
-    fp.close()
-    mkdocs = yaml.load_all(document)
+    pages = data['pages']
 
-    # 遍历迭代器
-    for data in mkdocs:
-        print(type(data))
-        print(data)
+    home = []
+    pages.append({"Home": home})
+    for file_name in os.listdir(doc_path):
+        file_path = doc_path + file_name
+        if ".md" in file_name:
+            home.append(encode(file_name))
+        elif os.path.isdir(file_path):
+            cate = encode(file_name)
+            cate_list = []
+            pages.append({cate: cate_list})
+            for file2 in os.listdir(file_path):
+                if ".md" in file2:
+                    cate_list.append(cate + "/" + encode(file2))
 
-        print("---" * 25)
-        # 将python对象转换成为yaml格式文档
-        output = yaml.dump(data)
-        print(type(output))
-        print(output.decode("unicode-escape"))
+    with io.open(yml_path, 'w+', encoding='utf8') as outfile:
+        yaml.dump(data, outfile, default_flow_style=False, allow_unicode=True)
 
-        #pages = []
-        #data['pages'] = pages
-        pages=data['pages']
 
-        home = []
-        pages.append({"Home": home})
-        for file_name in os.listdir(doc_path):
-            file_path = doc_path + file_name
-            if ".md" in file_name:
-                home.append(file_name.title())
-            elif os.path.isdir(file_path):
-                cate = file_name.decode('utf8')
-                cate_list = []
-                pages.append({cate: cate_list})
-                for file2 in os.listdir(file_path):
-                    if ".md" in file2:
-                        cate_list.append(cate+"/"+file2.decode('utf8'))
-        print data
-        "dfasdfa".replace(" ","")
-        with codecs.open(yml_path, 'w', "utf-8") as config:
-            print(type(data))
-            yaml_text = yaml.dump(data).decode("unicode-escape").replace(" ","").replace("\"","")
-            print(yaml_text)
-            config.write(yaml_text)
+def test():
+    # 开档
+    data = []
+    with io.open("data1.yml", "r", encoding="utf-8") as docs:
+        try:
+            data = yaml.safe_load(docs)
+        except yaml.YAMLError as exc:
+            print(exc)
+    data[unicode("人生苦短", "utf-8")] = {"山大": "发的是"}
+    # 写档
+    with io.open('data2.yml', 'w+', encoding='utf8') as outfile:
+        yaml.dump(data, outfile, default_flow_style=False, allow_unicode=True)
 
 
 if __name__ == '__main__':
-    path = getPath()
-    print path
-    output_post_save(path)
-    #output_post_save2()
+    output_post_save2()
