@@ -2,684 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd812bb5-d92d-442c-ba5d-56d41b5654b8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.sass-cache/65b4688c2eeb3a41daf3c1e5ac9f8b1e8a81e7c4/_base.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.sass-cache/65b4688c2eeb3a41daf3c1e5ac9f8b1e8a81e7c4/_layout.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.sass-cache/65b4688c2eeb3a41daf3c1e5ac9f8b1e8a81e7c4/_media-queries.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.sass-cache/65b4688c2eeb3a41daf3c1e5ac9f8b1e8a81e7c4/_normalize.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.sass-cache/65b4688c2eeb3a41daf3c1e5ac9f8b1e8a81e7c4/_syntax-highlighting.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.sass-cache/65b4688c2eeb3a41daf3c1e5ac9f8b1e8a81e7c4/_variables.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.sass-cache/65b4688c2eeb3a41daf3c1e5ac9f8b1e8a81e7c4/rouge.scssc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_config.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/MathJax.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/aside.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/footer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/google_analytics.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/head.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/header.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/mathjax.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_layouts/compress.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_layouts/default.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_layouts/page.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_layouts/post.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/archive.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/_base.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/_layout.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/_media-queries.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/_normalize.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/_syntax-highlighting.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/_variables.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/main.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/main.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/main2.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/css/rouge.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/Quiver Tutorial/0039E536-1343-4E82-908A-34B77B7ED2D9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/bg.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/ami-selection.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/aws-homepage.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/aws-signin.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/aws-signup.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/bing.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cat.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cat_tinted.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cat_tinted_imshow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/challenges.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/classify.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/classifydemo.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cloud-create-instance-screen.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cloud-dashboard-screen.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cloud-external-ip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cloud-for-free.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cloud-instance-dashboard-screen.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cloud-instance-started.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cloud-launching-screen.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cloud-networking-external-ip-address.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cloud-networking-external-ip-naming.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cloud-networking-external-ip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cloud-networking-firewall-rule-create.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cloud-networking-firewall-rule.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cnn/cnn.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cnn/convnet.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cnn/depthcol.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cnn/maxpool.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cnn/pool.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cnn/stride.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cnn/weights.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cnnvis/act1.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cnnvis/act2.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cnnvis/filt1.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cnnvis/filt2.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cnnvis/occlude.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cnnvis/pool5max.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cnnvis/tsne.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/community-AMIs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/conv-demo/external/d3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/conv-demo/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/conv-demo/utils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/create-instance-screen.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/crossval.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cveg.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/cvplot.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/dataflow.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/ec2-dashboard.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/eg/spiral_linear.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/eg/spiral_net.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/eg/spiral_raw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/google-cloud-create-image-screenshot.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/google-cloud-instance-gpus.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/google-cloud-quotas-form.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/google-cloud-quotas-screen.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/google-cloud-select-cloud-storage.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/google-cloud-select-custom-image.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/imagemap.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/instance-selection.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/instances-page.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/ipython-tutorial/file-browser.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/ipython-tutorial/notebook-1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/ipython-tutorial/notebook-2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/ipython-tutorial/notebook-3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/ipython-tutorial/notebook-error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/ipython-tutorial/save-notebook.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/jupyter-screen.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/key-pair-create.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/key-pair.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/knn.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/launch-screen.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/launching-screen.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/map.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/margin.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nn.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nn1/alexplot.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nn1/layer_sizes.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nn1/neural_net.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nn1/neural_net2.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nn1/neuron.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nn1/neuron_model.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nn1/reg_strengths.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nn1/relu.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nn1/sigmoid.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nn1/tanh.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nn2/cifar10pca.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nn2/dropout.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nn2/prepro1.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nn2/prepro2.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nn3/accuracies.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nn3/cnnweights.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nn3/gridsearchbad.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nn3/learningrates.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nn3/loss.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nn3/nesterov.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nn3/opt1.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nn3/opt2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nn3/updates.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nn3/values.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nn3/weights.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/nneg.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/pixels_embed_cifar10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/pixels_embed_cifar10_big.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/pixelspace.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/sadpuppy_nocredits.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/samenorm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/sine.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/sine_cosine.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/sine_cosine_subplot.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/stepsize.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/svm1d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/svm_all.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/svm_one.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/svmbowl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/svmvssoftmax.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/templates.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/terminal-coursework.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/terminal-development.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/terminal-my.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/terminal-shared.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/trainset.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/cs231n/wb.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/machine.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/name_cn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/owl.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/perceptron.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/bias-variance-model-complexity.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/bias-variance-proof.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/bias-variance.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/bitcoin-explained-1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/bitcoin-explained-10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/bitcoin-explained-11.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/bitcoin-explained-2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/bitcoin-explained-3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/bitcoin-explained-4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/bitcoin-explained-5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/bitcoin-explained-6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/bitcoin-explained-7.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/bitcoin-explained-8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/bitcoin-explained-9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/blockchain.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/bulls-eye-diagram.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/bulls-eye-label-diagram.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/directional_derivation.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/directional_derivation_definition.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/exec.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/fork.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/function-calls.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/generator.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/gradient_definition.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/gradient_proof2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/gradient_proof3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/mac-chinese.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/mac-font.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/naivechain.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/nosql.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/sketch.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/source.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/spark-glossary.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/tendermint-abci.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/tendermint-state-machine.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/texstudio.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/vim-python-ide-screenshot.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/vim-python-ide-tmux.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/winedt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/posts/yield-from.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/rails.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/tag.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/tensorflow/28A308A65B43D79482C913803F349716.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/tensorflow/4A3B4A39AB8E5C556359147B882B4788.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/tensorflow/5D5166A3D3712E7C03AF74B1CCACBEAC.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/tensorflow/62F8D6CAC0120E34CAC75B59A467B1D8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/tensorflow/76BCC65FF39FB153D377EEF08FABEB16.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/tensorflow/98F724EDF6695476F6B38F7F172B59F5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/tensorflow/BE69409D8ECB330D775F9E6F1E99A239.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/think.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/tools.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/x.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/js/scripts.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0863E58D-2902-47D1-A4D2-57B430BF27E1.qvnotebook/74D3E5FD-F3AD-4A74-8999-BF47DFDD72AF.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0863E58D-2902-47D1-A4D2-57B430BF27E1.qvnotebook/74D3E5FD-F3AD-4A74-8999-BF47DFDD72AF.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0863E58D-2902-47D1-A4D2-57B430BF27E1.qvnotebook/E4B674CB-DA52-4EA6-A18B-6D80AB518BF1.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0863E58D-2902-47D1-A4D2-57B430BF27E1.qvnotebook/E4B674CB-DA52-4EA6-A18B-6D80AB518BF1.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0863E58D-2902-47D1-A4D2-57B430BF27E1.qvnotebook/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/1561AB54-FDDF-463D-BF6B-6B19D9A9B7D4.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/1561AB54-FDDF-463D-BF6B-6B19D9A9B7D4.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/3E44F016-34EB-4DA0-B222-F90BE91C7FF3.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/3E44F016-34EB-4DA0-B222-F90BE91C7FF3.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/403AC370-E4FC-4244-9946-751F51136028.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/403AC370-E4FC-4244-9946-751F51136028.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/665486D6-F49A-4B95-966F-73D48C52A460.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/665486D6-F49A-4B95-966F-73D48C52A460.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/6FBA1892-4244-4BFF-8072-D42FDEF47C89.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/6FBA1892-4244-4BFF-8072-D42FDEF47C89.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/8528E7C1-9406-477A-A16A-EBCFF6B61764.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/8528E7C1-9406-477A-A16A-EBCFF6B61764.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/8BE4D471-87A1-49E7-8B97-2289F94853DB.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/8BE4D471-87A1-49E7-8B97-2289F94853DB.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/8BE4D471-87A1-49E7-8B97-2289F94853DB.qvnote/resources/BEBB7F724D5958BFE3D10531557E9177.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/94E546C5-E95B-45FF-99DA-5B31E2F955B0.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/94E546C5-E95B-45FF-99DA-5B31E2F955B0.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/98AE30FE-4155-457A-AAE7-51F201AB5CF0.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/98AE30FE-4155-457A-AAE7-51F201AB5CF0.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/99C86C00-C8FE-4CCA-87E6-C35E2E5BE0C6.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/99C86C00-C8FE-4CCA-87E6-C35E2E5BE0C6.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/AAA251B8-B257-45A4-A2CC-C78D10DE9805.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/AAA251B8-B257-45A4-A2CC-C78D10DE9805.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/C44739C6-7B5B-4126-B5F2-991C8AD363AF.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/C44739C6-7B5B-4126-B5F2-991C8AD363AF.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/CCE6CC06-B195-4FEB-8AB4-C6131BCE39EC.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/CCE6CC06-B195-4FEB-8AB4-C6131BCE39EC.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/CCE6CC06-B195-4FEB-8AB4-C6131BCE39EC.qvnote/resources/0CBF4A62168D4D4B1CA2C7120AE950D0.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/CCE6CC06-B195-4FEB-8AB4-C6131BCE39EC.qvnote/resources/3534372DD7179B005BB4A841796BB11F.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/CCE6CC06-B195-4FEB-8AB4-C6131BCE39EC.qvnote/resources/41004611672792F57E7FFD54580BEB69.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/CCE6CC06-B195-4FEB-8AB4-C6131BCE39EC.qvnote/resources/4AC4CAC3C491EDB4CC6F85634694FBFD.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/CCE6CC06-B195-4FEB-8AB4-C6131BCE39EC.qvnote/resources/5E8377D6E5120197AFC39EC9CC9FE20E.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/CCE6CC06-B195-4FEB-8AB4-C6131BCE39EC.qvnote/resources/64D8345F5AB002D82D84D2616FB5B105.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/CCE6CC06-B195-4FEB-8AB4-C6131BCE39EC.qvnote/resources/8362E065F070E550FD799A5EE040B331.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/CCE6CC06-B195-4FEB-8AB4-C6131BCE39EC.qvnote/resources/93C0EEE9625249D4F5E5C79ADBB7846D.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/CCE6CC06-B195-4FEB-8AB4-C6131BCE39EC.qvnote/resources/A6FC7481F4C3C6DB14A2B0446D1019A2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/CCE6CC06-B195-4FEB-8AB4-C6131BCE39EC.qvnote/resources/ADE35FEE06795261AF3AA9CA0C6DA2EE.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/CCE6CC06-B195-4FEB-8AB4-C6131BCE39EC.qvnote/resources/BBB0D3696152E002A6ADACEE8FEE238D.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/CCE6CC06-B195-4FEB-8AB4-C6131BCE39EC.qvnote/resources/DAFAF3139B05313EBACDBC02FAD52AB5.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/CCE6CC06-B195-4FEB-8AB4-C6131BCE39EC.qvnote/resources/E327BA5224E8A70AAC6F27669A0CE906.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/CCE6CC06-B195-4FEB-8AB4-C6131BCE39EC.qvnote/resources/EAEE9CE76DC3A02152FA5DD156C2EE57.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/E63FF952-0E2A-403E-8AE1-67D859605BD1.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/E63FF952-0E2A-403E-8AE1-67D859605BD1.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/E91C3F92-2BB2-49C9-A524-1D365909D8A2.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/E91C3F92-2BB2-49C9-A524-1D365909D8A2.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/0E039DF5-D863-435D-94DA-17F2747B76B0.qvnotebook/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/040C49F6-7D7B-483C-838F-EEDFD4FCD48B.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/040C49F6-7D7B-483C-838F-EEDFD4FCD48B.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/040C49F6-7D7B-483C-838F-EEDFD4FCD48B.qvnote/resources/6311003EC0AB4B6090F449FF4F02ED59.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/040C49F6-7D7B-483C-838F-EEDFD4FCD48B.qvnote/resources/EF5167A0E01E8F9A623E79F0ABEFCF09.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/1AA2D38B130E8EB6B4FCA11E6FD536FC.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/1C2F2B8D41CE8A162010C55DC174AA82.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/1FEC91E3C19437FA1A142526EF7D3472.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/242C54A98F0B61CA36D87C702C3F2372.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/319CEC768D2D05E4AF569A3635F4D14E.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/37A328214BFC9BDB75F73A5CA3EABE17.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/3A779DD6C1FE66C388F69A77C911B5C8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/4145690EACEA8CA4F1B5760EE0B77D09.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/463BD2513E78D91E4336BD3E977CC681.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/492B41A3AB2E81224EBCE0B2D275B99A (1).jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/492B41A3AB2E81224EBCE0B2D275B99A.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/4D873FCCD7FA0C25450A186D82C6DF52.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/4EE05BAB3CE8C243E39BFF13C16B1AC3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/52AEA613A2327DCFC85873E5106194A1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/567AB2A67AC7AB594144F91ABD9E1164.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/5B9FEF5E943B82B179028AC100CBF468.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/61A4BB5869A472F901258735BEAF70B0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/66BEABE38971597F36AB4F7BBF788AA5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/67EA539D3B60F74AA93BA6ABD6958D08.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/6876282D3A28997E054FBECBB8C251EF.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/6982652D0714C2C2B1DE20D04979AF23.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/69D88091D516A0064551D8F2881A2EDE.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/72A253894762F3360E735532E86FBBF4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/73A584A79F6B881C96F7D6EBE1488B54.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/745EFEBF20DB540F740231A40BDDB93F.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/75D505A58D5B23BD4ED7207C087B5F04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/76D9BCEC64BFCC5381ECC2E3E1AE31AE.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/7895887E9B9E285689A63D381E0F1DED.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/88CD04F0F7824346A051B9899AD4AD0C.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/8D90FF4FA2A8A73A23B6D3C61E0892AA.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/9855D67C9F3647DC082A83D06F277494.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/9AE45D505BB5FA976AC76A42B6D89227.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/9D5E659DF66FC15E23F2030FC56D7E41.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/B1A76A5DD5CBF7038828C6B8B2F27DA3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/B912D0B49B333C84810B9F42FDC2C371.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/B96C0EBC0E38C68850DC072A41D4144B.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/B9DA6A4845C16156E47AD335D18EA6E0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/BF3AE035A8B7E2564F73AED4603E1520.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/D501436FE83B8D4B25450A022482D5A4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/DA34EBDDA776378A81AB97551EC955E5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/DB0C770D8DD55E5A433B6306D7085BF3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/DB20D997144CF9996852C476A8DAD68F.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/E3BB7229FE186AD66453CB55DC592D2E.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/E3F2CDC77D07F2B67E553E5509E9DC00.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/E578D1F44B5105769765DA185C78FA67.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/EFCC9AD8E9BC39738EE632040917A49D.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/EFFB9F8B22BE1164FFAC6ECA32189919.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/F08BE5320B509F0294C2FFA7A78149F0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/0F40E924-9343-4FBF-B044-EC9988BC1D49.qvnote/resources/F1D8D0B4A5EC505A658C80C322D4AE65.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/12A3EAE3-A5E8-47FC-AE0E-3B95B617D9DF.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/12A3EAE3-A5E8-47FC-AE0E-3B95B617D9DF.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/73C5062D-DEA9-490B-8814-748F859544B8.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/73C5062D-DEA9-490B-8814-748F859544B8.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/1C2F2B8D41CE8A162010C55DC174AA82.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/1FEC91E3C19437FA1A142526EF7D3472.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/242C54A98F0B61CA36D87C702C3F2372.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/37A328214BFC9BDB75F73A5CA3EABE17.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/3A779DD6C1FE66C388F69A77C911B5C8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/492B41A3AB2E81224EBCE0B2D275B99A.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/4D873FCCD7FA0C25450A186D82C6DF52.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/4EE05BAB3CE8C243E39BFF13C16B1AC3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/61A4BB5869A472F901258735BEAF70B0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/66BEABE38971597F36AB4F7BBF788AA5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/67EA539D3B60F74AA93BA6ABD6958D08.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/6982652D0714C2C2B1DE20D04979AF23.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/69D88091D516A0064551D8F2881A2EDE.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/745EFEBF20DB540F740231A40BDDB93F.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/75D505A58D5B23BD4ED7207C087B5F04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/88CD04F0F7824346A051B9899AD4AD0C.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/8D90FF4FA2A8A73A23B6D3C61E0892AA.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/9855D67C9F3647DC082A83D06F277494.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/9AE45D505BB5FA976AC76A42B6D89227.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/B1A76A5DD5CBF7038828C6B8B2F27DA3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/B912D0B49B333C84810B9F42FDC2C371.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/B96C0EBC0E38C68850DC072A41D4144B.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/B9DA6A4845C16156E47AD335D18EA6E0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/D501436FE83B8D4B25450A022482D5A4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/DA34EBDDA776378A81AB97551EC955E5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/DB0C770D8DD55E5A433B6306D7085BF3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/E3BB7229FE186AD66453CB55DC592D2E.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/E3F2CDC77D07F2B67E553E5509E9DC00.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/EFCC9AD8E9BC39738EE632040917A49D.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/EFFB9F8B22BE1164FFAC6ECA32189919.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/F08BE5320B509F0294C2FFA7A78149F0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/7FADCAF7-8EA6-4DED-9178-3A6E453149A9.qvnote/resources/F1D8D0B4A5EC505A658C80C322D4AE65.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/ECA21669-7EB8-4B28-AE81-831D7A0EC2DF.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/ECA21669-7EB8-4B28-AE81-831D7A0EC2DF.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/1BE6C761-41E2-4F5C-8B57-4C5F6E477F00.qvnotebook/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/6AAB277A-3C0A-48E2-BE34-76272C47B880.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/6AAB277A-3C0A-48E2-BE34-76272C47B880.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/6AAB277A-3C0A-48E2-BE34-76272C47B880.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/28A308A65B43D79482C913803F349716.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/6AAB277A-3C0A-48E2-BE34-76272C47B880.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/4A3B4A39AB8E5C556359147B882B4788.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/6AAB277A-3C0A-48E2-BE34-76272C47B880.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/5D5166A3D3712E7C03AF74B1CCACBEAC.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/6AAB277A-3C0A-48E2-BE34-76272C47B880.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/62F8D6CAC0120E34CAC75B59A467B1D8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/6AAB277A-3C0A-48E2-BE34-76272C47B880.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/76BCC65FF39FB153D377EEF08FABEB16.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/6AAB277A-3C0A-48E2-BE34-76272C47B880.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/98F724EDF6695476F6B38F7F172B59F5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/6AAB277A-3C0A-48E2-BE34-76272C47B880.qvnotebook/4186F942-DB80-42CC-A8B5-902053653563.qvnote/resources/BE69409D8ECB330D775F9E6F1E99A239.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/6AAB277A-3C0A-48E2-BE34-76272C47B880.qvnotebook/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/73297E13-0C5A-4094-AD23-FDED8C9D9217.qvnotebook/34BE3DC7-6304-4E13-B68F-562357BEA6CC.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/73297E13-0C5A-4094-AD23-FDED8C9D9217.qvnotebook/34BE3DC7-6304-4E13-B68F-562357BEA6CC.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/73297E13-0C5A-4094-AD23-FDED8C9D9217.qvnotebook/34BE3DC7-6304-4E13-B68F-562357BEA6CC.qvnote/resources/4D9957AC1C47F408A72903F88BFA71AA.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/73297E13-0C5A-4094-AD23-FDED8C9D9217.qvnotebook/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/90C57B65-0AA1-4098-93A2-542945D75FE7.qvnotebook/4735FD47-677B-4033-BB3B-3BC5DA201A67.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/90C57B65-0AA1-4098-93A2-542945D75FE7.qvnotebook/4735FD47-677B-4033-BB3B-3BC5DA201A67.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/90C57B65-0AA1-4098-93A2-542945D75FE7.qvnotebook/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/03FC54DA-0F9F-498B-A988-368AEE23E827.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/03FC54DA-0F9F-498B-A988-368AEE23E827.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/081CFF82-BD62-4F8D-A323-63C0A5D72A54.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/081CFF82-BD62-4F8D-A323-63C0A5D72A54.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/151E99DE-B12E-440C-8C15-F6DD9D43FFD4.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/151E99DE-B12E-440C-8C15-F6DD9D43FFD4.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/1C6358D7-803B-4E51-B5A3-FEBECDC3130B.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/1C6358D7-803B-4E51-B5A3-FEBECDC3130B.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/22A913D1-41BC-4D2D-BE35-AEF04CE479AC.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/22A913D1-41BC-4D2D-BE35-AEF04CE479AC.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/235BE556-F0D0-47E4-8FAF-9866BAA98167.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/235BE556-F0D0-47E4-8FAF-9866BAA98167.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/23BFD6A9-3A9B-4CB4-AB4E-849C342D33BC.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/23BFD6A9-3A9B-4CB4-AB4E-849C342D33BC.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/32A0863A-D7FA-42EC-AB04-C618C85A7797.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/32A0863A-D7FA-42EC-AB04-C618C85A7797.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/3D398227-D541-4E0A-A30B-7FB997DD0373.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/3D398227-D541-4E0A-A30B-7FB997DD0373.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/4A8D4F27-5A9E-4F88-9636-71331A761F15.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/4A8D4F27-5A9E-4F88-9636-71331A761F15.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/5B6C3D1D-66E0-490B-870B-D55DBCCD9554.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/5B6C3D1D-66E0-490B-870B-D55DBCCD9554.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/9D2D7076-6725-4F73-92DA-0C2C12B79DA5.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/9D2D7076-6725-4F73-92DA-0C2C12B79DA5.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/9DD93BC8-22B2-46CE-9793-2D05213F02F7.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/9DD93BC8-22B2-46CE-9793-2D05213F02F7.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/B4E5B6FC-BD64-4187-B81F-F8DE88DD743C.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/B4E5B6FC-BD64-4187-B81F-F8DE88DD743C.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/C3570B6B-C7AE-4664-8457-443D856D762C.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/C3570B6B-C7AE-4664-8457-443D856D762C.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/C3CEA577-8FD3-433A-AC20-DAB2B5F79CD1.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/C3CEA577-8FD3-433A-AC20-DAB2B5F79CD1.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/D6FA4EB0-B5F1-4F6E-BCE3-6F7F988931EE.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/D6FA4EB0-B5F1-4F6E-BCE3-6F7F988931EE.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/D857750F-1D03-4C05-9B02-BA8349A1EA69.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/D857750F-1D03-4C05-9B02-BA8349A1EA69.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/DBA18B4B-37AC-408C-A3BB-F1EC2F196BD2.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/DBA18B4B-37AC-408C-A3BB-F1EC2F196BD2.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/E0853B40-8B1A-49A3-9291-EBD6BCC03B49.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/E0853B40-8B1A-49A3-9291-EBD6BCC03B49.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/F230DAE5-117A-4BD5-BC49-7DC75D09B01C.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/F230DAE5-117A-4BD5-BC49-7DC75D09B01C.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/B8921AAE-809C-40BC-AB2F-3C72C2641E20.qvnotebook/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/EA79BE05-D4B9-4CF7-856D-05305FDD9219.qvnotebook/03BBE017-4FC1-4015-AFE7-9F0C943DE228.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/EA79BE05-D4B9-4CF7-856D-05305FDD9219.qvnotebook/03BBE017-4FC1-4015-AFE7-9F0C943DE228.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/EA79BE05-D4B9-4CF7-856D-05305FDD9219.qvnotebook/1DCD93D3-4130-4D24-A2D1-26D12D76C241.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/EA79BE05-D4B9-4CF7-856D-05305FDD9219.qvnotebook/441CC65E-45F2-4347-BCD4-AE17B05FBD2F.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/EA79BE05-D4B9-4CF7-856D-05305FDD9219.qvnotebook/441CC65E-45F2-4347-BCD4-AE17B05FBD2F.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/EA79BE05-D4B9-4CF7-856D-05305FDD9219.qvnotebook/706F20B5-D098-4A9A-B7B5-548BAB092254.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/EA79BE05-D4B9-4CF7-856D-05305FDD9219.qvnotebook/706F20B5-D098-4A9A-B7B5-548BAB092254.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/EA79BE05-D4B9-4CF7-856D-05305FDD9219.qvnotebook/886F65E8-7431-4A6E-8E59-FF2859F26216.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/EA79BE05-D4B9-4CF7-856D-05305FDD9219.qvnotebook/886F65E8-7431-4A6E-8E59-FF2859F26216.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/EA79BE05-D4B9-4CF7-856D-05305FDD9219.qvnotebook/A6F65DEE-9286-475D-A769-CF3C3B4A4238.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/EA79BE05-D4B9-4CF7-856D-05305FDD9219.qvnotebook/A6F65DEE-9286-475D-A769-CF3C3B4A4238.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/EA79BE05-D4B9-4CF7-856D-05305FDD9219.qvnotebook/C64C9ABB-6EE5-4C97-B9D3-5D78D54963E5.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/EA79BE05-D4B9-4CF7-856D-05305FDD9219.qvnotebook/C64C9ABB-6EE5-4C97-B9D3-5D78D54963E5.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/EA79BE05-D4B9-4CF7-856D-05305FDD9219.qvnotebook/E507DC75-C481-4D4F-8A84-6682DF630E50.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/EA79BE05-D4B9-4CF7-856D-05305FDD9219.qvnotebook/E507DC75-C481-4D4F-8A84-6682DF630E50.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/EA79BE05-D4B9-4CF7-856D-05305FDD9219.qvnotebook/EFF87769-44D8-47A5-A51F-84F08BAB0EF9.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/EA79BE05-D4B9-4CF7-856D-05305FDD9219.qvnotebook/EFF87769-44D8-47A5-A51F-84F08BAB0EF9.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/EA79BE05-D4B9-4CF7-856D-05305FDD9219.qvnotebook/F147B4D9-1986-43A0-AF1E-70D8D6F4F05C.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/EA79BE05-D4B9-4CF7-856D-05305FDD9219.qvnotebook/F147B4D9-1986-43A0-AF1E-70D8D6F4F05C.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/EA79BE05-D4B9-4CF7-856D-05305FDD9219.qvnotebook/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Inbox.qvnotebook/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/0116657F-7A86-49EE-9988-1F73F533229F.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/0116657F-7A86-49EE-9988-1F73F533229F.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/0425B796-FD46-4433-A621-3A9FA51AABF9.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/0425B796-FD46-4433-A621-3A9FA51AABF9.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/0845AC7E-9DEE-419B-8C9B-5BC3094328C5.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/0845AC7E-9DEE-419B-8C9B-5BC3094328C5.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/0E8B1249-DFDF-4154-A02E-A4953D17D1FF.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/0E8B1249-DFDF-4154-A02E-A4953D17D1FF.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/127F33D7-DCA9-4DF0-983D-BFD127126342.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/127F33D7-DCA9-4DF0-983D-BFD127126342.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/13DA3E59-8222-4E80-B960-944BEBC1FF53.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/13DA3E59-8222-4E80-B960-944BEBC1FF53.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/1C2F2B8D41CE8A162010C55DC174AA82.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/1FEC91E3C19437FA1A142526EF7D3472.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/242C54A98F0B61CA36D87C702C3F2372.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/37A328214BFC9BDB75F73A5CA3EABE17.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/3A779DD6C1FE66C388F69A77C911B5C8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/492B41A3AB2E81224EBCE0B2D275B99A.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/4D873FCCD7FA0C25450A186D82C6DF52.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/4EE05BAB3CE8C243E39BFF13C16B1AC3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/61A4BB5869A472F901258735BEAF70B0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/66BEABE38971597F36AB4F7BBF788AA5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/67EA539D3B60F74AA93BA6ABD6958D08.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/6982652D0714C2C2B1DE20D04979AF23.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/69D88091D516A0064551D8F2881A2EDE.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/745EFEBF20DB540F740231A40BDDB93F.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/75D505A58D5B23BD4ED7207C087B5F04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/88CD04F0F7824346A051B9899AD4AD0C.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/8D90FF4FA2A8A73A23B6D3C61E0892AA.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/9855D67C9F3647DC082A83D06F277494.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/9AE45D505BB5FA976AC76A42B6D89227.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/B1A76A5DD5CBF7038828C6B8B2F27DA3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/B912D0B49B333C84810B9F42FDC2C371.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/B96C0EBC0E38C68850DC072A41D4144B.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/B9DA6A4845C16156E47AD335D18EA6E0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/D501436FE83B8D4B25450A022482D5A4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/DA34EBDDA776378A81AB97551EC955E5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/DB0C770D8DD55E5A433B6306D7085BF3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/E3BB7229FE186AD66453CB55DC592D2E.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/E3F2CDC77D07F2B67E553E5509E9DC00.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/EFCC9AD8E9BC39738EE632040917A49D.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/EFFB9F8B22BE1164FFAC6ECA32189919.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/F08BE5320B509F0294C2FFA7A78149F0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/240C2D1D-51A6-4DA0-B964-5B8D22B1727C.qvnote/resources/F1D8D0B4A5EC505A658C80C322D4AE65.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/2B487B72-94E9-46E0-AD59-6CEA0D57748B.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/2B487B72-94E9-46E0-AD59-6CEA0D57748B.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/341C1F53-627F-432B-BA67-B2091D2F99B0.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/341C1F53-627F-432B-BA67-B2091D2F99B0.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/4071CF89-8BCE-4A0E-8339-AE6DEBA3CEF4.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/4071CF89-8BCE-4A0E-8339-AE6DEBA3CEF4.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/48ED96A6-ABD5-47F5-A1A2-921E4CB4D048.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/48ED96A6-ABD5-47F5-A1A2-921E4CB4D048.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/491BF0FD-4580-491E-8335-0370409184D3.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/491BF0FD-4580-491E-8335-0370409184D3.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/4FD262C5-010E-4C08-811C-E999F079AFD2.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/4FD262C5-010E-4C08-811C-E999F079AFD2.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/58022516-755F-4DA1-A22C-FA1843C3034B.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/58022516-755F-4DA1-A22C-FA1843C3034B.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/5D7DC6F7-122B-42DA-A611-69672C69406E.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/5D7DC6F7-122B-42DA-A611-69672C69406E.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/6348ED44-2030-4169-87D9-0AC49B8589B8.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/6348ED44-2030-4169-87D9-0AC49B8589B8.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/6BB4236F-8506-485A-A990-A2CE35188520.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/6BB4236F-8506-485A-A990-A2CE35188520.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/72A970D9-9000-4C67-83C3-FAE69C150381.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/72A970D9-9000-4C67-83C3-FAE69C150381.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/7308C196-4362-4DE3-80A3-2D1235FAEB3D.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/7308C196-4362-4DE3-80A3-2D1235FAEB3D.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/82B12E9A-18B3-4FAA-A314-C1C3868AFC02.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/82B12E9A-18B3-4FAA-A314-C1C3868AFC02.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/8324C710-FF45-48BB-A5FF-FF249DABFBA8.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/8324C710-FF45-48BB-A5FF-FF249DABFBA8.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/931BA106-B796-4870-B128-0757EAFB9E26.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/931BA106-B796-4870-B128-0757EAFB9E26.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/94C3EA61-7E4B-4B78-8FB5-422C4065CBCF.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/94C3EA61-7E4B-4B78-8FB5-422C4065CBCF.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/962AF200-B92B-4385-AE47-973CE2079D70.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/962AF200-B92B-4385-AE47-973CE2079D70.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/98D3331B-6B6F-4A46-AB76-85CDE6DF488A.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/98D3331B-6B6F-4A46-AB76-85CDE6DF488A.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/A087BCBD-ECD9-4C12-90A4-DEC999F806CD.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/A087BCBD-ECD9-4C12-90A4-DEC999F806CD.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/A0F53AD2-D4CD-4E6C-9F5C-1EAD8EF0E97B.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/A0F53AD2-D4CD-4E6C-9F5C-1EAD8EF0E97B.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/A18F196A-23DA-4778-9A08-454A2295DBB9.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/A18F196A-23DA-4778-9A08-454A2295DBB9.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/A4292789-ED45-4655-9F3B-F916EACB7D31.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/A4292789-ED45-4655-9F3B-F916EACB7D31.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/A6095CEE-6D8B-47F3-A293-1D9064EE5218.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/A6095CEE-6D8B-47F3-A293-1D9064EE5218.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/B4134FF9-2E87-45E2-977E-AFFD7CCA3A97.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/B4134FF9-2E87-45E2-977E-AFFD7CCA3A97.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/B44A0012-A79E-4C08-8764-4ED344562926.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/B44A0012-A79E-4C08-8764-4ED344562926.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/B8685436-013F-4DC4-99FE-72E470B5FFAB.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/B8685436-013F-4DC4-99FE-72E470B5FFAB.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/BB5C2FAF-F4EF-425F-954A-DF544C499396.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/BB5C2FAF-F4EF-425F-954A-DF544C499396.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/BECF194E-7EF0-415D-935F-9C53ECBA8690.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/BECF194E-7EF0-415D-935F-9C53ECBA8690.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/BEE2EC5E-1F70-40D4-A406-18E62192F1C7.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/BEE2EC5E-1F70-40D4-A406-18E62192F1C7.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/C26E7BD8-0509-4898-85D6-DA5C2D3A3CC9.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/C26E7BD8-0509-4898-85D6-DA5C2D3A3CC9.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/C8DD535C-79A2-44A0-B6CD-461D5F1F372B.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/C8DD535C-79A2-44A0-B6CD-461D5F1F372B.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/CE5B896D-F00D-4E76-8EBB-9F9BE5CBD0B4.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/CE5B896D-F00D-4E76-8EBB-9F9BE5CBD0B4.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/D01813C8-9AB9-4786-9EC9-F70BD46102FB.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/D01813C8-9AB9-4786-9EC9-F70BD46102FB.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/E2BC1CE6-211E-4878-BAB1-C3364383F4EA.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/E2BC1CE6-211E-4878-BAB1-C3364383F4EA.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/E5723C33-8CDF-4363-8687-B965F52D9AB0.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/E5723C33-8CDF-4363-8687-B965F52D9AB0.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/EB372507-AB9F-4C52-A35C-03B36A3EDE50.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/EB372507-AB9F-4C52-A35C-03B36A3EDE50.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/ED8BABDE-16A5-49DB-93A6-06D79C7C71B8.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/ED8BABDE-16A5-49DB-93A6-06D79C7C71B8.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/F6869AFE-D4ED-49C3-B3C0-F25A72DCA880.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/F6869AFE-D4ED-49C3-B3C0-F25A72DCA880.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/FBA5DA50-400A-474F-887E-54689DC372EF.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/FBA5DA50-400A-474F-887E-54689DC372EF.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Trash.qvnotebook/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/3C175FCC-B306-4A71-9FBA-24BD1D9B448C.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/3C175FCC-B306-4A71-9FBA-24BD1D9B448C.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/3C175FCC-B306-4A71-9FBA-24BD1D9B448C.qvnote/resources/AD9CEC60-4B82-4488-A916-F12EFCB6C0D2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/3C175FCC-B306-4A71-9FBA-24BD1D9B448C.qvnote/resources/AEAA2B10-5292-4524-9043-6E0DD1A69A8E.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/70944349-B786-4598-B172-5C6D90D51913.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/70944349-B786-4598-B172-5C6D90D51913.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/8500A7F1-383D-43EA-B807-0EE6A2C730F7.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/8500A7F1-383D-43EA-B807-0EE6A2C730F7.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/8500A7F1-383D-43EA-B807-0EE6A2C730F7.qvnote/resources/0039E536-1343-4E82-908A-34B77B7ED2D9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/9686AA1A-A5E9-41FF-9260-C3E0D0E9D4CB.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/9686AA1A-A5E9-41FF-9260-C3E0D0E9D4CB.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/9FE3C3BB-8504-40D6-B91F-BEC4FA055617.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/9FE3C3BB-8504-40D6-B91F-BEC4FA055617.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/B59AC519-2A2C-4EC8-B701-E69F54F40A85.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/B59AC519-2A2C-4EC8-B701-E69F54F40A85.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/B59AC519-2A2C-4EC8-B701-E69F54F40A85.qvnote/resources/1C3392AA-54E7-4EA3-A129-1C20F208B029.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/B59AC519-2A2C-4EC8-B701-E69F54F40A85.qvnote/resources/F6E1CA4A-FA0B-4E45-9861-3E3FEB0DAF99.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/C1DF6E20-B3F3-4DEF-A3FF-B3033C69EA38.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/C1DF6E20-B3F3-4DEF-A3FF-B3033C69EA38.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/C23160AA-78C5-459C-80E5-B0D24CB62B82.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/C23160AA-78C5-459C-80E5-B0D24CB62B82.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/C23160AA-78C5-459C-80E5-B0D24CB62B82.qvnote/resources/49D85B38-3A8F-4CCF-B07C-C89EB4A13BAF.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/C819626E-3BD3-4DDE-AF72-73C9C7B43428.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/C819626E-3BD3-4DDE-AF72-73C9C7B43428.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/C819626E-3BD3-4DDE-AF72-73C9C7B43428.qvnote/resources/57BEDE28-70F2-4C67-9C13-621DF806AFD0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/C819626E-3BD3-4DDE-AF72-73C9C7B43428.qvnote/resources/E3596D74-4437-499C-AF47-C56C409D0251.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/C819626E-3BD3-4DDE-AF72-73C9C7B43428.qvnote/resources/E67B67BA-9D36-432F-818D-8838559CDFC0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/D2A1CC36-CC97-4701-A895-EFC98EF47026.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/D2A1CC36-CC97-4701-A895-EFC98EF47026.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/ED3C96D1-AF37-4E66-9E6B-BB2005850479.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/ED3C96D1-AF37-4E66-9E6B-BB2005850479.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/ED3C96D1-AF37-4E66-9E6B-BB2005850479.qvnote/resources/12EDC7A8-A468-49BD-A742-3856B829129B.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/ED3C96D1-AF37-4E66-9E6B-BB2005850479.qvnote/resources/1A766DDD-68AE-4AC3-BC2D-2CE310B2A8F5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/ED3C96D1-AF37-4E66-9E6B-BB2005850479.qvnote/resources/57BF000A-0766-4C48-B4DF-0AB962C0D8BA.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/ED3C96D1-AF37-4E66-9E6B-BB2005850479.qvnote/resources/686554D4-4EAD-4AAA-9248-DA72C60CD808.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/ED3C96D1-AF37-4E66-9E6B-BB2005850479.qvnote/resources/6E03AF8F-DE1E-4BE6-8B5E-730B4A1B72E2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/ED3C96D1-AF37-4E66-9E6B-BB2005850479.qvnote/resources/C3FF7A1B-7664-445F-A72A-102882B5C453.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/EDFC03DD-4E78-4405-A560-4A902FCE4312.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/EDFC03DD-4E78-4405-A560-4A902FCE4312.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/FABE685F-D170-4B8F-AB4F-5CD50B91C50C.qvnote/content.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/FABE685F-D170-4B8F-AB4F-5CD50B91C50C.qvnote/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/FABE685F-D170-4B8F-AB4F-5CD50B91C50C.qvnote/resources/1FC1261E-1109-47E7-A62D-4268E55AD526.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/Tutorial.qvnotebook/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/meta.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/feed.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/posts.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sitemap.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/about.md" afterPath="$PROJECT_DIR$/data/_posts/about.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-ch-Readme.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-ch/2018-02-21-ch-Readme.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-ch-assignment2_google_cloud.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-ch/2018-02-21-ch-assignment2_google_cloud.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-ch-aws-tutorial.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-ch/2018-02-21-ch-aws-tutorial.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-ch-classification.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-ch/2018-02-21-ch-classification.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-ch-convnet-tips.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-ch/2018-02-21-ch-convnet-tips.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-ch-convolutional-networks.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-ch/2018-02-21-ch-convolutional-networks.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-ch-google_cloud_tutorial.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-ch/2018-02-21-ch-google_cloud_tutorial.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-ch-ipython-tutorial.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-ch/2018-02-21-ch-ipython-tutorial.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-ch-linear-classify.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-ch/2018-02-21-ch-linear-classify.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-ch-neural-networks-1.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-ch/2018-02-21-ch-neural-networks-1.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-ch-neural-networks-2.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-ch/2018-02-21-ch-neural-networks-2.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-ch-neural-networks-3.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-ch/2018-02-21-ch-neural-networks-3.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-ch-neural-networks-case-study.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-ch/2018-02-21-ch-neural-networks-case-study.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-ch-optimization-1.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-ch/2018-02-21-ch-optimization-1.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-ch-optimization-2.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-ch/2018-02-21-ch-optimization-2.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-ch-overview.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-ch/2018-02-21-ch-overview.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-ch-poster.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-ch/2018-02-21-ch-poster.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-ch-python-numpy-tutorial.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-ch/2018-02-21-ch-python-numpy-tutorial.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-ch-terminal-tutorial.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-ch/2018-02-21-ch-terminal-tutorial.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-ch-transfer-learning.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-ch/2018-02-21-ch-transfer-learning.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-ch-understanding-cnn.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-ch/2018-02-21-ch-understanding-cnn.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-en/2018-02-21-en-Readme.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-en/2018-02-21-en-Readme.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-en/2018-02-21-en-assignment2_google_cloud.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-en/2018-02-21-en-assignment2_google_cloud.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-en/2018-02-21-en-aws-tutorial.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-en/2018-02-21-en-aws-tutorial.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-en/2018-02-21-en-classification.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-en/2018-02-21-en-classification.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-en/2018-02-21-en-convnet-tips.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-en/2018-02-21-en-convnet-tips.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-en/2018-02-21-en-convolutional-networks.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-en/2018-02-21-en-convolutional-networks.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-en/2018-02-21-en-google_cloud_tutorial.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-en/2018-02-21-en-google_cloud_tutorial.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-en/2018-02-21-en-ipython-tutorial.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-en/2018-02-21-en-ipython-tutorial.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-en/2018-02-21-en-linear-classify.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-en/2018-02-21-en-linear-classify.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-en/2018-02-21-en-neural-networks-1.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-en/2018-02-21-en-neural-networks-1.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-en/2018-02-21-en-neural-networks-2.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-en/2018-02-21-en-neural-networks-2.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-en/2018-02-21-en-neural-networks-3.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-en/2018-02-21-en-neural-networks-3.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-en/2018-02-21-en-neural-networks-case-study.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-en/2018-02-21-en-neural-networks-case-study.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-en/2018-02-21-en-optimization-1.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-en/2018-02-21-en-optimization-1.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-en/2018-02-21-en-optimization-2.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-en/2018-02-21-en-optimization-2.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-en/2018-02-21-en-overview.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-en/2018-02-21-en-overview.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-en/2018-02-21-en-poster.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-en/2018-02-21-en-poster.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-en/2018-02-21-en-python-numpy-tutorial.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-en/2018-02-21-en-python-numpy-tutorial.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-en/2018-02-21-en-terminal-tutorial.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-en/2018-02-21-en-terminal-tutorial.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-en/2018-02-21-en-transfer-learning.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-en/2018-02-21-en-transfer-learning.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/cs231n-en/2018-02-21-en-understanding-cnn.md" afterPath="$PROJECT_DIR$/data/_posts/cs231n-en/2018-02-21-en-understanding-cnn.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/example/2016-01-30-quick-latex.md" afterPath="$PROJECT_DIR$/data/_posts/example/2016-01-30-quick-latex.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/example/2016-04-15-dive-into-gradient-decent.md" afterPath="$PROJECT_DIR$/data/_posts/example/2016-04-15-dive-into-gradient-decent.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/example/2017-01-01-perceptron.md" afterPath="$PROJECT_DIR$/data/_posts/example/2017-01-01-perceptron.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/example/2017-04-23-bias-variance.md" afterPath="$PROJECT_DIR$/data/_posts/example/2017-04-23-bias-variance.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/example/2017-05-12-nosql-in-python.md" afterPath="$PROJECT_DIR$/data/_posts/example/2017-05-12-nosql-in-python.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/example/2017-05-23-a-web-crawer-with-a-asyncio-coroutines-1.md" afterPath="$PROJECT_DIR$/data/_posts/example/2017-05-23-a-web-crawer-with-a-asyncio-coroutines-1.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/example/2017-06-10-a-web-crawer-with-a-asyncio-coroutines-2.md" afterPath="$PROJECT_DIR$/data/_posts/example/2017-06-10-a-web-crawer-with-a-asyncio-coroutines-2.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/example/2017-07-28-fork-exec-source.md" afterPath="$PROJECT_DIR$/data/_posts/example/2017-07-28-fork-exec-source.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/example/2017-07-30-bitcoin-explained-1.md" afterPath="$PROJECT_DIR$/data/_posts/example/2017-07-30-bitcoin-explained-1.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/example/2017-08-18-tendermint.md" afterPath="$PROJECT_DIR$/data/_posts/example/2017-08-18-tendermint.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/example/2017-09-25-ethereum-ultimate-guide.md" afterPath="$PROJECT_DIR$/data/_posts/example/2017-09-25-ethereum-ultimate-guide.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/example/2018-01-13-latex语法.md" afterPath="$PROJECT_DIR$/data/_posts/example/2018-01-13-latex语法.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/example/2018-10-01-latex语法.md" afterPath="$PROJECT_DIR$/data/_posts/example/2018-10-01-latex语法.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/tensorflow/2018-02-23-如何选择优化器 optimizer.md" afterPath="$PROJECT_DIR$/data/_posts/tensorflow/2018-02-23-如何选择优化器 optimizer.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/test/2018-02-21-testtest.md" afterPath="$PROJECT_DIR$/data/_posts/test/2018-02-21-testtest.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/pdf/bias-variance.pdf" afterPath="$PROJECT_DIR$/diary/quiver/深度学习2/resources/4A3B4A39AB8E5C556359147B882B4788.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diary/quiver/深度学习2/resources/4A3B4A39AB8E5C556359147B882B4788.gif" afterPath="$PROJECT_DIR$/diary/quiver/深度学习2/resources/4A3B4A39AB8E5C556359147B882B4788.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diary/quiver/深度学习2/resources/5D5166A3D3712E7C03AF74B1CCACBEAC.gif" afterPath="$PROJECT_DIR$/diary/quiver/深度学习2/resources/5D5166A3D3712E7C03AF74B1CCACBEAC.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/diary/src/GetAll.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/mathjaxhelper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/常用/2018-02-23-latex语法.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/常用工具/2018-02-24-10分钟上手Pandas.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/机器学习实战/2017-01-01-1.机器学习基础.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/机器学习实战/2017-02-01-2.k-近邻算法.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/机器学习实战/2017-03-01-3.决策树.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/机器学习实战/2017-04-01-4.朴素贝叶斯.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/机器学习实战/2017-04-02-naive-bayes-discuss.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/机器学习实战/2017-05-01-5.Logistic回归.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/机器学习实战/2017-06-01-6.支持向量机.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/机器学习实战/2017-06-02-6.1.支持向量机的几个通俗理解.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/机器学习实战/2017-07-01-7.集成方法-随机森林和AdaBoost.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/机器学习实战/2017-08-01-8.预测数值型数据：回归.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/机器学习实战/2017-09-01-9.树回归.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/机器学习实战/2017-10-01-10.k-means聚类.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/机器学习实战/2017-11-01-11.使用Apriori算法进行关联分析.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/机器学习实战/2017-12-01-12.使用FP-growth算法来高效发现频繁项集.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/机器学习实战/2018-01-01-13.利用PCA来简化数据.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/机器学习实战/2018-02-01-14.利用SVD简化数据.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/机器学习实战/2018-03-01-15.大数据与MapReduce.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/机器学习实战/2018-04-01-16.推荐系统.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/深度学习/2018-02-23-10分钟上手Pandas.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/深度学习/2018-02-23-主成分分析 (2).md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/深度学习/2018-02-23-主成分分析.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/深度学习/2018-02-23-最小二乘法.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/深度学习/2018-02-23-矩阵分解.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/深度学习/2018-02-23-矩阵求导.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mkdocs.bak.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mkdocs.bak2.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Diary.iml" afterPath="$PROJECT_DIR$/.idea/Diary.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/saveactions_settings.xml" afterPath="$PROJECT_DIR$/.idea/saveactions_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/EA79BE05-D4B9-4CF7-856D-05305FDD9219.qvnotebook/1DCD93D3-4130-4D24-A2D1-26D12D76C241.qvnote/content.json" afterPath="$PROJECT_DIR$/data/quiver/Quiver.qvlibrary/EA79BE05-D4B9-4CF7-856D-05305FDD9219.qvnotebook/1DCD93D3-4130-4D24-A2D1-26D12D76C241.qvnote/content.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -692,9 +49,60 @@
     <SUITE FILE_PATH="coverage/Diary$MoveFileFromQuiver.coverage" NAME="MoveFileFromQuiver Coverage Results" MODIFIED="1519363968646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diary/src" />
     <SUITE FILE_PATH="coverage/Diary$server.coverage" NAME="server Coverage Results" MODIFIED="1519026357862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Editor" />
     <SUITE FILE_PATH="coverage/Diary$Test1.coverage" NAME="Test1 Coverage Results" MODIFIED="1519356574170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diary/src" />
+    <SUITE FILE_PATH="coverage/Diary$GetAll.coverage" NAME="GetAll Coverage Results" MODIFIED="1520532255623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diary/src" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <splitter split-orientation="horizontal" split-proportion="0.32154697">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="GetAll.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/diary/src/GetAll.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="382">
+                  <caret line="70" column="11" lean-forward="false" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
+                  <folding>
+                    <element signature="e#159#172#0" expanded="true" />
+                    <element signature="e#1641#3001#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <splitter split-orientation="vertical" split-proportion="0.5">
+          <split-first>
+            <leaf>
+              <file leaf-file-name="mkdocs.yml" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/mkdocs.yml">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="90">
+                      <caret line="29" column="74" lean-forward="false" selection-start-line="29" selection-start-column="74" selection-end-line="29" selection-end-column="74" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-first>
+          <split-second>
+            <leaf>
+              <file leaf-file-name="mkdocs.bak.yml" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/mkdocs.bak.yml">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="50">
+                      <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="17" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-second>
+        </splitter>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -707,8 +115,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>github_username</find>
-      <find>site.</find>
       <find>neural-networks-3</find>
       <find>neural-networks-1</find>
       <find>perturbed</find>
@@ -736,6 +142,9 @@
       <find>pdf</find>
       <find>res</find>
       <find>abc1</find>
+      <find>Cheat</find>
+      <find>!!python/str</find>
+      <find>coding</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/Editor</dir>
@@ -750,16 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/_site/posts/bitcoin-explained-1/index.html" />
-        <option value="$PROJECT_DIR$/_posts/2017-05-23-a-web-crawer-with-a-asyncio-coroutines-1.md" />
-        <option value="$PROJECT_DIR$/_site/posts/a-web-crawer-with-a-asyncio-coroutines-1/index.html" />
-        <option value="$PROJECT_DIR$/_posts/2017-06-10-a-web-crawer-with-a-asyncio-coroutines-2.md" />
-        <option value="$PROJECT_DIR$/_site/posts/a-web-crawer-with-a-asyncio-coroutines-2/index.html" />
-        <option value="$PROJECT_DIR$/_site/posts/cs231n-ch/neural-networks-3/index.html" />
-        <option value="$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-chclassification.md" />
-        <option value="$PROJECT_DIR$/_posts/example/2016-01-30-quick-latex.md" />
-        <option value="$PROJECT_DIR$/_posts/example/2016-04-15-dive-into-gradient-decent.md" />
-        <option value="$PROJECT_DIR$/_posts/example/2017-01-01-perceptron.md" />
         <option value="$PROJECT_DIR$/_posts/example/2017-04-23-bias-variance.md" />
         <option value="$PROJECT_DIR$/_posts/example/2017-05-12-nosql-in-python.md" />
         <option value="$PROJECT_DIR$/_posts/example/2017-05-23-a-web-crawer-with-a-asyncio-coroutines-1.md" />
@@ -801,6 +200,16 @@
         <option value="$PROJECT_DIR$/assets/css/_syntax-highlighting.scss" />
         <option value="$PROJECT_DIR$/_posts/tensorflow/2018-02-23-如何选择优化器 optimizer.md" />
         <option value="$PROJECT_DIR$/_config.yml" />
+        <option value="$PROJECT_DIR$/docs/CheatSheet.md" />
+        <option value="$PROJECT_DIR$/docs/About.md" />
+        <option value="$PROJECT_DIR$/config/jupyter_notebook_config.py" />
+        <option value="$PROJECT_DIR$/docs/index.md" />
+        <option value="$PROJECT_DIR$/docs/mathjaxhelper.js" />
+        <option value="$PROJECT_DIR$/mkdocs.yml.bak" />
+        <option value="$PROJECT_DIR$/mkdocs.bak2.yml" />
+        <option value="$PROJECT_DIR$/diary/src/GetAll.py" />
+        <option value="$PROJECT_DIR$/mkdocs.bak.yml" />
+        <option value="$PROJECT_DIR$/mkdocs.yml" />
       </list>
     </option>
   </component>
@@ -840,6 +249,33 @@
               <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
               <item name="Diary" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Diary" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Diary" type="462c0819:PsiDirectoryNode" />
+              <item name="diary" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Diary" type="462c0819:PsiDirectoryNode" />
+              <item name="diary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Diary" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Diary" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="常用" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -854,19 +290,19 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/docs" />
+      <recent name="$PROJECT_DIR$/assets/css" />
+      <recent name="$PROJECT_DIR$/_posts" />
+      <recent name="$PROJECT_DIR$/_includes" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$/_posts/temp/tensorflow/resource" />
       <recent name="$PROJECT_DIR$/_posts/temp/tensorflow" />
       <recent name="$PROJECT_DIR$/_posts/temp/resource" />
       <recent name="$PROJECT_DIR$/_posts/temp" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/assets/css" />
-      <recent name="$PROJECT_DIR$/_posts" />
-      <recent name="$PROJECT_DIR$/_includes" />
-      <recent name="$PROJECT_DIR$/_layouts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -881,7 +317,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.MoveFileFromQuiver">
+  <component name="RunManager" selected="Python.GetAll">
+    <configuration name="GetAll" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/diary/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Diary" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/diary/src/GetAll.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="MoveFileFromQuiver" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -936,16 +390,18 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.server" />
       <item index="1" class="java.lang.String" itemvalue="Python.Test1" />
       <item index="2" class="java.lang.String" itemvalue="Python.MoveFileFromQuiver" />
+      <item index="3" class="java.lang.String" itemvalue="Python.GetAll" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.MoveFileFromQuiver" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Test1" />
-        <item index="2" class="java.lang.String" itemvalue="Python.server" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.GetAll" />
+        <item index="1" class="java.lang.String" itemvalue="Python.MoveFileFromQuiver" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Test1" />
+        <item index="3" class="java.lang.String" itemvalue="Python.server" />
       </list>
     </recent_temporary>
   </component>
@@ -1036,16 +492,17 @@
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="723" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3029079" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20436187" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25955415" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26898223" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3089172" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1054,7 +511,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1069,63 +525,31 @@
     <option name="LAST_COMMIT_MESSAGE" value="add" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/diary/src/GetAll.py</url>
+          <line>109</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/diary/src/GetAll.py</url>
+          <line>73</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="12" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/about.md" />
-    <entry file="file://$PROJECT_DIR$/_site/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-chReadme.md" />
-    <entry file="file://$PROJECT_DIR$/data/_posts/example/2016-04-15-dive-into-gradient-decent.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="75">
-            <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="25" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/_posts/about.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="45">
-            <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/layout.css" />
-    <entry file="file://$PROJECT_DIR$/assets/css/normalize.css" />
-    <entry file="file://$PROJECT_DIR$/_posts/cs231n-ch/2018-02-21-chneural-networks-3.md" />
-    <entry file="file://$PROJECT_DIR$/_site/posts/testtest.html" />
-    <entry file="file://$PROJECT_DIR$/_site/posts/index.html" />
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_site/posts.html" />
-    <entry file="file://$PROJECT_DIR$/feed.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/misc/zhihu/home.css" />
-    <entry file="file://$PROJECT_DIR$/assets/misc/zhihu/zhihu.html" />
-    <entry file="file://$PROJECT_DIR$/_site/posts/test/testtest.html" />
-    <entry file="file://$PROJECT_DIR$/_posts/temp/tensorflow/如何选择优化器 optimizer.md" />
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="86">
@@ -1325,6 +749,159 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="371">
           <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jupyters/Untitled.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jupyters/.ipynb_checkpoints/Untitled-checkpoint.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jupyters/Cheatsheet.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/Cheatsheet.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="259">
+            <caret line="33" column="3" lean-forward="true" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="450">
+            <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/常用/2018-02-23-latex语法.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="75">
+            <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/mathjaxhelper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/About.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-544">
+            <caret line="1" column="31" lean-forward="false" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="1025" column="0" lean-forward="false" selection-start-line="1025" selection-start-column="0" selection-end-line="1025" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.2/python_stubs/1283554116/__builtin__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-417">
+          <caret line="1216" column="30" lean-forward="false" selection-start-line="1216" selection-start-column="24" selection-end-line="1216" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/yaml/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="63" column="4" lean-forward="false" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/jupyter_notebook_config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="555" column="0" lean-forward="true" selection-start-line="555" selection-start-column="0" selection-end-line="555" selection-end-column="0" />
+          <folding>
+            <element signature="e#18579#18590#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mkdocs.bak2.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="19" column="18" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diary/src/GetAll.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="70" column="11" lean-forward="false" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
+          <folding>
+            <element signature="e#159#172#0" expanded="true" />
+            <element signature="e#1641#3001#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mkdocs.bak.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mkdocs.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="29" column="74" lean-forward="false" selection-start-line="29" selection-start-column="74" selection-end-line="29" selection-end-column="74" />
           <folding />
         </state>
       </provider>

@@ -1,0 +1,31 @@
+extra_javascript:
+  - 'javascripts/extra.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+markdown_extensions:
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+site_name: DataLab
+theme: windmill
+
+pages:
+- Home: [Cheatsheet.Md]
+- Home: [About.Md,Cheatsheet.Md,Index.Md,常用/2018-02-23-latex语法.md]
+- 常用: [About.Md,Cheatsheet.Md,Index.Md,常用/2018-02-23-latex语法.md]
+- {Home: index.md}
+- {Cheatsheet: Cheatsheet.md}
+- {About: About.md}
