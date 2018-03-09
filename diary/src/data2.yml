@@ -1,0 +1,60 @@
+extra_javascript:
+- javascripts/extra.js
+- https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
+markdown_extensions:
+- pymdownx.arithmatex
+- pymdownx.betterem:
+    smart_enable: all
+- pymdownx.caret
+- pymdownx.critic
+- pymdownx.details
+- pymdownx.emoji:
+    emoji_generator: pymdownx.emoji.to_svg
+- pymdownx.inlinehilite
+- pymdownx.magiclink
+- pymdownx.mark
+- pymdownx.smartsymbols
+- pymdownx.superfences
+- pymdownx.tasklist:
+    custom_checkbox: true
+- pymdownx.tilde
+pages:
+- Home:
+  - index.Md
+- Home:
+  - About.Md
+  - Cheatsheet.Md
+  - Index.Md
+- 常用:
+  - 常用/2018-02-23-latex语法.md
+- 常用工具:
+  - 常用工具/2018-02-24-10分钟上手Pandas.md
+- 机器学习实战:
+  - 机器学习实战/2017-01-01-1.机器学习基础.md
+  - 机器学习实战/2017-02-01-2.k-近邻算法.md
+  - 机器学习实战/2017-03-01-3.决策树.md
+  - 机器学习实战/2017-04-01-4.朴素贝叶斯.md
+  - 机器学习实战/2017-04-02-naive-bayes-discuss.md
+  - 机器学习实战/2017-05-01-5.Logistic回归.md
+  - 机器学习实战/2017-06-01-6.支持向量机.md
+  - 机器学习实战/2017-06-02-6.1.支持向量机的几个通俗理解.md
+  - 机器学习实战/2017-07-01-7.集成方法-随机森林和AdaBoost.md
+  - 机器学习实战/2017-08-01-8.预测数值型数据：回归.md
+  - 机器学习实战/2017-09-01-9.树回归.md
+  - 机器学习实战/2017-10-01-10.k-means聚类.md
+  - 机器学习实战/2017-11-01-11.使用Apriori算法进行关联分析.md
+  - 机器学习实战/2017-12-01-12.使用FP-growth算法来高效发现频繁项集.md
+  - 机器学习实战/2018-01-01-13.利用PCA来简化数据.md
+  - 机器学习实战/2018-02-01-14.利用SVD简化数据.md
+  - 机器学习实战/2018-03-01-15.大数据与MapReduce.md
+  - 机器学习实战/2018-04-01-16.推荐系统.md
+- 深度学习:
+  - 深度学习/2018-02-23-10分钟上手Pandas.md
+  - 深度学习/2018-02-23-主成分分析 (2).md
+  - 深度学习/2018-02-23-主成分分析.md
+  - 深度学习/2018-02-23-最小二乘法.md
+  - 深度学习/2018-02-23-矩阵分解.md
+  - 深度学习/2018-02-23-矩阵求导.md
+site_name: DataLab
+theme: mkdocs
+中文: 测试
