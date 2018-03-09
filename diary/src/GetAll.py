@@ -41,18 +41,17 @@ def output_post_save2():
     pages = data['pages']
 
     home = []
+
     pages.append({"Home": home})
     for file_name in os.listdir(doc_path):
         file_path = doc_path + file_name
         if ".md" in file_name:
             home.append(encode(file_name))
+        elif "resources" in file_name:
+            pass
         elif os.path.isdir(file_path):
             cate = encode(file_name)
-            cate_list = []
-            pages.append({cate: cate_list})
-            for file2 in os.listdir(file_path):
-                if ".md" in file2:
-                    cate_list.append(cate + "/" + encode(file2))
+            pages.append({cate: test_path(file_path)})
 
     with io.open(yml_path, 'w+', encoding='utf8') as outfile:
         yaml.dump(data, outfile, default_flow_style=False, allow_unicode=True)
@@ -72,5 +71,24 @@ def test():
         yaml.dump(data, outfile, default_flow_style=False, allow_unicode=True)
 
 
+def test_path(root_path):
+    print root_path
+
+    result = []
+    for file_name in os.listdir(root_path):
+        file_path = root_path + "/" + file_name
+        if ".md" in file_name:
+            result.append(encode(file_path.replace(doc_path, "")))
+        elif "resources" in file_name:
+            pass
+        elif os.path.isdir(file_path):
+            print (file_path + "是路径")
+            result.append({encode(file_name): test_path(file_path)})
+
+    print ("result\t" + str(result))
+    return result
+
+
 if __name__ == '__main__':
     output_post_save2()
+    test_path(doc_path)

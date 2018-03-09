@@ -1,7 +1,27 @@
+copyright: Copyright &copy; 2016 - 2018 Martin Donath
+edit_uri: ''
+extra:
+  social:
+  - link: http://struct.cc
+    type: globe
+  - link: https://github.com/1007530194
+    type: github-alt
+  - link: https://twitter.com/1007530194
+    type: twitter
+  - link: https://linkedin.com/in/1007530194
+    type: linkedin
 extra_javascript:
 - javascripts/extra.js
 - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
 markdown_extensions:
+- markdown.extensions.admonition
+- markdown.extensions.codehilite:
+    guess_lang: false
+- markdown.extensions.def_list
+- markdown.extensions.footnotes
+- markdown.extensions.meta
+- markdown.extensions.toc:
+    permalink: true
 - pymdownx.arithmatex
 - pymdownx.betterem:
     smart_enable: all
@@ -11,6 +31,7 @@ markdown_extensions:
 - pymdownx.emoji:
     emoji_generator: pymdownx.emoji.to_svg
 - pymdownx.inlinehilite
+- pymdownx.keys
 - pymdownx.magiclink
 - pymdownx.mark
 - pymdownx.smartsymbols
@@ -19,49 +40,164 @@ markdown_extensions:
     custom_checkbox: true
 - pymdownx.tilde
 pages:
+- Home: index.md
 - Home:
-  - index.md
-- Home:
-  - About.md
-  - Cheatsheet.md
+  - AboutMe.md
   - index.md
   - 要做的.md
-- books:
-  - books/DeepLearning.md
-- tensorflow:
-  - tensorflow/如何选择优化器 optimizer.md
-- test:
-  - test/testtest.md
-- 常用:
-  - 常用/latex语法.md
-- 常用工具:
-  - 常用工具/10分钟上手Pandas.md
-- 机器学习实战:
-  - 机器学习实战/00naive-bayes-discuss.md
-  - 机器学习实战/01.机器学习基础.md
-  - 机器学习实战/02.k-近邻算法.md
-  - 机器学习实战/03.决策树.md
-  - 机器学习实战/04.朴素贝叶斯.md
-  - 机器学习实战/05.Logistic回归.md
-  - 机器学习实战/06.0.支持向量机.md
-  - 机器学习实战/06.1.支持向量机的几个通俗理解.md
-  - 机器学习实战/07.集成方法-随机森林和AdaBoost.md
-  - 机器学习实战/08.预测数值型数据-回归.md
-  - 机器学习实战/09.树回归.md
-  - 机器学习实战/10.k-means聚类.md
-  - 机器学习实战/11.使用Apriori算法进行关联分析.md
-  - 机器学习实战/12.使用FP-growth算法来高效发现频繁项集.md
-  - 机器学习实战/13.利用PCA来简化数据.md
-  - 机器学习实战/14.利用SVD简化数据.md
-  - 机器学习实战/15.大数据与MapReduce.md
-  - 机器学习实战/16.推荐系统.md
-- 深度学习:
-  - 深度学习/10分钟上手Pandas.md
-  - 深度学习/主成分分析-2.md
-  - 深度学习/主成分分析.md
-  - 深度学习/最小二乘法.md
-  - 深度学习/矩阵分解.md
-  - 深度学习/矩阵求导.md
-- 转载: []
-site_name: DataLab
-theme: windmill
+- 书籍:
+  - 机器学习实战:
+    - 书籍/机器学习实战/00naive-bayes-discuss.md
+    - 书籍/机器学习实战/01.机器学习基础.md
+    - 书籍/机器学习实战/02.k-近邻算法.md
+    - 书籍/机器学习实战/03.决策树.md
+    - 书籍/机器学习实战/04.朴素贝叶斯.md
+    - 书籍/机器学习实战/05.Logistic回归.md
+    - 书籍/机器学习实战/06.0.支持向量机.md
+    - 书籍/机器学习实战/06.1.支持向量机的几个通俗理解.md
+    - 书籍/机器学习实战/07.集成方法-随机森林和AdaBoost.md
+    - 书籍/机器学习实战/08.预测数值型数据-回归.md
+    - 书籍/机器学习实战/09.树回归.md
+    - 书籍/机器学习实战/10.k-means聚类.md
+    - 书籍/机器学习实战/11.使用Apriori算法进行关联分析.md
+    - 书籍/机器学习实战/12.使用FP-growth算法来高效发现频繁项集.md
+    - 书籍/机器学习实战/13.利用PCA来简化数据.md
+    - 书籍/机器学习实战/14.利用SVD简化数据.md
+    - 书籍/机器学习实战/15.大数据与MapReduce.md
+    - 书籍/机器学习实战/16.推荐系统.md
+  - 深度学习:
+    - 书籍/深度学习/DeepLearning.md
+- 学习:
+  - tensorflow:
+    - 学习/tensorflow/如何选择优化器 optimizer.md
+  - 深度学习:
+    - 学习/深度学习/10分钟上手Pandas.md
+    - 学习/深度学习/主成分分析-2.md
+    - 学习/深度学习/主成分分析.md
+    - 学习/深度学习/最小二乘法.md
+    - 学习/深度学习/矩阵分解.md
+    - 学习/深度学习/矩阵求导.md
+  - 转载:
+    - cs231n-ch:
+      - 学习/转载/cs231n-ch/2018-02-21-ch-assignment2_google_cloud.md
+      - 学习/转载/cs231n-ch/2018-02-21-ch-aws-tutorial.md
+      - 学习/转载/cs231n-ch/2018-02-21-ch-classification.md
+      - 学习/转载/cs231n-ch/2018-02-21-ch-convnet-tips.md
+      - 学习/转载/cs231n-ch/2018-02-21-ch-convolutional-networks.md
+      - 学习/转载/cs231n-ch/2018-02-21-ch-google_cloud_tutorial.md
+      - 学习/转载/cs231n-ch/2018-02-21-ch-ipython-tutorial.md
+      - 学习/转载/cs231n-ch/2018-02-21-ch-linear-classify.md
+      - 学习/转载/cs231n-ch/2018-02-21-ch-neural-networks-1.md
+      - 学习/转载/cs231n-ch/2018-02-21-ch-neural-networks-2.md
+      - 学习/转载/cs231n-ch/2018-02-21-ch-neural-networks-3.md
+      - 学习/转载/cs231n-ch/2018-02-21-ch-neural-networks-case-study.md
+      - 学习/转载/cs231n-ch/2018-02-21-ch-optimization-1.md
+      - 学习/转载/cs231n-ch/2018-02-21-ch-optimization-2.md
+      - 学习/转载/cs231n-ch/2018-02-21-ch-overview.md
+      - 学习/转载/cs231n-ch/2018-02-21-ch-poster.md
+      - 学习/转载/cs231n-ch/2018-02-21-ch-python-numpy-tutorial.md
+      - 学习/转载/cs231n-ch/2018-02-21-ch-Readme.md
+      - 学习/转载/cs231n-ch/2018-02-21-ch-terminal-tutorial.md
+      - 学习/转载/cs231n-ch/2018-02-21-ch-transfer-learning.md
+      - 学习/转载/cs231n-ch/2018-02-21-ch-understanding-cnn.md
+    - cs231n-en:
+      - 学习/转载/cs231n-en/2018-02-21-en-assignment2_google_cloud.md
+      - 学习/转载/cs231n-en/2018-02-21-en-aws-tutorial.md
+      - 学习/转载/cs231n-en/2018-02-21-en-classification.md
+      - 学习/转载/cs231n-en/2018-02-21-en-convnet-tips.md
+      - 学习/转载/cs231n-en/2018-02-21-en-convolutional-networks.md
+      - 学习/转载/cs231n-en/2018-02-21-en-google_cloud_tutorial.md
+      - 学习/转载/cs231n-en/2018-02-21-en-ipython-tutorial.md
+      - 学习/转载/cs231n-en/2018-02-21-en-linear-classify.md
+      - 学习/转载/cs231n-en/2018-02-21-en-neural-networks-1.md
+      - 学习/转载/cs231n-en/2018-02-21-en-neural-networks-2.md
+      - 学习/转载/cs231n-en/2018-02-21-en-neural-networks-3.md
+      - 学习/转载/cs231n-en/2018-02-21-en-neural-networks-case-study.md
+      - 学习/转载/cs231n-en/2018-02-21-en-optimization-1.md
+      - 学习/转载/cs231n-en/2018-02-21-en-optimization-2.md
+      - 学习/转载/cs231n-en/2018-02-21-en-overview.md
+      - 学习/转载/cs231n-en/2018-02-21-en-poster.md
+      - 学习/转载/cs231n-en/2018-02-21-en-python-numpy-tutorial.md
+      - 学习/转载/cs231n-en/2018-02-21-en-Readme.md
+      - 学习/转载/cs231n-en/2018-02-21-en-terminal-tutorial.md
+      - 学习/转载/cs231n-en/2018-02-21-en-transfer-learning.md
+      - 学习/转载/cs231n-en/2018-02-21-en-understanding-cnn.md
+    - example:
+      - 学习/转载/example/2016-01-30-quick-latex.md
+      - 学习/转载/example/2016-04-15-dive-into-gradient-decent.md
+      - 学习/转载/example/2017-01-01-perceptron.md
+      - 学习/转载/example/2017-04-23-bias-variance.md
+      - 学习/转载/example/2017-05-12-nosql-in-python.md
+      - 学习/转载/example/2017-05-23-a-web-crawer-with-a-asyncio-coroutines-1.md
+      - 学习/转载/example/2017-06-10-a-web-crawer-with-a-asyncio-coroutines-2.md
+      - 学习/转载/example/2017-07-28-fork-exec-source.md
+      - 学习/转载/example/2017-07-30-bitcoin-explained-1.md
+      - 学习/转载/example/2017-08-18-tendermint.md
+      - 学习/转载/example/2017-09-25-ethereum-ultimate-guide.md
+      - 学习/转载/example/2018-01-13-latex语法.md
+      - 学习/转载/example/2018-10-01-latex语法.md
+    - example2:
+      - 学习/转载/example2/2015-02-12-create-my-blog-with-jekyll.md
+      - 学习/转载/example2/2015-03-21-teach-girlfriend-html-css.md
+      - 学习/转载/example2/2015-03-26-sublimeLinter.md
+      - 学习/转载/example2/2015-04-06-arrays-similar.md
+      - 学习/转载/example2/2015-04-12-Syncing-a-fork.md
+      - 学习/转载/example2/2015-04-15-baidu-ife-1.md
+      - 学习/转载/example2/2015-04-22-baidu-ife-2-javascript.md
+      - 学习/转载/example2/2015-05-18-front-end-tools.md
+      - 学习/转载/example2/2015-05-20-scope.md
+      - 学习/转载/example2/2015-06-11-JavaScript-function.md
+      - 学习/转载/example2/2015-06-12-JavaScript-this.md
+      - 学习/转载/example2/2015-06-14-JavaScript-closure.md
+      - 学习/转载/example2/2015-06-15-JavaScript-Object-Oriented.md
+      - 学习/转载/example2/2015-06-17-web-app.md
+      - 学习/转载/example2/2015-06-18-weinre.md
+      - 学习/转载/example2/2015-07-09-JavaScript-Net.md
+      - 学习/转载/example2/2015-07-24-low-IE-click-empty-block-bug.md
+      - 学习/转载/example2/2015-12-31-History-API.md
+      - 学习/转载/example2/2016-03-12-jekyll-theme-version-2.0.md
+      - 学习/转载/example2/2016-05-06-regular-expression-group.md
+      - 学习/转载/example2/2016-06-07-JavaScript-good-parts-note1.md
+      - 学习/转载/example2/2016-06-08-JavaScript-good-parts-note2.md
+      - 学习/转载/example2/2016-06-10-JavaScript-good-parts-note3.md
+      - 学习/转载/example2/2016-06-14-how-to-use-babel.md
+      - 学习/转载/example2/2016-07-07-git-clone-not-master-branch.md
+      - 学习/转载/example2/2016-10-16-shuffle-algorithm.md
+      - 学习/转载/example2/2016-11-22-js-create-file-and-download.md
+      - 学习/转载/example2/2016-11-25-how-to-write-a-count-down.md
+- 工具:
+  - 工具/About.md
+  - 工具/Cheatsheet.md
+- 文章: []
+- 日常:
+  - test:
+    - 日常/test/testtest.md
+  - 常用:
+    - 日常/常用/latex语法.md
+  - 常用工具:
+    - 日常/常用工具/10分钟上手Pandas.md
+repo_name: 1007530194/Diary
+repo_url: https://github.com/1007530194/Diary
+site_author: NiuLiangtao
+site_description: Nothing is impossible
+site_name: Blog of NiuLiangtao
+site_url: https://1007530194.github.io/Diary/
+theme:
+  custom_dir: material
+  favicon: assets/images/favicon.png
+  feature:
+    tabs: true
+  font:
+    code: Roboto Mono
+    text: Roboto
+  include_search_page: false
+  language: en
+  logo:
+    icon: 
+  name: null
+  palette:
+    accent: indigo
+    primary: indigo
+  search_index_only: true
+  static_templates:
+  - 404.html

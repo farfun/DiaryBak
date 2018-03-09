@@ -1,7 +1,71 @@
+# Project information
+site_name: Blog of NiuLiangtao
+site_description: Nothing is impossible
+site_author: NiuLiangtao
+site_url: https://1007530194.github.io/Diary/
+
+# Repository
+repo_name: 1007530194/Diary
+repo_url: https://github.com/1007530194/Diary
+edit_uri: ""
+
+# Copyright
+copyright: 'Copyright &copy; 2016 - 2018 Martin Donath'
+
+# Configuration
+theme:
+  name: null
+  custom_dir: material
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  feature:
+    tabs: true
+  palette:
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/images/favicon.png
+  logo:
+    icon: "\uE80C"
+
+# MathJax
 extra_javascript:
   - 'javascripts/extra.js'
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+
+# Customization
+extra:
+  social:
+    - type: globe
+      link: http://struct.cc
+    - type: github-alt
+      link: https://github.com/1007530194
+    - type: twitter
+      link: https://twitter.com/1007530194
+    - type: linkedin
+      link: https://linkedin.com/in/1007530194
+
+# Extensions
 markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
@@ -11,6 +75,7 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_generator: pymdownx.emoji.to_svg
   - pymdownx.inlinehilite
+  - pymdownx.keys
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
@@ -19,9 +84,5 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
-site_name: DataLab
-
-theme: windmill
-
 pages:
-- Home: [index.md]
+- Home: index.md

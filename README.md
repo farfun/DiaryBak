@@ -9,7 +9,7 @@ Data blog generated with Jupyter &amp; MkDocs [See Demo](http://rainyear.github.
 
 ### 1. Setup Env
 
-```
+```bash
 conda update conda
 conda env create --name data --clone root
 source active data
@@ -18,12 +18,22 @@ pip install mkdocs
 
 ### 2. Start Jupyter
 
-```
+```bash
 jupyter notebook --config config/jupyter_notebook_config.py
 ```
 
 ### 3. Deploy to GitHub Pages
 
-```
+```bash
 mkdocs gh-deploy --clean
 ```
+
+
+
+[material](https://github.com/squidfunk/mkdocs-material)
+
+```bash
+pip install mkdocs-material
+```
+
+[material](https://github.com/squidfunk/mkdocs-material)
