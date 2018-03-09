@@ -1,34 +1,14 @@
 {
     "docs": [
         {
-            "location": "/", 
-            "text": "Welcome to My Data Lab\n\n\n0. Requirements\n\n\n\n\nconda\n\n\nJupyter\n\n\nMkDocs\n\n\n\n\n1. Setup Env\n\n\nconda update conda\nconda env create --name data --clone root\nsource active data\npip install mkdocs\n\n\n\n\n2. Start Jupyter\n\n\njupyter notebook --config config/jupyter_notebook_config.py\n\n\n\n\n3. Deploy to GitHub Pages\n\n\nmkdocs gh-deploy --clean", 
+            "location": "/ToDo/", 
+            "text": "http://playground.tensorflow.org/\n\n\nhttps://www.jiqizhixin.com\n\n\n\u63a8\u8350\u5b9e\u73b0\n\nhttps://www.jiqizhixin.com/articles/2017-12-28-20\n\n\nhttps://www.jiqizhixin.com/articles/alibaba-pku-ATRank\n\n\n\u5176\u4ed6\n\nhttp://blog.csdn.net/c9Yv2cf9I06K2A9E/article/details/79155896\n\n\nhttps://www.jiqizhixin.com/articles/2017-12-05-2\n\n\nhttp://blog.csdn.net/aliceyangxi1987/article/details/71079448\n\n\nhttps://github.com/ujjwalkarn/Machine-Learning-Tutorials\n\n\n\u5927\u6570\u636e/\u6570\u636e\u6316\u6398/\u63a8\u8350\u7cfb\u7edf/\u673a\u5668\u5b66\u4e60\u76f8\u5173\u8d44\u6e90\n\n\nhttps://github.com/weiweifan/Big-Data-Resources\n\n\nhttps://github.com/search?o=desc\nq=%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0\ns=stars\ntype=Repositories\nutf8=%E2%9C%93\n\n\nhttps://github.com/Kivy-CN/Stanford-CS-229-CN\n\n\n\u63a8\u8350\u7cfb\u7edf\u76f8\u5173\u7684Paper\n\nhttp://blog.csdn.net/mycafe_/article/details/79123757", 
             "title": "Home"
         }, 
         {
-            "location": "/#welcome-to-my-data-lab", 
-            "text": "", 
-            "title": "Welcome to My Data Lab"
-        }, 
-        {
-            "location": "/#0-requirements", 
-            "text": "conda  Jupyter  MkDocs", 
-            "title": "0. Requirements"
-        }, 
-        {
-            "location": "/#1-setup-env", 
-            "text": "conda update conda\nconda env create --name data --clone root\nsource active data\npip install mkdocs", 
-            "title": "1. Setup Env"
-        }, 
-        {
-            "location": "/#2-start-jupyter", 
-            "text": "jupyter notebook --config config/jupyter_notebook_config.py", 
-            "title": "2. Start Jupyter"
-        }, 
-        {
-            "location": "/#3-deploy-to-github-pages", 
-            "text": "mkdocs gh-deploy --clean", 
-            "title": "3. Deploy to GitHub Pages"
+            "location": "/ToDo/#_1", 
+            "text": "https://github.com/weiweifan/Big-Data-Resources  https://github.com/search?o=desc q=%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0 s=stars type=Repositories utf8=%E2%9C%93  https://github.com/Kivy-CN/Stanford-CS-229-CN  \u63a8\u8350\u7cfb\u7edf\u76f8\u5173\u7684Paper http://blog.csdn.net/mycafe_/article/details/79123757", 
+            "title": "\u5927\u6570\u636e/\u6570\u636e\u6316\u6398/\u63a8\u8350\u7cfb\u7edf/\u673a\u5668\u5b66\u4e60\u76f8\u5173\u8d44\u6e90"
         }, 
         {
             "location": "/AboutMe/", 
@@ -81,12 +61,12 @@
             "title": "3. Deploy to GitHub Pages"
         }, 
         {
-            "location": "/\u8981\u505a\u7684/", 
+            "location": "/ToDo/", 
             "text": "http://playground.tensorflow.org/\n\n\nhttps://www.jiqizhixin.com\n\n\n\u63a8\u8350\u5b9e\u73b0\n\nhttps://www.jiqizhixin.com/articles/2017-12-28-20\n\n\nhttps://www.jiqizhixin.com/articles/alibaba-pku-ATRank\n\n\n\u5176\u4ed6\n\nhttp://blog.csdn.net/c9Yv2cf9I06K2A9E/article/details/79155896\n\n\nhttps://www.jiqizhixin.com/articles/2017-12-05-2\n\n\nhttp://blog.csdn.net/aliceyangxi1987/article/details/71079448\n\n\nhttps://github.com/ujjwalkarn/Machine-Learning-Tutorials\n\n\n\u5927\u6570\u636e/\u6570\u636e\u6316\u6398/\u63a8\u8350\u7cfb\u7edf/\u673a\u5668\u5b66\u4e60\u76f8\u5173\u8d44\u6e90\n\n\nhttps://github.com/weiweifan/Big-Data-Resources\n\n\nhttps://github.com/search?o=desc\nq=%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0\ns=stars\ntype=Repositories\nutf8=%E2%9C%93\n\n\nhttps://github.com/Kivy-CN/Stanford-CS-229-CN\n\n\n\u63a8\u8350\u7cfb\u7edf\u76f8\u5173\u7684Paper\n\nhttp://blog.csdn.net/mycafe_/article/details/79123757", 
             "title": "\u8981\u505a\u7684"
         }, 
         {
-            "location": "/\u8981\u505a\u7684/#_1", 
+            "location": "/ToDo/#_1", 
             "text": "https://github.com/weiweifan/Big-Data-Resources  https://github.com/search?o=desc q=%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0 s=stars type=Repositories utf8=%E2%9C%93  https://github.com/Kivy-CN/Stanford-CS-229-CN  \u63a8\u8350\u7cfb\u7edf\u76f8\u5173\u7684Paper http://blog.csdn.net/mycafe_/article/details/79123757", 
             "title": "\u5927\u6570\u636e/\u6570\u636e\u6316\u6398/\u63a8\u8350\u7cfb\u7edf/\u673a\u5668\u5b66\u4e60\u76f8\u5173\u8d44\u6e90"
         }, 
