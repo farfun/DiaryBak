@@ -1,0 +1,3601 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Nothing is impossible">
+      
+      
+        <link rel="canonical" href="https://1007530194.github.io/Diary/学习/转载/example2/baidu-ife-1/">
+      
+      
+        <meta name="author" content="NiuLiangtao">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.0">
+    
+    
+      
+        <title>"百度Web前端技术学院(1)-HTML, CSS基础"</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.78aab2dc.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://1007530194.github.io/Diary/" title="Blog of NiuLiangtao" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Blog of NiuLiangtao
+              </span>
+              <span class="md-header-nav__topic">
+                "百度Web前端技术学院(1)-HTML, CSS基础"
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/1007530194/Diary" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      1007530194/Diary
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../AboutMe/" title="Home" class="md-tabs__link">
+          Home
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../书籍/" title="书籍" class="md-tabs__link">
+          书籍
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../" title="学习" class="md-tabs__link md-tabs__link--active">
+          学习
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../工具/About/" title="工具" class="md-tabs__link">
+          工具
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../文章/" title="文章" class="md-tabs__link">
+          文章
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../日常/" title="日常" class="md-tabs__link">
+          日常
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    Blog of NiuLiangtao
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/1007530194/Diary" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      1007530194/Diary
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ToDo/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Home
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Home
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../AboutMe/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Nothing/" title="Nothing" class="md-nav__link">
+      Nothing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ToDo/" title="要做的" class="md-nav__link">
+      要做的
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      书籍
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        书籍
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      机器学习实战
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        机器学习实战
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/00naive-bayes-discuss/" title="naive-bayes-discuss" class="md-nav__link">
+      naive-bayes-discuss
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/01.机器学习基础/" title="1.机器学习基础" class="md-nav__link">
+      1.机器学习基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/02.k-近邻算法/" title="2.k-近邻算法" class="md-nav__link">
+      2.k-近邻算法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/03.决策树/" title="3.决策树" class="md-nav__link">
+      3.决策树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/04.朴素贝叶斯/" title="4.朴素贝叶斯" class="md-nav__link">
+      4.朴素贝叶斯
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/05.Logistic回归/" title="5.Logistic回归" class="md-nav__link">
+      5.Logistic回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/06.0.支持向量机/" title="6.支持向量机" class="md-nav__link">
+      6.支持向量机
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/06.1.支持向量机的几个通俗理解/" title="6.1.支持向量机的几个通俗理解" class="md-nav__link">
+      6.1.支持向量机的几个通俗理解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/07.集成方法-随机森林和AdaBoost/" title="7.集成方法-随机森林和AdaBoost" class="md-nav__link">
+      7.集成方法-随机森林和AdaBoost
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/08.预测数值型数据-回归/" title="8.预测数值型数据：回归" class="md-nav__link">
+      8.预测数值型数据：回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/09.树回归/" title="9.树回归" class="md-nav__link">
+      9.树回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/10.k-means聚类/" title="10.k-means聚类" class="md-nav__link">
+      10.k-means聚类
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/11.使用Apriori算法进行关联分析/" title="11.使用Apriori算法进行关联分析" class="md-nav__link">
+      11.使用Apriori算法进行关联分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/12.使用FP-growth算法来高效发现频繁项集/" title="12.使用FP-growth算法来高效发现频繁项集" class="md-nav__link">
+      12.使用FP-growth算法来高效发现频繁项集
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/13.利用PCA来简化数据/" title="13.利用PCA来简化数据" class="md-nav__link">
+      13.利用PCA来简化数据
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/14.利用SVD简化数据/" title="14.利用SVD简化数据" class="md-nav__link">
+      14.利用SVD简化数据
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/15.大数据与MapReduce/" title="15.大数据与MapReduce" class="md-nav__link">
+      15.大数据与MapReduce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/16.推荐系统/" title="16.推荐系统" class="md-nav__link">
+      16.推荐系统
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      深度学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        深度学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/深度学习/DeepLearning/" title="深度学习中文版" class="md-nav__link">
+      深度学习中文版
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      tensorflow
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        tensorflow
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tensorflow/如何选择优化器 optimizer/" title="如何选择优化器 optimizer" class="md-nav__link">
+      如何选择优化器 optimizer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      深度学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        深度学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
+      主成分分析 (2)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/主成分分析/" title="主成分分析" class="md-nav__link">
+      主成分分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/最小二乘法/" title="最小二乘法" class="md-nav__link">
+      最小二乘法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
+      矩阵分解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
+      矩阵求导
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4" checked>
+    
+    <label class="md-nav__link" for="nav-4-4">
+      转载
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        转载
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4-1" type="checkbox" id="nav-4-4-1">
+    
+    <label class="md-nav__link" for="nav-4-4-1">
+      cs231n-ch
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-4-1">
+        cs231n-ch
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-assignment2_google_cloud/" title="Google Cloud Tutorial Part 2 (with GPUs)" class="md-nav__link">
+      Google Cloud Tutorial Part 2 (with GPUs)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-aws-tutorial/" title="aws-tutorial" class="md-nav__link">
+      aws-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-classification/" title="classification" class="md-nav__link">
+      classification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-convnet-tips/" title="convnet-tips" class="md-nav__link">
+      convnet-tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-convolutional-networks/" title="convolutional-networks" class="md-nav__link">
+      convolutional-networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-google_cloud_tutorial/" title="Google Cloud Tutorial gce-tutorial" class="md-nav__link">
+      Google Cloud Tutorial gce-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-ipython-tutorial/" title="IPython Tutorial ipython-tutorial" class="md-nav__link">
+      IPython Tutorial ipython-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-linear-classify/" title="线性分类" class="md-nav__link">
+      线性分类
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-neural-networks-1/" title="neural-networks-1" class="md-nav__link">
+      neural-networks-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-neural-networks-2/" title="neural-networks-2" class="md-nav__link">
+      neural-networks-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-neural-networks-3/" title="neural-networks-3" class="md-nav__link">
+      neural-networks-3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-neural-networks-case-study/" title="neural-networks-case-study" class="md-nav__link">
+      neural-networks-case-study
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-optimization-1/" title="optimization-1" class="md-nav__link">
+      optimization-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-optimization-2/" title="optimization-2" class="md-nav__link">
+      optimization-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-overview/" title="Overview of Computer Vision and Visual Recognition overview" class="md-nav__link">
+      Overview of Computer Vision and Visual Recognition overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-poster/" title="CS231n Poster Session poster-session" class="md-nav__link">
+      CS231n Poster Session poster-session
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-python-numpy-tutorial/" title="Python Numpy Tutorial python-numpy-tutorial" class="md-nav__link">
+      Python Numpy Tutorial python-numpy-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-Readme/" title="ch Readme" class="md-nav__link">
+      ch Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-transfer-learning/" title="transfer-learning" class="md-nav__link">
+      transfer-learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-understanding-cnn/" title="understanding-cnn" class="md-nav__link">
+      understanding-cnn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/terminal-tutorial/" title="Terminal.com Tutorial terminal-tutorial" class="md-nav__link">
+      Terminal.com Tutorial terminal-tutorial
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4-2" type="checkbox" id="nav-4-4-2">
+    
+    <label class="md-nav__link" for="nav-4-4-2">
+      cs231n-en
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-4-2">
+        cs231n-en
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-assignment2_google_cloud/" title="Google Cloud Tutorial Part 2 (with GPUs)" class="md-nav__link">
+      Google Cloud Tutorial Part 2 (with GPUs)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-aws-tutorial/" title="aws-tutorial" class="md-nav__link">
+      aws-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-classification/" title="classification" class="md-nav__link">
+      classification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-convnet-tips/" title="convnet-tips" class="md-nav__link">
+      convnet-tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-convolutional-networks/" title="convolutional-networks" class="md-nav__link">
+      convolutional-networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-google_cloud_tutorial/" title="Google Cloud Tutorial" class="md-nav__link">
+      Google Cloud Tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-ipython-tutorial/" title="IPython Tutorial ipython-tutorial" class="md-nav__link">
+      IPython Tutorial ipython-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-linear-classify/" title="linear-classify" class="md-nav__link">
+      linear-classify
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-neural-networks-1/" title="neural-networks-1" class="md-nav__link">
+      neural-networks-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-neural-networks-2/" title="neural-networks-2" class="md-nav__link">
+      neural-networks-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-neural-networks-3/" title="neural-networks-3" class="md-nav__link">
+      neural-networks-3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-neural-networks-case-study/" title="neural-networks-case-study" class="md-nav__link">
+      neural-networks-case-study
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-optimization-1/" title="optimization-1" class="md-nav__link">
+      optimization-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-optimization-2/" title="optimization-2" class="md-nav__link">
+      optimization-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-overview/" title="Overview of Computer Vision and Visual Recognition overview" class="md-nav__link">
+      Overview of Computer Vision and Visual Recognition overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-poster/" title="CS231n Poster Session poster-session" class="md-nav__link">
+      CS231n Poster Session poster-session
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-python-numpy-tutorial/" title="Python Numpy Tutorial python-numpy-tutorial" class="md-nav__link">
+      Python Numpy Tutorial python-numpy-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-Readme/" title="en Readme" class="md-nav__link">
+      en Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-terminal-tutorial/" title="Terminal.com Tutorial terminal-tutorial" class="md-nav__link">
+      Terminal.com Tutorial terminal-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-transfer-learning/" title="transfer-learning" class="md-nav__link">
+      transfer-learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-understanding-cnn/" title="understanding-cnn" class="md-nav__link">
+      understanding-cnn
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4-3" type="checkbox" id="nav-4-4-3">
+    
+    <label class="md-nav__link" for="nav-4-4-3">
+      example
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-4-3">
+        example
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/a-web-crawer-with-a-asyncio-coroutines-1/" title="A web crawer with a asyncio coroutines 1" class="md-nav__link">
+      A web crawer with a asyncio coroutines 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/a-web-crawer-with-a-asyncio-coroutines-2/" title="A web crawer with a asyncio coroutines 2" class="md-nav__link">
+      A web crawer with a asyncio coroutines 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/bias-variance/" title="Bias variance" class="md-nav__link">
+      Bias variance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/bitcoin-explained-1/" title="用表情符号解释比特币 (1)" class="md-nav__link">
+      用表情符号解释比特币 (1)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/dive-into-gradient-decent/" title="理解梯度下降" class="md-nav__link">
+      理解梯度下降
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/ethereum-ultimate-guide/" title="Ethereum ultimate guide" class="md-nav__link">
+      Ethereum ultimate guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/fork-exec-source/" title="Fork exec source" class="md-nav__link">
+      Fork exec source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/latex语法/" title="Latex语法" class="md-nav__link">
+      Latex语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/latex语法1/" title="latex语法" class="md-nav__link">
+      latex语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/nosql-in-python/" title="Nosql in python" class="md-nav__link">
+      Nosql in python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/perceptron/" title=""感知器"" class="md-nav__link">
+      "感知器"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/quick-latex/" title="Quick latex" class="md-nav__link">
+      Quick latex
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/tendermint/" title="Tendermint" class="md-nav__link">
+      Tendermint
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4-4" type="checkbox" id="nav-4-4-4" checked>
+    
+    <label class="md-nav__link" for="nav-4-4-4">
+      example2
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-4-4">
+        example2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../arrays-similar/" title=""判断两个数组是否相似 (arraysSimilar)"" class="md-nav__link">
+      "判断两个数组是否相似 (arraysSimilar)"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        "百度Web前端技术学院(1)-HTML, CSS基础"
+      </label>
+    
+    <a href="./" title=""百度Web前端技术学院(1)-HTML, CSS基础"" class="md-nav__link md-nav__link--active">
+      "百度Web前端技术学院(1)-HTML, CSS基础"
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="任务" class="md-nav__link">
+    任务
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css" title="CSS 如何工作" class="md-nav__link">
+    CSS 如何工作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="层叠和继承" class="md-nav__link">
+    层叠和继承
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="选择器" class="md-nav__link">
+    选择器
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="标签选择器" class="md-nav__link">
+    标签选择器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class_selectors" title="类选择器（Class selectors）" class="md-nav__link">
+    类选择器（Class selectors）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#idid_selectors" title="ID选择器（ID selectors）" class="md-nav__link">
+    ID选择器（ID selectors）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="优先级" class="md-nav__link">
+    优先级
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pseudo-classes_selectors" title="伪类选择器（Pseudo-classes selectors）" class="md-nav__link">
+    伪类选择器（Pseudo-classes selectors）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="基于关系的选择器" class="md-nav__link">
+    基于关系的选择器
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" title="其他属性" class="md-nav__link">
+    其他属性
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#text-indent" title="text-indent" class="md-nav__link">
+    text-indent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-transform" title="text-transform" class="md-nav__link">
+    text-transform
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-decoration" title="text-decoration" class="md-nav__link">
+    text-decoration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-align" title="text-align" class="md-nav__link">
+    text-align
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#word-spacing" title="word-spacing" class="md-nav__link">
+    word-spacing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#white-space" title="white-space" class="md-nav__link">
+    white-space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#font-face" title="@font-face" class="md-nav__link">
+    @font-face
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" title="深入了解行高属性" class="md-nav__link">
+    深入了解行高属性
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" title="盒模型及定位" class="md-nav__link">
+    盒模型及定位
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#div" title="已知宽度的div居中" class="md-nav__link">
+    已知宽度的div居中
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="对于居中的补充" class="md-nav__link">
+    对于居中的补充
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css_1" title="早期css滑动门" class="md-nav__link">
+    早期css滑动门
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="左侧固定右侧自适应宽度的两列布局" class="md-nav__link">
+    左侧固定右侧自适应宽度的两列布局
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="双飞翼布局" class="md-nav__link">
+    双飞翼布局
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" title="浮动布局" class="md-nav__link">
+    浮动布局
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" title="清除浮动/闭合浮动" class="md-nav__link">
+    清除浮动/闭合浮动
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#box-sizing" title="box-sizing" class="md-nav__link">
+    box-sizing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" title="响应式布局" class="md-nav__link">
+    响应式布局
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" title="多列布局" class="md-nav__link">
+    多列布局
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bfc_ie_haslayout" title="BFC 和 IE 的 hasLayout" class="md-nav__link">
+    BFC 和 IE 的 hasLayout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#div_1" title="div 三列等高" class="md-nav__link">
+    div 三列等高
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inline-block" title="去除inline-block元素间间距" class="md-nav__link">
+    去除inline-block元素间间距
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" title="最终作品" class="md-nav__link">
+    最终作品
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" title="参考资料" class="md-nav__link">
+    参考资料
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../create-my-blog-with-jekyll/" title="Create my blog with jekyll" class="md-nav__link">
+      Create my blog with jekyll
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../front-end-tools/" title="Front end tools" class="md-nav__link">
+      Front end tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../git-clone-not-master-branch/" title="Git clone not master branch" class="md-nav__link">
+      Git clone not master branch
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../History-API/" title="History API" class="md-nav__link">
+      History API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how-to-use-babel/" title="How to use babel" class="md-nav__link">
+      How to use babel
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how-to-write-a-count-down/" title="How to write a count down" class="md-nav__link">
+      How to write a count down
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../JavaScript-closure/" title="JavaScript closure" class="md-nav__link">
+      JavaScript closure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../JavaScript-function/" title="JavaScript function" class="md-nav__link">
+      JavaScript function
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../JavaScript-good-parts-note1/" title="JavaScript good parts note1" class="md-nav__link">
+      JavaScript good parts note1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../JavaScript-good-parts-note2/" title="JavaScript good parts note2" class="md-nav__link">
+      JavaScript good parts note2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../JavaScript-good-parts-note3/" title="JavaScript good parts note3" class="md-nav__link">
+      JavaScript good parts note3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../JavaScript-Net/" title="JavaScript Net" class="md-nav__link">
+      JavaScript Net
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../JavaScript-Object-Oriented/" title="JavaScript Object Oriented" class="md-nav__link">
+      JavaScript Object Oriented
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../JavaScript-this/" title="JavaScript this" class="md-nav__link">
+      JavaScript this
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../jekyll-theme-version-2.0/" title="Jekyll theme version 2.0" class="md-nav__link">
+      Jekyll theme version 2.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../js-create-file-and-download/" title="Js create file and download" class="md-nav__link">
+      Js create file and download
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../low-IE-click-empty-block-bug/" title="low IE click empty block bug" class="md-nav__link">
+      low IE click empty block bug
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../regular-expression-group/" title="Regular expression group" class="md-nav__link">
+      Regular expression group
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../scope/" title="Scope" class="md-nav__link">
+      Scope
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shuffle-algorithm/" title="Shuffle algorithm" class="md-nav__link">
+      Shuffle algorithm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sublimeLinter/" title="sublimeLinter" class="md-nav__link">
+      sublimeLinter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Syncing-a-fork/" title="Syncing a fork" class="md-nav__link">
+      Syncing a fork
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../teach-girlfriend-html-css/" title="Teach girlfriend html css" class="md-nav__link">
+      Teach girlfriend html css
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../web-app/" title="Web app" class="md-nav__link">
+      Web app
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../weinre/" title="Weinre" class="md-nav__link">
+      Weinre
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../工具/About/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../工具/Cheatsheet/" title="Cheatsheet" class="md-nav__link">
+      Cheatsheet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../工具/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../工具/shell显示时间/" title="Shell显示时间" class="md-nav__link">
+      Shell显示时间
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5">
+    
+    <label class="md-nav__link" for="nav-5-5">
+      常用工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-5">
+        常用工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../工具/常用工具/10分钟上手Latex/" title="10分钟上手Latex" class="md-nav__link">
+      10分钟上手Latex
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../工具/常用工具/10分钟上手Pandas/" title="10分钟上手Pandas" class="md-nav__link">
+      10分钟上手Pandas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../工具/常用工具/10分钟上手Python/" title="10分钟上手Python" class="md-nav__link">
+      10分钟上手Python
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      文章
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        文章
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../文章/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      日常
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        日常
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../日常/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2">
+    
+    <label class="md-nav__link" for="nav-7-2">
+      test
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-2">
+        test
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../日常/test/testtest/" title="Testtest" class="md-nav__link">
+      Testtest
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="任务" class="md-nav__link">
+    任务
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css" title="CSS 如何工作" class="md-nav__link">
+    CSS 如何工作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="层叠和继承" class="md-nav__link">
+    层叠和继承
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="选择器" class="md-nav__link">
+    选择器
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="标签选择器" class="md-nav__link">
+    标签选择器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class_selectors" title="类选择器（Class selectors）" class="md-nav__link">
+    类选择器（Class selectors）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#idid_selectors" title="ID选择器（ID selectors）" class="md-nav__link">
+    ID选择器（ID selectors）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="优先级" class="md-nav__link">
+    优先级
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pseudo-classes_selectors" title="伪类选择器（Pseudo-classes selectors）" class="md-nav__link">
+    伪类选择器（Pseudo-classes selectors）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="基于关系的选择器" class="md-nav__link">
+    基于关系的选择器
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" title="其他属性" class="md-nav__link">
+    其他属性
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#text-indent" title="text-indent" class="md-nav__link">
+    text-indent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-transform" title="text-transform" class="md-nav__link">
+    text-transform
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-decoration" title="text-decoration" class="md-nav__link">
+    text-decoration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-align" title="text-align" class="md-nav__link">
+    text-align
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#word-spacing" title="word-spacing" class="md-nav__link">
+    word-spacing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#white-space" title="white-space" class="md-nav__link">
+    white-space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#font-face" title="@font-face" class="md-nav__link">
+    @font-face
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" title="深入了解行高属性" class="md-nav__link">
+    深入了解行高属性
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" title="盒模型及定位" class="md-nav__link">
+    盒模型及定位
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#div" title="已知宽度的div居中" class="md-nav__link">
+    已知宽度的div居中
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" title="对于居中的补充" class="md-nav__link">
+    对于居中的补充
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#css_1" title="早期css滑动门" class="md-nav__link">
+    早期css滑动门
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" title="左侧固定右侧自适应宽度的两列布局" class="md-nav__link">
+    左侧固定右侧自适应宽度的两列布局
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" title="双飞翼布局" class="md-nav__link">
+    双飞翼布局
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" title="浮动布局" class="md-nav__link">
+    浮动布局
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" title="清除浮动/闭合浮动" class="md-nav__link">
+    清除浮动/闭合浮动
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#box-sizing" title="box-sizing" class="md-nav__link">
+    box-sizing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" title="响应式布局" class="md-nav__link">
+    响应式布局
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" title="多列布局" class="md-nav__link">
+    多列布局
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bfc_ie_haslayout" title="BFC 和 IE 的 hasLayout" class="md-nav__link">
+    BFC 和 IE 的 hasLayout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#div_1" title="div 三列等高" class="md-nav__link">
+    div 三列等高
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inline-block" title="去除inline-block元素间间距" class="md-nav__link">
+    去除inline-block元素间间距
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" title="最终作品" class="md-nav__link">
+    最终作品
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" title="参考资料" class="md-nav__link">
+    参考资料
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>"百度Web前端技术学院(1)-HTML, CSS基础"</h1>
+                
+                <p>百度前端学院的第一次任务笔记，HTML、CSS 基础。主要有 CSS 工作原理，选择器的使用，常用属性，行高属性，盒模型与定位，最后根据设计图实现4个页面。</p>
+<h2 id="_1">任务<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><strong>任务：</strong> <a href="https://github.com/Gaohaoyang/ife/tree/master/task/task0001">HTML、CSS基础</a>   </p>
+<p>有人问到提交作业 fork 同步的问题，真心觉得官方 GitHub 的帮助文档讲的很好，我上一篇博客 <a href="http://gaohaoyang.github.io/2015/04/12/Syncing-a-fork/">同步一个 fork</a> 就是翻译的这个官方文档，如果懒得看英文可以参考我的博客。   </p>
+<p>写点东西记录一下我的做题过程吧。   </p>
+<h2 id="css">CSS 如何工作<a class="headerlink" href="#css" title="Permanent link">&para;</a></h2>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Getting_started/How_CSS_works">CSS 如何工作</a> Mozilla 的开发者文档讲的很好。</p>
+<blockquote>
+<p>浏览器在展现一个文档的时候，必须要把文档内容和相应的样式信息结合起来展示。 这个处理过程一般分两个阶段：   </p>
+<ol>
+<li>浏览器先将标记语言和 CSS 转换成 DOM (文档对象模型)结构。 这时 DOM 就代表了电脑内存中的相应文档，因为它已经融合了文档内容和相应的样式表。   </li>
+<li>最后浏览器把 DOM 的内容展示出来。   </li>
+</ol>
+</blockquote>
+<h2 id="_2">层叠和继承<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Getting_started/Cascading_and_inheritance">参考资料: 层叠和继承</a></p>
+<blockquote>
+<p>对于层叠来说，共有三种主要的样式来源：</p>
+<ul>
+<li>浏览器对HTML定义的默认样式。</li>
+<li>用户定义的样式。</li>
+<li>
+<p>开发者定义的样式，可以有三种形式：</p>
+</li>
+<li>
+<p>定义在外部文件（外链样式）：本教程中案例主要是通过这种形式定义样式。</p>
+</li>
+<li>在页面的头部定义（内联样式）：通过这种形式定义的样式只在本页面内生效。</li>
+<li>定义在特定的元素身上（行内样式）：这种形式多用于测试，可维护性较差。</li>
+</ul>
+<p>用户定义的样式表会覆盖浏览器定义的默认样式，然后网页开发者定义的样式又会覆盖用户样式。</p>
+<p>再来看看优先级，从高到低依次为：网页开发者定义的样式、网页阅读者定义的样式、浏览器的默认样式。</p>
+<p>对继承的元素来说，子元素自身的样式优先级高于从父级继承来的样式。</p>
+<blockquote>
+<p>更多细节 <br />
+CSS 另外提供了一个 !important 关键字，用户可以通过使用这个关键字使自己定义的样式覆盖掉开发者定义的样式。 <br />
+这就意味着，作为开发者，你很难准确的预知页面最终在用户电脑上的显示效果。   </p>
+</blockquote>
+</blockquote>
+<h2 id="_3">选择器<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Getting_Started/Selectors">参考资料:选择器（Selectors）</a></p>
+<h3 id="_4">标签选择器<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="class_selectors">类选择器（Class selectors）<a class="headerlink" href="#class_selectors" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>通过设置元素的 class 属性，可以为元素指定类名。类名由开发者自己指定。 文档中的多个元素可以拥有同一个类名。</p>
+<p>在写样式表时，类选择器是以英文句号（.）开头的。</p>
+</blockquote>
+<h3 id="idid_selectors">ID选择器（ID selectors）<a class="headerlink" href="#idid_selectors" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>通过设置元素的 id 属性为该元素制定ID。ID名由开发者指定。每个ID在文档中必须是唯一的。</p>
+<p>在写样式表时，ID选择器是以#开头的。</p>
+</blockquote>
+<h3 id="_5">优先级<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<blockquote>
+<ul>
+<li>如果多余一个规则指定了相同的属性值都应用到一个元素上，CSS规定拥有更高确定度的选择器优先级更高。ID选择器比类选择器更具确定度, 而类选择器比标签选择器（tag selector）更具确定度。</li>
+<li>如果样式中包含冲突的规则，且它们具有相同的确定度。那么，后出现的规则优先级高。</li>
+<li>如果你遇到规则冲突，你可以增加其中一条的确定度或将之移到后面以使它具有更高优先级。</li>
+</ul>
+</blockquote>
+<h3 id="pseudo-classes_selectors">伪类选择器（Pseudo-classes selectors）<a class="headerlink" href="#pseudo-classes_selectors" title="Permanent link">&para;</a></h3>
+<h3 id="_6">基于关系的选择器<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>选择器    |选择的元素
+A E    |任何是元素A的后代元素E (后代节点指A的子节点，子节点的子节点，以此类推)
+A &gt; E    |任何元素A的子元素
+E:first-child    |任何元素的第一个子元素E
+B + E    |任何元素B的下一个兄弟元素E</p>
+<h2 id="_7">其他属性<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h3 id="text-indent"><code>text-indent</code><a class="headerlink" href="#text-indent" title="Permanent link">&para;</a></h3>
+<p><strong>定义和用法</strong> <br />
+text-indent 属性规定文本块中首行文本的缩进。 <br />
+注释：允许使用负值。如果使用负值，那么首行会被缩进到左边。   </p>
+<p><strong>可能的值</strong>    </p>
+<p>值    |描述
+length    |定义固定的缩进。默认值：0。
+%    |定义基于父元素宽度的百分比的缩进。
+inherit    |规定应该从父元素继承 text-indent 属性的值。</p>
+<h3 id="text-transform"><code>text-transform</code><a class="headerlink" href="#text-transform" title="Permanent link">&para;</a></h3>
+<p><strong>定义和用法</strong>  <br />
+text-transform 属性控制文本的大小写。      </p>
+<p><strong>说明</strong>  <br />
+这个属性会改变元素中的字母大小写，而不论源文档中文本的大小写。如果值为 capitalize，则要对某些字母大写，但是并没有明确定义如何确定哪些字母要大写，这取决于用户代理如何识别出各个“词”。   </p>
+<p><strong>可能的值</strong>  </p>
+<p>值    |描述
+none    |默认。定义带有小写字母和大写字母的标准的文本。
+capitalize    |文本中的每个单词以大写字母开头。
+uppercase    |定义仅有大写字母。
+lowercase    |定义无大写字母，仅有小写字母。
+inherit    |规定应该从父元素继承 text-transform 属性的值。</p>
+<h3 id="text-decoration"><code>text-decoration</code><a class="headerlink" href="#text-decoration" title="Permanent link">&para;</a></h3>
+<p><strong>定义和用法</strong> <br />
+text-decoration 属性规定添加到文本的修饰。  <br />
+注释：修饰的颜色由 "color" 属性设置。  <br />
+注释：IE、Chrome 或 Safari 不支持 "blink" 属性值。    </p>
+<p><strong>说明</strong>  <br />
+这个属性允许对文本设置某种效果，如加下划线。如果后代元素没有自己的装饰，祖先元素上设置的装饰会“延伸”到后代元素中。不要求用户代理支持 blink。</p>
+<h3 id="text-align"><code>text-align</code><a class="headerlink" href="#text-align" title="Permanent link">&para;</a></h3>
+<p><strong>定义和用法</strong> <br />
+text-align 属性规定元素中的文本的水平对齐方式。 <br />
+该属性通过指定行框与哪个点对齐，从而设置块级元素内文本的水平对齐方式。通过允许用户代理调整行内容中字母和字之间的间隔，可以支持值 justify；不同用户代理可能会得到不同的结果。   </p>
+<p><strong>可能的值</strong>   </p>
+<p>值    |描述
+left    |把文本排列到左边。默认值：由浏览器决定。
+right    |把文本排列到右边。
+center    |把文本排列到中间。
+justify    |实现两端对齐文本效果。
+inherit    |规定应该从父元素继承 text-align 属性的值。</p>
+<h3 id="word-spacing"><code>word-spacing</code><a class="headerlink" href="#word-spacing" title="Permanent link">&para;</a></h3>
+<p><strong>定义</strong> <br />
+word-spacing 属性增加或减少单词间的空白（即字间隔）。 <br />
+该属性定义元素中字之间插入多少空白符。针对这个属性，“字” 定义为由空白符包围的一个字符串。如果指定为长度值，会调整字之间的通常间隔；所以，normal 就等同于设置为 0。允许指定负长度值，这会让字之间挤得更紧。 <br />
+注释：允许使用负值。</p>
+<h3 id="white-space"><code>white-space</code><a class="headerlink" href="#white-space" title="Permanent link">&para;</a></h3>
+<p><strong>定义和用法</strong> <br />
+white-space 属性设置如何处理元素内的空白。 <br />
+这个属性声明建立布局过程中如何处理元素中的空白符。值 pre-wrap 和 pre-line 是 CSS 2.1 中新增的。</p>
+<p><strong>可能的值</strong></p>
+<p>值    |描述
+normal    |默认。空白会被浏览器忽略。
+pre    |空白会被浏览器保留。其行为方式类似 HTML 中的 <code>&lt;pre&gt;</code> 标签。
+nowrap    |文本不会换行，文本会在在同一行上继续，直到遇到 <code>&lt;br&gt;</code> 标签为止。
+pre-wrap    |保留空白符序列，但是正常地进行换行。
+pre-line    |合并空白符序列，但是保留换行符。
+inherit    |规定应该从父元素继承 white-space 属性的值。</p>
+<h3 id="font-face"><code>@font-face</code><a class="headerlink" href="#font-face" title="Permanent link">&para;</a></h3>
+<p><strong>CSS3 @font-face 规则</strong> <br />
+在 CSS3 之前，web 设计师必须使用已在用户计算机上安装好的字体。 <br />
+通过 CSS3，web 设计师可以使用他们喜欢的任意字体。 <br />
+当您您找到或购买到希望使用的字体时，可将该字体文件存放到 web 服务器上，它会在需要时被自动下载到用户的计算机上。 <br />
+您“自己的”的字体是在 CSS3 @font-face 规则中定义的。   </p>
+<p>注释：Internet Explorer 8 以及更早的版本不支持新的 @font-face 规则。Internet Explorer 9+ 支持新的 @font-face 规则，但是仅支持 .eot 类型的字体 (Embedded OpenType)。</p>
+<p><strong>使用您需要的字体</strong> <br />
+在新的 @font-face 规则中，您必须首先定义字体的名称（比如 myFirstFont），然后指向该字体文件。 <br />
+如需为 HTML 元素使用字体，请通过 font-family 属性来引用字体的名称 (myFirstFont)：</p>
+<p><strong>实例</strong></p>
+<div class="codehilite"><pre><span></span><span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
+    <span class="nt">font-family</span><span class="o">:</span> <span class="nt">myFirstFont</span><span class="o">;</span>
+    <span class="nt">src</span><span class="o">:</span> <span class="nt">url</span><span class="o">(</span><span class="s1">&#39;Sansation_Light.ttf&#39;</span><span class="o">),</span>
+         <span class="nt">url</span><span class="o">(</span><span class="s1">&#39;Sansation_Light.eot&#39;</span><span class="o">);</span> <span class="c">/* IE9+ */</span>
+<span class="p">}</span>
+<span class="nt">div</span> <span class="p">{</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="n">myFirstFont</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><strong>CSS3 字体描述符</strong></p>
+<p>下面的表格列出了能够在 @font-face 规则中定义的所有字体描述符：</p>
+<p>描述符    |值    |描述
+font-family    |name    |必需。规定字体的名称。
+src    |URL    |必需。定义字体文件的 URL。
+font-stretch    |normal<br>condensed<br>ultra-condensed<br>extra-condensed<br>semi-condensed<br>expanded<br>semi-expanded<br>extra-expanded<br>ultra-expanded|可选。定义如何拉伸字体。默认是 "normal"。
+font-style|ormal<br>italic<br>oblique|可选。定义字体的样式。默认是 "normal"。
+font-weight|normal<br>bold<br>100<br>200<br>300<br>400<br>500<br>600<br>700<br>800<br>900|选。定义字体的粗细。默认是 "normal"。
+unicode-range    |unicode-range    |可选。定义字体支持的 UNICODE 字符范围。默认是 "U+0-10FFFF"。</p>
+<h2 id="_8">深入了解行高属性<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p><a href="http://www.cnblogs.com/fengzheng126/archive/2012/05/18/2507632.html">参考：深入了解css的行高Line Height属性</a></p>
+<p>一般来说，设置行高为<code>值：纯数字</code>是最理想的方式，因为其会随着对应的 <code>font-size</code> 而缩放。</p>
+<h2 id="_9">盒模型及定位<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h3 id="div">已知宽度的div居中<a class="headerlink" href="#div" title="Permanent link">&para;</a></h3>
+<ul>
+<li>用两种方法来实现一个背景色为红色、宽度为960px的<DIV>在浏览器中居中</li>
+</ul>
+<p>我的方法一：</p>
+<p>使用 <code>margin：0 auto;</code></p>
+<p>html文件</p>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;task0001-2.css&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;center&quot;</span><span class="p">&gt;</span>aaa<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
+<p>css文件</p>
+<div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">center</span> <span class="p">{</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">960</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span> <span class="kc">auto</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>方法二：</p>
+<p>绝对定位，左边距离 body 50%，<code>margin-left: -480px</code></p>
+<div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">center</span> <span class="p">{</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">960</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+    <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+    <span class="k">left</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">-480</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><a href="http://gaohaoyang.github.io/baidu-ife-practice/task0001/task0001-2.html">Demo</a></p>
+<h4 id="_10">对于居中的补充<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<p>参考自 <a href="http://zh.learnlayout.com/">学习CSS布局</a>。</p>
+<p>像下面这样写css代码，使用 <code>max-width</code> 替代 <code>width</code>  可以使浏览器更好地处理小窗口的情况。这点在移动设备上显得尤为重要。</p>
+<p>有效的避免了如下问题： <br />
+当浏览器窗口比元素的宽度还要窄时，浏览器会显示一个水平滚动条来容纳页面。</p>
+<div class="codehilite"><pre><span></span><span class="p">#</span><span class="nn">main</span> <span class="p">{</span>
+    <span class="k">max-width</span><span class="p">:</span> <span class="mi">600</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span> <span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<ul>
+<li><a href="http://www.cnblogs.com/2050/p/3392803.html">CSS布局奇淫技巧之--各种居中</a></li>
+</ul>
+<h3 id="css_1">早期css滑动门<a class="headerlink" href="#css_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>有的圆角矩形是复杂图案，无法直接用border-radius，请在不使用 border-radius 的情况下实现一个可复用的高度和宽度都自适应的圆角矩形 <br />
+示例 <img alt="圆角矩形" src="http://7q5cdt.com1.z0.glb.clouddn.com/Baidu-Front-end-task0001_7.png" /></li>
+</ul>
+<p>这道题我一开始不会做，查阅了资料，发现这就是所谓的 css 滑动门的应用。<a href="http://www.bkjia.com/webzh/759711.html">妙味云课堂之css：滑动门、圆角、css精灵</a> <br />
+使用三层嵌套，或者四层嵌套的 <code>div</code>，通过背景图定位等方式可以实现。</p>
+<h3 id="_11">左侧固定右侧自适应宽度的两列布局<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>用两种不同的方法来实现一个两列布局，其中左侧部分宽度固定、右侧部分宽度随浏览器宽度的变化而自适应变化 <img alt="pic" src="http://7q5cdt.com1.z0.glb.clouddn.com/Baidu-Front-end-task0001_3.jpg" /></li>
+</ul>
+<p>我的方法一：</p>
+<p>不使用浮动，使用绝对定位，将左上角的块放好位置，右边的块设置<code>margin-left</code></p>
+<p>html 文件：</p>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>layout<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;task0001-6-3.css&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;left&quot;</span><span class="p">&gt;</span>DIV-A<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;right&quot;</span><span class="p">&gt;</span>DIV-B<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;bottom&quot;</span><span class="p">&gt;</span>DIV-C<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
+<p>css 文件：</p>
+<div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">row</span> <span class="p">{</span>
+    <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">left</span> <span class="p">{</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+    <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+    <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">right</span> <span class="p">{</span>
+    <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">bottom</span> <span class="p">{</span>
+    <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">yellow</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>方法二：   </p>
+<p>使用浮动，左边的块使用浮动，右边的块使用<code>margin-left</code></p>
+<div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">left</span> <span class="p">{</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">right</span> <span class="p">{</span>
+    <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">bottom</span> <span class="p">{</span>
+    <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">yellow</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><a href="http://gaohaoyang.github.io/baidu-ife-practice/task0001/task0001-6-3.html">Demo</a></p>
+<p><strong>补充：</strong></p>
+<p>看完了后面的 BFC 之后，本题和下一题都可以用另一种方法了
+总之我已经震惊了！太爽了！有没有！</p>
+<p>html</p>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>使用 BFC 进行两列布局<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;two-col-layout-with-BFC.css&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;left&quot;</span><span class="p">&gt;</span>DIV-A<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;right&quot;</span><span class="p">&gt;</span>DIV-B<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;bottom&quot;</span><span class="p">&gt;</span>DIV-C<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
+<p>css</p>
+<div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">left</span><span class="p">{</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">right</span><span class="p">{</span>
+    <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">yellow</span><span class="p">;</span>
+    <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">bottom</span><span class="p">{</span>
+    <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><a href="http://gaohaoyang.github.io/baidu-ife-practice/task0001/two-col-layout-with-BFC.html">Demo</a></p>
+<h3 id="_12">双飞翼布局<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>用两种不同的方式来实现一个三列布局，其中左侧和右侧的部分宽度固定，中间部分宽度随浏览器宽度的变化而自适应变化</li>
+</ul>
+<p>原题中参考资料 <a href="http://www.imooc.com/wenda/detail/254035">双飞翼布局</a>   </p>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Flying Swing Layout<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;task0001-6-4.css&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;bd&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;main&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;main-wrap&quot;</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Flying Swing Layout<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;sub&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Flying Swing Layout<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                left
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;extra&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Flying Swing Layout<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                right
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
+<p>css</p>
+<div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">bd</span> <span class="p">{</span>
+
+    <span class="c">/*padding: 0 190px;*/</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">main</span> <span class="p">{</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#aaa</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">main-wrap</span> <span class="p">{</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">190</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">sub</span> <span class="p">{</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">190</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">-100</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>        
+    <span class="c">/*position: relative;</span>
+<span class="c">    left: -190px;*/</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">extra</span> <span class="p">{</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">190</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">-190</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">yellow</span><span class="p">;</span>        
+    <span class="c">/*position: relative;</span>
+<span class="c">    right: -190px;*/</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><a href="http://gaohaoyang.github.io/baidu-ife-practice/task0001/task0001-6-4.html">Demo</a></p>
+<p><strong>补充：</strong></p>
+<p>使用 BFC 的另一种方法，我再一次震惊！</p>
+<p>代码超级简单！</p>
+<p>html</p>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>flying-Swing-BFC<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;flying-Swing-BFC.css&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;left&quot;</span><span class="p">&gt;</span>left<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;right&quot;</span><span class="p">&gt;</span>right<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;main&quot;</span><span class="p">&gt;</span>
+            flying-Swing-BFC.htmlflying-Swing-BFC.htmlflying-Swing-BFC.htmlflying-Swing-BFC.htmlflying-Swing-BFC.htmlflying-Swing-BFC.htmlflying-Swing-BFC.htmlflying-Swing-BFC.htmlflying-Swing-BFC.htmlflying-Swing-BFC.htmlflying-Swing-BFC.html
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;footer&quot;</span><span class="p">&gt;</span>
+            footerfooterfooterfooterfooterfooterfooterfooterfooter
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
+<p>css</p>
+<p><div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">left</span><span class="p">{</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">right</span><span class="p">{</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">main</span><span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#eee</span><span class="p">;</span>
+    <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<a href="http://gaohaoyang.github.io/baidu-ife-practice/task0001/flying-Swing-BFC.html">Demo</a></p>
+<h3 id="_13">浮动布局<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li>实现一个浮动布局，红色容器中每一行的蓝色容器数量随着浏览器宽度的变化而变化 <img alt="pic" src="http://7q5cdt.com1.z0.glb.clouddn.com/Baidu-Front-end-task0001_4.jpg" /><img alt="pic" src="http://7q5cdt.com1.z0.glb.clouddn.com/Baidu-Front-end-task0001_5.jpg" /></li>
+</ul>
+<p>这个题我觉的直接将每一个块浮动起来就好了，不知我理解的对不对。</p>
+<p>html文件</p>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;task0001-6-5.css&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
+<p>css文件</p>
+<div class="codehilite"><pre><span></span><span class="nt">body</span> <span class="p">{</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">div</span> <span class="p">{</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">150</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><a href="file:///E:/GitWorkSpace/baidu-ife-practice/task0001/task0001-6-5.html">Demo</a></p>
+<h3 id="_14">清除浮动/闭合浮动<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p>参考自 <a href="http://www.iyunlu.com/view/css-xhtml/55.html">那些年我们一起清除过的浮动 by 一丝冰凉</a></p>
+<ol>
+<li>清除浮动：清除对应的单词是 clear，对应CSS中的属性是 clear：left | right | both | none；</li>
+<li>闭合浮动：更确切的含义是使浮动元素闭合，从而减少浮动带来的影响。</li>
+</ol>
+<p>我们想要达到的效果更确切地说是闭合浮动，而不是单纯的清除浮动，设置clear：both清除浮动并不能解决warp高度塌陷的问题。</p>
+<p>正是因为浮动的这种特性，导致本属于普通流中的元素浮动之后，包含框内部由于不存在其他普通流元素了，也就表现出高度为0（<strong>高度塌陷</strong>）。在实际布局中，往往这并不是我们所希望的，所以需要闭合浮动元素，使其包含框表现出正常的高度。</p>
+<p>最后一丝姐给了两个精益求精方案，我觉得方案一更易于理解，这里实践一下：</p>
+<p><a href="http://gaohaoyang.github.io/baidu-ife-practice/task0001/close-float.html">闭合浮动的Demo</a></p>
+<p>下面是源码</p>
+<p>html</p>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;close-float.css&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row clearfix&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;left&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>left<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>Content or Something<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;right&quot;</span><span class="p">&gt;</span>right<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row2&quot;</span><span class="p">&gt;</span>Row2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
+<p>css</p>
+<div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">row</span> <span class="p">{</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">clearfix</span><span class="p">:</span><span class="nd">after</span> <span class="p">{</span>
+    <span class="k">content</span><span class="p">:</span> <span class="s2">&quot;\200B&quot;</span><span class="p">;</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+    <span class="k">height</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">clear</span><span class="p">:</span> <span class="kc">both</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">clearfix</span> <span class="p">{</span>
+    <span class="err">*</span><span class="n">zoom</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">left</span> <span class="p">{</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#eee</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">right</span> <span class="p">{</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#eee</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">row2</span> <span class="p">{</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">600</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">height</span><span class="p">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#aaa</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>其中<code>*zoom: 1</code>是为了触发<code>hasLayout</code></p>
+<p>还有另一种解决方案！</p>
+<p>参考自：<a href="http://zh.learnlayout.com/clearfix.html">清除浮动（clearfix hack）</a></p>
+<p>直接使用，如下代码即可</p>
+<div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">clearfix</span><span class="p">{</span>
+    <span class="k">overflow</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+    <span class="n">zoom</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p><a href="http://gaohaoyang.github.io/baidu-ife-practice/task0001/close-float-2.html">Demo</a></p>
+<p>(实际上，我看完后面的资料，再翻到这里就明白了！正是使用了BFC原理！！！！！！！)</p>
+<p><strong>但是今天遇到一个坑！</strong></p>
+<p>如果使用了 <code>over-flow</code>，在后面如果有元素要绝对布局在父元素的外面的，意思就是出现 <code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code> 的值为负值时，就会出现看不到，或者滚动条的问题！</p>
+<p>若是有这种要求，我觉得还是用一丝姐姐的解决方案比较好。</p>
+<p><strong>参考</strong></p>
+<ul>
+<li><a href="http://zfengqi.me/?p=87">清除浮动的几种方法</a></li>
+</ul>
+<h3 id="box-sizing"><code>box-sizing</code><a class="headerlink" href="#box-sizing" title="Permanent link">&para;</a></h3>
+<p>当你设置一个元素为 <code>box-sizing: border-box;</code> 时，此元素的内边距和边框不再会增加它的宽度。</p>
+<p>他们的内边距和边框都是向内的挤压的。支持IE8+，需要加浏览器内核。</p>
+<div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">simple</span> <span class="p">{</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">500</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span> <span class="kc">auto</span><span class="p">;</span>
+    <span class="kp">-webkit-</span><span class="k">box-sizing</span><span class="p">:</span> <span class="kc">border-box</span><span class="p">;</span>
+    <span class="kp">-moz-</span><span class="k">box-sizing</span><span class="p">:</span> <span class="kc">border-box</span><span class="p">;</span>
+    <span class="k">box-sizing</span><span class="p">:</span> <span class="kc">border-box</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3 id="_15">响应式布局<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p>媒体查询</p>
+<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Media_queries">MDN CSS媒体查询</a></li>
+<li>
+<p><a href="http://zh.learnlayout.com/media-queries.html">媒体查询-学习CSS布局</a></p>
+<p><code>@media screen and (min-width: 500px) and (max-width: 800px) { ... }</code></p>
+</li>
+<li>
+<p><a href="https://dev.opera.com/articles/an-introduction-to-meta-viewport-and-viewport/">An Introduction to Meta Viewport and @viewport</a></p>
+</li>
+</ul>
+<h3 id="_16">多列布局<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://zh.learnlayout.com/column.html">column</a></li>
+</ul>
+<h3 id="bfc_ie_haslayout">BFC 和 IE 的 hasLayout<a class="headerlink" href="#bfc_ie_haslayout" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://www.cnblogs.com/pigtail/archive/2013/01/23/2871627.html">BFC和IE的hasLayout</a></li>
+<li><a href="http://outofmemory.cn/wr/?u=http%3A%2F%2Fkkeys.me%2Fpost%2F68547473290">Block Formatting Context 的几大用处</a></li>
+</ul>
+<p>看完这个资料后我震惊了！竟然可以这么玩儿！ <br />
+我将本文之前提到的两列布局，双飞翼布局又重新写了一遍！太爽了！代码超级简洁！</p>
+<p><strong>Block Formatting Context 的几大用处：</strong></p>
+<ol>
+<li>防止 margin 折叠</li>
+<li>清除float</li>
+<li>不会环绕float元素</li>
+</ol>
+<p>相关资料</p>
+<ul>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Visual_formatting_model">视觉格式化模型(visual formatting model)</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Block_formatting_context">块格式化上下文(block formatting context)</a></li>
+</ul>
+<h3 id="div_1"><code>div</code> 三列等高<a class="headerlink" href="#div_1" title="Permanent link">&para;</a></h3>
+<p><a href="http://show.sysu.edu.cn/?action-blogdetail-uid-2383-id-5040">纯CSS实现三列DIV等高布局</a></p>
+<p>最关键的地方有3句：</p>
+<p>最外层div设置一个溢出隐藏</p>
+<div class="codehilite"><pre><span></span><span class="p">#</span><span class="nn">wrap</span> <span class="p">{</span>
+    <span class="k">overflow</span><span class="p">:</span><span class="kc">hidden</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>每一个子块设置 padding 和 margin</p>
+<div class="codehilite"><pre><span></span><span class="p">#</span><span class="nn">left</span><span class="o">,</span><span class="p">#</span><span class="nn">center</span><span class="o">,</span><span class="p">#</span><span class="nn">right</span><span class="p">{</span>
+    <span class="k">margin-bottom</span><span class="p">:</span><span class="mi">-10000</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">padding-bottom</span><span class="p">:</span><span class="mi">10000</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>overflow:hidden;    '隐藏溢出。如果内容溢出wrap层，则不显示。</p>
+<p>margin-bottom:-10000px;    '底部边距-10000px。 <br />
+padding-bottom:10000px;    '底部填充10000px。 <br />
+上面这两句能够实现的效果就是，产生10000px的填充，然后用负的边距把它给抵销掉。</p>
+<h3 id="inline-block">去除inline-block元素间间距<a class="headerlink" href="#inline-block" title="Permanent link">&para;</a></h3>
+<p>一开始我不知道是因为使用了 <code>display: inline-block</code> 会有间距。后来查找资料找到了相关的方案。</p>
+<ul>
+<li><a href="http://www.zhangxinxu.com/wordpress/2012/04/inline-block-space-remove-%E5%8E%BB%E9%99%A4%E9%97%B4%E8%B7%9D/">去除inline-block元素间间距的N种方法</a></li>
+<li><a href="https://css-tricks.com/fighting-the-space-between-inline-block-elements/">Fighting the Space Between Inline Block Elements</a></li>
+</ul>
+<p>真正意义上的inline-block水平呈现的元素间，换行显示或空格分隔的情况下会有间距。 <br />
+这种表现是符合规范的应该有的表现。</p>
+<p>解决方法有很多，上述博文中提到的有：</p>
+<ol>
+<li>移除空格</li>
+<li>使用 <code>margin</code> 负值</li>
+<li>取消闭合标签</li>
+<li>使用 <code>font-size: 0</code></li>
+<li>使用 <code>letter-spacing</code></li>
+<li>使用 <code>word-spacing</code></li>
+<li>其他</li>
+</ol>
+<p>我觉得使用 4 <code>font-size: 0</code> 比较好，对别的元素影响最小。代码如下：在 <code>a</code> 的外层将字体尺寸设为 0，载对内层的 <code>a</code> 重新设置字体大小，即可。</p>
+<div class="codehilite"><pre><span></span><span class="nt">nav</span> <span class="p">{</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">nav</span> <span class="nt">a</span> <span class="p">{</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<h2 id="_17">最终作品<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="http://gaohaoyang.github.io/ife/task/task0001/work/Gaohaoyang/index.html">在线Demo</a></li>
+<li><a href="https://github.com/Gaohaoyang/ife/tree/master/task/task0001/work/Gaohaoyang">源代码</a></li>
+</ul>
+<h2 id="_18">参考资料<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/ecomfe/spec">HTML、CSS的代码规范</a> 自己要试着改变一些代码风格了，规范化！  </li>
+<li><a href="http://www.zhihu.com/question/20455165">顾轶灵:Web语义化</a> <br />
+我看他回答最后的举例的Sildes做的非常好，可以经常看看。<a href="http://justineo.github.io/slideshows/semantic-html/">Semantic HTML</a>。他的其他Slides也做的非常好，很喜欢这种风格！</li>
+<li><a href="http://www.w3cfuns.com/blog-5445898-5398950.html">CSS命名规范@W3C Funs</a> 起名不再困难！</li>
+<li>
+<p><a href="../点击阅读: CSS浏览器兼容性列表">点击阅读: CSS浏览器兼容性列表-维基百科</a> 类似的我想到了 <a href="http://caniuse.com/">Can I Use</a>，Can I Use 包含的更多，包括 HTML5, CSS SVG, JS API 等。</p>
+</li>
+<li>
+<p><a href="http://zh.learnlayout.com/">学习CSS布局</a></p>
+</li>
+<li><a href="http://mediaqueri.es/">Media Queries</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Using_CSS_gradients">使用CSS渐变</a></li>
+<li><a href="http://www.w3cplus.com/content/css3-gradient">CSS3 Gradient</a></li>
+<li><a href="http://www.colorzilla.com/gradient-editor/">CSS渐变生成器</a></li>
+</ul>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../arrays-similar/" title=""判断两个数组是否相似 (arraysSimilar)"" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                "判断两个数组是否相似 (arraysSimilar)"
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../create-my-blog-with-jekyll/" title="Create my blog with jekyll" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Create my blog with jekyll
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2018 Martin Donath
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="http://struct.cc" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/1007530194" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/1007530194" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/1007530194" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.189d7058.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../../../.."}})</script>
+      
+        <script src="../../../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
