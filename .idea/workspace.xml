@@ -2,7 +2,96 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd812bb5-d92d-442c-ba5d-56d41b5654b8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-Readme.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-assignment2_google_cloud.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-aws-tutorial.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-classification.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-convnet-tips.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-convolutional-networks.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-google_cloud_tutorial.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-ipython-tutorial.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-linear-classify.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-neural-networks-1.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-neural-networks-2.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-neural-networks-3.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-neural-networks-case-study.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-optimization-1.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-optimization-2.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-overview.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-poster.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-python-numpy-tutorial.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-terminal-tutorial.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-transfer-learning.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-understanding-cnn.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-Readme.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-assignment2_google_cloud.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-aws-tutorial.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-classification.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-convnet-tips.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-convolutional-networks.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-google_cloud_tutorial.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-ipython-tutorial.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-linear-classify.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-neural-networks-1.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-neural-networks-2.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-neural-networks-3.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-neural-networks-case-study.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-optimization-1.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-optimization-2.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-overview.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-poster.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-python-numpy-tutorial.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-terminal-tutorial.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-transfer-learning.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-understanding-cnn.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example/2016-01-30-quick-latex.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example/2016-04-15-dive-into-gradient-decent.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example/2017-01-01-perceptron.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example/2017-04-23-bias-variance.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example/2017-05-12-nosql-in-python.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example/2017-05-23-a-web-crawer-with-a-asyncio-coroutines-1.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example/2017-06-10-a-web-crawer-with-a-asyncio-coroutines-2.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example/2017-07-28-fork-exec-source.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example/2017-07-30-bitcoin-explained-1.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example/2017-08-18-tendermint.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example/2017-09-25-ethereum-ultimate-guide.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example/2018-01-13-latex语法.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example/2018-10-01-latex语法.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-02-10-welcome-to-jekyll.markdown" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-02-12-create-my-blog-with-jekyll.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-03-21-teach-girlfriend-html-css.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-03-26-sublimeLinter.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-04-06-arrays-similar.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-04-12-Syncing-a-fork.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-04-15-baidu-ife-1.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-04-22-baidu-ife-2-javascript.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-05-18-front-end-tools.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-05-20-scope.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-06-11-JavaScript-function.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-06-12-JavaScript-this.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-06-14-JavaScript-closure.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-06-15-JavaScript-Object-Oriented.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-06-17-web-app.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-06-18-weinre.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-07-09-JavaScript-Net.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-07-24-low-IE-click-empty-block-bug.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-12-31-History-API.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2016-03-12-jekyll-theme-version-2.0.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2016-05-06-regular-expression-group.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2016-06-07-JavaScript-good-parts-note1.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2016-06-08-JavaScript-good-parts-note2.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2016-06-10-JavaScript-good-parts-note3.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2016-06-14-how-to-use-babel.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2016-07-07-git-clone-not-master-branch.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2016-10-16-shuffle-algorithm.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2016-11-22-js-create-file-and-download.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2016-11-25-how-to-write-a-count-down.md" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/要做的.md" afterPath="$PROJECT_DIR$/docs/ToDo.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diary/src/GetAll.py" afterPath="$PROJECT_DIR$/diary/src/GetAll.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mkdocs.bak.yml" afterPath="$PROJECT_DIR$/mkdocs.bak.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mkdocs.yml" afterPath="$PROJECT_DIR$/mkdocs.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/sitemap.xml" afterPath="$PROJECT_DIR$/site/sitemap.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,19 +104,42 @@
     <SUITE FILE_PATH="coverage/Diary$MoveFileFromQuiver.coverage" NAME="MoveFileFromQuiver Coverage Results" MODIFIED="1519363968646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diary/src" />
     <SUITE FILE_PATH="coverage/Diary$server.coverage" NAME="server Coverage Results" MODIFIED="1519026357862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Editor" />
     <SUITE FILE_PATH="coverage/Diary$Test1.coverage" NAME="Test1 Coverage Results" MODIFIED="1519356574170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diary/src" />
-    <SUITE FILE_PATH="coverage/Diary$GetAll.coverage" NAME="GetAll Coverage Results" MODIFIED="1520619143810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diary/src" />
+    <SUITE FILE_PATH="coverage/Diary$GetAll.coverage" NAME="GetAll Coverage Results" MODIFIED="1520660259082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diary/src" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="GetAll.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/diary/src/GetAll.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="58">
+              <caret line="81" column="40" lean-forward="false" selection-start-line="81" selection-start-column="40" selection-end-line="81" selection-end-column="40" />
+              <folding>
+                <element signature="e#159#168#0" expanded="true" />
+                <element signature="e#1510#1908#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/index.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="15">
-                <caret line="1" column="42" lean-forward="false" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
+              <first_editor relative-caret-position="450">
+                <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mkdocs.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mkdocs.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="517">
+              <caret line="188" column="14" lean-forward="false" selection-start-line="188" selection-start-column="14" selection-end-line="188" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -102,7 +214,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/_site/posts/cs231n-ch/chclassification.html" />
         <option value="$PROJECT_DIR$/_site/posts/cs231n-ch/chaws-tutorial.html" />
         <option value="$PROJECT_DIR$/_site/posts/cs231n-ch/chassignment2_google_cloud.html" />
         <option value="$PROJECT_DIR$/about.md" />
@@ -149,10 +260,11 @@
         <option value="$PROJECT_DIR$/docs/books/DeepLearning.md" />
         <option value="$PROJECT_DIR$/docs/深度学习/最小二乘法.md" />
         <option value="$PROJECT_DIR$/docs/AboutMe.md" />
-        <option value="$PROJECT_DIR$/mkdocs.bak.yml" />
-        <option value="$PROJECT_DIR$/diary/src/GetAll.py" />
-        <option value="$PROJECT_DIR$/mkdocs.yml" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/docs/ToDo.md" />
+        <option value="$PROJECT_DIR$/diary/src/GetAll.py" />
+        <option value="$PROJECT_DIR$/mkdocs.bak.yml" />
+        <option value="$PROJECT_DIR$/mkdocs.yml" />
       </list>
     </option>
   </component>
@@ -197,7 +309,44 @@
             <path>
               <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
               <item name="Diary" type="462c0819:PsiDirectoryNode" />
+              <item name="diary" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Diary" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Diary" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="学习" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Diary" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="学习" type="462c0819:PsiDirectoryNode" />
+              <item name="转载" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Diary" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="学习" type="462c0819:PsiDirectoryNode" />
+              <item name="转载" type="462c0819:PsiDirectoryNode" />
+              <item name="example2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Diary" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="工具" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Diary" type="462c0819:PsiDirectoryNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -467,20 +616,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jupyters/Untitled.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jupyters/.ipynb_checkpoints/Untitled-checkpoint.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jupyters/Cheatsheet.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
@@ -519,6 +654,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="63" column="4" lean-forward="false" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -526,6 +662,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
           <caret line="414" column="4" lean-forward="false" selection-start-line="414" selection-start-column="4" selection-end-line="414" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -667,16 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/学习/深度学习/矩阵求导.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-1041">
-            <caret line="233" column="0" lean-forward="true" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/material/assets/images/icons/github.a4034fb1.svg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -805,16 +932,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="280">
-            <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/AboutMe.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -832,14 +949,6 @@
             <caret line="95" column="18" lean-forward="true" selection-start-line="95" selection-start-column="18" selection-end-line="95" selection-end-column="18" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mkdocs.bak.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="87" column="16" lean-forward="false" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -865,25 +974,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/diary/src/GetAll.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="81" column="37" lean-forward="false" selection-start-line="81" selection-start-column="37" selection-end-line="81" selection-end-column="37" />
-          <folding>
-            <element signature="e#159#168#0" expanded="true" />
-            <element signature="e#1510#1908#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mkdocs.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -892,6 +982,74 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/学习/深度学习/矩阵求导.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="3" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ToDo.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="60">
+            <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diary/src/GetAll.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="81" column="40" lean-forward="false" selection-start-line="81" selection-start-column="40" selection-end-line="81" selection-end-column="40" />
+          <folding>
+            <element signature="e#159#168#0" expanded="true" />
+            <element signature="e#1510#1908#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mkdocs.bak.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="64" column="33" lean-forward="true" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="450">
+            <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mkdocs.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="188" column="14" lean-forward="false" selection-start-line="188" selection-start-column="14" selection-end-line="188" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>

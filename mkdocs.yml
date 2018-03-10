@@ -40,11 +40,11 @@ markdown_extensions:
     custom_checkbox: true
 - pymdownx.tilde
 pages:
-- Home: index.md
+- Home: ToDo.md
 - Home:
   - AboutMe.md
   - index.md
-  - 要做的.md
+  - ToDo.md
 - 书籍:
   - 机器学习实战:
     - 书籍/机器学习实战/00naive-bayes-discuss.md
@@ -79,92 +79,92 @@ pages:
     - 学习/深度学习/矩阵求导.md
   - 转载:
     - cs231n-ch:
-      - 学习/转载/cs231n-ch/2018-02-21-ch-assignment2_google_cloud.md
-      - 学习/转载/cs231n-ch/2018-02-21-ch-aws-tutorial.md
-      - 学习/转载/cs231n-ch/2018-02-21-ch-classification.md
-      - 学习/转载/cs231n-ch/2018-02-21-ch-convnet-tips.md
-      - 学习/转载/cs231n-ch/2018-02-21-ch-convolutional-networks.md
-      - 学习/转载/cs231n-ch/2018-02-21-ch-google_cloud_tutorial.md
-      - 学习/转载/cs231n-ch/2018-02-21-ch-ipython-tutorial.md
-      - 学习/转载/cs231n-ch/2018-02-21-ch-linear-classify.md
-      - 学习/转载/cs231n-ch/2018-02-21-ch-neural-networks-1.md
-      - 学习/转载/cs231n-ch/2018-02-21-ch-neural-networks-2.md
-      - 学习/转载/cs231n-ch/2018-02-21-ch-neural-networks-3.md
-      - 学习/转载/cs231n-ch/2018-02-21-ch-neural-networks-case-study.md
-      - 学习/转载/cs231n-ch/2018-02-21-ch-optimization-1.md
-      - 学习/转载/cs231n-ch/2018-02-21-ch-optimization-2.md
-      - 学习/转载/cs231n-ch/2018-02-21-ch-overview.md
-      - 学习/转载/cs231n-ch/2018-02-21-ch-poster.md
-      - 学习/转载/cs231n-ch/2018-02-21-ch-python-numpy-tutorial.md
-      - 学习/转载/cs231n-ch/2018-02-21-ch-Readme.md
-      - 学习/转载/cs231n-ch/2018-02-21-ch-terminal-tutorial.md
-      - 学习/转载/cs231n-ch/2018-02-21-ch-transfer-learning.md
-      - 学习/转载/cs231n-ch/2018-02-21-ch-understanding-cnn.md
+      - 学习/转载/cs231n-ch/ch-assignment2_google_cloud.md
+      - 学习/转载/cs231n-ch/ch-aws-tutorial.md
+      - 学习/转载/cs231n-ch/ch-classification.md
+      - 学习/转载/cs231n-ch/ch-convnet-tips.md
+      - 学习/转载/cs231n-ch/ch-convolutional-networks.md
+      - 学习/转载/cs231n-ch/ch-google_cloud_tutorial.md
+      - 学习/转载/cs231n-ch/ch-ipython-tutorial.md
+      - 学习/转载/cs231n-ch/ch-linear-classify.md
+      - 学习/转载/cs231n-ch/ch-neural-networks-1.md
+      - 学习/转载/cs231n-ch/ch-neural-networks-2.md
+      - 学习/转载/cs231n-ch/ch-neural-networks-3.md
+      - 学习/转载/cs231n-ch/ch-neural-networks-case-study.md
+      - 学习/转载/cs231n-ch/ch-optimization-1.md
+      - 学习/转载/cs231n-ch/ch-optimization-2.md
+      - 学习/转载/cs231n-ch/ch-overview.md
+      - 学习/转载/cs231n-ch/ch-poster.md
+      - 学习/转载/cs231n-ch/ch-python-numpy-tutorial.md
+      - 学习/转载/cs231n-ch/ch-Readme.md
+      - 学习/转载/cs231n-ch/ch-transfer-learning.md
+      - 学习/转载/cs231n-ch/ch-understanding-cnn.md
+      - 学习/转载/cs231n-ch/terminal-tutorial.md
     - cs231n-en:
-      - 学习/转载/cs231n-en/2018-02-21-en-assignment2_google_cloud.md
-      - 学习/转载/cs231n-en/2018-02-21-en-aws-tutorial.md
-      - 学习/转载/cs231n-en/2018-02-21-en-classification.md
-      - 学习/转载/cs231n-en/2018-02-21-en-convnet-tips.md
-      - 学习/转载/cs231n-en/2018-02-21-en-convolutional-networks.md
-      - 学习/转载/cs231n-en/2018-02-21-en-google_cloud_tutorial.md
-      - 学习/转载/cs231n-en/2018-02-21-en-ipython-tutorial.md
-      - 学习/转载/cs231n-en/2018-02-21-en-linear-classify.md
-      - 学习/转载/cs231n-en/2018-02-21-en-neural-networks-1.md
-      - 学习/转载/cs231n-en/2018-02-21-en-neural-networks-2.md
-      - 学习/转载/cs231n-en/2018-02-21-en-neural-networks-3.md
-      - 学习/转载/cs231n-en/2018-02-21-en-neural-networks-case-study.md
-      - 学习/转载/cs231n-en/2018-02-21-en-optimization-1.md
-      - 学习/转载/cs231n-en/2018-02-21-en-optimization-2.md
-      - 学习/转载/cs231n-en/2018-02-21-en-overview.md
-      - 学习/转载/cs231n-en/2018-02-21-en-poster.md
-      - 学习/转载/cs231n-en/2018-02-21-en-python-numpy-tutorial.md
-      - 学习/转载/cs231n-en/2018-02-21-en-Readme.md
-      - 学习/转载/cs231n-en/2018-02-21-en-terminal-tutorial.md
-      - 学习/转载/cs231n-en/2018-02-21-en-transfer-learning.md
-      - 学习/转载/cs231n-en/2018-02-21-en-understanding-cnn.md
+      - 学习/转载/cs231n-en/en-assignment2_google_cloud.md
+      - 学习/转载/cs231n-en/en-aws-tutorial.md
+      - 学习/转载/cs231n-en/en-classification.md
+      - 学习/转载/cs231n-en/en-convnet-tips.md
+      - 学习/转载/cs231n-en/en-convolutional-networks.md
+      - 学习/转载/cs231n-en/en-google_cloud_tutorial.md
+      - 学习/转载/cs231n-en/en-ipython-tutorial.md
+      - 学习/转载/cs231n-en/en-linear-classify.md
+      - 学习/转载/cs231n-en/en-neural-networks-1.md
+      - 学习/转载/cs231n-en/en-neural-networks-2.md
+      - 学习/转载/cs231n-en/en-neural-networks-3.md
+      - 学习/转载/cs231n-en/en-neural-networks-case-study.md
+      - 学习/转载/cs231n-en/en-optimization-1.md
+      - 学习/转载/cs231n-en/en-optimization-2.md
+      - 学习/转载/cs231n-en/en-overview.md
+      - 学习/转载/cs231n-en/en-poster.md
+      - 学习/转载/cs231n-en/en-python-numpy-tutorial.md
+      - 学习/转载/cs231n-en/en-Readme.md
+      - 学习/转载/cs231n-en/en-terminal-tutorial.md
+      - 学习/转载/cs231n-en/en-transfer-learning.md
+      - 学习/转载/cs231n-en/en-understanding-cnn.md
     - example:
-      - 学习/转载/example/2016-01-30-quick-latex.md
-      - 学习/转载/example/2016-04-15-dive-into-gradient-decent.md
-      - 学习/转载/example/2017-01-01-perceptron.md
-      - 学习/转载/example/2017-04-23-bias-variance.md
-      - 学习/转载/example/2017-05-12-nosql-in-python.md
-      - 学习/转载/example/2017-05-23-a-web-crawer-with-a-asyncio-coroutines-1.md
-      - 学习/转载/example/2017-06-10-a-web-crawer-with-a-asyncio-coroutines-2.md
-      - 学习/转载/example/2017-07-28-fork-exec-source.md
-      - 学习/转载/example/2017-07-30-bitcoin-explained-1.md
-      - 学习/转载/example/2017-08-18-tendermint.md
-      - 学习/转载/example/2017-09-25-ethereum-ultimate-guide.md
-      - 学习/转载/example/2018-01-13-latex语法.md
-      - 学习/转载/example/2018-10-01-latex语法.md
+      - 学习/转载/example/a-web-crawer-with-a-asyncio-coroutines-1.md
+      - 学习/转载/example/a-web-crawer-with-a-asyncio-coroutines-2.md
+      - 学习/转载/example/bias-variance.md
+      - 学习/转载/example/bitcoin-explained-1.md
+      - 学习/转载/example/dive-into-gradient-decent.md
+      - 学习/转载/example/ethereum-ultimate-guide.md
+      - 学习/转载/example/fork-exec-source.md
+      - 学习/转载/example/latex语法.md
+      - 学习/转载/example/latex语法1.md
+      - 学习/转载/example/nosql-in-python.md
+      - 学习/转载/example/perceptron.md
+      - 学习/转载/example/quick-latex.md
+      - 学习/转载/example/tendermint.md
     - example2:
-      - 学习/转载/example2/2015-02-12-create-my-blog-with-jekyll.md
-      - 学习/转载/example2/2015-03-21-teach-girlfriend-html-css.md
-      - 学习/转载/example2/2015-03-26-sublimeLinter.md
-      - 学习/转载/example2/2015-04-06-arrays-similar.md
-      - 学习/转载/example2/2015-04-12-Syncing-a-fork.md
-      - 学习/转载/example2/2015-04-15-baidu-ife-1.md
-      - 学习/转载/example2/2015-04-22-baidu-ife-2-javascript.md
-      - 学习/转载/example2/2015-05-18-front-end-tools.md
-      - 学习/转载/example2/2015-05-20-scope.md
-      - 学习/转载/example2/2015-06-11-JavaScript-function.md
-      - 学习/转载/example2/2015-06-12-JavaScript-this.md
-      - 学习/转载/example2/2015-06-14-JavaScript-closure.md
-      - 学习/转载/example2/2015-06-15-JavaScript-Object-Oriented.md
-      - 学习/转载/example2/2015-06-17-web-app.md
-      - 学习/转载/example2/2015-06-18-weinre.md
-      - 学习/转载/example2/2015-07-09-JavaScript-Net.md
-      - 学习/转载/example2/2015-07-24-low-IE-click-empty-block-bug.md
-      - 学习/转载/example2/2015-12-31-History-API.md
-      - 学习/转载/example2/2016-03-12-jekyll-theme-version-2.0.md
-      - 学习/转载/example2/2016-05-06-regular-expression-group.md
-      - 学习/转载/example2/2016-06-07-JavaScript-good-parts-note1.md
-      - 学习/转载/example2/2016-06-08-JavaScript-good-parts-note2.md
-      - 学习/转载/example2/2016-06-10-JavaScript-good-parts-note3.md
-      - 学习/转载/example2/2016-06-14-how-to-use-babel.md
-      - 学习/转载/example2/2016-07-07-git-clone-not-master-branch.md
-      - 学习/转载/example2/2016-10-16-shuffle-algorithm.md
-      - 学习/转载/example2/2016-11-22-js-create-file-and-download.md
-      - 学习/转载/example2/2016-11-25-how-to-write-a-count-down.md
+      - 学习/转载/example2/arrays-similar.md
+      - 学习/转载/example2/baidu-ife-1.md
+      - 学习/转载/example2/baidu-ife-2-javascript.md
+      - 学习/转载/example2/create-my-blog-with-jekyll.md
+      - 学习/转载/example2/front-end-tools.md
+      - 学习/转载/example2/git-clone-not-master-branch.md
+      - 学习/转载/example2/History-API.md
+      - 学习/转载/example2/how-to-use-babel.md
+      - 学习/转载/example2/how-to-write-a-count-down.md
+      - 学习/转载/example2/JavaScript-closure.md
+      - 学习/转载/example2/JavaScript-function.md
+      - 学习/转载/example2/JavaScript-good-parts-note1.md
+      - 学习/转载/example2/JavaScript-good-parts-note2.md
+      - 学习/转载/example2/JavaScript-good-parts-note3.md
+      - 学习/转载/example2/JavaScript-Net.md
+      - 学习/转载/example2/JavaScript-Object-Oriented.md
+      - 学习/转载/example2/JavaScript-this.md
+      - 学习/转载/example2/jekyll-theme-version-2.0.md
+      - 学习/转载/example2/js-create-file-and-download.md
+      - 学习/转载/example2/low-IE-click-empty-block-bug.md
+      - 学习/转载/example2/regular-expression-group.md
+      - 学习/转载/example2/scope.md
+      - 学习/转载/example2/shuffle-algorithm.md
+      - 学习/转载/example2/sublimeLinter.md
+      - 学习/转载/example2/Syncing-a-fork.md
+      - 学习/转载/example2/teach-girlfriend-html-css.md
+      - 学习/转载/example2/web-app.md
+      - 学习/转载/example2/weinre.md
 - 工具:
   - 工具/About.md
   - 工具/Cheatsheet.md

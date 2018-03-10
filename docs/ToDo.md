@@ -1,4 +1,9 @@
-
+---
+layout: post
+categories: 深度学习
+title: 要做的
+mathjax: true
+---
 
 
 
