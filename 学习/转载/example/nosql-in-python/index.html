@@ -1,0 +1,2714 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Nothing is impossible">
+      
+      
+        <link rel="canonical" href="https://1007530194.github.io/Diary/学习/转载/example/nosql-in-python/">
+      
+      
+        <meta name="author" content="NiuLiangtao">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.0">
+    
+    
+      
+        <title>Nosql in python - Blog of NiuLiangtao</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.78aab2dc.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#oldsql" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://1007530194.github.io/Diary/" title="Blog of NiuLiangtao" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Blog of NiuLiangtao
+              </span>
+              <span class="md-header-nav__topic">
+                Nosql in python
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/1007530194/Diary" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      1007530194/Diary
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../AboutMe/" title="Home" class="md-tabs__link">
+          Home
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../书籍/机器学习实战/00naive-bayes-discuss/" title="书籍" class="md-tabs__link">
+          书籍
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../tensorflow/如何选择优化器 optimizer/" title="学习" class="md-tabs__link">
+          学习
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../工具/About/" title="工具" class="md-tabs__link">
+          工具
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../日常/test/testtest/" title="日常" class="md-tabs__link">
+          日常
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    Blog of NiuLiangtao
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/1007530194/Diary" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      1007530194/Diary
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ToDo/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Home
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Home
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../AboutMe/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ToDo/" title="要做的" class="md-nav__link">
+      要做的
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      书籍
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        书籍
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      机器学习实战
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        机器学习实战
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/00naive-bayes-discuss/" title="naive-bayes-discuss" class="md-nav__link">
+      naive-bayes-discuss
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/01.机器学习基础/" title="1.机器学习基础" class="md-nav__link">
+      1.机器学习基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/02.k-近邻算法/" title="2.k-近邻算法" class="md-nav__link">
+      2.k-近邻算法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/03.决策树/" title="3.决策树" class="md-nav__link">
+      3.决策树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/04.朴素贝叶斯/" title="4.朴素贝叶斯" class="md-nav__link">
+      4.朴素贝叶斯
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/05.Logistic回归/" title="5.Logistic回归" class="md-nav__link">
+      5.Logistic回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/06.0.支持向量机/" title="6.支持向量机" class="md-nav__link">
+      6.支持向量机
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/06.1.支持向量机的几个通俗理解/" title="6.1.支持向量机的几个通俗理解" class="md-nav__link">
+      6.1.支持向量机的几个通俗理解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/07.集成方法-随机森林和AdaBoost/" title="7.集成方法-随机森林和AdaBoost" class="md-nav__link">
+      7.集成方法-随机森林和AdaBoost
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/08.预测数值型数据-回归/" title="8.预测数值型数据：回归" class="md-nav__link">
+      8.预测数值型数据：回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/09.树回归/" title="9.树回归" class="md-nav__link">
+      9.树回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/10.k-means聚类/" title="10.k-means聚类" class="md-nav__link">
+      10.k-means聚类
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/11.使用Apriori算法进行关联分析/" title="11.使用Apriori算法进行关联分析" class="md-nav__link">
+      11.使用Apriori算法进行关联分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/12.使用FP-growth算法来高效发现频繁项集/" title="12.使用FP-growth算法来高效发现频繁项集" class="md-nav__link">
+      12.使用FP-growth算法来高效发现频繁项集
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/13.利用PCA来简化数据/" title="13.利用PCA来简化数据" class="md-nav__link">
+      13.利用PCA来简化数据
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/14.利用SVD简化数据/" title="14.利用SVD简化数据" class="md-nav__link">
+      14.利用SVD简化数据
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/15.大数据与MapReduce/" title="15.大数据与MapReduce" class="md-nav__link">
+      15.大数据与MapReduce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/16.推荐系统/" title="16.推荐系统" class="md-nav__link">
+      16.推荐系统
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      深度学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        深度学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/深度学习/DeepLearning/" title="深度学习中文版" class="md-nav__link">
+      深度学习中文版
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      tensorflow
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        tensorflow
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tensorflow/如何选择优化器 optimizer/" title="如何选择优化器 optimizer" class="md-nav__link">
+      如何选择优化器 optimizer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      深度学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        深度学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/10分钟上手Pandas/" title="10分钟上手Pandas" class="md-nav__link">
+      10分钟上手Pandas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
+      主成分分析 (2)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/主成分分析/" title="主成分分析" class="md-nav__link">
+      主成分分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/最小二乘法/" title="最小二乘法" class="md-nav__link">
+      最小二乘法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
+      矩阵分解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
+      矩阵求导
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" checked>
+    
+    <label class="md-nav__link" for="nav-4-3">
+      转载
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        转载
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-1" type="checkbox" id="nav-4-3-1">
+    
+    <label class="md-nav__link" for="nav-4-3-1">
+      cs231n-ch
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-1">
+        cs231n-ch
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-assignment2_google_cloud/" title="Google Cloud Tutorial Part 2 (with GPUs)" class="md-nav__link">
+      Google Cloud Tutorial Part 2 (with GPUs)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-aws-tutorial/" title="aws-tutorial" class="md-nav__link">
+      aws-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-classification/" title="classification" class="md-nav__link">
+      classification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-convnet-tips/" title="convnet-tips" class="md-nav__link">
+      convnet-tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-convolutional-networks/" title="convolutional-networks" class="md-nav__link">
+      convolutional-networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-google_cloud_tutorial/" title="Google Cloud Tutorial gce-tutorial" class="md-nav__link">
+      Google Cloud Tutorial gce-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-ipython-tutorial/" title="IPython Tutorial ipython-tutorial" class="md-nav__link">
+      IPython Tutorial ipython-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-linear-classify/" title="线性分类" class="md-nav__link">
+      线性分类
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-neural-networks-1/" title="neural-networks-1" class="md-nav__link">
+      neural-networks-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-neural-networks-2/" title="neural-networks-2" class="md-nav__link">
+      neural-networks-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-neural-networks-3/" title="neural-networks-3" class="md-nav__link">
+      neural-networks-3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-neural-networks-case-study/" title="neural-networks-case-study" class="md-nav__link">
+      neural-networks-case-study
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-optimization-1/" title="optimization-1" class="md-nav__link">
+      optimization-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-optimization-2/" title="optimization-2" class="md-nav__link">
+      optimization-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-overview/" title="Overview of Computer Vision and Visual Recognition overview" class="md-nav__link">
+      Overview of Computer Vision and Visual Recognition overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-poster/" title="CS231n Poster Session poster-session" class="md-nav__link">
+      CS231n Poster Session poster-session
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-python-numpy-tutorial/" title="Python Numpy Tutorial python-numpy-tutorial" class="md-nav__link">
+      Python Numpy Tutorial python-numpy-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-Readme/" title="ch Readme" class="md-nav__link">
+      ch Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-transfer-learning/" title="transfer-learning" class="md-nav__link">
+      transfer-learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-understanding-cnn/" title="understanding-cnn" class="md-nav__link">
+      understanding-cnn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/terminal-tutorial/" title="Terminal.com Tutorial terminal-tutorial" class="md-nav__link">
+      Terminal.com Tutorial terminal-tutorial
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-2" type="checkbox" id="nav-4-3-2">
+    
+    <label class="md-nav__link" for="nav-4-3-2">
+      cs231n-en
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-2">
+        cs231n-en
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-assignment2_google_cloud/" title="Google Cloud Tutorial Part 2 (with GPUs)" class="md-nav__link">
+      Google Cloud Tutorial Part 2 (with GPUs)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-aws-tutorial/" title="aws-tutorial" class="md-nav__link">
+      aws-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-classification/" title="classification" class="md-nav__link">
+      classification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-convnet-tips/" title="convnet-tips" class="md-nav__link">
+      convnet-tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-convolutional-networks/" title="convolutional-networks" class="md-nav__link">
+      convolutional-networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-google_cloud_tutorial/" title="Google Cloud Tutorial" class="md-nav__link">
+      Google Cloud Tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-ipython-tutorial/" title="IPython Tutorial ipython-tutorial" class="md-nav__link">
+      IPython Tutorial ipython-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-linear-classify/" title="linear-classify" class="md-nav__link">
+      linear-classify
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-neural-networks-1/" title="neural-networks-1" class="md-nav__link">
+      neural-networks-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-neural-networks-2/" title="neural-networks-2" class="md-nav__link">
+      neural-networks-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-neural-networks-3/" title="neural-networks-3" class="md-nav__link">
+      neural-networks-3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-neural-networks-case-study/" title="neural-networks-case-study" class="md-nav__link">
+      neural-networks-case-study
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-optimization-1/" title="optimization-1" class="md-nav__link">
+      optimization-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-optimization-2/" title="optimization-2" class="md-nav__link">
+      optimization-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-overview/" title="Overview of Computer Vision and Visual Recognition overview" class="md-nav__link">
+      Overview of Computer Vision and Visual Recognition overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-poster/" title="CS231n Poster Session poster-session" class="md-nav__link">
+      CS231n Poster Session poster-session
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-python-numpy-tutorial/" title="Python Numpy Tutorial python-numpy-tutorial" class="md-nav__link">
+      Python Numpy Tutorial python-numpy-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-Readme/" title="en Readme" class="md-nav__link">
+      en Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-terminal-tutorial/" title="Terminal.com Tutorial terminal-tutorial" class="md-nav__link">
+      Terminal.com Tutorial terminal-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-transfer-learning/" title="transfer-learning" class="md-nav__link">
+      transfer-learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-understanding-cnn/" title="understanding-cnn" class="md-nav__link">
+      understanding-cnn
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-3" type="checkbox" id="nav-4-3-3" checked>
+    
+    <label class="md-nav__link" for="nav-4-3-3">
+      example
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-3">
+        example
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../a-web-crawer-with-a-asyncio-coroutines-1/" title="A web crawer with a asyncio coroutines 1" class="md-nav__link">
+      A web crawer with a asyncio coroutines 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../a-web-crawer-with-a-asyncio-coroutines-2/" title="A web crawer with a asyncio coroutines 2" class="md-nav__link">
+      A web crawer with a asyncio coroutines 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bias-variance/" title="Bias variance" class="md-nav__link">
+      Bias variance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bitcoin-explained-1/" title="用表情符号解释比特币 (1)" class="md-nav__link">
+      用表情符号解释比特币 (1)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dive-into-gradient-decent/" title="理解梯度下降" class="md-nav__link">
+      理解梯度下降
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ethereum-ultimate-guide/" title="Ethereum ultimate guide" class="md-nav__link">
+      Ethereum ultimate guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fork-exec-source/" title="Fork exec source" class="md-nav__link">
+      Fork exec source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../latex语法/" title="Latex语法" class="md-nav__link">
+      Latex语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../latex语法1/" title="latex语法" class="md-nav__link">
+      latex语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Nosql in python
+      </label>
+    
+    <a href="./" title="Nosql in python" class="md-nav__link md-nav__link--active">
+      Nosql in python
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#oldsql" title="OldSQL" class="md-nav__link">
+    OldSQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#querying" title="Querying" class="md-nav__link">
+    Querying
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relations" title="Relations" class="md-nav__link">
+    Relations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-clear-box" title="The Clear Box" class="md-nav__link">
+    The Clear Box
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schemas" title="Schemas" class="md-nav__link">
+    Schemas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keyvalue-stores" title="Key/Value Stores" class="md-nav__link">
+    Key/Value Stores
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands-supported" title="Commands Supported" class="md-nav__link">
+    Commands Supported
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-structure" title="Message Structure" class="md-nav__link">
+    Message Structure
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-messages" title="Request Messages" class="md-nav__link">
+    Request Messages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reponse-messages" title="Reponse Messages" class="md-nav__link">
+    Reponse Messages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#show-me-the-code" title="Show Me The Code!" class="md-nav__link">
+    Show Me The Code!
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-up" title="Set Up" class="md-nav__link">
+    Set Up
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-upcontd" title="Set up(Cont'd)" class="md-nav__link">
+    Set up(Cont'd)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-parser" title="Command Parser" class="md-nav__link">
+    Command Parser
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-handlers" title="Command Handlers" class="md-nav__link">
+    Command Handlers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-is-this-a-database" title="How Is This a Database?" class="md-nav__link">
+    How Is This a Database?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#querying-data" title="Querying Data" class="md-nav__link">
+    Querying Data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" title="Summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../perceptron/" title="Perceptron" class="md-nav__link">
+      Perceptron
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../quick-latex/" title="Quick latex" class="md-nav__link">
+      Quick latex
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tendermint/" title="Tendermint" class="md-nav__link">
+      Tendermint
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../工具/About/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../工具/Cheatsheet/" title="Cheatsheet" class="md-nav__link">
+      Cheatsheet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="" title="文章" class="md-nav__link">
+      文章
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      日常
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        日常
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1">
+    
+    <label class="md-nav__link" for="nav-7-1">
+      test
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-1">
+        test
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../日常/test/testtest/" title="Testtest" class="md-nav__link">
+      Testtest
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2">
+    
+    <label class="md-nav__link" for="nav-7-2">
+      常用
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-2">
+        常用
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../日常/常用/latex语法/" title="Latex语法" class="md-nav__link">
+      Latex语法
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      常用工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        常用工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../日常/常用工具/10分钟上手Pandas/" title="10分钟上手Pandas" class="md-nav__link">
+      10分钟上手Pandas
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#oldsql" title="OldSQL" class="md-nav__link">
+    OldSQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#querying" title="Querying" class="md-nav__link">
+    Querying
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relations" title="Relations" class="md-nav__link">
+    Relations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-clear-box" title="The Clear Box" class="md-nav__link">
+    The Clear Box
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schemas" title="Schemas" class="md-nav__link">
+    Schemas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keyvalue-stores" title="Key/Value Stores" class="md-nav__link">
+    Key/Value Stores
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands-supported" title="Commands Supported" class="md-nav__link">
+    Commands Supported
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-structure" title="Message Structure" class="md-nav__link">
+    Message Structure
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-messages" title="Request Messages" class="md-nav__link">
+    Request Messages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reponse-messages" title="Reponse Messages" class="md-nav__link">
+    Reponse Messages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#show-me-the-code" title="Show Me The Code!" class="md-nav__link">
+    Show Me The Code!
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-up" title="Set Up" class="md-nav__link">
+    Set Up
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-upcontd" title="Set up(Cont'd)" class="md-nav__link">
+    Set up(Cont'd)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-parser" title="Command Parser" class="md-nav__link">
+    Command Parser
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-handlers" title="Command Handlers" class="md-nav__link">
+    Command Handlers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-is-this-a-database" title="How Is This a Database?" class="md-nav__link">
+    How Is This a Database?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#querying-data" title="Querying Data" class="md-nav__link">
+    Querying Data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" title="Summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Nosql in python</h1>
+                
+                <hr />
+<ul>
+<li>完整的示例代码已经放到了 GitHub 上, 请 <a href="https://github.com/liuchengxu/hands-on-learning/blob/master/nosql.py">点击这里</a>, 这仅是一个极简的 demo, 旨在动手了解概念.</li>
+<li>如果对译文有任何的意见或建议，欢迎 <a href="https://github.com/liuchengxu/blog-cn/issues">提 issue</a> 讨论, 批评指正. </li>
+</ul>
+<p>![nosql]({{ site.baseurl }}{{ site.images }}/posts/nosql.png)</p>
+<p>NoSQL 这个词在近些年正变得随处可见. 但是到底 "NoSQL" 指的是什么? 它是如何并且为什么这么有用? 在本文, 我们将会通过纯 Python (我比较喜欢叫它, "轻结构化的伪代码") 写一个 NoSQL 数据库来回答这些问题.</p>
+<h3 id="oldsql">OldSQL<a class="headerlink" href="#oldsql" title="Permanent link">&para;</a></h3>
+<p>很多情况下, SQL 已经成为 "数据库" (database) 的一个同义词. 实际上, <strong>SQL</strong> 是 <em>Strctured Query Language</em> 的首字母缩写, 而并非指数据库技术本身. 更确切地说, 它所指的是从 <strong>RDBMS</strong> (关系型数据库管理系统, <em>Relational Database Management System</em> ) 中检索数据的一门语言. MySQL, MS SQL Server 和 Oracle 都属于 RDBMS 的其中一员.</p>
+<p>RDBMS 中的 R, 即 "Relational" (有关系，关联的), 是其中内容最丰富的部分. 数据通过 <em>表 (table)</em> 进行组织, 每张表都是一些由 <em>类型 (type)</em> 相关联的 <em>列 (column)</em> 构成. 所有表, 列及其类的类型被称为数据库的 <em>schema</em> (架构或模式). schema 通过每张表的描述信息完整刻画了数据库的结构. 比如, 一张叫做 <code>Car</code> 的表可能有以下一些列:</p>
+<ul>
+<li>Make: a string</li>
+<li>Model: a string</li>
+<li>Year: a four-digit number; alternatively, a date</li>
+<li>Color: a string</li>
+<li>VIN(Vehicle Identification Number): a string</li>
+</ul>
+<p>在一张表中, 每个单一的条目叫做一 <em>行 (row)</em>, 或者一条 <em>记录 (record)</em>. 为了区分每条记录, 通常会定义一个 <em>主键 (primary key)</em>. 表中的 <em>主键</em> 是其中一列 , 它能够唯一标识每一行. 在表 <code>Car</code> 中, VIN 是一个天然的主键选择, 因为它能够保证每辆车具有唯一的标识. 两个不同的行可能会在 Make, Model, Year 和 Color 列上有相同的值, 但是对于不同的车而言, 肯定会有不同的 VIN. 反之， 只要两行拥有同一个 VIN, 我们不必去检查其他列就可以认为这两行指的的就是同一辆车.</p>
+<h3 id="querying">Querying<a class="headerlink" href="#querying" title="Permanent link">&para;</a></h3>
+<p>SQL 能够让我们通过对数据库进行 <em>query (查询)</em> 来获取有用的信息. <em>查询</em> 简单来说, 查询就是用一个结构化语言向 RDBMS 提问, 并将其返回的行解释为问题的答案. 假设数据库表示了美国所有的注册车辆, 为了获取 <em>所有的</em> 记录, 我们可以通过在数据库上进行如下的 <em>SQL 查询</em> :</p>
+<div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="n">Make</span><span class="p">,</span> <span class="n">Model</span> <span class="k">FROM</span> <span class="n">Car</span><span class="p">;</span>
+</pre></div>
+
+<p>将 SQL 大致翻译成中文:</p>
+<ul>
+<li>"SELECT": "向我展示"</li>
+<li>"Make, Model": "Make 和 Model 的值"</li>
+<li>"FROM Car": "对表 Car 中的每一行"</li>
+</ul>
+<p>也就是, "向我展示表 Car 每一行中 Make 和 Model 的值". 执行查询后， 我们将会得到一些查询的结果, 其中每个都是 Make 和 Model. 如果我们仅关心在 1994 年注册的车的颜色, 那么可以:</p>
+<div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="n">Color</span> <span class="k">FROM</span> <span class="n">Car</span> <span class="k">WHERE</span> <span class="k">Year</span> <span class="o">=</span> <span class="mi">1994</span><span class="p">;</span>
+</pre></div>
+
+<p>此时, 我们会得到一个类似如下的列表:</p>
+<div class="codehilite"><pre><span></span>Black
+Red
+Red
+White
+Blue
+Black
+White
+Yellow
+</pre></div>
+
+<p>最后, 我们可以通过使用表的 <em>(primary key) 主键</em> , 这里就是 VIN 来指定查询一辆车:</p>
+<div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">Car</span> <span class="k">WHERE</span> <span class="n">VIN</span> <span class="o">=</span> <span class="s1">&#39;2134AFGER245267&#39;</span>
+</pre></div>
+
+<p>上面这条查询语句会返回所指定车辆的属性信息.</p>
+<p>主键被定义为唯一不可重复的. 也就是说, 带有某一指定 VIN 的车辆在表中至多只能出现一次. 这一点非常重要，为什么? 来看一个例子:</p>
+<h3 id="relations">Relations<a class="headerlink" href="#relations" title="Permanent link">&para;</a></h3>
+<p>假设我们正在经营一个汽车修理的业务. 除了其他一些必要的事情, 我们还需要追踪一辆车的服务历史, 即在该辆车上所有的修整记录. 那么我们可能会创建包含以下一些列的 <code>ServiceHistory</code> 表:</p>
+<p>VIN | Make | Model | Year | Color | Service Performed | Mechanic | Price | Date</p>
+<p>这样, 每次当车辆维修以后, 我们就在表中添加新的一行, 并写入该次服务我们做了一些什么事情, 是哪位维修工, 花费多少和服务时间等.</p>
+<p>但是等一下, 我们都知道，对于同一辆车而言，所有车辆自身信息有关的列是不变的。 也就是说，如果把我的 Black 2014 Lexus RX 350 修整 10 次的话， 那么即使 Make, Model, Year 和 Color 这些信息并不会改变，每一次仍然重复记录了这些信息. 与无效的重复记录相比， 一个更合理的做法是对此类信息只存储一次， 并在有需要的时候进行查询。</p>
+<p>那么该怎么做呢？ 我们可以创建第二张表： <code>Vehicle</code> , 它有如下一些列:</p>
+<p>VIN | Make | Model | Year | Color</p>
+<p>这样一来， 对于 <code>ServiceHistory</code> 表， 我们可以精简为如下一些列:</p>
+<p>VIN | Service Performed | Mechanic | Price | Date</p>
+<p>你可能会问，为什么 VIN 会在两张表中同时出现？ 因为我们需要有一个方式来确认在 <code>ServiceHistory</code> 表的 <em>这</em> 辆车指的就是 <code>Vehicle</code> 表中的 <em>那</em> 辆车, 也就是需要确认两张表中的两条记录所表示的是同一辆车。 这样的话,我们仅需要为每辆车的自身信息存储一次即可. 每次当车辆过来维修的时候， 我们就在 <code>ServiceHistory</code> 表中创建新的一行， 而不必在 <code>Vehicle</code> 表中添加新的记录。 毕竟， 它们指的是同一辆车。</p>
+<p>我们可以通过 SQL 查询语句来展开 <code>Vehicle</code> 与 <code>ServiceHistory</code> 两张表中包含的隐式关系:</p>
+<div class="codehilite"><pre><span></span><span class="k">SELECT</span> <span class="n">Vehicle</span><span class="p">.</span><span class="n">Model</span><span class="p">,</span> <span class="n">Vehicle</span><span class="p">.</span><span class="k">Year</span> <span class="k">FROM</span> <span class="n">Vehicle</span><span class="p">,</span> <span class="n">ServiceHistory</span> <span class="k">WHERE</span> <span class="n">Vehicle</span><span class="p">.</span><span class="n">VIN</span> <span class="o">=</span> <span class="n">ServiceHistory</span><span class="p">.</span><span class="n">VIN</span> <span class="k">AND</span> <span class="n">ServiceHistory</span><span class="p">.</span><span class="n">Price</span> <span class="o">&gt;</span> <span class="mi">75</span><span class="p">.</span><span class="mi">00</span><span class="p">;</span>
+</pre></div>
+
+<p>该查询旨在查找维修费用大于 $75.00 的所有车辆的 Model 和 Year. 注意到我们是通过匹配 <code>Vehicle</code> 与 <code>ServiceHistory</code> 表中的 VIN 值来筛选满足条件的记录. 返回的将是两张表中符合条件的一些记录, 而 "Vehicle.Model" 与 "Vehicle.Year" , 表示我们只想要 <code>Vehicle</code> 表中的这两列.</p>
+<p>如果我们的数据库没有 <em>索引 (indexes)</em> (正确的应该是 indices), 上面的查询就需要执行 <em>表扫描 (table scan)</em> 来定位匹配查询要求的行。 table scan 是按照顺序对表中的每一行进行依次检查， 而这通常会非常的慢。 实际上, table scan 实际上是所有查询中最慢的。</p>
+<p>可以通过对列加索引来避免扫描表。 我们可以把索引看做一种数据结构， 它能够通过预排序让我们在被索引的列上快速地找到一个指定的值 (或指定范围内的一些值). 也就是说， 如果我们在 Price 列上有一个索引， 那么就不需要一行一行地对整个表进行扫描来判断其价格是否大于 <code>75.00</code>, 而是只需要使用包含在索引中的信息 “跳” 到第一个价格高于 <code>75.00</code> 的那一行， 并返回随后的每一行（由于索引是有序的， 因此这些行的价格至少是 <code>75.00</code>）。</p>
+<p>当应对大量的数据时， 索引是提高查询速度不可或缺的一个工具。当然， 跟所有的事情一样，有得必有失， 使用索引会导致一些额外的消耗： 索引的数据结构会消耗内存，而这些内存本可用于数据库中存储数据。这就需要我们权衡其利弊，寻求一个折中的办法， 但是为经常查询的列加索引是 <em>非常</em> 常见的做法。</p>
+<h3 id="the-clear-box">The Clear Box<a class="headerlink" href="#the-clear-box" title="Permanent link">&para;</a></h3>
+<p>得益于数据库能够检查一张表的 <em>schema</em> (描述了每列包含了什么类型的数据), 像索引这样的高级特性才能够实现， 并且能够基于数据做出一个合理的决策。 也就是说, 对于一个数据库而言， 一张表其实是一个 “黑盒” (或者说透明的盒子) 的反义词？</p>
+<p>当我们谈到 NoSQL 数据库的时候要牢牢记住这一点。 当涉及 <em>query</em> 不同类型数据库引擎的能力时， 这也是其中非常重要的一部分。</p>
+<h3 id="schemas">Schemas<a class="headerlink" href="#schemas" title="Permanent link">&para;</a></h3>
+<p>我们已经知道, 一张表的 <em>schema</em> , 描述了列的名字及其所包含数据的类型。它还包括了其他一些信息， 比如哪些列可以为空， 哪些列不允许有重复值， 以及其他对表中列的所有限制信息。 在任意时刻一张表只能有一个 schema, 并且 <em>表中的所有行必须遵守 schema 的规定</em> 。</p>
+<p>这是一个非常重要的约束条件。 假设你有一张数据库的表， 里面有数以百万计的消费者信息。 你的销售团队想要添加额外的一些信息 （比如， 用户的年龄）, 以期提高他们邮件营销算法的准确度。 这就需要来 <em>alter (更改)</em> 现有的表 -- 添加新的一列。 我们还需要决定是否表中的每一行都要求该列必须有一个值。 通常情况下， 让一个列有值是十分有道理的， 但是这么做的话可能会需要一些我们无法轻易获得的信息（比如数据库中每个用户的年龄）。因此在这个层面上，也需要有些权衡之策。</p>
+<p>此外，对一个大型数据库做一些改变通常并不是一件小事。为了以防出现错误，有一个回滚方案非常重要。但即使是如此，一旦当 schema 做出改变后，我们也并不总是能够撤销这些变动。 schema 的维护可能是 DBA 工作中最困难的部分之一。</p>
+<h3 id="keyvalue-stores">Key/Value Stores<a class="headerlink" href="#keyvalue-stores" title="Permanent link">&para;</a></h3>
+<p>在 “NoSQL” 这个词存在前， 像 <code>memcached</code> 这样的 <em>键/值 数据存储 (Key/Value Data Stores)</em> 无须 table schema 也可提供数据存储的功能。 实际上， 在 K/V 存储时， 根本没有 "表  （table）" 的概念。 只有 <em>键 (keys)</em> 与 <em>值 （values）</em> . 如果键值存储听起来比较熟悉的话， 那可能是因为这个概念的构建原则与 Python 的 <code>dict</code> 与 <code>set</code> 相一致: 使用 hash table （哈希表） 来提供基于键的快速数据查询。 一个基于 Python 的最原始的 NoSQL 数据库, 简单来说就是一个大的字典 (dictionary) .</p>
+<p>为了理解它的工作原理，亲自动手写一个吧！ 首先来看一下一些简单的设计想法：</p>
+<ul>
+<li>一个 Python 的  <code>dict</code> 作为主要的数据存储</li>
+<li>仅支持 string 类型作为键 (key)</li>
+<li>支持存储 integer, string 和 list</li>
+<li>一个使用 ASCLL string 的简单 TCP/IP 服务器用来传递消息</li>
+<li>一些像 <code>INCREMENT</code>, <code>DELETE</code> , <code>APPEND</code> 和 <code>STATS</code> 这样的高级命令 (command)</li>
+</ul>
+<p>有一个基于 ASCII 的 TCP/IP 接口的数据存储有一个好处， 那就是我们使用简单的 <code>telnet</code> 程序即可与服务器进行交互, 并不需要特殊的客户端 (尽管这是一个非常好的练习并且只需要 15 行代码即可完成)。</p>
+<p>对于我们发送到服务器及其它的返回信息，我们需要一个 “有线格式”。下面是一个简单的说明：</p>
+<h3 id="commands-supported">Commands Supported<a class="headerlink" href="#commands-supported" title="Permanent link">&para;</a></h3>
+<ul>
+<li>PUT</li>
+<li>参数： Key, Value</li>
+<li>
+<p>目的： 向数据库中插入一条新的条目 (entry)</p>
+</li>
+<li>
+<p>GET</p>
+</li>
+<li>参数： Key</li>
+<li>
+<p>目的： 从数据库中检索一个已存储的值</p>
+</li>
+<li>
+<p>PUTLIST</p>
+</li>
+<li>参数： Key, Value</li>
+<li>
+<p>目的： 向数据库中插入一个新的列表条目</p>
+</li>
+<li>
+<p>APPEND</p>
+</li>
+<li>参数： Key, Value</li>
+<li>
+<p>目的： 向数据库中一个已有的列表添加一个新的元素</p>
+</li>
+<li>
+<p>INCREMENT</p>
+</li>
+<li>参数： key</li>
+<li>
+<p>目的： 增长数据库的中一个整型值</p>
+</li>
+<li>
+<p>DELETE</p>
+</li>
+<li>参数： Key</li>
+<li>
+<p>目的： 从数据库中删除一个条目</p>
+</li>
+<li>
+<p>STATS</p>
+</li>
+<li>参数： 无 (N/A)</li>
+<li>目的： 请求每个执行命令的 成功/失败 的统计信息</li>
+</ul>
+<p>现在我们来定义消息的自身结构。</p>
+<h3 id="message-structure">Message Structure<a class="headerlink" href="#message-structure" title="Permanent link">&para;</a></h3>
+<h4 id="request-messages">Request Messages<a class="headerlink" href="#request-messages" title="Permanent link">&para;</a></h4>
+<p>一条 <em>请求消息 (Request Message)</em> 包含了一个命令（command），一个键 (key), 一个值 (value), 一个值的类型（type）. 后三个取决于消息类型，是可选项, 非必须。<code>;</code> 被用作是分隔符。即使并没有包含上述可选项， 但是在消息中仍然必须有三个 <code>;</code> 字符。</p>
+<div class="codehilite"><pre><span></span><span class="n">COMMAND</span><span class="p">;</span> <span class="p">[</span><span class="k">KEY</span><span class="p">];</span> <span class="p">[</span><span class="n">VALUE</span><span class="p">];</span> <span class="p">[</span><span class="n">VALUE</span> <span class="k">TYPE</span><span class="p">]</span>
+</pre></div>
+
+<ul>
+<li><strong>COMMAND</strong> 是上面列表中的命令之一</li>
+<li><strong>KEY</strong> 是一个可以用作数据库 key 的 string （可选）</li>
+<li><strong>VALUE</strong> 是数据库中的一个 integer, list 或 string (可选)</li>
+<li>list 可以被表示为一个用逗号分隔的一串 string, 比如说, "red, green, blue"</li>
+<li><strong>VALUE TYPE</strong> 描述了 <strong>VALUE</strong> 应该被解释为什么类型</li>
+<li>可能的类型值有：INT, STRING, LIST</li>
+</ul>
+<h5 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p><code>&quot;PUT; foo; 1; INT&quot;</code></p>
+</li>
+<li>
+<p><code>&quot;GET; foo;;&quot;</code></p>
+</li>
+<li>
+<p><code>&quot;PUTLIST; bar; a,b,c ; LIST&quot;</code></p>
+</li>
+<li>
+<p><code>&quot;APPEND; bar; d; STRING&quot;</code></p>
+</li>
+<li>
+<p><code>&quot;GETLIST; bar; ;&quot;</code></p>
+</li>
+<li>
+<p><code>STATS; ;;</code></p>
+</li>
+<li>
+<p><code>INCREMENT; foo;;</code></p>
+</li>
+<li>
+<p><code>DELETE; foo;;</code></p>
+</li>
+</ul>
+<h4 id="reponse-messages">Reponse Messages<a class="headerlink" href="#reponse-messages" title="Permanent link">&para;</a></h4>
+<p>一个 <em>响应消息 (Reponse Message)</em> 包含了两个部分， 通过 <code>;</code> 进行分隔。第一个部分总是 <code>True|False</code> , 它取决于所执行的命令是否成功。 第二个部分是命令消息 (command message), 当出现错误时，便会显示错误信息。对于那些执行成功的命令，如果我们不想要默认的返回值（比如 <code>PUT</code>）, 就会出现成功的信息。 如果我们返回成功命令的值 (比如 <code>GET</code>), 那么第二个部分就会是自身值。</p>
+<h5 id="examples_1">Examples<a class="headerlink" href="#examples_1" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p><code>True; Key [foo] set to [1]</code></p>
+</li>
+<li>
+<p><code>True; 1</code></p>
+</li>
+<li>
+<p><code>True; Key [bar] set to [['a', 'b', 'c']]</code></p>
+</li>
+<li>
+<p><code>True; Key [bar] had value [d] appended</code></p>
+</li>
+<li>
+<p><code>True; ['a', 'b', 'c', 'd']</code></p>
+</li>
+<li>
+<p><code>True; {'PUTLIST': {'success': 1, 'error': 0}, 'STATS': {'success': 0, 'error': 0}, 'INCREMENT':  {'success': 0, 'error': 0}, 'GET': {'success': 0, 'error': 0}, 'PUT': {'success': 0, 'error': 0}, 'GETLIST': {'success': 1, 'error': 0}, 'APPEND': {'success': 1, 'error': 0}, 'DELETE': {'success': 0, 'error': 0}}</code></p>
+</li>
+</ul>
+<h3 id="show-me-the-code">Show Me The Code!<a class="headerlink" href="#show-me-the-code" title="Permanent link">&para;</a></h3>
+<p>我将会以块状摘要的形式来展示全部代码。 整个代码不过 180 行，读起来也不会花费很长时间。</p>
+<h4 id="set-up">Set Up<a class="headerlink" href="#set-up" title="Permanent link">&para;</a></h4>
+<p>下面是我们服务器所需的一些样板代码：</p>
+<div class="codehilite"><pre><span></span><span class="sd">&quot;&quot;&quot;NoSQL database written in Python&quot;&quot;&quot;</span>
+
+<span class="c1"># Standard library imports</span>
+<span class="kn">import</span> <span class="nn">socket</span>
+
+<span class="n">HOST</span> <span class="o">=</span> <span class="s1">&#39;localhost&#39;</span>
+<span class="n">PORT</span> <span class="o">=</span> <span class="mi">50505</span>
+<span class="n">SOCKET</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+<span class="n">STATS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;PUT&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;success&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;error&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
+    <span class="s1">&#39;GET&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;success&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;error&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
+    <span class="s1">&#39;GETLIST&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;success&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;error&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
+    <span class="s1">&#39;PUTLIST&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;success&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;error&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
+    <span class="s1">&#39;INCREMENT&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;success&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;error&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
+    <span class="s1">&#39;APPEND&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;success&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;error&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
+    <span class="s1">&#39;DELETE&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;success&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;error&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
+    <span class="s1">&#39;STATS&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;success&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;error&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
+    <span class="p">}</span>
+</pre></div>
+
+<p>很容易看到， 上面的只是一个包的导入和一些数据的初始化。</p>
+<h4 id="set-upcontd">Set up(Cont'd)<a class="headerlink" href="#set-upcontd" title="Permanent link">&para;</a></h4>
+<p>接下来我会跳过一些代码， 以便能够继续展示上面准备部分剩余的代码。 注意它涉及到了一些尚不存在的一些函数， 不过没关系， 我们会在后面涉及。 在完整版（将会呈现在最后）中， 所有内容都会被有序编排。 这里是剩余的安装代码：</p>
+<div class="codehilite"><pre><span></span><span class="n">COMMAND_HANDERS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;PUT&#39;</span><span class="p">:</span> <span class="n">handle_put</span><span class="p">,</span>
+    <span class="s1">&#39;GET&#39;</span><span class="p">:</span> <span class="n">handle_get</span><span class="p">,</span>
+    <span class="s1">&#39;GETLIST&#39;</span><span class="p">:</span> <span class="n">handle_getlist</span><span class="p">,</span>
+    <span class="s1">&#39;PUTLIST&#39;</span><span class="p">:</span> <span class="n">handle_putlist</span><span class="p">,</span>
+    <span class="s1">&#39;INCREMENT&#39;</span><span class="p">:</span> <span class="n">handle_increment</span><span class="p">,</span>
+    <span class="s1">&#39;APPEND&#39;</span><span class="p">:</span> <span class="n">handle_append</span><span class="p">,</span>
+    <span class="s1">&#39;DELETE&#39;</span><span class="p">:</span> <span class="n">handle_delete</span><span class="p">,</span>
+    <span class="s1">&#39;STATS&#39;</span><span class="p">:</span> <span class="n">handle_stats</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">DATA</span> <span class="o">=</span> <span class="p">{}</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Main entry point for script&quot;&quot;&quot;</span>
+    <span class="n">SOCKET</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span><span class="p">)</span>
+    <span class="n">SOCKET</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">connection</span><span class="p">,</span> <span class="n">address</span> <span class="o">=</span> <span class="n">SOCKET</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;New connection from [{}]&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">address</span><span class="p">))</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">4096</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+        <span class="n">command</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">parse_message</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">command</span> <span class="o">==</span> <span class="s1">&#39;STATS&#39;</span><span class="p">:</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="n">handle_stats</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">command</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;GETLIST&#39;</span><span class="p">,</span> <span class="s1">&#39;INCREMENT&#39;</span><span class="p">,</span> <span class="s1">&#39;DELETE&#39;</span><span class="p">):</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="n">COMMAND_HANDERS</span><span class="p">[</span><span class="n">command</span><span class="p">](</span><span class="n">key</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">command</span> <span class="ow">in</span> <span class="p">(</span>
+                <span class="s1">&#39;PUT&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;PUTLIST&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;APPEND&#39;</span><span class="p">,</span> <span class="p">):</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="n">COMMAND_HANDERS</span><span class="p">[</span><span class="n">command</span><span class="p">](</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="p">(</span><span class="bp">False</span><span class="p">,</span> <span class="s1">&#39;Unknown command type {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">command</span><span class="p">))</span>
+        <span class="n">update_stats</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">response</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">sandall</span><span class="p">(</span><span class="s1">&#39;{};{}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">response</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+        <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+<p>我们创建了 <code>COMMAND_HANDLERS</code>, 它常被称为是一个 <em>查找表 (look-up table)</em> . <code>COMMAND_HANDLERS</code> 的工作是将命令与用于处理该命令的函数进行关联起来。 比如说， 如果我们收到一个 <code>GET</code> 命令， <code>COMMAND_HANDLERS[command](key)</code> 就等同于说 <code>handle_get(key)</code> . 记住，在 Python 中, 函数可以被认为是一个值，并且可以像其他任何值一样被存储在一个 <code>dict</code> 中。</p>
+<p>在上面的代码中， 虽然有些命令请求的参数相同，但是我仍决定分开处理每个命令。 尽管可以简单粗暴地强制所有的 <code>handle_</code> 函数接受一个 <code>key</code> 和一个 <code>value</code> , 但是我希望这些处理函数条理能够更加有条理， 更加容易测试，同时减少出现错误的可能性。</p>
+<p>注意 socket 相关的代码已是十分极简。 虽然整个服务器基于 TCP/IP 通信， 但是并没有太多底层的网络交互代码。</p>
+<p>最后还须需要注意的一小点: <code>DATA</code> 字典， 因为这个点并不十分重要， 因而你很可能会遗漏它。 <code>DATA</code> 就是实际用来存储的 key-value pair, 正是它们实际构成了我们的数据库。</p>
+<h4 id="command-parser">Command Parser<a class="headerlink" href="#command-parser" title="Permanent link">&para;</a></h4>
+<p>下面来看一些 <em>命令解析器 (command parser)</em> , 它负责解释接收到的消息：</p>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">parse_message</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return a tuple containing the command, the key, and (optionally) the</span>
+<span class="sd">    value cast to the appropriate type.&quot;&quot;&quot;</span>
+    <span class="n">command</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">value_type</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">value_type</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">value_type</span> <span class="o">==</span> <span class="s1">&#39;LIST&#39;</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">value_type</span> <span class="o">==</span> <span class="s1">&#39;INT&#39;</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">return</span> <span class="n">command</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span>
+</pre></div>
+
+<p>这里我们可以看到发生了类型转换 (type conversion). 如果希望值是一个 list, 我们可以通过对 string 调用 <code>str.split(',')</code> 来得到我们想要的值。 对于 <code>int</code>, 我们可以简单地使用参数为 string 的 <code>int()</code> 即可。 对于字符串与 <code>str()</code> 也是同样的道理。</p>
+<h4 id="command-handlers">Command Handlers<a class="headerlink" href="#command-handlers" title="Permanent link">&para;</a></h4>
+<p>下面是命令处理器 (command handler) 的代码. 它们都十分直观，易于理解。 注意到虽然有很多的错误检查， 但是也并不是面面俱到, 十分庞杂。 在你阅读的过程中，如果发现有任何错误请移步 <a href="https://github.com/liuchengxu/blog-cn/issues">这里</a> 进行讨论.</p>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">update_stats</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">success</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Update the STATS dict with info about if executing *command* was a</span>
+<span class="sd">    *success*&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">success</span><span class="p">:</span>
+        <span class="n">STATS</span><span class="p">[</span><span class="n">command</span><span class="p">][</span><span class="s1">&#39;success&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">STATS</span><span class="p">[</span><span class="n">command</span><span class="p">][</span><span class="s1">&#39;error&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+
+<span class="k">def</span> <span class="nf">handle_put</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return a tuple containing True and the message to send back to the</span>
+<span class="sd">    client.&quot;&quot;&quot;</span>
+    <span class="n">DATA</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+    <span class="k">return</span> <span class="p">(</span><span class="bp">True</span><span class="p">,</span> <span class="s1">&#39;key [{}] set to [{}]&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">handle_get</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return a tuple containing True if the key exists and the message to send</span>
+<span class="sd">    back to the client&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">DATA</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">False</span><span class="p">,</span> <span class="s1">&#39;Error: Key [{}] not found&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">True</span><span class="p">,</span> <span class="n">DATA</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+
+
+<span class="k">def</span> <span class="nf">handle_putlist</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return a tuple containing True if the command succeeded and the message</span>
+<span class="sd">    to send back to the client.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">handle_put</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">handle_putlist</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return a tuple containing True if the command succeeded and the message</span>
+<span class="sd">    to send back to the client&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">handle_put</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">handle_getlist</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return a tuple containing True if the key contained a list and the</span>
+<span class="sd">    message to send back to the client.&quot;&quot;&quot;</span>
+    <span class="n">return_value</span> <span class="o">=</span> <span class="n">exists</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">handle_get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">exists</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">return_value</span>
+    <span class="k">elif</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">False</span><span class="p">,</span> <span class="s1">&#39;ERROR: Key [{}] contains non-list value ([{}])&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">return_value</span>
+
+
+<span class="k">def</span> <span class="nf">handle_increment</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return a tuple containing True if the key&#39;s value could be incremented</span>
+<span class="sd">    and the message to send back to the client.&quot;&quot;&quot;</span>
+    <span class="n">return_value</span> <span class="o">=</span> <span class="n">exists</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="n">handle_get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">exists</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">return_value</span>
+    <span class="k">elif</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">list_value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">False</span><span class="p">,</span> <span class="s1">&#39;ERROR: Key [{}] contains non-list value ([{}])&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">DATA</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">True</span><span class="p">,</span> <span class="s1">&#39;Key [{}] had value [{}] appended&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">handle_delete</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return a tuple containing True if the key could be deleted and the</span>
+<span class="sd">    message to send back to the client.&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">DATA</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="bp">False</span><span class="p">,</span>
+            <span class="s1">&#39;ERROR: Key [{}] not found and could not be deleted.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">del</span> <span class="n">DATA</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">handle_stats</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Return a tuple containing True and the contents of the STATS dict.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">(</span><span class="bp">True</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">STATS</span><span class="p">))</span>
+</pre></div>
+
+<p>有两点需要注意： <em>多重赋值 (multiple assignment)</em> 和代码重用. 有些函数仅仅是为了更加有逻辑性而对已有函数的简单包装而已， 比如 <code>handle_get</code> 和 <code>handle_getlist</code> . 由于我们有时仅仅是需要一个已有函数的返回值，而其他时候却需要检查该函数到底返回了什么内容， 这时候就会使用 <em>多重赋值</em> 。</p>
+<p>来看一下 <code>handle_append</code> . 如果我们尝试调用 <code>handle_get</code> 但是 key 并不存在时， 那么我们简单地返回 <code>handle_get</code> 所返回的内容。 此外， 我们还希望能够将 <code>handle_get</code> 返回的 tuple 作为一个单独的返回值进行引用。 那么当 key 不存在的时候， 我们就可以简单地使用 <code>return return_value</code> .</p>
+<p>如果它 <em>确实存在</em> ， 那么我们需要检查该返回值。并且， 我们也希望能够将 <code>handle_get</code> 的返回值作为单独的变量进行引用。 为了能够处理上述两种情况，同时考虑需要分开处理结果的情形，我们使用了多重赋值。 如此一来， 就不必书写多行代码， 同时能够保持代码清晰。 <code>return_value = exists, list_value = handle_get(key)</code> 能够显式地表明我们将要以至少两种不同的方式引用 <code>handle_get</code> 的返回值。</p>
+<h3 id="how-is-this-a-database">How Is This a Database?<a class="headerlink" href="#how-is-this-a-database" title="Permanent link">&para;</a></h3>
+<p>上面的程序显然并非一个 RDBMS, 但却绝对称得上是一个 NoSQL 数据库。它如此易于创建的原因是我们并没有任何与 <em>数据 (data)</em> 的实际交互。 我们只是做了极简的类型检查，存储用户所发送的任何内容。 如果需要存储更加结构化的数据， 我们可能需要针对数据库创建一个 schema 用于存储和检索数据。</p>
+<p>既然 NoSQL 数据库更容易写， 更容易维护，更容易实现， 那么我们为什么不是只使用 mongoDB 就好了？ 当然是有原因的， 还是那句话，有得必有失， 我们需要在 NoSQL 数据库所提供的数据灵活性 (data flexibility) 基础上权衡数据库的可搜索性 (searchability).</p>
+<h4 id="querying-data">Querying Data<a class="headerlink" href="#querying-data" title="Permanent link">&para;</a></h4>
+<p>假如我们上面的 NoSQL 数据库来存储早前的 Car  数据。 那么我们可能会使用 VIN 作为 key, 使用一个列表作为每列的值， 也就是说, <code>2134AFGER245267 = ['Lexus', 'RX350', 2013, Black]</code> . 当然了， 我们已经丢掉了列表中每个索引的 <em>涵义 (meaning)</em> . 我们只需要知道在某个地方索引 1 存储了汽车的 Model , 索引 2 存储了 Year.</p>
+<p>糟糕的事情来了， 当我们想要执行先前的查询语句时会发生什么？ 找到 1994 年所有车的颜色将会变得噩梦一般。 我们必须遍历 <code>DATA</code> 中的 <em>每一个值</em> 来确认这个值是否存储了 car 数据亦或根本是其他不相关的数据， 比如说检查索引 2, 看索引 2 的值是否等于 1994，接着再继续取索引 3 的值. 这比 table scan 还要糟糕，因为它不仅要扫描每一行数据，还需要应用一些复杂的规则来回答查询。</p>
+<p>NoSQL 数据库的作者当然也意识到了这些问题，(鉴于查询是一个非常有用的 feature) 他们也想出了一些方法来使得查询变得不那么 “遥不可及”。一个方法是结构化所使用的数据，比如 JSON, 允许引用其他行来表示关系。 同时， 大部分 NoSQL 数据库都有名字空间 (namespace) 的概念， 单一类型的数据可以被存储在数据库中该类型所独有的 "section" 中，这使得查询引擎能够利用所要查询数据的 "shape" 信息。</p>
+<p>当然了，尽管为了增强可查询性已经存在 （并且实现了）了一些更加复杂的方法， 但是在存储更少量的 schema 与增强可查询性之间做出妥协始终是一个不可逃避的问题。 本例中我们的数据库仅支持通过 key 进行查询。 如果我们需要支持更加丰富的查询， 那么事情就会变得复杂的多了。</p>
+<h3 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h3>
+<p>至此, 希望 "NoSQL" 这个概念已然十分清晰。 我们学习了一点 SQL, 并且了解了 RDBMS 是如何工作的。 我们看到了如何从一个 RDBMS 中检索数据 （使用 SQL <em>查询 (query)</em>）. 通过搭建了一个玩具级别的 NoSQL 数据库, 了解了在可查询性与简洁性之间面临的一些问题， 还讨论了一些数据库作者应对这些问题时所采用的一些方法。</p>
+<p>即便是简单的 key-value 存储， 关于数据库的知识也是浩瀚无穷。虽然我们仅仅是探讨了其中的星星点点, 但是仍然希望你已经了解了 NoSQL 到底指的是什么， 它是如何工作的， 什么时候用比较好。如果您想要分享一些不错的想法， 欢迎 <a href="https://github.com/liuchengxu/hands-on-learning/issues">讨论</a>.</p>
+<p>原文: <a href="https://jeffknupp.com/blog/2014/09/01/what-is-a-nosql-database-learn-by-writing-one-in-python/">What is a NoSQL Database? Learn By Writing One In Python</a></p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../latex语法1/" title="latex语法" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                latex语法
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../perceptron/" title="Perceptron" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Perceptron
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2018 Martin Donath
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="http://struct.cc" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/1007530194" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/1007530194" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/1007530194" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.189d7058.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../../../.."}})</script>
+      
+        <script src="../../../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

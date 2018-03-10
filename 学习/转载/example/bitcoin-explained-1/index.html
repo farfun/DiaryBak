@@ -1,0 +1,2096 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Nothing is impossible">
+      
+      
+        <link rel="canonical" href="https://1007530194.github.io/Diary/学习/转载/example/bitcoin-explained-1/">
+      
+      
+        <meta name="author" content="NiuLiangtao">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.0">
+    
+    
+      
+        <title>用表情符号解释比特币 (1)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.78aab2dc.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://1007530194.github.io/Diary/" title="Blog of NiuLiangtao" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Blog of NiuLiangtao
+              </span>
+              <span class="md-header-nav__topic">
+                用表情符号解释比特币 (1)
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/1007530194/Diary" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      1007530194/Diary
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../AboutMe/" title="Home" class="md-tabs__link">
+          Home
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../书籍/机器学习实战/00naive-bayes-discuss/" title="书籍" class="md-tabs__link">
+          书籍
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../tensorflow/如何选择优化器 optimizer/" title="学习" class="md-tabs__link">
+          学习
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../工具/About/" title="工具" class="md-tabs__link">
+          工具
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../日常/test/testtest/" title="日常" class="md-tabs__link">
+          日常
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    Blog of NiuLiangtao
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/1007530194/Diary" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      1007530194/Diary
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ToDo/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Home
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Home
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../AboutMe/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ToDo/" title="要做的" class="md-nav__link">
+      要做的
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      书籍
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        书籍
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      机器学习实战
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        机器学习实战
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/00naive-bayes-discuss/" title="naive-bayes-discuss" class="md-nav__link">
+      naive-bayes-discuss
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/01.机器学习基础/" title="1.机器学习基础" class="md-nav__link">
+      1.机器学习基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/02.k-近邻算法/" title="2.k-近邻算法" class="md-nav__link">
+      2.k-近邻算法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/03.决策树/" title="3.决策树" class="md-nav__link">
+      3.决策树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/04.朴素贝叶斯/" title="4.朴素贝叶斯" class="md-nav__link">
+      4.朴素贝叶斯
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/05.Logistic回归/" title="5.Logistic回归" class="md-nav__link">
+      5.Logistic回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/06.0.支持向量机/" title="6.支持向量机" class="md-nav__link">
+      6.支持向量机
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/06.1.支持向量机的几个通俗理解/" title="6.1.支持向量机的几个通俗理解" class="md-nav__link">
+      6.1.支持向量机的几个通俗理解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/07.集成方法-随机森林和AdaBoost/" title="7.集成方法-随机森林和AdaBoost" class="md-nav__link">
+      7.集成方法-随机森林和AdaBoost
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/08.预测数值型数据-回归/" title="8.预测数值型数据：回归" class="md-nav__link">
+      8.预测数值型数据：回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/09.树回归/" title="9.树回归" class="md-nav__link">
+      9.树回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/10.k-means聚类/" title="10.k-means聚类" class="md-nav__link">
+      10.k-means聚类
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/11.使用Apriori算法进行关联分析/" title="11.使用Apriori算法进行关联分析" class="md-nav__link">
+      11.使用Apriori算法进行关联分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/12.使用FP-growth算法来高效发现频繁项集/" title="12.使用FP-growth算法来高效发现频繁项集" class="md-nav__link">
+      12.使用FP-growth算法来高效发现频繁项集
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/13.利用PCA来简化数据/" title="13.利用PCA来简化数据" class="md-nav__link">
+      13.利用PCA来简化数据
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/14.利用SVD简化数据/" title="14.利用SVD简化数据" class="md-nav__link">
+      14.利用SVD简化数据
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/15.大数据与MapReduce/" title="15.大数据与MapReduce" class="md-nav__link">
+      15.大数据与MapReduce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/16.推荐系统/" title="16.推荐系统" class="md-nav__link">
+      16.推荐系统
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      深度学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        深度学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/深度学习/DeepLearning/" title="深度学习中文版" class="md-nav__link">
+      深度学习中文版
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      tensorflow
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        tensorflow
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tensorflow/如何选择优化器 optimizer/" title="如何选择优化器 optimizer" class="md-nav__link">
+      如何选择优化器 optimizer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      深度学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        深度学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/10分钟上手Pandas/" title="10分钟上手Pandas" class="md-nav__link">
+      10分钟上手Pandas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
+      主成分分析 (2)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/主成分分析/" title="主成分分析" class="md-nav__link">
+      主成分分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/最小二乘法/" title="最小二乘法" class="md-nav__link">
+      最小二乘法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
+      矩阵分解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
+      矩阵求导
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" checked>
+    
+    <label class="md-nav__link" for="nav-4-3">
+      转载
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        转载
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-1" type="checkbox" id="nav-4-3-1">
+    
+    <label class="md-nav__link" for="nav-4-3-1">
+      cs231n-ch
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-1">
+        cs231n-ch
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-assignment2_google_cloud/" title="Google Cloud Tutorial Part 2 (with GPUs)" class="md-nav__link">
+      Google Cloud Tutorial Part 2 (with GPUs)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-aws-tutorial/" title="aws-tutorial" class="md-nav__link">
+      aws-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-classification/" title="classification" class="md-nav__link">
+      classification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-convnet-tips/" title="convnet-tips" class="md-nav__link">
+      convnet-tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-convolutional-networks/" title="convolutional-networks" class="md-nav__link">
+      convolutional-networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-google_cloud_tutorial/" title="Google Cloud Tutorial gce-tutorial" class="md-nav__link">
+      Google Cloud Tutorial gce-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-ipython-tutorial/" title="IPython Tutorial ipython-tutorial" class="md-nav__link">
+      IPython Tutorial ipython-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-linear-classify/" title="线性分类" class="md-nav__link">
+      线性分类
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-neural-networks-1/" title="neural-networks-1" class="md-nav__link">
+      neural-networks-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-neural-networks-2/" title="neural-networks-2" class="md-nav__link">
+      neural-networks-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-neural-networks-3/" title="neural-networks-3" class="md-nav__link">
+      neural-networks-3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-neural-networks-case-study/" title="neural-networks-case-study" class="md-nav__link">
+      neural-networks-case-study
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-optimization-1/" title="optimization-1" class="md-nav__link">
+      optimization-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-optimization-2/" title="optimization-2" class="md-nav__link">
+      optimization-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-overview/" title="Overview of Computer Vision and Visual Recognition overview" class="md-nav__link">
+      Overview of Computer Vision and Visual Recognition overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-poster/" title="CS231n Poster Session poster-session" class="md-nav__link">
+      CS231n Poster Session poster-session
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-python-numpy-tutorial/" title="Python Numpy Tutorial python-numpy-tutorial" class="md-nav__link">
+      Python Numpy Tutorial python-numpy-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-Readme/" title="ch Readme" class="md-nav__link">
+      ch Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-transfer-learning/" title="transfer-learning" class="md-nav__link">
+      transfer-learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-understanding-cnn/" title="understanding-cnn" class="md-nav__link">
+      understanding-cnn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/terminal-tutorial/" title="Terminal.com Tutorial terminal-tutorial" class="md-nav__link">
+      Terminal.com Tutorial terminal-tutorial
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-2" type="checkbox" id="nav-4-3-2">
+    
+    <label class="md-nav__link" for="nav-4-3-2">
+      cs231n-en
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-2">
+        cs231n-en
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-assignment2_google_cloud/" title="Google Cloud Tutorial Part 2 (with GPUs)" class="md-nav__link">
+      Google Cloud Tutorial Part 2 (with GPUs)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-aws-tutorial/" title="aws-tutorial" class="md-nav__link">
+      aws-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-classification/" title="classification" class="md-nav__link">
+      classification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-convnet-tips/" title="convnet-tips" class="md-nav__link">
+      convnet-tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-convolutional-networks/" title="convolutional-networks" class="md-nav__link">
+      convolutional-networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-google_cloud_tutorial/" title="Google Cloud Tutorial" class="md-nav__link">
+      Google Cloud Tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-ipython-tutorial/" title="IPython Tutorial ipython-tutorial" class="md-nav__link">
+      IPython Tutorial ipython-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-linear-classify/" title="linear-classify" class="md-nav__link">
+      linear-classify
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-neural-networks-1/" title="neural-networks-1" class="md-nav__link">
+      neural-networks-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-neural-networks-2/" title="neural-networks-2" class="md-nav__link">
+      neural-networks-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-neural-networks-3/" title="neural-networks-3" class="md-nav__link">
+      neural-networks-3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-neural-networks-case-study/" title="neural-networks-case-study" class="md-nav__link">
+      neural-networks-case-study
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-optimization-1/" title="optimization-1" class="md-nav__link">
+      optimization-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-optimization-2/" title="optimization-2" class="md-nav__link">
+      optimization-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-overview/" title="Overview of Computer Vision and Visual Recognition overview" class="md-nav__link">
+      Overview of Computer Vision and Visual Recognition overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-poster/" title="CS231n Poster Session poster-session" class="md-nav__link">
+      CS231n Poster Session poster-session
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-python-numpy-tutorial/" title="Python Numpy Tutorial python-numpy-tutorial" class="md-nav__link">
+      Python Numpy Tutorial python-numpy-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-Readme/" title="en Readme" class="md-nav__link">
+      en Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-terminal-tutorial/" title="Terminal.com Tutorial terminal-tutorial" class="md-nav__link">
+      Terminal.com Tutorial terminal-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-transfer-learning/" title="transfer-learning" class="md-nav__link">
+      transfer-learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-understanding-cnn/" title="understanding-cnn" class="md-nav__link">
+      understanding-cnn
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-3" type="checkbox" id="nav-4-3-3" checked>
+    
+    <label class="md-nav__link" for="nav-4-3-3">
+      example
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-3">
+        example
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../a-web-crawer-with-a-asyncio-coroutines-1/" title="A web crawer with a asyncio coroutines 1" class="md-nav__link">
+      A web crawer with a asyncio coroutines 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../a-web-crawer-with-a-asyncio-coroutines-2/" title="A web crawer with a asyncio coroutines 2" class="md-nav__link">
+      A web crawer with a asyncio coroutines 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bias-variance/" title="Bias variance" class="md-nav__link">
+      Bias variance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        用表情符号解释比特币 (1)
+      </label>
+    
+    <a href="./" title="用表情符号解释比特币 (1)" class="md-nav__link md-nav__link--active">
+      用表情符号解释比特币 (1)
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="引入比特币" class="md-nav__link">
+    引入比特币
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="一个比特币是如何诞生的" class="md-nav__link">
+    一个比特币是如何诞生的
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="初见哈希" class="md-nav__link">
+    初见哈希
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dive-into-gradient-decent/" title="Dive into gradient decent" class="md-nav__link">
+      Dive into gradient decent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ethereum-ultimate-guide/" title="Ethereum ultimate guide" class="md-nav__link">
+      Ethereum ultimate guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fork-exec-source/" title="Fork exec source" class="md-nav__link">
+      Fork exec source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../latex语法/" title="Latex语法" class="md-nav__link">
+      Latex语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../latex语法1/" title="Latex语法1" class="md-nav__link">
+      Latex语法1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nosql-in-python/" title="Nosql in python" class="md-nav__link">
+      Nosql in python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../perceptron/" title="Perceptron" class="md-nav__link">
+      Perceptron
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../quick-latex/" title="Quick latex" class="md-nav__link">
+      Quick latex
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tendermint/" title="Tendermint" class="md-nav__link">
+      Tendermint
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../工具/About/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../工具/Cheatsheet/" title="Cheatsheet" class="md-nav__link">
+      Cheatsheet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="" title="文章" class="md-nav__link">
+      文章
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      日常
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        日常
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1">
+    
+    <label class="md-nav__link" for="nav-7-1">
+      test
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-1">
+        test
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../日常/test/testtest/" title="Testtest" class="md-nav__link">
+      Testtest
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2">
+    
+    <label class="md-nav__link" for="nav-7-2">
+      常用
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-2">
+        常用
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../日常/常用/latex语法/" title="Latex语法" class="md-nav__link">
+      Latex语法
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      常用工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        常用工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../日常/常用工具/10分钟上手Pandas/" title="10分钟上手Pandas" class="md-nav__link">
+      10分钟上手Pandas
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="引入比特币" class="md-nav__link">
+    引入比特币
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="一个比特币是如何诞生的" class="md-nav__link">
+    一个比特币是如何诞生的
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="初见哈希" class="md-nav__link">
+    初见哈希
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>用表情符号解释比特币 (1)</h1>
+                
+                <ul>
+<li>content
+{:toc}</li>
+</ul>
+<p>![1]({{ site.baseurl }}{{ site.images }}/posts/bitcoin-explained-1.png)</p>
+<p>比特币是一个存储和消费数字货币的革命性方式，并且有着变革其他领域的潜力。无须成为一个数学家或密码学家, 你就可以理解它是怎么回事。当开始看到整个系统是如何形成时，你可能会变得十分兴奋。本文是三篇系列文章中的第一篇。</p>
+<p>假设通过互联网给你发送一部电影或是一首歌，我会将一个文件添加到邮件中。一旦我点击了发送，那么你就会收到。收到以后，你可以选择观看这部电影，或者是删除它。你可以对这个电影采取任何操作。</p>
+<p>但是记住：我仍然拥有一份拷贝。</p>
+<p>![2]({{ site.baseurl }}{{ site.images }}/posts/bitcoin-explained-2.gif)</p>
+<p>这就是典型地在互联网上数字信息的移动。你并不是真的 <strong>转移（transfer）</strong> 内容，而是对它进行了 <strong>拷贝（copy）</strong>。直到目前为止，这种方式都十分行得通：但是这可能有点不太恰当，毕竟复制一首歌或是一部电影并不太可能会对经济造成危害。</p>
+<p>但是现在来考虑一下复制金钱（copy money）。</p>
+<p>如果我给你发送一美元，非常重要的一点是，我无法保留这一美元的副本。通过邮件来产生无限的数字货币，可能一开始看起来很有吸引力，但是如果每个人都开始这么干的话会发生什么事情呢？这会导致肆虐的货币膨胀，从而使得经济因此崩塌。</p>
+<p>![3]({{ site.baseurl }}{{ site.images }}/posts/bitcoin-explained-3.png)</p>
+<p>传统上，在有线传输和使用借记卡的世界里，数字货币是由中心化机构进行跟踪以防止复制。比如说，银行的数据库会确认谁到底拥有了多少钱。这个系统依赖于中心化的机构，我们大都已经熟悉这个概念。当然，这个中心化机构对我们的钱有着绝对的控制权，因为我们的钱只是银行数据库里的一个数字而已。</p>
+<p>但是，如果存在另外一种方式，会发生什么呢？相对于通过不可靠的中心化机构来确认我们的财产所有，如果由一个不是仅由单方控制的分布式机构来保证这些信息，会发生什么呢？如果我们的钱是否有价值，不是因为我们相信被背后政府的力量，而是因为我们相信数学的力量？</p>
+<p>这就引出了比特币。</p>
+<h3 id="_1">引入比特币<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>比特币是一个数字货币系统，它并不从属于任何政府或机构。</p>
+<p>这可能会有点令人疑惑，上面说比特币是一个系统，实际上，比特币也是货币本身的代名词。比特币系统创建于 2009 年，但是做为货币单位意义上的比特币却是通过一个叫做 <strong>挖矿</strong> 的持续过程不断生成。听起来有点像是挖黄金，不过这是 21 世纪的数字黄金。</p>
+<p>在比特币网络中，所有交易都永久记录于一个长长的列表之中，这个列表就叫做区块链。区块链并不是由一个中心的权威机构保护的秘密列表。它是一个分布式的公开列表，每个参与其中的计算机都有一个备份。</p>
+<p>![4]({{ site.baseurl }}{{ site.images }}/posts/bitcoin-explained-4.png)</p>
+<p>比特币区块链是**不可更改**，<strong>公开</strong>，**分布式**的账簿：</p>
+<p><strong>不可更改</strong>。这是指一旦一个记录已经在区块链中存在了几小时，再去改变或是清除该条记录都是行不通的。因为几个小时以后，会有很多其他交易基于该条记录所构建。要想改变这条记录，就要改变所有基于该记录的所有后续记录，随着后续记录的不断增加，这将变得无法更改。</p>
+<p><strong>公开</strong>。这是指任何人都能够查看区块链，而不仅仅是银行职员。这并不意味着你可以精确地看到**谁**正在发送或者接收比特币，因为记录都是**匿名**的 -- 通过使用匿名来模糊实体信息。</p>
+<p><strong>分布式</strong>。这是指全世界的电脑会维护一个同步的区块链拷贝。并没有主本或副本的概念，所有的拷贝都是相同的。</p>
+<p>最后，**账簿**指的是区块链是一系列交易的集合。如果知道 Venmo 交易列表的话，你完全可以将区块链看做是 Venmo 的交易列表。</p>
+<p>这个分布式账本之所以叫做“区块链”，是因为每个单一的交易被通过一个更大的单位“区块（block）”进行了整合，而这些区块会被按照顺序相互连接起来。这比一笔一笔的添加交易要快得多，生成一个新的区块大概需要十分钟。</p>
+<p>为了更好的阐释这个不可更改，公开，分布式账本的威力，让我们假设一个常见的场景，这个场景会涉及 5 美元比特币交易。（虽然一个比特币的价值可能会时高时低，但是 5 美元基本上只是一个比特币的一小部分。 ）</p>
+<p>在我们假设的场景中，我的朋友 Flizabeth 给我发送了价值 5 美元的比特币，这笔交易会被记录在区块链中 -- 所有的交易都是被记录在区块链中。那么，我就拥有了这 5 美元的比特币，然后我可以把它发送给你，因为区块链的每一个拷贝 Flizabeth 的 5 美元比特币。在这个过程中，我，你，Elizabeth 都没有向一个中心化的权威数据库请求谁拥有多少钱这样的信息，也没有请求任何权限。授权是去中心化的，它存在区块链的每一个拷贝中，无处不在。</p>
+<p>你可能会想问：Elizabeth 是从哪儿获得发给我的比特币？</p>
+<p>一个简单的回答是可能有某个人发给了 Elizabeth 比特币，这也是大多数人得到比特币的方式。</p>
+<p>但是这些比特币最初必然是被创造出来的，那么它是怎么创造出来的呢？</p>
+<h3 id="_2">一个比特币是如何诞生的<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>![5]({{ site.baseurl }}{{ site.images }}/posts/bitcoin-explained-5.png)</p>
+<p>美元是由美国政府印刷的，其他传统货币也是由它们的政府发行而来。很久以前，美元是由在美国财政部等量的黄金支持的。在那段时间，要想创造更多货币就需要更多等量的黄金，因此挖黄金十分流行。</p>
+<p>比特币也是通过一个叫做 <strong>挖矿</strong> 的过程而来。它是数字挖矿，是通过计算机和软件，而不是炸药和铁铲。为了能够将新一个新的区块加入到区块链中，必须要解决一个非常困难的数学题。第一个解决了这个难题的“矿工”就会获得新创造出来的比特币。这就是比特币的挖矿。</p>
+<p>换句话说，挖矿做了两件事：</p>
+<ul>
+<li>向区块链中加入新的区块</li>
+<li>创造新的比特币</li>
+</ul>
+<p>矿工竞相解决的数学难题是一个叫做“哈希”的问题。</p>
+<h3 id="_3">初见哈希<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>![6]({{ site.baseurl }}{{ site.images }}/posts/bitcoin-explained-6.png)</p>
+<p>一个哈希就是一个数字指纹，因为它唯一识别了一串数字信息 -- 无论该信息是一张图片，一个图片相册，一部电影，一串密码，文本，还是其他的任何内容。它是由数字信息经过一个叫做“哈希”的过程衍生而来。它的形式可以是一串字母，数字和其他符号。</p>
+<p>哈希是计算机科学中的核心概念之一，广泛用于诸多场景。为了增强安全性，在线服务经常会存储密码的哈希而不是实际的密码信息，当你登录的时候， 系统会比较密码的哈希而非原始密码。Facebook 使用哈希来检查上传图片是否违规。在 Facebook，不会有人真的用肉眼检查每张照片是否是暴力或色情图片。相反，Facebook 会预先针对被认为是违规的图片，进行哈希，创建一个违规内容的哈希列表。每当一个新的图片被上传到Facebook，它会被同样的函数生成一个哈希。产生的结果哈希会与违禁内容的哈希相互比较 -- 如果它们相匹配，Facebook 就会知道这个图片是违禁照片。</p>
+<p>典型地，当软件执行一个哈希函数时，它会接受输入数据 -- 比如一张照片 -- 然后输出一个天书一样的字符串，这个字符串就是哈希了。</p>
+<p>举个例子，我们用叫做 <a href="https://en.wikipedia.org/wiki/SHA-2">SHA-256</a> 的一个哈希函数来计算一个小狗图片的哈希。</p>
+<p>![7]({{ site.baseurl }}{{ site.images }}/posts/bitcoin-explained-7.jpeg)</p>
+<p>显然，大家应该都能看得出，这张小狗的图片不会是 Facebook 的违禁图片。不过，Facebook 里面的人不会真的去看这张照片，而是使用相关程序检测这张图片的哈希，如下：</p>
+<div class="codehilite"><pre><span></span>8EC9D4718F919C6087CA589EDA09E7DD9A7ACCDB820F42B4196E1D0D4BEDE77A
+</pre></div>
+
+<p>这就是上面那张图片的 SHA-256 哈希结果，采用 16 进制表示。是不是没有之前的小狗可爱了:).</p>
+<p>哈希函数一个非常有趣的特性是，只要我们稍微改变一下输入，输出就会完全不同。比如，如果我们改变这张图片的一个像素点，在小狗的眼睛上面放一个跳蚤大的黑色像素点：</p>
+<p>![8]({{ site.baseurl }}{{ site.images }}/posts/bitcoin-explained-8.png)</p>
+<p>尽管只是改了一个像素值，但是再次对图片进行哈希，我们会得到一个完全不同的哈希值，：</p>
+<div class="codehilite"><pre><span></span>039E1AF92F7D00775ECE35C2216FC3F7F0BBCD31F912A105D2601380D8DEABA2
+</pre></div>
+
+<p>现在，接下来我们应该使用真实内容和真实的哈希值了，但是由于哈希的表现形式不太友好，肉眼很难进行鉴别和区分。故而，我们使用表情符号（emoji）来代表输入和输出。在上面的例子中，我们用猫脸来表示输入（content to be hashed）,绶带表示输出（结果哈希）：</p>
+<p>![]({{ site.baseurl }}{{ site.images }}/posts/bitcoin-explained-9.png)</p>
+<p>想象Facebook在两张违禁图片 🚫  和 ❌ , 执行一个哈希函数，得到结果哈希  💩  和 💀 。</p>
+<p>![9]({{ site.baseurl }}{{ site.images }}/posts/bitcoin-explained-10.png)</p>
+<p>然后，有人上传了一张图片 ? ，因为 Facebook 还不知道它是否违规，所以 Facebook 会调用程序对图片进行哈希，结果是</p>
+<p>![10]({{ site.baseurl }}{{ site.images }}/posts/bitcoin-explained-11.png)</p>
+<p>尽管没有人真的去用肉眼观测过这张图片，但是 Facebook 已经知道它属于违禁图片，因此图片的哈希匹配了。没有人需要去直接查看新上传的输入，只要它有着与已有违禁图片的相同哈希，我们就认为这是违规图片。</p>
+<p>图片识别仅仅是哈希的其中一个应用。创造新的比特币和将新的交易加入到区块链中的比特币挖矿，是另一个应用。</p>
+<p>至此，在本系列的第一篇，我们知道了比特币是一个去中心化的货币，并非由任何的政府或金融机构发行，还知道了什么是哈希。在下一篇，我们将会了解比特币矿工是如何利用哈希来创造比特币，密码学是如何在完全可转移且不可逆的情况下，使得比特币具有唯一性和不可复制性。</p>
+<p>原文：<a href="https://medium.com/@tessr/making-money-530d2bb2b8f7">Bitcoin Explained (with Emoji)</a></p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../bias-variance/" title="Bias variance" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Bias variance
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../dive-into-gradient-decent/" title="Dive into gradient decent" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Dive into gradient decent
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2018 Martin Donath
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="http://struct.cc" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/1007530194" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/1007530194" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/1007530194" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.189d7058.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../../../.."}})</script>
+      
+        <script src="../../../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2288 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Nothing is impossible">
+      
+      
+        <link rel="canonical" href="https://1007530194.github.io/Diary/学习/转载/cs231n-en/en-poster/">
+      
+      
+        <meta name="author" content="NiuLiangtao">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.0">
+    
+    
+      
+        <title>CS231n Poster Session poster-session</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.78aab2dc.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#2017-stanford-cs231n-poster-session" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://1007530194.github.io/Diary/" title="Blog of NiuLiangtao" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Blog of NiuLiangtao
+              </span>
+              <span class="md-header-nav__topic">
+                CS231n Poster Session poster-session
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/1007530194/Diary" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      1007530194/Diary
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../AboutMe/" title="Home" class="md-tabs__link">
+          Home
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../书籍/机器学习实战/00naive-bayes-discuss/" title="书籍" class="md-tabs__link">
+          书籍
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../tensorflow/如何选择优化器 optimizer/" title="学习" class="md-tabs__link">
+          学习
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../工具/About/" title="工具" class="md-tabs__link">
+          工具
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../日常/test/testtest/" title="日常" class="md-tabs__link">
+          日常
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    Blog of NiuLiangtao
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/1007530194/Diary" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      1007530194/Diary
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ToDo/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Home
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Home
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../AboutMe/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ToDo/" title="要做的" class="md-nav__link">
+      要做的
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      书籍
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        书籍
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      机器学习实战
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        机器学习实战
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/00naive-bayes-discuss/" title="naive-bayes-discuss" class="md-nav__link">
+      naive-bayes-discuss
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/01.机器学习基础/" title="1.机器学习基础" class="md-nav__link">
+      1.机器学习基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/02.k-近邻算法/" title="2.k-近邻算法" class="md-nav__link">
+      2.k-近邻算法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/03.决策树/" title="3.决策树" class="md-nav__link">
+      3.决策树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/04.朴素贝叶斯/" title="4.朴素贝叶斯" class="md-nav__link">
+      4.朴素贝叶斯
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/05.Logistic回归/" title="5.Logistic回归" class="md-nav__link">
+      5.Logistic回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/06.0.支持向量机/" title="6.支持向量机" class="md-nav__link">
+      6.支持向量机
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/06.1.支持向量机的几个通俗理解/" title="6.1.支持向量机的几个通俗理解" class="md-nav__link">
+      6.1.支持向量机的几个通俗理解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/07.集成方法-随机森林和AdaBoost/" title="7.集成方法-随机森林和AdaBoost" class="md-nav__link">
+      7.集成方法-随机森林和AdaBoost
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/08.预测数值型数据-回归/" title="8.预测数值型数据：回归" class="md-nav__link">
+      8.预测数值型数据：回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/09.树回归/" title="9.树回归" class="md-nav__link">
+      9.树回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/10.k-means聚类/" title="10.k-means聚类" class="md-nav__link">
+      10.k-means聚类
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/11.使用Apriori算法进行关联分析/" title="11.使用Apriori算法进行关联分析" class="md-nav__link">
+      11.使用Apriori算法进行关联分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/12.使用FP-growth算法来高效发现频繁项集/" title="12.使用FP-growth算法来高效发现频繁项集" class="md-nav__link">
+      12.使用FP-growth算法来高效发现频繁项集
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/13.利用PCA来简化数据/" title="13.利用PCA来简化数据" class="md-nav__link">
+      13.利用PCA来简化数据
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/14.利用SVD简化数据/" title="14.利用SVD简化数据" class="md-nav__link">
+      14.利用SVD简化数据
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/15.大数据与MapReduce/" title="15.大数据与MapReduce" class="md-nav__link">
+      15.大数据与MapReduce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/16.推荐系统/" title="16.推荐系统" class="md-nav__link">
+      16.推荐系统
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      深度学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        深度学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/深度学习/DeepLearning/" title="深度学习中文版" class="md-nav__link">
+      深度学习中文版
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      tensorflow
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        tensorflow
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tensorflow/如何选择优化器 optimizer/" title="如何选择优化器 optimizer" class="md-nav__link">
+      如何选择优化器 optimizer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      深度学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        深度学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/10分钟上手Pandas/" title="10分钟上手Pandas" class="md-nav__link">
+      10分钟上手Pandas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
+      主成分分析 (2)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/主成分分析/" title="主成分分析" class="md-nav__link">
+      主成分分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/最小二乘法/" title="最小二乘法" class="md-nav__link">
+      最小二乘法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
+      矩阵分解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
+      矩阵求导
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" checked>
+    
+    <label class="md-nav__link" for="nav-4-3">
+      转载
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        转载
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-1" type="checkbox" id="nav-4-3-1">
+    
+    <label class="md-nav__link" for="nav-4-3-1">
+      cs231n-ch
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-1">
+        cs231n-ch
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-assignment2_google_cloud/" title="Google Cloud Tutorial Part 2 (with GPUs)" class="md-nav__link">
+      Google Cloud Tutorial Part 2 (with GPUs)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-aws-tutorial/" title="aws-tutorial" class="md-nav__link">
+      aws-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-classification/" title="classification" class="md-nav__link">
+      classification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-convnet-tips/" title="convnet-tips" class="md-nav__link">
+      convnet-tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-convolutional-networks/" title="convolutional-networks" class="md-nav__link">
+      convolutional-networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-google_cloud_tutorial/" title="Google Cloud Tutorial gce-tutorial" class="md-nav__link">
+      Google Cloud Tutorial gce-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-ipython-tutorial/" title="IPython Tutorial ipython-tutorial" class="md-nav__link">
+      IPython Tutorial ipython-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-linear-classify/" title="线性分类" class="md-nav__link">
+      线性分类
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-neural-networks-1/" title="neural-networks-1" class="md-nav__link">
+      neural-networks-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-neural-networks-2/" title="neural-networks-2" class="md-nav__link">
+      neural-networks-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-neural-networks-3/" title="neural-networks-3" class="md-nav__link">
+      neural-networks-3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-neural-networks-case-study/" title="neural-networks-case-study" class="md-nav__link">
+      neural-networks-case-study
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-optimization-1/" title="optimization-1" class="md-nav__link">
+      optimization-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-optimization-2/" title="optimization-2" class="md-nav__link">
+      optimization-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-overview/" title="Overview of Computer Vision and Visual Recognition overview" class="md-nav__link">
+      Overview of Computer Vision and Visual Recognition overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-poster/" title="CS231n Poster Session poster-session" class="md-nav__link">
+      CS231n Poster Session poster-session
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-python-numpy-tutorial/" title="Python Numpy Tutorial python-numpy-tutorial" class="md-nav__link">
+      Python Numpy Tutorial python-numpy-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-Readme/" title="ch Readme" class="md-nav__link">
+      ch Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-transfer-learning/" title="transfer-learning" class="md-nav__link">
+      transfer-learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-understanding-cnn/" title="understanding-cnn" class="md-nav__link">
+      understanding-cnn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/terminal-tutorial/" title="Terminal.com Tutorial terminal-tutorial" class="md-nav__link">
+      Terminal.com Tutorial terminal-tutorial
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-2" type="checkbox" id="nav-4-3-2" checked>
+    
+    <label class="md-nav__link" for="nav-4-3-2">
+      cs231n-en
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-2">
+        cs231n-en
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../en-assignment2_google_cloud/" title="Google Cloud Tutorial Part 2 (with GPUs)" class="md-nav__link">
+      Google Cloud Tutorial Part 2 (with GPUs)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../en-aws-tutorial/" title="aws-tutorial" class="md-nav__link">
+      aws-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../en-classification/" title="classification" class="md-nav__link">
+      classification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../en-convnet-tips/" title="convnet-tips" class="md-nav__link">
+      convnet-tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../en-convolutional-networks/" title="convolutional-networks" class="md-nav__link">
+      convolutional-networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../en-google_cloud_tutorial/" title="Google Cloud Tutorial" class="md-nav__link">
+      Google Cloud Tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../en-ipython-tutorial/" title="IPython Tutorial ipython-tutorial" class="md-nav__link">
+      IPython Tutorial ipython-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../en-linear-classify/" title="linear-classify" class="md-nav__link">
+      linear-classify
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../en-neural-networks-1/" title="neural-networks-1" class="md-nav__link">
+      neural-networks-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../en-neural-networks-2/" title="neural-networks-2" class="md-nav__link">
+      neural-networks-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../en-neural-networks-3/" title="neural-networks-3" class="md-nav__link">
+      neural-networks-3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../en-neural-networks-case-study/" title="neural-networks-case-study" class="md-nav__link">
+      neural-networks-case-study
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../en-optimization-1/" title="optimization-1" class="md-nav__link">
+      optimization-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../en-optimization-2/" title="optimization-2" class="md-nav__link">
+      optimization-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../en-overview/" title="Overview of Computer Vision and Visual Recognition overview" class="md-nav__link">
+      Overview of Computer Vision and Visual Recognition overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        CS231n Poster Session poster-session
+      </label>
+    
+    <a href="./" title="CS231n Poster Session poster-session" class="md-nav__link md-nav__link--active">
+      CS231n Poster Session poster-session
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bing-map-see-the-project-ids-in-the-list-below-and-find-them-on-the-map" title="Bing Map: See the Project IDs in the list below and find them on the map" class="md-nav__link">
+    Bing Map: See the Project IDs in the list below and find them on the map
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-of-projects-3-digit-number-is-id-to-locate-the-poster" title="List of Projects (3 Digit Number is ID to Locate the Poster)" class="md-nav__link">
+    List of Projects (3 Digit Number is ID to Locate the Poster)
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../en-python-numpy-tutorial/" title="En python numpy tutorial" class="md-nav__link">
+      En python numpy tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../en-Readme/" title="en Readme" class="md-nav__link">
+      en Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../en-terminal-tutorial/" title="En terminal tutorial" class="md-nav__link">
+      En terminal tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../en-transfer-learning/" title="En transfer learning" class="md-nav__link">
+      En transfer learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../en-understanding-cnn/" title="En understanding cnn" class="md-nav__link">
+      En understanding cnn
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-3" type="checkbox" id="nav-4-3-3">
+    
+    <label class="md-nav__link" for="nav-4-3-3">
+      example
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-3">
+        example
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/a-web-crawer-with-a-asyncio-coroutines-1/" title="A web crawer with a asyncio coroutines 1" class="md-nav__link">
+      A web crawer with a asyncio coroutines 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/a-web-crawer-with-a-asyncio-coroutines-2/" title="A web crawer with a asyncio coroutines 2" class="md-nav__link">
+      A web crawer with a asyncio coroutines 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/bias-variance/" title="Bias variance" class="md-nav__link">
+      Bias variance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/bitcoin-explained-1/" title="Bitcoin explained 1" class="md-nav__link">
+      Bitcoin explained 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/dive-into-gradient-decent/" title="Dive into gradient decent" class="md-nav__link">
+      Dive into gradient decent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/ethereum-ultimate-guide/" title="Ethereum ultimate guide" class="md-nav__link">
+      Ethereum ultimate guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/fork-exec-source/" title="Fork exec source" class="md-nav__link">
+      Fork exec source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/latex语法/" title="Latex语法" class="md-nav__link">
+      Latex语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/latex语法1/" title="Latex语法1" class="md-nav__link">
+      Latex语法1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/nosql-in-python/" title="Nosql in python" class="md-nav__link">
+      Nosql in python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/perceptron/" title="Perceptron" class="md-nav__link">
+      Perceptron
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/quick-latex/" title="Quick latex" class="md-nav__link">
+      Quick latex
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/tendermint/" title="Tendermint" class="md-nav__link">
+      Tendermint
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../工具/About/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../工具/Cheatsheet/" title="Cheatsheet" class="md-nav__link">
+      Cheatsheet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="" title="文章" class="md-nav__link">
+      文章
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      日常
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        日常
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1">
+    
+    <label class="md-nav__link" for="nav-7-1">
+      test
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-1">
+        test
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../日常/test/testtest/" title="Testtest" class="md-nav__link">
+      Testtest
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2">
+    
+    <label class="md-nav__link" for="nav-7-2">
+      常用
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-2">
+        常用
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../日常/常用/latex语法/" title="Latex语法" class="md-nav__link">
+      Latex语法
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      常用工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        常用工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../日常/常用工具/10分钟上手Pandas/" title="10分钟上手Pandas" class="md-nav__link">
+      10分钟上手Pandas
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bing-map-see-the-project-ids-in-the-list-below-and-find-them-on-the-map" title="Bing Map: See the Project IDs in the list below and find them on the map" class="md-nav__link">
+    Bing Map: See the Project IDs in the list below and find them on the map
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-of-projects-3-digit-number-is-id-to-locate-the-poster" title="List of Projects (3 Digit Number is ID to Locate the Poster)" class="md-nav__link">
+    List of Projects (3 Digit Number is ID to Locate the Poster)
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="2017-stanford-cs231n-poster-session">2017 Stanford CS231n Poster Session<a class="headerlink" href="#2017-stanford-cs231n-poster-session" title="Permanent link">&para;</a></h1>
+<p><div class='fig figcenter fighighlight'>
+  <img src='/Dairy/assets/images/cs231n/bing.jpg'>
+</div></p>
+<ul>
+<li><strong>Location: <a href="https://www.google.com/maps/place/Bing+Concert+Hall/@37.4320543,-122.1660855,15z/data=!4m5!3m4!1s0x0:0xf5f2c6a783cabf93!8m2!3d37.4320543!4d-122.1660855," title="title">Bing Concert Hall</a></strong></li>
+<li><strong>Parking: Parking information can be found <a href="https://lbre.stanford.edu/sites/default/files/parking_and_circulation_map_0.pdf" title="title">here</a></strong></li>
+<li><strong>Sponsor Setup Time: 11:15 am - 12:00 pm</strong></li>
+<li><strong>Poster Session: 12:00 pm - 2:45 pm</strong></li>
+<li><strong>Award Ceremony: 2:55 pm - 3:15 pm</strong></li>
+</ul>
+<p>The 2017 Stanford CS231N poster session will showcase projects in Convolutional Neural Networks for Visual Recognition that students have worked on over the past quarter. This year, 750 students will be presenting over 350 projects. 
+The topics range from Generative Adversarial Networks (GANs), healthcare and medical imaging, art and style transfer, satellite imaging, self-driving cars, video understanding and more! See the complete list of projects and poster session map below to find the location of a specific poster. We will be awarding 10+ awards to the top posters! The top prizes will be $500+ in value! Stanford affiliates (faculty, staff, students, alumni) and their guests are welcome to attend. Catered food and refreshments will be made available over the course of the event. This poster session is made possible through the generous support of Benchmark, Andreessen Horowitz, Nvidia and Apple! </p>
+<h3 id="bing-map-see-the-project-ids-in-the-list-below-and-find-them-on-the-map">Bing Map: See the Project IDs in the list below and find them on the map<a class="headerlink" href="#bing-map-see-the-project-ids-in-the-list-below-and-find-them-on-the-map" title="Permanent link">&para;</a></h3>
+<p><div class='fig figcenter fighighlight'>
+  <img src='/Dairy/assets/images/cs231n/map.png'>
+</div></p>
+<h3 id="list-of-projects-3-digit-number-is-id-to-locate-the-poster">List of Projects (3 Digit Number is ID to Locate the Poster)<a class="headerlink" href="#list-of-projects-3-digit-number-is-id-to-locate-the-poster" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>101</strong>       Invasive Species Detection                                  </li>
+<li><strong>102</strong>       Scene Classification with Convolutional Neural Networks                                 </li>
+<li><strong>104</strong>       Adaptive Regularization for Neural Networks                                 </li>
+<li><strong>105</strong>       Image-based Product Recommendation System with Convolutional Neural Networks                                    </li>
+<li><strong>107</strong>       Metric Learning for Clustering Images from Unknown Classes                                  </li>
+<li><strong>108</strong>       Intra-Class and Inter-Class Feature Learning through Deep Metric Learning for Large Scale Image Retrieval                                   </li>
+<li><strong>110</strong>       Neural Combinatorial Optimization for Solving Jigsaw Puzzles                                    </li>
+<li><strong>112</strong>       Faster R-CNN with RoI Refinement                                    </li>
+<li><strong>113</strong>       CNNs for Object Recognition in Surveillance                                 </li>
+<li><strong>114</strong>       Greedy Layer-wise Training for Weakly-supervised Object Localization and Segmentation                                   </li>
+<li><strong>116</strong>       Design And Analysis of a Hardware CNN Accelerator                                   </li>
+<li><strong>118</strong>       XNOR-Net on FPGA                                    </li>
+<li><strong>119</strong>       Convolutional Neural Network Classification of Functional Shoe Types                                    </li>
+<li><strong>121</strong>       CHILDNet: Curiosity-driven Human-In-the-Loop Deep Network                                   </li>
+<li><strong>122</strong>       Automated Smart TV UI Performance Testing with Visual Recognition                                   </li>
+<li><strong>125</strong>       Labeling Images with thematic and emotional content                                 </li>
+<li><strong>126</strong>       Classifying U.S. Houses by Architectural Style                                  </li>
+<li><strong>128</strong>       Finding Protests in Social Media Data                                   </li>
+<li><strong>129</strong>       Deep Visual Learning of Reddit Images                                   </li>
+<li><strong>130</strong>       Fast Softmax Sampling for Deep Neural Networks                                  </li>
+<li><strong>131</strong>       Prototypical one-shot learning using high-dimensional embeddings                                    </li>
+<li><strong>133</strong>       Malicious Dropout                                   </li>
+<li><strong>134</strong>       Compression and Acceleration of CNN Training and Evaluation                                 </li>
+<li><strong>135</strong>       YOLO for real time object detection on mobile                                   </li>
+<li><strong>136</strong>       Identifying Architectural Styles by Convolutional Neural Network                                    </li>
+<li><strong>200</strong>       UAV Depth Perception from Visual Images using a Deep Convolutional Neural Network                                   </li>
+<li><strong>203</strong>       Depth Estimation from Single Image Using Convolutional Neural Networks                                  </li>
+<li><strong>204</strong>       Improving 3D Scene Reconstruction through Object Recognition and Segmentation                                   </li>
+<li><strong>205</strong>       Depth-Enhanced Classification Network                                   </li>
+<li><strong>207</strong>       Depth Regression from a Single Monocular Image using a Multi-Scale Deep Network                                 </li>
+<li><strong>209</strong>       Understanding Physical Geometry of a Scene from Single Monocular Images                                 </li>
+<li><strong>210</strong>       StereoPhonic: Depth From Stereo on Phones                                   </li>
+<li><strong>211</strong>       Deep Video Interpolation                                    </li>
+<li><strong>212</strong>       To Post or Not To Post: Using CNNs to Classify Social Media Worthy Images                                   </li>
+<li><strong>213</strong>       Item Removal Detection for Retail Environments with Neural Networks                                 </li>
+<li><strong>214</strong>       Extracting Kinematic Information Using Pose Estimation                                  </li>
+<li><strong>216</strong>       Assessing Driver Distraction from Real-Time Video                                   </li>
+<li><strong>217</strong>       Hand Gesture Recognition using 3D models and Convolutional Neural Network                                   </li>
+<li><strong>218</strong>       Hand Gesture Recognition using Image Processing and Convolutional Neural Network                                    </li>
+<li><strong>219</strong>       Mobile, Marker-less, 3D Body Pose Estimation                                    </li>
+<li><strong>220</strong>       Deep 3D Human Key Point Estimation                                  </li>
+<li><strong>221</strong>       Touchy Feely: Real-time Emotion Recognition                                 </li>
+<li><strong>222</strong>       Face detection and recognition with YOLO                                    </li>
+<li><strong>223</strong>       Reconstructing Obfuscated Human Faces                                   </li>
+<li><strong>224</strong>       Recognizing facial expressions using deep learning                                  </li>
+<li><strong>225</strong>       Detection of Hand Grasping Tasks for “Grab and Go” Groceries                                    </li>
+<li><strong>226</strong>       Ava Makeup                                  </li>
+<li><strong>227</strong>       Lip Reading Word Classification                                 </li>
+<li><strong>229</strong>       Gaze Capture with CNNs                                  </li>
+<li><strong>230</strong>       Deep Networks for Robust Depth Estimation with Single-Photon Sensors                                    </li>
+<li><strong>231</strong>       Facial Emotion Recognition for Wild Images                                  </li>
+<li><strong>300</strong>       Effectiveness of Style Transfer as a Data Augmentation Technique                                    </li>
+<li><strong>301</strong>       Historical and Modern Image-to-Image Translation with Generative Adversarial Networks                                   </li>
+<li><strong>302</strong>       Colorization using ConvNets and GAN                                 </li>
+<li><strong>304</strong>       Automatic Manga Colorization with Hint                                  </li>
+<li><strong>305</strong>       Generative Adversarial Networks for Custom Image Generation                                 </li>
+<li><strong>306</strong>       Evaluation of Image Completion Algorithm: Deep Convolutional Generative Adversarial Nets vs. Exemplar-Based Inpainting                                  </li>
+<li><strong>307</strong>       Autoencoders for Inverse Rendering                                  </li>
+<li><strong>308</strong>       Adversarial Generator-Encoder Networks Based Visual Recommender System                                  </li>
+<li><strong>309</strong>       Semi-supervised learning via adversarial training                                   </li>
+<li><strong>311</strong>       Chinese Painting Generation Using Deep Convolutional Generative Adversarial Networks                                    </li>
+<li><strong>312</strong>       Super Resolution on Video using GANs                                    </li>
+<li><strong>313</strong>       Using Generative Models for Semi-Supervised Learning                                    </li>
+<li><strong>314</strong>       Class-Conditional Super-resolution with GANs                                    </li>
+<li><strong>315</strong>       FlowGAN                                 </li>
+<li><strong>316</strong>       Generative Text to Image Synthesis with Applications to Reinforcement Learning in Minecraft                                 </li>
+<li><strong>317</strong>       Frame Interpolation Using Generative Adversarial Networks                                   </li>
+<li><strong>318</strong>       Can We Train Dogs and Humans Together: Hidden Distribution GANs                                 </li>
+<li><strong>319</strong>       Multi-task Learning on Multi-Spectral Images Using GANs for Predicting Poverty                                  </li>
+<li><strong>320</strong>       From 2D Sketch to 3D Shading                                    </li>
+<li><strong>322</strong>       Art Generation from text with GANs                                  </li>
+<li><strong>323</strong>       Re(live) Photos: Predicting Neighboring Frames with GANs                                    </li>
+<li><strong>324</strong>       Multi-instances text-to-image generation with StackGAN                                  </li>
+<li><strong>325</strong>       Plant Disease Detection with Deep Learning                                  </li>
+<li><strong>327</strong>       Label-Free Object Detection in Video                                    </li>
+<li><strong>328</strong>       Filling the Blanks: GANs vs RNNs                                    </li>
+<li><strong>329</strong>       Towards Facial Reconstruction from Sparse Data: Utilizing Encoder-Decoder Networks with GANs to Infer Facial Rotations                                  </li>
+<li><strong>330</strong>       maaGMA: Modified-Adversarial-Autoencoding Generator with Multiple Adversaries                                   </li>
+<li><strong>331</strong>       visual search by brushing                                   </li>
+<li><strong>400</strong>       Using Convolutional Neural Networks to Predict Completion Year of Fine Art Paintings                                    </li>
+<li><strong>401</strong>       Multi-style Transfer: Generalizing Style Transfer to an Artist                                  </li>
+<li><strong>402</strong>       Style Transfer of Images Incorporating Depth Perception and Object Segmentation                                 </li>
+<li><strong>403</strong>       Automatic Sketch Colourization                                  </li>
+<li><strong>404</strong>       Semantic Segmented Style Transfer                                   </li>
+<li><strong>405</strong>       Mixed Style Transfer                                    </li>
+<li><strong>406</strong>       Artist Identification with Convolutional Neural Networks                                    </li>
+<li><strong>407</strong>       Learning Instance Normalization Parameters for Real-Time Arbitrary Style Transfer                                   </li>
+<li><strong>409</strong>       Automatic image colorization using deep neural networks                                 </li>
+<li><strong>410</strong>       Classifying Rjiksmuseum Paintings by Artist                                 </li>
+<li><strong>411</strong>       From Renaissance to Pop: A Study of Artistic Eras using Deep CNNs                                   </li>
+<li><strong>412</strong>       Style transfer between two photographs                                  </li>
+<li><strong>414</strong>       ArtTalk: Labeling Images with Thematic and Emotional Content                                    </li>
+<li><strong>415</strong>       Labeling Paintings with Thematic and Emotional Content                                  </li>
+<li><strong>416</strong>       Localized Style Transfer Using Semantic Segmentation                                    </li>
+<li><strong>417</strong>       Smooth In-Image Style Transitions                                   </li>
+<li><strong>418</strong>       AutoColorisation                                    </li>
+<li><strong>419</strong>       Judging Thematic Similarity in Paintings                                    </li>
+<li><strong>420</strong>       Freehand Sketch Recognition                                 </li>
+<li><strong>421</strong>       EXIF Estimation With Convolutional Neural Networks                                  </li>
+<li><strong>423</strong>       Full Resolutional Video Compression Using Recurrent Convolutional Neural Networks                                   </li>
+<li><strong>424</strong>       HiDDeN: Hiding Data with Deep Networks                                  </li>
+<li><strong>425</strong>       Line Drawing Colorization                                   </li>
+<li><strong>426</strong>       DeepSynth: Synthesizing A Musical Instrument With Video                                 </li>
+<li><strong>428</strong>       Exploring Style Transfer                                    </li>
+<li><strong>500</strong>       Mice behaviour analysis in open field test                                  </li>
+<li><strong>501</strong>       Unsupervised Deep Learning with variational autoencoder for Interpretable Mammogram CBIR and Risk scoring                                   </li>
+<li><strong>502</strong>       Brain Tumor Segmentation                                    </li>
+<li><strong>503</strong>       Vision-Based Approach to Senior Healthcare: Depth-Based Activity Recognition with Convolutional Neural Networks                                 </li>
+<li><strong>505</strong>       Privacy-Preserving Knowledge Transfer for Hand Hygiene Detection                                    </li>
+<li><strong>506</strong>       Depth-Based Activity Recognition in ICUs Using Convolutional Neural Networks                                    </li>
+<li><strong>507</strong>       BURNED: Efficient and Accurate Burn Prognosis Using Deep Learning                                   </li>
+<li><strong>511</strong>       Differentiating Tumor Cells from Healthy Cells in a Tumor Biopsy using CNNs                                 </li>
+<li><strong>512</strong>       Multimodal Brain MRI Tumor Segmentation via Convolutional Neural Networks                                   </li>
+<li><strong>513</strong>       Accelerating dynamic magnetic resonance image reconstruction using deep convolutional neural networks                                   </li>
+<li><strong>514</strong>       Predict DNA methylation states from whole slide images of brain tumors                                  </li>
+<li><strong>515</strong>       Predicting Lung Cancer Incidence from CT Imagery                                    </li>
+<li><strong>516</strong>       Automatic Neuronal Cell Classification in Calcium Imaging with Convolutional Neural Networks                                    </li>
+<li><strong>517</strong>       GlimpseNet: Multi-Instance Generative Attention for Full Mammogram Diagnosis                                    </li>
+<li><strong>518</strong>       Deep Convolutional Neural Networks for Lung Cancer Detection                                    </li>
+<li><strong>519</strong>       Predicting therapeutic efficacy in Non Small Cell Lung Cancer                                   </li>
+<li><strong>520</strong>       Breast Cancer Image Segmentation: Cancer Cell vs Stroma                                 </li>
+<li><strong>521</strong>       MRI to MGMT: Predicting Drug Efficacy for Glioblastoma Patients                                 </li>
+<li><strong>523</strong>       Prediction of Head and Neck Cancer Submolecular Types from Pathology Images                                 </li>
+<li><strong>524</strong>       Automated Detection of Diabetic Retinopathy using Deep Learning                                 </li>
+<li><strong>525</strong>       Patch-based Head and Neck Cancer Subtype Classification                                 </li>
+<li><strong>526</strong>       Deep Neural Nets for Brain Tumor Segmentation                                   </li>
+<li><strong>527</strong>       Deep Learning for Chest X-ray abnormality detection                                 </li>
+<li><strong>528</strong>       Multiparametric MR Image Analysis for Prostate Cancer Assessment with Convolutional Neural Networks                                 </li>
+<li><strong>530</strong>       MR Contrast Prediction Using Deep Learning                                  </li>
+<li><strong>531</strong>       Brendan - A Deep Convolutional Network for Representing Latent Features of Protein-Ligand Binding Poses                                 </li>
+<li><strong>533</strong>       Using Deep Learning for Segmentation of Microscopy Images                                   </li>
+<li><strong>534</strong>       Quantum Annealing Assisted Deep Learning for Lung Cancer Detection                                  </li>
+<li><strong>536</strong>       Early Stage Integrated Circuit Design Efficacy Prediction using Congestion and Cell Density Images                                  </li>
+<li><strong>537</strong>       Geological scenario identification using seismic impedance data                                 </li>
+<li><strong>538</strong>       Variational Autoencoders for Classical Ising Models                                 </li>
+<li><strong>539</strong>       Convolutional Neural Networks for Pile Up Identification in ATLAS                                   </li>
+<li><strong>541</strong>       Deep Learning application to proton radiography analysis                                    </li>
+<li><strong>542</strong>       Wave-dynamics simulation using deep neural networks                                 </li>
+<li><strong>545</strong>       RouteAI: A Convolutional Neural Network based Router for Integrated Circuits                                    </li>
+<li><strong>547</strong>       Convolutional Neural Networks For Automated Surface-Wettability Characterization                                    </li>
+<li><strong>548</strong>       Data Classification with Residual Network for Single Particle Imaging Experiments                                   </li>
+<li><strong>550</strong>       Extraction of Building Footprints from Satellite Imagery                                    </li>
+<li><strong>551</strong>       Predicting Land Use and Atmospheric Conditions from Amazon Rainforest Satellite Imagery                                 </li>
+<li><strong>552</strong>       Temporal Poverty Prediction                                 </li>
+<li><strong>553</strong>       UAV Road Mapping Using Convolutional Neural Nets                                    </li>
+<li><strong>554</strong>       Motion Prediction from Trajectory and Top-Down Visual Data                                  </li>
+<li><strong>555</strong>       Understanding Localized Remote Sensing-Based Crop Yield Prediction using Convolutional Neural Networks                                  </li>
+<li><strong>556</strong>       Neighborhood Watch: Using CNNs to Predict Income Brackets from Google StreetView Images                                 </li>
+<li><strong>557</strong>       CNNs for wide-area precipitation estimation from geostationary satellite imagery                                    </li>
+<li><strong>558</strong>       Mapping Tidal Salt Marshes                                  </li>
+<li><strong>559</strong>       Predicting Health using Satellite Images                                    </li>
+<li><strong>561</strong>       Convolutional Neural Nets for Segmentation of Satellite Imagery                                 </li>
+<li><strong>563</strong>       Discovering Scenic Roads Using Neural Networks                                  </li>
+<li><strong>564</strong>       Rail Network Detection from Aerial Imagery using Deep Learning                                  </li>
+<li><strong>601</strong>       AI Attack: Learning to Play a Video Game Using Visual Inputs                                    </li>
+<li><strong>602</strong>       Deep Predictive Action Conditional Neural Network for Frame Prediction in Atari Games                                   </li>
+<li><strong>603</strong>       Playing Go without Game Tree Search Using Convolutional Neural Networks                                 </li>
+<li><strong>604</strong>       Learning a Visual State Representation for Generative Adversarial Imitation Learning                                    </li>
+<li><strong>605</strong>       Playing Geometry Dash with Deep Reinforcement Learning                                  </li>
+<li><strong>606</strong>       End-to-end models for task-oriented visual dialogue with reinforcement                                  </li>
+<li><strong>607</strong>       Classifying grocery items images using Convolutional Neural Networks                                    </li>
+<li><strong>608</strong>       Imitation Learning with THOR                                    </li>
+<li><strong>610</strong>       Differentiable Neural Computer for Maze Navigation                                  </li>
+<li><strong>611</strong>       Playing Atari Games with Deep Learning                                  </li>
+<li><strong>612</strong>       Trajectory-Aware Visual Navigation in Indoor Scenes with Target-driven Deep Reinforcement Learning                                  </li>
+<li><strong>614</strong>       Indoor Navigation with Imitation Learning                                   </li>
+<li><strong>616</strong>       Deep Q-Learning with OpenAI Gym                                 </li>
+<li><strong>617</strong>       A3C Methods for General Game Playing                                    </li>
+<li><strong>618</strong>       Deep Reinforcement Learning using Memory-based Approaches                                   </li>
+<li><strong>619</strong>       FoxNet: A Deep-Learning Agent for Nintendo’s Star Fox 64                                    </li>
+<li><strong>620</strong>       Target-Driven Navigation with Imitation Learning                                    </li>
+<li><strong>621</strong>       End-to-End Learning for Fighting Forest Fires (EELFFF)                                  </li>
+<li><strong>622</strong>       Teach Me To Tango - Fidelity Estimation of Visual Odometry Systems for Robust Navigation                                    </li>
+<li><strong>623</strong>       Indoor Target-driven Visual Navigation                                  </li>
+<li><strong>624</strong>       NeuralKart: A Real-Time Mario Kart 64 AI                                    </li>
+<li><strong>625</strong>       Understanding Driver’s Intention Using Convolutional Neural Networks                                    </li>
+<li><strong>626</strong>       Self-Driving Car Steering Angle Prediction Based on Image Recognition                                   </li>
+<li><strong>627</strong>       Object Detection and Its Implementation on Android Devices                                  </li>
+<li><strong>629</strong>       Convolutional Architectures for Self-Driving Cars                                   </li>
+<li><strong>630</strong>       Real-Time Multiple Object Tracking for Autonomous Cars                                  </li>
+<li><strong>631</strong>       Single Stage Detector for Object Detection                                  </li>
+<li><strong>632</strong>       Convolutional Neural Network Information Fusion based on Dempster-Shafer Theory for Urban Scene Understanding                                   </li>
+<li><strong>633</strong>       Street View Instance Segmentation using R-CNN models                                    </li>
+<li><strong>700</strong>       Detecting videos containing (child) pornography                                 </li>
+<li><strong>701</strong>       Superflow: Frame Prediction with Convolutional Neural Network                                   </li>
+<li><strong>702</strong>       YouTube8-M: Video Classification                                    </li>
+<li><strong>705</strong>       YouTube-8M Video Classificatoin                                 </li>
+<li><strong>707</strong>       YOLO-based Adaptive Window Two-stream Convolutional Neural Network for Video Classification                                 </li>
+<li><strong>708</strong>       Spotlight: A Smart Video Highlight Generator                                    </li>
+<li><strong>709</strong>       Video Understanding: From Video Classification to Video Captioning                                  </li>
+<li><strong>710</strong>       Selecting Youtube Video Thumbnails via Convolutional Neural Networks                                    </li>
+<li><strong>711</strong>       Google Cloud and YouTube-8M Video Understanding Challenge                                   </li>
+<li><strong>713</strong>       Prediction of Personality First Impression with Deep Bimodal LSTM                                   </li>
+<li><strong>714</strong>       Video frame Interpolation and extrapolation                                 </li>
+<li><strong>715</strong>       Using Convolutional Neural Networks to Classify Noisy Sports Videos                                 </li>
+<li><strong>716</strong>       Detecting Guns in Video Content                                 </li>
+<li><strong>717</strong>       Soccer Stats with Computer Vision                                   </li>
+<li><strong>718</strong>       Real-time Surveillance Video Analytics System                                   </li>
+<li><strong>800</strong>       Using Graphical Programming Languages Designed for Novices to Train Neural Networks to Understand and Write Simple Programs                                 </li>
+<li><strong>801</strong>       Siamese Convolutional Neural Networks for Authorship Verification                                   </li>
+<li><strong>804</strong>       Deep Convolutional Neural Networks for Automatic Speech Recognition                                 </li>
+<li><strong>805</strong>       CLEVR Advancements for High-Level Visual Reasoning Programs                                 </li>
+<li><strong>806</strong>       Pix2Sketch                                  </li>
+<li><strong>807</strong>       Testing Image Understanding through Question Answering                                  </li>
+<li><strong>808</strong>       Real-time Object detection                                  </li>
+<li><strong>810</strong>       Handwritten Text Recognition using Deep Learning                                    </li>
+<li><strong>811</strong>       Bilinear Pooling and Co-Attention Inspired Models for Visual Question Answering                                 </li>
+<li><strong>812</strong>       Applying NLP Deep Learning Ideas to Image Classification                                    </li>
+<li><strong>814</strong>       You CAN Judge a Book by its Cover                                   </li>
+<li><strong>815</strong>       Image to Latex                                  </li>
+<li><strong>816</strong>       Combining RNN and CNN to Understand the Usefulness of Yelp Reviews                                  </li>
+<li><strong>817</strong>       Where is Waldo, a deep-learning approach to general purpose template matching                                   </li>
+<li><strong>818</strong>       An Automated Art Historian                                  </li>
+<li><strong>819</strong>       Deep Bayesian Pragmatics for Image Captioning                                   </li>
+<li><strong>900</strong>       Predicting Deforestation in the Amazon                                  </li>
+<li><strong>902</strong>       Amazon Rainforest Satellite Image Labeling                                  </li>
+<li><strong>903</strong>       Understanding the Amazon from Space                                 </li>
+<li><strong>904</strong>       Understand Amazon Deforestation using Neural Network                                    </li>
+<li><strong>905</strong>       Multi-label Classification on Satellite Images of the Amazon Rainforest                                 </li>
+<li><strong>906</strong>       Deep Multi-Label Classification for High Resolution Satellite Imagery of Rainforests                                    </li>
+<li><strong>907</strong>       Classification of natural landmarks and human footprint of Amazon using satellite data                                  </li>
+<li><strong>908</strong>       Image Classification with Deep Learning                                 </li>
+<li><strong>909</strong>       Understanding the Amazon Basin from Space                                   </li>
+<li><strong>911</strong>       Deeprootz: Mapping the Amazon                                   </li>
+<li><strong>912</strong>       Understanding the Amazon from Space                                 </li>
+<li><strong>913</strong>       Understanding the Amazon from Space                                 </li>
+<li><strong>914</strong>       Understanding the Amazon from Space                                 </li>
+<li><strong>915</strong>       DeepRootz: Classifying satellite images of the Amazon rainforest                                    </li>
+<li><strong>916</strong>       Trainforest                                 </li>
+<li><strong>917</strong>       Land Cover Classification in the Amazon                                 </li>
+<li><strong>918</strong>       Tracking Human Impact on the Amazon rainforest                                  </li>
+<li><strong>919</strong>       Understanding the Amazon from Space                                 </li>
+<li><strong>920</strong>       Guiding the management of cervical cancer with convolutional neural networks                                    </li>
+<li><strong>921</strong>       Cervix Screening Classification for Cancer Preventive Treatment                                 </li>
+<li><strong>922</strong>       Deep Learning Approaches for Determining Optimal Cervical Cancer Treatment                                  </li>
+<li><strong>923</strong>       Cervix Type Classification Using Deep Learning and Image Classification                                 </li>
+<li><strong>924</strong>       Deep Learning for Cervical Cancer                                   </li>
+<li><strong>925</strong>       Identifying Cervix Types using Deep Convolutional Networks                                  </li>
+<li><strong>926</strong>       Exploring Methods on Tiny ImageNet Problem                                  </li>
+<li><strong>927</strong>       Wide Residual Network for the Tiny Image Net Challenge                                  </li>
+<li><strong>928</strong>       The Power of Inception: Tackling the Tiny ImageNet Challenge                                    </li>
+<li><strong>929</strong>       Unconstrained Handwriting Recognition                                   </li>
+<li><strong>930</strong>       Tiny ImageNet Challenge                                 </li>
+<li><strong>931</strong>       Deep Convolutional Neural Networks for ImageNet Classification                                  </li>
+<li><strong>933</strong>       Overwhelming Tiny ImageNet: Bayesian Optimization on Residual Networks                                  </li>
+<li><strong>934</strong>       A Dense Take on Inception                                   </li>
+<li><strong>935</strong>       Tiny ImageNet Challenge                                 </li>
+<li><strong>937</strong>       Classification on Tiny ImageNet                                 </li>
+<li><strong>938</strong>       Tiny ImageNet Challenge Investigating the Scaling of Inception Layers for Reduced Scale Classiﬁcation Problems                                  </li>
+<li><strong>939</strong>       Attention Networks for ImageNet Classification                                  </li>
+<li><strong>940</strong>       Image Classification for Tiny ImageNet Challenge                                    </li>
+<li><strong>941</strong>       Analyzing Deforestation in the Amazon                                   </li>
+</ul>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../en-overview/" title="Overview of Computer Vision and Visual Recognition overview" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Overview of Computer Vision and Visual Recognition overview
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../en-python-numpy-tutorial/" title="En python numpy tutorial" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                En python numpy tutorial
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2018 Martin Donath
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="http://struct.cc" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/1007530194" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/1007530194" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/1007530194" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.189d7058.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../../../.."}})</script>
+      
+        <script src="../../../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>

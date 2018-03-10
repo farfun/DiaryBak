@@ -1,0 +1,2342 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Nothing is impossible">
+      
+      
+        <link rel="canonical" href="https://1007530194.github.io/Diary/学习/转载/example/a-web-crawer-with-a-asyncio-coroutines-1/">
+      
+      
+        <meta name="author" content="NiuLiangtao">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.0">
+    
+    
+      
+        <title>A web crawer with a asyncio coroutines 1 - Blog of NiuLiangtao</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.78aab2dc.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#introduction" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://1007530194.github.io/Diary/" title="Blog of NiuLiangtao" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Blog of NiuLiangtao
+              </span>
+              <span class="md-header-nav__topic">
+                A web crawer with a asyncio coroutines 1
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/1007530194/Diary" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      1007530194/Diary
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../AboutMe/" title="Home" class="md-tabs__link">
+          Home
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../书籍/机器学习实战/00naive-bayes-discuss/" title="书籍" class="md-tabs__link">
+          书籍
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../tensorflow/如何选择优化器 optimizer/" title="学习" class="md-tabs__link">
+          学习
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../工具/About/" title="工具" class="md-tabs__link">
+          工具
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../日常/test/testtest/" title="日常" class="md-tabs__link">
+          日常
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    Blog of NiuLiangtao
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/1007530194/Diary" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      1007530194/Diary
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ToDo/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Home
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Home
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../AboutMe/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ToDo/" title="要做的" class="md-nav__link">
+      要做的
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      书籍
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        书籍
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      机器学习实战
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        机器学习实战
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/00naive-bayes-discuss/" title="naive-bayes-discuss" class="md-nav__link">
+      naive-bayes-discuss
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/01.机器学习基础/" title="1.机器学习基础" class="md-nav__link">
+      1.机器学习基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/02.k-近邻算法/" title="2.k-近邻算法" class="md-nav__link">
+      2.k-近邻算法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/03.决策树/" title="3.决策树" class="md-nav__link">
+      3.决策树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/04.朴素贝叶斯/" title="4.朴素贝叶斯" class="md-nav__link">
+      4.朴素贝叶斯
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/05.Logistic回归/" title="5.Logistic回归" class="md-nav__link">
+      5.Logistic回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/06.0.支持向量机/" title="6.支持向量机" class="md-nav__link">
+      6.支持向量机
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/06.1.支持向量机的几个通俗理解/" title="6.1.支持向量机的几个通俗理解" class="md-nav__link">
+      6.1.支持向量机的几个通俗理解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/07.集成方法-随机森林和AdaBoost/" title="7.集成方法-随机森林和AdaBoost" class="md-nav__link">
+      7.集成方法-随机森林和AdaBoost
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/08.预测数值型数据-回归/" title="8.预测数值型数据：回归" class="md-nav__link">
+      8.预测数值型数据：回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/09.树回归/" title="9.树回归" class="md-nav__link">
+      9.树回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/10.k-means聚类/" title="10.k-means聚类" class="md-nav__link">
+      10.k-means聚类
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/11.使用Apriori算法进行关联分析/" title="11.使用Apriori算法进行关联分析" class="md-nav__link">
+      11.使用Apriori算法进行关联分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/12.使用FP-growth算法来高效发现频繁项集/" title="12.使用FP-growth算法来高效发现频繁项集" class="md-nav__link">
+      12.使用FP-growth算法来高效发现频繁项集
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/13.利用PCA来简化数据/" title="13.利用PCA来简化数据" class="md-nav__link">
+      13.利用PCA来简化数据
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/14.利用SVD简化数据/" title="14.利用SVD简化数据" class="md-nav__link">
+      14.利用SVD简化数据
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/15.大数据与MapReduce/" title="15.大数据与MapReduce" class="md-nav__link">
+      15.大数据与MapReduce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/16.推荐系统/" title="16.推荐系统" class="md-nav__link">
+      16.推荐系统
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      深度学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        深度学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/深度学习/DeepLearning/" title="深度学习中文版" class="md-nav__link">
+      深度学习中文版
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      tensorflow
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        tensorflow
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tensorflow/如何选择优化器 optimizer/" title="如何选择优化器 optimizer" class="md-nav__link">
+      如何选择优化器 optimizer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      深度学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        深度学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/10分钟上手Pandas/" title="10分钟上手Pandas" class="md-nav__link">
+      10分钟上手Pandas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
+      主成分分析 (2)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/主成分分析/" title="主成分分析" class="md-nav__link">
+      主成分分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/最小二乘法/" title="最小二乘法" class="md-nav__link">
+      最小二乘法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
+      矩阵分解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
+      矩阵求导
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" checked>
+    
+    <label class="md-nav__link" for="nav-4-3">
+      转载
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        转载
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-1" type="checkbox" id="nav-4-3-1">
+    
+    <label class="md-nav__link" for="nav-4-3-1">
+      cs231n-ch
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-1">
+        cs231n-ch
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-assignment2_google_cloud/" title="Google Cloud Tutorial Part 2 (with GPUs)" class="md-nav__link">
+      Google Cloud Tutorial Part 2 (with GPUs)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-aws-tutorial/" title="aws-tutorial" class="md-nav__link">
+      aws-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-classification/" title="classification" class="md-nav__link">
+      classification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-convnet-tips/" title="convnet-tips" class="md-nav__link">
+      convnet-tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-convolutional-networks/" title="convolutional-networks" class="md-nav__link">
+      convolutional-networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-google_cloud_tutorial/" title="Google Cloud Tutorial gce-tutorial" class="md-nav__link">
+      Google Cloud Tutorial gce-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-ipython-tutorial/" title="IPython Tutorial ipython-tutorial" class="md-nav__link">
+      IPython Tutorial ipython-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-linear-classify/" title="线性分类" class="md-nav__link">
+      线性分类
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-neural-networks-1/" title="neural-networks-1" class="md-nav__link">
+      neural-networks-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-neural-networks-2/" title="neural-networks-2" class="md-nav__link">
+      neural-networks-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-neural-networks-3/" title="neural-networks-3" class="md-nav__link">
+      neural-networks-3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-neural-networks-case-study/" title="neural-networks-case-study" class="md-nav__link">
+      neural-networks-case-study
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-optimization-1/" title="optimization-1" class="md-nav__link">
+      optimization-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-optimization-2/" title="optimization-2" class="md-nav__link">
+      optimization-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-overview/" title="Overview of Computer Vision and Visual Recognition overview" class="md-nav__link">
+      Overview of Computer Vision and Visual Recognition overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-poster/" title="CS231n Poster Session poster-session" class="md-nav__link">
+      CS231n Poster Session poster-session
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-python-numpy-tutorial/" title="Python Numpy Tutorial python-numpy-tutorial" class="md-nav__link">
+      Python Numpy Tutorial python-numpy-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-Readme/" title="ch Readme" class="md-nav__link">
+      ch Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-transfer-learning/" title="transfer-learning" class="md-nav__link">
+      transfer-learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/ch-understanding-cnn/" title="understanding-cnn" class="md-nav__link">
+      understanding-cnn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-ch/terminal-tutorial/" title="Terminal.com Tutorial terminal-tutorial" class="md-nav__link">
+      Terminal.com Tutorial terminal-tutorial
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-2" type="checkbox" id="nav-4-3-2">
+    
+    <label class="md-nav__link" for="nav-4-3-2">
+      cs231n-en
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-2">
+        cs231n-en
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-assignment2_google_cloud/" title="Google Cloud Tutorial Part 2 (with GPUs)" class="md-nav__link">
+      Google Cloud Tutorial Part 2 (with GPUs)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-aws-tutorial/" title="aws-tutorial" class="md-nav__link">
+      aws-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-classification/" title="classification" class="md-nav__link">
+      classification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-convnet-tips/" title="convnet-tips" class="md-nav__link">
+      convnet-tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-convolutional-networks/" title="convolutional-networks" class="md-nav__link">
+      convolutional-networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-google_cloud_tutorial/" title="Google Cloud Tutorial" class="md-nav__link">
+      Google Cloud Tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-ipython-tutorial/" title="IPython Tutorial ipython-tutorial" class="md-nav__link">
+      IPython Tutorial ipython-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-linear-classify/" title="linear-classify" class="md-nav__link">
+      linear-classify
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-neural-networks-1/" title="neural-networks-1" class="md-nav__link">
+      neural-networks-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-neural-networks-2/" title="neural-networks-2" class="md-nav__link">
+      neural-networks-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-neural-networks-3/" title="neural-networks-3" class="md-nav__link">
+      neural-networks-3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-neural-networks-case-study/" title="neural-networks-case-study" class="md-nav__link">
+      neural-networks-case-study
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-optimization-1/" title="optimization-1" class="md-nav__link">
+      optimization-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-optimization-2/" title="optimization-2" class="md-nav__link">
+      optimization-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-overview/" title="Overview of Computer Vision and Visual Recognition overview" class="md-nav__link">
+      Overview of Computer Vision and Visual Recognition overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-poster/" title="CS231n Poster Session poster-session" class="md-nav__link">
+      CS231n Poster Session poster-session
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-python-numpy-tutorial/" title="Python Numpy Tutorial python-numpy-tutorial" class="md-nav__link">
+      Python Numpy Tutorial python-numpy-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-Readme/" title="en Readme" class="md-nav__link">
+      en Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-terminal-tutorial/" title="Terminal.com Tutorial terminal-tutorial" class="md-nav__link">
+      Terminal.com Tutorial terminal-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-transfer-learning/" title="transfer-learning" class="md-nav__link">
+      transfer-learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/en-understanding-cnn/" title="understanding-cnn" class="md-nav__link">
+      understanding-cnn
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-3" type="checkbox" id="nav-4-3-3" checked>
+    
+    <label class="md-nav__link" for="nav-4-3-3">
+      example
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-3">
+        example
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        A web crawer with a asyncio coroutines 1
+      </label>
+    
+    <a href="./" title="A web crawer with a asyncio coroutines 1" class="md-nav__link md-nav__link--active">
+      A web crawer with a asyncio coroutines 1
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-task" title="The Task" class="md-nav__link">
+    The Task
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-traditional-approach" title="The Traditional Approach" class="md-nav__link">
+    The Traditional Approach
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#async" title="Async" class="md-nav__link">
+    Async
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programming-with-callbacks" title="Programming With Callbacks" class="md-nav__link">
+    Programming With Callbacks
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../a-web-crawer-with-a-asyncio-coroutines-2/" title="A web crawer with a asyncio coroutines 2" class="md-nav__link">
+      A web crawer with a asyncio coroutines 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bias-variance/" title="Bias variance" class="md-nav__link">
+      Bias variance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bitcoin-explained-1/" title="Bitcoin explained 1" class="md-nav__link">
+      Bitcoin explained 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dive-into-gradient-decent/" title="Dive into gradient decent" class="md-nav__link">
+      Dive into gradient decent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ethereum-ultimate-guide/" title="Ethereum ultimate guide" class="md-nav__link">
+      Ethereum ultimate guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fork-exec-source/" title="Fork exec source" class="md-nav__link">
+      Fork exec source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../latex语法/" title="Latex语法" class="md-nav__link">
+      Latex语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../latex语法1/" title="Latex语法1" class="md-nav__link">
+      Latex语法1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nosql-in-python/" title="Nosql in python" class="md-nav__link">
+      Nosql in python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../perceptron/" title="Perceptron" class="md-nav__link">
+      Perceptron
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../quick-latex/" title="Quick latex" class="md-nav__link">
+      Quick latex
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tendermint/" title="Tendermint" class="md-nav__link">
+      Tendermint
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../工具/About/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../工具/Cheatsheet/" title="Cheatsheet" class="md-nav__link">
+      Cheatsheet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="" title="文章" class="md-nav__link">
+      文章
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      日常
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        日常
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1">
+    
+    <label class="md-nav__link" for="nav-7-1">
+      test
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-1">
+        test
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../日常/test/testtest/" title="Testtest" class="md-nav__link">
+      Testtest
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2">
+    
+    <label class="md-nav__link" for="nav-7-2">
+      常用
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-2">
+        常用
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../日常/常用/latex语法/" title="Latex语法" class="md-nav__link">
+      Latex语法
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      常用工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        常用工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../日常/常用工具/10分钟上手Pandas/" title="10分钟上手Pandas" class="md-nav__link">
+      10分钟上手Pandas
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-task" title="The Task" class="md-nav__link">
+    The Task
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-traditional-approach" title="The Traditional Approach" class="md-nav__link">
+    The Traditional Approach
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#async" title="Async" class="md-nav__link">
+    Async
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programming-with-callbacks" title="Programming With Callbacks" class="md-nav__link">
+    Programming With Callbacks
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>A web crawer with a asyncio coroutines 1</h1>
+                
+                <hr />
+<p>本文译自： <a href="http://www.aosabook.org/en/500L/a-web-crawler-with-asyncio-coroutines.html">A Web Crawler With asyncio Coroutines</a>.</p>
+<p>由于本文篇幅很长, 在阅读本文之前不妨看一下 <a href="https://www.zhihu.com/question/20899988">如何入门 Python 爬虫</a> 了解爬虫的基本概念, 有时间再继续阅读.</p>
+<h3 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h3>
+<p>传统的计算机科学总是将关注点放在研究更加有效率的算法上， 放在如何才能够更快地完成计算上。 但是实际上，对于很多网络程序， 它们的大部分时间并非花在计算， 而是耗费在维持低速连接或是一些很少发生的事件上。 这类程序面临的是一个非常不同以往的挑战： 高效地等待海量的网络事件。 当前应对该挑战的方法是使用异步 I/O (asynchronous I/O), "async" .</p>
+<p>本文将会展示一个简单的爬虫。 这个爬虫仅仅是一个异步应用的原型， 因为尽管它等待很多响应，但实际并没有做多少计算。 爬虫一次能够获取的页面越多，整个任务完成地就会越快。 如果它对每个请求都消耗一个线程 (thread), 那么当并发请求数增加时， 在耗尽 socket 资源之前, 它就将耗尽内存或是其他线程相关的资源。 通过使用异步 I/O 可以避免对线程的需求。</p>
+<p>我们将会以三个阶段来解读案例：</p>
+<ul>
+<li>
+<p>第一阶段， 我们展示了一个异步的事件循环 (event loop)，大致勾勒了使用带有回调 (callback) 事件循环的爬虫框架。 虽然十分有效， 但是要想对它进行扩展来处理更复杂的问题, 将会导致产生很多不可控制的意大利面式代码 (译者注: 意大利面式代码, spagjetti code, 大意指代码的控制结构复杂、混乱而难以理解)。</p>
+</li>
+<li>
+<p>第二阶段， 我们将会展示兼具效率与扩展性的 Python coroutine (协程) 。 我们还将通过使用 Python 的 generator(生成器) 函数， 实现一个简单的 coroutine。</p>
+</li>
+<li>
+<p>第三阶段， 我们将会使用有着完整协程特性的 Python 标准库 "asyncio" <sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>,  同时使用一个异步队列进行协调, 实现一个异步的爬虫。</p>
+</li>
+</ul>
+<h3 id="the-task">The Task<a class="headerlink" href="#the-task" title="Permanent link">&para;</a></h3>
+<p>一个爬虫会查找并下载一个网站上的所有页面， 并且可能还会存储或者给它们加上索引。 从根 URL (root URL) 开始， 它会爬取每一个页面，并且对其进行解析得到 “尚未见过” 页面的链接，然后将这些链接加入到待爬取的队列中。 只有当爬虫获取到的页面上的所有链接都已经 “见过”， 或者等待爬取的队列为空， 爬虫才会停止工作。</p>
+<p>我们可以通过并发地下载多个页面来加快整个爬虫的进程。 当爬虫发现新的链接时， 它同时通过独立的 socket 开始获取新的页面. 当新页面到达时， 它会解析响应并将新的链接添加到队列中。 当存在大量并发时，性能会有所下降，因此有必要压缩返回信息, 同时我们也会限制并发请求数，并且直到一些正在进行中的请求完成后, 才继续开始待爬取队列中的剩余链接。</p>
+<h3 id="the-traditional-approach">The Traditional Approach<a class="headerlink" href="#the-traditional-approach" title="Permanent link">&para;</a></h3>
+<p>如何才能够让爬虫并发工作？ 传统上， 我们会创建一个线程池， 每个线程将会负责通过一个 socket 每次下载一个页面. 比如， 从 <code>xkcd.com</code> 下载一个页面：</p>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">fetch</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="n">sock</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">()</span>
+    <span class="n">sock</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="s1">&#39;xkcd.com&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">))</span>
+    <span class="n">request</span> <span class="o">=</span> <span class="s1">&#39;GET {} HTTP/1.0</span><span class="se">\r\n</span><span class="s1">Host: xkcd.com</span><span class="se">\r\n\r\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">sock</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">))</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;&#39;</span>
+    <span class="n">chunk</span> <span class="o">=</span> <span class="n">sock</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">4096</span><span class="p">)</span>
+    <span class="k">while</span> <span class="n">chunk</span><span class="p">:</span>
+        <span class="n">response</span> <span class="o">+=</span> <span class="n">chunk</span>
+        <span class="n">chunk</span> <span class="o">=</span> <span class="n">sock</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">4096</span><span class="p">)</span>
+
+    <span class="c1">#  Page is now downloaded</span>
+    <span class="n">links</span> <span class="o">=</span> <span class="n">parse_links</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+    <span class="n">q</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">links</span><span class="p">)</span>
+</pre></div>
+
+<p>默认情况下， socket 操作是 <em>阻塞式(blocking)</em> 的： 当线程调用像 <code>connect</code> 或 <code>recv</code> 这样的方法时， 它会暂停进入等待状态直至操作完成 <sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup>。 因此, 如果想要一次性下载多个页面， 我们就需要很多线程。 一个成熟的应用, 通常会通过保持线程池中的闲置线程来分摊线程创建的成本, 然后在后续的任务中对这些线程进行检查并进行重用； 对于连接池的 socket 也是同样的处理。</p>
+<p>然而， 使用线程有着很高的成本，并且操作系统会给线程强加很多限制，用户，机器都会受到影响。 在 Jesse (原作者)的系统上， 一个 Python 线程将会花费 50k 的内存，而且如果创建非常多的线程时会导致失败。 把规模继续扩大, 如果使用并发的 socket 执行成百上千的同步操作， 那么在 socket 资源耗尽之前, 我们就会用光线程资源。 单个线程的消耗, 或者系统对于线程的限制, 是这其中的瓶颈。</p>
+<p>在 Dan Kegel 一篇很有影响力的文章 “The C10K problem <sup id="fnref:3"><a class="footnote-ref" href="#fn:3" rel="footnote">3</a></sup>” 中， 他大致描述了 I/O 并发中多线程的一些局限。 开头是这么说的：</p>
+<blockquote>
+<p>难道你不认为如今的网络服务器应该有能力同时应付成千上万的客户端请求吗？</p>
+</blockquote>
+<p>Kegel 在 1999 年创造了 "C10K" 这个词。 虽然上万的连接现在听起来并不少，但其实只是问题的规模发生了改变， 其问题类型却并未改变。 在那个时候， 对于 C10K 的每个连接采用一个线程是十分不实用的.  的确，仅仅通过使用线程, 我们写的这个玩具级别的爬虫也可以工作。 但是对于有着成千上万连接的大规模应用来说，它的天花板依旧存在： 大多数系统虽然仍然能够创建 socket, 但是却已经耗尽了 thread. 那么如何解决这个问题呢？</p>
+<h3 id="async">Async<a class="headerlink" href="#async" title="Permanent link">&para;</a></h3>
+<p>异步的 I/O 框架在一个单一 thread 上使用 <em>non-blocking (非阻塞)</em>  的 socket 完成并发操作。 在我们的异步爬虫中，在开始连接到服务器之前，我们将 socket 设置为非阻塞式的:</p>
+<div class="codehilite"><pre><span></span><span class="n">sock</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">()</span>
+<span class="n">sock</span><span class="o">.</span><span class="n">setblocking</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">sock</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="s1">&#39;xkcd.com&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">))</span>
+<span class="k">except</span> <span class="n">BlockingIOError</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+
+<p>恼人的是，即便当一个非阻塞的 socket 正常工作的时候， 它也会从 <code>connect</code> 中抛出一个异常. 这个异常复制了底层 C 函数一个令人心烦的行为 -- 它会发送 <code>errno</code> 到 <code>EINPROGRESS</code> 来告诉你已经开始工作了。</p>
+<p>爬虫需要有一个途径来知道连接何时已经建立， 以便于它能够发起 HTTP 请求。那么, 我们可以在一个简单紧凑的循环中不停地尝试:</p>
+<div class="codehilite"><pre><span></span><span class="n">request</span> <span class="o">=</span> <span class="s1">&#39;GET {} HTTP/1.0</span><span class="se">\r\n</span><span class="s1">Host: xkcd.com</span><span class="se">\r\n\r\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">encoded</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">sock</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">encoded</span><span class="p">)</span>
+        <span class="k">break</span>  <span class="c1"># Done</span>
+    <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;sent&#39;</span><span class="p">)</span>
+</pre></div>
+
+<p>但是， 这个方法不仅浪费电能，而且无法在 <em>多个</em> socket 上高效地等待事件。 在以前， BSD unix 对这个问题的解决方案是使用 <code>select</code>, 这是一个在一个或多个 socket 上等待事件的 C 函数。 由于今天对于海量连接的网络应用的要求，已经出现了像 <code>poll</code> 这样的替代品，以及随后的 BSD 上的 <code>kqueue</code>， Linux 上的 <code>epoll</code>. 这些 API 与 <code>select</code> 相类似，但是在面对大量连接时表现十分优异。</p>
+<p>Python 3.4 的 <code>DefaultSelector</code>,  会使用了当前系统上已有最好的类 <code>select</code> 函数。 为了注册网络 I/O 的通知， 我们创建一个非阻塞的 socket 并使用默认的 selector 对其进行注册:</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">selectors</span> <span class="kn">import</span> <span class="n">DefaultSelector</span><span class="p">,</span> <span class="n">EVENT_WRITE</span>
+
+<span class="n">selector</span> <span class="o">=</span> <span class="n">DefaultSelector</span><span class="p">()</span>
+
+<span class="n">sock</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">()</span>
+<span class="n">sock</span><span class="o">.</span><span class="n">setblocking</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">sock</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="s1">&#39;xkcd.com&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">))</span>
+<span class="k">except</span> <span class="n">BlockingIOError</span><span class="p">:</span>
+    <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">connected</span><span class="p">():</span>
+    <span class="n">selector</span><span class="o">.</span><span class="n">unregister</span><span class="p">(</span><span class="n">sock</span><span class="o">.</span><span class="n">fileno</span><span class="p">())</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;connected&#39;</span><span class="p">)</span>
+
+<span class="n">selector</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">sock</span><span class="o">.</span><span class="n">fileno</span><span class="p">(),</span> <span class="n">EVENT_WRITE</span><span class="p">,</span> <span class="n">connected</span><span class="p">)</span>
+</pre></div>
+
+<p>我们忽略了上面无关紧要的错误, 并调用了 <code>selector.register</code>,  它传入的参数有 socket 的文件描述符， 一个表示我们正在等待事件类型的常数。 我们还传入一个 Python 函数 <code>connected</code>, 当事件发生时, <code>connected</code> 就会运行。这样的函数通常叫做 <em>回调 (callback)</em> 函数.</p>
+<p>在一个循环中，当我们接收到 I/O 通知时就会对其进行处理:</p>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">loop</span><span class="p">():</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">events</span> <span class="o">=</span> <span class="n">selector</span><span class="o">.</span><span class="n">select</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">event_key</span><span class="p">,</span> <span class="n">event_mask</span> <span class="ow">in</span> <span class="n">events</span><span class="p">:</span>
+            <span class="n">callback</span> <span class="o">=</span> <span class="n">event_key</span><span class="o">.</span><span class="n">data</span>
+            <span class="n">callback</span><span class="p">()</span>
+</pre></div>
+
+<p><code>connect</code> 回调被存储为 <code>event_key.data</code>, 一旦非阻塞 socket 连接完成, 我们就会进行检索和执行。</p>
+<p>并不像上面的快速循环， 这里对 <code>select</code> 的调用会暂停等待下一个 <code>I/O</code> 事件。 尚未完成的操作将会被挂起, 直至事件循环的未来 tick.</p>
+<p>至此, 我们已经阐明了哪些内容？ 我们展示了如何开始一个操作，当操作准备完成后如何执行一个回调。 基于我们已经展示的特性 -- 非阻塞的 socket 和事件循环, 构建一个异步 <em>框架 (framework)</em> 在单一线程上执行并发操作。</p>
+<p>到目前为止, 我们已经完成了 "并发 (concurrency)" 这一目标，但还不是传统意义上的 "并行 (parallelism)". 也就是说，我们构建一个能够完成 I/O 重叠的小型系统。 当其他操作正在进行时，它能够开始一个新的操作。 实际上，它并没有利用多核并行地执行计算。不过， 这个系统是针对 I/O 限制问题而设计的，而并非 CPU 限制 <sup id="fnref:4"><a class="footnote-ref" href="#fn:4" rel="footnote">4</a></sup>。</p>
+<p>所以我们的时间循环在并发 I/O 上是十分有效的， 因为它不会对每一个连接都耗尽线程资源。 不过在我们继续往下之前，需要纠正有一个常见但十分重要的误解: 异步比多线程要 <em>快</em> 。 通常并非如此，实际上，在 Python 里，像我们这样的一个事件循环, 通常会稍慢于服务于一小部分非常活跃的连接的多线程。 在一个没有全局解释器锁 (GIL) 的运行态中，线程在这样的一个负载上将会表现得更好。 异步 I/O 所适用的是那些有很多不常发生的事件, 以及低速与休眠连接的应用 <sup id="fnref:5"><a class="footnote-ref" href="#fn:5" rel="footnote">5</a></sup>.</p>
+<h3 id="programming-with-callbacks">Programming With Callbacks<a class="headerlink" href="#programming-with-callbacks" title="Permanent link">&para;</a></h3>
+<p>到这里, 我们已经完成了一个短小的异步框架， 那么如何才能构建一个爬虫？ 要知道即使是一个简单的 URL 获取器 (URL-fetcher), 可能都不是那么简单。</p>
+<p>我们以一个还没有抓取和已抓取的 URL 的全局集合开始，</p>
+<div class="codehilite"><pre><span></span><span class="n">urls_todo</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;/&#39;</span><span class="p">])</span>
+<span class="n">seen_urls</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;/&#39;</span><span class="p">]</span><span class="s1">&#39;)</span>
+</pre></div>
+
+<p>集合 <code>seen_urls</code> 等于 <code>urls_todo</code> 加上未完成的 URL, 两个集合同被初始化为根 URL "/" .</p>
+<p>抓取一个页面会需要一系列的回调。 当连接建立时， <code>connected</code> 回调就会启动, 并向服务器发送一个 GET 请求. 但是它必须等待回应，所以它注册了另一个回调。 如果当回调启动后，它还没有读取到完整的信息，那么它会再次注册，如此往复。</p>
+<p>现在, 让我们将这些回调组合到一个 <code>Fetcher</code> 对象中。 它需要一个 URL, 一个 socket 对象，还有一个能够存储响应消息的地方。</p>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Fetcher</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">response</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;&#39;</span>   <span class="c1"># Empty array of bytes.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">url</span> <span class="o">=</span> <span class="n">url</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sock</span> <span class="o">=</span> <span class="bp">None</span>
+</pre></div>
+
+<p>调用 <code>Fetcher.fetch</code>:</p>
+<div class="codehilite"><pre><span></span><span class="c1"># Method on Fetcher class.</span>
+<span class="k">def</span> <span class="nf">fetch</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">sock</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">sock</span><span class="o">.</span><span class="n">setblocking</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sock</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="s1">&#39;xkcd.com&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">))</span>
+    <span class="k">except</span> <span class="n">BlockingIOError</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="c1"># Register next callback</span>
+    <span class="n">selector</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sock</span><span class="o">.</span><span class="n">fileno</span><span class="p">(),</span>
+                      <span class="n">EVENT_WRITE</span><span class="p">,</span>
+                      <span class="bp">self</span><span class="o">.</span><span class="n">connected</span><span class="p">)</span>
+</pre></div>
+
+<p><code>fetch</code> 方法首先开始连接一个 socket. 但是注意, 在连接建立之前, 该方法已经返回了。 它必须返回时间循环的控制以等待连接。 要想理解为什么， 想想我们整个应用的结构：</p>
+<div class="codehilite"><pre><span></span><span class="c1"># Begin fetching http://xkcd.com/353/</span>
+<span class="n">fetcher</span> <span class="o">=</span> <span class="n">Fetcher</span><span class="p">(</span><span class="s1">&#39;/353/&#39;</span><span class="p">)</span>
+<span class="n">fetcher</span><span class="o">.</span><span class="n">fetch</span><span class="p">()</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">events</span> <span class="o">=</span> <span class="n">selector</span><span class="o">.</span><span class="n">select</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">event_key</span><span class="p">,</span> <span class="n">event_mask</span> <span class="ow">in</span> <span class="n">events</span><span class="p">:</span>
+        <span class="n">callback</span> <span class="o">=</span> <span class="n">event_key</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">callback</span><span class="p">(</span><span class="n">event_key</span><span class="p">,</span> <span class="n">event_mask</span><span class="p">)</span>
+</pre></div>
+
+<p>当它调用 <code>select</code> 时， 所有的事件通知都会在事件循环中进行处理。因此 <code>fetch</code> 必须能够控制事件循环，以便于程序知道何时 socket 已经连接. 这样循环才会运行 <code>connected</code> 回调，也就是上面 <code>fetch</code> 末尾注册的那个函数。</p>
+<p>这里是 <code>connected</code> 的实现:</p>
+<div class="codehilite"><pre><span></span><span class="c1"># Method on Fetcher class.</span>
+<span class="k">def</span> <span class="nf">connected</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">mask</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;connected!&#39;</span><span class="p">)</span>
+    <span class="n">selector</span><span class="o">.</span><span class="n">unregister</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">fd</span><span class="p">)</span>
+    <span class="n">request</span> <span class="o">=</span> <span class="s1">&#39;GET {} HTTP/1.0</span><span class="se">\r\n</span><span class="s1">Host: xkcd.com</span><span class="se">\r\n\r\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">sock</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">))</span>
+
+    <span class="c1"># Register the next callback.</span>
+    <span class="n">selector</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">fd</span><span class="p">,</span>
+                      <span class="n">EVENT_READ</span><span class="p">,</span>
+                      <span class="bp">self</span><span class="o">.</span><span class="n">read_response</span><span class="p">)</span>
+</pre></div>
+
+<p>方法发送一个 GET 请求。在实际使用中, 一个应用将会检查 <code>send</code> 的返回值, 以免整个消息并未被一次性发送出去。不过由于我们的请求很小，应用也并不复杂。 它可以不用考虑太多, 直接调用 <code>send</code> ， 然后等待一个响应。当然了，它必须注册另外的一个回调, 并且重新将控制权交还给事件循环。下一个和最后的回调， <code>read_response</code>, 处理服务器的回复：</p>
+<div class="codehilite"><pre><span></span><span class="c1"># Method on Fetcher class.</span>
+<span class="k">def</span> <span class="nf">read_response</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">mask</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">stopped</span>
+
+    <span class="n">chunk</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sock</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">4096</span><span class="p">)</span>  <span class="c1"># 4k chunk size.</span>
+    <span class="k">if</span> <span class="n">chunk</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">response</span> <span class="o">+=</span> <span class="n">chunk</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">selector</span><span class="o">.</span><span class="n">unregister</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">fd</span><span class="p">)</span> <span class="c1"># Done reading.</span>
+        <span class="n">links</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parse_links</span><span class="p">()</span>
+
+        <span class="c1"># Python set-logic:</span>
+        <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">links</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">seen_urls</span><span class="p">):</span>
+            <span class="n">urls_todo</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+            <span class="n">Fetcher</span><span class="p">(</span><span class="n">link</span><span class="p">)</span><span class="o">.</span><span class="n">fetch</span><span class="p">()</span> <span class="c1"># &lt;- New Fetcher</span>
+
+        <span class="n">seen_urls</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">links</span><span class="p">)</span>
+        <span class="n">urls_todo</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">urls_todo</span><span class="p">:</span>
+            <span class="n">stopped</span> <span class="o">=</span> <span class="bp">True</span>
+</pre></div>
+
+<p>每当选择器 (selector) 看到 socket 是 “可读的”, 就会执行回调。这里的 “可读”，可能表示：socket 有数据或者被关闭。</p>
+<p>回调会从 socket 请求 4 kb 的数据。如果不足, <code>chunk</code> 将会有多少取多少, 包含能够获取的所有数据。如果多于 4 kb, <code>chunk</code> 将会填满 4 kb, 并且 socket 会保持可读的状态，因此事件循环能够在下一个 tick 再次运行这个回调。 当响应完毕， 服务器会关闭 socket，此时 <code>chunk</code> 为空。</p>
+<p>尚未出现的 <code>parse_links</code> 方法返回一些 URL 的集合。 对于每个新的 URL, 我们启动一个新的 fetcher, 没有并发限制。 注意带有回调的异步程序有一个很好的特性: 我们不需要应对共享数据发生变化的信号量， 比如我们在 <code>seen_urls</code> 中添加链接。 因为并没有抢占式的多任务，所以在代码中的任一点都不会被中断。</p>
+<p>我们添加了一个全局的 <code>stopped</code> 变量，并通过它来控制循环:</p>
+<div class="codehilite"><pre><span></span><span class="n">stopped</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="k">def</span> <span class="nf">loop</span><span class="p">():</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">stopped</span><span class="p">:</span>
+        <span class="n">events</span> <span class="o">=</span> <span class="n">selector</span><span class="o">.</span><span class="n">select</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">event_key</span><span class="p">,</span> <span class="n">event_mask</span> <span class="ow">in</span> <span class="n">events</span><span class="p">:</span>
+            <span class="n">callback</span> <span class="o">=</span> <span class="n">event_key</span><span class="o">.</span><span class="n">data</span>
+            <span class="n">callback</span><span class="p">()</span>
+</pre></div>
+
+<p>一旦所有的页面被下载完毕， fetcher 停止全局的事件循环, 然后程序退出。</p>
+<p>这个示例使得 async 问题十分显然: spaghetti code. 我们需要一些途径来传递一些计算和 I/O 操作，还需要安排多个这样的一系列操作来并发运行。 但是如果没有线程，这一系列的操作就无法被整合到一个单一的函数中: 无论何时一个函数开始一个 I/O 操作，它会显式地保存在未来需要用到的任何状态。 你需要负责考虑完成这样的状态保存代码。</p>
+<p>让我们来简单解释一下。传统上使用一个阻塞式的 socket, 我们可以通过一个线程十分简单地获取一个 URL:</p>
+<div class="codehilite"><pre><span></span><span class="c1"># Blocking version.</span>
+<span class="k">def</span> <span class="nf">fetch</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="n">sock</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">()</span>
+    <span class="n">sock</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="s1">&#39;xkcd.com&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">))</span>
+    <span class="n">request</span> <span class="o">=</span> <span class="s1">&#39;GET {} HTTP/1.0</span><span class="se">\r\n</span><span class="s1">Host: xkcd.com</span><span class="se">\r\n\r\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">sock</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">))</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;&#39;</span>
+    <span class="n">chunk</span> <span class="o">=</span> <span class="n">sock</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">4096</span><span class="p">)</span>
+    <span class="k">while</span> <span class="n">chunk</span><span class="p">:</span>
+        <span class="n">response</span> <span class="o">+=</span> <span class="n">chunk</span>
+        <span class="n">chunk</span> <span class="o">=</span> <span class="n">sock</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">4096</span><span class="p">)</span>
+
+    <span class="c1"># Page is now downloaded.</span>
+    <span class="n">links</span> <span class="o">=</span> <span class="n">parse_links</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+    <span class="n">q</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">links</span><span class="p">)</span>
+</pre></div>
+
+<p>在两个 socket 操作之间， 这个函数会记住什么状态呢？ 它有 socket, 一个 URL， 和不断增加的 <code>response</code> . 运行于一个线程上的函数, 利用了编程语言的基本特性将这个临时状态存储在本地变量中，在它的栈上。 这个函数也有一个 “延续” - 这是说，在 I/O 完成后预期执行的代码。通过存储线程的执行指针，运行期会记住这个 “延续”。 你不必考虑存储这些本地变量和 I/O 完成后的 “延续”。 这是语言所内置的功能。</p>
+<p>不过对于一个基于回调的异步框架而言，这些语言特性并没有什么帮助。 当等待 I/O 时，一个函数必须显式地保存它的状态，因为在 I/O 完成以前函数就会返回并且失去它的栈帧。 为了代替本地变量， 我们基于回调的示例将 <code>sock</code> 和 <code>response</code> 保存为 <code>self</code> 的属性， Fetcher 的实例。 为了取代指令指针，它通过注册回调 <code>connected</code> 和 <code>read_response</code> 存贮其延续。 当应用的特性不断增加时， 我们手动保存回调间状态的复杂性也会随之增加。这样繁琐的记账式代码会使程序员十分头痛。</p>
+<p>更糟糕的是，如果一系列中安排中, 下一个回调它抛出异常怎么办？ 假如我们写的 <code>parse_links</code> 并不完美，当解析某些 HTML 时它抛出了一个异常：</p>
+<div class="codehilite"><pre><span></span>Traceback (most recent call last):
+  File &quot;loop-with-callbacks.py&quot;, line 111, in &lt;module&gt;
+    loop()
+  File &quot;loop-with-callbacks.py&quot;, line 106, in loop
+    callback(event_key, event_mask)
+  File &quot;loop-with-callbacks.py&quot;, line 51, in read_response
+    links = self.parse_links()
+  File &quot;loop-with-callbacks.py&quot;, line 67, in parse_links
+    raise Exception(&#39;parse error&#39;)
+Exception: parse error
+</pre></div>
+
+<p>追踪栈仅指示出事件循环正在执行一个回调。 我们不知道到底什么导致了这个错误。 在链的两端都出现了问题： 我们忘了去向何方和来自哪里。 这种背景信息的丢失叫做 "stack ripping", 在很多时候它都会使调试人员更加糊涂。 stack ripping 也阻止我们对回调设置一个异常捕获, <code>try / except</code> 块会将一个函数调用及其后续包装起来。</p>
+<p>所以，即使除了长久以来有关多线程与异步在效率上的争论，还有另一个问题 -- 哪一个更加容易出错：如果在同步线程的时候犯了错误，那么线程对数据会十分敏感。但是由于 stack ripping 回调又十分难于调试。</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Guido introduced the standard asyncio library, called "Tulip" then, at <a href="http://pyvideo.org/video/1667/keynote">PyCon 2013</a>.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Even calls to send can block, if the recipient is slow to acknowledge outstanding messages and the system's buffer of outgoing data is full.&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="http://www.kegel.com/c10k.html">http://www.kegel.com/c10k.html</a>&#160;<a class="footnote-backref" href="#fnref:3" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>Python's global interpreter lock prohibits running Python code in parallel in one process anyway. Parallelizing CPU-bound algorithms in Python requires multiple processes, or writing the parallel portions of the code in C. But that is a topic for another day.&#160;<a class="footnote-backref" href="#fnref:4" rev="footnote" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>Jesse listed indications and contraindications for using async in "What Is Async, How Does It Work, And When Should I Use It?":. Mike Bayer compared the throughput of asyncio and multithreading for different workloads in "Asynchronous Python and Databases":&#160;<a class="footnote-backref" href="#fnref:5" rev="footnote" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>For a complex solution to this problem, see <a href="http://www.tornadoweb.org/en/stable/stack_context.html">http://www.tornadoweb.org/en/stable/stack_context.html</a>&#160;<a class="footnote-backref" href="#fnref:6" rev="footnote" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p>The @asyncio.coroutine decorator is not magical. In fact, if it decorates a generator function and the PYTHONASYNCIODEBUG environment variable is not set, the decorator does practically nothing. It just sets an attribute, _is_coroutine, for the convenience of other parts of the framework. It is possible to use asyncio with bare generators not decorated with @asyncio.coroutine at all.&#160;<a class="footnote-backref" href="#fnref:7" rev="footnote" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p>Python 3.5's built-in coroutines are described in PEP 492, "Coroutines with async and await syntax."&#160;<a class="footnote-backref" href="#fnref:8" rev="footnote" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p>This future has many deficiencies. For example, once this future is resolved, a coroutine that yields it should resume immediately instead of pausing, but with our code it does not. See asyncio's Future class for a complete implementation.↩&#160;<a class="footnote-backref" href="#fnref:9" rev="footnote" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p>In fact, this is exactly how "yield from" works in CPython. A function increments its instruction pointer before executing each statement. But after the outer generator executes "yield from", it subtracts 1 from its instruction pointer to keep itself pinned at the "yield from" statement. Then it yields to its caller. The cycle repeats until the inner generator throws StopIteration, at which point the outer generator finally allows itself to advance to the next instruction.↩&#160;<a class="footnote-backref" href="#fnref:10" rev="footnote" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:11">
+<p><a href="https://docs.python.org/3/library/queue.html">https://docs.python.org/3/library/queue.html</a>&#160;<a class="footnote-backref" href="#fnref:11" rev="footnote" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:12">
+<p><a href="https://docs.python.org/3/library/asyncio-sync.html">https://docs.python.org/3/library/asyncio-sync.html</a>&#160;<a class="footnote-backref" href="#fnref:12" rev="footnote" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:13">
+<p>The actual asyncio.Queue implementation uses an asyncio.Event in place of the Future shown here. The difference is an Event can be reset, whereas a Future cannot transition from resolved back to pending.&#160;<a class="footnote-backref" href="#fnref:13" rev="footnote" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:14">
+<p><a href="https://glyph.twistedmatrix.com/2014/02/unyielding.html">https://glyph.twistedmatrix.com/2014/02/unyielding.html</a>&#160;<a class="footnote-backref" href="#fnref:14" rev="footnote" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../cs231n-en/en-understanding-cnn/" title="understanding-cnn" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                understanding-cnn
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../a-web-crawer-with-a-asyncio-coroutines-2/" title="A web crawer with a asyncio coroutines 2" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                A web crawer with a asyncio coroutines 2
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2018 Martin Donath
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="http://struct.cc" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/1007530194" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/1007530194" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/1007530194" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.189d7058.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../../../.."}})</script>
+      
+        <script src="../../../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
