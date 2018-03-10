@@ -1,0 +1,2359 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Nothing is impossible">
+      
+      
+        <link rel="canonical" href="https://1007530194.github.io/Diary/学习/转载/cs231n-ch/2018-02-21-ch-google_cloud_tutorial/">
+      
+      
+        <meta name="author" content="NiuLiangtao">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.0">
+    
+    
+      
+        <title>Google Cloud Tutorial gce-tutorial</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.78aab2dc.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#google-cloud-tutorial" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://1007530194.github.io/Diary/" title="Blog of NiuLiangtao" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Blog of NiuLiangtao
+              </span>
+              <span class="md-header-nav__topic">
+                Google Cloud Tutorial gce-tutorial
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/1007530194/Diary" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      1007530194/Diary
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../AboutMe/" title="Home" class="md-tabs__link">
+          Home
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../书籍/机器学习实战/00naive-bayes-discuss/" title="书籍" class="md-tabs__link">
+          书籍
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../tensorflow/如何选择优化器 optimizer/" title="学习" class="md-tabs__link">
+          学习
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../工具/About/" title="工具" class="md-tabs__link">
+          工具
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../日常/test/testtest/" title="日常" class="md-tabs__link">
+          日常
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    Blog of NiuLiangtao
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/1007530194/Diary" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      1007530194/Diary
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ToDo/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Home
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Home
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../AboutMe/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ToDo/" title="要做的" class="md-nav__link">
+      要做的
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      书籍
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        书籍
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      机器学习实战
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        机器学习实战
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/00naive-bayes-discuss/" title="naive-bayes-discuss" class="md-nav__link">
+      naive-bayes-discuss
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/01.机器学习基础/" title="1.机器学习基础" class="md-nav__link">
+      1.机器学习基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/02.k-近邻算法/" title="2.k-近邻算法" class="md-nav__link">
+      2.k-近邻算法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/03.决策树/" title="3.决策树" class="md-nav__link">
+      3.决策树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/04.朴素贝叶斯/" title="4.朴素贝叶斯" class="md-nav__link">
+      4.朴素贝叶斯
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/05.Logistic回归/" title="5.Logistic回归" class="md-nav__link">
+      5.Logistic回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/06.0.支持向量机/" title="6.支持向量机" class="md-nav__link">
+      6.支持向量机
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/06.1.支持向量机的几个通俗理解/" title="6.1.支持向量机的几个通俗理解" class="md-nav__link">
+      6.1.支持向量机的几个通俗理解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/07.集成方法-随机森林和AdaBoost/" title="7.集成方法-随机森林和AdaBoost" class="md-nav__link">
+      7.集成方法-随机森林和AdaBoost
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/08.预测数值型数据-回归/" title="8.预测数值型数据：回归" class="md-nav__link">
+      8.预测数值型数据：回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/09.树回归/" title="9.树回归" class="md-nav__link">
+      9.树回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/10.k-means聚类/" title="10.k-means聚类" class="md-nav__link">
+      10.k-means聚类
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/11.使用Apriori算法进行关联分析/" title="11.使用Apriori算法进行关联分析" class="md-nav__link">
+      11.使用Apriori算法进行关联分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/12.使用FP-growth算法来高效发现频繁项集/" title="12.使用FP-growth算法来高效发现频繁项集" class="md-nav__link">
+      12.使用FP-growth算法来高效发现频繁项集
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/13.利用PCA来简化数据/" title="13.利用PCA来简化数据" class="md-nav__link">
+      13.利用PCA来简化数据
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/14.利用SVD简化数据/" title="14.利用SVD简化数据" class="md-nav__link">
+      14.利用SVD简化数据
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/15.大数据与MapReduce/" title="15.大数据与MapReduce" class="md-nav__link">
+      15.大数据与MapReduce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/16.推荐系统/" title="16.推荐系统" class="md-nav__link">
+      16.推荐系统
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      深度学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        深度学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/深度学习/DeepLearning/" title="深度学习中文版" class="md-nav__link">
+      深度学习中文版
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      tensorflow
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        tensorflow
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tensorflow/如何选择优化器 optimizer/" title="如何选择优化器 optimizer" class="md-nav__link">
+      如何选择优化器 optimizer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      深度学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        深度学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/10分钟上手Pandas/" title="10分钟上手Pandas" class="md-nav__link">
+      10分钟上手Pandas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
+      主成分分析 (2)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/主成分分析/" title="主成分分析" class="md-nav__link">
+      主成分分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/最小二乘法/" title="最小二乘法" class="md-nav__link">
+      最小二乘法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
+      矩阵分解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
+      矩阵求导
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" checked>
+    
+    <label class="md-nav__link" for="nav-4-3">
+      转载
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        转载
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-1" type="checkbox" id="nav-4-3-1" checked>
+    
+    <label class="md-nav__link" for="nav-4-3-1">
+      cs231n-ch
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-1">
+        cs231n-ch
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2018-02-21-ch-assignment2_google_cloud/" title="Google Cloud Tutorial Part 2 (with GPUs)" class="md-nav__link">
+      Google Cloud Tutorial Part 2 (with GPUs)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2018-02-21-ch-aws-tutorial/" title="aws-tutorial" class="md-nav__link">
+      aws-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2018-02-21-ch-classification/" title="classification" class="md-nav__link">
+      classification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2018-02-21-ch-convnet-tips/" title="convnet-tips" class="md-nav__link">
+      convnet-tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2018-02-21-ch-convolutional-networks/" title="convolutional-networks" class="md-nav__link">
+      convolutional-networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Google Cloud Tutorial gce-tutorial
+      </label>
+    
+    <a href="./" title="Google Cloud Tutorial gce-tutorial" class="md-nav__link md-nav__link--active">
+      Google Cloud Tutorial gce-tutorial
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-we-begin" title="BEFORE WE BEGIN" class="md-nav__link">
+    BEFORE WE BEGIN
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#big-reminder-make-sure-you-stop-your-instances" title="BIG REMINDER: Make sure you stop your instances!" class="md-nav__link">
+    BIG REMINDER: Make sure you stop your instances!
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-and-configure-your-account" title="Create and Configure Your Account" class="md-nav__link">
+    Create and Configure Your Account
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#launch-a-virtual-instance" title="Launch a Virtual Instance" class="md-nav__link">
+    Launch a Virtual Instance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connect-to-your-virtual-instance-and-download-the-assignment" title="Connect to Your Virtual Instance and Download the Assignment" class="md-nav__link">
+    Connect to Your Virtual Instance and Download the Assignment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-jupyter-notebook-with-google-compute-engine" title="Using Jupyter Notebook with Google Compute Engine" class="md-nav__link">
+    Using Jupyter Notebook with Google Compute Engine
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-a-static-ip-address" title="Getting a Static IP Address" class="md-nav__link">
+    Getting a Static IP Address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-firewall-rule" title="Adding a Firewall rule" class="md-nav__link">
+    Adding a Firewall rule
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-jupyter-notebook" title="Configuring Jupyter Notebook" class="md-nav__link">
+    Configuring Jupyter Notebook
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#launching-and-connecting-to-jupyter-notebook" title="Launching and connecting to Jupyter Notebook" class="md-nav__link">
+    Launching and connecting to Jupyter Notebook
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submission-transferring-files-from-your-instance-to-your-computer" title="Submission: Transferring Files From Your Instance To Your Computer" class="md-nav__link">
+    Submission: Transferring Files From Your Instance To Your Computer
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2018-02-21-ch-ipython-tutorial/" title="2018 02 21 ch ipython tutorial" class="md-nav__link">
+      2018 02 21 ch ipython tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2018-02-21-ch-linear-classify/" title="2018 02 21 ch linear classify" class="md-nav__link">
+      2018 02 21 ch linear classify
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2018-02-21-ch-neural-networks-1/" title="2018 02 21 ch neural networks 1" class="md-nav__link">
+      2018 02 21 ch neural networks 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2018-02-21-ch-neural-networks-2/" title="2018 02 21 ch neural networks 2" class="md-nav__link">
+      2018 02 21 ch neural networks 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2018-02-21-ch-neural-networks-3/" title="2018 02 21 ch neural networks 3" class="md-nav__link">
+      2018 02 21 ch neural networks 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2018-02-21-ch-neural-networks-case-study/" title="2018 02 21 ch neural networks case study" class="md-nav__link">
+      2018 02 21 ch neural networks case study
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2018-02-21-ch-optimization-1/" title="2018 02 21 ch optimization 1" class="md-nav__link">
+      2018 02 21 ch optimization 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2018-02-21-ch-optimization-2/" title="2018 02 21 ch optimization 2" class="md-nav__link">
+      2018 02 21 ch optimization 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2018-02-21-ch-overview/" title="2018 02 21 ch overview" class="md-nav__link">
+      2018 02 21 ch overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2018-02-21-ch-poster/" title="2018 02 21 ch poster" class="md-nav__link">
+      2018 02 21 ch poster
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2018-02-21-ch-python-numpy-tutorial/" title="2018 02 21 ch python numpy tutorial" class="md-nav__link">
+      2018 02 21 ch python numpy tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2018-02-21-ch-Readme/" title="2018 02 21 ch Readme" class="md-nav__link">
+      2018 02 21 ch Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2018-02-21-ch-terminal-tutorial/" title="2018 02 21 ch terminal tutorial" class="md-nav__link">
+      2018 02 21 ch terminal tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2018-02-21-ch-transfer-learning/" title="2018 02 21 ch transfer learning" class="md-nav__link">
+      2018 02 21 ch transfer learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2018-02-21-ch-understanding-cnn/" title="2018 02 21 ch understanding cnn" class="md-nav__link">
+      2018 02 21 ch understanding cnn
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-2" type="checkbox" id="nav-4-3-2">
+    
+    <label class="md-nav__link" for="nav-4-3-2">
+      cs231n-en
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-2">
+        cs231n-en
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-assignment2_google_cloud/" title="2018 02 21 en assignment2 google cloud" class="md-nav__link">
+      2018 02 21 en assignment2 google cloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-aws-tutorial/" title="2018 02 21 en aws tutorial" class="md-nav__link">
+      2018 02 21 en aws tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-classification/" title="2018 02 21 en classification" class="md-nav__link">
+      2018 02 21 en classification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-convnet-tips/" title="2018 02 21 en convnet tips" class="md-nav__link">
+      2018 02 21 en convnet tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-convolutional-networks/" title="2018 02 21 en convolutional networks" class="md-nav__link">
+      2018 02 21 en convolutional networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-google_cloud_tutorial/" title="2018 02 21 en google cloud tutorial" class="md-nav__link">
+      2018 02 21 en google cloud tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-ipython-tutorial/" title="2018 02 21 en ipython tutorial" class="md-nav__link">
+      2018 02 21 en ipython tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-linear-classify/" title="2018 02 21 en linear classify" class="md-nav__link">
+      2018 02 21 en linear classify
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-neural-networks-1/" title="2018 02 21 en neural networks 1" class="md-nav__link">
+      2018 02 21 en neural networks 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-neural-networks-2/" title="2018 02 21 en neural networks 2" class="md-nav__link">
+      2018 02 21 en neural networks 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-neural-networks-3/" title="2018 02 21 en neural networks 3" class="md-nav__link">
+      2018 02 21 en neural networks 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-neural-networks-case-study/" title="2018 02 21 en neural networks case study" class="md-nav__link">
+      2018 02 21 en neural networks case study
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-optimization-1/" title="2018 02 21 en optimization 1" class="md-nav__link">
+      2018 02 21 en optimization 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-optimization-2/" title="2018 02 21 en optimization 2" class="md-nav__link">
+      2018 02 21 en optimization 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-overview/" title="2018 02 21 en overview" class="md-nav__link">
+      2018 02 21 en overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-poster/" title="2018 02 21 en poster" class="md-nav__link">
+      2018 02 21 en poster
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-python-numpy-tutorial/" title="2018 02 21 en python numpy tutorial" class="md-nav__link">
+      2018 02 21 en python numpy tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-Readme/" title="2018 02 21 en Readme" class="md-nav__link">
+      2018 02 21 en Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-terminal-tutorial/" title="2018 02 21 en terminal tutorial" class="md-nav__link">
+      2018 02 21 en terminal tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-transfer-learning/" title="2018 02 21 en transfer learning" class="md-nav__link">
+      2018 02 21 en transfer learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cs231n-en/2018-02-21-en-understanding-cnn/" title="2018 02 21 en understanding cnn" class="md-nav__link">
+      2018 02 21 en understanding cnn
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3-3" type="checkbox" id="nav-4-3-3">
+    
+    <label class="md-nav__link" for="nav-4-3-3">
+      example
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-3-3">
+        example
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/2016-01-30-quick-latex/" title="2016 01 30 quick latex" class="md-nav__link">
+      2016 01 30 quick latex
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/2016-04-15-dive-into-gradient-decent/" title="2016 04 15 dive into gradient decent" class="md-nav__link">
+      2016 04 15 dive into gradient decent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/2017-01-01-perceptron/" title="2017 01 01 perceptron" class="md-nav__link">
+      2017 01 01 perceptron
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/2017-04-23-bias-variance/" title="2017 04 23 bias variance" class="md-nav__link">
+      2017 04 23 bias variance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/2017-05-12-nosql-in-python/" title="2017 05 12 nosql in python" class="md-nav__link">
+      2017 05 12 nosql in python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/2017-05-23-a-web-crawer-with-a-asyncio-coroutines-1/" title="2017 05 23 a web crawer with a asyncio coroutines 1" class="md-nav__link">
+      2017 05 23 a web crawer with a asyncio coroutines 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/2017-06-10-a-web-crawer-with-a-asyncio-coroutines-2/" title="2017 06 10 a web crawer with a asyncio coroutines 2" class="md-nav__link">
+      2017 06 10 a web crawer with a asyncio coroutines 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/2017-07-28-fork-exec-source/" title="2017 07 28 fork exec source" class="md-nav__link">
+      2017 07 28 fork exec source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/2017-07-30-bitcoin-explained-1/" title="2017 07 30 bitcoin explained 1" class="md-nav__link">
+      2017 07 30 bitcoin explained 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/2017-08-18-tendermint/" title="2017 08 18 tendermint" class="md-nav__link">
+      2017 08 18 tendermint
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/2017-09-25-ethereum-ultimate-guide/" title="2017 09 25 ethereum ultimate guide" class="md-nav__link">
+      2017 09 25 ethereum ultimate guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/2018-01-13-latex语法/" title="2018 01 13 latex语法" class="md-nav__link">
+      2018 01 13 latex语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/2018-10-01-latex语法/" title="2018 10 01 latex语法" class="md-nav__link">
+      2018 10 01 latex语法
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../工具/About/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../工具/Cheatsheet/" title="Cheatsheet" class="md-nav__link">
+      Cheatsheet
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="" title="文章" class="md-nav__link">
+      文章
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      日常
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        日常
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1">
+    
+    <label class="md-nav__link" for="nav-7-1">
+      test
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-1">
+        test
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../日常/test/testtest/" title="Testtest" class="md-nav__link">
+      Testtest
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-2" type="checkbox" id="nav-7-2">
+    
+    <label class="md-nav__link" for="nav-7-2">
+      常用
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-2">
+        常用
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../日常/常用/latex语法/" title="Latex语法" class="md-nav__link">
+      Latex语法
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      常用工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        常用工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../日常/常用工具/10分钟上手Pandas/" title="10分钟上手Pandas" class="md-nav__link">
+      10分钟上手Pandas
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-we-begin" title="BEFORE WE BEGIN" class="md-nav__link">
+    BEFORE WE BEGIN
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#big-reminder-make-sure-you-stop-your-instances" title="BIG REMINDER: Make sure you stop your instances!" class="md-nav__link">
+    BIG REMINDER: Make sure you stop your instances!
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-and-configure-your-account" title="Create and Configure Your Account" class="md-nav__link">
+    Create and Configure Your Account
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#launch-a-virtual-instance" title="Launch a Virtual Instance" class="md-nav__link">
+    Launch a Virtual Instance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connect-to-your-virtual-instance-and-download-the-assignment" title="Connect to Your Virtual Instance and Download the Assignment" class="md-nav__link">
+    Connect to Your Virtual Instance and Download the Assignment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-jupyter-notebook-with-google-compute-engine" title="Using Jupyter Notebook with Google Compute Engine" class="md-nav__link">
+    Using Jupyter Notebook with Google Compute Engine
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-a-static-ip-address" title="Getting a Static IP Address" class="md-nav__link">
+    Getting a Static IP Address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-firewall-rule" title="Adding a Firewall rule" class="md-nav__link">
+    Adding a Firewall rule
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-jupyter-notebook" title="Configuring Jupyter Notebook" class="md-nav__link">
+    Configuring Jupyter Notebook
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#launching-and-connecting-to-jupyter-notebook" title="Launching and connecting to Jupyter Notebook" class="md-nav__link">
+    Launching and connecting to Jupyter Notebook
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submission-transferring-files-from-your-instance-to-your-computer" title="Submission: Transferring Files From Your Instance To Your Computer" class="md-nav__link">
+    Submission: Transferring Files From Your Instance To Your Computer
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="google-cloud-tutorial">Google Cloud Tutorial<a class="headerlink" href="#google-cloud-tutorial" title="Permanent link">&para;</a></h1>
+<h2 id="before-we-begin">BEFORE WE BEGIN<a class="headerlink" href="#before-we-begin" title="Permanent link">&para;</a></h2>
+<h3 id="big-reminder-make-sure-you-stop-your-instances">BIG REMINDER: Make sure you stop your instances!<a class="headerlink" href="#big-reminder-make-sure-you-stop-your-instances" title="Permanent link">&para;</a></h3>
+<p>(We know you won't read until the very bottom once your assignment is running, so we are printing this at the top too since it is <strong><em>super important</em></strong>)</p>
+<p>Don't forget to <strong><em>stop your instance</em></strong> when you are done (by clicking on the stop button at the top of the page showing your instances), otherwise you will <strong><em>run out of credits</em></strong> and that will be very sad. :( </p>
+<p>If you follow our instructions below correctly, you should be able to restart your instance and the downloaded software will still be available.</p>
+<div class='fig figcenter fighighlight'>
+  <img src='/Dairy/assets/images/cs231n/sadpuppy_nocredits.png'>
+</div>
+
+<h2 id="create-and-configure-your-account">Create and Configure Your Account<a class="headerlink" href="#create-and-configure-your-account" title="Permanent link">&para;</a></h2>
+<p>For the class project and assignments, we offer an option to use Google Compute Engine for developing and testing your 
+implementations. This tutorial lists the necessary steps of working on the assignments using Google Cloud. <strong>We expect this tutorial to take about an hour. Don't get intimidated by the steps, we tried to make the tutorial detailed so that you are less likely to get stuck on a particular step. Please tag all questions related to Google Cloud with google_cloud on Piazza.</strong></p>
+<p>This tutorial goes through how to set up your own Google Compute Engine (GCE) instance to work on the assignments. Each student will have $100 in credit throughout the quarter. When you sign up for the first time, you also receive $300 credits from Google by default. Please try to use the resources judiciously. But if $100 ends up not being enough, we will try to adjust this number as the quarter goes on. <strong>Note: for assignment 1, we are only supporting python version 2.7 (the default installation from the script) and 3.5.3</strong>.</p>
+<p>First, if you don't have a Google Cloud account already, create one by going to the <a href="https://cloud.google.com/?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=2015-q2-cloud-na-gcp-skws-freetrial-en&amp;gclid=CP2e4PPpiNMCFU9bfgodGHsA1A" title="Title">Google Cloud homepage</a> and clicking on <strong>Compute</strong>. When you get to the next page, click on the blue <strong>TRY IT FREE</strong> button. If you are not logged into gmail, you will see a page that looks like the one below. Sign into your gmail account or create a new one if you do not already have an account. </p>
+<div class='fig figcenter fighighlight'>
+  <img src='/Dairy/assets/images/cs231n/cloud-launching-screen.png'>
+</div>
+
+<p>If you already have a gmail account, it will direct you to a signup page which looks like the following.
+<div class='fig figcenter fighighlight'>
+  <img src='/Dairy/assets/images/cs231n/cloud-for-free.png'>
+</div></p>
+<p>Click the appropriate <strong>yes</strong> or <strong>no</strong> button for the first option, and check <strong>yes</strong> for the latter two options after you have read the required agreements. Press the blue <strong>Agree and continue</strong> button to continue to the next page to enter the requested information (your name, billing address and credit card information). Once you have entered the required information, press the blue <strong>Start my free trial</strong> button. You will be greeted by a page like this: </p>
+<div class='fig figcenter fighighlight'>
+  <img src='/Dairy/assets/images/cs231n/cloud-dashboard-screen.png'>
+</div>
+
+<p>To change the name of your project, click on <strong>Manage project settings</strong> on the <strong>Project info</strong> button and save your changes. </p>
+<div class='fig figcenter fighighlight'>
+  <img src='/Dairy/assets/images/cs231n/cloud-instance-dashboard-screen.png'>
+</div>
+
+<h2 id="launch-a-virtual-instance">Launch a Virtual Instance<a class="headerlink" href="#launch-a-virtual-instance" title="Permanent link">&para;</a></h2>
+<p>To launch a virtual instance, go to the <strong>Compute Engine</strong> menu on the left column of your dashboard and click on <strong>VM instances</strong>.  Then click on the blue <strong>CREATE</strong> button on the next page. This will take you to a page that looks like the screenshot below. <strong>(NOTE: Please carefully read the instructions in addition to looking at the screenshots. The instructions tell you exactly what values to fill in).</strong></p>
+<div class='fig figcenter fighighlight'>
+  <img src='/Dairy/assets/images/cs231n/cloud-create-instance-screen.png'>
+</div>
+
+<p>Make sure that the Zone is set to be <strong>us-west1-b</strong> (especially for assignments where you need to use GPU instances). Under <strong>Machine type</strong> pick the <strong>8 vCPUs</strong> option. Click on the <strong>customize</strong> button under <strong>Machine type</strong> and make sure that the number of cores is set to 8 and the number of GPUs is set to <strong>None</strong> (we will not be using GPUs in assignment 1 and this tutorial will be updated with instructions for GPU usage). Click on the <strong>Change</strong> button under <strong>Boot disk</strong>, choose <strong>OS images</strong>, check <strong>Ubuntu 16.04 LTS</strong> and click on the blue <strong>select</strong> button. Check <strong>Allow HTTP traffic</strong> and <strong>Allow HTTPS traffic</strong>. Click on <strong>disk</strong> and then <strong>Disks</strong> and uncheck <strong>Delete boot disk when instance is deleted</strong> (Note that the "Disks" option may be hiding under an expandable URL at the bottom of that webform). Click on the blue <strong>Create</strong> button at the bottom of the page. You should have now successfully created a Google Compute Instance, it might take a few minutes to start running. Your screen should look something like the one below. When you want to stop running the instance, click on the blue stop button above. </p>
+<div class='fig figcenter fighighlight'>
+  <img src='/Dairy/assets/images/cs231n/cloud-instance-started.png'>
+</div>
+
+<p>Take note of your \&lt;YOUR-INSTANCE-NAME>, in this case, my instance name is instance-2. </p>
+<h2 id="connect-to-your-virtual-instance-and-download-the-assignment">Connect to Your Virtual Instance and Download the Assignment<a class="headerlink" href="#connect-to-your-virtual-instance-and-download-the-assignment" title="Permanent link">&para;</a></h2>
+<p>Now that you have created your virtual GCE, you want to be able to connect to it from your computer. The rest of this tutorial goes over how to do that using the command line. First, download the Google Cloud SDK that is appropriate for your platform from <a href="https://cloud.google.com/sdk/docs/" title="Title">here</a> and follow their installation instructions. <strong>NOTE: this tutorial assumes that you have performed step #4 on the website which they list as optional</strong>. When prompted, make sure you select us-west1-b as the time zone. The easiest way to connect is using the gcloud compute command below. The tool takes care of authentication for you. On OS X, run:</p>
+<div class="codehilite"><pre><span></span>./&lt;DIRECTORY-WHERE-GOOGLE-CLOUD-IS-INSTALLED&gt;/bin/gcloud compute ssh --zone=us-west1-b &lt;YOUR-INSTANCE-NAME&gt;
+</pre></div>
+
+<p>See <a href="https://cloud.google.com/compute/docs/instances/connecting-to-instance" title="Title">this page</a> for more detailed instructions. You are now ready to work on the assignments on Google Cloud. </p>
+<p>Run the following command to download the current assignment onto your GCE:</p>
+<div class="codehilite"><pre><span></span>wget http://cs231n.stanford.edu/assignments/2017/spring1617_assignment1.zip 
+</pre></div>
+
+<p>Then run:</p>
+<div class="codehilite"><pre><span></span>sudo apt-get install unzip
+</pre></div>
+
+<p>and </p>
+<div class="codehilite"><pre><span></span>unzip spring1617_assignment1.zip
+</pre></div>
+
+<p>to get the contents. You should now see a folder titled assignment**X**.  To install the necessary dependencies for assignment 1 (<strong>NOTE:</strong> you only need to do this for assignment 1), cd into the assignment directory and run the provided shell script: **(Note: you will need to hit the [<em>enter</em>] key at all the "[Y/n]" prompts)**</p>
+<div class="codehilite"><pre><span></span>cd assignment1 
+./setup_googlecloud.sh
+</pre></div>
+
+<p>You will be prompted to enter Y/N at various times during the download. Press enter for every prompt. You should now have all the software you need for assignment**X**. If you had no errors, you can proceed to work with your virtualenv as normal.</p>
+<p>I.e. run </p>
+<div class="codehilite"><pre><span></span>source .env/bin/activate
+</pre></div>
+
+<p>in your assignment directory to load the venv, and run </p>
+<div class="codehilite"><pre><span></span>deactivate
+</pre></div>
+
+<p>to exit the venv. See assignment handout for details.</p>
+<p><strong>NOTE</strong>: The instructions above will run everything needed using Python 2.7. If you would like to use Python 3.5 instead, edit setup_googlecloud.sh to replce the line </p>
+<div class="codehilite"><pre><span></span>virtualenv .env 
+</pre></div>
+
+<p>with </p>
+<div class="codehilite"><pre><span></span>virtualenv -p python3 .env
+</pre></div>
+
+<p>before running </p>
+<div class="codehilite"><pre><span></span>./setup_googlecloud.sh
+</pre></div>
+
+<h2 id="using-jupyter-notebook-with-google-compute-engine">Using Jupyter Notebook with Google Compute Engine<a class="headerlink" href="#using-jupyter-notebook-with-google-compute-engine" title="Permanent link">&para;</a></h2>
+<p>Many of the assignments will involve using Jupyter Notebook. Below, we discuss how to run Jupyter Notebook from your GCE instance and use it on your local browser. </p>
+<h3 id="getting-a-static-ip-address">Getting a Static IP Address<a class="headerlink" href="#getting-a-static-ip-address" title="Permanent link">&para;</a></h3>
+<p>Change the Extenal IP address of your GCE instance to be static (see screenshot below). 
+<div class='fig figcenter fighighlight'>
+  <img src='/Dairy/assets/images/cs231n/cloud-external-ip.png'>
+</div></p>
+<p>To Do this, click on the 3 line icon next to the <strong>Google Cloud Platform</strong> button on the top left corner of your screen, go to <strong>Networking</strong> and <strong>External IP addresses</strong> (see screenshot below).</p>
+<div class='fig figcenter fighighlight'>
+  <img src='/Dairy/assets/images/cs231n/cloud-networking-external-ip.png'>
+</div>
+
+<p>To have a static IP address, change <strong>Type</strong> from <strong>Ephemeral</strong> to <strong>Static</strong>. Enter your preffered name for your static IP, mine is assignment-1 (see screenshot below). And click on Reserve. Remember to release the static IP address when you are done because according to <a href="https://jeffdelaney.me/blog/running-jupyter-notebook-google-cloud-platform/" title="Title">this page</a> Google charges a small fee for unused static IPs. <strong>Type</strong> should now be set to <strong>Static</strong>. </p>
+<div class='fig figcenter fighighlight'>
+  <img src='/Dairy/assets/images/cs231n/cloud-networking-external-ip-naming.png'>
+</div>
+
+<p>Take note of your Static IP address (circled on the screenshot below). I used 104.196.224.11 for this tutorial.</p>
+<div class='fig figcenter fighighlight'>
+  <img src='/Dairy/assets/images/cs231n/cloud-networking-external-ip-address.png'>
+</div>
+
+<h3 id="adding-a-firewall-rule">Adding a Firewall rule<a class="headerlink" href="#adding-a-firewall-rule" title="Permanent link">&para;</a></h3>
+<p>One last thing you have to do is adding a new firewall rule allowing TCP acess to a particular \&lt;PORT-NUMBER>. I usually use 7000 or 8000 for \&lt;PORT-NUMBER>. Click on the 3 line icon at the top of the page next to <strong>Google Cloud Platform</strong>. On the menu that pops up on the left column, go to <strong>Networking</strong> and <strong>Firewall rules</strong> (see the screenshot below). </p>
+<div class='fig figcenter fighighlight'>
+  <img src='/Dairy/assets/images/cs231n/cloud-networking-firewall-rule.png'>
+</div>
+
+<p>Click on the blue <strong>CREATE FIREWALL RULE</strong> button. Enter whatever name you want: I used assignment1-rules. Enter 0.0.0.0/0 for <strong>Source IP ranges</strong> and tcp:\&lt;PORT-NUMBER> for <strong>Allowed protocols and ports</strong> where \&lt;PORT-NUMBER> is the number you used above. Click on the blue <strong>Create</strong> button. See the screen shot below.</p>
+<div class='fig figcenter fighighlight'>
+  <img src='/Dairy/assets/images/cs231n/cloud-networking-firewall-rule-create.png'>
+</div>
+
+<p><strong>NOTE:</strong> Some people are seeing a different screen where instead of <strong>Allowed protocols and ports</strong> there is a field titled <strong>Specified protocols and ports</strong>. You should enter tcp:\&lt;PORT-NUMBER> for this field if this is the page you see. Also, if you see a field titled <strong>Targets</strong> select <strong>All instances in the network</strong>.</p>
+<h3 id="configuring-jupyter-notebook">Configuring Jupyter Notebook<a class="headerlink" href="#configuring-jupyter-notebook" title="Permanent link">&para;</a></h3>
+<p>The following instructions are excerpts from <a href="https://haroldsoh.com/2016/04/28/set-up-anaconda-ipython-tensorflow-julia-on-a-google-compute-engine-vm/" title="Title">this page</a> that has more detailed instructions.</p>
+<p>On your GCE instance check where the Jupyter configuration file is located:</p>
+<div class="codehilite"><pre><span></span>ls ~/.jupyter/jupyter_notebook_config.py
+</pre></div>
+
+<p>Mine was in /home/timnitgebru/.jupyter/jupyter_notebook_config.py</p>
+<p>If it doesn’t exist, create one:</p>
+<div class="codehilite"><pre><span></span># Remember to activate your virtualenv (&#39;source .env/bin/activate&#39;) so you can actually run jupyter :)
+jupyter notebook --generate-config
+</pre></div>
+
+<p>Using your favorite editor (vim, emacs etc...) add the following lines to the config file, (e.g.: /home/timnitgebru/.jupyter/jupyter_notebook_config.py):</p>
+<div class="codehilite"><pre><span></span>c = get_config()
+
+c.NotebookApp.ip = &#39;*&#39;
+
+c.NotebookApp.open_browser = False
+
+c.NotebookApp.port = &lt;PORT-NUMBER&gt;
+</pre></div>
+
+<p>Where \&lt;PORT-NUMBER> is the same number you used in the prior section. Save your changes and close the file. </p>
+<h3 id="launching-and-connecting-to-jupyter-notebook">Launching and connecting to Jupyter Notebook<a class="headerlink" href="#launching-and-connecting-to-jupyter-notebook" title="Permanent link">&para;</a></h3>
+<p>The instructions below assume that you have SSH'd into your GCE instance using the prior instructions, have already downloaded and unzipped the current assignment folder into assignment**X** (where X is the assignment number), and have successfully configured Jupyter Notebook.</p>
+<p>If you are not already in the assignment directory, cd into it by running the following command:</p>
+<div class="codehilite"><pre><span></span>cd assignment1 
+</pre></div>
+
+<p>If you haven't already done so, activate your virtualenv by running:</p>
+<div class="codehilite"><pre><span></span>source .env/bin/activate
+</pre></div>
+
+<p>Launch Jupyter notebook using:</p>
+<div class="codehilite"><pre><span></span>jupyter-notebook --no-browser --port=&lt;PORT-NUMBER&gt; 
+</pre></div>
+
+<p>Where \&lt;PORT-NUMBER> is what you wrote in the prior section.</p>
+<p>On your local browser, if you go to http://\<YOUR-EXTERNAL-IP-ADDRESS>:\&lt;PORT-NUMBER>, you should see something like the screen below. My value for \&lt;YOUR-EXTERNAL-IP-ADDRESS> was 104.196.224.11 as mentioned above. You should now be able to start working on your assignments. </p>
+<div class='fig figcenter fighighlight'>
+  <img src='/Dairy/assets/images/cs231n/jupyter-screen.png'>
+</div>
+
+<h2 id="submission-transferring-files-from-your-instance-to-your-computer">Submission: Transferring Files From Your Instance To Your Computer<a class="headerlink" href="#submission-transferring-files-from-your-instance-to-your-computer" title="Permanent link">&para;</a></h2>
+<p>Once you are done with your assignments, run the submission script in your assignment folder. For assignment1, this will create a zip file called <code>assignment1.zip</code> containing the files you need to upload to Canvas. If you're not in the assignment1 directory already, CD into it by running</p>
+<div class="codehilite"><pre><span></span>cd assignment1
+</pre></div>
+
+<p>install <strong>zip</strong> by running</p>
+<div class="codehilite"><pre><span></span>sudo apt-get install zip
+</pre></div>
+
+<p>and then run </p>
+<div class="codehilite"><pre><span></span>bash collectSubmission.sh 
+</pre></div>
+
+<p>to create the zip file that you need to upload to canvas. Then copy the file to your local computer using the gcloud compute copy-file command as shown below. <strong>NOTE: run this command on your local computer</strong>:</p>
+<div class="codehilite"><pre><span></span>gcloud compute copy-files [INSTANCE_NAME]:[REMOTE_FILE_PATH] [LOCAL_FILE_PATH]
+</pre></div>
+
+<p>For example, to copy my files to my desktop I ran:</p>
+<div class="codehilite"><pre><span></span>gcloud compute copy-files instance-2:~/assignment1/assignment1.zip ~/Desktop
+</pre></div>
+
+<p>Another (perhaps easier) option proposed by a student is to directly download the zip file from Jupyter. After running the submission script and creating assignment1.zip, you can download that file directly from Jupyter. To do this, go to Jupyter Notebook and click on the zip file (in this case assignment1.zip). The file will be downloaded to your local computer. </p>
+<p>Finally, remember to upload the zip file containing your submission to <a href="https://canvas.stanford.edu/courses/66461"><strong><em>Canvas</em></strong></a>. (You can unzip the file locally if you want to double check your ipython notebooks and other code files are correctly inside).</p>
+<p>You can refer to <a href="https://cloud.google.com/compute/docs/instances/transfer-files" title="Title">this page</a> for more details on transferring files to/from Google Cloud.</p>
+<h1 id="big-reminder-make-sure-you-stop-your-instances_1">BIG REMINDER: Make sure you stop your instances!<a class="headerlink" href="#big-reminder-make-sure-you-stop-your-instances_1" title="Permanent link">&para;</a></h1>
+<p>Don't forget to stop your instance when you are done (by clicking on the stop button at the top of the page showing your instances). You can restart your instance and the downloaded software will still be available. </p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../2018-02-21-ch-convolutional-networks/" title="convolutional-networks" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                convolutional-networks
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../2018-02-21-ch-ipython-tutorial/" title="2018 02 21 ch ipython tutorial" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                2018 02 21 ch ipython tutorial
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2018 Martin Donath
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="http://struct.cc" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/1007530194" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/1007530194" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/1007530194" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.189d7058.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../../../.."}})</script>
+      
+        <script src="../../../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
