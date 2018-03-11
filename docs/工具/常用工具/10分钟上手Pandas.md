@@ -4,17 +4,23 @@ categories: 常用工具
 title: 10分钟上手Pandas
 mathjax: true
 ---
+# 简介
 
+## 简介
 
+### 简介
 
 [来自官网十分钟教学](http:#pandas.pydata.org/pandas-docs/stable/10min.html#) 
 Pandas的主要数据结构：
 
-DimensionsNameDescription1Series1D labeled homogeneously-typed array2DataFrameGeneral 2D labeled, size-mutable tabular structure with potentially heterogeneously-typed columns3PanelGeneral 3D labeled, also size-mutable array
+|Dimensions|Name|Description|
+| :----:  |  :---:  | :----: |  :--: |
+|1|Series|1D labeled homogeneously-typed array|
+|2|DataFrame|General 2D labeled, size-mutable tabular structure with potentially heterogeneously-typed columns|
+|3|PanelGeneral |3D labeled, also size-mutable array|
 
 
-
-# 一、引入
+## 一、引入
 
 ```python
 import pandas as pd   #数据分析，代码基于numpy
@@ -25,9 +31,9 @@ import matplotlib.pyplot as plt      #画图
 [matplotlib图库具有大量代码案例，可直接使用](http:#matplotlib.org/gallery.html) 
 [pandas 官网教程](http:#pandas.pydata.org/pandas-docs/stable/tutorials.html)
 
-# 二、创建对象
+## 二、创建对象
 
-+ ## Series字典对象
+### Series字典对象
 
 ```python
 >>>s = pd.Series([1,3,5,np.nan,6,8])   #默认以数字从0开始作为键值,使用np.nan表示不参与计算
@@ -55,7 +61,7 @@ Index(['a', 'b', 'c', 'd'], dtype='object')
 array([1, 2, 3, 4], dtype=int64)
 ```
 
-+ ## DataFrame表格对象
+### DataFrame表格对象
 
 ```python
 In [10]: df2 = pd.DataFrame({ 'A' : 1.,
@@ -106,9 +112,9 @@ F            object
 dtype: object
 ```
 
-# 三、查看数据
+## 三、查看数据
 
-+ ## 查看头尾数据：
+### 查看头尾数据：
 
 ```python
 In [14]: df.head()    #默认值5
@@ -128,7 +134,7 @@ Out[15]:
 2013-01-06 -0.673690  0.113648 -1.478427  0.524988
 ```
 
-+ ## 查看行键、列键、数据：
+### 查看行键、列键、数据：
 
 ```python
 In [16]: df.index
@@ -150,7 +156,7 @@ array([[ 0.4691, -0.2829, -1.5091, -1.1356],
        [-0.6737,  0.1136, -1.4784,  0.525 ]])
 ```
 
-+ ## 查看数据整体概况，和、平均值、最大、最小等：
+### 查看数据整体概况，和、平均值、最大、最小等：
 
 ```python
 In [19]: df.describe()
@@ -200,7 +206,7 @@ top Chronopoulos, Mr. Apostolos male    CA. 2343    G6  S
 freq    1   577 7   4   644
 ```
 
-+ ## 行或列平均值：
+### 行或列平均值：
 
 ```python
 In [61]: df.mean()
@@ -225,7 +231,7 @@ Out[62]:
 Freq: D, dtype: float64
 ```
 
-+ ## 转置：
+### 转置：
 
 ```python
 In [20]: df.T
@@ -237,7 +243,7 @@ C   -1.509059    0.119209   -0.494929   -1.039575    0.276232   -1.478427
 D   -1.135632   -1.044236    1.071804    0.271860   -1.087401    0.524988
 ```
 
-+ ## 根据行、列排序：
+### 根据行、列排序：
 
 ```python
 In [21]: df.sort_index(axis=1, ascending=False)    #根据轴，可以.sort_index(axis=0, by=None, ascending=True)。by参数只能对列
@@ -262,9 +268,9 @@ Out[22]:
 2013-01-05 -0.424972  0.567020  0.276232 -1.087401
 ```
 
-# 四、选择数据
+## 四、选择数据
 
-+ ## 选择单列：
+### 选择单列：
 
 ```python
 In [23]: df['A']  #可使用df.A
@@ -278,7 +284,7 @@ Out[23]:
 Freq: D, Name: A, dtype: float64
 ```
 
-+ ## 选择局部：
+### 选择局部：
 
 ```python
 In [24]: df[0:3]
@@ -296,7 +302,7 @@ Out[25]:
 2013-01-04  0.721555 -0.706771 -1.039575  0.271860
 ```
 
-+ ## 标签选择： 
+### 标签选择： 
 通过行键，列键
 
 ```python
@@ -348,7 +354,7 @@ In [31]: df.at[dates[0],'A']     #选择具体某个元素，会降维
 Out[31]: 0.46911229990718628
 ```
 
-+ ## 位置选择： 
+### 位置选择： 
 存在一个从0开始类似于数组
 
 ```python
@@ -408,7 +414,7 @@ In [38]: df.iat[1,1]
 Out[38]: -0.17321464905330858
 ```
 
-+ ## 布尔索引：
+### 布尔索引：
 
 ```python
 In [39]: df[df.A > 0]
@@ -453,9 +459,9 @@ Out[44]:
 2013-01-05 -0.424972  0.567020  0.276232 -1.087401  four
 ```
 
-# 五、修改数据
+## 五、修改数据
 
-+ ## 读取时将多列并成一列：
+### 读取时将多列并成一列：
 
 ```python
 def parse(x):
@@ -463,7 +469,7 @@ def parse(x):
 dataset = read_csv('raw.csv',  parse_dates = [['year', 'month', 'day', 'hour']], index_col=0, date_parser=parse)
 ```
 
-+ ## Series赋值列：
+### Series赋值列：
 
 ```python
 In [45]: s1 = pd.Series([1,2,3,4,5,6], index=pd.date_range('20130102', periods=6))
@@ -481,7 +487,7 @@ Freq: D, dtype: int64
 In [47]: df['F'] = s1     #通过Series赋值列
 ```
 
-+ ## 赋值单个元素：
+### 赋值单个元素：
 
 ```python
 df.at[dates[0],'A'] = 0
@@ -517,7 +523,7 @@ Out[54]:
 2013-01-06 -0.673690 -0.113648 -1.478427 -5 -5.0
 ```
 
-+ ## 修改索引：
+### 修改索引：
 
 ```python
 In [55]: df1 = df.reindex(index=dates[0:4], columns=list(df.columns) + ['E'])   #修改DataFrame的键
@@ -533,7 +539,7 @@ Out[57]:
 2013-01-04  0.721555 -0.706771 -1.039575  5  3.0  NaN
 ```
 
-# 六、缺失值处理
+## 六、缺失值处理
 
 pandas用numpy.nan表示缺失值，不参与计算。 
 + ## 去掉缺失行：
@@ -545,7 +551,7 @@ Out[58]:
 2013-01-02  1.212112 -0.173215  0.119209  5  1.0  1.0
 ```
 
-+ ## 填充缺失值：
+### 填充缺失值：
 
 ```python
 In [59]: df1.fillna(value=5)   #对缺失值处进行填充
@@ -557,7 +563,7 @@ Out[59]:
 2013-01-04  0.721555 -0.706771 -1.039575  5  3.0  5.0
 ```
 
-+ ## 判断何处缺失：
+### 判断何处缺失：
 
 ```python
 In [60]: pd.isnull(df1)    #判断位置元素是否为缺失值
@@ -569,9 +575,9 @@ Out[60]:
 2013-01-04  False  False  False  False  False   True
 ```
 
-# 七、操作
+## 七、操作
 
-+ ## 偏移（对齐）元素：
+### 偏移（对齐）元素：
 
 ```python
 In [63]: s = pd.Series([1,3,5,np.nan,6,8], index=dates).shift(2)                   #序列元素偏移两位
@@ -597,7 +603,7 @@ Out[65]:
 2013-01-06       NaN       NaN       NaN  NaN  NaN
 ```
 
-+ ## 对元素应用函数：
+### 对元素应用函数：
 
 ```python
 In [66]: df.apply(np.cumsum)    #对对象每个元素应用函数
@@ -620,7 +626,7 @@ F    4.000000
 dtype: float64
 ```
 
-+ ## 直方图：
+### 直方图：
 
 ```python
 In [68]: s = pd.Series(np.random.randint(0, 7, size=10))
@@ -648,7 +654,7 @@ Out[70]:
 dtype: int64
 ```
 
-+ ## 字符串操作：
+### 字符串操作：
 
 ```python
 In [71]: s = pd.Series(['A', 'B', 'C', 'Aaba', 'Baca', np.nan, 'CABA', 'dog', 'cat'])
@@ -667,9 +673,9 @@ Out[72]:
 dtype: object
 ```
 
-# 八、合并
+## 八、合并
 
-+ ## Comcat：
+### Comcat：
 
 ```python
 In [73]: df = pd.DataFrame(np.random.randn(10, 4))
@@ -706,7 +712,7 @@ Out[76]:
 9  1.193555 -0.077118 -0.408530 -0.862495
 ```
 
-+ ## Join：
+### Join：
 
 ```python
 In [78]: right = pd.DataFrame({'key': ['foo', 'foo'], 'rval': [4, 5]})
@@ -756,7 +762,7 @@ Out[86]:
 1  bar     2     5
 ```
 
-+ ## Append：
+### Append：
 
 ```python
 In [87]: df = pd.DataFrame(np.random.randn(8, 4), columns=['A','B','C','D'])
@@ -789,7 +795,7 @@ Out[90]:
 8  1.453749  1.208843 -0.080952 -0.264610
 ```
 
-# 九、分组
+## 九、分组
 
 ```python
 In [91]: df = pd.DataFrame({'A' : ['foo', 'bar', 'foo', 'bar',
@@ -833,9 +839,9 @@ foo one   -1.195665 -0.616981
     two    2.414034  1.600434
 ```
 
-# 十、重切片
+## 十、重切片
 
-+ ## stack：压缩DataFrame列
+### stack：压缩DataFrame列
 
 ```python
 In [99]: df2
@@ -862,7 +868,7 @@ baz    one     A   -1.575170
 dtype: float64
 ```
 
-+ ## unstack反解压到上一层，不同参数解压层不同
+### unstack反解压到上一层，不同参数解压层不同
 
 ```python
 In [102]: stacked.unstack()
@@ -892,7 +898,7 @@ one    A  0.029399 -1.575170
 two    A  0.282696  0.816482
 ```
 
-+ ## 透视Pivot表：
+### 透视Pivot表：
 
 ```python
 In [106]: df
@@ -925,9 +931,9 @@ two   A       NaN  0.100900
       C       NaN  0.536826
 ```
 
-# 十一、时间序列
+## 十一、时间序列
 
-+ ## 生成：
+### 生成：
 
 ```python
 In [108]: rng = pd.date_range('1/1/2012', periods=100, freq='S')
@@ -966,7 +972,7 @@ Out[115]:
 Freq: D, dtype: float64
 ```
 
-+ ## 转换时间区：
+### 转换时间区：
 
 ```python
 In [116]: ts_utc.tz_convert('US/Eastern')
@@ -979,7 +985,7 @@ Out[116]:
 Freq: D, dtype: float64
 ```
 
-+ ## 显示格式转换：
+### 显示格式转换：
 
 ```python
 In [117]: rng = pd.date_range('1/1/2012', periods=5, freq='M')
@@ -1033,7 +1039,7 @@ Out[126]:
 Freq: H, dtype: float64
 ```
 
-# 十二、categoricals
+## 十二、categoricals
 
 version 0.15后DataFrame能够包含categorical
 
@@ -1053,13 +1059,13 @@ Name: grade, dtype: category
 Categories (3, object): [a, b, e]
 ```
 
-+ ## 重命名categorical：
+### 重命名categorical：
 
 ```python
 df["grade"].cat.categories = ["very good", "good", "very bad"]
 ```
 
-+ ## 重排categorical并加入缺失categorical：
+### 重排categorical并加入缺失categorical：
 
 ```python
 In [131]: df["grade"] = df["grade"].cat.set_categories(["very bad", "bad", "medium", "good", "very good"])
@@ -1076,7 +1082,7 @@ Name: grade, dtype: category
 Categories (5, object): [very bad, bad, medium, good, very good]
 ```
 
-+ ## 根据categorical排序：
+### 根据categorical排序：
 
 ```python
 In [133]: df.sort_values(by="grade")
@@ -1089,7 +1095,7 @@ Out[133]:
 3   4         a  very good
 ```
 
-+ ## 分组categorical：
+### 分组categorical：
 
 ```python
 In [134]: df.groupby("grade").size()
@@ -1103,14 +1109,14 @@ very good    3
 dtype: int64
 ```
 
-# 十三、画图
+## 十三、画图
 
 [官方文档](http:#pandas.pydata.org/pandas-docs/stable/visualization.html#visualization) 
 一般不使用pandas的画图功能，而使用其他如matplotlib等。
 
-# 十四、读取存储
+## 十四、读取存储
 
-+ ## CSV：
+### CSV：
 
 ```python
 写入：
@@ -1138,7 +1144,7 @@ Out[142]:
 [1000 rows x 5 columns]
 ```
 
-+ ## HDF5：
+### HDF5：
 
 ```python
 df.to_hdf('foo.h5','df')
@@ -1164,7 +1170,7 @@ Out[144]:
 [1000 rows x 4 columns]
 ```
 
-+ ## EXCEL：
+### EXCEL：
 
 ```python
 df.to_excel('foo.xlsx', sheet_name='Sheet1')

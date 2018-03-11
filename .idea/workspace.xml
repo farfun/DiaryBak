@@ -2,94 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd812bb5-d92d-442c-ba5d-56d41b5654b8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-Readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-assignment2_google_cloud.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-aws-tutorial.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-classification.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-convnet-tips.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-convolutional-networks.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-google_cloud_tutorial.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-ipython-tutorial.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-linear-classify.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-neural-networks-1.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-neural-networks-2.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-neural-networks-3.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-neural-networks-case-study.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-optimization-1.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-optimization-2.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-overview.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-poster.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-python-numpy-tutorial.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-terminal-tutorial.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-transfer-learning.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-understanding-cnn.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-Readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-assignment2_google_cloud.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-aws-tutorial.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-classification.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-convnet-tips.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-convolutional-networks.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-google_cloud_tutorial.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-ipython-tutorial.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-linear-classify.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-neural-networks-1.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-neural-networks-2.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-neural-networks-3.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-neural-networks-case-study.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-optimization-1.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-optimization-2.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-overview.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-poster.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-python-numpy-tutorial.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-terminal-tutorial.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-transfer-learning.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/cs231n-en/2018-02-21-en-understanding-cnn.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example/2016-01-30-quick-latex.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example/2016-04-15-dive-into-gradient-decent.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example/2017-01-01-perceptron.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example/2017-04-23-bias-variance.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example/2017-05-12-nosql-in-python.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example/2017-05-23-a-web-crawer-with-a-asyncio-coroutines-1.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example/2017-06-10-a-web-crawer-with-a-asyncio-coroutines-2.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example/2017-07-28-fork-exec-source.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example/2017-07-30-bitcoin-explained-1.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example/2017-08-18-tendermint.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example/2017-09-25-ethereum-ultimate-guide.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example/2018-01-13-latex语法.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example/2018-10-01-latex语法.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-02-10-welcome-to-jekyll.markdown" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-02-12-create-my-blog-with-jekyll.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-03-21-teach-girlfriend-html-css.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-03-26-sublimeLinter.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-04-06-arrays-similar.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-04-12-Syncing-a-fork.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-04-15-baidu-ife-1.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-04-22-baidu-ife-2-javascript.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-05-18-front-end-tools.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-05-20-scope.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-06-11-JavaScript-function.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-06-12-JavaScript-this.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-06-14-JavaScript-closure.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-06-15-JavaScript-Object-Oriented.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-06-17-web-app.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-06-18-weinre.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-07-09-JavaScript-Net.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-07-24-low-IE-click-empty-block-bug.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2015-12-31-History-API.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2016-03-12-jekyll-theme-version-2.0.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2016-05-06-regular-expression-group.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2016-06-07-JavaScript-good-parts-note1.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2016-06-08-JavaScript-good-parts-note2.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2016-06-10-JavaScript-good-parts-note3.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2016-06-14-how-to-use-babel.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2016-07-07-git-clone-not-master-branch.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2016-10-16-shuffle-algorithm.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2016-11-22-js-create-file-and-download.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/2016-11-25-how-to-write-a-count-down.md" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/要做的.md" afterPath="$PROJECT_DIR$/docs/ToDo.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/书籍/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/工具/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/工具/shell显示时间.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/工具/常用工具/10分钟上手Latex.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/工具/常用工具/10分钟上手Python.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/文章/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/日常/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/material/assets/stylesheets/auto-number-title.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/深度学习/10分钟上手Pandas.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/日常/常用/latex语法.md" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/日常/常用工具/10分钟上手Pandas.md" afterPath="$PROJECT_DIR$/docs/工具/常用工具/10分钟上手Pandas.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/diary/src/GetAll.py" afterPath="$PROJECT_DIR$/diary/src/GetAll.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/AboutMe.md" afterPath="$PROJECT_DIR$/docs/AboutMe.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/ToDo.md" afterPath="$PROJECT_DIR$/docs/ToDo.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.md" afterPath="$PROJECT_DIR$/docs/index.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/学习/转载/example2/baidu-ife-2-javascript.md" afterPath="$PROJECT_DIR$/docs/学习/转载/example2/baidu-ife-2-javascript.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/material/assets/javascripts/application.189d7058.js" afterPath="$PROJECT_DIR$/material/assets/javascripts/application.189d7058.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/material/assets/javascripts/lunr/lunr.da.js" afterPath="$PROJECT_DIR$/material/assets/javascripts/lunr/lunr.da.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/material/assets/javascripts/lunr/lunr.de.js" afterPath="$PROJECT_DIR$/material/assets/javascripts/lunr/lunr.de.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/material/assets/javascripts/modernizr.1aa3b519.js" afterPath="$PROJECT_DIR$/material/assets/javascripts/modernizr.1aa3b519.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/material/assets/stylesheets/application-palette.6079476c.css" afterPath="$PROJECT_DIR$/material/assets/stylesheets/application-palette.6079476c.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/material/assets/stylesheets/application.78aab2dc.css" afterPath="$PROJECT_DIR$/material/assets/stylesheets/application.78aab2dc.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mkdocs.bak.yml" afterPath="$PROJECT_DIR$/mkdocs.bak.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mkdocs.bak2.yml" afterPath="$PROJECT_DIR$/mkdocs.bak2.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mkdocs.yml" afterPath="$PROJECT_DIR$/mkdocs.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/sitemap.xml" afterPath="$PROJECT_DIR$/site/sitemap.xml" />
     </list>
@@ -104,47 +42,10 @@
     <SUITE FILE_PATH="coverage/Diary$MoveFileFromQuiver.coverage" NAME="MoveFileFromQuiver Coverage Results" MODIFIED="1519363968646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diary/src" />
     <SUITE FILE_PATH="coverage/Diary$server.coverage" NAME="server Coverage Results" MODIFIED="1519026357862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Editor" />
     <SUITE FILE_PATH="coverage/Diary$Test1.coverage" NAME="Test1 Coverage Results" MODIFIED="1519356574170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diary/src" />
-    <SUITE FILE_PATH="coverage/Diary$GetAll.coverage" NAME="GetAll Coverage Results" MODIFIED="1520660259082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diary/src" />
+    <SUITE FILE_PATH="coverage/Diary$GetAll.coverage" NAME="GetAll Coverage Results" MODIFIED="1520701814622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diary/src" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GetAll.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/diary/src/GetAll.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="81" column="40" lean-forward="false" selection-start-line="81" selection-start-column="40" selection-end-line="81" selection-end-column="40" />
-              <folding>
-                <element signature="e#159#168#0" expanded="true" />
-                <element signature="e#1510#1908#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/index.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="450">
-                <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mkdocs.yml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mkdocs.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="188" column="14" lean-forward="false" selection-start-line="188" selection-start-column="14" selection-end-line="188" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -157,18 +58,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>misc</find>
-      <find>pdf</find>
-      <find>res</find>
-      <find>abc1</find>
-      <find>!!python/str</find>
-      <find>coding</find>
-      <find>Cheat</find>
-      <find>{{ site.baseurl }}{{ site.images }}/MachineLearninginAction</find>
-      <find>{{ site.baseurl }}{{ site.images }}/tensorflow</find>
-      <find>{{ site.baseurl }}{{ site.images }}/深度学习</find>
-      <find>](</find>
-      <find>{{</find>
       <find>site</find>
       <find>toc.title</find>
       <find>main</find>
@@ -176,7 +65,6 @@
       <find>main__in</find>
       <find>md-main</find>
       <find>md-side</find>
-      <find>md-sidebar--secondary</find>
       <find>pow</find>
       <find>squi</find>
       <find>repo_name</find>
@@ -187,6 +75,19 @@
       <find>$$</find>
       <find>title</find>
       <find>repo_</find>
+      <find>page.toc</find>
+      <find>122</find>
+      <find>md-sidebar--secondary</find>
+      <find>blur</find>
+      <find>data-md-state</find>
+      <find>md-nav__list</find>
+      <find>applica</find>
+      <find>h1</find>
+      <find>before</find>
+      <find>\n</find>
+      <find>h2c</find>
+      <find>content</find>
+      <find>h2</find>
     </findStrings>
     <replaceStrings>
       <replace>resources</replace>
@@ -202,10 +103,12 @@
       <dir>$PROJECT_DIR$/docs/转载/cs231n-ch</dir>
       <dir>$PROJECT_DIR$/docs/转载/cs231n-en</dir>
       <dir>$PROJECT_DIR$/material/partials</dir>
-      <dir>$PROJECT_DIR$/material</dir>
       <dir>$PROJECT_DIR$/docs/books</dir>
       <dir>$PROJECT_DIR$/docs</dir>
       <dir>$PROJECT_DIR$</dir>
+      <dir>$PROJECT_DIR$/material/assets</dir>
+      <dir>$PROJECT_DIR$/material/assets/stylesheets</dir>
+      <dir>$PROJECT_DIR$/material</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -214,18 +117,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/_site/posts/cs231n-ch/chaws-tutorial.html" />
-        <option value="$PROJECT_DIR$/_site/posts/cs231n-ch/chassignment2_google_cloud.html" />
-        <option value="$PROJECT_DIR$/about.md" />
-        <option value="$PROJECT_DIR$/_site/index.html" />
-        <option value="$PROJECT_DIR$/_posts/about.md" />
-        <option value="$PROJECT_DIR$/assets/_sass/_layout.scss" />
-        <option value="$PROJECT_DIR$/assets/_sass/_normalize.scss" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/_site/posts.html" />
-        <option value="$PROJECT_DIR$/_includes/header.html" />
-        <option value="$PROJECT_DIR$/assets/js/scripts.js" />
-        <option value="$PROJECT_DIR$/_posts/test/2018-02-21-testtest.md" />
         <option value="$PROJECT_DIR$/_site/posts/test/testtest.html" />
         <option value="$PROJECT_DIR$/diary/src/Test1.py" />
         <option value="$PROJECT_DIR$/_posts/tensorflow/如何选择优化器 optimizer.md" />
@@ -245,26 +136,38 @@
         <option value="$PROJECT_DIR$/config/jupyter_notebook_config.py" />
         <option value="$PROJECT_DIR$/docs/index.md" />
         <option value="$PROJECT_DIR$/mkdocs.yml.bak" />
-        <option value="$PROJECT_DIR$/mkdocs.bak2.yml" />
         <option value="$PROJECT_DIR$/diary/src/data1.yml" />
         <option value="$PROJECT_DIR$/docs/深度学习/2018-02-23-主成分分析.md" />
         <option value="$PROJECT_DIR$/docs/mathjaxhelper.js" />
         <option value="$PROJECT_DIR$/docs/tensorflow/如何选择优化器 optimizer.md" />
         <option value="$PROJECT_DIR$/docs/深度学习/10分钟上手Pandas.md" />
         <option value="$PROJECT_DIR$/docs/深度学习/矩阵求导.md" />
-        <option value="$PROJECT_DIR$/material/assets/stylesheets/application.78aab2dc.css" />
-        <option value="$PROJECT_DIR$/material/assets/stylesheets/application-palette.6079476c.css" />
         <option value="$PROJECT_DIR$/docs/转载/cs231n-en/2018-02-21-en-optimization-2.md" />
         <option value="$PROJECT_DIR$/docs/转载/cs231n-ch/2018-02-21-ch-google_cloud_tutorial.md" />
         <option value="$PROJECT_DIR$/docs/机器学习实战/01.机器学习基础.md" />
         <option value="$PROJECT_DIR$/docs/books/DeepLearning.md" />
         <option value="$PROJECT_DIR$/docs/深度学习/最小二乘法.md" />
-        <option value="$PROJECT_DIR$/docs/AboutMe.md" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/docs/ToDo.md" />
+        <option value="$PROJECT_DIR$/docs/工具/shell显示时间.md" />
+        <option value="$PROJECT_DIR$/docs/学习/转载/example2/baidu-ife-2-javascript.md" />
+        <option value="$PROJECT_DIR$/docs/书籍/index.md" />
+        <option value="$PROJECT_DIR$/docs/AboutMe.md" />
+        <option value="$PROJECT_DIR$/docs/日常/常用/latex语法.md" />
+        <option value="$PROJECT_DIR$/docs/工具/常用工具/10分钟上手Latex.md" />
         <option value="$PROJECT_DIR$/diary/src/GetAll.py" />
+        <option value="$PROJECT_DIR$/material/assets/stylesheets/application-palette.6079476c.css" />
+        <option value="$PROJECT_DIR$/material/assets/javascripts/application.189d7058.js" />
+        <option value="$PROJECT_DIR$/material/assets/javascripts/modernizr.1aa3b519.js" />
+        <option value="$PROJECT_DIR$/material/assets/javascripts/lunr/lunr.da.js" />
+        <option value="$PROJECT_DIR$/material/assets/javascripts/lunr/lunr.de.js" />
+        <option value="$PROJECT_DIR$/docs/工具/常用工具/10分钟上手Pandas.md" />
+        <option value="$PROJECT_DIR$/material/assets/stylesheets/auto-number-title.css" />
+        <option value="$PROJECT_DIR$/mkdocs.bak2.yml" />
         <option value="$PROJECT_DIR$/mkdocs.bak.yml" />
+        <option value="$PROJECT_DIR$/material/base.html" />
+        <option value="$PROJECT_DIR$/material/assets/stylesheets/application.78aab2dc.css" />
         <option value="$PROJECT_DIR$/mkdocs.yml" />
+        <option value="$PROJECT_DIR$/docs/ToDo.md" />
       </list>
     </option>
   </component>
@@ -309,44 +212,31 @@
             <path>
               <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
               <item name="Diary" type="462c0819:PsiDirectoryNode" />
-              <item name="diary" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Diary" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
               <item name="Diary" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="学习" type="462c0819:PsiDirectoryNode" />
+              <item name="material" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
               <item name="Diary" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="学习" type="462c0819:PsiDirectoryNode" />
-              <item name="转载" type="462c0819:PsiDirectoryNode" />
+              <item name="material" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
               <item name="Diary" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="学习" type="462c0819:PsiDirectoryNode" />
-              <item name="转载" type="462c0819:PsiDirectoryNode" />
-              <item name="example2" type="462c0819:PsiDirectoryNode" />
+              <item name="material" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
               <item name="Diary" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="工具" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Diary" type="462c0819:PsiDirectoryNode" />
-              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="material" type="462c0819:PsiDirectoryNode" />
+              <item name="partials" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -361,18 +251,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/工具/常用工具" />
       <recent name="$PROJECT_DIR$/docs/工具" />
       <recent name="$PROJECT_DIR$/docs/书籍" />
       <recent name="$PROJECT_DIR$/docs/学习" />
       <recent name="$PROJECT_DIR$/docs/日常" />
-      <recent name="$PROJECT_DIR$/docs/books/resources" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/学习" />
+      <recent name="$PROJECT_DIR$/docs/工具" />
+      <recent name="$PROJECT_DIR$/docs/日常" />
+      <recent name="$PROJECT_DIR$/docs/文章" />
       <recent name="$PROJECT_DIR$/docs" />
-      <recent name="$PROJECT_DIR$/docs/books" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/docs/深度学习" />
-      <recent name="$PROJECT_DIR$/docs/转载/cs231n-ch" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -561,15 +451,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="723" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3789809" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14649682" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32471728" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2641357" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -577,7 +467,6 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42038217" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -616,174 +505,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jupyters/Cheatsheet.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/工具/Cheatsheet.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="259">
-            <caret line="33" column="3" lean-forward="true" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/日常/常用/latex语法.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="75">
-            <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="1025" column="0" lean-forward="false" selection-start-line="1025" selection-start-column="0" selection-end-line="1025" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda2/lib/python2.7/site-packages/yaml/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="63" column="4" lean-forward="false" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.2/python_stubs/1283554116/__builtin__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="414" column="4" lean-forward="false" selection-start-line="414" selection-start-column="4" selection-end-line="414" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/jupyter_notebook_config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="570" column="39" lean-forward="false" selection-start-line="570" selection-start-column="39" selection-end-line="570" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/diary/src/data2.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-572">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/diary/src/data1.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/mathjaxhelper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/书籍/机器学习实战/00naive-bayes-discuss.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-306">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/学习/深度学习/主成分分析.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="217">
-            <caret line="98" column="13" lean-forward="false" selection-start-line="98" selection-start-column="4" selection-end-line="98" selection-end-column="13" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/学习/深度学习/10分钟上手Pandas.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="138">
-            <caret line="3237" column="0" lean-forward="true" selection-start-line="3237" selection-start-column="0" selection-end-line="3237" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-neural-networks-1.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-3230">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-neural-networks-3.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="114">
-            <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-neural-networks-2.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="114">
-            <caret line="50" column="244" lean-forward="false" selection-start-line="50" selection-start-column="244" selection-end-line="50" selection-end-column="244" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-optimization-2.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-27">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-optimization-1.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-27">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-convolutional-networks.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="114">
-            <caret line="77" column="569" lean-forward="false" selection-start-line="77" selection-start-column="565" selection-end-line="77" selection-end-column="569" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-classification.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -808,34 +529,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/material/assets/stylesheets/application.78aab2dc.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="3284" column="29" lean-forward="true" selection-start-line="3284" selection-start-column="29" selection-end-line="3284" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/material/partials/toc.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="54" lean-forward="false" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/material/assets/stylesheets/application-palette.6079476c.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mkdocs.bak2.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="19" column="18" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -844,6 +537,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
           <caret line="44" column="32" lean-forward="false" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -851,6 +545,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="12" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -858,6 +553,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
           <caret line="49" column="25" lean-forward="false" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -932,44 +628,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/AboutMe.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="116">
-            <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/工具/About.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="256">
-            <caret line="95" column="18" lean-forward="true" selection-start-line="95" selection-start-column="18" selection-end-line="95" selection-end-column="18" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/学习/转载/cs231n-ch/2018-02-21-ch-transfer-learning/index.html" />
     <entry file="file://$PROJECT_DIR$/material/mkdocs_theme.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-767">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/material/main.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/material/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2792">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
@@ -1004,33 +674,274 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/ToDo.md">
+    <entry file="file://$PROJECT_DIR$/docs/工具/shell显示时间.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="60">
-            <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <first_editor relative-caret-position="120">
+            <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/diary/src/GetAll.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="81" column="40" lean-forward="false" selection-start-line="81" selection-start-column="40" selection-end-line="81" selection-end-column="40" />
-          <folding>
-            <element signature="e#159#168#0" expanded="true" />
-            <element signature="e#1510#1908#0" expanded="false" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/docs/学习/转载/example2/baidu-ife-1.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding>
+              <marker date="1520620784000" expanded="true" signature="4363:4481" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="4486:4519" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="5418:5643" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="5429:5574" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="5585:5635" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="5672:5740" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="5809:5921" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="6206:6251" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="6902:7255" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="6913:7058" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="7069:7247" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="7095:7195" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="7283:7310" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="7317:7433" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="7441:7515" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="7524:7576" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="7639:7723" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="7731:7805" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="7814:7866" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="8060:8366" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="8071:8218" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="8229:8358" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="8390:8475" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="8482:8556" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="8564:8613" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="8884:9513" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="8895:9053" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="9064:9505" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="9089:9493" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="9120:9249" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="9160:9230" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="9279:9362" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="9394:9478" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="9536:9566" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="9573:9638" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="9650:9674" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="9680:9824" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="9781:9822" ph="/*...*/" />
+              <marker date="1520620784000" expanded="true" signature="9832:9980" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="9936:9978" ph="/*...*/" />
+              <marker date="1520620784000" expanded="true" signature="10156:10814" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="10167:10310" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="10321:10806" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="10424:10683" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="10712:10794" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="10838:10903" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="10910:10977" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="10983:11036" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="11413:11782" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="11424:11571" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="11582:11774" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="11808:11838" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="11843:11946" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="12587:13017" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="12598:12728" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="12739:13009" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="12774:12960" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="12805:12902" ph="..." />
+              <marker date="1520620784000" expanded="true" signature="13041:13071" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="13088:13165" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="13176:13193" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="13200:13266" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="13274:13341" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="13348:13415" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="13561:13597" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="14061:14202" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="15378:15402" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="15461:15520" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="16348:16369" ph="{...}" />
+              <marker date="1520620784000" expanded="true" signature="16376:16400" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mkdocs.bak.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="64" column="33" lean-forward="true" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/docs/学习/转载/example2/baidu-ife-2-javascript.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="60">
+            <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+            <folding>
+              <marker date="1520666094000" expanded="true" signature="3587:3944" ph="..." />
+              <marker date="1520666094000" expanded="true" signature="3594:3642" ph="..." />
+              <marker date="1520666094000" expanded="true" signature="3649:3936" ph="..." />
+              <marker date="1520666094000" expanded="true" signature="3691:3729" ph="..." />
+              <marker date="1520666094000" expanded="true" signature="3765:3804" ph="..." />
+              <marker date="1520666094000" expanded="true" signature="3840:3928" ph="..." />
+              <marker date="1520666094000" expanded="true" signature="3876:3914" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="5660:5759" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="5810:5850" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="7643:7809" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="7685:7790" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="7718:7786" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="7824:7906" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="7843:7904" ph="{&quot;b2&quot;: &quot;JavaScript&quot;...}" />
+              <marker date="1520666094000" expanded="true" signature="8126:8432" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="8172:8411" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="8210:8258" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="8301:8346" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="9023:9084" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="9054:9082" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="9156:9246" ph="//..." />
+              <marker date="1520666094000" expanded="true" signature="9273:9298" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="9322:9404" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="9341:9402" ph="{&quot;b2&quot;: &quot;JavaScript&quot;...}" />
+              <marker date="1520666094000" expanded="true" signature="10429:10889" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="10539:10578" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="10584:10607" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="10631:10873" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="10677:10867" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="10732:10798" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="10804:10857" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="11186:11211" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="11458:11668" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="11515:11647" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="11570:11641" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="13220:13361" ph="//..." />
+              <marker date="1520666094000" expanded="true" signature="13387:13412" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="13414:13515" ph="//..." />
+              <marker date="1520666094000" expanded="true" signature="13535:13560" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="13782:14167" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="13843:13967" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="13914:13961" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="14010:14124" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="14071:14118" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="14188:14233" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="15324:15349" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="15351:15388" ph="//..." />
+              <marker date="1520666094000" expanded="true" signature="15451:15476" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="15497:15527" ph="//..." />
+              <marker date="1520666094000" expanded="true" signature="15597:15637" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="15839:15893" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="15862:15891" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="16011:16078" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="16040:16076" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="16170:16209" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="16378:16403" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="16447:16472" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="16845:16930" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="16974:17053" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="19881:19906" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="19981:20006" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="20103:20128" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="20197:20222" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="22006:22157" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="22232:22432" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="22479:22540" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="22572:22852" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="23033:23037" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="23077:23121" ph="//..." />
+              <marker date="1520666094000" expanded="true" signature="23130:23166" ph="//..." />
+              <marker date="1520666094000" expanded="true" signature="23181:23234" ph="//..." />
+              <marker date="1520666094000" expanded="true" signature="23300:23355" ph="//..." />
+              <marker date="1520666094000" expanded="true" signature="23795:23935" ph="//..." />
+              <marker date="1520666094000" expanded="true" signature="23957:24728" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="23979:24007" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="24039:24071" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="24143:24654" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="24411:24619" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="24464:24547" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="24560:24609" ph="//..." />
+              <marker date="1520666094000" expanded="true" signature="24660:24726" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="24730:24875" ph="/** 针对一个内容查找结果 success ...*/" />
+              <marker date="1520666094000" expanded="true" signature="24909:27030" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="25127:27009" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="25146:25224" ph="..." />
+              <marker date="1520666094000" expanded="true" signature="25242:25961" ph="..." />
+              <marker date="1520666094000" expanded="true" signature="25421:25942" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="25527:25928" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="25696:25910" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="25755:25888" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="25979:26903" ph="..." />
+              <marker date="1520666094000" expanded="true" signature="26030:26357" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="26162:26343" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="26249:26325" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="26363:26884" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="26707:26870" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="26776:26852" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="26920:27003" ph="..." />
+              <marker date="1520666094000" expanded="true" signature="27166:27347" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="27202:27259" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="27288:27345" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="27436:27621" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="27474:27533" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="27562:27619" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="27906:27951" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="28016:28147" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="28067:28143" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="28102:28137" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="28463:28695" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="28513:28691" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="28632:28685" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="28768:29265" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="28841:29125" ph="//..." />
+              <marker date="1520666094000" expanded="true" signature="29202:29231" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="29237:29263" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="29335:29546" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="29446:29514" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="29592:29992" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="29664:29694" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="29769:29971" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="30924:30949" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="31015:31206" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="31031:31100" ph="{&quot;name&quot;: 'simon'...}" />
+              <marker date="1520666094000" expanded="true" signature="31150:31200" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="31259:32379" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="31282:31305" ph="//..." />
+              <marker date="1520666094000" expanded="true" signature="31349:31538" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="31409:31477" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="31806:31837" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="31843:31963" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="32023:32376" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="32059:32370" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="32097:32245" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="32138:32231" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="32251:32360" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="32289:32346" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="35697:35980" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="35770:35972" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="37280:37581" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="37318:37422" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="37454:37579" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="37697:37770" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="37822:37989" ph="{...}" />
+              <marker date="1520666094000" expanded="true" signature="37902:37987" ph="{...}" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/文章/index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/学习/index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -1045,10 +956,232 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docs/AboutMe.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="150">
+            <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/书籍/index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="285">
+            <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/日常/index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/工具/About.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="11" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/工具/index.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/工具/常用工具/10分钟上手Pandas.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="45">
+            <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/工具/常用工具/10分钟上手Latex.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="90">
+            <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="13" selection-end-column="6" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/工具/常用工具/10分钟上手Python.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/material/assets/stylesheets/application-palette.6079476c.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="1194" column="0" lean-forward="true" selection-start-line="1194" selection-start-column="0" selection-end-line="1194" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/material/assets/javascripts/modernizr.1aa3b519.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/material/assets/javascripts/lunr/lunr.da.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/material/assets/javascripts/lunr/lunr.de.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="96" column="18" lean-forward="true" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/material/assets/javascripts/application.189d7058.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="15" lean-forward="true" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/工具/常用工具/10分钟上手Pandas.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="239">
+            <caret line="491" column="9" lean-forward="true" selection-start-line="491" selection-start-column="9" selection-end-line="491" selection-end-column="9" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mkdocs.bak2.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mkdocs.bak.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diary/src/GetAll.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="79" column="30" lean-forward="true" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+          <folding>
+            <element signature="e#159#168#0" expanded="true" />
+            <element signature="e#1510#1908#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/material/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="50" column="95" lean-forward="true" selection-start-line="50" selection-start-column="95" selection-end-line="50" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/material/assets/stylesheets/auto-number-title.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="26" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/material/partials/toc-item.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mkdocs.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="188" column="14" lean-forward="false" selection-start-line="188" selection-start-column="14" selection-end-line="188" selection-end-column="14" />
+        <state relative-caret-position="172">
+          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/ToDo.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="440">
+            <caret line="45" column="54" lean-forward="false" selection-start-line="45" selection-start-column="54" selection-end-line="45" selection-end-column="54" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/material/partials/toc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/material/assets/stylesheets/application.78aab2dc.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="168" column="1" lean-forward="true" selection-start-line="168" selection-start-column="1" selection-end-line="168" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/material/404.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

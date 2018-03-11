@@ -79,7 +79,7 @@ def test_path(root_path):
         file_path = root_path + "/" + file_name
         if ".md" in file_name:
             result.append(encode(file_path.replace(doc_path, "")))
-        elif ("resources" in file_name): #or ("转载" in file_name):
+        elif ("resources" in file_name):# or ("baidu-ife-2-javascript" in file_name):
             pass
         elif os.path.isdir(file_path):
             print (file_path + "是路径")

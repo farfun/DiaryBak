@@ -159,7 +159,8 @@ code, kbd, pre {
     margin: 0 0 4rem;
     color: rgba(0, 0, 0, .54);
     font-size: 3.125rem;
-    line-height: 1.3
+    line-height: 1.3;
+    counter-reset: h2counter;
 }
 
 .md-typeset h1, .md-typeset h2 {
@@ -170,7 +171,13 @@ code, kbd, pre {
 .md-typeset h2 {
     margin: 4rem 0 1.6rem;
     font-size: 2.5rem;
-    line-height: 1.4
+    line-height: 1.4;
+    counter-reset: h3counter;
+}
+
+h2:before {
+    counter-increment: h2counter;
+    content: counter(h2counter) ".\0000a0\0000a0";
 }
 
 .md-typeset h3 {
@@ -492,7 +499,7 @@ hr {
 }
 
 .md-grid {
-    max-width: 95%;
+    max-width: 122rem;
     margin-right: auto;
     margin-left: auto
 }
@@ -516,7 +523,6 @@ hr {
 
 .md-main__inner {
     height: 100%;
-    width:100%;
     padding-top: 3rem;
     padding-bottom: .1rem
 }
@@ -1273,8 +1279,7 @@ html .md-nav__link[for=toc], html .md-nav__link[for=toc] + .md-nav__link:after, 
 }
 
 .md-sidebar--secondary {
-    display: none;
-    padding: 2.4rem 0;
+    display: none
 }
 
 .md-sidebar__scrollwrap {
@@ -2254,22 +2259,22 @@ html body .md-typeset .headerlink {
     display: block;
     margin-top: -.8rem;
     padding-top: .8rem;
-    content: ""
+    content: "";
 }
 
 .md-typeset h2[id]:target:before {
     margin-top: -6.8rem;
-    padding-top: 6.8rem
+    padding-top: 6.8rem;
 }
 
 .md-typeset h2[id] .headerlink:focus, .md-typeset h2[id]:hover .headerlink, .md-typeset h2[id]:target .headerlink {
     -webkit-transform: translate(0);
     transform: translate(0);
-    opacity: 1
+    opacity: 1;
 }
 
 .md-typeset h2[id] .headerlink:focus, .md-typeset h2[id]:hover .headerlink:hover, .md-typeset h2[id]:target .headerlink {
-    color: #536dfe
+    color: #536dfe;
 }
 
 .md-typeset h3[id]:before {
@@ -3278,11 +3283,11 @@ html body .md-typeset .headerlink {
     }
 
     .md-sidebar--secondary {
-        margin-left: 102rem
+        margin-left: 105rem
     }
 
     [dir=rtl] .md-sidebar--secondary {
-        margin-right: 102rem;
+        margin-right: 122rem;
         margin-left: 0
     }
 
