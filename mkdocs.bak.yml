@@ -26,7 +26,7 @@ theme:
   search_index_only: true
 
   # Default values, taken from mkdocs_theme.yml
-  language: en
+  language: zh
   feature:
     tabs: true
   palette:

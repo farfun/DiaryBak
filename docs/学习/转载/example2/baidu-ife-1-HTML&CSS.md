@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "百度Web前端技术学院(1)-HTML, CSS基础"
+title:  "百度Web前端技术-HTML,CSS"
 date:   2015-04-15 19:06:05
 categories: gaohaoyangBlog
 tags: Baidu ife HTML CSS task

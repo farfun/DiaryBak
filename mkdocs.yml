@@ -16,7 +16,6 @@ markdown_extensions:
 - markdown.extensions.admonition
 - markdown.extensions.codehilite:
     guess_lang: false
-    linenums: true
 - markdown.extensions.def_list
 - markdown.extensions.footnotes
 - markdown.extensions.meta
@@ -79,6 +78,94 @@ pages:
     - 学习/深度学习/最小二乘法.md
     - 学习/深度学习/矩阵分解.md
     - 学习/深度学习/矩阵求导.md
+  - 转载:
+    - cs231n-ch:
+      - 学习/转载/cs231n-ch/ch-assignment2_google_cloud.md
+      - 学习/转载/cs231n-ch/ch-aws-tutorial.md
+      - 学习/转载/cs231n-ch/ch-classification.md
+      - 学习/转载/cs231n-ch/ch-convnet-tips.md
+      - 学习/转载/cs231n-ch/ch-convolutional-networks.md
+      - 学习/转载/cs231n-ch/ch-google_cloud_tutorial.md
+      - 学习/转载/cs231n-ch/ch-ipython-tutorial.md
+      - 学习/转载/cs231n-ch/ch-linear-classify.md
+      - 学习/转载/cs231n-ch/ch-neural-networks-1.md
+      - 学习/转载/cs231n-ch/ch-neural-networks-2.md
+      - 学习/转载/cs231n-ch/ch-neural-networks-3.md
+      - 学习/转载/cs231n-ch/ch-neural-networks-case-study.md
+      - 学习/转载/cs231n-ch/ch-optimization-1.md
+      - 学习/转载/cs231n-ch/ch-optimization-2.md
+      - 学习/转载/cs231n-ch/ch-overview.md
+      - 学习/转载/cs231n-ch/ch-poster.md
+      - 学习/转载/cs231n-ch/ch-python-numpy-tutorial.md
+      - 学习/转载/cs231n-ch/ch-Readme.md
+      - 学习/转载/cs231n-ch/ch-transfer-learning.md
+      - 学习/转载/cs231n-ch/ch-understanding-cnn.md
+      - 学习/转载/cs231n-ch/terminal-tutorial.md
+    - cs231n-en:
+      - 学习/转载/cs231n-en/en-assignment2_google_cloud.md
+      - 学习/转载/cs231n-en/en-aws-tutorial.md
+      - 学习/转载/cs231n-en/en-classification.md
+      - 学习/转载/cs231n-en/en-convnet-tips.md
+      - 学习/转载/cs231n-en/en-convolutional-networks.md
+      - 学习/转载/cs231n-en/en-google_cloud_tutorial.md
+      - 学习/转载/cs231n-en/en-ipython-tutorial.md
+      - 学习/转载/cs231n-en/en-linear-classify.md
+      - 学习/转载/cs231n-en/en-neural-networks-1.md
+      - 学习/转载/cs231n-en/en-neural-networks-2.md
+      - 学习/转载/cs231n-en/en-neural-networks-3.md
+      - 学习/转载/cs231n-en/en-neural-networks-case-study.md
+      - 学习/转载/cs231n-en/en-optimization-1.md
+      - 学习/转载/cs231n-en/en-optimization-2.md
+      - 学习/转载/cs231n-en/en-overview.md
+      - 学习/转载/cs231n-en/en-poster.md
+      - 学习/转载/cs231n-en/en-python-numpy-tutorial.md
+      - 学习/转载/cs231n-en/en-Readme.md
+      - 学习/转载/cs231n-en/en-terminal-tutorial.md
+      - 学习/转载/cs231n-en/en-transfer-learning.md
+      - 学习/转载/cs231n-en/en-understanding-cnn.md
+    - example:
+      - 学习/转载/example/a-web-crawer-with-a-asyncio-coroutines-1.md
+      - 学习/转载/example/a-web-crawer-with-a-asyncio-coroutines-2.md
+      - 学习/转载/example/bias-variance.md
+      - 学习/转载/example/bitcoin-explained-1.md
+      - 学习/转载/example/dive-into-gradient-decent.md
+      - 学习/转载/example/ethereum-ultimate-guide.md
+      - 学习/转载/example/fork-exec-source.md
+      - 学习/转载/example/latex语法.md
+      - 学习/转载/example/latex语法1.md
+      - 学习/转载/example/nosql-in-python.md
+      - 学习/转载/example/perceptron.md
+      - 学习/转载/example/quick-latex.md
+      - 学习/转载/example/tendermint.md
+    - example2:
+      - 学习/转载/example2/arrays-similar.md
+      - 学习/转载/example2/baidu-ife-1-HTML&CSS.md
+      - 学习/转载/example2/baidu-ife-2-javascript.md
+      - 学习/转载/example2/create-my-blog-with-jekyll.md
+      - 学习/转载/example2/front-end-tools.md
+      - 学习/转载/example2/git-clone-not-master-branch.md
+      - 学习/转载/example2/History-API.md
+      - 学习/转载/example2/how-to-use-babel.md
+      - 学习/转载/example2/how-to-write-a-count-down.md
+      - 学习/转载/example2/JavaScript-closure.md
+      - 学习/转载/example2/JavaScript-function.md
+      - 学习/转载/example2/JavaScript-good-parts-note1.md
+      - 学习/转载/example2/JavaScript-good-parts-note2.md
+      - 学习/转载/example2/JavaScript-good-parts-note3.md
+      - 学习/转载/example2/JavaScript-Net.md
+      - 学习/转载/example2/JavaScript-Object-Oriented.md
+      - 学习/转载/example2/JavaScript-this.md
+      - 学习/转载/example2/jekyll-theme-version-2.0.md
+      - 学习/转载/example2/js-create-file-and-download.md
+      - 学习/转载/example2/low-IE-click-empty-block-bug.md
+      - 学习/转载/example2/regular-expression-group.md
+      - 学习/转载/example2/scope.md
+      - 学习/转载/example2/shuffle-algorithm.md
+      - 学习/转载/example2/sublimeLinter.md
+      - 学习/转载/example2/Syncing-a-fork.md
+      - 学习/转载/example2/teach-girlfriend-html-css.md
+      - 学习/转载/example2/web-app.md
+      - 学习/转载/example2/weinre.md
 - 工具:
   - 工具/About.md
   - 工具/Cheatsheet.md
@@ -109,7 +196,7 @@ theme:
     code: Roboto Mono
     text: Roboto
   include_search_page: false
-  language: en
+  language: zh
   logo:
     icon: 
   name: null

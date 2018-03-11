@@ -6,8 +6,6 @@ categories: gaohaoyangBlog
 tags: JavaScript Ajax URL HistoryApi pushState pjax
 ---
 
-
-
 ## 起因
 
 起因是这样的，在尝试前后端分离的这条道路上，我自己也在不断摸索，感觉要把大部分的坑都踩踩了。目前我用的技术是：
