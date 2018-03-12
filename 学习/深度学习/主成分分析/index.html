@@ -2377,18 +2377,8 @@
 <p><img alt="" src="../resources/8D90FF4FA2A8A73A23B6D3C61E0892AA.jpg" /></p>
 <p><strong>第二步</strong>，求特征协方差矩阵，如果数据是3维，那么协方差矩阵是</p>
 <div>
-<div class="MathJax_Preview">C 
-=\begin{pmatrix}  
-   cov(x,x) &amp; cov(x,y) &amp; cov(x,z)
-\\ cov(y,x) &amp; cov(y,y) &amp; cov(y,z)
-\\ cov(z,x) &amp; cov(z,y) &amp; cov(z,z)
-\end{pmatrix}</div>
-<script type="math/tex; mode=display">C 
-=\begin{pmatrix}  
-   cov(x,x) & cov(x,y) & cov(x,z)
-\\ cov(y,x) & cov(y,y) & cov(y,z)
-\\ cov(z,x) & cov(z,y) & cov(z,z)
-\end{pmatrix}</script>
+<div class="MathJax_Preview">C =\begin{pmatrix}    cov(x,x) &amp; cov(x,y) &amp; cov(x,z) \\ cov(y,x) &amp; cov(y,y) &amp; cov(y,z) \\  cov(z,x) &amp; cov(z,y) &amp; cov(z,z)\end{pmatrix}</div>
+<script type="math/tex; mode=display">C =\begin{pmatrix}    cov(x,x) & cov(x,y) & cov(x,z) \\ cov(y,x) & cov(y,y) & cov(y,z) \\  cov(z,x) & cov(z,y) & cov(z,z)\end{pmatrix}</script>
 </div>
 <p>这里只有<span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>和<span><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>，求解得</p>
 <div>
@@ -2398,13 +2388,15 @@
 <p>对角线上分别是<span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>和<span><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>的方差，非对角线上是协方差。协方差是衡量两个变量同时变化的变化程度。协方差大于0表示<span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>和<span><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>若一个增，另一个也增；小于0表示一个增，一个减。如果<span><span class="MathJax_Preview">ｘ</span><script type="math/tex">ｘ</script></span>和<span><span class="MathJax_Preview">ｙ</span><script type="math/tex">ｙ</script></span>是统计独立的，那么二者之间的协方差就是０；但是协方差是０，并不能说明<span><span class="MathJax_Preview">ｘ</span><script type="math/tex">ｘ</script></span>和<span><span class="MathJax_Preview">ｙ</span><script type="math/tex">ｙ</script></span>是独立的。协方差绝对值越大，两者对彼此的影响越大，反之越小。协方差是没有单位的量，因此，如果同样的两个变量所采用的量纲发生变化，它们的协方差也会产生树枝上的变化。</p>
 <p><strong>第三步</strong>，求协方差的特征值和特征向量，得到</p>
 <div>
-<div class="MathJax_Preview">eigenvalues =\begin{pmatrix}  0.0491 \\ 1.2840 \end{pmatrix}$$
-$$eigenvalues =\begin{pmatrix}  -0.7352 &amp; -0.6779  \\ 0.6779 &amp; -0.7352 \end{pmatrix}</div>
-<script type="math/tex; mode=display">eigenvalues =\begin{pmatrix}  0.0491 \\ 1.2840 \end{pmatrix}$$
-$$eigenvalues =\begin{pmatrix}  -0.7352 & -0.6779  \\ 0.6779 & -0.7352 \end{pmatrix}</script>
+<div class="MathJax_Preview">eigenvalues =\begin{pmatrix}  0.0491 \\ 1.2840 \end{pmatrix}</div>
+<script type="math/tex; mode=display">eigenvalues =\begin{pmatrix}  0.0491 \\ 1.2840 \end{pmatrix}</script>
+</div>
+<div>
+<div class="MathJax_Preview">eigenvalues =\begin{pmatrix}  -0.7352 &amp; -0.6779  \\ 0.6779 &amp; -0.7352 \end{pmatrix}</div>
+<script type="math/tex; mode=display">eigenvalues =\begin{pmatrix}  -0.7352 & -0.6779  \\ 0.6779 & -0.7352 \end{pmatrix}</script>
 </div>
 <p>上面是两个特征值，下面是对应的特征向量，特征值<span><span class="MathJax_Preview">0.0491</span><script type="math/tex">0.0491</script></span>对应特征向量为
- <span><span class="MathJax_Preview">(-0.7352, 0.6779)^T</span><script type="math/tex">(-0.7352, 0.6779)^T</script></span> <a href="http://images.cnblogs.com/cnblogs_com/jerrylead/201104/201104182110418392.png"></a>，这里的特征向量都归一化为单位向量。</p>
+ <span><span class="MathJax_Preview">(-0.7352, 0.6779)^T</span><script type="math/tex">(-0.7352, 0.6779)^T</script></span> )，这里的特征向量都归一化为单位向量。</p>
 <p><strong>第四步</strong>，将特征值按照从大到小的顺序排序，选择其中最大的<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>个，然后将其对应的<span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>个特征向量分别作为列向量组成特征向量矩阵。</p>
 <p>这里特征值只有两个，我们选择其中最大的那个，这里是1.2840 ，对应的特征向量是<span><span class="MathJax_Preview">(-0.6779, -0.7352)^T</span><script type="math/tex">(-0.6779, -0.7352)^T</script></span>。</p>
 <p><strong>第五步</strong>，将样本点投影到选取的特征向量上。假设样例数为m，特征数为n，减去均值后的样本矩阵为DataAdjust(m*n)，协方差矩阵是n*n，选取的k个特征向量组成的矩阵为EigenVectors(n*k)。那么投影后的数据FinalData为</p>
@@ -2434,78 +2426,122 @@ $$eigenvalues =\begin{pmatrix}  -0.7352 & -0.6779  \\ 0.6779 & -0.7352 \end{pmat
 <p>图中，红色点表示样例<a href="http://images.cnblogs.com/cnblogs_com/jerrylead/201104/201104182110531216.png"></a>，蓝色点表示在u上的投影，u是直线的斜率也是直线的方向向量，而且是单位向量。蓝色点是<a href="http://images.cnblogs.com/cnblogs_com/jerrylead/201104/201104182110559971.png"></a>在u上的投影点，离原点的距离是<a href="http://images.cnblogs.com/cnblogs_com/jerrylead/201104/201104182110554921.png"></a>\&lt;x,u>（即xTu<a href="http://images.cnblogs.com/cnblogs_com/jerrylead/201104/201104182110567397.png"></a>或者uTx<a href="http://images.cnblogs.com/cnblogs_com/jerrylead/201104/201104182110566458.png"></a>）。</p>
 <h2 id="246_1">2. 最小二乘法<a class="headerlink" href="#246_1" title="Permanent link">&para;</a></h2>
 <p>我们使用最小二乘法来确定各个主轴（主成分）的方向。
- 对给定的一组数据（下面的阐述中，向量一般均指列向量）：
-<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\{\vec{\boldsymbol z_1},\vec{\boldsymbol z_2},...,\vec{\boldsymbol z_n} \}</span><script type="math/tex">\{\vec{\boldsymbol z_1},\vec{\boldsymbol z_2},...,\vec{\boldsymbol z_n} \}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\{\vec{\boldsymbol z_1},\vec{\boldsymbol z_2},...,\vec{\boldsymbol z_n} \}</span><script type="math/tex">\{\vec{\boldsymbol z_1},\vec{\boldsymbol z_2},...,\vec{\boldsymbol z_n} \}</script></span></script></span>
- 其数据中心位于:
-$$ \overrightarrow{\boldsymbol{\mu}} = \frac{1}{n}\sum^n_{i=1}\vec{\boldsymbol z_i}$$
- 数据中心化（将坐标原点移到样本点的中心点）：
-<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\{\vec{\boldsymbol x_1},\vec{\boldsymbol x_2},...,\vec{\boldsymbol x_n} \}=\{\vec{\boldsymbol z_1}-\overrightarrow{\boldsymbol{\mu}},\vec{\boldsymbol z_2}-\overrightarrow{\boldsymbol{\mu}},...,\vec{\boldsymbol z_n}-\overrightarrow{\boldsymbol{\mu}} \}</span><script type="math/tex">\{\vec{\boldsymbol x_1},\vec{\boldsymbol x_2},...,\vec{\boldsymbol x_n} \}=\{\vec{\boldsymbol z_1}-\overrightarrow{\boldsymbol{\mu}},\vec{\boldsymbol z_2}-\overrightarrow{\boldsymbol{\mu}},...,\vec{\boldsymbol z_n}-\overrightarrow{\boldsymbol{\mu}} \}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\{\vec{\boldsymbol x_1},\vec{\boldsymbol x_2},...,\vec{\boldsymbol x_n} \}=\{\vec{\boldsymbol z_1}-\overrightarrow{\boldsymbol{\mu}},\vec{\boldsymbol z_2}-\overrightarrow{\boldsymbol{\mu}},...,\vec{\boldsymbol z_n}-\overrightarrow{\boldsymbol{\mu}} \}</span><script type="math/tex">\{\vec{\boldsymbol x_1},\vec{\boldsymbol x_2},...,\vec{\boldsymbol x_n} \}=\{\vec{\boldsymbol z_1}-\overrightarrow{\boldsymbol{\mu}},\vec{\boldsymbol z_2}-\overrightarrow{\boldsymbol{\mu}},...,\vec{\boldsymbol z_n}-\overrightarrow{\boldsymbol{\mu}} \}</script></span></script></span>
- 中心化后的数据在第一主轴u1方向上分布散的最开，也就是说在u1方向上的投影的绝对值之和最大（也可以说方差最大），计算投影的方法上面已经阐述，就是将x与u1做内积，由于只需要求u1的方向，所以设u1也是单位向量。</p>
-<p>在这里，也就是最大化下式：
-$$ \frac{1}{n}\sum^n_{i=1}\vec{\boldsymbol x_i}\vec{\boldsymbol{u_1}} $$
- 由矩阵代数相关知识可知，可以对绝对值符号项进行平方处理，比较方便。所以进而就是最大化下式：
-$$ \frac{1}{n}\sum^n_{i=1} \left| \vec{\boldsymbol x_i} \cdot \vec{\boldsymbol{u_1}} \right|^2
- = \frac{1}{n}\sum^n_{i=1} \left( \vec{\boldsymbol x_i} \cdot \vec{\boldsymbol{u_1}} \right)^2 $$</p>
-<p>两个向量做内积，可以转化成矩阵乘法：
- <span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\vec{\boldsymbol x_i} \cdot \vec{\boldsymbol{u_1}} 
+ 对给定的一组数据（下面的阐述中，向量一般均指列向量）：</p>
+<div>
+<div class="MathJax_Preview">\{\vec{\boldsymbol z_1},\vec{\boldsymbol z_2},...,\vec{\boldsymbol z_n} \}</div>
+<script type="math/tex; mode=display">\{\vec{\boldsymbol z_1},\vec{\boldsymbol z_2},...,\vec{\boldsymbol z_n} \}</script>
+</div>
+<p>其数据中心位于:</p>
+<div>
+<div class="MathJax_Preview"> \overrightarrow{\boldsymbol{\mu}} = \frac{1}{n}\sum^n_{i=1}\vec{\boldsymbol z_i}​</div>
+<script type="math/tex; mode=display"> \overrightarrow{\boldsymbol{\mu}} = \frac{1}{n}\sum^n_{i=1}\vec{\boldsymbol z_i}​</script>
+</div>
+<p>数据中心化（将坐标原点移到样本点的中心点）：</p>
+<div>
+<div class="MathJax_Preview">\{\vec{\boldsymbol x_1},\vec{\boldsymbol x_2},...,\vec{\boldsymbol x_n} \}=\{\vec{\boldsymbol z_1}-\overrightarrow{\boldsymbol{\mu}},\vec{\boldsymbol z_2}-\overrightarrow{\boldsymbol{\mu}},...,\vec{\boldsymbol z_n}-\overrightarrow{\boldsymbol{\mu}} \}</div>
+<script type="math/tex; mode=display">\{\vec{\boldsymbol x_1},\vec{\boldsymbol x_2},...,\vec{\boldsymbol x_n} \}=\{\vec{\boldsymbol z_1}-\overrightarrow{\boldsymbol{\mu}},\vec{\boldsymbol z_2}-\overrightarrow{\boldsymbol{\mu}},...,\vec{\boldsymbol z_n}-\overrightarrow{\boldsymbol{\mu}} \}</script>
+</div>
+<p>中心化后的数据在第一主轴u1方向上分布散的最开，也就是说在u1方向上的投影的绝对值之和最大（也可以说方差最大），计算投影的方法上面已经阐述，就是将x与u1做内积，由于只需要求u1的方向，所以设u1也是单位向量。</p>
+<p>在这里，也就是最大化下式：</p>
+<div>
+<div class="MathJax_Preview"> \frac{1}{n}\sum^n_{i=1}\vec{\boldsymbol x_i}\vec{\boldsymbol{u_1}} </div>
+<script type="math/tex; mode=display"> \frac{1}{n}\sum^n_{i=1}\vec{\boldsymbol x_i}\vec{\boldsymbol{u_1}} </script>
+</div>
+<p>由矩阵代数相关知识可知，可以对绝对值符号项进行平方处理，比较方便。所以进而就是最大化下式：</p>
+<div>
+<div class="MathJax_Preview"> \frac{1}{n}\sum^n_{i=1} \left| \vec{\boldsymbol x_i} \cdot \vec{\boldsymbol{u_1}} \right|^2
+ = \frac{1}{n}\sum^n_{i=1} \left( \vec{\boldsymbol x_i} \cdot \vec{\boldsymbol{u_1}} \right)^2 </div>
+<script type="math/tex; mode=display"> \frac{1}{n}\sum^n_{i=1} \left| \vec{\boldsymbol x_i} \cdot \vec{\boldsymbol{u_1}} \right|^2
+ = \frac{1}{n}\sum^n_{i=1} \left( \vec{\boldsymbol x_i} \cdot \vec{\boldsymbol{u_1}} \right)^2 </script>
+</div>
+<p>两个向量做内积，可以转化成矩阵乘法：</p>
+<p><span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\vec{\boldsymbol x_i} \cdot \vec{\boldsymbol{u_1}} 
  ={\boldsymbol x_i}^T {\boldsymbol{u_1}}</span><script type="math/tex">\vec{\boldsymbol x_i} \cdot \vec{\boldsymbol{u_1}} 
  ={\boldsymbol x_i}^T {\boldsymbol{u_1}}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\vec{\boldsymbol x_i} \cdot \vec{\boldsymbol{u_1}} 
  ={\boldsymbol x_i}^T {\boldsymbol{u_1}}</span><script type="math/tex">\vec{\boldsymbol x_i} \cdot \vec{\boldsymbol{u_1}} 
  ={\boldsymbol x_i}^T {\boldsymbol{u_1}}</script></span></script></span></p>
-<p>所以目标函数可以表示为：
- $$\frac{1}{n}\sum^n_{i=1} \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)^2 $$
-<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\begin{pmatrix} \\ \\ \\   \\ \\ \\ \\ \\ \\ \\ \\ \\  \end{pmatrix}</span><script type="math/tex">\begin{pmatrix} \\ \\ \\   \\ \\ \\ \\ \\ \\ \\ \\ \\  \end{pmatrix}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\begin{pmatrix} \\ \\ \\   \\ \\ \\ \\ \\ \\ \\ \\ \\  \end{pmatrix}</span><script type="math/tex">\begin{pmatrix} \\ \\ \\   \\ \\ \\ \\ \\ \\ \\ \\ \\  \end{pmatrix}</script></span></script></span></p>
-<p>括号里面就是矩阵乘法表示向量内积，由于列向量转置以后是行向量，行向量乘以列向量得到一个数，一个数的转置还是其本身，所以又可以将目标函数化为：
-<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\frac{1}{n}\sum^n_{i=1} \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)^2 
+<p>所以目标函数可以表示为：</p>
+<p>$$\frac{1}{n}\sum^n_{i=1} \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)^2 $$</p>
+<p>括号里面就是矩阵乘法表示向量内积，由于列向量转置以后是行向量，行向量乘以列向量得到一个数，一个数的转置还是其本身，所以又可以将目标函数化为：</p>
+<div>
+<div class="MathJax_Preview">\frac{1}{n}\sum^n_{i=1} \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)^2 
 =\frac{1}{n}\sum^n_{i=1} \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)^T \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)
 \\=\frac{1}{n}\sum^n_{i=1} {\boldsymbol{u_1}}^T {\boldsymbol x_i} {\boldsymbol x_i}^T {\boldsymbol{u_1}}
 \\=\frac{1}{n}{\boldsymbol{u_1}}^T \left( \sum^n_{i=1}  {\boldsymbol x_i} {\boldsymbol x_i}^T \right) {\boldsymbol{u_1}}
-\\=\frac{1}{n}{\boldsymbol{u_1}}^T XX^T {\boldsymbol{u_1}}</span><script type="math/tex">\frac{1}{n}\sum^n_{i=1} \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)^2 
+\\=\frac{1}{n}{\boldsymbol{u_1}}^T XX^T {\boldsymbol{u_1}}</div>
+<script type="math/tex; mode=display">\frac{1}{n}\sum^n_{i=1} \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)^2 
 =\frac{1}{n}\sum^n_{i=1} \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)^T \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)
 \\=\frac{1}{n}\sum^n_{i=1} {\boldsymbol{u_1}}^T {\boldsymbol x_i} {\boldsymbol x_i}^T {\boldsymbol{u_1}}
 \\=\frac{1}{n}{\boldsymbol{u_1}}^T \left( \sum^n_{i=1}  {\boldsymbol x_i} {\boldsymbol x_i}^T \right) {\boldsymbol{u_1}}
-\\=\frac{1}{n}{\boldsymbol{u_1}}^T XX^T {\boldsymbol{u_1}}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\frac{1}{n}\sum^n_{i=1} \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)^2 
-=\frac{1}{n}\sum^n_{i=1} \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)^T \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)
-\\=\frac{1}{n}\sum^n_{i=1} {\boldsymbol{u_1}}^T {\boldsymbol x_i} {\boldsymbol x_i}^T {\boldsymbol{u_1}}
-\\=\frac{1}{n}{\boldsymbol{u_1}}^T \left( \sum^n_{i=1}  {\boldsymbol x_i} {\boldsymbol x_i}^T \right) {\boldsymbol{u_1}}
-\\=\frac{1}{n}{\boldsymbol{u_1}}^T XX^T {\boldsymbol{u_1}}</span><script type="math/tex">\frac{1}{n}\sum^n_{i=1} \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)^2 
-=\frac{1}{n}\sum^n_{i=1} \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)^T \left( {\boldsymbol x_i}^T {\boldsymbol{u_1}} \right)
-\\=\frac{1}{n}\sum^n_{i=1} {\boldsymbol{u_1}}^T {\boldsymbol x_i} {\boldsymbol x_i}^T {\boldsymbol{u_1}}
-\\=\frac{1}{n}{\boldsymbol{u_1}}^T \left( \sum^n_{i=1}  {\boldsymbol x_i} {\boldsymbol x_i}^T \right) {\boldsymbol{u_1}}
-\\=\frac{1}{n}{\boldsymbol{u_1}}^T XX^T {\boldsymbol{u_1}}</script></span></script></span></p>
+\\=\frac{1}{n}{\boldsymbol{u_1}}^T XX^T {\boldsymbol{u_1}}</script>
+</div>
 <p>其中的<span><span class="MathJax_Preview">{\boldsymbol{u_1}}^T XX^T {\boldsymbol{u_1}}</span><script type="math/tex">{\boldsymbol{u_1}}^T XX^T {\boldsymbol{u_1}}</script></span>就是一个二次型，
- 我们假设 <span><span class="MathJax_Preview">XX^T</span><script type="math/tex">XX^T</script></span> 的某一特征值为<span><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span>，对应的特征向量为$\xi $，有
-<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">(XX^T)^T=XX^T</span><script type="math/tex">(XX^T)^T=XX^T</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">(XX^T)^T=XX^T</span><script type="math/tex">(XX^T)^T=XX^T</script></span></script></span>
-<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">XX^T\xi=\lambda\xi</span><script type="math/tex">XX^T\xi=\lambda\xi</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">XX^T\xi=\lambda\xi</span><script type="math/tex">XX^T\xi=\lambda\xi</script></span></script></span>
-<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">(XX^T\xi)^T\xi=(\lambda\xi)^T\xi</span><script type="math/tex">(XX^T\xi)^T\xi=(\lambda\xi)^T\xi</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">(XX^T\xi)^T\xi=(\lambda\xi)^T\xi</span><script type="math/tex">(XX^T\xi)^T\xi=(\lambda\xi)^T\xi</script></span></script></span>
-<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\xi^TXX^T\xi=\lambda\xi^T\xi</span><script type="math/tex">\xi^TXX^T\xi=\lambda\xi^T\xi</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\xi^TXX^T\xi=\lambda\xi^T\xi</span><script type="math/tex">\xi^TXX^T\xi=\lambda\xi^T\xi</script></span></script></span>
-<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\xi^TXX^T\xi = (X^T\xi)^T(X^T\xi) =\lVert X^T\xi\rVert^2 = \lambda\xi^T\xi = \lambda\lVert\xi\rVert^2 \ge 0</span><script type="math/tex">\xi^TXX^T\xi = (X^T\xi)^T(X^T\xi) =\lVert X^T\xi\rVert^2 = \lambda\xi^T\xi = \lambda\lVert\xi\rVert^2 \ge 0</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\xi^TXX^T\xi = (X^T\xi)^T(X^T\xi) =\lVert X^T\xi\rVert^2 = \lambda\xi^T\xi = \lambda\lVert\xi\rVert^2 \ge 0</span><script type="math/tex">\xi^TXX^T\xi = (X^T\xi)^T(X^T\xi) =\lVert X^T\xi\rVert^2 = \lambda\xi^T\xi = \lambda\lVert\xi\rVert^2 \ge 0</script></span></script></span>
- <img alt="" src="../resources/B1A76A5DD5CBF7038828C6B8B2F27DA3.jpg" /></p>
-<p>所以<img alt="" src="../resources/B96C0EBC0E38C68850DC072A41D4144B.jpg" />，<img alt="" src="../resources/DA34EBDDA776378A81AB97551EC955E5.jpg" />是半正定的对称矩阵，即<img alt="" src="../resources/B912D0B49B333C84810B9F42FDC2C371.jpg" />是半正定阵的二次型，由矩阵代数知识得出，目标函数存在最大值！</p>
+ 我们假设 <span><span class="MathJax_Preview">XX^T</span><script type="math/tex">XX^T</script></span> 的某一特征值为<span><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span>，对应的特征向量为$\xi $，有</p>
+<div>
+<div class="MathJax_Preview">(XX^T)^T=XX^T$$
+$$XX^T\xi=\lambda\xi$$
+$$(XX^T\xi)^T\xi=(\lambda\xi)^T\xi$$
+$$\xi^TXX^T\xi=\lambda\xi^T\xi$$
+$$\xi^TXX^T\xi = (X^T\xi)^T(X^T\xi) =\lVert X^T\xi\rVert^2 = \lambda\xi^T\xi = \lambda\lVert\xi\rVert^2 \ge 0</div>
+<script type="math/tex; mode=display">(XX^T)^T=XX^T$$
+$$XX^T\xi=\lambda\xi$$
+$$(XX^T\xi)^T\xi=(\lambda\xi)^T\xi$$
+$$\xi^TXX^T\xi=\lambda\xi^T\xi$$
+$$\xi^TXX^T\xi = (X^T\xi)^T(X^T\xi) =\lVert X^T\xi\rVert^2 = \lambda\xi^T\xi = \lambda\lVert\xi\rVert^2 \ge 0</script>
+</div>
+<p>所以 <span><span class="MathJax_Preview">\lambda \ge 0</span><script type="math/tex">\lambda \ge 0</script></span> ，<span><span class="MathJax_Preview">XX^T</span><script type="math/tex">XX^T</script></span> 是半正定的对称矩阵，即 <span><span class="MathJax_Preview">u_1XX^Tu_1</span><script type="math/tex">u_1XX^Tu_1</script></span> 是半正定阵的二次型，由矩阵代数知识得出，目标函数存在最大值！</p>
 <p>下面我们求解最大值、取得最大值时u1的方向这两个问题。</p>
 <p>先解决第一个问题，对于向量x的二范数平方为:</p>
-<p><img alt="" src="../resources/1FEC91E3C19437FA1A142526EF7D3472.jpg" /></p>
+<div>
+<div class="MathJax_Preview">\|x \|_2^2=&lt;x,x&gt;=x^Tx</div>
+<script type="math/tex; mode=display">\|x \|_2^2=<x,x>=x^Tx</script>
+</div>
 <p>同样，目标函数也可以表示成映射后的向量的二范数平方：</p>
-<p><img alt="" src="../resources/E3F2CDC77D07F2B67E553E5509E9DC00.jpg" /></p>
-<p>把二次型化成一个范数的形式，由于u1取单位向量，最大化目标函数的基本问题也就转化为：对一个矩阵，它对一个向量做变换，变换前后的向量的模长伸缩尺度如何才能最大？我们有矩阵代数中的定理知，向量经矩阵映射前后的向量长度之比的最大值就是这个矩阵的最大奇异值，即：</p>
-<p><img alt="" src="../resources/61A4BB5869A472F901258735BEAF70B0.jpg" /></p>
-<p>式中，<img alt="" src="../resources/1C2F2B8D41CE8A162010C55DC174AA82.jpg" />是矩阵A的最大奇异值（亦是矩阵A的二范数），它等于<img alt="" src="../resources/745EFEBF20DB540F740231A40BDDB93F.jpg" />（或<img alt="" src="../resources/EFFB9F8B22BE1164FFAC6ECA32189919.jpg" />）的最大特征值开平方。</p>
-<p>针对本问题来说，<img alt="" src="../resources/DA34EBDDA776378A81AB97551EC955E5.jpg" />是半正定对称阵，也就意味着它的特征值都大于等于0，且不同特征值对应的特征向量是正交的，构成所在空间的一组单位正交基。</p>
-<p>再解决第二个问题，对一般情况，设对称阵<img alt="" src="../resources/EFCC9AD8E9BC39738EE632040917A49D.jpg" />的n个特征值分别为：</p>
-<p><img alt="" src="../resources/3A779DD6C1FE66C388F69A77C911B5C8.jpg" /></p>
+<div>
+<div class="MathJax_Preview">u_1^TXX^Tu_1=(X^Tu_1)^T(X^Tu_1)=&lt;X^Tu_1,X^Tu_1&gt;=\| X^Tu_1\|_2^2=(\frac{\|X^Tu_1\|}{\|u_1\|_2})^2</div>
+<script type="math/tex; mode=display">u_1^TXX^Tu_1=(X^Tu_1)^T(X^Tu_1)=<X^Tu_1,X^Tu_1>=\| X^Tu_1\|_2^2=(\frac{\|X^Tu_1\|}{\|u_1\|_2})^2</script>
+</div>
+<p>二次型化成一个范数的形式，由于u1取单位向量，最大化目标函数的基本问题也就转化为：对一个矩阵，它对一个向量做变换，变换前后的向量的模长伸缩尺度如何才能最大？我们有矩阵代数中的定理知，向量经矩阵映射前后的向量长度之比的最大值就是这个矩阵的最大奇异值，即：</p>
+<div>
+<div class="MathJax_Preview">\frac{\|Ax\|}{\|x\|}\le \sigma_1(A)</div>
+<script type="math/tex; mode=display">\frac{\|Ax\|}{\|x\|}\le \sigma_1(A)</script>
+</div>
+<p>式中，<img alt="" src="../resources/1C2F2B8D41CE8A162010C55DC174AA82.jpg" />是矩阵A的最大奇异值（亦是矩阵A的二范数），它等于<span><span class="MathJax_Preview">AA^T</span><script type="math/tex">AA^T</script></span>（或<span><span class="MathJax_Preview">A^TA</span><script type="math/tex">A^TA</script></span>）的最大特征值开平方。</p>
+<p>针对本问题来说，<span><span class="MathJax_Preview">XX^T</span><script type="math/tex">XX^T</script></span>是半正定对称阵，也就意味着它的特征值都大于等于0，且不同特征值对应的特征向量是正交的，构成所在空间的一组单位正交基。</p>
+<p>再解决第二个问题，对一般情况，设对称阵<span><span class="MathJax_Preview">A^TA \in C^{n\times n}</span><script type="math/tex">A^TA \in C^{n\times n}</script></span>的n个特征值分别为：</p>
+<div>
+<div class="MathJax_Preview">\lambda_1 \ge \lambda_2 \ge … \ge \lambda_n \ge 0</div>
+<script type="math/tex; mode=display">\lambda_1 \ge \lambda_2 \ge … \ge \lambda_n \ge 0</script>
+</div>
 <p>相应的单位特征向量为：</p>
-<p><img alt="" src="../resources/9AE45D505BB5FA976AC76A42B6D89227.jpg" /></p>
+<div>
+<div class="MathJax_Preview">\xi_1,\xi_2,…,\xi_n</div>
+<script type="math/tex; mode=display">\xi_1,\xi_2,…,\xi_n</script>
+</div>
 <p>任取一个向量x，用特征向量构成的空间中的这组基表示为：</p>
 <p><img alt="" src="../resources/E3BB7229FE186AD66453CB55DC592D2E.jpg" /></p>
 <p>则：</p>
-<p><img alt="" src="../resources/66BEABE38971597F36AB4F7BBF788AA5.jpg" /></p>
+<div>
+<div class="MathJax_Preview">\|x\|_2^2=&lt;x,x&gt;=\alpha_1^2+…+\alpha_n^2</div>
+<script type="math/tex; mode=display">\|x\|_2^2=<x,x>=\alpha_1^2+…+\alpha_n^2</script>
+</div>
+<div>
+<div class="MathJax_Preview">\|Ax\|_2^2=&lt;Ax,Ax&gt;=(Ax)^TAx=x^TA^TAx=&lt;x,A^TAx&gt;\\=&lt;\alpha_1\xi_1+...+\alpha_n\xi_n,\alpha_1A^TA\xi_1+…+\alpha_nA^TA\xi_n&gt;\\=&lt;\alpha_1\xi_1+...+\alpha_n\xi_n,\alpha_1\lambda_1\xi_1+…+\alpha_n\lambda_n\xi_n&gt;\\=\lambda_1\alpha_1^2+…+\lambda_n\alpha_n^2\\ \le\lambda_1(\alpha_1^2+…+\alpha_n^2)\\ =\lambda_1 \|x\|_2^2</div>
+<script type="math/tex; mode=display">\|Ax\|_2^2=<Ax,Ax>=(Ax)^TAx=x^TA^TAx=<x,A^TAx>\\=<\alpha_1\xi_1+...+\alpha_n\xi_n,\alpha_1A^TA\xi_1+…+\alpha_nA^TA\xi_n>\\=<\alpha_1\xi_1+...+\alpha_n\xi_n,\alpha_1\lambda_1\xi_1+…+\alpha_n\lambda_n\xi_n>\\=\lambda_1\alpha_1^2+…+\lambda_n\alpha_n^2\\ \le\lambda_1(\alpha_1^2+…+\alpha_n^2)\\ =\lambda_1 \|x\|_2^2</script>
+</div>
 <p>所以：</p>
-<p><img alt="" src="../resources/9855D67C9F3647DC082A83D06F277494.jpg" /></p>
-<p>针对第二个问题，我们取上式中的<img alt="" src="../resources/4D873FCCD7FA0C25450A186D82C6DF52.jpg" />，目标函数<img alt="" src="../resources/B912D0B49B333C84810B9F42FDC2C371.jpg" />取得最大值，也就是<img alt="" src="../resources/F08BE5320B509F0294C2FFA7A78149F0.jpg" />的最大特征值时，对应的特征向量的方向，就是第一主成分u1的方向！（第二主成分的方向为<img alt="" src="../resources/DA34EBDDA776378A81AB97551EC955E5.jpg" />的第二大特征值对应的特征向量的方向，以此类推）。</p>
+<div>
+<div class="MathJax_Preview">\frac{\|Ax\|_2}{\|x\|_2} \le \sqrt{\lambda_1} = \sigma_1</div>
+<script type="math/tex; mode=display">\frac{\|Ax\|_2}{\|x\|_2} \le \sqrt{\lambda_1} = \sigma_1</script>
+</div>
+<p>针对第二个问题，我们取上式中的<span><span class="MathJax_Preview">x=u_1,A=X^T</span><script type="math/tex">x=u_1,A=X^T</script></span>，目标函数 <span><span class="MathJax_Preview">u_1XX^Tu_1</span><script type="math/tex">u_1XX^Tu_1</script></span> 取得最大值，也就是<span><span class="MathJax_Preview">\max{(u_1XX^Tu_1)}=\max{(\|X^Tu_1 \|_2^2)}=XX^T</span><script type="math/tex">\max{(u_1XX^Tu_1)}=\max{(\|X^Tu_1 \|_2^2)}=XX^T</script></span>的最大特征值时，对应的特征向量的方向，就是第一主成分<span><span class="MathJax_Preview">u_1</span><script type="math/tex">u_1</script></span>的方向！（第二主成分的方向为<span><span class="MathJax_Preview">XX^T</span><script type="math/tex">XX^T</script></span>的第二大特征值对应的特征向量的方向，以此类推）。</p>
 <p>证明完毕。</p>
 <p>主成分所占整个信息的百分比可用下式计算：</p>
-<p><img alt="" src="../resources/37A328214BFC9BDB75F73A5CA3EABE17.jpg" /></p>
-<p>式中分母为<img alt="" src="../resources/DA34EBDDA776378A81AB97551EC955E5.jpg" />所有奇异值平方和，分子为所选取的前k大奇异值平方和。</p>
+<div>
+<div class="MathJax_Preview">\sqrt{\frac{\sum_{i=1}^k\sigma_i^2}{\sum_{i=1}^n\sigma_i^2}}</div>
+<script type="math/tex; mode=display">\sqrt{\frac{\sum_{i=1}^k\sigma_i^2}{\sum_{i=1}^n\sigma_i^2}}</script>
+</div>
+<p>式中分母为<span><span class="MathJax_Preview">XX^T​</span><script type="math/tex">XX^T​</script></span>所有奇异值平方和，分子为所选取的前k大奇异值平方和。</p>
 <p>有些研究工作表明，所选的主轴总长度占所有主轴长度之和的大约85% 即可，其实，这只是一个大体的说法，具体选多少个，要看实际情况而定。</p>
 <h2 id="3">3.意义<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <p>PCA将n个特征降维到k个，可以用来进行数据压缩，例如100维的向量最后可以用10维来表示，那么压缩率为90%。同样图像处理领域的KL变换使用PCA做图像压缩，人脸检测和匹配。比如如下摘自另一篇<a href="http://blog.csdn.net/mpbchina/article/details/7384425">博客</a>上的Matlab实验结果：</p>
