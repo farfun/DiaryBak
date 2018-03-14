@@ -14,7 +14,7 @@ mathjax: true
 Pandas的主要数据结构：
 
 |Dimensions|Name|Description|
-| :----:  |  :---:  | :----: |  :--: |
+| :----:  |  :---:  | :----: | 
 |1|Series|1D labeled homogeneously-typed array|
 |2|DataFrame|General 2D labeled, size-mutable tabular structure with potentially heterogeneously-typed columns|
 |3|PanelGeneral |3D labeled, also size-mutable array|

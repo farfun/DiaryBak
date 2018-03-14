@@ -1,0 +1,3 @@
+[submodule "jupyters/others/handson-ml"]
+	path = jupyters/others/handson-ml
+	url = https://github.com/ageron/handson-ml.git

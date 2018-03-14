@@ -1,21 +1,22 @@
+# coding=utf-8
 # Configuration file for jupyter-notebook.
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # Configurable configuration
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # LoggingConfigurable configuration
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 # A parent class for Configurables that log.
 #
 # Subclasses have a log trait, and the default behavior is to get the logger
 # from the currently running Application.
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # SingletonConfigurable configuration
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 # A configurable that only allows one instance.
 #
@@ -23,9 +24,9 @@
 # *any* subclass. To create and retrieve such a class use the
 # :meth:`SingletonConfigurable.instance` method.
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # Application configuration
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 # This is an application.
 
@@ -38,9 +39,9 @@
 # Set the log level by value or name.
 # c.Application.log_level = 30
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # JupyterApp configuration
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 # Base class for Jupyter applications
 
@@ -56,9 +57,9 @@
 # Generate default config file.
 # c.JupyterApp.generate_config = False
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # NotebookApp configuration
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 # Set the Access-Control-Allow-Credentials: true header
 # c.NotebookApp.allow_credentials = False
@@ -241,9 +242,9 @@
 # Should be in the form of an HTTP origin: ws[s]://hostname[:port]
 # c.NotebookApp.websocket_url = ''
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # ConnectionFileMixin configuration
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 # Mixin for configurable classes that work with connection files
 
@@ -277,9 +278,9 @@
 #
 # c.ConnectionFileMixin.transport = 'tcp'
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # KernelManager configuration
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 # Manages a single kernel in a subprocess on this host.
 #
@@ -298,9 +299,9 @@
 # line.
 # c.KernelManager.kernel_cmd = []
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # Session configuration
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 # Object for handling serialization and sending of messages.
 #
@@ -386,9 +387,9 @@
 # Username for the Session. Default is your system username.
 # c.Session.username = 'rainy'
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # MultiKernelManager configuration
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 # A class for managing multiple kernels.
 
@@ -399,18 +400,18 @@
 # KernelManager for customized behavior.
 # c.MultiKernelManager.kernel_manager_class = 'jupyter_client.ioloop.IOLoopKernelManager'
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # MappingKernelManager configuration
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 # A KernelManager that handles notebook mapping and HTTP error handling
 
 #
 # c.MappingKernelManager.root_dir = ''
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # ContentsManager configuration
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 # Base class for serving files and directories.
 #
@@ -464,9 +465,9 @@
 # The base name used when creating untitled notebooks.
 # c.ContentsManager.untitled_notebook = 'Untitled'
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # FileManagerMixin configuration
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 # Mixin for ContentsAPI classes that interact with the filesystem.
 #
@@ -490,9 +491,9 @@
 # )
 # c.FileManagerMixin.use_atomic_writing = True
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # FileContentsManager configuration
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 # Python callable or importstring thereof
 #
@@ -507,9 +508,13 @@
 #
 # - path: the filesystem path to the file just written - model: the model
 # representing the file - contents_manager: this ContentsManager instance
-import yaml
+
+
 import os
 import subprocess
+
+import yaml
+
 pjoin = os.path.join
 _BLOG_ROOT = os.path.abspath(pjoin(os.path.dirname(__file__), os.path.pardir))
 _DEFAULT_CATEGORY = 'Home'
@@ -574,12 +579,22 @@ def output_post_save(os_path, model, contents_manager):
 c.FileContentsManager.post_save_hook = output_post_save
 c.FileContentsManager.root_dir = 'jupyters'
 
+# 每次
+c.InteractiveShellApp.exec_lines = [
+    "import pandas as pd",
+    "import numpy as np",
+    "import matplotlib.pyplot as plt"
+]
+
+# 配置matplotlib
+c.IPKernelApp.matplotlib = 'inline'
+
 # DEPRECATED, use post_save_hook
 # c.FileContentsManager.save_script = False
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # NotebookNotary configuration
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 # A class for computing and verifying notebook signatures.
 
@@ -601,9 +616,9 @@ c.FileContentsManager.root_dir = 'jupyters'
 # The file where the secret key is stored.
 # c.NotebookNotary.secret_file = ''
 
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # KernelSpecManager configuration
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 # Whitelist of allowed kernel names.
 #

@@ -44,3 +44,9 @@ http://blog.csdn.net/mycafe_/article/details/79123757
 
 
 https://cyent.github.io/markdown-with-mkdocs-material/
+
+
+
+
+https://github.com/ageron/handson-ml
+
