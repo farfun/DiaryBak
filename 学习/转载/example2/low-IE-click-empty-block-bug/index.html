@@ -2620,10 +2620,13 @@
 <hr />
 <h2 id="_3">解决办法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>解决方法很简单，即给这个块级元素填充任意颜色，然后将其透明度设置为0。代码如下：</p>
-<div class="codehilite"><pre><span></span>background-color: #fff;
-opacity: 0;
-filter:alpha(opacity=0);
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nt">background-color</span><span class="o">:</span> <span class="p">#</span><span class="nn">fff</span><span class="o">;</span>
+<span class="nt">opacity</span><span class="o">:</span> <span class="nt">0</span><span class="o">;</span>
+<span class="nt">filter</span><span class="p">:</span><span class="nd">alpha</span><span class="o">(</span><span class="nt">opacity</span><span class="o">=</span><span class="nt">0</span><span class="o">);</span>
 </pre></div>
+</td></tr></table>
                 
                   
                 
@@ -2765,20 +2768,6 @@ filter:alpha(opacity=0);
             }
         })
     }</script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115879584-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'UA-115879584-1');
-</script>
       
     
   </body>

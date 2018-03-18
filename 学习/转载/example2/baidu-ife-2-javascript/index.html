@@ -4753,13 +4753,17 @@ $   |匹配输入/字符串的结尾。如果多行（multiline）标志被设�
 <div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">speed</span> <span class="o">=</span> <span class="p">(</span><span class="nx">target</span> <span class="o">-</span> <span class="nx">imgListDiv</span><span class="p">.</span><span class="nx">offsetLeft</span><span class="p">)</span> <span class="o">/</span> <span class="mi">6</span><span class="p">;</span>
 </pre></div>
 
-<div class="codehilite"><pre><span></span>逐渐变慢，最后停止，距离越远速度越大，速度由距离决定
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>逐渐变慢，最后停止，距离越远速度越大，速度由距离决定
 
 速度=(目标值-当前值)/缩放系数
 
 这样写的原因就是为了让它做缓冲运动，而不是匀速运动，这样给用户带来的交互感觉会更好。
 </pre></div>
-
+</td></tr></table>
 
 <ul>
 <li>速度取整</li>
@@ -4767,9 +4771,9 @@ $   |匹配输入/字符串的结尾。如果多行（multiline）标志被设�
 <div class="codehilite"><pre><span></span><span class="nx">speed</span> <span class="o">=</span> <span class="nx">speed</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">speed</span><span class="p">)</span> <span class="o">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">speed</span><span class="p">);</span>
 </pre></div>
 
-<div class="codehilite"><pre><span></span>像素不能是小数，所以速度大于0的时候，向上取整。速度小于0时，向下取整
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>像素不能是小数，所以速度大于0的时候，向上取整。速度小于0时，向下取整
 </pre></div>
-
+</td></tr></table>
 
 <ul>
 <li>最后关于运动终止条件。</li>
@@ -4777,18 +4781,20 @@ $   |匹配输入/字符串的结尾。如果多行（multiline）标志被设�
 <div class="codehilite"><pre><span></span><span class="nx">imgListDiv</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">left</span> <span class="o">=</span> <span class="nx">imgListDiv</span><span class="p">.</span><span class="nx">offsetLeft</span> <span class="o">+</span> <span class="nx">speed</span> <span class="o">+</span> <span class="s2">&quot;px&quot;</span><span class="p">;</span>
 </pre></div>
 
-<div class="codehilite"><pre><span></span>由这一行可以看出，`imgListDiv.style.left` 在不断增大，即 `imgListDiv.offsetLeft` 在不断增大。这两个是相同的属性，只不过一个是在赋值时使用，第二个是在取值时使用。
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>由这一行可以看出，`imgListDiv.style.left` 在不断增大，即 `imgListDiv.offsetLeft` 在不断增大。这两个是相同的属性，只不过一个是在赋值时使用，第二个是在取值时使用。
 
 再看这行代码，由于这部分是每个30ms执行一次的，所以继续执行到这里。
 </pre></div>
-
+</td></tr></table>
 
 <div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">speed</span> <span class="o">=</span> <span class="p">(</span><span class="nx">target</span> <span class="o">-</span> <span class="nx">imgListDiv</span><span class="p">.</span><span class="nx">offsetLeft</span><span class="p">)</span> <span class="o">/</span> <span class="mi">6</span><span class="p">;</span>
 </pre></div>
 
-<div class="codehilite"><pre><span></span>当不断增大的 `imgListDiv.offsetLeft` 等于 `target` 时，`speed` 为0。宏观表现为不再运动，这便是运动终止的状态，但是这里的方法还是不断在执行，每个30ms在执行。
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>当不断增大的 `imgListDiv.offsetLeft` 等于 `target` 时，`speed` 为0。宏观表现为不再运动，这便是运动终止的状态，但是这里的方法还是不断在执行，每个30ms在执行。
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="4">练习4：输入框即时提示<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
 <h3 id="_28">任务要求<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h3>
@@ -5027,20 +5033,6 @@ $   |匹配输入/字符串的结尾。如果多行（multiline）标志被设�
             }
         })
     }</script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115879584-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'UA-115879584-1');
-</script>
       
     
   </body>

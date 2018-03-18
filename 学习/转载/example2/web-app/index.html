@@ -3267,21 +3267,28 @@
 <h3 id="_3">安装<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>首先要有 ruby 环境。</p>
 <p>由于国内网络原因（你懂的），导致 rubygems.org 存放在 Amazon S3 上面的资源文件间歇性连接失败。这时候我们可以通过gem sources命令来配置源，先移除默认的 <a href="https://rubygems.org">https://rubygems.org</a> 源，然后添加淘宝的源 <a href="https://ruby.taobao.org/">https://ruby.taobao.org/</a>，然后查看下当前使用的源是哪个，如果是淘宝的，则表示可以输入 sass 安装命令 <code>gem install sass</code> 了。</p>
-<div class="codehilite"><pre><span></span>$ gem sources --remove https://rubygems.org/
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ gem sources --remove https://rubygems.org/
 $ gem sources -a https://ruby.taobao.org/
 $ gem sources -l
 *** CURRENT SOURCES ***
 
 https://ruby.taobao.org
-# 请确保只有 ruby.taobao.org
+<span class="c1"># 请确保只有 ruby.taobao.org</span>
 $ gem install sass
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="_4">编译<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>sass --watch style.scss:style.css --style expanded
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sass --watch style.scss:style.css --style expanded
 </pre></div>
-
+</td></tr></table>
 
 <hr />
 <h3 id="_5">补充<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
@@ -3569,7 +3576,25 @@ CMD:延迟执行（运行到需加载，根据顺序执行）</p>
 <li>
 <p><strong>数据存储</strong></p>
 <p>以 JSON 模拟数据表的形式存储于 LocalStorage 中</p>
-<div class="codehilite"><pre><span></span> 使用数据库的思想，构建3张表。
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span> 使用数据库的思想，构建3张表。
  cateJson 分类
  childCateJson 子分类
  taskJson 任务
@@ -3589,7 +3614,7 @@ CMD:延迟执行（运行到需加载，根据顺序执行）</p>
  id* | pid(FK) | finish | name | date | content
  ----------------------------------------------
 </pre></div>
-
+</td></tr></table>
 
 </li>
 <li>
@@ -3801,20 +3826,6 @@ CMD:延迟执行（运行到需加载，根据顺序执行）</p>
             }
         })
     }</script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115879584-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'UA-115879584-1');
-</script>
       
     
   </body>

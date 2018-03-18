@@ -2702,25 +2702,25 @@
 <li>
 <p><code>back()</code></p>
 <p>在历史记录中后退</p>
-<div class="codehilite"><pre><span></span>history.back();
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>history.back();
 </pre></div>
-
+</td></tr></table>
 
 </li>
 <li>
 <p><code>forward()</code></p>
 <p>在历史记录中前进</p>
-<div class="codehilite"><pre><span></span>history.forward();
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>history.forward();
 </pre></div>
-
+</td></tr></table>
 
 </li>
 <li>
 <p><code>go()</code></p>
 <p>移动到指定的历史记录点</p>
-<div class="codehilite"><pre><span></span>history.go(-1);
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>history.go(-1);
 </pre></div>
-
+</td></tr></table>
 
 <p>通过指定一个相对于当前页面位置的数值，你可以使用go()方法从当前会话的历史记录中加载页面（当前页面位置索引值为0，上一页就是-1，下一页为1）。</p>
 <p><strong>go()不填参数或参数为go(0)时，页面会刷新，即<code>history.go()</code>或<code>history.go(0)</code>相当于<code>location.reload()</code></strong></p>
@@ -2742,14 +2742,19 @@
 <p>第一个参数为<code>history</code>对象的<code>state</code>属性值，可以放任意数据，记录历史状态。第二个参数是新状态的标题，目前浏览器基本不支持。第三个参数为可选的相对url。</p>
 <p>执行<code>pushState</code>后，可以在不加载新页面的情况下，更改url。同时<code>history</code>栈中新增一条数据。</p>
 <p>例如，我们有这样一段代码：</p>
-<div class="codehilite"><pre><span></span>&lt;button id=&quot;push1&quot;&gt;pushState()&lt;/button&gt;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">&quot;push1&quot;</span><span class="nt">&gt;</span>pushState()<span class="nt">&lt;/button&gt;</span>
 
 document.querySelector(&#39;#push1&#39;).addEventListener(&#39;click&#39;, function() {
     history.pushState(&#39;abc&#39;,&#39;pushStatePageTitle&#39;,&#39;pushState.html&#39;);
     document.querySelector(&#39;#length&#39;).innerHTML = history.length;//重新读取历史长度
 });
 </pre></div>
-
+</td></tr></table>
 
 <p>当点击按钮的时候，页面不会刷新，但<code>url</code>地址的最后已经变为<code>pushState.html</code>。这一点非常像<code>hash</code>的作用，但比<code>hash</code>更优雅。</p>
 </li>
@@ -2772,12 +2777,15 @@ document.querySelector(&#39;#push1&#39;).addEventListener(&#39;click&#39;, funct
 </ol>
 <p>个人理解3中也可以仅仅请求数据，再由浏览器渲染。</p>
 <p>每当同一个文档的浏览历史（即history对象）出现变化时，会触发<code>window.onpopstate</code>事件。</p>
-<div class="codehilite"><pre><span></span>window.onpopstate = function(event) {
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>window.onpopstate = function(event) {
     console.log(event.state);
     console.log(location);
 };
 </pre></div>
-
+</td></tr></table>
 
 <p>这样在用户点击前进后退时也可以很好的监听url，来做相应的页面渲染。</p>
 <p>若用户刷新了页面，但没有相应的页面资源，这时页面就会显示不存在。所以我认为较好的方法是在写<code>pushState()</code>第三个参数的时候，写为<code>?a=1</code>这样的参数形式。<a href="https://github.com/browserstate/history.js">History.js</a> 也是这么写的。但是这样应该会多一次请求。也许使用 nodeJS 作为中间层会好一些吧。</p>
@@ -2939,20 +2947,6 @@ document.querySelector(&#39;#push1&#39;).addEventListener(&#39;click&#39;, funct
             }
         })
     }</script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115879584-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'UA-115879584-1');
-</script>
       
     
   </body>

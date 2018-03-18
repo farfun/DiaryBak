@@ -2647,85 +2647,157 @@
 </ul>
 <p>本文为慕课网 <a href="http://www.imooc.com/learn/277">JavaScript深入浅出</a> JavaScript 中的闭包笔记。</p>
 <h2 id="_1">闭包的例子<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>function outer() {
-    var localVal = 30;
-    return localVal;
-}
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">outer() {</span>
+    <span class="kd">var</span> <span class="nx">localVal</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nx">localVal</span><span class="p">;</span>
+<span class="p">}</span>
 
-console.log(outer()); //30
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">outer</span><span class="p">());</span> <span class="c1">//30</span>
 
-function outer2() {
-    var localVal = 30;
-    return function() {
-        return localVal;
-    };
-}
+<span class="kd">function</span> <span class="nx">outer2() {</span>
+    <span class="kd">var</span> <span class="nx">localVal</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
+    <span class="k">return</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">localVal</span><span class="p">;</span>
+    <span class="p">};</span>
+<span class="p">}</span>
 
-var func = outer2();
-console.log(func()); //30
+<span class="kd">var</span> <span class="nx">func</span> <span class="o">=</span> <span class="nx">outer2</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">func</span><span class="p">());</span> <span class="c1">//30</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>对于第一个普通的函数，在执行过之后，它的局部变量就可以被释放。</p>
 <p>对于第二个函数，<code>localVal</code> 是不能被释放的。因为调用 <code>outer2()</code> 后，返回的是匿名函数，匿名函数可以访问外部的 <code>outer2()</code> 中的局部变量，并返回了这个局部变量 localVal。当 <code>outer2()</code> 赋值给 <code>func</code> 后，再次调用 <code>func()</code>，仍能访问到局部变量 <code>localVal</code>。这种情况就是闭包。</p>
 <hr />
 <h2 id="_2">应用<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>所谓闭包就是：子函数可以使用父函数中的局部变量。</strong><div class="codehilite"><pre><span></span>! function() {
-    var localData = &quot;localData here&quot;;
-    document.addEventListener(&#39;click&#39;,
-        function() {
-            console.log(localData); //这里访问外部数据
-        });
-}();
+<li><strong>所谓闭包就是：子函数可以使用父函数中的局部变量。</strong><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">!</span> <span class="nt">function</span><span class="o">()</span> <span class="p">{</span>
+    <span class="err">var</span> <span class="err">localData</span> <span class="err">=</span> <span class="err">&quot;localData</span> <span class="err">here&quot;</span><span class="p">;</span>
+    <span class="err">document.addEventListener(&#39;click&#39;,</span>
+        <span class="err">function()</span> <span class="err">{</span>
+            <span class="err">console.log(localData)</span><span class="p">;</span> <span class="err">//这里访问外部数据</span>
+        <span class="p">}</span><span class="o">);</span>
+<span class="err">}</span><span class="o">();</span>
 
-! function() {
-    var localData = &quot;localData here&quot;;
-    var url = &quot;http://www.baidu.com/&quot;;
-    $.ajax({
-        url: url,
-        success: function() {
-            // do sth...
-            console.log(localData); //这里访问外部数据
-        }
-    });
-}()
+<span class="o">!</span> <span class="nt">function</span><span class="o">()</span> <span class="p">{</span>
+    <span class="err">var</span> <span class="err">localData</span> <span class="err">=</span> <span class="err">&quot;localData</span> <span class="err">here&quot;</span><span class="p">;</span>
+    <span class="err">var</span> <span class="err">url</span> <span class="err">=</span> <span class="err">&quot;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">baidu</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="err">&quot;</span><span class="p">;</span>
+    <span class="err">$.ajax({</span>
+        <span class="n">url</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span>
+        <span class="n">success</span><span class="o">:</span> <span class="nf">function</span><span class="p">()</span> <span class="err">{</span>
+            <span class="o">//</span> <span class="n">do</span> <span class="n">sth</span><span class="o">...</span>
+            <span class="n">console</span><span class="o">.</span><span class="nf">log</span><span class="p">(</span><span class="n">localData</span><span class="p">);</span> <span class="err">//这里访问外部数据</span>
+        <span class="p">}</span>
+    <span class="err">}</span><span class="o">);</span>
+<span class="err">}</span><span class="o">()</span>
 </pre></div>
-
+</td></tr></table>
 
 </li>
 </ul>
 <hr />
 <h2 id="_3">常见错误之循环闭包<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>比如我们想循环绑定点击事件</p>
-<div class="codehilite"><pre><span></span>document.body.innerHTML = &quot;&lt;div id=div1&gt;aaa&lt;/div&gt;&lt;div id=div2&gt;bbb&lt;/div&gt;&lt;div id=div3&gt;ccc&lt;/div&gt;&quot;;
-for (var i = 1; i &lt; 4; i++) {
-    document.getElementById(&#39;div&#39; + i).
-    addEventListener(&#39;click&#39;, function() {
-        alert(i); // all are 4!
-    });
-}
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>document.body.innerHTML = &quot;<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">div1</span><span class="nt">&gt;</span>aaa<span class="nt">&lt;/div&gt;&lt;div</span> <span class="na">id=</span><span class="s">div2</span><span class="nt">&gt;</span>bbb<span class="nt">&lt;/div&gt;&lt;div</span> <span class="na">id=</span><span class="s">div3</span><span class="nt">&gt;</span>ccc<span class="nt">&lt;/div&gt;</span>&quot;;
+for (var i = 1; i <span class="nt">&lt; 4</span><span class="err">;</span> <span class="err">i++)</span> <span class="err">{</span>
+    <span class="err">document.getElementById(&#39;div&#39;</span> <span class="err">+</span> <span class="err">i).</span>
+    <span class="err">addEventListener(&#39;click&#39;,</span> <span class="err">function()</span> <span class="err">{</span>
+        <span class="err">alert(i);</span> <span class="err">//</span> <span class="err">all</span> <span class="err">are</span> <span class="err">4!</span>
+    <span class="err">});</span>
+<span class="err">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>上面的代码，我们点击任何一个 div，弹出的都是 4</p>
 <p>这是因为，for 循环中的 i 是一个全局变量。这里内函数的点击事件，访问到的是循环后的 i 值，所以是 4</p>
-<div class="codehilite"><pre><span></span>document.body.innerHTML = &quot;&lt;div id=div1&gt;aaa&lt;/div&gt;&lt;div id=div2&gt;bbb&lt;/div&gt;&lt;div id=div3&gt;ccc&lt;/div&gt;&quot;;
-for (var i = 1; i &lt; 4; i++) {
-    ! function(i) {
-        document.getElementById(&#39;div&#39; + i).
-        addEventListener(&#39;click&#39;, function() {
-            alert(i); // 1, 2, 3
-        });
-    }(i);
-}
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>document.body.innerHTML = &quot;<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">div1</span><span class="nt">&gt;</span>aaa<span class="nt">&lt;/div&gt;&lt;div</span> <span class="na">id=</span><span class="s">div2</span><span class="nt">&gt;</span>bbb<span class="nt">&lt;/div&gt;&lt;div</span> <span class="na">id=</span><span class="s">div3</span><span class="nt">&gt;</span>ccc<span class="nt">&lt;/div&gt;</span>&quot;;
+for (var i = 1; i <span class="nt">&lt; 4</span><span class="err">;</span> <span class="err">i++)</span> <span class="err">{</span>
+    <span class="err">!</span> <span class="err">function(i)</span> <span class="err">{</span>
+        <span class="err">document.getElementById(&#39;div&#39;</span> <span class="err">+</span> <span class="err">i).</span>
+        <span class="err">addEventListener(&#39;click&#39;,</span> <span class="err">function()</span> <span class="err">{</span>
+            <span class="err">alert(i);</span> <span class="err">//</span> <span class="err">1,</span> <span class="err">2,</span> <span class="err">3</span>
+        <span class="err">});</span>
+    <span class="err">}(i);</span>
+<span class="err">}</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>这里使用了立即执行函数，并给匿名函数赋值 i，这样点击事件每一次就会访问到相应的 i。</p>
 <hr />
 <h2 id="_4">封装<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>(function() {
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>(function() {
     var _userId = 9527;
     var _typeId = &quot;item&quot;;
     var exp = {};
@@ -2752,7 +2824,7 @@ console.log(a._userId); //undefined
 console.log(a._typeId); //undefined
 console.log(converter); //Uncaught ReferenceError: converter is not defined
 </pre></div>
-
+</td></tr></table>
 
 <p>上面的代码通过闭包实现了一个封装。</p>
 <hr />
@@ -2926,20 +2998,6 @@ console.log(converter); //Uncaught ReferenceError: converter is not defined
             }
         })
     }</script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115879584-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'UA-115879584-1');
-</script>
       
     
   </body>

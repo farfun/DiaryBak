@@ -2708,18 +2708,22 @@
 <li>weinre 是 nodeJS 的一个应用，首先要 <a href="https://nodejs.org/">安装 nodeJS 运行环境</a></li>
 <li>
 <p>使用 npm 命令，安装 weinre</p>
-<div class="codehilite"><pre><span></span>npm -g install weinre
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>npm -g install weinre
 </pre></div>
-
+</td></tr></table>
 
 <p>安装成功后会有类似的信息：</p>
-<div class="codehilite"><pre><span></span>C:\Users\haoyang\AppData\Roaming\npm\weinre -&gt; C:\Users\haoyang\AppData\Roaming\npm\node_modules\weinre\weinre
-weinre@2.0.0-pre-I0Z7U9OV C:\Users\haoyang\AppData\Roaming\npm\node_modules\weinre
-├── underscore@1.7.0
-├── nopt@3.0.2 (abbrev@1.0.7)
-└── express@2.5.11 (mime@1.2.4, qs@0.4.2, mkdirp@0.3.0, connect@1.9.2)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nl">C</span><span class="p">:</span><span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="n">haoyang</span><span class="err">\</span><span class="n">AppData</span><span class="err">\</span><span class="n">Roaming</span><span class="err">\</span><span class="n">npm</span><span class="err">\</span><span class="n">weinre</span> <span class="o">-&gt;</span> <span class="nl">C</span><span class="p">:</span><span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="n">haoyang</span><span class="err">\</span><span class="n">AppData</span><span class="err">\</span><span class="n">Roaming</span><span class="err">\</span><span class="n">npm</span><span class="err">\</span><span class="n">node_modules</span><span class="err">\</span><span class="n">weinre</span><span class="err">\</span><span class="n">weinre</span>
+<span class="n">weinre</span><span class="mf">@2.0.0</span><span class="o">-</span><span class="n">pre</span><span class="o">-</span><span class="n">I0Z7U9OV</span> <span class="nl">C</span><span class="p">:</span><span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="n">haoyang</span><span class="err">\</span><span class="n">AppData</span><span class="err">\</span><span class="n">Roaming</span><span class="err">\</span><span class="n">npm</span><span class="err">\</span><span class="n">node_modules</span><span class="err">\</span><span class="n">weinre</span>
+<span class="err">├──</span> <span class="n">underscore</span><span class="mf">@1.7.0</span>
+<span class="err">├──</span> <span class="n">nopt</span><span class="mf">@3.0.2</span> <span class="p">(</span><span class="n">abbrev</span><span class="mf">@1.0.7</span><span class="p">)</span>
+<span class="err">└──</span> <span class="n">express</span><span class="mf">@2.5.11</span> <span class="p">(</span><span class="n">mime</span><span class="mf">@1.2.4</span><span class="p">,</span> <span class="n">qs</span><span class="mf">@0.4.2</span><span class="p">,</span> <span class="n">mkdirp</span><span class="mf">@0.3.0</span><span class="p">,</span> <span class="n">connect</span><span class="mf">@1.9.2</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 </li>
 </ol>
@@ -2728,9 +2732,9 @@ weinre@2.0.0-pre-I0Z7U9OV C:\Users\haoyang\AppData\Roaming\npm\node_modules\wein
 <ol>
 <li>
 <p>启动服务</p>
-<div class="codehilite"><pre><span></span>weinre --boundHost -all- --httpPort 8081
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>weinre --boundHost -all- --httpPort 8081
 </pre></div>
-
+</td></tr></table>
 
 <ul>
 <li>
@@ -2755,20 +2759,20 @@ weinre@2.0.0-pre-I0Z7U9OV C:\Users\haoyang\AppData\Roaming\npm\node_modules\wein
 <p>You can use this script to inject the weinre target code into your web page.</p>
 <p><a href="http://localhost:8081/target/target-script-min.js#anonymous">http://localhost:8081/target/target-script-min.js#anonymous</a></p>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span>&lt;script src=&quot;http://localhost:8081/target/target-script-min.js#anonymous&quot;&gt;&lt;/script&gt;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;http://localhost:8081/target/target-script-min.js#anonymous&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>这里要说明一下，要把上面的 localhost 换为本机的 ip 地址。</p>
 <p>我们可以在命令行中 使用 <code>ipconfig</code> 得到 ip 地址，如下（当然你的可能和我的不一样）：</p>
-<div class="codehilite"><pre><span></span>IPv4 地址 . . . . . . . . . . . . : 192.168.1.107
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>IPv4 地址 . . . . . . . . . . . . : 192.168.1.107
 </pre></div>
-
+</td></tr></table>
 
 <p>即插入如下代码：</p>
-<div class="codehilite"><pre><span></span>&lt;script src=&quot;http://192.168.1.107:8081/target/target-script-min.js#anonymous&quot;&gt;&lt;/script&gt;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;http://192.168.1.107:8081/target/target-script-min.js#anonymous&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 </pre></div>
-
+</td></tr></table>
 
 </li>
 <li>
@@ -2778,9 +2782,9 @@ weinre@2.0.0-pre-I0Z7U9OV C:\Users\haoyang\AppData\Roaming\npm\node_modules\wein
 <p>此时 target 为 none，如下图：</p>
 <p><img alt="target-none" src="http://7q5cdt.com1.z0.glb.clouddn.com/blog-target-none.png" /></p>
 <p>现在我们要用手机访问同一个局域网下的这个目标页面。我们可以把要调试的页面放到这个路径下：</p>
-<div class="codehilite"><pre><span></span>C:\Users\haoyang\AppData\Roaming\npm\node_modules\weinre\web
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>C:\Users\haoyang\AppData\Roaming\npm\node_modules\weinre\web
 </pre></div>
-
+</td></tr></table>
 
 <p>通过 <a href="http://192.168.1.107:8081/FILE_NAME">http://192.168.1.107:8081/FILE_NAME</a> 在手机上访问，就可以看到了。当然前提是同一个局域网。</p>
 <p>但是这样可能不太灵活，每次都要把目标页面放到指定的目录下。所以我们可以另外开一个服务器。</p>
@@ -2939,20 +2943,6 @@ weinre@2.0.0-pre-I0Z7U9OV C:\Users\haoyang\AppData\Roaming\npm\node_modules\wein
             }
         })
     }</script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115879584-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'UA-115879584-1');
-</script>
       
     
   </body>
