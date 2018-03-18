@@ -1,0 +1,3093 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Nothing is impossible">
+      
+      
+        <link rel="canonical" href="https://1007530194.github.io/Diary/推荐/推荐框架/LibRec介绍文档/DataModel/">
+      
+      
+        <meta name="author" content="NiuLiangtao">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.3, mkdocs-material-2.7.0">
+    
+    
+      
+        <title>DataModel - Blog of NiuLiangtao</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.78aab2dc.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#datamodel" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://1007530194.github.io/Diary/" title="Blog of NiuLiangtao" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Blog of NiuLiangtao
+              </span>
+              <span class="md-header-nav__topic">
+                DataModel
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/1007530194/Diary" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      1007530194/Diary
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../.." title="Home" class="md-tabs__link">
+          Home
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../书籍/" title="书籍" class="md-tabs__link">
+          书籍
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../学习/" title="学习" class="md-tabs__link">
+          学习
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../工具/About/" title="工具" class="md-tabs__link">
+          工具
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../个人理解的/" title="推荐" class="md-tabs__link md-tabs__link--active">
+          推荐
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../文章/" title="文章" class="md-tabs__link">
+          文章
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../../日常/AboutMe/" title="日常" class="md-tabs__link">
+          日常
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    Blog of NiuLiangtao
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/1007530194/Diary" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      1007530194/Diary
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ToDo/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Home
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Home
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../Nothing/" title="Nothing" class="md-nav__link">
+      Nothing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../ToDo/" title="要做的" class="md-nav__link">
+      要做的
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      书籍
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        书籍
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      机器学习实战
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        机器学习实战
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/00naive-bayes-discuss/" title="naive-bayes-discuss" class="md-nav__link">
+      naive-bayes-discuss
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/01.机器学习基础/" title="1.机器学习基础" class="md-nav__link">
+      1.机器学习基础
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/02.k-近邻算法/" title="2.k-近邻算法" class="md-nav__link">
+      2.k-近邻算法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/03.决策树/" title="3.决策树" class="md-nav__link">
+      3.决策树
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/04.朴素贝叶斯/" title="4.朴素贝叶斯" class="md-nav__link">
+      4.朴素贝叶斯
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/05.Logistic回归/" title="5.Logistic回归" class="md-nav__link">
+      5.Logistic回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/06.0.支持向量机/" title="6.支持向量机" class="md-nav__link">
+      6.支持向量机
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/06.1.支持向量机的几个通俗理解/" title="6.1.支持向量机的几个通俗理解" class="md-nav__link">
+      6.1.支持向量机的几个通俗理解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/07.集成方法-随机森林和AdaBoost/" title="7.集成方法-随机森林和AdaBoost" class="md-nav__link">
+      7.集成方法-随机森林和AdaBoost
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/08.预测数值型数据-回归/" title="8.预测数值型数据：回归" class="md-nav__link">
+      8.预测数值型数据：回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/09.树回归/" title="9.树回归" class="md-nav__link">
+      9.树回归
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/10.k-means聚类/" title="10.k-means聚类" class="md-nav__link">
+      10.k-means聚类
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/11.使用Apriori算法进行关联分析/" title="11.使用Apriori算法进行关联分析" class="md-nav__link">
+      11.使用Apriori算法进行关联分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/12.使用FP-growth算法来高效发现频繁项集/" title="12.使用FP-growth算法来高效发现频繁项集" class="md-nav__link">
+      12.使用FP-growth算法来高效发现频繁项集
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/13.利用PCA来简化数据/" title="13.利用PCA来简化数据" class="md-nav__link">
+      13.利用PCA来简化数据
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/14.利用SVD简化数据/" title="14.利用SVD简化数据" class="md-nav__link">
+      14.利用SVD简化数据
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/15.大数据与MapReduce/" title="15.大数据与MapReduce" class="md-nav__link">
+      15.大数据与MapReduce
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/机器学习实战/16.推荐系统/" title="16.推荐系统" class="md-nav__link">
+      16.推荐系统
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      深度学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        深度学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../书籍/深度学习/DeepLearning/" title="深度学习中文版" class="md-nav__link">
+      深度学习中文版
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      tensorflow
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        tensorflow
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/tensorflow/如何选择优化器 optimizer/" title="如何选择优化器 optimizer" class="md-nav__link">
+      如何选择优化器 optimizer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
+    
+    <label class="md-nav__link" for="nav-4-3">
+      深度学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-3">
+        深度学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
+      主成分分析 (2)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/深度学习/主成分分析/" title="主成分分析" class="md-nav__link">
+      主成分分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/深度学习/最小二乘法/" title="最小二乘法" class="md-nav__link">
+      最小二乘法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
+      矩阵分解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
+      矩阵求导
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4">
+      转载
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-4">
+        转载
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4-1" type="checkbox" id="nav-4-4-1">
+    
+    <label class="md-nav__link" for="nav-4-4-1">
+      cs231n-ch
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-4-1">
+        cs231n-ch
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-ch/ch-assignment2_google_cloud/" title="Google Cloud Tutorial Part 2 (with GPUs)" class="md-nav__link">
+      Google Cloud Tutorial Part 2 (with GPUs)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-ch/ch-aws-tutorial/" title="aws-tutorial" class="md-nav__link">
+      aws-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-ch/ch-classification/" title="classification" class="md-nav__link">
+      classification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-ch/ch-convnet-tips/" title="convnet-tips" class="md-nav__link">
+      convnet-tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-ch/ch-convolutional-networks/" title="convolutional-networks" class="md-nav__link">
+      convolutional-networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-ch/ch-google_cloud_tutorial/" title="Google Cloud Tutorial gce-tutorial" class="md-nav__link">
+      Google Cloud Tutorial gce-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-ch/ch-ipython-tutorial/" title="IPython Tutorial ipython-tutorial" class="md-nav__link">
+      IPython Tutorial ipython-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-ch/ch-linear-classify/" title="线性分类" class="md-nav__link">
+      线性分类
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-ch/ch-neural-networks-1/" title="neural-networks-1" class="md-nav__link">
+      neural-networks-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-ch/ch-neural-networks-2/" title="neural-networks-2" class="md-nav__link">
+      neural-networks-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-ch/ch-neural-networks-3/" title="neural-networks-3" class="md-nav__link">
+      neural-networks-3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-ch/ch-neural-networks-case-study/" title="neural-networks-case-study" class="md-nav__link">
+      neural-networks-case-study
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-ch/ch-optimization-1/" title="optimization-1" class="md-nav__link">
+      optimization-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-ch/ch-optimization-2/" title="optimization-2" class="md-nav__link">
+      optimization-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-ch/ch-overview/" title="Overview of Computer Vision and Visual Recognition overview" class="md-nav__link">
+      Overview of Computer Vision and Visual Recognition overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-ch/ch-poster/" title="CS231n Poster Session poster-session" class="md-nav__link">
+      CS231n Poster Session poster-session
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-ch/ch-python-numpy-tutorial/" title="Python Numpy Tutorial python-numpy-tutorial" class="md-nav__link">
+      Python Numpy Tutorial python-numpy-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-ch/ch-Readme/" title="ch Readme" class="md-nav__link">
+      ch Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-ch/ch-transfer-learning/" title="transfer-learning" class="md-nav__link">
+      transfer-learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-ch/ch-understanding-cnn/" title="understanding-cnn" class="md-nav__link">
+      understanding-cnn
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-ch/terminal-tutorial/" title="Terminal.com Tutorial terminal-tutorial" class="md-nav__link">
+      Terminal.com Tutorial terminal-tutorial
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4-2" type="checkbox" id="nav-4-4-2">
+    
+    <label class="md-nav__link" for="nav-4-4-2">
+      cs231n-en
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-4-2">
+        cs231n-en
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-en/en-assignment2_google_cloud/" title="Google Cloud Tutorial Part 2 (with GPUs)" class="md-nav__link">
+      Google Cloud Tutorial Part 2 (with GPUs)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-en/en-aws-tutorial/" title="aws-tutorial" class="md-nav__link">
+      aws-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-en/en-classification/" title="classification" class="md-nav__link">
+      classification
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-en/en-convnet-tips/" title="convnet-tips" class="md-nav__link">
+      convnet-tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-en/en-convolutional-networks/" title="convolutional-networks" class="md-nav__link">
+      convolutional-networks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-en/en-google_cloud_tutorial/" title="Google Cloud Tutorial" class="md-nav__link">
+      Google Cloud Tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-en/en-ipython-tutorial/" title="IPython Tutorial ipython-tutorial" class="md-nav__link">
+      IPython Tutorial ipython-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-en/en-linear-classify/" title="linear-classify" class="md-nav__link">
+      linear-classify
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-en/en-neural-networks-1/" title="neural-networks-1" class="md-nav__link">
+      neural-networks-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-en/en-neural-networks-2/" title="neural-networks-2" class="md-nav__link">
+      neural-networks-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-en/en-neural-networks-3/" title="neural-networks-3" class="md-nav__link">
+      neural-networks-3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-en/en-neural-networks-case-study/" title="neural-networks-case-study" class="md-nav__link">
+      neural-networks-case-study
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-en/en-optimization-1/" title="optimization-1" class="md-nav__link">
+      optimization-1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-en/en-optimization-2/" title="optimization-2" class="md-nav__link">
+      optimization-2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-en/en-overview/" title="Overview of Computer Vision and Visual Recognition overview" class="md-nav__link">
+      Overview of Computer Vision and Visual Recognition overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-en/en-poster/" title="CS231n Poster Session poster-session" class="md-nav__link">
+      CS231n Poster Session poster-session
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-en/en-python-numpy-tutorial/" title="Python Numpy Tutorial python-numpy-tutorial" class="md-nav__link">
+      Python Numpy Tutorial python-numpy-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-en/en-Readme/" title="en Readme" class="md-nav__link">
+      en Readme
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-en/en-terminal-tutorial/" title="Terminal.com Tutorial terminal-tutorial" class="md-nav__link">
+      Terminal.com Tutorial terminal-tutorial
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-en/en-transfer-learning/" title="transfer-learning" class="md-nav__link">
+      transfer-learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/cs231n-en/en-understanding-cnn/" title="understanding-cnn" class="md-nav__link">
+      understanding-cnn
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4-3" type="checkbox" id="nav-4-4-3">
+    
+    <label class="md-nav__link" for="nav-4-4-3">
+      example
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-4-3">
+        example
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example/a-web-crawer-with-a-asyncio-coroutines-1/" title="A web crawer with a asyncio coroutines 1" class="md-nav__link">
+      A web crawer with a asyncio coroutines 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example/a-web-crawer-with-a-asyncio-coroutines-2/" title="A web crawer with a asyncio coroutines 2" class="md-nav__link">
+      A web crawer with a asyncio coroutines 2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example/bias-variance/" title="Bias variance" class="md-nav__link">
+      Bias variance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example/bitcoin-explained-1/" title="用表情符号解释比特币 (1)" class="md-nav__link">
+      用表情符号解释比特币 (1)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example/dive-into-gradient-decent/" title="理解梯度下降" class="md-nav__link">
+      理解梯度下降
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example/ethereum-ultimate-guide/" title="Ethereum ultimate guide" class="md-nav__link">
+      Ethereum ultimate guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example/fork-exec-source/" title="Fork exec source" class="md-nav__link">
+      Fork exec source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example/latex语法/" title="Latex语法" class="md-nav__link">
+      Latex语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example/latex语法1/" title="latex语法" class="md-nav__link">
+      latex语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example/nosql-in-python/" title="Nosql in python" class="md-nav__link">
+      Nosql in python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example/perceptron/" title=""感知器"" class="md-nav__link">
+      "感知器"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example/quick-latex/" title="Quick latex" class="md-nav__link">
+      Quick latex
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example/tendermint/" title="Tendermint" class="md-nav__link">
+      Tendermint
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4-4" type="checkbox" id="nav-4-4-4">
+    
+    <label class="md-nav__link" for="nav-4-4-4">
+      example2
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-4-4">
+        example2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/arrays-similar/" title=""判断两个数组是否相似 (arraysSimilar)"" class="md-nav__link">
+      "判断两个数组是否相似 (arraysSimilar)"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/baidu-ife-1-HTML&CSS/" title=""百度Web前端技术-HTML,CSS"" class="md-nav__link">
+      "百度Web前端技术-HTML,CSS"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/baidu-ife-2-javascript/" title=""百度Web前端技术-JavaScript"" class="md-nav__link">
+      "百度Web前端技术-JavaScript"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/create-my-blog-with-jekyll/" title=""Jekyll 搭建静态博客"" class="md-nav__link">
+      "Jekyll 搭建静态博客"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/front-end-tools/" title=""前端的一些资料和工具"" class="md-nav__link">
+      "前端的一些资料和工具"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/git-clone-not-master-branch/" title=""Git 如何 clone 非 master 分支的代码"" class="md-nav__link">
+      "Git 如何 clone 非 master 分支的代码"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/History-API/" title=""前端处理动态 url 和 pushStatus 的使用"" class="md-nav__link">
+      "前端处理动态 url 和 pushStatus 的使用"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/how-to-use-babel/" title=""如何使用 babel"" class="md-nav__link">
+      "如何使用 babel"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/how-to-write-a-count-down/" title=""前端如何写一个精确的倒计时"" class="md-nav__link">
+      "前端如何写一个精确的倒计时"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/JavaScript-closure/" title=""JavaScript 中的闭包"" class="md-nav__link">
+      "JavaScript 中的闭包"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/JavaScript-function/" title=""JavaScript 函数"" class="md-nav__link">
+      "JavaScript 函数"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/JavaScript-good-parts-note1/" title=""JavaScript 语言精粹笔记1-语法、对象、函数"" class="md-nav__link">
+      "JavaScript 语言精粹笔记1-语法、对象、函数"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/JavaScript-good-parts-note2/" title=""JavaScript 语言精粹笔记2-继承、数组、正则表达式"" class="md-nav__link">
+      "JavaScript 语言精粹笔记2-继承、数组、正则表达式"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/JavaScript-good-parts-note3/" title=""JavaScript 语言精粹笔记3-方法、毒瘤等"" class="md-nav__link">
+      "JavaScript 语言精粹笔记3-方法、毒瘤等"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/JavaScript-Net/" title=""JavaScript 阶段总结"" class="md-nav__link">
+      "JavaScript 阶段总结"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/JavaScript-Object-Oriented/" title=""JavaScript 面向对象"" class="md-nav__link">
+      "JavaScript 面向对象"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/JavaScript-this/" title=""JavaScript 中的 this"" class="md-nav__link">
+      "JavaScript 中的 this"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/jekyll-theme-version-2.0/" title=""对这个 jekyll 博客主题的改版和重构"" class="md-nav__link">
+      "对这个 jekyll 博客主题的改版和重构"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/js-create-file-and-download/" title=""使用 JavaScript 创建并下载文件"" class="md-nav__link">
+      "使用 JavaScript 创建并下载文件"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/low-IE-click-empty-block-bug/" title=""在低版本 IE 中点击空 block 元素的问题"" class="md-nav__link">
+      "在低版本 IE 中点击空 block 元素的问题"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/regular-expression-group/" title=""浅谈正则表达式中的分组和引用"" class="md-nav__link">
+      "浅谈正则表达式中的分组和引用"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/scope/" title=""JavaScript 作用域和作用域链"" class="md-nav__link">
+      "JavaScript 作用域和作用域链"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/shuffle-algorithm/" title=""Fisher–Yates shuffle 洗牌算法"" class="md-nav__link">
+      "Fisher–Yates shuffle 洗牌算法"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/sublimeLinter/" title=""代码校验工具 SublimeLinter 的安装与使用"" class="md-nav__link">
+      "代码校验工具 SublimeLinter 的安装与使用"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/Syncing-a-fork/" title=""同步一个 fork"" class="md-nav__link">
+      "同步一个 fork"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/teach-girlfriend-html-css/" title=""Teach Girlfriend to make a Web Pages like Zhihu"" class="md-nav__link">
+      "Teach Girlfriend to make a Web Pages like Zhihu"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/web-app/" title=""Web App 相关技术"" class="md-nav__link">
+      "Web App 相关技术"
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/转载/example2/weinre/" title=""Weinre --WebApp 调试工具"" class="md-nav__link">
+      "Weinre --WebApp 调试工具"
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../工具/About/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../工具/Cheatsheet/" title="Cheatsheet" class="md-nav__link">
+      Cheatsheet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../工具/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../工具/shell显示时间/" title="Shell显示时间" class="md-nav__link">
+      Shell显示时间
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5">
+    
+    <label class="md-nav__link" for="nav-5-5">
+      常用工具
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-5">
+        常用工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../工具/常用工具/10分钟上手Latex/" title="10分钟上手Latex" class="md-nav__link">
+      10分钟上手Latex
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../工具/常用工具/10分钟上手Pandas/" title="10分钟上手Pandas" class="md-nav__link">
+      10分钟上手Pandas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../工具/常用工具/10分钟上手Python/" title="10分钟上手Python" class="md-nav__link">
+      10分钟上手Python
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      推荐
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        推荐
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../个人理解的/" title="个人理解的" class="md-nav__link">
+      个人理解的
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2" checked>
+    
+    <label class="md-nav__link" for="nav-6-2">
+      推荐框架
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-2">
+        推荐框架
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../LibRec/" title="LibRec" class="md-nav__link">
+      LibRec
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-2-3" type="checkbox" id="nav-6-2-3" checked>
+    
+    <label class="md-nav__link" for="nav-6-2-3">
+      LibRec介绍文档
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-2-3">
+        LibRec介绍文档
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../AlgorithmList/" title="Algorithm list" class="md-nav__link">
+      Algorithm list
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../CLIWalkthrough/" title="CommandLine walkthrough" class="md-nav__link">
+      CommandLine walkthrough
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ConfigurationList/" title="Configuration list" class="md-nav__link">
+      Configuration list
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Context/" title="Librec" class="md-nav__link">
+      Librec
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DataFileFormat/" title="DataFileFormat" class="md-nav__link">
+      DataFileFormat
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        DataModel
+      </label>
+    
+    <a href="./" title="DataModel" class="md-nav__link md-nav__link--active">
+      DataModel
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-convertor" title="1. Convertor" class="md-nav__link">
+    1. Convertor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-splitter" title="2. Splitter" class="md-nav__link">
+    2. Splitter
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-ratio" title="2.1 ratio" class="md-nav__link">
+    2.1 ratio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-loocv" title="2.2 loocv" class="md-nav__link">
+    2.2 loocv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-givenn" title="2.3 givenn" class="md-nav__link">
+    2.3 givenn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-kcv" title="2.4 kcv" class="md-nav__link">
+    2.4 kcv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-testset" title="2.5 testset" class="md-nav__link">
+    2.5 testset
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-appender" title="3. Appender" class="md-nav__link">
+    3. Appender
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-java-code-snippet" title="4. Java code Snippet" class="md-nav__link">
+    4. Java code Snippet
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Evaluator/" title="Evaluator" class="md-nav__link">
+      Evaluator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../FilmTrust/" title="FilmTrust" class="md-nav__link">
+      FilmTrust
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Filter/" title="Filter" class="md-nav__link">
+      Filter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Introduction/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../LibrecDocument/" title="LibrecDocument" class="md-nav__link">
+      LibrecDocument
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Recommender/" title="Recommender" class="md-nav__link">
+      Recommender
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      文章
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        文章
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../文章/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      日常
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        日常
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../日常/AboutMe/" title="AboutMe" class="md-nav__link">
+      AboutMe
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../日常/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3">
+    
+    <label class="md-nav__link" for="nav-8-3">
+      test
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-3">
+        test
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../日常/test/testtest/" title="Testtest" class="md-nav__link">
+      Testtest
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-convertor" title="1. Convertor" class="md-nav__link">
+    1. Convertor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-splitter" title="2. Splitter" class="md-nav__link">
+    2. Splitter
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-ratio" title="2.1 ratio" class="md-nav__link">
+    2.1 ratio
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-loocv" title="2.2 loocv" class="md-nav__link">
+    2.2 loocv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-givenn" title="2.3 givenn" class="md-nav__link">
+    2.3 givenn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-kcv" title="2.4 kcv" class="md-nav__link">
+    2.4 kcv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-testset" title="2.5 testset" class="md-nav__link">
+    2.5 testset
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-appender" title="3. Appender" class="md-nav__link">
+    3. Appender
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-java-code-snippet" title="4. Java code Snippet" class="md-nav__link">
+    4. Java code Snippet
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="datamodel">DataModel<a class="headerlink" href="#datamodel" title="Permanent link">&para;</a></h1>
+<p>DataModel类用于对推荐算法所使用的数据进行准备. 主要完成对不同类型数据的读取, 组织结构 ,分割数据集, 根据配置项对数据进行二值化处理等.
+相应的, 定义为DataModel类型的变量在指向子类的方法时, 需要传出Configuration类型的对象. 其中读取文件路径等配置项可以使用setConf来设置.
+相应的, 在Java代码中, 可以根据读取数据类型直接生成对应的DataModel. 生成构造器的参数为Configuration的对象. 之后调用buildDataModel进行读取和分割.具体的数据读取过程与分割过程需要在调用buildDataModel之前通过setConf的方式传入对象中. 具体java代码如下</p>
+<div class="codehilite"><pre><span></span><span class="n">DataModel</span> <span class="n">dataModel</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TextDataModel</span><span class="o">(</span><span class="n">conf</span><span class="o">);</span>
+<span class="n">dataModel</span><span class="o">.</span><span class="na">buildDataModel</span><span class="o">();</span>
+</pre></div>
+
+<h2 id="1-convertor">1. Convertor<a class="headerlink" href="#1-convertor" title="Permanent link">&para;</a></h2>
+<p>Convertor 读取的数据集文件夹路径通过dfs.data.dir配置项读取,数据集名称通过 data.input.path指定. 之后根据数据类型配置项读取文件夹下所有数据, 并以SparseTensor形式保存. data.column.path 用于指定数据集每一列的含义.data.convertor.binarize.threshold为而值化时所采用的阈值, 即当数值大于阈值时为1, 小于阈值时为0. 当阈值小于0时, 默认不进行二值化处理.
+相关配置项示例:</p>
+<div class="codehilite"><pre><span></span>dfs.data.dir=../data
+data.input.path=filmtrust # dataset name
+data.column.format=UIR # user-item-rating
+data.convert.binarize.threshold=-1.0
+data.model.format=text
+</pre></div>
+
+<p>LibRec还可以读取UIRT格式的数据, 示例配置项如下:</p>
+<div class="codehilite"><pre><span></span>dfs.data.dir=../data
+data.input.path=filmtrust
+data.column.format=UIRT
+data.convertor.binarize.threshold=-1.0
+data.model.format=text
+</pre></div>
+
+<p>当数据列大于4时,需要使用arff格式的数据来进行存储. 相应的推荐配置项为</p>
+<div class="codehilite"><pre><span></span>dfs.data.dir=../data
+data.input.path=arffsetname
+data.model.format=arff
+</pre></div>
+
+<p>在Java中的需要使用Configuration 类的set方法来依次写入对象.</p>
+<div class="codehilite"><pre><span></span><span class="n">Configuration</span> <span class="n">conf</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Configuration</span><span class="o">();</span>
+
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;dfs.data.dir&quot;</span><span class="o">,</span><span class="s">&quot;../data&quot;</span><span class="o">);</span>
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.input.path&quot;</span><span class="o">,</span><span class="s">&quot;filmtrust&quot;</span><span class="o">);</span>
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.column.format&quot;</span><span class="o">,</span><span class="s">&quot;UIRT&quot;</span><span class="o">);</span>
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.conver.binariza.threshold&quot;</span><span class="o">,</span><span class="s">&quot;-1.0&quot;</span><span class="o">);</span>
+</pre></div>
+
+<p>实现时可以使用DataModel完成全部操作操作, 也可以单独实例出Convertor对象用于读取数据. 进行读取以及获取相应数据的示例代码如下</p>
+<div class="codehilite"><pre><span></span><span class="n">Configuration</span> <span class="n">conf</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Configuration</span><span class="o">();</span>
+
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">Configured</span><span class="o">.</span><span class="na">CONF_DATA_COLUMN_FORMAT</span><span class="o">,</span> <span class="s">&quot;UIR&quot;</span><span class="o">);</span>
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;inputDataPath&quot;</span><span class="o">,</span> <span class="n">conf</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">&quot;dfs.data.dir&quot;</span><span class="o">)</span> <span class="o">+</span> <span class="s">&quot;/test/matrix4by4.txt&quot;</span><span class="o">);</span>
+<span class="n">textDataConvertor</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TextDataConvertor</span><span class="o">(</span><span class="n">conf</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">&quot;inputDataPath&quot;</span><span class="o">));</span>
+<span class="n">textDataConvertor</span><span class="o">.</span><span class="na">processData</span><span class="o">();</span>
+
+<span class="n">SparseMatrix</span> <span class="n">preference</span> <span class="o">=</span> <span class="n">textDataConvertor</span><span class="o">.</span><span class="na">getPreferenceMatrix</span><span class="o">();</span>
+<span class="n">SparseMatrix</span> <span class="n">datetimeMatrix</span> <span class="o">=</span> <span class="n">textDataConvertor</span><span class="o">.</span><span class="na">getDatetimeMatrix</span><span class="o">();</span>
+</pre></div>
+
+<p>相对应的, 对Arff格式的数据进行读取需要实例ArffDataConvertor对象. 进行读取以及获取相应数据的示例代码如下:</p>
+<div class="codehilite"><pre><span></span><span class="n">Configuration</span> <span class="n">conf</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Configuration</span><span class="o">();</span>
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;dfs.data.dir&quot;</span><span class="o">,</span><span class="s">&quot;../data&quot;</span><span class="o">);</span>
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;inputDataPath&quot;</span><span class="o">,</span> <span class="n">conf</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">&quot;dfs.data.dir&quot;</span><span class="o">)</span> <span class="o">+</span> <span class="s">&quot;/path/to.arff&quot;</span><span class="o">);</span>
+<span class="n">ArffDataConvertor</span> <span class="n">arffLoder</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArffDataConvertor</span><span class="o">(</span><span class="n">conf</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">&quot;inputDataPath&quot;</span><span class="o">));</span>
+<span class="n">arffLoder</span><span class="o">.</span><span class="na">readData</span><span class="o">();</span>
+<span class="n">SparseTensor</span> <span class="n">sparseTensor</span> <span class="o">=</span> <span class="n">arffLoder</span><span class="o">.</span><span class="na">getSparseTensor</span><span class="o">();</span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">ArffInstance</span><span class="o">&gt;</span> <span class="n">instances</span> <span class="o">=</span> <span class="n">arffLoder</span><span class="o">.</span><span class="na">getInstances</span><span class="o">();</span>
+<span class="n">String</span> <span class="n">s1</span> <span class="o">=</span> <span class="n">arffLoder</span><span class="o">.</span><span class="na">getRelationName</span><span class="o">();</span>
+<span class="n">String</span> <span class="n">s2</span> <span class="o">=</span> <span class="n">arffLoder</span><span class="o">.</span><span class="na">getAttributes</span><span class="o">().</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">).</span><span class="na">getName</span><span class="o">();</span>
+</pre></div>
+
+<h2 id="2-splitter">2. Splitter<a class="headerlink" href="#2-splitter" title="Permanent link">&para;</a></h2>
+<p>LibRec中含有数据的划分方式共五类, 将数据集根据一定比例划分为训练集与测试集(及验证集), 留出其中一个作为验证, 给定N个作为验证, K折交叉验证, 以及测试数据集与训练数据集等五种方式. 其中部分分割方式又含有基于user或item等其他分割方式.</p>
+<h3 id="21-ratio">2.1 ratio<a class="headerlink" href="#21-ratio" title="Permanent link">&para;</a></h3>
+<p>根据比例来进行划分数据集.</p>
+<div class="codehilite"><pre><span></span>data.model.splitter=ratio
+data.splitter.ratio=rating # by rating
+data.splitter.trainset.ratio=0.8 # resting data used as test set
+</pre></div>
+
+<p>在Java中示例代码如下:</p>
+<div class="codehilite"><pre><span></span><span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.splitter.ratio&quot;</span><span class="o">,</span> <span class="s">&quot;rating&quot;</span><span class="o">);</span>
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.splitter.trainset.ratio&quot;</span><span class="o">,</span> <span class="s">&quot;0.8&quot;</span><span class="o">);</span>
+
+<span class="c1">// TextDataConvertor convertor = new TextDataConvertor(args)</span>
+<span class="n">convertor</span><span class="o">.</span><span class="na">processData</span><span class="o">();</span>
+<span class="n">RatioDataSplitter</span> <span class="n">splitter</span> <span class="o">=</span> <span class="k">new</span> <span class="n">RatioDataSplitter</span><span class="o">(</span><span class="n">convertor</span><span class="o">,</span> <span class="n">conf</span><span class="o">);</span>
+<span class="n">splitter</span><span class="o">.</span><span class="na">splitData</span><span class="o">();</span>
+</pre></div>
+
+<p>其中data.splitter.ratio的配置可以使用rating, user, userfixed, item, valid, ratingdate, userdate, itemdate. userfixed在数据量较小时可以获得更精确的划分结果. 使用valid时还需要指定data.splitter.validset.ratio. 附带有date的方法为根据数据量在date序列上进行划分. 在时间数值上较大的划分为testset, 时间数值较小的划分为trainset.</p>
+<h3 id="22-loocv">2.2 loocv<a class="headerlink" href="#22-loocv" title="Permanent link">&para;</a></h3>
+<p>随机留出一位或者留出最后一位user或者item来作为测试数据, 剩下的数据作为训练数据</p>
+<div class="codehilite"><pre><span></span>data.model.splitter=loocv
+data.splitter.loocv=user
+</pre></div>
+
+<p>在Java中示例代码如下:</p>
+<div class="codehilite"><pre><span></span><span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.splitter.loocv&quot;</span><span class="o">,</span> <span class="s">&quot;user&quot;</span><span class="o">);</span>
+<span class="n">convertor</span><span class="o">.</span><span class="na">processData</span><span class="o">();</span>
+
+<span class="n">LOOCVDataSplitter</span> <span class="n">splitter</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LOOCVDataSplitter</span><span class="o">(</span><span class="n">convertor</span><span class="o">,</span> <span class="n">conf</span><span class="o">);</span>
+<span class="n">splitter</span><span class="o">.</span><span class="na">splitData</span><span class="o">();</span>
+</pre></div>
+
+<p>其中data.splitter.loocv的配置可以使用user, item, userdate, itemdate. 附带date的配置会先按时间顺序进行排序，选取每个user或item最新的评分记录组成测试集。</p>
+<h3 id="23-givenn">2.3 givenn<a class="headerlink" href="#23-givenn" title="Permanent link">&para;</a></h3>
+<p>保留n个user或item作为测试数据, 剩下的数据作为训练数据.</p>
+<div class="codehilite"><pre><span></span>data.model.splitter=givenn
+data.splitter.givenn=user
+data.splitter.givenn.n=10
+</pre></div>
+
+<p>在Java中, 示例代码如下</p>
+<div class="codehilite"><pre><span></span><span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.splitter.givenn&quot;</span><span class="o">,</span> <span class="s">&quot;user&quot;</span><span class="o">);</span>
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.splitter.givenn.n&quot;</span><span class="o">,</span> <span class="s">&quot;1&quot;</span><span class="o">);</span>
+<span class="n">convertor</span><span class="o">.</span><span class="na">processData</span><span class="o">();</span>
+
+<span class="n">GivenNDataSplitter</span> <span class="n">splitter</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GivenNDataSplitter</span><span class="o">(</span><span class="n">convertor</span><span class="o">,</span> <span class="n">conf</span><span class="o">);</span>
+<span class="n">splitter</span><span class="o">.</span><span class="na">splitData</span><span class="o">();</span>
+</pre></div>
+
+<p>其中data.splitter.givenn的配置可以使用user, item, userdate, itemdate.</p>
+<h3 id="24-kcv">2.4 kcv<a class="headerlink" href="#24-kcv" title="Permanent link">&para;</a></h3>
+<p>K折交叉验证. 即将数据集划分为K份, 每次选择其中一份作为测试数据集, 余下数据作为验证数据集, 共进行K次.每次会进行一次评估, 在K折结束之后会再次对K折计算结果进行一次评估.</p>
+<div class="codehilite"><pre><span></span>data.model.splitter=kcv
+data.splitter.cv.number=5 # K-fold
+</pre></div>
+
+<p>在Java中, 示例代码如下</p>
+<div class="codehilite"><pre><span></span><span class="n">convertor</span><span class="o">.</span><span class="na">processData</span><span class="o">();</span>
+<span class="n">KCVDataSplitter</span> <span class="n">splitter</span> <span class="o">=</span> <span class="k">new</span> <span class="n">KCVDataSplitter</span><span class="o">(</span><span class="n">convertor</span><span class="o">,</span> <span class="n">conf</span><span class="o">);</span>
+
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">6</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+  <span class="c1">// split into 5 parts by default</span>
+  <span class="n">splitter</span><span class="o">.</span><span class="na">splitFolds</span><span class="o">();</span>
+  <span class="n">splitter</span><span class="o">.</span><span class="na">splitData</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+
+<h3 id="25-testset">2.5 testset<a class="headerlink" href="#25-testset" title="Permanent link">&para;</a></h3>
+<p>预留出部分数据集作为测试数据集. 这里需要设置配置项<code>data.testset.path</code>也就是指定预留出测试数据的路径. 这个路径要在训练数据的路径之下. 也就是说, 在读取所有数据时, 预留出的测试数据也应该被读取到.</p>
+<div class="codehilite"><pre><span></span>data.model.splitter=testset
+data.testset.path=nameoftestfile/dir
+</pre></div>
+
+<p>其中Java示例代码如下</p>
+<div class="codehilite"><pre><span></span><span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;inputDataPath&quot;</span><span class="o">,</span> <span class="n">conf</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">&quot;dfs.data.dir&quot;</span><span class="o">)</span> <span class="o">+</span> <span class="s">&quot;/given-testset&quot;</span><span class="o">);</span>
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">Configured</span><span class="o">.</span><span class="na">CONF_DATA_COLUMN_FORMAT</span><span class="o">,</span> <span class="s">&quot;UIR&quot;</span><span class="o">);</span>
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.testset.path&quot;</span><span class="o">,</span> <span class="s">&quot;/given-testset/test/ratings_0.txt&quot;</span><span class="o">);</span>
+<span class="n">convertor</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TextDataConvertor</span><span class="o">(</span><span class="n">conf</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">Configured</span><span class="o">.</span><span class="na">CONF_DATA_COLUMN_FORMAT</span><span class="o">),</span> <span class="n">conf</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">&quot;inputDataPath&quot;</span><span class="o">));</span>
+<span class="n">convertor</span><span class="o">.</span><span class="na">processData</span><span class="o">();</span>
+<span class="n">GivenTestSetDataSplitter</span> <span class="n">splitter</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GivenTestSetDataSplitter</span><span class="o">(</span><span class="n">convertor</span><span class="o">,</span><span class="n">conf</span><span class="o">);</span>
+<span class="n">splitter</span><span class="o">.</span><span class="na">splitData</span><span class="o">();</span>
+</pre></div>
+
+<h2 id="3-appender">3. Appender<a class="headerlink" href="#3-appender" title="Permanent link">&para;</a></h2>
+<p>部分算法(如rste算法)需要引入不同user或者不同item之间的关系矩阵, 因此在LibRec中实现了针对于user-user-relation 或者item-item-relation 的数据读取类.在配置文件中需要增加对配置项<code>data.appender.class</code>与<code>data.appender.path</code>的配置.</p>
+<p>通过文件的示例配置如下</p>
+<div class="codehilite"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="na">appender</span><span class="o">.</span><span class="na">class</span><span class="o">=</span><span class="n">social</span>
+<span class="n">data</span><span class="o">.</span><span class="na">appender</span><span class="o">.</span><span class="na">path</span><span class="o">=</span><span class="n">directory</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">relationData</span>
+</pre></div>
+
+<p>在Java中, 示例代码如下:</p>
+<div class="codehilite"><pre><span></span><span class="n">String</span> <span class="n">inputPath</span> <span class="o">=</span> <span class="n">conf</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">&quot;dfs.data.dir&quot;</span><span class="o">)</span> <span class="o">+</span> <span class="s">&quot;/&quot;</span> <span class="o">+</span> <span class="n">conf</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">&quot;data.input.path&quot;</span><span class="o">);</span>
+<span class="n">TextDataConvertor</span> <span class="n">textDataConvertor</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TextDataConvertor</span><span class="o">(</span><span class="n">inputPath</span><span class="o">);</span>
+<span class="n">textDataConvertor</span><span class="o">.</span><span class="na">processData</span><span class="o">();</span>
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.appender.path&quot;</span><span class="o">,</span> <span class="s">&quot;test/datamodeltest/trust.txt&quot;</span><span class="o">);</span>
+<span class="n">SocialDataAppender</span> <span class="n">dataFeatrue</span> <span class="o">=</span> <span class="k">new</span> <span class="n">SocialDataAppender</span><span class="o">(</span><span class="n">conf</span><span class="o">);</span>
+<span class="n">dataAppender</span><span class="o">.</span><span class="na">setUserMappingData</span><span class="o">(</span><span class="n">textDataConvertor</span><span class="o">.</span><span class="na">getUserIds</span><span class="o">());</span>
+<span class="n">dataAppender</span><span class="o">.</span><span class="na">processData</span><span class="o">();</span>
+</pre></div>
+
+<h2 id="4-java-code-snippet">4. Java code Snippet<a class="headerlink" href="#4-java-code-snippet" title="Permanent link">&para;</a></h2>
+<p>如果用于LibRec中的算法, 直接通过conf来设定参数并用于生成相应的DataModel是比较合理的做法. 对于Text与Arff格式的数据可以分别实例相应的DataModel来进行读取.具体实现方式如下:</p>
+<div class="codehilite"><pre><span></span><span class="n">Configuration</span> <span class="n">conf</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Configuration</span><span class="o">();</span>
+
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;dfs.data.dir&quot;</span><span class="o">,</span><span class="s">&quot;../data&quot;</span><span class="o">);</span>
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.input.path&quot;</span><span class="o">,</span><span class="s">&quot;filmtrust&quot;</span><span class="o">);</span>
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.column.format&quot;</span><span class="o">,</span><span class="s">&quot;UIRT&quot;</span><span class="o">);</span>
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.convertor.binariza.threshold&quot;</span><span class="o">,</span><span class="s">&quot;-1.0&quot;</span><span class="o">);</span>
+
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.model.splitter&quot;</span><span class="o">,</span><span class="s">&quot;ratio&quot;</span><span class="o">);</span>
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.splitter.ratio&quot;</span><span class="o">,</span><span class="s">&quot;rating&quot;</span><span class="o">);</span>
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.splitter.trainset.ratio&quot;</span><span class="o">,</span><span class="s">&quot;0.8&quot;</span><span class="o">);</span>
+
+<span class="n">DataModel</span> <span class="n">dataModel</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TextDataModel</span><span class="o">(</span><span class="n">conf</span><span class="o">);</span>
+<span class="n">dataModel</span><span class="o">.</span><span class="na">buildDataModel</span><span class="o">();</span>
+</pre></div>
+
+<p>arff格式的实例如下:</p>
+<div class="codehilite"><pre><span></span><span class="n">Configuration</span> <span class="n">conf</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Configuration</span><span class="o">();</span>
+
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;dfs.data.dir&quot;</span><span class="o">,</span><span class="s">&quot;../data&quot;</span><span class="o">);</span>
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.input.path&quot;</span><span class="o">,</span><span class="s">&quot;filmtrust&quot;</span><span class="o">);</span>
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.column.format&quot;</span><span class="o">,</span><span class="s">&quot;UIR&quot;</span><span class="o">);</span>
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.convertor.binariza.threshold&quot;</span><span class="o">,</span><span class="s">&quot;-1.0&quot;</span><span class="o">);</span>
+
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.model.splitter&quot;</span><span class="o">,</span><span class="s">&quot;ratio&quot;</span><span class="o">);</span>
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.splitter.ratio&quot;</span><span class="o">,</span><span class="s">&quot;rating&quot;</span><span class="o">);</span>
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.splitter.trainset.ratio&quot;</span><span class="o">,</span><span class="s">&quot;0.8&quot;</span><span class="o">);</span>
+
+<span class="n">DataModel</span> <span class="n">dataModel</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArffDataModel</span><span class="o">(</span><span class="n">conf</span><span class="o">);</span>
+<span class="n">dataModel</span><span class="o">.</span><span class="na">buildDataModel</span><span class="o">();</span>
+</pre></div>
+
+<p>如果分割方式采用KCV或者Loocv等方式, 在分割数据集之前, 还需要设置测试集的索引. 示例如下</p>
+<div class="codehilite"><pre><span></span><span class="n">Configuration</span> <span class="n">conf</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Configuration</span><span class="o">();</span>
+
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;dfs.data.dir&quot;</span><span class="o">,</span><span class="s">&quot;../data&quot;</span><span class="o">);</span>
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.input.path&quot;</span><span class="o">,</span><span class="s">&quot;filmtrust&quot;</span><span class="o">);</span>
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.column.format&quot;</span><span class="o">,</span><span class="s">&quot;UIR&quot;</span><span class="o">);</span>
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.convertor.binariza.threshold&quot;</span><span class="o">,</span><span class="s">&quot;-1.0&quot;</span><span class="o">);</span>
+
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.model.splitter&quot;</span><span class="o">,</span><span class="s">&quot;kcv&quot;</span><span class="o">);</span>
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.splitter.cv.number&quot;</span><span class="o">,</span><span class="s">&quot;5&quot;</span><span class="o">)</span>
+<span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.splitter.cv.index&quot;</span><span class="o">,</span><span class="s">&quot;1&quot;</span><span class="o">)</span>
+<span class="n">DataModel</span> <span class="n">dataModel</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TextDataModel</span><span class="o">(</span><span class="n">conf</span><span class="o">);</span>
+<span class="n">dataModel</span><span class="o">.</span><span class="na">buildDataModel</span><span class="o">();</span>
+</pre></div>
+
+<p>其中配置项data.splitter.cv.index的取值范围为1到data.splitter.cv.number. 之后执行算法时, 只是针对于当前这次训练集测试集合进行计算. 因此如果要统计所有次的结果, 还需要实现循环来分别设置配置项<code>&quot;data.splitter.cv.index&quot;</code>并进行分割执行算法.</p>
+<p>相应的引入Appender矩阵的, 只用加上相应的配置项即可. 不再单独列出.</p>
+<p>在数据读取过程中, 会检测是否已经进行的数据读取, 如果已经读取则不再进行读取和分割. 因此在同一次运行多次执行buildDataModel会重新索引训练集和测试集但是不会重新读取和分割.</p>
+<p>目前针对于DataModel没有设置以Convertor和Splitter为参数的构造器以及set方法, 因此单独生成的Convertor, Splitter, 与Appender实例不能传入到DataModel中.</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../DataFileFormat/" title="DataFileFormat" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                DataFileFormat
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../Evaluator/" title="Evaluator" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                Evaluator
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2016 - 2018 Martin Donath
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="http://struct.cc" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/1007530194" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/1007530194" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/1007530194" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.189d7058.js"></script>
+      
+        
+        
+          
+          <script src="../../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../../../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../../../.."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+    
+      
+        <script>
+    !function (e, a, t, n, o, c, i) {
+        e.GoogleAnalyticsObject = o, e.ga = e.ga || function () {
+            (e.ga.q = e.ga.q || []).push(arguments)
+        }, e.ga.l = 1 * new Date, c = a.createElement(t),
+            i = a.getElementsByTagName(t)[0],
+            c.async = 1,
+            c.src = "https://www.google-analytics.com/analytics.js",
+            i.parentNode.insertBefore(c, i)
+    }(window, document, "script", 0, "ga"),
+        ga("create", "UA-115879584-1", "auto"),
+        ga("set", "anonymizeIp", !0), ga("send", "pageview");
+    var links = document.getElementsByTagName("a");
+
+    if (Array.prototype.map.call(links, function (e) {
+            e.host != document.location.host && e.addEventListener("click", function () {
+                var a = e.getAttribute("data-md-action") || "follow";
+                ga("send", "event", "outbound", a, e.href)
+            })
+        }), document.forms.search) {
+        var query = document.forms.search.query;
+        query.addEventListener("blur", function () {
+            if (this.value) {
+                var e = document.location.pathname;
+                ga("send", "pageview", e + "?q=" + this.value)
+            }
+        })
+    }</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115879584-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-115879584-1');
+</script>
+      
+    
+  </body>
+</html>
