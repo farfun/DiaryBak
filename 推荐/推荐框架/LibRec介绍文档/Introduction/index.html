@@ -817,8 +817,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../学习/深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../../学习/深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -853,20 +865,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../学习/深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../../学习/深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../../学习/深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2470,6 +2470,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2717,30 +2729,88 @@
 <h3 id="31-clone-source-code-from-github">3.1 Clone source code from github<a class="headerlink" href="#31-clone-source-code-from-github" title="Permanent link">&para;</a></h3>
 <p>当前代码托管在github中, 通过以下方式可以获取源码</p>
 <p>by git</p>
-<div class="codehilite"><pre><span></span>git clone https://github.com/guoguibing/librec.git --recursive &amp;&amp; cd librec
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git clone https://github.com/guoguibing/librec.git --recursive &amp;&amp; cd librec
 </pre></div>
+</td></tr></table>
 
 <p>by wget</p>
-<div class="codehilite"><pre><span></span>wget -c https://codeload.github.com/guoguibing/librec/zip/2.0.0-alpha &amp;&amp; unzip 2.0.0-alpha &amp;&amp; rm 2.0.0-alpha &amp;&amp; cd librec-2.0.0-alpha
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>wget -c https://codeload.github.com/guoguibing/librec/zip/2.0.0-alpha &amp;&amp; unzip 2.0.0-alpha &amp;&amp; rm 2.0.0-alpha &amp;&amp; cd librec-2.0.0-alpha
 </pre></div>
+</td></tr></table>
 
 <p>by maven</p>
-<div class="codehilite"><pre><span></span>&lt;dependency&gt;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>&lt;dependency&gt;
     &lt;groupId&gt;net.librec&lt;/groupId&gt;
     &lt;artifactId&gt;librec-core&lt;/artifactId&gt;
     &lt;version&gt;2.0.0&lt;/version&gt;
 &lt;/dependency&gt;
 </pre></div>
+</td></tr></table>
 
 <h3 id="32-run-a-recommender-in-console">3.2 Run a recommender in console<a class="headerlink" href="#32-run-a-recommender-in-console" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>bin/librec rec -exec -D dfs.data.dir=./data -D dfs.result.dir=./result -D rec.recommender.class=globalaverage
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>bin/librec rec -exec -D dfs.data.dir=./data -D dfs.result.dir=./result -D rec.recommender.class=globalaverage
 </pre></div>
+</td></tr></table>
 
 <p>如果之前接触过Hadoop等系统, 那么看这个调用方式会很熟悉. LibRec通过调用命令行来输入相应的参数并提交计算作业, 计算过程以日志形式打印在终端, 最终推荐结果保存在当前目录的result文件夹下.</p>
 <h3 id="33-run-a-recommender-in-ide">3.3 Run a recommender in IDE<a class="headerlink" href="#33-run-a-recommender-in-ide" title="Permanent link">&para;</a></h3>
 <p>在LibRec中执行算法有两种方式:在程序中指定配置项；读取配置文件</p>
 <p>指定配置项代码示例:</p>
-<p><div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
 
         <span class="c1">// build data model</span>
         <span class="n">Configuration</span> <span class="n">conf</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Configuration</span><span class="o">();</span>
@@ -2792,15 +2862,22 @@
         <span class="o">}</span>
 <span class="o">}</span>
 </pre></div>
+</td></tr></table>
 读取配置文件代码示例:
 可以如示例中使用相对目录访问jar包中的配置文件，也可以指定自己编辑的配置文件。</p>
-<div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">testRecommender</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">ClassNotFoundException</span><span class="o">,</span> <span class="n">LibrecException</span><span class="o">,</span> <span class="n">IOException</span> <span class="o">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">testRecommender</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">ClassNotFoundException</span><span class="o">,</span> <span class="n">LibrecException</span><span class="o">,</span> <span class="n">IOException</span> <span class="o">{</span>
     <span class="n">Resource</span> <span class="n">resource</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Resource</span><span class="o">(</span><span class="s">&quot;rec/cf/itemknn-test.properties&quot;</span><span class="o">);</span>
     <span class="n">conf</span><span class="o">.</span><span class="na">addResource</span><span class="o">(</span><span class="n">resource</span><span class="o">);</span>
     <span class="n">RecommenderJob</span> <span class="n">job</span> <span class="o">=</span> <span class="k">new</span> <span class="n">RecommenderJob</span><span class="o">(</span><span class="n">conf</span><span class="o">);</span>
     <span class="n">job</span><span class="o">.</span><span class="na">runJob</span><span class="o">();</span>
 <span class="o">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>LibRec的计算过程为构建数据模型, 实例推荐上下文并加入相似度矩阵, 实例相应的推荐算法以及评估器, 最终根据需求可以对结果进行过滤获取相应的结果.</p>
 <h3 id="34-what-happend">3.4 What happend<a class="headerlink" href="#34-what-happend" title="Permanent link">&para;</a></h3>

@@ -819,8 +819,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -855,20 +867,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2439,6 +2439,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2662,22 +2674,22 @@
 13
 14
 15
-16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">outer() {</span>
-    <span class="kd">var</span> <span class="nx">localVal</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
-    <span class="k">return</span> <span class="nx">localVal</span><span class="p">;</span>
-<span class="p">}</span>
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>function outer() {
+    var localVal = 30;
+    return localVal;
+}
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">outer</span><span class="p">());</span> <span class="c1">//30</span>
+console.log(outer()); //30
 
-<span class="kd">function</span> <span class="nx">outer2() {</span>
-    <span class="kd">var</span> <span class="nx">localVal</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
-    <span class="k">return</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nx">localVal</span><span class="p">;</span>
-    <span class="p">};</span>
-<span class="p">}</span>
+function outer2() {
+    var localVal = 30;
+    return function() {
+        return localVal;
+    };
+}
 
-<span class="kd">var</span> <span class="nx">func</span> <span class="o">=</span> <span class="nx">outer2</span><span class="p">();</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">func</span><span class="p">());</span> <span class="c1">//30</span>
+var func = outer2();
+console.log(func()); //30
 </pre></div>
 </td></tr></table>
 
@@ -2704,25 +2716,25 @@
 16
 17
 18
-19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">!</span> <span class="nt">function</span><span class="o">()</span> <span class="p">{</span>
-    <span class="err">var</span> <span class="err">localData</span> <span class="err">=</span> <span class="err">&quot;localData</span> <span class="err">here&quot;</span><span class="p">;</span>
-    <span class="err">document.addEventListener(&#39;click&#39;,</span>
-        <span class="err">function()</span> <span class="err">{</span>
-            <span class="err">console.log(localData)</span><span class="p">;</span> <span class="err">//这里访问外部数据</span>
-        <span class="p">}</span><span class="o">);</span>
-<span class="err">}</span><span class="o">();</span>
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>! function() {
+    var localData = &quot;localData here&quot;;
+    document.addEventListener(&#39;click&#39;,
+        function() {
+            console.log(localData); //这里访问外部数据
+        });
+}();
 
-<span class="o">!</span> <span class="nt">function</span><span class="o">()</span> <span class="p">{</span>
-    <span class="err">var</span> <span class="err">localData</span> <span class="err">=</span> <span class="err">&quot;localData</span> <span class="err">here&quot;</span><span class="p">;</span>
-    <span class="err">var</span> <span class="err">url</span> <span class="err">=</span> <span class="err">&quot;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">baidu</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="err">&quot;</span><span class="p">;</span>
-    <span class="err">$.ajax({</span>
-        <span class="n">url</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span>
-        <span class="n">success</span><span class="o">:</span> <span class="nf">function</span><span class="p">()</span> <span class="err">{</span>
-            <span class="o">//</span> <span class="n">do</span> <span class="n">sth</span><span class="o">...</span>
-            <span class="n">console</span><span class="o">.</span><span class="nf">log</span><span class="p">(</span><span class="n">localData</span><span class="p">);</span> <span class="err">//这里访问外部数据</span>
-        <span class="p">}</span>
-    <span class="err">}</span><span class="o">);</span>
-<span class="err">}</span><span class="o">()</span>
+! function() {
+    var localData = &quot;localData here&quot;;
+    var url = &quot;http://www.baidu.com/&quot;;
+    $.ajax({
+        url: url,
+        success: function() {
+            // do sth...
+            console.log(localData); //这里访问外部数据
+        }
+    });
+}()
 </pre></div>
 </td></tr></table>
 
@@ -2737,13 +2749,13 @@
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>document.body.innerHTML = &quot;<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">div1</span><span class="nt">&gt;</span>aaa<span class="nt">&lt;/div&gt;&lt;div</span> <span class="na">id=</span><span class="s">div2</span><span class="nt">&gt;</span>bbb<span class="nt">&lt;/div&gt;&lt;div</span> <span class="na">id=</span><span class="s">div3</span><span class="nt">&gt;</span>ccc<span class="nt">&lt;/div&gt;</span>&quot;;
-for (var i = 1; i <span class="nt">&lt; 4</span><span class="err">;</span> <span class="err">i++)</span> <span class="err">{</span>
-    <span class="err">document.getElementById(&#39;div&#39;</span> <span class="err">+</span> <span class="err">i).</span>
-    <span class="err">addEventListener(&#39;click&#39;,</span> <span class="err">function()</span> <span class="err">{</span>
-        <span class="err">alert(i);</span> <span class="err">//</span> <span class="err">all</span> <span class="err">are</span> <span class="err">4!</span>
-    <span class="err">});</span>
-<span class="err">}</span>
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>document.body.innerHTML = &quot;&lt;div id=div1&gt;aaa&lt;/div&gt;&lt;div id=div2&gt;bbb&lt;/div&gt;&lt;div id=div3&gt;ccc&lt;/div&gt;&quot;;
+for (var i = 1; i &lt; 4; i++) {
+    document.getElementById(&#39;div&#39; + i).
+    addEventListener(&#39;click&#39;, function() {
+        alert(i); // all are 4!
+    });
+}
 </pre></div>
 </td></tr></table>
 
@@ -2757,15 +2769,15 @@ for (var i = 1; i <span class="nt">&lt; 4</span><span class="err">;</span> <span
 6
 7
 8
-9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>document.body.innerHTML = &quot;<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">div1</span><span class="nt">&gt;</span>aaa<span class="nt">&lt;/div&gt;&lt;div</span> <span class="na">id=</span><span class="s">div2</span><span class="nt">&gt;</span>bbb<span class="nt">&lt;/div&gt;&lt;div</span> <span class="na">id=</span><span class="s">div3</span><span class="nt">&gt;</span>ccc<span class="nt">&lt;/div&gt;</span>&quot;;
-for (var i = 1; i <span class="nt">&lt; 4</span><span class="err">;</span> <span class="err">i++)</span> <span class="err">{</span>
-    <span class="err">!</span> <span class="err">function(i)</span> <span class="err">{</span>
-        <span class="err">document.getElementById(&#39;div&#39;</span> <span class="err">+</span> <span class="err">i).</span>
-        <span class="err">addEventListener(&#39;click&#39;,</span> <span class="err">function()</span> <span class="err">{</span>
-            <span class="err">alert(i);</span> <span class="err">//</span> <span class="err">1,</span> <span class="err">2,</span> <span class="err">3</span>
-        <span class="err">});</span>
-    <span class="err">}(i);</span>
-<span class="err">}</span>
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>document.body.innerHTML = &quot;&lt;div id=div1&gt;aaa&lt;/div&gt;&lt;div id=div2&gt;bbb&lt;/div&gt;&lt;div id=div3&gt;ccc&lt;/div&gt;&quot;;
+for (var i = 1; i &lt; 4; i++) {
+    ! function(i) {
+        document.getElementById(&#39;div&#39; + i).
+        addEventListener(&#39;click&#39;, function() {
+            alert(i); // 1, 2, 3
+        });
+    }(i);
+}
 </pre></div>
 </td></tr></table>
 

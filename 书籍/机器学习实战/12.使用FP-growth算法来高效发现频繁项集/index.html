@@ -894,8 +894,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../学习/深度学习/主成分分析-2/" title="主成分分析 2" class="md-nav__link">
-      主成分分析 2
+    <a href="../../../学习/深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../学习/深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -920,18 +932,6 @@
   <li class="md-nav__item">
     <a href="../../../学习/深度学习/最小二乘法/" title="最小二乘法" class="md-nav__link">
       最小二乘法
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../学习/深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
     </a>
   </li>
 
@@ -2448,6 +2448,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2675,7 +2687,14 @@
 <ul>
 <li>FP树的节点结构如下:</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">treeNode</span><span class="p">:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">treeNode</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nameValue</span><span class="p">,</span> <span class="n">numOccur</span><span class="p">,</span> <span class="n">parentNode</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">nameValue</span>     <span class="c1"># 节点名称</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">count</span> <span class="o">=</span> <span class="n">numOccur</span>     <span class="c1"># 节点出现次数</span>
@@ -2684,6 +2703,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="n">parentNode</span>  <span class="c1"># 指向父节点</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">{}</span>        <span class="c1"># 存储叶子节点</span>
 </pre></div>
+</td></tr></table>
 
 <h2 id="fp-growth_2">FP-growth 原理<a class="headerlink" href="#fp-growth_2" title="Permanent link">&para;</a></h2>
 <p>基于数据构建FP树</p>
@@ -2717,7 +2737,13 @@
 <li>条件FP树:以条件模式基为数据集构造的FP树叫做条件FP树。</li>
 </ol>
 <p>FP-growth 算法优缺点:</p>
-<div class="codehilite"><pre><span></span>* 优点： 1. 因为 FP-growth 算法只需要对数据集遍历两次，所以速度更快。
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>* 优点： 1. 因为 FP-growth 算法只需要对数据集遍历两次，所以速度更快。
         2. FP树将集合按照支持度降序排序，不同路径如果有相同前缀路径共用存储空间，使得数据得到了压缩。
         3. 不需要生成候选集。
         4. 比Apriori更快。
@@ -2725,6 +2751,7 @@
         2. 构建FP-Tree是比较昂贵的。
 * 适用数据类型：标称型数据(离散型数据)。
 </pre></div>
+</td></tr></table>
 
 <h2 id="fp-growth_3">FP-growth 代码讲解<a class="headerlink" href="#fp-growth_3" title="Permanent link">&para;</a></h2>
 <p>完整代码地址: <a href="https://github.com/apachecn/MachineLearning/blob/master/src/python/12.FrequentPattemTree/fpGrowth.py">https://github.com/apachecn/MachineLearning/blob/master/src/python/12.FrequentPattemTree/fpGrowth.py</a></p>

@@ -817,8 +817,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../学习/深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../学习/深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../学习/深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -853,20 +865,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../学习/深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../学习/深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../学习/深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2448,6 +2448,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2669,7 +2681,25 @@
 <h3 id="1">1. 安装环境<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
 <p>首先安装<a href="https://www.continuum.io/downloads">科学计算包 Anaconda</a>，其中已经包含了很多科学计算机、数据处理相关的 Python 包，也包括 Jupyter 在内（如果只需要 Jupyter 普通的 Python 执行环境和 Markdown 编辑器功能，可跳过这一步，直接单独安装 Jupyter）。</p>
 <p>可以通过<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/">清华大学 TUNA 镜像源</a>下载，具体参考<a href="https://github.com/rainyear/lolita/issues/26">《用 conda 管理 Python 开发环境》</a>。安装完成之后可以通过 <code>conda</code> 命令管理 Python 开发环境：</p>
-<div class="codehilite"><pre><span></span>conda info
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>conda info
 Using Anaconda Cloud api site https://api.anaconda.org
 Current conda install:
 
@@ -2689,24 +2719,41 @@ Current conda install:
           config file : None
     is foreign system : False
 </pre></div>
+</td></tr></table>
 
 <p>从默认环境生成一个新的独立环境：</p>
-<div class="codehilite"><pre><span></span>conda env crate -n dhub --clone root
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>conda env crate -n dhub --clone root
 
 <span class="nb">source</span> activate dhub
 <span class="c1"># discarding /Users/rainy/anaconda/bin from PATH</span>
 <span class="c1"># prepending /Users/rainy/anaconda/envs/dhub/bin to PATH</span>
 </pre></div>
+</td></tr></table>
 
 <p>安装 <a href="http://www.mkdocs.org/">MkDocs</a>：</p>
-<div class="codehilite"><pre><span></span>pip install mkdocs -i http://pypi.douban.com/simple --trusted-host<span class="o">=</span>pypi.douban.com
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install mkdocs -i http://pypi.douban.com/simple --trusted-host<span class="o">=</span>pypi.douban.com
 </pre></div>
+</td></tr></table>
 
 <h3 id="2-github-pages">2. 创建 GitHub Pages 仓库<a class="headerlink" href="#2-github-pages" title="Permanent link">&para;</a></h3>
 <p>根据 GitHub ID 创建一个 <code>&lt;username&gt;.github.io</code> 的公开仓库，即可以通过 <code>http://username.github.io</code> 访问该仓库下的静态文档。创建其它仓库，如 <code>project</code>，可以通过 <code>http://username.github.io/project/</code> 访问该仓库下的 <code>gh-pages</code> 分支。</p>
 <h3 id="3-mkdocs">3. <code>mkdocs</code> 命令<a class="headerlink" href="#3-mkdocs" title="Permanent link">&para;</a></h3>
 <p>创建新的 <code>mkdocs</code> 项目：</p>
-<div class="codehilite"><pre><span></span>mkdocs init data-blog
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mkdocs init data-blog
 <span class="nb">cd</span> data-blog
 git init
 git remote add origin git@github.com:rainyear/data-blog.git
@@ -2718,38 +2765,68 @@ tree -L <span class="m">1</span>
 ├── docs
 ├── mkdocs.yml
 </pre></div>
+</td></tr></table>
 
 <p>其中 <code>Markdown</code> 文件保存在 <code>docs/</code> 目录下，并通过配置文件 <code>mkdocs.yml</code> 决定生成的静态网站的结构：</p>
-<div class="codehilite"><pre><span></span>cat mkdocs.yml
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cat mkdocs.yml
 
 pages:
 - <span class="o">{</span>Home: index.md<span class="o">}</span>
 site_name: Data Lab
 theme: flatly
 </pre></div>
+</td></tr></table>
 
 <h3 id="4-jupyter">4. 创建、修改 Jupyter 配置文件<a class="headerlink" href="#4-jupyter" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>mkdir config jupyters
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mkdir config jupyters
 jupyter notebook --generate-config
 cp ~/.jupyter/jupyter_notebook_config.py config/
 </pre></div>
+</td></tr></table>
 
 <p>修改 <code>jupyter_notebook_config.py</code>：</p>
-<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">output_post_save</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">os_path</span><span class="p">,</span> <span class="n">contents_manager</span><span class="p">):</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">output_post_save</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">os_path</span><span class="p">,</span> <span class="n">contents_manager</span><span class="p">):</span>
   <span class="k">pass</span>
 
 <span class="n">c</span><span class="o">.</span><span class="n">FileContentsManager</span><span class="o">.</span><span class="n">root_dir</span> <span class="o">=</span> <span class="s1">&#39;jupyters&#39;</span>
 <span class="n">c</span><span class="o">.</span><span class="n">FileContentsManager</span><span class="o">.</span><span class="n">post_save_hook</span> <span class="o">=</span> <span class="n">output_post_save</span>
 </pre></div>
+</td></tr></table>
 
 <p><code>c.FileContentsManager.post_save_hook</code> 用于设置 Jupyter 文档保存的时候触发的操作，这里通过 <code>jupyter-nbconvert</code> 命令将当前的 Jupyter 文档转换为 Markdown 并保存到 <code>docs/</code> 目录，并更新 <code>mkdocs.yml</code> 配置文件（具体代码可以查看 <a href="https://github.com/rainyear/data-blog/blob/master/config/jupyter_notebook_config.py">jupyter_notebook_config.py</a>）。</p>
 <p>打开 Jupyter Notebook：</p>
-<div class="codehilite"><pre><span></span>jupyter notebook --config config/jupyter_notebook_config.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>jupyter notebook --config config/jupyter_notebook_config.py
 </pre></div>
+</td></tr></table>
 
 <h3 id="5-github-pages">5. 发布到 GitHub Pages<a class="headerlink" href="#5-github-pages" title="Permanent link">&para;</a></h3>
 <p>在本地执行 <code>mkdocs serve</code> 可以在本地查看生成的静态网站：</p>
-<div class="codehilite"><pre><span></span>tree -L <span class="m">2</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>tree -L <span class="m">2</span>
 .
 ├── LICENSE
 ├── README.md
@@ -2765,6 +2842,7 @@ cp ~/.jupyter/jupyter_notebook_config.py config/
 │   └── Home.md
 ├── mkdocs.yml
 </pre></div>
+</td></tr></table>
 
 <p>在每次文档保存之后，<code>jupyters/</code> 目录下的文档将自动转换为 Markdown 并保存在 <code>docs/</code> 目录，其中子目录将以类别的形式呈现在网站上：</p>
 <p><img alt="" src="http://qncdn.rainy.im/jupyter_editor.png" /></p>

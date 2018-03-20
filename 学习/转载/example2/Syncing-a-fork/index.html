@@ -819,8 +819,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -855,20 +867,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2438,6 +2438,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2654,33 +2666,48 @@
 <p>主要使用 <code>git remote -v</code> 查看远程状态。   </p>
 </li>
 </ul>
-<div class="codehilite"><pre><span></span>git remote -v
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git remote -v
 # origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
 # origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
 </pre></div>
+</td></tr></table>
 
 <ul>
 <li>添加一个将被同步给 fork 远程的上游仓库      </li>
 </ul>
-<div class="codehilite"><pre><span></span>git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
 </pre></div>
+</td></tr></table>
 
 <ul>
 <li>再次查看状态确认是否配置成功。   </li>
 </ul>
-<div class="codehilite"><pre><span></span>git remote -v
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git remote -v
 # origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
 # origin    https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
 # upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (fetch)
 # upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (push)
 </pre></div>
+</td></tr></table>
 
 <h3 id="syncing-a-fork">Syncing a fork<a class="headerlink" href="#syncing-a-fork" title="Permanent link">&para;</a></h3>
 <ul>
 <li>从上游仓库 fetch 分支和提交点，传送到本地，并会被存储在一个本地分支 upstream/master <br />
 <code>git fetch upstream</code>    </li>
 </ul>
-<div class="codehilite"><pre><span></span>git fetch upstream
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git fetch upstream
 # remote: Counting objects: 75, done.
 # remote: Compressing objects: 100% (53/53), done.
 # remote: Total 62 (delta 27), reused 44 (delta 9)
@@ -2688,20 +2715,30 @@
 # From https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY
 #  * [new branch]      master     -&gt; upstream/master
 </pre></div>
+</td></tr></table>
 
 <ul>
 <li>切换到本地主分支(如果不在的话)  <br />
 <code>git checkout master</code>    </li>
 </ul>
-<div class="codehilite"><pre><span></span>git checkout master
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git checkout master
 # Switched to branch &#39;master&#39;
 </pre></div>
+</td></tr></table>
 
 <ul>
 <li>把 upstream/master 分支合并到本地 master 上，这样就完成了同步，并且不会丢掉本地修改的内容。  <br />
 <code>git merge upstream/master</code>      </li>
 </ul>
-<div class="codehilite"><pre><span></span>git merge upstream/master
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git merge upstream/master
 # Updating a422352..5fdff0f
 # Fast-forward
 #  README                    |    9 -------
@@ -2710,6 +2747,7 @@
 #  delete mode 100644 README
 #  create mode 100644 README.md
 </pre></div>
+</td></tr></table>
 
 <ul>
 <li>如果想更新到 GitHub 的 fork 上，直接 <code>git push origin master</code> 就好了。</li>

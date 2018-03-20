@@ -815,8 +815,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -851,20 +863,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2380,6 +2380,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2611,8 +2623,9 @@ to get to your instance if you lose your key. </p>
 
 <p>Once you download your key, you should change the permissions of the key to
 user-only RW, In Linux/OSX you can do it by:</p>
-<p><div class="codehilite"><pre><span></span>$ chmod 600 PEM_FILENAME
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ chmod 600 PEM_FILENAME
 </pre></div>
+</td></tr></table>
 Here <code>PEM_FILENAME</code> is the full file name of the .pem file you just downloaded.</p>
 <p>After this is done, click on "Launch Instances", and you should see a screen
 showing that your instances are launching:</p>
@@ -2629,20 +2642,24 @@ are now ready to ssh into the instance.</p>
 
 <p>First, note down the Public IP of the instance from the instance listing. Then,
 do:</p>
-<div class="codehilite"><pre><span></span>ssh -i PEM_FILENAME ubuntu@PUBLIC_IP
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ssh -i PEM_FILENAME ubuntu@PUBLIC_IP
 </pre></div>
+</td></tr></table>
 
 <p>Now you should be logged in to the instance. You can check that Caffe is working
 by doing:</p>
-<div class="codehilite"><pre><span></span>$ cd caffe
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ cd caffe
 $ ./build/tools/caffe time --gpu 0 --model examples/mnist/lenet.prototxt
 </pre></div>
+</td></tr></table>
 
 <p>We have Caffe, Theano, Torch7, Keras and Lasagne pre-installed. Caffe python
 bindings are also available by default. We have CUDA 7.5 and CuDNN v3 installed.</p>
 <p>If you encounter any error such as </p>
-<div class="codehilite"><pre><span></span>Check failed: error == cudaSuccess (77 vs.  0)  an illegal memory access was encountered
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Check failed: error == cudaSuccess (77 vs.  0)  an illegal memory access was encountered
 </pre></div>
+</td></tr></table>
 
 <p>you might want to terminate your instance and start over again. I have observed
 this rarely, and I am not sure what causes this.</p>

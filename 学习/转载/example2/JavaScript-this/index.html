@@ -819,8 +819,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -855,20 +867,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2460,6 +2460,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2687,31 +2699,51 @@
 <h2 id="this">全局的 this<a class="headerlink" href="#this" title="Permanent link">&para;</a></h2>
 <p>全局 this 一般指向全局对象，浏览器中的全局对象就是 <code>window</code>。</p>
 <p>例如：</p>
-<div class="codehilite"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nb">document</span> <span class="o">===</span> <span class="nb">document</span><span class="p">);</span> <span class="c1">//true</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nb">document</span> <span class="o">===</span> <span class="nb">document</span><span class="p">);</span> <span class="c1">//true</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span> <span class="o">===</span> <span class="nb">window</span><span class="p">);</span> <span class="c1">//true</span>
 
 <span class="k">this</span><span class="p">.</span><span class="nx">a</span> <span class="o">=</span> <span class="mi">91</span><span class="p">;</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">a</span><span class="p">);</span> <span class="c1">//91</span>
 </pre></div>
+</td></tr></table>
 
 <h2 id="this_1">一般函数的 this<a class="headerlink" href="#this_1" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">f1</span> <span class="p">()</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">f1</span> <span class="p">()</span> <span class="p">{</span>
     <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">f1</span><span class="p">()</span> <span class="o">===</span> <span class="nb">window</span><span class="p">);</span><span class="c1">//true, global object</span>
 </pre></div>
+</td></tr></table>
 
 <p>可以看到一般函数的 this 也指向 window，在 nodeJS 中为 global object</p>
-<div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">f2</span> <span class="p">()</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">f2</span> <span class="p">()</span> <span class="p">{</span>
     <span class="s2">&quot;use strict&quot;</span><span class="p">;</span><span class="c1">//使用严格模式</span>
     <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">f1</span><span class="p">()</span> <span class="o">===</span> <span class="kc">undefined</span><span class="p">);</span><span class="c1">//true</span>
 </pre></div>
+</td></tr></table>
 
 <p>严格模式中，函数的 this 为 undefined</p>
 <h2 id="this_2">作为对象方法的函数的 this<a class="headerlink" href="#this_2" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">prop</span><span class="o">:</span> <span class="mi">37</span><span class="p">,</span>
     <span class="nx">f</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">prop</span><span class="p">;</span>
@@ -2719,10 +2751,19 @@
 <span class="p">};</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">o</span><span class="p">.</span><span class="nx">f</span><span class="p">());</span> <span class="c1">// 37</span>
 </pre></div>
+</td></tr></table>
 
 <p>上述代码通过字面量创建对象 o。</p>
 <p>f 为对象 o 的方法。这个方法的 this 指向这个对象，在这里即对象 o。</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">prop</span><span class="o">:</span> <span class="mi">37</span>
 <span class="p">};</span>
 
@@ -2732,10 +2773,19 @@
 <span class="nx">o</span><span class="p">.</span><span class="nx">f</span> <span class="o">=</span> <span class="nx">independent</span><span class="p">;</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">o</span><span class="p">.</span><span class="nx">f</span><span class="p">());</span> <span class="c1">// 37</span>
 </pre></div>
+</td></tr></table>
 
 <p>上面的代码，创建了对象 o，但是没有给对象 o，添加方法。而是通过 <code>o.f = independent</code> 临时添加了方法属性。这样这个方法中的 this 同样也指向这个对象 o。</p>
 <h2 id="this_3">对象原型链上的 this<a class="headerlink" href="#this_3" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">f</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">a</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">b</span><span class="p">;</span>
     <span class="p">}</span>
@@ -2745,11 +2795,27 @@
 <span class="nx">p</span><span class="p">.</span><span class="nx">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">p</span><span class="p">.</span><span class="nx">f</span><span class="p">());</span> <span class="c1">//3</span>
 </pre></div>
+</td></tr></table>
 
 <p>通过 <code>var p = Object.create(o)</code> 创建的对象，p 是基于原型 o 创建出的对象。</p>
 <p>p 的原型是 o，调用 f() 的时候是调用了 o 上的方法 f()，这里面的 this 是可以指向当前对象的，即对象 p。</p>
 <h2 id="getset-this">get/set 方法与 this<a class="headerlink" href="#getset-this" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">modulus</span><span class="p">()</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">modulus</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">sqrt</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">re</span> <span class="o">*</span> <span class="k">this</span><span class="p">.</span><span class="nx">re</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">im</span> <span class="o">*</span> <span class="k">this</span><span class="p">.</span><span class="nx">im</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{</span>
@@ -2766,18 +2832,32 @@
 <span class="p">});</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">o</span><span class="p">.</span><span class="nx">phase</span><span class="p">,</span> <span class="nx">o</span><span class="p">.</span><span class="nx">modulus</span><span class="p">);</span> <span class="c1">// -0.78 1.4142</span>
 </pre></div>
+</td></tr></table>
 
 <p>get/set 方法中的 this 也会指向 get/set 方法所在的对象的。</p>
 <h2 id="this_4">构造器中的 this<a class="headerlink" href="#this_4" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">MyClass</span><span class="p">()</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">MyClass</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">a</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyClass</span><span class="p">();</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">o</span><span class="p">.</span><span class="nx">a</span><span class="p">);</span> <span class="c1">//25</span>
 </pre></div>
+</td></tr></table>
 
 <p>new MyClass() 的时候，MyClass()中的 this 会指向一个空对象，这个对象的原型会指向 MyClass.prototype。MyClass()没有返回值或者返回为基本类型时，默认将 this 返回。</p>
-<div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">C2</span><span class="p">()</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">C2</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">a</span> <span class="o">=</span> <span class="mi">26</span><span class="p">;</span>
     <span class="k">return</span> <span class="p">{</span>
         <span class="nx">a</span><span class="o">:</span> <span class="mi">24</span>
@@ -2787,10 +2867,23 @@
 <span class="nx">o</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">C2</span><span class="p">();</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">o</span><span class="p">.</span><span class="nx">a</span><span class="p">);</span> <span class="c1">//24</span>
 </pre></div>
+</td></tr></table>
 
 <p>因为返回了对象，将这个对象作为返回值</p>
 <h2 id="callapply-this">call/apply 方法与 this<a class="headerlink" href="#callapply-this" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">c</span><span class="p">,</span> <span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">c</span><span class="p">,</span> <span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">a</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">b</span> <span class="o">+</span> <span class="nx">c</span> <span class="o">+</span> <span class="nx">d</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{</span>
@@ -2804,9 +2897,22 @@
 <span class="p">}</span>
 <span class="nx">bar</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span> <span class="c1">// &quot;[object Number]&quot;</span>
 </pre></div>
+</td></tr></table>
 
 <h2 id="bind-this">bind 方法与 this<a class="headerlink" href="#bind-this" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">f</span><span class="p">()</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">f</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">a</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="kd">var</span> <span class="nx">g</span> <span class="o">=</span> <span class="nx">f</span><span class="p">.</span><span class="nx">bind</span><span class="p">({</span>
@@ -2820,6 +2926,7 @@
 <span class="p">};</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">o</span><span class="p">.</span><span class="nx">f</span><span class="p">(),</span> <span class="nx">o</span><span class="p">.</span><span class="nx">g</span><span class="p">());</span> <span class="c1">// 37, test</span>
 </pre></div>
+</td></tr></table>
 
 <p>绑定之后再调用时，仍然会按绑定时的内容走，所以 o.g() 结果是 test</p>
                 

@@ -819,8 +819,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -855,20 +867,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2472,6 +2472,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2802,11 +2814,15 @@
 </ol>
 <h3 id="latex_2">开始第一个 LaTeX 文档<a class="headerlink" href="#latex_2" title="Permanent link">&para;</a></h3>
 <p>打开 TeXstudio，新建一个 TeX 文件，写入以下内容：</p>
-<div class="codehilite"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
 <span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
 Here comes <span class="k">\LaTeX</span>!
 <span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>点击 <kbd>F5</kbd>（默认快捷键）<code>compile and view</code>，即可看到效果。</p>
 <p>![TeXstudio]({{ site.baseurl }}{{site.images}}/posts/texstudio.png)</p>
@@ -2868,7 +2884,13 @@ Here comes <span class="k">\LaTeX</span>!
 <h4 id="latex_4">LaTeX 中文支持<a class="headerlink" href="#latex_4" title="Permanent link">&para;</a></h4>
 <p>不同环境具体操作有所不同，造成这种不同的主要是各平台下的字体不同。下面介绍 Windows 与 Mac 平台。</p>
 <p>Windows平台比较简单， 引入 CJK 宏包并应用 CJK 环境即可。</p>
-<div class="codehilite"><pre><span></span><span class="k">\documentclass</span><span class="na">[11pt]</span><span class="nb">{</span>article<span class="nb">}</span>  <span class="c">%百分号表示注释</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">\documentclass</span><span class="na">[11pt]</span><span class="nb">{</span>article<span class="nb">}</span>  <span class="c">%百分号表示注释</span>
 <span class="k">\usepackage</span><span class="nb">{</span>CJK<span class="nb">}</span>               <span class="c">%引入CJK宏包</span>
 <span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>               <span class="c">%begin与end成对出现</span>
 <span class="k">\begin</span><span class="nb">{</span>CJK<span class="nb">}{</span>UTF8<span class="nb">}{</span>song<span class="nb">}</span>        <span class="c">%应用CJK环境</span>
@@ -2876,22 +2898,28 @@ Here comes <span class="k">\LaTeX</span>!
 <span class="k">\end</span><span class="nb">{</span>CJK<span class="nb">}</span>
 <span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>LaTeX将</p>
-<div class="codehilite"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>...<span class="nb">}</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>...<span class="nb">}</span>
 content
 <span class="k">\end</span><span class="nb">{</span>...<span class="nb">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>称为 <code>...</code> 环境。在对应环境中 content 产生对应效果。</p>
 <p>![winedt]({{ site.baseurl }}{{site.images}}/posts/winedt.png)</p>
 <p>还有一个更方便的方式，直接使用<code>ctexart</code>模板:</p>
-<div class="codehilite"><pre><span></span><span class="k">\documentclass</span><span class="na">[UTF8]</span><span class="nb">{</span>ctexart<span class="nb">}</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">\documentclass</span><span class="na">[UTF8]</span><span class="nb">{</span>ctexart<span class="nb">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>或者使用 ctex 宏包:</p>
-<div class="codehilite"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>ctex<span class="nb">}</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>ctex<span class="nb">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>如果 Mac 下直接使用 ctex 有问题的话， 可以使用 xeCJK ，不过可能需要稍微多几个操作，除了引入xeCJK宏包，还要设置字体名称。测试系统为osx 10.11.3，
 关于设置字体名称，spotlight 输入 font 打开 Mac 的字体册，从字体中选择一个，将其名称填入，如华文楷体的名称为 STKaiti 。

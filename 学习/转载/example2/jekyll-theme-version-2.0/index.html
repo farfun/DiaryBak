@@ -819,8 +819,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -855,20 +867,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2492,6 +2492,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2784,9 +2796,11 @@
 <p>以前我使用的是 RubyGems 的淘宝镜像<a href="https://ruby.taobao.org/"><a href="https://ruby.taobao.org/">https://ruby.taobao.org/</a></a>。现在这个镜像已经不再维护了，作者 <a href="https://ruby-china.org/huacnlee">huacnlee (李华顺)</a> 转到 <a href="https://ruby-china.org/">Ruby China</a> 中继续维护了，详情见 <a href="https://gems.ruby-china.org/">RubyGems 镜像- Ruby China</a>。</p>
 <h3 id="_2">错误呈现<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>在执行任何<code>gem</code>命令的时候出现以下错误：</p>
-<div class="codehilite"><pre><span></span>ERROR:  While executing gem ... (Gem::RemoteFetcher::FetchError)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ERROR:  While executing gem ... (Gem::RemoteFetcher::FetchError)
     SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed (https://gems.ruby-china.org/specs.4.8.gz)
 </pre></div>
+</td></tr></table>
 
 <h3 id="_3">解决方法<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>根据 <a href="https://gems.ruby-china.org/"><a href="https://gems.ruby-china.org/">https://gems.ruby-china.org/</a></a> 页面最下方提供的 GitHub Issue 地址。</p>
@@ -2795,8 +2809,9 @@
 <p>我使用的是 <a href="https://gist.github.com/fnichol/867550#the-manual-way-boring">The Manual Way</a>，因为 <a href="https://gist.github.com/fnichol/867550#the-ruby-way-fun">The Ruby Way</a> 我没有成功，不知道什么原因，有兴趣的朋友可以试试。下面说说我的具体操作吧。</p>
 <p>首先从 <a href="https://curl.haxx.se/ca/cacert.pem"><a href="https://curl.haxx.se/ca/cacert.pem">https://curl.haxx.se/ca/cacert.pem</a></a> 将文件<code>cacert.pem</code>下载至 <code>C:\RailsInstaller\cacert.pem</code></p>
 <p>然后执行</p>
-<div class="codehilite"><pre><span></span>set SSL_CERT_FILE=C:\RailsInstaller\cacert.pem
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>set SSL_CERT_FILE=C:\RailsInstaller\cacert.pem
 </pre></div>
+</td></tr></table>
 
 <p>就成功了，不会再出现 SSL 错误了。</p>
 <p>最后原文中说，为了长久设置，将这个目录存入控制面板中。我没理解是什么意思，是指环境变量吗？有朋友知道的话，欢迎留言告知我。</p>
@@ -2805,15 +2820,25 @@
 <p>因为 jekyll 3 中默认安装已经没有这个分页组件了，官方把这个分页组件插件化了，因此要独立安装。详情见 <a href="https://jekyllrb.com/docs/pagination/"><a href="https://jekyllrb.com/docs/pagination/">https://jekyllrb.com/docs/pagination/</a></a>。</p>
 <h3 id="_4">错误呈现<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>在启动 jekyll 服务的时候出现以下错误：</p>
-<div class="codehilite"><pre><span></span>jekyll serve
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>jekyll serve
 Configuration file: c:/gitWorkSpace/blog-based-on-jekyll-3/_config.yml
   Dependency Error: Yikes! It looks like you don&#39;t have jekyll-paginate or one of its dependencies installed. In order to use Jekyll as currently configured, you&#39;ll need to install this gem. The full error message from Ruby is: &#39;cannot load such file -- jekyll-paginate&#39; If you run into trouble, you can find helpful resources at http://jekyllrb.com/help/!
 jekyll 3.1.2 | Error:  jekyll-paginate
 </pre></div>
+</td></tr></table>
 
 <h3 id="_5">解决方法<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>我们安装这个插件到本地即可。</p>
-<div class="codehilite"><pre><span></span>gem install jekyll-paginate
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>gem install jekyll-paginate
 Fetching: jekyll-paginate-1.1.0.gem (100%)
 Successfully installed jekyll-paginate-1.1.0
 Parsing documentation for jekyll-paginate-1.1.0
@@ -2821,15 +2846,28 @@ Installing ri documentation for jekyll-paginate-1.1.0
 Done installing documentation for jekyll-paginate after 3 seconds
 1 gem installed
 </pre></div>
+</td></tr></table>
 
 <h2 id="foxit-pdf-reader-4000">被 Foxit pdf reader 占用4000端口<a class="headerlink" href="#foxit-pdf-reader-4000" title="Permanent link">&para;</a></h2>
 <h3 id="_6">错误呈现<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>在本地使用命令</p>
-<div class="codehilite"><pre><span></span>jekyll serve
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>jekyll serve
 </pre></div>
+</td></tr></table>
 
 <p>出现错误，如下</p>
-<div class="codehilite"><pre><span></span>jekyll serve
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>jekyll serve
 Configuration file: E:/GitWorkSpace/blog/_config.yml
            Source: E:/GitWorkSpace/blog
       Destination: E:/GitWorkSpace/blog/_site
@@ -2842,18 +2880,39 @@ Auto-regeneration: enabled for &#39;E:/GitWorkSpace/blog&#39;
 Configuration file: E:/GitWorkSpace/blog/_config.yml
 jekyll 3.1.1 | Error:  Permission denied - bind(2) for 127.0.0.1:4000
 </pre></div>
+</td></tr></table>
 
 <p>网上查阅后，这篇博文解决了我的问题。<a href="http://lxconan.github.io/2016/01/07/who-is-using-my-port/">谁占了我的端口 for Windows --By Liu Xia, ThoughtWorks Senior Consultant. .NET Expert</a></p>
 <p>上述报错主要原因是，jekyll 启动使用的4000端口被福昕pdf阅读器的自动更新进程占用了，关掉这个进程，jekyll在本地调试启动服务时就没有问题了。</p>
 <h3 id="_7">解决方法<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>简单的解决方法是：</p>
 <p>输入命令，查看各端口被占用情况</p>
-<div class="codehilite"><pre><span></span>netstat -ano
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>netstat -ano
 </pre></div>
+</td></tr></table>
 
 <p>找到4000端口被占用的<code>PID</code></p>
 <p>我的结果如下：</p>
-<div class="codehilite"><pre><span></span>协议  本地地址          外部地址          状态           PID
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>协议  本地地址          外部地址          状态           PID
 TCP  0.0.0.0:80        0.0.0.0:0         LISTENING     4
 TCP  0.0.0.0:135       0.0.0.0:0         LISTENING     836
 TCP  0.0.0.0:445       0.0.0.0:0         LISTENING     4
@@ -2874,28 +2933,36 @@ TCP  127.0.0.1:4000    0.0.0.0:0         LISTENING     2476
 TCP  127.0.0.1:4000    127.0.0.1:55160   ESTABLISHED   2476
 TCP  127.0.0.1:4012    0.0.0.0:0         LISTENING     12724
 </pre></div>
+</td></tr></table>
 
 <p>可以看到4000端口的PID是2476。下面查看是什么进程，命令行中输入：</p>
-<div class="codehilite"><pre><span></span>tasklist /svc /FI &quot;PID eq 2476&quot;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>tasklist /svc /FI &quot;PID eq 2476&quot;
 </pre></div>
+</td></tr></table>
 
 <p>得到结果：</p>
-<div class="codehilite"><pre><span></span>映像名称                       PID 服务
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>映像名称                       PID 服务
 ========================= ======== ============================================
 FoxitProtect.exe              2476 FxService
 </pre></div>
+</td></tr></table>
 
 <p>可以看到正是福昕阅读器。下面关掉这个服务就好了。在 win10 中进入任务管理器，选择服务选项卡，关闭这个服务就好了，如下图：</p>
 <p><img alt="" src="http://ww4.sinaimg.cn/large/7011d6cfjw1f1ty28wwj4j20g00aiju7.jpg" /></p>
 <p>当然也可以在启动jekyll服务的时候指定端口号，如下：</p>
-<div class="codehilite"><pre><span></span>jekyll serve --port 3000
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>jekyll serve --port 3000
 </pre></div>
+</td></tr></table>
 
 <p>这样在浏览器中输入 <a href="http://localhost:3000/">http://localhost:3000/</a> 就可以访问了。</p>
 <p>还可以在配置文件<code>_config.yml</code>中添加端口号设置（参考<a href="https://jekyllrb.com/docs/configuration/#serve-command-options">官网文档-Serve Command OptionsPermalink</a>），如下：</p>
-<div class="codehilite"><pre><span></span># port
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># port
 port: 1234
 </pre></div>
+</td></tr></table>
 
 <p>此时，启动jekyll服务后，访问 <a href="http://localhost:1234/">http://localhost:1234/</a> 即可</p>
                 

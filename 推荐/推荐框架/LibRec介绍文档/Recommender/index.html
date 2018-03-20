@@ -817,8 +817,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../学习/深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../../学习/深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -853,20 +865,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../学习/深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../../学习/深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../../学习/深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2477,6 +2477,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2717,15 +2729,20 @@
 <h2 id="similarity">Similarity<a class="headerlink" href="#similarity" title="Permanent link">&para;</a></h2>
 <p>相似性矩阵用于构建数据集中user-user或者item-item之间的距离.
 在使用命令行配置时, 示例配置如下:</p>
-<p><div class="codehilite"><pre><span></span>rec.similarity.class=cos
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.similarity.class=cos
 rec.recommender.similarities=user
 </pre></div>
+</td></tr></table>
 其中<code>rec.similarity.class</code>为指定相应的距离度量函数. <code>rec.recommender.similarities</code>为指定user-user之间的距离或者item-item之间的距离. 在Social类的推荐方法中, 还可以指定计算social-social之间的距离.</p>
 <p>在Java程序中, 相应的示例程序如下</p>
-<div class="codehilite"><pre><span></span><span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;rec.recommender.similarities&quot;</span><span class="o">,</span><span class="s">&quot;user&quot;</span><span class="o">);</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;rec.recommender.similarities&quot;</span><span class="o">,</span><span class="s">&quot;user&quot;</span><span class="o">);</span>
 <span class="n">RecommenderSimilarity</span> <span class="n">similarity</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CosineSimilarity</span><span class="o">();</span>
 <span class="n">similarity</span><span class="o">.</span><span class="na">buildSimilarityMatrix</span><span class="o">(</span><span class="n">dataModel</span><span class="o">);</span>
 </pre></div>
+</td></tr></table>
 
 <p>生成RecommenderSimilarity对象之后, 还需要调用buildSimilarityMatrix方法来进行相似度矩阵的计算.</p>
 <p>下表为LibRec中已经实现的距离度量算法以及相应的简写.</p>
@@ -2781,12 +2798,19 @@ rec.recommender.similarities=user
 </table>
 <h2 id="algorithms">Algorithms<a class="headerlink" href="#algorithms" title="Permanent link">&para;</a></h2>
 <p>在使用配置项和命令行运行LibRec时, 执行的推荐算法由配置项<code>rec.recommender.class</code>指定.配置如下</p>
-<div class="codehilite"><pre><span></span>rec.recommender.class=shortname #e.g. aobpr
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=shortname #e.g. aobpr
 </pre></div>
+</td></tr></table>
 
 <p>不同算法的简写请参阅<a href="../Algorithm list">Algorithm list.md</a></p>
 <p>在java实现中, 实例Configuration对象, DataModel对象, Similarity矩阵对象之后, 作为RecommenderContext的构造器参数生成RecommenderContext的对象. 此处可以直接实例相应的推荐算法类, 因此无需设置配置项<code>rec.recommedner.class</code>. 示例代码如下:</p>
-<div class="codehilite"><pre><span></span><span class="n">RecommenderContext</span> <span class="n">context</span> <span class="o">=</span> <span class="k">new</span> <span class="n">RecommenderContext</span><span class="o">(</span><span class="n">conf</span><span class="o">,</span> <span class="n">dataModel</span><span class="o">,</span> <span class="n">similarity</span><span class="o">);</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">RecommenderContext</span> <span class="n">context</span> <span class="o">=</span> <span class="k">new</span> <span class="n">RecommenderContext</span><span class="o">(</span><span class="n">conf</span><span class="o">,</span> <span class="n">dataModel</span><span class="o">,</span> <span class="n">similarity</span><span class="o">);</span>
 
 <span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;rec.neighbors.knn.number&quot;</span><span class="o">,</span><span class="s">&quot;50&quot;</span><span class="o">);</span>
 <span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;rec.recommender.isranking=false&quot;</span><span class="o">);</span>
@@ -2794,14 +2818,18 @@ rec.recommender.similarities=user
 <span class="n">Recommender</span> <span class="n">recommender</span> <span class="o">=</span> <span class="k">new</span> <span class="n">UserKNNRecommender</span><span class="o">();</span>
 <span class="n">recommender</span><span class="o">.</span><span class="na">recommend</span><span class="o">(</span><span class="n">context</span><span class="o">);</span>
 </pre></div>
+</td></tr></table>
 
 <p>推荐算法根据不同的计算方式具有各自相应的配置项. 目前LibRec中使用的推荐算法分别有基于矩阵分解算法, 基于因子分解机算法, 概率图模型, 基于张量的算法等. 下面依次给出基于不同算法的推荐算法配置项. 一般来说, 以矩阵分解为例, 继承矩阵分解接口的推荐算法在进行推荐计算时除去配置矩阵分解的配置项之外, 还需要配置其他配置项. 如BPMF算法中,还需要配置<code>rec.recommender.user.mu</code>等配置项.</p>
 <p>实现基于以上算法的推荐系统只需继承相应的抽象类即可. 不同算法的配置项列举在下一栏, 目前已经实现的所有推荐算法配置项列举在<a href="../AlgorithmList">Algorithm  List</a>中.</p>
 <h3 id="abstractrecommender">AbstractRecommender<a class="headerlink" href="#abstractrecommender" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span># if ranking
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># if ranking
 rec.recommender.isranking=true
 rec.recommender.ranking.topn=10
 </pre></div>
+</td></tr></table>
 
 <p>直接实现AbstractRecommender抽象类的算法有</p>
 <table>
@@ -2891,10 +2919,13 @@ rec.recommender.ranking.topn=10
 </tbody>
 </table>
 <h3 id="probabilistic-graphical-recommender">Probabilistic Graphical Recommender<a class="headerlink" href="#probabilistic-graphical-recommender" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>rec.iterator.maximum=1000
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.iterator.maximum=1000
 rec.pgm.burn-in=100
 rec.pgm.samplelag=100
 </pre></div>
+</td></tr></table>
 
 <p>直接继承自Probabilistic Graphical Recommender的算法有</p>
 <table>
@@ -2969,7 +3000,14 @@ rec.pgm.samplelag=100
 </tbody>
 </table>
 <h3 id="matrix-factorization-recommender">Matrix Factorization Recommender<a class="headerlink" href="#matrix-factorization-recommender" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>rec.iterator.maximum=100
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.iterator.maximum=100
 rec.iterator.learningrate=0.01
 rec.iterator.learningrate.maximum=1000
 rec.user.regularization=0.01
@@ -2978,6 +3016,7 @@ rec.factor.number=10
 rec.learningrate.bolddriver=false
 rec.learningrate.decay=1.0
 </pre></div>
+</td></tr></table>
 
 <p>直接或间接继承Matrix Factorization Recommender的推荐算法有</p>
 <table>
@@ -3122,7 +3161,14 @@ rec.learningrate.decay=1.0
 </tbody>
 </table>
 <h3 id="factorization-machine-recommender">Factorization Machine Recommender<a class="headerlink" href="#factorization-machine-recommender" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>rec.recommender.maxrate=12.0
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.maxrate=12.0
 rec.recommender.minrate=0.0
 
 rec.factor.number=10
@@ -3131,6 +3177,7 @@ rec.fm.regw0=0.01
 reg.fm.regW=0.01
 reg.fm.regF=10
 </pre></div>
+</td></tr></table>
 
 <p>直接继承自Factorization Machine Recommender的算法有</p>
 <table>
@@ -3155,7 +3202,16 @@ reg.fm.regF=10
 </tbody>
 </table>
 <h3 id="social-recommender">Social recommender<a class="headerlink" href="#social-recommender" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>rec.iterator.maximum=100
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.iterator.maximum=100
 rec.iterator.learningrate=0.01
 rec.iterator.learningrate.maximum=1000
 rec.user.regularization=0.01
@@ -3166,6 +3222,7 @@ rec.learningrate.decay=1.0
 
 rec.social.regularization=0.01
 </pre></div>
+</td></tr></table>
 
 <p>直接继承自Social recommender的算法有</p>
 <table>
@@ -3215,12 +3272,17 @@ rec.social.regularization=0.01
 </tbody>
 </table>
 <h3 id="tensorrecommender">TensorRecommender<a class="headerlink" href="#tensorrecommender" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>rec.recommender.verbose=true
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.verbose=true
 rec.iterator.learningrate=0.01
 rec.iterator.learningrate.maximum=1000
 rec.factor.number=10
 rec.tensor.regularization=0.01
 </pre></div>
+</td></tr></table>
 
 <p>直接继承自Tensor Recommender的算法有</p>
 <table>
@@ -3247,7 +3309,16 @@ rec.tensor.regularization=0.01
 <h2 id="implement-your-own-algorithm">Implement your own algorithm<a class="headerlink" href="#implement-your-own-algorithm" title="Permanent link">&para;</a></h2>
 <p>在LibRec中实现自己的算法，需要按照自己算法所属的类别，继承对应的抽象类，并按要求实现抽象方法，也可以按自己需求重写抽象类中的方法。
 以继承AbstractRecommender为例，实现一个算法的大致流程如下:</p>
-<p><div class="codehilite"><pre><span></span>1.重写setup方法(可选)
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>1.重写setup方法(可选)
     setup方法主要完成的任务是对算法成员变量的初始化，例如从配置文件中读取参数的操作，可以写在这里。如果算法本身不需要额外配置参数，也可以不重写这个方法。
     需要注意的是，在自己重写的setup方法中，需要首先调用原抽象类中的setup方法，即在第一行执行super.setup()，保证算法的基本参数得到初始化。
 
@@ -3258,6 +3329,7 @@ rec.tensor.regularization=0.01
     predict方法完成的任务是，使用训练好的模型进行预测。
     例如对于评分预测算法，在predict方法中需要对测试集中的每个评分值进行预测，即对于给定的userIndex和ItemIndex，使用模型预测它们之间的评分。
 </pre></div>
+</td></tr></table>
 具体的实现代码参考LibRec中recommender目录下的算法即可。</p>
                 
                   
@@ -3292,13 +3364,13 @@ rec.tensor.regularization=0.01
           </a>
         
         
-          <a href="../../../../文章/" title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../YouTube/" title="YouTube" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   前进
                 </span>
-                Home
+                YouTube
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

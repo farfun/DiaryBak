@@ -875,8 +875,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../学习/深度学习/主成分分析-2/" title="主成分分析 2" class="md-nav__link">
-      主成分分析 2
+    <a href="../../../学习/深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../学习/深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -901,18 +913,6 @@
   <li class="md-nav__item">
     <a href="../../../学习/深度学习/最小二乘法/" title="最小二乘法" class="md-nav__link">
       最小二乘法
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../学习/深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
     </a>
   </li>
 
@@ -2429,6 +2429,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2636,20 +2648,29 @@
 <h3 id="1">疑问 1<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
 <p>通过训练集求出了各个特征的概率, 然后测试集的特征和之前求出来的概率相乘, 这个就代表这个测试集的特征的概率了.
 有了这个基础后, 通过贝叶斯公式, 就可以得到这个测试集的特征属于哪个类别了, 他们相乘的依据是什么？</p>
-<div class="codehilite"><pre><span></span>朴素贝叶斯？
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>朴素贝叶斯？
 条件独立性啊
 朴素贝叶斯不是基于两个定理吗
 一个是假设 条件独立性
 一个是 贝叶斯定理
 条件独立性  所以每个特征相乘得到的概率 就是这个数据的概率
 </pre></div>
+</td></tr></table>
 
 <h3 id="2">疑问 2<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
 <p>凭啥测试集的特征乘以训练集的概率就是测试集的概率了.这么做的理论依据是什么？</p>
-<div class="codehilite"><pre><span></span>朴素贝叶斯就是利用先验知识来解决后验概率，因为训练集中我们已经知道了每个单词在类别0和1中的概率，即p(w|c).
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>朴素贝叶斯就是利用先验知识来解决后验概率，因为训练集中我们已经知道了每个单词在类别0和1中的概率，即p(w|c).
 我们就是要利用这个知识去解决在出现这些单词的组合情况下，类别更可能是0还是1,即p(c|w).
 如果说之前的训练样本少, 那么这个 p(w|c) 就更可能不准确, 所以样本越多我们会觉得这个 p(w|c) 越可信.
 </pre></div>
+</td></tr></table>
                 
                   
                 

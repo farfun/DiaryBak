@@ -819,8 +819,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -855,20 +867,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2425,6 +2425,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2627,7 +2639,27 @@
 </ul>
 <h2 id="_2">代码<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>获取剩余时间的代码如下：</p>
-<div class="codehilite"><pre><span></span><span class="cm">/**</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * 获取剩余时间</span>
 <span class="cm"> * @param  {Number} endTime    截止时间</span>
 <span class="cm"> * @param  {Number} deviceTime 设备时间</span>
@@ -2649,10 +2681,30 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p><del>获取服务器时间可以使用 mtop 接口 <code>mtop.common.getTimestamp</code> </del></p>
 <p>然后可以通过下面的方式来使用：</p>
-<div class="codehilite"><pre><span></span><span class="c1">// 获取服务端时间（获取服务端时间代码略）</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// 获取服务端时间（获取服务端时间代码略）</span>
 <span class="nx">getServerTime</span><span class="p">((</span><span class="nx">serverTime</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
 
     <span class="c1">//设置定时器</span>
@@ -2673,6 +2725,7 @@
     <span class="p">},</span> <span class="mi">1000</span><span class="p">)</span>
 <span class="p">})</span>
 </pre></div>
+</td></tr></table>
 
 <p>这样的的写法也可以做到准确倒计时，同时也比较简洁。不需要隔段时间再去同步一次服务端时间。</p>
 <h2 id="_3">补充<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>

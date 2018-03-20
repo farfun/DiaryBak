@@ -819,8 +819,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -855,20 +867,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2425,6 +2425,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2663,15 +2675,17 @@
 <p>举个例子，我们用叫做 <a href="https://en.wikipedia.org/wiki/SHA-2">SHA-256</a> 的一个哈希函数来计算一个小狗图片的哈希。</p>
 <p>![7]({{ site.baseurl }}{{ site.images }}/posts/bitcoin-explained-7.jpeg)</p>
 <p>显然，大家应该都能看得出，这张小狗的图片不会是 Facebook 的违禁图片。不过，Facebook 里面的人不会真的去看这张照片，而是使用相关程序检测这张图片的哈希，如下：</p>
-<div class="codehilite"><pre><span></span>8EC9D4718F919C6087CA589EDA09E7DD9A7ACCDB820F42B4196E1D0D4BEDE77A
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>8EC9D4718F919C6087CA589EDA09E7DD9A7ACCDB820F42B4196E1D0D4BEDE77A
 </pre></div>
+</td></tr></table>
 
 <p>这就是上面那张图片的 SHA-256 哈希结果，采用 16 进制表示。是不是没有之前的小狗可爱了:).</p>
 <p>哈希函数一个非常有趣的特性是，只要我们稍微改变一下输入，输出就会完全不同。比如，如果我们改变这张图片的一个像素点，在小狗的眼睛上面放一个跳蚤大的黑色像素点：</p>
 <p>![8]({{ site.baseurl }}{{ site.images }}/posts/bitcoin-explained-8.png)</p>
 <p>尽管只是改了一个像素值，但是再次对图片进行哈希，我们会得到一个完全不同的哈希值，：</p>
-<div class="codehilite"><pre><span></span>039E1AF92F7D00775ECE35C2216FC3F7F0BBCD31F912A105D2601380D8DEABA2
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>039E1AF92F7D00775ECE35C2216FC3F7F0BBCD31F912A105D2601380D8DEABA2
 </pre></div>
+</td></tr></table>
 
 <p>现在，接下来我们应该使用真实内容和真实的哈希值了，但是由于哈希的表现形式不太友好，肉眼很难进行鉴别和区分。故而，我们使用表情符号（emoji）来代表输入和输出。在上面的例子中，我们用猫脸来表示输入（content to be hashed）,绶带表示输出（结果哈希）：</p>
 <p>![]({{ site.baseurl }}{{ site.images }}/posts/bitcoin-explained-9.png)</p>

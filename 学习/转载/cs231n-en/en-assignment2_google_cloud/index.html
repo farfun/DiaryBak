@@ -819,8 +819,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -855,20 +867,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2470,6 +2470,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2743,43 +2755,56 @@
 <p>It should take about 5 minutes for the instance to get created. You should now be able to launch your instance with our custom image. The custom disk is 40GB and uses Ubuntu 16.04 LTS. 
 The default python version in the system is Python 2.7.2 and there is a virtual environment in <strong>/home/cs231n/myVE35</strong> with version 3.5.2. </p>
 <p><strong>NOTE:</strong> Some students have reported GPU instances whose drivers disappear upon restarts. And there is strong evidence to suggest that the issue happens when Ubuntu auto-installs security updates upon booting up. To disable auto-updating, run</p>
-<div class="codehilite"><pre><span></span>sudo apt-get remove unattended-upgrades
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt-get remove unattended-upgrades
 </pre></div>
+</td></tr></table>
 
 <p>after logging into your instance for the first time.</p>
 <h3 id="load-the-virtual-environment">Load the virtual environment<a class="headerlink" href="#load-the-virtual-environment" title="Permanent link">&para;</a></h3>
 <p>You <strong>don't need to create a new virtual environment</strong> for this assignment -- we are providing you with one, with all the Python packages you need for the assignment already installed. So, unlike the previous assignment, you do not need to run any commands to create the virtual environment (and install packages, etc), just one command to activate it. To use this virtual environment, run the following command (you may have to do this every time you start your instance up, if you don't see your bash prompt prefaced by "(myVE35)"): </p>
-<div class="codehilite"><pre><span></span>source /home/cs231n/myVE35/bin/activate
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>source /home/cs231n/myVE35/bin/activate
 </pre></div>
+</td></tr></table>
 
 <p>Here's what you should see after running that to confirm you're in the virtual environment:</p>
-<div class="codehilite"><pre><span></span>username@instance-2:~$ source /home/cs231n/myVE35/bin/activate
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>username@instance-2:~$ source /home/cs231n/myVE35/bin/activate
 (myVE35) username@instance-2:~$ which python
 /home/cs231n/myVE35/bin/python
 (myVE35) username@instance-2:~$ 
 </pre></div>
+</td></tr></table>
 
 <p>The disk should also have Jupyter 1.0.0, CUDA 8.0, CUDNN 5.1, Pytorch 0.1.11_5 and TensorFlow 1.0.1. GPU support should be automatically enabled for PyTorch and TensorFlow. </p>
 <h3 id="getting-started-on-assignment-2">Getting started on Assignment 2<a class="headerlink" href="#getting-started-on-assignment-2" title="Permanent link">&para;</a></h3>
 <p>As in assignment 1, you can download the assignment zip file by running:</p>
-<div class="codehilite"><pre><span></span>wget http://cs231n.stanford.edu/assignments/2017/spring1617_assignment2.zip
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>wget http://cs231n.stanford.edu/assignments/2017/spring1617_assignment2.zip
 </pre></div>
+</td></tr></table>
 
 <p>You can unzip the assignment zip file by running:</p>
-<div class="codehilite"><pre><span></span>sudo apt-get install zip #For when you need to zip the file to submit it.
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt-get install zip #For when you need to zip the file to submit it.
 sudo apt-get install unzip
 unzip spring1617_assignment2.zip
 </pre></div>
+</td></tr></table>
 
 <p>Get back to the Assignment 2 instructions <a href="http://cs231n.github.io/assignments2017/assignment2/">here</a>. Follow the instructions starting from the <strong>Download data</strong> section.</p>
 <p><strong>NOTE: Some students have seen errors saying that an NVIDIA driver is not installed.</strong> If you see this error, follow the instructions <a href="https://cloud.google.com/compute/docs/gpus/add-gpus#install-driver-script" title="title">here</a> to run the script for <strong>Ubuntu 16.04 LTS or 16.10 - CUDA 8 with latest driver</strong> under <strong>Installing GPU drivers</strong>. I.e. copy and paste the script into a file, lets call the file install_cuda.sh. And then run </p>
-<div class="codehilite"><pre><span></span>sudo bash install_cuda.sh 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo bash install_cuda.sh 
 </pre></div>
+</td></tr></table>
 
 <p>Once you run the script above, run the commands 
-<div class="codehilite"><pre><span></span>nvidia-smi
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>nvidia-smi
 nvcc --version
-</pre></div></p>
+</pre></div>
+</td></tr></table></p>
 <p>to ensure that the drivers are installed.</p>
 <h2 id="transferring-files-to-your-local-computer">Transferring Files to Your Local Computer<a class="headerlink" href="#transferring-files-to-your-local-computer" title="Permanent link">&para;</a></h2>
 <p>After following assignment 2 instructions to run the submission script and create assignment2.zip, you can download that file directly from Jupyter. To do this, go to Jupyter Notebook and click on the zip file (in this case assignment2.zip). The file will be downloaded to your local computer. You can also use the <strong>gcloud compute copy-files</strong> command to transfer files as discussed in the <strong>Submission: Transferring Files From Your Instance To Your Computer</strong> section in <a href="http://cs231n.github.io/gce-tutorial/" title="title">the first GCE tutorial</a>.</p>

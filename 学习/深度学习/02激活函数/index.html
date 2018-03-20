@@ -13,7 +13,7 @@
         <meta name="description" content="Nothing is impossible">
       
       
-        <link rel="canonical" href="https://1007530194.github.io/Diary/学习/深度学习/矩阵分解/">
+        <link rel="canonical" href="https://1007530194.github.io/Diary/学习/深度学习/02激活函数/">
       
       
         <meta name="author" content="NiuLiangtao">
@@ -42,7 +42,7 @@
     
     
       
-        <title>矩阵分解 - Blog of NiuLiangtao</title>
+        <title>02激活函数 - Blog of NiuLiangtao</title>
       
     
     
@@ -99,6 +99,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
+      <a href="#_1" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -121,7 +125,7 @@
                 Blog of NiuLiangtao
               </span>
               <span class="md-header-nav__topic">
-                矩阵分解
+                02激活函数
               </span>
             
           
@@ -815,10 +819,97 @@
           
           
 
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        02激活函数
+      </label>
+    
+    <a href="./" title="02激活函数" class="md-nav__link md-nav__link--active">
+      02激活函数
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="激活函数" class="md-nav__link">
+    激活函数
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sigmoid" title="sigmoid" class="md-nav__link">
+    sigmoid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tanh" title="tanh" class="md-nav__link">
+    tanh
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relup-relu-leaky-relu" title="ReLU，P-ReLU, Leaky-ReLU" class="md-nav__link">
+    ReLU，P-ReLU, Leaky-ReLU
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elu" title="ELU" class="md-nav__link">
+    ELU
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maxout" title="Maxout" class="md-nav__link">
+    Maxout
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
 
   <li class="md-nav__item">
-    <a href="../主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -844,25 +935,6 @@
     <a href="../最小二乘法/" title="最小二乘法" class="md-nav__link">
       最小二乘法
     </a>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-    
-    <a href="./" title="矩阵分解" class="md-nav__link md-nav__link--active">
-      矩阵分解
-    </a>
-    
   </li>
 
         
@@ -2378,6 +2450,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2515,15 +2599,171 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="激活函数" class="md-nav__link">
+    激活函数
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sigmoid" title="sigmoid" class="md-nav__link">
+    sigmoid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tanh" title="tanh" class="md-nav__link">
+    tanh
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relup-relu-leaky-relu" title="ReLU，P-ReLU, Leaky-ReLU" class="md-nav__link">
+    ReLU，P-ReLU, Leaky-ReLU
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elu" title="ELU" class="md-nav__link">
+    ELU
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maxout" title="Maxout" class="md-nav__link">
+    Maxout
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>矩阵分解</h1>
+                  <h1>02激活函数</h1>
                 
-                
+                <h2 id="_1">激活函数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>关于激活函数，首先要搞清楚的问题是，激活函数是什么，有什么用？不用激活函数可不可以？答案是不可以。激活函数的主要作用是提供网络的非线性建模能力。如果没有激活函数，那么该网络仅能够表达线性映射，此时即便有再多的隐藏层，其整个网络跟单层神经网络也是等价的。因此也可以认为，只有加入了激活函数之后，深度神经网络才具备了分层的非线性映射学习能力。 那么激活函数应该具有什么样的性质呢？</p>
+<p>可微性： 当优化方法是基于梯度的时候，这个性质是必须的。 
+单调性： 当激活函数是单调的时候，单层网络能够保证是凸函数。 
+输出值的范围： 当激活函数输出值是 有限 的时候，基于梯度的优化方法会更加 稳定，因为特征的表示受有限权值的影响更显著;当激活函数的输出是 无限 的时候，模型的训练会更加高效，不过在这种情况小，一般需要更小的learning rate</p>
+<p>从目前来看，常见的激活函数多是分段线性和具有指数形状的非线性函数</p>
+<h3 id="sigmoid">sigmoid<a class="headerlink" href="#sigmoid" title="Permanent link">&para;</a></h3>
+<div>
+<div class="MathJax_Preview">f(x)=\frac{1}{1+e^{−x}}</div>
+<script type="math/tex; mode=display">f(x)=\frac{1}{1+e^{−x}}</script>
+</div>
+<p><img alt="这里写图片描述" src="../resources/FDE39BBE8EA3BB2694D16A129AF8F8EC.png" /></p>
+<p>sigmoid 是使用范围最广的一类激活函数，具有指数函数形状，它在物理意义上最为接近生物神经元。此外，(0, 1) 的输出还可以被表示作概率，或用于输入的归一化，代表性的如Sigmoid交叉熵损失函数。</p>
+<p>然而，sigmoid也有其自身的缺陷，最明显的就是饱和性。从上图可以看到，其两侧导数逐渐趋近于0 </p>
+<div>
+<div class="MathJax_Preview">\lim_{n \to \infty}f'(x)=0</div>
+<script type="math/tex; mode=display">\lim_{n \to \infty}f'(x)=0</script>
+</div>
+<p>具有这种性质的称为软饱和激活函数。具体的，饱和又可分为左饱和与右饱和。与软饱和对应的是硬饱和, 即 </p>
+<div>
+<div class="MathJax_Preview">f′(x)=0，当 |x| &gt; c，其中c为常数。</div>
+<script type="math/tex; mode=display">f′(x)=0，当 |x| > c，其中c为常数。</script>
+</div>
+<p><span><span class="MathJax_Preview">sigmoid</span><script type="math/tex">sigmoid</script></span> 的软饱和性，使得深度神经网络在二三十年里一直难以有效的训练，是阻碍神经网络发展的重要原因。具体来说，由于在后向传递过程中，sigmoid向下传导的梯度包含了一个 <span><span class="MathJax_Preview">f′(x)</span><script type="math/tex">f′(x)</script></span> 因子（sigmoid关于输入的导数），因此一旦输入落入饱和区，<span><span class="MathJax_Preview">f′(x)</span><script type="math/tex">f′(x)</script></span> 就会变得接近于0，导致了向底层传递的梯度也变得非常小。此时，网络参数很难得到有效训练。这种现象被称为梯度消失。一般来说， <span><span class="MathJax_Preview">sigmoid</span><script type="math/tex">sigmoid</script></span> 网络在 5 层之内就会产生梯度消失现象</p>
+<p>此外，sigmoid函数的输出均大于0，使得输出不是0均值，这称为偏移现象，这会导致后一层的神经元将得到上一层输出的非0均值的信号作为输入。</p>
+<h3 id="tanh">tanh<a class="headerlink" href="#tanh" title="Permanent link">&para;</a></h3>
+<div>
+<div class="MathJax_Preview">f(x)=\frac{1−e^{−2x}}{1+e^{−2x}}</div>
+<script type="math/tex; mode=display">f(x)=\frac{1−e^{−2x}}{1+e^{−2x}}</script>
+</div>
+<p><img alt="这里写图片描述" src="../resources/939341DF79E6867F124FC9B66444AD6B.png" /></p>
+<p>tanh也是一种非常常见的激活函数。与sigmoid相比，它的输出均值是0，使得其收敛速度要比sigmoid快，减少迭代次数。然而，从途中可以看出，tanh一样具有软饱和性，从而造成梯度消失。</p>
+<h3 id="relup-relu-leaky-relu">ReLU，P-ReLU, Leaky-ReLU<a class="headerlink" href="#relup-relu-leaky-relu" title="Permanent link">&para;</a></h3>
+<div>
+<div class="MathJax_Preview">
+ f(x)=\begin{cases}
+ x, if x \ge 0 \\ 
+ 0, if x \lt 0
+ \end{cases}
+</div>
+<script type="math/tex; mode=display">
+ f(x)=\begin{cases}
+ x, if x \ge 0 \\ 
+ 0, if x \lt 0
+ \end{cases}
+</script>
+</div>
+<div>
+<div class="MathJax_Preview">f(x)=max(0,x)</div>
+<script type="math/tex; mode=display">f(x)=max(0,x)</script>
+</div>
+<p><img alt="这里写图片描述" src="../resources/7A834A3B8B6F53DCF1AC692C7047E558.png" /></p>
+<p>ReLU的全称是Rectified Linear Units，是一种后来才出现的激活函数。 可以看到，当x\&lt;0时，ReLU硬饱和，而当x>0时，则不存在饱和问题。所以，ReLU 能够在x>0时保持梯度不衰减，从而缓解梯度消失问题。这让我们能够直接以监督的方式训练深度神经网络，而无需依赖无监督的逐层预训练。</p>
+<p>然而，随着训练的推进，部分输入会落入硬饱和区，导致对应权重无法更新。这种现象被称为“神经元死亡”。与sigmoid类似，ReLU的输出均值也大于0，偏移现象和 神经元死亡会共同影响网络的收敛性。</p>
+<p>针对在<span><span class="MathJax_Preview">x&lt;0</span><script type="math/tex">x<0</script></span>的硬饱和问题，我们对ReLU做出相应的改进，使得 
+$$
+ f(x)=\begin{cases}
+ x, if x \ge 0 \ 
+ ax, if x \lt 0
+ \end{cases}
+$$</p>
+<p><img alt="这里写图片描述" src="../resources/AD509EFFFD2C54D75AF838AB0D80ECAF.png" /></p>
+<p>这就是Leaky-ReLU, 而P-ReLU认为，αα也可以作为一个参数来学习，原文献建议初始化a为0.25，不采用正则。</p>
+<h3 id="elu">ELU<a class="headerlink" href="#elu" title="Permanent link">&para;</a></h3>
+<div>
+<div class="MathJax_Preview">
+ f(x)=\begin{cases}
+ x, if x \ge 0 \\ 
+ \alpha(e^x-1), if x \lt 0
+ \end{cases}
+</div>
+<script type="math/tex; mode=display">
+ f(x)=\begin{cases}
+ x, if x \ge 0 \\ 
+ \alpha(e^x-1), if x \lt 0
+ \end{cases}
+</script>
+</div>
+<p><img alt="这里写图片描述" src="../resources/8FBB8B10DCFA830D9401DF4ED9272165.png" /></p>
+<p>融合了sigmoid和ReLU，左侧具有软饱和性，右侧无饱和性。右侧线性部分使得ELU能够缓解梯度消失，而左侧软饱能够让ELU对输入变化或噪声更鲁棒。ELU的输出均值接近于零，所以收敛速度更快。在 ImageNet上，不加 Batch Normalization 30 层以上的 ReLU 网络会无法收敛，PReLU网络在MSRA的Fan-in （caffe ）初始化下会发散，而 ELU 网络在Fan-in/Fan-out下都能收敛</p>
+<h3 id="maxout">Maxout<a class="headerlink" href="#maxout" title="Permanent link">&para;</a></h3>
+<h2 id="_2"><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div>
+<div class="MathJax_Preview">f(x)=max(w^T_1x+b_1,w^T_2x+b_2,⋯,w^T_n+b_n)</div>
+<script type="math/tex; mode=display">f(x)=max(w^T_1x+b_1,w^T_2x+b_2,⋯,w^T_n+b_n)</script>
+</div>
+<p>在我看来，这个激活函数有点大一统的感觉，因为maxout网络能够近似任意连续函数，且当<span><span class="MathJax_Preview">w_2,b_2,…,w_n,b_n</span><script type="math/tex">w_2,b_2,…,w_n,b_n</script></span>为0时，退化为ReLU。Maxout能够缓解梯度消失，同时又规避了ReLU神经元死亡的缺点，但增加了参数和计算量。</p>
                 
                   
                 
@@ -2542,7 +2782,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../最小二乘法/" title="最小二乘法" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../tensorflow/如何选择优化器 optimizer/" title="如何选择优化器 optimizer" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -2551,19 +2791,19 @@
                 <span class="md-footer-nav__direction">
                   后退
                 </span>
-                最小二乘法
+                如何选择优化器 optimizer
               </span>
             </div>
           </a>
         
         
-          <a href="../矩阵求导/" title="矩阵求导" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../04损失函数/" title="04损失函数" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   前进
                 </span>
-                矩阵求导
+                04损失函数
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

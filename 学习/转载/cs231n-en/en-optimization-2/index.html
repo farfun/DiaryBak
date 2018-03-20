@@ -819,8 +819,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -855,20 +867,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2474,6 +2474,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2776,7 +2788,20 @@ f(x,y) = \max(x, y) \hspace{0.5in} \rightarrow \hspace{0.5in} \frac{\partial f}{
 <p><a name='backprop'></a></p>
 <h3 id="compound-expressions-with-chain-rule">Compound expressions with chain rule<a class="headerlink" href="#compound-expressions-with-chain-rule" title="Permanent link">&para;</a></h3>
 <p>Lets now start to consider more complicated expressions that involve multiple composed functions, such as <span><span class="MathJax_Preview">f(x,y,z) = (x + y) z</span><script type="math/tex">f(x,y,z) = (x + y) z</script></span>. This expression is still simple enough to differentiate directly, but we'll take a particular approach to it that will be helpful with understanding the intuition behind backpropagation. In particular, note that this expression can be broken down into two expressions: <span><span class="MathJax_Preview">q = x + y</span><script type="math/tex">q = x + y</script></span> and <span><span class="MathJax_Preview">f = q z</span><script type="math/tex">f = q z</script></span>. Moreover, we know how to compute the derivatives of both expressions separately, as seen in the previous section. <span><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> is just multiplication of <span><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> and <span><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span>, so <span><span class="MathJax_Preview">\frac{\partial f}{\partial q} = z, \frac{\partial f}{\partial z} = q</span><script type="math/tex">\frac{\partial f}{\partial q} = z, \frac{\partial f}{\partial z} = q</script></span>, and <span><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> is addition of <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> and <span><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> so $ \frac{\partial q}{\partial x} = 1, \frac{\partial q}{\partial y} = 1 $. However, we don't necessarily care about the gradient on the intermediate value <span><span class="MathJax_Preview">q</span><script type="math/tex">q</script></span> - the value of <span><span class="MathJax_Preview">\frac{\partial f}{\partial q}</span><script type="math/tex">\frac{\partial f}{\partial q}</script></span> is not useful. Instead, we are ultimately interested in the gradient of <span><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> with respect to its inputs <span><span class="MathJax_Preview">x,y,z</span><script type="math/tex">x,y,z</script></span>. The <strong>chain rule</strong> tells us that the correct way to "chain" these gradient expressions together is through multiplication. For example, $\frac{\partial f}{\partial x} = \frac{\partial f}{\partial q} \frac{\partial q}{\partial x} $. In practice this is simply a multiplication of the two numbers that hold the two gradients. Lets see this with an example:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># set some inputs</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># set some inputs</span>
 <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span><span class="p">;</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="n">z</span> <span class="o">=</span> <span class="o">-</span><span class="mi">4</span>
 
 <span class="c1"># perform the forward pass</span>
@@ -2791,6 +2816,7 @@ f(x,y) = \max(x, y) \hspace{0.5in} \rightarrow \hspace{0.5in} \frac{\partial f}{
 <span class="n">dfdx</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">*</span> <span class="n">dfdq</span> <span class="c1"># dq/dx = 1. And the multiplication here is the chain rule!</span>
 <span class="n">dfdy</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">*</span> <span class="n">dfdq</span> <span class="c1"># dq/dy = 1</span>
 </pre></div>
+</td></tr></table>
 
 <p>At the end we are left with the gradient in the variables <code>[dfdx,dfdy,dfdz]</code>, which tell us the sensitivity of the variables <code>x,y,z</code> on <code>f</code>!. This is the simplest example of backpropagation. Going forward, we will want to use a more concise notation so that we don't have to keep writing the <code>df</code> part. That is, for example instead of <code>dfdq</code> we would simply write <code>dq</code>, and always assume that the gradient is with respect to the final output.</p>
 <p>This computation can also be nicely visualized with a circuit diagram:</p>
@@ -2882,7 +2908,18 @@ f_a(x) = ax
 </script>
 </div>
 <p>As we see, the gradient turns out to simplify and becomes surprisingly simple. For example, the sigmoid expression receives the input 1.0 and computes the output 0.73 during the forward pass. The derivation above shows that the <em>local</em> gradient would simply be (1 - 0.73) * 0.73 ~= 0.2, as the circuit computed before (see the image above), except this way it would be done with a single, simple and efficient expression (and with less numerical issues). Therefore, in any real practical application it would be very useful to group these operations into a single gate. Lets see the backprop for this neuron in code:</p>
-<div class="codehilite"><pre><span></span><span class="n">w</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># assume some random weights and data</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">w</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># assume some random weights and data</span>
 <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">]</span>
 
 <span class="c1"># forward pass</span>
@@ -2895,6 +2932,7 @@ f_a(x) = ax
 <span class="n">dw</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">ddot</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">ddot</span><span class="p">,</span> <span class="mf">1.0</span> <span class="o">*</span> <span class="n">ddot</span><span class="p">]</span> <span class="c1"># backprop into w</span>
 <span class="c1"># we&#39;re done! we have the gradients on the inputs to the circuit</span>
 </pre></div>
+</td></tr></table>
 
 <p><strong>Implementation protip: staged backpropagation</strong>. As shown in the code above, in practice it is always helpful to break down the forward pass into stages that are easily backpropped through. For example here we created an intermediate variable <code>dot</code> which holds the output of the dot product between <code>w</code> and <code>x</code>. During backward pass we then successively compute (in reverse order) the corresponding variables (e.g. <code>ddot</code>, and ultimately <code>dw, dx</code>) that hold the gradients of those variables.</p>
 <p>The point of this section is that the details of how the backpropagation is performed, and which parts of the forward function we think of as gates, is a matter of convenience. It helps to be aware of which parts of the expression have easy local gradients, so that they can be chained together with the least amount of code and effort. </p>
@@ -2910,7 +2948,18 @@ f(x,y) = \frac{x + \sigma(y)}{\sigma(x) + (x+y)^2}
 </script>
 </div>
 <p>To be clear, this function is completely useless and it's not clear why you would ever want to compute its gradient, except for the fact that it is a good example of backpropagation in practice. It is very important to stress that if you were to launch into performing the differentiation with respect to either <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> or <span><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>, you would end up with very large and complex expressions. However, it turns out that doing so is completely unnecessary because we don't need to have an explicit function written down that evaluates the gradient. We only have to know how to compute it. Here is how we would structure the forward pass of such expression:</p>
-<div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># example values</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># example values</span>
 <span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">4</span>
 
 <span class="c1"># forward pass</span>
@@ -2923,9 +2972,30 @@ f(x,y) = \frac{x + \sigma(y)}{\sigma(x) + (x+y)^2}
 <span class="n">invden</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">den</span>                                       <span class="c1">#(7)</span>
 <span class="n">f</span> <span class="o">=</span> <span class="n">num</span> <span class="o">*</span> <span class="n">invden</span> <span class="c1"># done!                                 #(8)</span>
 </pre></div>
+</td></tr></table>
 
 <p>Phew, by the end of the expression we have computed the forward pass. Notice that we have structured the code in such way that it contains multiple intermediate variables, each of which are only simple expressions for which we already know the local gradients. Therefore, computing the backprop pass is easy: We'll go backwards and for every variable along the way in the forward pass (<code>sigy, num, sigx, xpy, xpysqr, den, invden</code>) we will have the same variable, but one that begins with a <code>d</code>, which will hold the gradient of the output of the circuit with respect to that variable. Additionally, note that every single piece in our backprop will involve computing the local gradient of that expression, and chaining it with the gradient on that expression with a multiplication. For each row, we also highlight which part of the forward pass it refers to:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># backprop f = num * invden</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># backprop f = num * invden</span>
 <span class="n">dnum</span> <span class="o">=</span> <span class="n">invden</span> <span class="c1"># gradient on numerator                             #(8)</span>
 <span class="n">dinvden</span> <span class="o">=</span> <span class="n">num</span>                                                     <span class="c1">#(8)</span>
 <span class="c1"># backprop invden = 1.0 / den </span>
@@ -2947,6 +3017,7 @@ f(x,y) = \frac{x + \sigma(y)}{\sigma(x) + (x+y)^2}
 <span class="n">dy</span> <span class="o">+=</span> <span class="p">((</span><span class="mi">1</span> <span class="o">-</span> <span class="n">sigy</span><span class="p">)</span> <span class="o">*</span> <span class="n">sigy</span><span class="p">)</span> <span class="o">*</span> <span class="n">dsigy</span>                                 <span class="c1">#(1)</span>
 <span class="c1"># done! phew</span>
 </pre></div>
+</td></tr></table>
 
 <p>Notice a few things:</p>
 <p><strong>Cache forward pass variables</strong>. To compute the backward pass it is very helpful to have some of the variables that were used in the forward pass. In practice you want to structure your code so that you cache these variables, and so that they are available during backpropagation. If this is too difficult, it is possible (but wasteful) to recompute them.</p>
@@ -2971,7 +3042,15 @@ f(x,y) = \frac{x + \sigma(y)}{\sigma(x) + (x+y)^2}
 <h3 id="gradients-for-vectorized-operations">Gradients for vectorized operations<a class="headerlink" href="#gradients-for-vectorized-operations" title="Permanent link">&para;</a></h3>
 <p>The above sections were concerned with single variables, but all concepts extend in a straight-forward manner to matrix and vector operations. However, one must pay closer attention to dimensions and transpose operations.</p>
 <p><strong>Matrix-Matrix multiply gradient</strong>. Possibly the most tricky operation is the matrix-matrix multiplication (which generalizes all matrix-vector and vector-vector) multiply operations:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># forward pass</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># forward pass</span>
 <span class="n">W</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="n">D</span> <span class="o">=</span> <span class="n">W</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -2981,6 +3060,7 @@ f(x,y) = \frac{x + \sigma(y)}{\sigma(x) + (x+y)^2}
 <span class="n">dW</span> <span class="o">=</span> <span class="n">dD</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="p">)</span> <span class="c1">#.T gives the transpose of the matrix</span>
 <span class="n">dX</span> <span class="o">=</span> <span class="n">W</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">dD</span><span class="p">)</span>
 </pre></div>
+</td></tr></table>
 
 <p><em>Tip: use dimension analysis!</em> Note that you do not need to remember the expressions for <code>dW</code> and <code>dX</code>  because they are easy to re-derive based on dimensions. For instance, we know that the gradient on the weights <code>dW</code> must be of the same size as <code>W</code> after it is computed, and that it must depend on matrix multiplication of <code>X</code> and <code>dD</code> (as is the case when both <code>X,W</code> are single numbers and not matrices). There is always exactly one way of achieving this so that the dimensions work out. For example, <code>X</code> is of size [10 x 3] and <code>dD</code> of size [5 x 3], so if we want <code>dW</code> and <code>W</code> has shape [5 x 10], then the only way of achieving this is with <code>dD.dot(X.T)</code>, as shown above.</p>
 <p><strong>Work with small, explicit examples</strong>. Some people may find it difficult at first to derive the gradient updates for some vectorized expressions. Our recommendation is to explicitly write out a minimal vectorized example, derive the gradient on paper and then generalize the pattern to its efficient, vectorized form.</p>

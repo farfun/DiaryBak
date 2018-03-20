@@ -817,8 +817,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../学习/深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../../学习/深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -853,20 +865,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../学习/深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../../学习/深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../../学习/深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2386,6 +2386,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2549,17 +2561,24 @@
 <p>若在配置文件中不进行评估器的指定, 最终评估时使用对应类型的全部评估器.</p>
 <p>指定评估器的配置示例:</p>
 <p>rating:</p>
-<div class="codehilite"><pre><span></span>rec.recommender.isranking=false
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.isranking=false
 rec.eval.enable=true
 rec.eval.class=mse # if rating
 </pre></div>
+</td></tr></table>
 
 <p>ranking:</p>
-<div class="codehilite"><pre><span></span>rec.recommender.isranking=true
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.isranking=true
 rec.eval.enable=true
 rec.eval.class=auc
 rec.recommender.ranking.topn=10
 </pre></div>
+</td></tr></table>
 
 <p>不同评估器相应的简写见下表</p>
 <table>
@@ -2632,9 +2651,11 @@ rec.recommender.ranking.topn=10
 与rating相比, 使用ranking算法还需要配置rec.recommender.ranking.topn.</p>
 <p>在使用java进行实现评估器时, 评估器的实例作为Recommender类中evaluate方法的参数传入Recommender的对象中. 其中Recommender的对象可以为不同的推荐算法. 而RecommenderEvaluator的实例也可以使用不同的评估器. 在Java中也可以采用多种不同的评估器来对结果进行评估, 只需生成相应的评估器即可.
 示例代码如下:</p>
-<div class="codehilite"><pre><span></span><span class="n">RecommenderEvaluator</span> <span class="n">evaluator</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MAEEvaluator</span><span class="o">();</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">RecommenderEvaluator</span> <span class="n">evaluator</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MAEEvaluator</span><span class="o">();</span>
 <span class="kt">double</span> <span class="n">evalValue</span> <span class="o">=</span> <span class="n">recommender</span><span class="o">.</span><span class="na">evaluate</span><span class="o">(</span><span class="n">evaluator</span><span class="o">);</span>
 </pre></div>
+</td></tr></table>
                 
                   
                 

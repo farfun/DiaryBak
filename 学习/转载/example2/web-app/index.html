@@ -819,8 +819,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -855,20 +867,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2635,6 +2635,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3125,9 +3137,11 @@
 <p><code>viewport</code> 可以让布局在移动浏览器上显示的更好。 通常会写</p>
 </li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name </span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content </span><span class="o">=</span><span class="s">&quot;initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no&quot;</span><span class="p">&gt;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name </span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content </span><span class="o">=</span><span class="s">&quot;initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no&quot;</span><span class="p">&gt;</span>
 <span class="c">&lt;!-- `width=device-width` 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式打开页面时出现黑边 http://bigc.at/ios-webapp-viewport-meta.orz --&gt;</span>
 </pre></div>
+</td></tr></table>
 
 <ul>
 <li>
@@ -3146,7 +3160,102 @@
 </li>
 </ul>
 <p><strong>总结：</strong></p>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span> <span class="c">&lt;!-- 使用 HTML5 doctype，不区分大小写 --&gt;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span> <span class="c">&lt;!-- 使用 HTML5 doctype，不区分大小写 --&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;zh-cmn-Hans&quot;</span><span class="p">&gt;</span> <span class="c">&lt;!-- 更加标准的 lang 属性写法 http://zhi.hu/XyIa --&gt;</span>
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="c">&lt;!-- 声明文档使用的字符编码 --&gt;</span>
@@ -3243,6 +3352,7 @@
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
+</td></tr></table>
 
 <h2 id="_2">页面切换动画<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
@@ -3280,7 +3390,7 @@ $ gem sources -l
 *** CURRENT SOURCES ***
 
 https://ruby.taobao.org
-<span class="c1"># 请确保只有 ruby.taobao.org</span>
+# 请确保只有 ruby.taobao.org
 $ gem install sass
 </pre></div>
 </td></tr></table>
@@ -3366,7 +3476,20 @@ $ gem install sass
 </li>
 </ol>
 <p>对于 innerHTML 的方式输出的，我们可以采用如下的方式转码</p>
-<div class="codehilite"><pre><span></span><span class="cm">/**</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> * 转码 XSS 防护</span>
 <span class="cm"> * @param  {String} str 用户输入的字符串</span>
 <span class="cm"> * @return {String}     转码后的字符串</span>
@@ -3381,6 +3504,7 @@ $ gem install sass
     <span class="k">return</span> <span class="nx">str</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <hr />
 <p>参考：</p>
@@ -3668,19 +3792,28 @@ CMD:延迟执行（运行到需加载，根据顺序执行）</p>
 <p>各家浏览器对于 disabled 属性有自己的样式设定，比如 IE 下是灰色的。苹果设备下也是。改变这些样式的方法也不是统一的。如果要兼容 Safari 必须加上</p>
 </li>
 </ul>
-<div class="codehilite"><pre><span></span>background: #fff;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>background: #fff;
 -webkit-text-fill-color: rgba(0, 0, 0, 1);
 -webkit-opacity: 1;
 </pre></div>
+</td></tr></table>
 
 <p>于是最终代码如下：</p>
-<div class="codehilite"><pre><span></span><span class="nt">textarea</span><span class="p">:</span><span class="nd">disabled</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nt">textarea</span><span class="p">:</span><span class="nd">disabled</span> <span class="p">{</span>
     <span class="k">color</span><span class="p">:</span><span class="mh">#000</span><span class="p">;</span>
     <span class="k">background</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
     <span class="kp">-webkit-</span><span class="n">text-fill-color</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
     <span class="kp">-webkit-</span><span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <ul>
 <li>参考：<a href="http://stackoverflow.com/a/4648315">Disabled input text color 中的评论</a></li>

@@ -819,8 +819,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -855,20 +867,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2497,6 +2497,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2800,48 +2812,59 @@ implementations. This tutorial lists the necessary steps of working on the assig
 <p>Take note of your \&lt;YOUR-INSTANCE-NAME>, in this case, my instance name is instance-2. </p>
 <h2 id="connect-to-your-virtual-instance-and-download-the-assignment">Connect to Your Virtual Instance and Download the Assignment<a class="headerlink" href="#connect-to-your-virtual-instance-and-download-the-assignment" title="Permanent link">&para;</a></h2>
 <p>Now that you have created your virtual GCE, you want to be able to connect to it from your computer. The rest of this tutorial goes over how to do that using the command line. First, download the Google Cloud SDK that is appropriate for your platform from <a href="https://cloud.google.com/sdk/docs/" title="Title">here</a> and follow their installation instructions. <strong>NOTE: this tutorial assumes that you have performed step #4 on the website which they list as optional</strong>. When prompted, make sure you select us-west1-b as the time zone. The easiest way to connect is using the gcloud compute command below. The tool takes care of authentication for you. On OS X, run:</p>
-<div class="codehilite"><pre><span></span>./&lt;DIRECTORY-WHERE-GOOGLE-CLOUD-IS-INSTALLED&gt;/bin/gcloud compute ssh --zone=us-west1-b &lt;YOUR-INSTANCE-NAME&gt;
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>./&lt;DIRECTORY-WHERE-GOOGLE-CLOUD-IS-INSTALLED&gt;/bin/gcloud compute ssh --zone=us-west1-b &lt;YOUR-INSTANCE-NAME&gt;
 </pre></div>
+</td></tr></table>
 
 <p>See <a href="https://cloud.google.com/compute/docs/instances/connecting-to-instance" title="Title">this page</a> for more detailed instructions. You are now ready to work on the assignments on Google Cloud. </p>
 <p>Run the following command to download the current assignment onto your GCE:</p>
-<div class="codehilite"><pre><span></span>wget http://cs231n.stanford.edu/assignments/2017/spring1617_assignment1.zip 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>wget http://cs231n.stanford.edu/assignments/2017/spring1617_assignment1.zip 
 </pre></div>
+</td></tr></table>
 
 <p>Then run:</p>
-<div class="codehilite"><pre><span></span>sudo apt-get install unzip
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt-get install unzip
 </pre></div>
+</td></tr></table>
 
 <p>and </p>
-<div class="codehilite"><pre><span></span>unzip spring1617_assignment1.zip
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>unzip spring1617_assignment1.zip
 </pre></div>
+</td></tr></table>
 
 <p>to get the contents. You should now see a folder titled assignment**X**.  To install the necessary dependencies for assignment 1 (<strong>NOTE:</strong> you only need to do this for assignment 1), cd into the assignment directory and run the provided shell script: **(Note: you will need to hit the [<em>enter</em>] key at all the "[Y/n]" prompts)**</p>
-<div class="codehilite"><pre><span></span>cd assignment1 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cd assignment1 
 ./setup_googlecloud.sh
 </pre></div>
+</td></tr></table>
 
 <p>You will be prompted to enter Y/N at various times during the download. Press enter for every prompt. You should now have all the software you need for assignment**X**. If you had no errors, you can proceed to work with your virtualenv as normal.</p>
 <p>I.e. run </p>
-<div class="codehilite"><pre><span></span>source .env/bin/activate
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>source .env/bin/activate
 </pre></div>
+</td></tr></table>
 
 <p>in your assignment directory to load the venv, and run </p>
-<div class="codehilite"><pre><span></span>deactivate
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>deactivate
 </pre></div>
+</td></tr></table>
 
 <p>to exit the venv. See assignment handout for details.</p>
 <p><strong>NOTE</strong>: The instructions above will run everything needed using Python 2.7. If you would like to use Python 3.5 instead, edit setup_googlecloud.sh to replce the line </p>
-<div class="codehilite"><pre><span></span>virtualenv .env 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>virtualenv .env 
 </pre></div>
+</td></tr></table>
 
 <p>with </p>
-<div class="codehilite"><pre><span></span>virtualenv -p python3 .env
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>virtualenv -p python3 .env
 </pre></div>
+</td></tr></table>
 
 <p>before running </p>
-<div class="codehilite"><pre><span></span>./setup_googlecloud.sh
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>./setup_googlecloud.sh
 </pre></div>
+</td></tr></table>
 
 <h2 id="using-jupyter-notebook-with-google-compute-engine">Using Jupyter Notebook with Google Compute Engine<a class="headerlink" href="#using-jupyter-notebook-with-google-compute-engine" title="Permanent link">&para;</a></h2>
 <p>Many of the assignments will involve using Jupyter Notebook. Below, we discuss how to run Jupyter Notebook from your GCE instance and use it on your local browser. </p>
@@ -2880,17 +2903,26 @@ implementations. This tutorial lists the necessary steps of working on the assig
 <h3 id="configuring-jupyter-notebook">Configuring Jupyter Notebook<a class="headerlink" href="#configuring-jupyter-notebook" title="Permanent link">&para;</a></h3>
 <p>The following instructions are excerpts from <a href="https://haroldsoh.com/2016/04/28/set-up-anaconda-ipython-tensorflow-julia-on-a-google-compute-engine-vm/" title="Title">this page</a> that has more detailed instructions.</p>
 <p>On your GCE instance check where the Jupyter configuration file is located:</p>
-<div class="codehilite"><pre><span></span>ls ~/.jupyter/jupyter_notebook_config.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>ls ~/.jupyter/jupyter_notebook_config.py
 </pre></div>
+</td></tr></table>
 
 <p>Mine was in /home/timnitgebru/.jupyter/jupyter_notebook_config.py</p>
 <p>If it doesn’t exist, create one:</p>
-<div class="codehilite"><pre><span></span># Remember to activate your virtualenv (&#39;source .env/bin/activate&#39;) so you can actually run jupyter :)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># Remember to activate your virtualenv (&#39;source .env/bin/activate&#39;) so you can actually run jupyter :)
 jupyter notebook --generate-config
 </pre></div>
+</td></tr></table>
 
 <p>Using your favorite editor (vim, emacs etc...) add the following lines to the config file, (e.g.: /home/timnitgebru/.jupyter/jupyter_notebook_config.py):</p>
-<div class="codehilite"><pre><span></span>c = get_config()
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>c = get_config()
 
 c.NotebookApp.ip = &#39;*&#39;
 
@@ -2898,21 +2930,25 @@ c.NotebookApp.open_browser = False
 
 c.NotebookApp.port = &lt;PORT-NUMBER&gt;
 </pre></div>
+</td></tr></table>
 
 <p>Where \&lt;PORT-NUMBER> is the same number you used in the prior section. Save your changes and close the file. </p>
 <h3 id="launching-and-connecting-to-jupyter-notebook">Launching and connecting to Jupyter Notebook<a class="headerlink" href="#launching-and-connecting-to-jupyter-notebook" title="Permanent link">&para;</a></h3>
 <p>The instructions below assume that you have SSH'd into your GCE instance using the prior instructions, have already downloaded and unzipped the current assignment folder into assignment**X** (where X is the assignment number), and have successfully configured Jupyter Notebook.</p>
 <p>If you are not already in the assignment directory, cd into it by running the following command:</p>
-<div class="codehilite"><pre><span></span>cd assignment1 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cd assignment1 
 </pre></div>
+</td></tr></table>
 
 <p>If you haven't already done so, activate your virtualenv by running:</p>
-<div class="codehilite"><pre><span></span>source .env/bin/activate
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>source .env/bin/activate
 </pre></div>
+</td></tr></table>
 
 <p>Launch Jupyter notebook using:</p>
-<div class="codehilite"><pre><span></span>jupyter-notebook --no-browser --port=&lt;PORT-NUMBER&gt; 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>jupyter-notebook --no-browser --port=&lt;PORT-NUMBER&gt; 
 </pre></div>
+</td></tr></table>
 
 <p>Where \&lt;PORT-NUMBER> is what you wrote in the prior section.</p>
 <p>On your local browser, if you go to http://\<YOUR-EXTERNAL-IP-ADDRESS>:\&lt;PORT-NUMBER>, you should see something like the screen below. My value for \&lt;YOUR-EXTERNAL-IP-ADDRESS> was 104.196.224.11 as mentioned above. You should now be able to start working on your assignments. </p>
@@ -2922,24 +2958,29 @@ c.NotebookApp.port = &lt;PORT-NUMBER&gt;
 
 <h2 id="submission-transferring-files-from-your-instance-to-your-computer">Submission: Transferring Files From Your Instance To Your Computer<a class="headerlink" href="#submission-transferring-files-from-your-instance-to-your-computer" title="Permanent link">&para;</a></h2>
 <p>Once you are done with your assignments, run the submission script in your assignment folder. For assignment1, this will create a zip file called <code>assignment1.zip</code> containing the files you need to upload to Canvas. If you're not in the assignment1 directory already, CD into it by running</p>
-<div class="codehilite"><pre><span></span>cd assignment1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cd assignment1
 </pre></div>
+</td></tr></table>
 
 <p>install <strong>zip</strong> by running</p>
-<div class="codehilite"><pre><span></span>sudo apt-get install zip
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>sudo apt-get install zip
 </pre></div>
+</td></tr></table>
 
 <p>and then run </p>
-<div class="codehilite"><pre><span></span>bash collectSubmission.sh 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>bash collectSubmission.sh 
 </pre></div>
+</td></tr></table>
 
 <p>to create the zip file that you need to upload to canvas. Then copy the file to your local computer using the gcloud compute copy-file command as shown below. <strong>NOTE: run this command on your local computer</strong>:</p>
-<div class="codehilite"><pre><span></span>gcloud compute copy-files [INSTANCE_NAME]:[REMOTE_FILE_PATH] [LOCAL_FILE_PATH]
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>gcloud compute copy-files [INSTANCE_NAME]:[REMOTE_FILE_PATH] [LOCAL_FILE_PATH]
 </pre></div>
+</td></tr></table>
 
 <p>For example, to copy my files to my desktop I ran:</p>
-<div class="codehilite"><pre><span></span>gcloud compute copy-files instance-2:~/assignment1/assignment1.zip ~/Desktop
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>gcloud compute copy-files instance-2:~/assignment1/assignment1.zip ~/Desktop
 </pre></div>
+</td></tr></table>
 
 <p>Another (perhaps easier) option proposed by a student is to directly download the zip file from Jupyter. After running the submission script and creating assignment1.zip, you can download that file directly from Jupyter. To do this, go to Jupyter Notebook and click on the zip file (in this case assignment1.zip). The file will be downloaded to your local computer. </p>
 <p>Finally, remember to upload the zip file containing your submission to <a href="https://canvas.stanford.edu/courses/66461"><strong><em>Canvas</em></strong></a>. (You can unzip the file locally if you want to double check your ipython notebooks and other code files are correctly inside).</p>

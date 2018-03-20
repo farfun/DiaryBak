@@ -819,8 +819,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -855,20 +867,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2673,6 +2673,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3244,7 +3256,14 @@ inherit    |规定应该从父元素继承 white-space 属性的值。</p>
 在新的 @font-face 规则中，您必须首先定义字体的名称（比如 myFirstFont），然后指向该字体文件。 <br />
 如需为 HTML 元素使用字体，请通过 font-family 属性来引用字体的名称 (myFirstFont)：</p>
 <p><strong>实例</strong></p>
-<div class="codehilite"><pre><span></span><span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
     <span class="nt">font-family</span><span class="o">:</span> <span class="nt">myFirstFont</span><span class="o">;</span>
     <span class="nt">src</span><span class="o">:</span> <span class="nt">url</span><span class="o">(</span><span class="s1">&#39;Sansation_Light.ttf&#39;</span><span class="o">),</span>
          <span class="nt">url</span><span class="o">(</span><span class="s1">&#39;Sansation_Light.eot&#39;</span><span class="o">);</span> <span class="c">/* IE9+ */</span>
@@ -3253,6 +3272,7 @@ inherit    |规定应该从父元素继承 white-space 属性的值。</p>
     <span class="k">font-family</span><span class="p">:</span> <span class="n">myFirstFont</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p><strong>CSS3 字体描述符</strong></p>
 <p>下面的表格列出了能够在 @font-face 规则中定义的所有字体描述符：</p>
@@ -3274,7 +3294,17 @@ unicode-range    |unicode-range    |可选。定义字体支持的 UNICODE 字�
 <p>我的方法一：</p>
 <p>使用 <code>margin：0 auto;</code></p>
 <p>html文件</p>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
@@ -3286,18 +3316,30 @@ unicode-range    |unicode-range    |可选。定义字体支持的 UNICODE 字�
     <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
+</td></tr></table>
 
 <p>css文件</p>
-<div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">center</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">center</span> <span class="p">{</span>
     <span class="k">width</span><span class="p">:</span> <span class="mi">960</span><span class="kt">px</span><span class="p">;</span>
     <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span> <span class="kc">auto</span><span class="p">;</span>
     <span class="k">background-color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>方法二：</p>
 <p>绝对定位，左边距离 body 50%，<code>margin-left: -480px</code></p>
-<div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">center</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">center</span> <span class="p">{</span>
     <span class="k">width</span><span class="p">:</span> <span class="mi">960</span><span class="kt">px</span><span class="p">;</span>
     <span class="k">background-color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
     <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
@@ -3305,6 +3347,7 @@ unicode-range    |unicode-range    |可选。定义字体支持的 UNICODE 字�
     <span class="k">margin-left</span><span class="p">:</span> <span class="mi">-480</span><span class="kt">px</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p><a href="http://gaohaoyang.github.io/baidu-ife-practice/task0001/task0001-2.html">Demo</a></p>
 <h4 id="_10">对于居中的补充<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
@@ -3312,11 +3355,15 @@ unicode-range    |unicode-range    |可选。定义字体支持的 UNICODE 字�
 <p>像下面这样写css代码，使用 <code>max-width</code> 替代 <code>width</code>  可以使浏览器更好地处理小窗口的情况。这点在移动设备上显得尤为重要。</p>
 <p>有效的避免了如下问题： <br />
 当浏览器窗口比元素的宽度还要窄时，浏览器会显示一个水平滚动条来容纳页面。</p>
-<div class="codehilite"><pre><span></span><span class="p">#</span><span class="nn">main</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">#</span><span class="nn">main</span> <span class="p">{</span>
     <span class="k">max-width</span><span class="p">:</span> <span class="mi">600</span><span class="kt">px</span><span class="p">;</span>
     <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span> <span class="kc">auto</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <ul>
 <li><a href="http://www.cnblogs.com/2050/p/3392803.html">CSS布局奇淫技巧之--各种居中</a></li>
@@ -3335,7 +3382,21 @@ unicode-range    |unicode-range    |可选。定义字体支持的 UNICODE 字�
 <p>我的方法一：</p>
 <p>不使用浮动，使用绝对定位，将左上角的块放好位置，右边的块设置<code>margin-left</code></p>
 <p>html 文件：</p>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
@@ -3351,9 +3412,29 @@ unicode-range    |unicode-range    |可选。定义字体支持的 UNICODE 字�
     <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
+</td></tr></table>
 
 <p>css 文件：</p>
-<div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">row</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">row</span> <span class="p">{</span>
     <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="p">.</span><span class="nc">left</span> <span class="p">{</span>
@@ -3374,10 +3455,25 @@ unicode-range    |unicode-range    |可选。定义字体支持的 UNICODE 字�
     <span class="k">background-color</span><span class="p">:</span> <span class="kc">yellow</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>方法二：   </p>
 <p>使用浮动，左边的块使用浮动，右边的块使用<code>margin-left</code></p>
-<div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">left</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">left</span> <span class="p">{</span>
     <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
     <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
     <span class="k">background-color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
@@ -3393,13 +3489,26 @@ unicode-range    |unicode-range    |可选。定义字体支持的 UNICODE 字�
     <span class="k">background-color</span><span class="p">:</span> <span class="kc">yellow</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p><a href="http://gaohaoyang.github.io/baidu-ife-practice/task0001/task0001-6-3.html">Demo</a></p>
 <p><strong>补充：</strong></p>
 <p>看完了后面的 BFC 之后，本题和下一题都可以用另一种方法了
 总之我已经震惊了！太爽了！有没有！</p>
 <p>html</p>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
@@ -3413,9 +3522,24 @@ unicode-range    |unicode-range    |可选。定义字体支持的 UNICODE 字�
     <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
+</td></tr></table>
 
 <p>css</p>
-<div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">left</span><span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">left</span><span class="p">{</span>
     <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
     <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
     <span class="k">background-color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
@@ -3431,6 +3555,7 @@ unicode-range    |unicode-range    |可选。定义字体支持的 UNICODE 字�
     <span class="k">background-color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p><a href="http://gaohaoyang.github.io/baidu-ife-practice/task0001/two-col-layout-with-BFC.html">Demo</a></p>
 <h3 id="_12">双飞翼布局<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
@@ -3438,7 +3563,31 @@ unicode-range    |unicode-range    |可选。定义字体支持的 UNICODE 字�
 <li>用两种不同的方式来实现一个三列布局，其中左侧和右侧的部分宽度固定，中间部分宽度随浏览器宽度的变化而自适应变化</li>
 </ul>
 <p>原题中参考资料 <a href="http://www.imooc.com/wenda/detail/254035">双飞翼布局</a>   </p>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
@@ -3464,9 +3613,37 @@ unicode-range    |unicode-range    |可选。定义字体支持的 UNICODE 字�
     <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
+</td></tr></table>
 
 <p>css</p>
-<div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">bd</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">bd</span> <span class="p">{</span>
 
     <span class="c">/*padding: 0 190px;*/</span>
 <span class="p">}</span>
@@ -3495,13 +3672,31 @@ unicode-range    |unicode-range    |可选。定义字体支持的 UNICODE 字�
 <span class="c">    right: -190px;*/</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p><a href="http://gaohaoyang.github.io/baidu-ife-practice/task0001/task0001-6-4.html">Demo</a></p>
 <p><strong>补充：</strong></p>
 <p>使用 BFC 的另一种方法，我再一次震惊！</p>
 <p>代码超级简单！</p>
 <p>html</p>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
@@ -3520,9 +3715,23 @@ unicode-range    |unicode-range    |可选。定义字体支持的 UNICODE 字�
     <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
+</td></tr></table>
 
 <p>css</p>
-<p><div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">left</span><span class="p">{</span>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">left</span><span class="p">{</span>
     <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
     <span class="k">background-color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
     <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
@@ -3537,6 +3746,7 @@ unicode-range    |unicode-range    |可选。定义字体支持的 UNICODE 字�
     <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 <a href="http://gaohaoyang.github.io/baidu-ife-practice/task0001/flying-Swing-BFC.html">Demo</a></p>
 <h3 id="_13">浮动布局<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
 <ul>
@@ -3544,7 +3754,25 @@ unicode-range    |unicode-range    |可选。定义字体支持的 UNICODE 字�
 </ul>
 <p>这个题我觉的直接将每一个块浮动起来就好了，不知我理解的对不对。</p>
 <p>html文件</p>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
@@ -3564,9 +3792,19 @@ unicode-range    |unicode-range    |可选。定义字体支持的 UNICODE 字�
     <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
+</td></tr></table>
 
 <p>css文件</p>
-<div class="codehilite"><pre><span></span><span class="nt">body</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nt">body</span> <span class="p">{</span>
     <span class="k">background-color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="nt">div</span> <span class="p">{</span>
@@ -3577,6 +3815,7 @@ unicode-range    |unicode-range    |可选。定义字体支持的 UNICODE 字�
     <span class="k">background-color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p><a href="file:///E:/GitWorkSpace/baidu-ife-practice/task0001/task0001-6-5.html">Demo</a></p>
 <h3 id="_14">清除浮动/闭合浮动<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
@@ -3591,7 +3830,24 @@ unicode-range    |unicode-range    |可选。定义字体支持的 UNICODE 字�
 <p><a href="http://gaohaoyang.github.io/baidu-ife-practice/task0001/close-float.html">闭合浮动的Demo</a></p>
 <p>下面是源码</p>
 <p>html</p>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
@@ -3610,9 +3866,36 @@ unicode-range    |unicode-range    |可选。定义字体支持的 UNICODE 字�
     <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
+</td></tr></table>
 
 <p>css</p>
-<div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">row</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">row</span> <span class="p">{</span>
     <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="kc">red</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="p">.</span><span class="nc">clearfix</span><span class="p">:</span><span class="nd">after</span> <span class="p">{</span>
@@ -3640,16 +3923,21 @@ unicode-range    |unicode-range    |可选。定义字体支持的 UNICODE 字�
     <span class="k">background-color</span><span class="p">:</span> <span class="mh">#aaa</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>其中<code>*zoom: 1</code>是为了触发<code>hasLayout</code></p>
 <p>还有另一种解决方案！</p>
 <p>参考自：<a href="http://zh.learnlayout.com/clearfix.html">清除浮动（clearfix hack）</a></p>
 <p>直接使用，如下代码即可</p>
-<div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">clearfix</span><span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">clearfix</span><span class="p">{</span>
     <span class="k">overflow</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
     <span class="n">zoom</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p><a href="http://gaohaoyang.github.io/baidu-ife-practice/task0001/close-float-2.html">Demo</a></p>
 <p>(实际上，我看完后面的资料，再翻到这里就明白了！正是使用了BFC原理！！！！！！！)</p>
@@ -3663,7 +3951,13 @@ unicode-range    |unicode-range    |可选。定义字体支持的 UNICODE 字�
 <h3 id="box-sizing"><code>box-sizing</code><a class="headerlink" href="#box-sizing" title="Permanent link">&para;</a></h3>
 <p>当你设置一个元素为 <code>box-sizing: border-box;</code> 时，此元素的内边距和边框不再会增加它的宽度。</p>
 <p>他们的内边距和边框都是向内的挤压的。支持IE8+，需要加浏览器内核。</p>
-<div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">simple</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">simple</span> <span class="p">{</span>
     <span class="k">width</span><span class="p">:</span> <span class="mi">500</span><span class="kt">px</span><span class="p">;</span>
     <span class="k">margin</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span> <span class="kc">auto</span><span class="p">;</span>
     <span class="kp">-webkit-</span><span class="k">box-sizing</span><span class="p">:</span> <span class="kc">border-box</span><span class="p">;</span>
@@ -3671,6 +3965,7 @@ unicode-range    |unicode-range    |可选。定义字体支持的 UNICODE 字�
     <span class="k">box-sizing</span><span class="p">:</span> <span class="kc">border-box</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="_15">响应式布局<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
 <p>媒体查询</p>
@@ -3710,17 +4005,24 @@ unicode-range    |unicode-range    |可选。定义字体支持的 UNICODE 字�
 <p><a href="http://show.sysu.edu.cn/?action-blogdetail-uid-2383-id-5040">纯CSS实现三列DIV等高布局</a></p>
 <p>最关键的地方有3句：</p>
 <p>最外层div设置一个溢出隐藏</p>
-<div class="codehilite"><pre><span></span><span class="p">#</span><span class="nn">wrap</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">#</span><span class="nn">wrap</span> <span class="p">{</span>
     <span class="k">overflow</span><span class="p">:</span><span class="kc">hidden</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>每一个子块设置 padding 和 margin</p>
-<div class="codehilite"><pre><span></span><span class="p">#</span><span class="nn">left</span><span class="o">,</span><span class="p">#</span><span class="nn">center</span><span class="o">,</span><span class="p">#</span><span class="nn">right</span><span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">#</span><span class="nn">left</span><span class="o">,</span><span class="p">#</span><span class="nn">center</span><span class="o">,</span><span class="p">#</span><span class="nn">right</span><span class="p">{</span>
     <span class="k">margin-bottom</span><span class="p">:</span><span class="mi">-10000</span><span class="kt">px</span><span class="p">;</span>
     <span class="k">padding-bottom</span><span class="p">:</span><span class="mi">10000</span><span class="kt">px</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>overflow:hidden;    '隐藏溢出。如果内容溢出wrap层，则不显示。</p>
 <p>margin-bottom:-10000px;    '底部边距-10000px。 <br />
@@ -3745,13 +4047,19 @@ padding-bottom:10000px;    '底部填充10000px。 <br />
 <li>其他</li>
 </ol>
 <p>我觉得使用 4 <code>font-size: 0</code> 比较好，对别的元素影响最小。代码如下：在 <code>a</code> 的外层将字体尺寸设为 0，载对内层的 <code>a</code> 重新设置字体大小，即可。</p>
-<div class="codehilite"><pre><span></span><span class="nt">nav</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nt">nav</span> <span class="p">{</span>
     <span class="k">font-size</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="nt">nav</span> <span class="nt">a</span> <span class="p">{</span>
     <span class="k">font-size</span><span class="p">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <h2 id="_17">最终作品<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
 <ul>

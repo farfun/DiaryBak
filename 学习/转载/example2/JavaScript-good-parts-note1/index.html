@@ -819,8 +819,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -855,20 +867,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2701,6 +2701,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -3172,18 +3184,22 @@
 <h3 id="_2">空白<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>这里说一下JavaScript的注释，一种是 <code>/* */</code> 包围的块注释，另一种是 <code>//</code> 开头的行注释。</p>
 <p>因为块注释的字符可能是JavaScript中正则表达式字面量，因此不是很安全，如：</p>
-<div class="codehilite"><pre><span></span><span class="cm">/*</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cm">/*</span>
 <span class="cm">    var rm_a = /a*/</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span>
 <span class="o">*</span><span class="err">/</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="_3">标识符<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>标识符由一个字母开头，后面可选择性的加上一个或多个字母、数字或下划线。要避免保留字。</p>
 <p>标识符被用于语句、变量、参数、属性名、运算符和标记。</p>
 <h3 id="_4">数字<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>可以存在指数部分，100和1e2完全相等</p>
-<div class="codehilite"><pre><span></span><span class="mi">100</span> <span class="o">===</span> <span class="mi">1</span><span class="nx">e2</span> <span class="c1">// true</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="mi">100</span> <span class="o">===</span> <span class="mi">1</span><span class="nx">e2</span> <span class="c1">// true</span>
 </pre></div>
+</td></tr></table>
 
 <p>使用<code>isNaN</code>来检测<code>NaN</code>。</p>
 <h3 id="_5">字符串<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
@@ -3191,8 +3207,9 @@
 <p>用双引号或单引号包裹。</p>
 <p>重点说一下转义字符<code>\</code></p>
 <p>反斜杠后面可以跟<code>&quot;</code>, <code>'</code>, <code>\</code>, <code>/</code>, <code>b</code> (backspace), <code>f</code> (formfeed), <code>n</code>, <code>r</code> (carriage return), <code>t</code>, <code>u1234</code></p>
-<div class="codehilite"><pre><span></span><span class="s1">&#39;A&#39;</span> <span class="o">===</span> <span class="s1">&#39;\u0041&#39;</span> <span class="c1">// true</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s1">&#39;A&#39;</span> <span class="o">===</span> <span class="s1">&#39;\u0041&#39;</span> <span class="c1">// true</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="_6">语句<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>每个<code>&lt;script&gt;</code>标签的内容被一起抛到一个公共的全局名字空间中。</p>
@@ -3208,12 +3225,17 @@
 </ul>
 <p>其他所有值都当做真</p>
 <p><code>for in</code>语句枚举对象的所有属性名（键名），使用<code>object.hasOwnProperty(variable)</code>来确定这个属性名是该对象成员，还是来自原型链。</p>
-<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="nx">myvar</span> <span class="k">in</span> <span class="nx">obj</span><span class="p">)</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="nx">myvar</span> <span class="k">in</span> <span class="nx">obj</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">myvar</span><span class="p">))</span> <span class="p">{</span>
         <span class="p">...</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="_7">表达式<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>运算符优先级</p>
@@ -3273,48 +3295,69 @@
 <p>JavaScript 包含一种原型链的特性，允许对象继承另一个对象的属性。正确地使用它能减少对象初始化时消耗的时间和内存。</p>
 <h3 id="_11">对象字面量<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
 <p>一个对象字面量就是包围在一对花括号中的零或多个“名/值”对。</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">empty_object</span> <span class="o">=</span> <span class="p">{}</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">empty_object</span> <span class="o">=</span> <span class="p">{}</span>
 
 <span class="kd">var</span> <span class="nx">stooge</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">firstName</span><span class="o">:</span> <span class="s1">&#39;Haoyang&#39;</span><span class="p">,</span>
     <span class="nx">lastName</span><span class="o">:</span> <span class="s1">&#39;Gao&#39;</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="_12">检索<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">stooge</span><span class="p">.</span><span class="nx">firstName</span><span class="p">);</span> <span class="c1">// Haoyang</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">stooge</span><span class="p">.</span><span class="nx">firstName</span><span class="p">);</span> <span class="c1">// Haoyang</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">stooge</span><span class="p">[</span><span class="s1">&#39;firstName&#39;</span><span class="p">]);</span> <span class="c1">// Haoyang</span>
 </pre></div>
+</td></tr></table>
 
 <p>不存在的属性返回<code>undefined</code>。</p>
 <p>使用<code>||</code>来填充默认值。</p>
-<div class="codehilite"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">stooge</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">||</span> <span class="s1">&#39;Joe&#39;</span><span class="p">);</span> <span class="c1">// Haoyang</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">stooge</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">||</span> <span class="s1">&#39;Joe&#39;</span><span class="p">);</span> <span class="c1">// Haoyang</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">stooge</span><span class="p">.</span><span class="nx">age</span> <span class="o">||</span> <span class="mi">25</span><span class="p">);</span> <span class="c1">// 25</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="_13">更新<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
 <p>直接使用赋值语句更新，若不存在这个属性，则作为扩充操作。</p>
-<div class="codehilite"><pre><span></span><span class="nx">stooge</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">=</span> <span class="s1">&#39;aaa&#39;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">stooge</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">=</span> <span class="s1">&#39;aaa&#39;</span>
 <span class="nx">stooge</span><span class="p">.</span><span class="nx">nickName</span> <span class="o">=</span> <span class="s1">&#39;peip&#39;</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">stooge</span><span class="p">)</span> <span class="c1">//Object {firstName: &quot;aaa&quot;, lastName: &quot;Gao&quot;, nickName: &quot;peip&quot;}</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="_14">引用<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
 <p>对象通过引用来传递他们永远不会被复制。</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="nx">stooge</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="nx">stooge</span>
 <span class="nx">x</span><span class="p">.</span><span class="nx">hair</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span>
 <span class="nx">stooge</span><span class="p">.</span><span class="nx">hair</span> <span class="c1">//&quot;black&quot;</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="_15">原型<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
 <p>每一个对象都连接到一个原型对象，并且它可以从中继承属性。所有通过字面量创建的对象都连接到<code>Object.prototype</code>，它是JavaScript中的标配对象。</p>
 <p>可以使用<code>Object.create()</code>方法创建一个使用原对象作为其原型的新对象。</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">anotherStooge</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">stooge</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">anotherStooge</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">stooge</span><span class="p">)</span>
 <span class="nx">anotherStooge</span><span class="p">.</span><span class="nx">firstName</span> <span class="c1">//&quot;aaa&quot;</span>
 <span class="nx">anotherStooge</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">=</span> <span class="s1">&#39;bbb&#39;</span>
 <span class="nx">anotherStooge</span><span class="p">.</span><span class="nx">firstName</span> <span class="c1">//&quot;bbb&quot;</span>
 <span class="nx">anotherStooge</span><span class="p">.</span><span class="nx">hair</span> <span class="c1">//&quot;black&quot;</span>
 </pre></div>
+</td></tr></table>
 
 <p>新对象先查找自己的属性，若不存在则会向原型方向查找。</p>
 <p><img alt="" src="http://ww1.sinaimg.cn/large/7011d6cfjw1f4ieu7focqj207h05caaf.jpg" /></p>
@@ -3327,26 +3370,43 @@
 <p><code>hasOwnProperty</code>，若对象拥有独有的属性，它将返回<code>true</code>。不会检查原型链。</p>
 <h3 id="_17">枚举<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <p>使用<code>for in</code>可以遍历一个对象中的所有属性名，包括原型链上的属性名。可以使用<code>hasOwnProperty</code>过滤原型链上的属性，使用<code>typeof</code>来排除函数。</p>
-<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">name</span> <span class="k">in</span> <span class="nx">anotherStooge</span><span class="p">)</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">name</span> <span class="k">in</span> <span class="nx">anotherStooge</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">anotherStooge</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="k">typeof</span> <span class="nx">anotherStooge</span><span class="p">[</span><span class="nx">name</span><span class="p">]</span> <span class="o">!==</span> <span class="s1">&#39;function&#39;</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span> <span class="o">+</span> <span class="s1">&#39;---&gt;&#39;</span> <span class="o">+</span> <span class="nx">anotherStooge</span><span class="p">[</span><span class="nx">name</span><span class="p">])</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="c1">// firstName---&gt;bbb</span>
 </pre></div>
+</td></tr></table>
 
 <p>属性名是无序的，若想保持顺序应使用数组和<code>for</code>循环。</p>
 <h3 id="_18">删除<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
 <p><code>delete</code>可以用来删除对象的属性。若对象包含该属性，则会被移除。它不会触及原型链中的任何对象。</p>
-<div class="codehilite"><pre><span></span><span class="nx">anotherStooge</span><span class="p">.</span><span class="nx">firstName</span> <span class="c1">//&quot;bbb&quot;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">anotherStooge</span><span class="p">.</span><span class="nx">firstName</span> <span class="c1">//&quot;bbb&quot;</span>
 <span class="k">delete</span> <span class="nx">anotherStooge</span><span class="p">.</span><span class="nx">firstName</span>
 <span class="nx">anotherStooge</span><span class="p">.</span><span class="nx">firstName</span> <span class="c1">//&quot;aaa&quot;</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="_19">减少全局变量污染<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
 <p>JavaScript 可以随意的定义全局变量来容纳应用的所有资源。但这会削弱程序的灵活性，应避免使用全局变量。</p>
 <p>最小化使用全局变量的方法之一是为应用只创建一个唯一的全局变量。</p>
-<p><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">MYAPP</span> <span class="o">=</span> <span class="p">{}</span>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">MYAPP</span> <span class="o">=</span> <span class="p">{}</span>
 
 <span class="nx">MYAPP</span><span class="p">.</span><span class="nx">stooge</span> <span class="o">=</span> <span class="p">{</span>
     <span class="c1">//...</span>
@@ -3356,25 +3416,32 @@
     <span class="c1">//...</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 下一章将使用闭包来进行信息隐藏，是另一种有效减少全局污染的方法。</p>
 <h2 id="_20">函数<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h2>
 <h3 id="_21">函数对象<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
 <p>JavaScript 中的函数就是对象。函数对象连接到<code>Function.prototype</code>（该原型对象本身连接到<code>Object.prototype</code>）。每个函数对象在创建时会附加两个隐藏属性：函数的上下文和实现函数行为的代码。</p>
 <p>函数对象在创建时也随配有一个<code>prototype</code>属性。它的值是一个拥有<code>constructor</code>属性且值即为该函数对象。</p>
-<div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p><img alt="" src="http://ww1.sinaimg.cn/large/7011d6cfjw1f4lrei2b3pj208f06et95.jpg" /></p>
 <p>因为函数是对象，所以可以像任何其他的值一样被使用。函数可以保存在变量、对象和数组中。函数可以被当做参数传递给其他函数，函数也可以再返回函数。函数也可以拥有方法。</p>
 <p>函数的与众不同之处在于可以被调用。</p>
 <h3 id="_22">函数字面量<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
 <p>函数对象通过函数字面量来创建。</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span>
 <span class="p">}</span>
 </pre></div>
+</td></tr></table>
 
 <p>函数字面量包含4部分，分别是：保留字 function、函数名、参数、花括号中的语句。</p>
 <h3 id="_23">调用<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
@@ -3383,7 +3450,18 @@
 <p>下面的内容也可以参考我以前的博文 <a href="http://gaohaoyang.github.io/2015/06/12/JavaScript-this/">JavaScript 中的 this</a></p>
 <h4 id="_24">方法调用模式<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
 <p>当一个函数被保存为对象的一个属性时，我们称它为一个方法。当一个方法被调用时，<code>this</code>被绑定到该对象。</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">myObject</span> <span class="o">=</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">myObject</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">value</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
     <span class="nx">increment</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">inc</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">+=</span> <span class="k">typeof</span> <span class="nx">inc</span> <span class="o">===</span> <span class="s1">&#39;number&#39;</span> <span class="o">?</span> <span class="nx">inc</span> <span class="o">:</span> <span class="mi">1</span>
@@ -3396,12 +3474,26 @@
 <span class="nx">myObject</span><span class="p">.</span><span class="nx">increment</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myObject</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span> <span class="c1">//4</span>
 </pre></div>
+</td></tr></table>
 
 <h4 id="_25">函数调用模式<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
 <p>当一个函数并非一个对象的属性时，那么它就是被当做一个函数来调用的。</p>
 <p>此时<code>this</code>被绑定到全局对象。即时是内部函数也会将<code>this</code>绑定到全局对象。</p>
 <p>可以在函数内创建一个属性并赋值为<code>this</code>来解决这个问题。如下：</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span>
 <span class="p">}</span>
 
@@ -3416,11 +3508,25 @@
 <span class="nx">myObject</span><span class="p">.</span><span class="kr">double</span><span class="p">()</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myObject</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span> <span class="c1">//8</span>
 </pre></div>
+</td></tr></table>
 
 <h4 id="_26">构造器调用模式<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
 <p>JavaScript是一门基于原型继承的语言。对象可以直接从其他对象继承属性。该语言是无类型的。</p>
 <p>如果在一个函数前面带上<code>new</code>来调用，那么背地里将会创建一个连接到该函数的<code>prototype</code>成员的新对象，同时<code>this</code>会被绑定到那个新对象上。</p>
-<div class="codehilite"><pre><span></span><span class="c1">//创建构造器函数</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">//创建构造器函数</span>
 <span class="kd">var</span> <span class="nx">Quo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">string</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">status</span> <span class="o">=</span> <span class="nx">string</span>
 <span class="p">}</span>
@@ -3435,11 +3541,21 @@
 
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myQuo</span><span class="p">.</span><span class="nx">getStatus</span><span class="p">())</span> <span class="c1">//confused</span>
 </pre></div>
+</td></tr></table>
 
 <p>书中不推荐这种形式的构造器函数，下一章有更好的解决方案。</p>
 <h4 id="apply">Apply 调用模式<a class="headerlink" href="#apply" title="Permanent link">&para;</a></h4>
 <p><code>apply</code>方法让我们构建一个参数数组传递给调用函数。他也允许我们选择<code>this</code>的值。<code>apply</code>方法接受两个参数，第一个是要绑定给<code>this</code>的值，第二个是参数数组。</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="kd">var</span> <span class="nx">sum</span> <span class="o">=</span> <span class="nx">add</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">arr</span><span class="p">)</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sum</span><span class="p">)</span> <span class="c1">//7</span>
 
@@ -3450,10 +3566,18 @@
 <span class="kd">var</span> <span class="nx">status</span> <span class="o">=</span> <span class="nx">Quo</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getStatus</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">statusObject</span><span class="p">)</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">status</span><span class="p">)</span> <span class="c1">//hello</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="_27">参数<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
 <p>当函数被调用时，会得到一个<code>arguments</code>数组。通过此参数可以访问所有它被调用时传递给它的参数列表，包括那些没有被分配给函数声明时定义的形参的多余参数。这使得编写一个无须指定参数个数的函数成为可能。</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">sum</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">sum</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">sum</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">arguments</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">sum</span> <span class="o">+=</span> <span class="nx">arguments</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
@@ -3462,6 +3586,7 @@
 <span class="p">}</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span> <span class="c1">//45</span>
 </pre></div>
+</td></tr></table>
 
 <p>因语言的设计错误，<code>arguments</code>并不是一个真正的数组。是一个“类似数组”的对象。有<code>length</code>属性，但没有任何数组的方法。</p>
 <h3 id="_28">返回<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h3>
@@ -3471,7 +3596,17 @@
 <p>若函数调用时在前面加上了<code>new</code>前缀，且返回值不是一个对象的时候，则返回<code>this</code>（该新对象）。</p>
 <h3 id="_29">异常<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
 <p>异常是干扰程序的正常流畅的不寻常的事故。</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">add2</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">add2</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">a</span> <span class="o">!==</span> <span class="s1">&#39;number&#39;</span> <span class="o">||</span> <span class="k">typeof</span> <span class="nx">b</span> <span class="o">!==</span> <span class="s1">&#39;number&#39;</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">throw</span> <span class="p">{</span>
             <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;TypeError&#39;</span><span class="p">,</span>
@@ -3483,10 +3618,18 @@
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add2</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span> <span class="c1">//5</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add2</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 </pre></div>
+</td></tr></table>
 
 <p><img alt="" src="http://ww1.sinaimg.cn/large/7011d6cfjw1f4mprafcvhj20ml00xjrj.jpg" /></p>
 <p><code>throw</code>语句中断函数的执行。抛出一个<code>exception</code>对象，该对象包含一个用来识别异常类型的<code>name</code>属性和一个描述性的<code>message</code>属性。也可以自定义其他属性。</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">try_it</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">try_it</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">try</span> <span class="p">{</span>
         <span class="nx">add2</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
     <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
@@ -3495,11 +3638,28 @@
 <span class="p">}</span>
 <span class="nx">try_it</span><span class="p">()</span> <span class="c1">//TypeError: add needs numbers</span>
 </pre></div>
+</td></tr></table>
 
 <p>如果在<code>try</code>代码块内抛出一个异常，控制权就会跳转到它的<code>catch</code>语句中。</p>
 <h3 id="_30">扩充类型的功能<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
 <p>JavaScript 允许给语言的基本类型扩充功能。通过<code>Object.prototype</code>添加方法，可以让该方法对所有对象都适用。</p>
-<div class="codehilite"><pre><span></span><span class="c1">// 先添加方法使得该方法对所有函数可用</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// 先添加方法使得该方法对所有函数可用</span>
 <span class="nb">Function</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">method</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">func</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">prototype</span><span class="p">[</span><span class="nx">name</span><span class="p">]</span> <span class="o">=</span> <span class="nx">func</span>
     <span class="k">return</span> <span class="k">this</span>
@@ -3517,11 +3677,35 @@
 <span class="p">})</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;  hello alibaba  &#39;</span><span class="p">.</span><span class="nx">trim</span><span class="p">())</span> <span class="c1">//hello alibaba</span>
 </pre></div>
+</td></tr></table>
 
 <p>JavaScript 原型继承是动态的，因此新的方法立刻被赋予到所有的对象实例上，即使对象实例是在方法被增加之前就创建好了。</p>
 <h3 id="_31">递归<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h3>
 <p>递归函数就是会直接或者间接地调用自身的一种函数。</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">walkTheDom</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">walk</span><span class="p">(</span><span class="nx">node</span><span class="p">,</span> <span class="nx">func</span><span class="p">)</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">walkTheDom</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">walk</span><span class="p">(</span><span class="nx">node</span><span class="p">,</span> <span class="nx">func</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">func</span><span class="p">(</span><span class="nx">node</span><span class="p">)</span>
     <span class="nx">node</span> <span class="o">=</span> <span class="nx">node</span><span class="p">.</span><span class="nx">firstChild</span>
     <span class="k">while</span> <span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="p">{</span>
@@ -3546,6 +3730,7 @@
 <span class="c1">//得到下列数据</span>
 <span class="c1">//[div.feed-content, div.feed-content, div.feed-content, div.feed-content, div.feed-content, div.feed-content, div.feed-content]</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="_32">作用域<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h3>
 <p>作用域控制着变量与参数的可见性及生命周期。它减少了名称冲突，并提供了自动内存管理。</p>
@@ -3554,7 +3739,16 @@
 <p>建议在函数体的顶部声明函数中可能用到的所有变量。</p>
 <h3 id="_33">闭包<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h3>
 <p>作用域的好处是内部函数可以访问定义他们的外部函数的参数和变量（除了<code>this</code>和<code>arguments</code>）。</p>
-<p><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">quo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">status</span><span class="p">)</span> <span class="p">{</span>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">quo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">status</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="p">{</span>
         <span class="nx">get_status</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
             <span class="k">return</span> <span class="nx">status</span>
@@ -3565,6 +3759,7 @@
 <span class="kd">var</span> <span class="nx">myQuo</span> <span class="o">=</span> <span class="nx">quo</span><span class="p">(</span><span class="s1">&#39;amazed&#39;</span><span class="p">)</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myQuo</span><span class="p">.</span><span class="nx">get_status</span><span class="p">())</span> <span class="c1">//amazed</span>
 </pre></div>
+</td></tr></table>
 狭义的说，返回的那个对象即闭包，它里面的方法可以访问它被创建时所处的上下文环境。</p>
 <p>避免在循环中创建函数，容易引起混淆。可以现在循环之外创建一个辅助函数，让辅助函数在返回一个绑定了当前<code>i</code>值的函数，这样就不会导致混淆了。</p>
 <h3 id="_34">回调<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h3>
@@ -3572,7 +3767,27 @@
 <h3 id="_35">模块<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h3>
 <p>可以用函数和闭包构造模块。</p>
 <p>模块模式的一般形式是：一个定义了私有变量和函数的函数；利用闭包创建可以访问私有变量和函数的特权函数；最后返回这个特权函数，或者把他们保存到一个可访问到的地方。</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">numberCal</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">numberCal</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">half</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">return</span> <span class="nx">n</span> <span class="o">/</span> <span class="mi">2</span>
     <span class="p">}</span>
@@ -3594,6 +3809,7 @@
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numberCal</span><span class="p">.</span><span class="kr">double</span><span class="p">(</span><span class="mi">7</span><span class="p">))</span> <span class="c1">//14</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numberCal</span><span class="p">.</span><span class="nx">tribble</span><span class="p">(</span><span class="mi">7</span><span class="p">))</span> <span class="c1">//21</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="_36">级联<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h3>
 <p>如果让方法返回<code>this</code>而不是默认的<code>undefined</code>，就可以启用级联，即连续调用。</p>

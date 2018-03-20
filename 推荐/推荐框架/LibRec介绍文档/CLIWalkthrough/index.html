@@ -817,8 +817,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../学习/深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../../学习/深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -853,20 +865,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../学习/深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../../学习/深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../../学习/深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2429,6 +2429,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2620,7 +2632,20 @@
                 <h1 id="commandline-walkthrough">CommandLine walkthrough<a class="headerlink" href="#commandline-walkthrough" title="Permanent link">&para;</a></h1>
 <p>在这里我们展示如何使用命令行来完成数据与模型的读取及保存, 以及使用命令行来输入参数进行推荐计算.</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>Usage: librec &lt;command&gt; [options]...
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Usage: librec &lt;command&gt; [options]...
 commands:
   rec                       run recommender
   data                      load data
@@ -2635,10 +2660,12 @@ job options:
   -D, -jobconf &lt;prop&gt;       set configuration items (key=value)
   -libjars                  add entend jar files to classpath
 </pre></div>
+</td></tr></table>
 
 <h2 id="training">Training<a class="headerlink" href="#training" title="Permanent link">&para;</a></h2>
-<p><div class="codehilite"><pre><span></span>./librec rec -exec -D rec.recommender.class=globalaverage -conf ../core/src/main/resources/rec/baseline/globalaverage-test.properties -libjars ../lib/log4j-1.2.17.jar
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>./librec rec -exec -D rec.recommender.class=globalaverage -conf ../core/src/main/resources/rec/baseline/globalaverage-test.properties -libjars ../lib/log4j-1.2.17.jar
 </pre></div>
+</td></tr></table>
 rec/data 为指定程序进行推荐算法/数据读取功能.</p>
 <p>-exec 为执行推荐算法.在2.0版本中为保留选项</p>
 <p>-D | -jobconf [options] 为加载相关配置, 具体配置项请参考<a href="../ConfigurationLlist">ConfigurationList</a>及<a href="../AlgorithmList">AlgorithmList</a></p>
@@ -2647,7 +2674,31 @@ rec/data 为指定程序进行推荐算法/数据读取功能.</p>
 <h2 id="configuration-file">Configuration file<a class="headerlink" href="#configuration-file" title="Permanent link">&para;</a></h2>
 <p>LibRec中一个程序的配置文件分别保存在core/librec.properties和各自算法的独立配置文件内.其中librec.properties 推荐保存的配置为数据的读取分割以及评估.
 示例配置如下所示</p>
-<div class="codehilite"><pre><span></span># set data directoy
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># set data directoy
 dfs.data.dir=../data
 
 # set result directory
@@ -2673,6 +2724,7 @@ rec.parallel.support=true
 rec.eval.enable=true
 rec.random.seed=1
 </pre></div>
+</td></tr></table>
 
 <p>考虑到不同算法的配置项不相同, 因此算法配置项分别保存在相应目录下. 执行不同算法时可以在命令行输入, 也可以使用编辑好的配置文件.
 具体每一配置项的内容以及不同算法的配置项请参考<a href="../AlgorithmList">AlgorithmList</a></p>

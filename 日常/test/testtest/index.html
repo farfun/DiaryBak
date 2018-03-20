@@ -817,8 +817,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../学习/深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../学习/深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../学习/深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -853,20 +865,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../学习/深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../学习/深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../学习/深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2371,6 +2371,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../推荐/推荐框架/YouTube/" title="YouTube 的视频推荐算法" class="md-nav__link">
+      YouTube 的视频推荐算法
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2824,13 +2836,19 @@
 <p><a name='ratio'></a></p>
 <h4 id="ratio-of-weightsupdates">Ratio of weights:updates<a class="headerlink" href="#ratio-of-weightsupdates" title="Permanent link">&para;</a></h4>
 <p>The last quantity you might want to track is the ratio of the update magnitudes to the value magnitudes. Note: <em>updates</em>, not the raw gradients (e.g. in vanilla sgd this would be the gradient multiplied by the learning rate). You might want to evaluate and track this ratio for every set of parameters independently. A rough heuristic is that this ratio should be somewhere around 1e-3. If it is lower than this then the learning rate might be too low. If it is higher then the learning rate is likely too high. Here is a specific example:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># assume parameter vector W and its gradient vector dW</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># assume parameter vector W and its gradient vector dW</span>
 <span class="n">param_scale</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">W</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>
 <span class="n">update</span> <span class="o">=</span> <span class="o">-</span><span class="n">learning_rate</span><span class="o">*</span><span class="n">dW</span> <span class="c1"># simple SGD update</span>
 <span class="n">update_scale</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">update</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>
 <span class="n">W</span> <span class="o">+=</span> <span class="n">update</span> <span class="c1"># the actual update</span>
 <span class="k">print</span> <span class="n">update_scale</span> <span class="o">/</span> <span class="n">param_scale</span> <span class="c1"># want ~1e-3</span>
 </pre></div>
+</td></tr></table>
 
 <p>Instead of tracking the min or the max, some people prefer to compute and track the norm of the gradients and their updates instead. These metrics are usually correlated and often give approximately the same results.</p>
 <p><a name='distr'></a></p>

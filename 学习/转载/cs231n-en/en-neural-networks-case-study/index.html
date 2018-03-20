@@ -819,8 +819,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -855,20 +867,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2480,6 +2480,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2740,7 +2752,20 @@
 <p><a name='data'></a></p>
 <h2 id="generating-some-data">Generating some data<a class="headerlink" href="#generating-some-data" title="Permanent link">&para;</a></h2>
 <p>Lets generate a classification dataset that is not easily linearly separable. Our favorite example is the spiral dataset, which can be generated as follows:</p>
-<div class="codehilite"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># number of points per class</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># number of points per class</span>
 <span class="n">D</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># dimensionality</span>
 <span class="n">K</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># number of classes</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="o">*</span><span class="n">K</span><span class="p">,</span><span class="n">D</span><span class="p">))</span> <span class="c1"># data matrix (each row = single example)</span>
@@ -2755,6 +2780,7 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Spectral</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
+</td></tr></table>
 
 <div class="fig figcenter fighighlight">
   <img src="/Dairy/assets/images/cs231n/eg/spiral_raw.png">
@@ -2769,18 +2795,23 @@
 <p><a name='init'></a></p>
 <h3 id="initialize-the-parameters">Initialize the parameters<a class="headerlink" href="#initialize-the-parameters" title="Permanent link">&para;</a></h3>
 <p>Lets first train a Softmax classifier on this classification dataset. As we saw in the previous sections, the Softmax classifier has a linear score function and uses the cross-entropy loss. The parameters of the linear classifier consist of a weight matrix <code>W</code> and a bias vector <code>b</code> for each class. Lets first initialize these parameters to be random numbers:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># initialize parameters randomly</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># initialize parameters randomly</span>
 <span class="n">W</span> <span class="o">=</span> <span class="mf">0.01</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">K</span><span class="p">)</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="n">K</span><span class="p">))</span>
 </pre></div>
+</td></tr></table>
 
 <p>Recall that we <code>D = 2</code> is the dimensionality and <code>K = 3</code> is the number of classes. </p>
 <p><a name='scores'></a></p>
 <h3 id="compute-the-class-scores">Compute the class scores<a class="headerlink" href="#compute-the-class-scores" title="Permanent link">&para;</a></h3>
 <p>Since this is a linear classifier, we can compute all class scores very simply in parallel with a single matrix multiplication:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># compute class scores for a linear classifier</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># compute class scores for a linear classifier</span>
 <span class="n">scores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span>
 </pre></div>
+</td></tr></table>
 
 <p>In this example we have 300 2-D points, so after this multiplication the array <code>scores</code> will have size [300 x 3], where each row gives the class scores corresponding to the 3 classes (blue, red, yellow).</p>
 <p><a name='loss'></a></p>
@@ -2805,23 +2836,33 @@ L =  \underbrace{ \frac{1}{N} \sum_i L_i }_\text{data loss} + \underbrace{ \frac
 </script>
 </div>
 <p>Given the array of <code>scores</code> we've computed above, we can compute the loss. First, the way to obtain the probabilities is straight forward:</p>
-<div class="codehilite"><pre><span></span><span class="n">num_examples</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">num_examples</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="c1"># get unnormalized probabilities</span>
 <span class="n">exp_scores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
 <span class="c1"># normalize them for each example</span>
 <span class="n">probs</span> <span class="o">=</span> <span class="n">exp_scores</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">exp_scores</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
+</td></tr></table>
 
 <p>We now have an array <code>probs</code> of size [300 x 3], where each row now contains the class probabilities. In particular, since we've normalized them every row now sums to one. We can now query for the  log probabilities assigned to the correct classes in each example:</p>
-<div class="codehilite"><pre><span></span><span class="n">corect_logprobs</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">probs</span><span class="p">[</span><span class="nb">range</span><span class="p">(</span><span class="n">num_examples</span><span class="p">),</span><span class="n">y</span><span class="p">])</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">corect_logprobs</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">probs</span><span class="p">[</span><span class="nb">range</span><span class="p">(</span><span class="n">num_examples</span><span class="p">),</span><span class="n">y</span><span class="p">])</span>
 </pre></div>
+</td></tr></table>
 
 <p>The array <code>correct_logprobs</code> is a 1D array of just the probabilities assigned to the correct classes for each example. The full loss is then the average of these log probabilities and the regularization loss:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># compute the loss: average cross-entropy loss and regularization</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># compute the loss: average cross-entropy loss and regularization</span>
 <span class="n">data_loss</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">corect_logprobs</span><span class="p">)</span><span class="o">/</span><span class="n">num_examples</span>
 <span class="n">reg_loss</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">reg</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">W</span><span class="o">*</span><span class="n">W</span><span class="p">)</span>
 <span class="n">loss</span> <span class="o">=</span> <span class="n">data_loss</span> <span class="o">+</span> <span class="n">reg_loss</span>
 </pre></div>
+</td></tr></table>
 
 <p>In this code, the regularization strength <span><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span> is stored inside the <code>reg</code>. The convenience factor of <code>0.5</code> multiplying the regularization will become clear in a second. Evaluating this in the beginning (with random parameters) might give us <code>loss = 1.1</code>, which is <code>np.log(1.0/3)</code>, since with small initial random weights all probabilities assigned to all classes are about one third. We now want to make the loss as low as possible, with <code>loss = 0</code> as the absolute lower bound. But the lower the loss is, the higher are the probabilities assigned to the correct classes for all examples.</p>
 <p><a name='grad'></a></p>
@@ -2846,30 +2887,81 @@ p_k = \frac{e^{f_k}}{ \sum_j e^{f_j} } \hspace{1in} L_i =-\log\left(p_{y_i}\righ
 </div>
 <p>Notice how elegant and simple this expression is. Suppose the probabilities we computed were <code>p = [0.2, 0.3, 0.5]</code>, and that the correct class was the middle one (with probability 0.3). According to this derivation the gradient on the scores would be <code>df = [0.2, -0.7, 0.5]</code>. Recalling what the interpretation of the gradient, we see that this result is highly intuitive: increasing the first or last element of the score vector <code>f</code> (the scores of the incorrect classes) leads to an <em>increased</em> loss (due to the positive signs +0.2 and +0.5) - and increasing the loss is bad, as expected. However, increasing the score of the correct class has <em>negative</em> influence on the loss. The gradient of -0.7 is telling us that increasing the correct class score would lead to a decrease of the loss <span><span class="MathJax_Preview">L_i</span><script type="math/tex">L_i</script></span>, which makes sense. </p>
 <p>All of this boils down to the following code. Recall that <code>probs</code> stores the probabilities of all classes (as rows) for each example. To get the gradient on the scores, which we call <code>dscores</code>, we proceed as follows:</p>
-<div class="codehilite"><pre><span></span><span class="n">dscores</span> <span class="o">=</span> <span class="n">probs</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">dscores</span> <span class="o">=</span> <span class="n">probs</span>
 <span class="n">dscores</span><span class="p">[</span><span class="nb">range</span><span class="p">(</span><span class="n">num_examples</span><span class="p">),</span><span class="n">y</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span>
 <span class="n">dscores</span> <span class="o">/=</span> <span class="n">num_examples</span>
 </pre></div>
+</td></tr></table>
 
 <p>Lastly, we had that <code>scores = np.dot(X, W) + b</code>, so armed with the gradient on <code>scores</code> (stored in <code>dscores</code>), we can now backpropagate into <code>W</code> and <code>b</code>:</p>
-<div class="codehilite"><pre><span></span><span class="n">dW</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">dscores</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">dW</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">dscores</span><span class="p">)</span>
 <span class="n">db</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dscores</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="n">dW</span> <span class="o">+=</span> <span class="n">reg</span><span class="o">*</span><span class="n">W</span> <span class="c1"># don&#39;t forget the regularization gradient</span>
 </pre></div>
+</td></tr></table>
 
 <p>Where we see that we have backpropped through the matrix multiply operation, and also added the contribution from the regularization. Note that the regularization gradient has the very simple form <code>reg*W</code> since we used the constant <code>0.5</code> for its loss contribution (i.e. <span><span class="MathJax_Preview">\frac{d}{dw} ( \frac{1}{2} \lambda w^2) = \lambda w</span><script type="math/tex">\frac{d}{dw} ( \frac{1}{2} \lambda w^2) = \lambda w</script></span>. This is a common convenience trick that simplifies the gradient expression.</p>
 <p><a name='update'></a></p>
 <h3 id="performing-a-parameter-update">Performing a parameter update<a class="headerlink" href="#performing-a-parameter-update" title="Permanent link">&para;</a></h3>
 <p>Now that we've evaluated the gradient we know how every parameter influences the loss function. We will now perform a parameter update in the <em>negative</em> gradient direction to <em>decrease</em> the loss:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># perform a parameter update</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># perform a parameter update</span>
 <span class="n">W</span> <span class="o">+=</span> <span class="o">-</span><span class="n">step_size</span> <span class="o">*</span> <span class="n">dW</span>
 <span class="n">b</span> <span class="o">+=</span> <span class="o">-</span><span class="n">step_size</span> <span class="o">*</span> <span class="n">db</span>
 </pre></div>
+</td></tr></table>
 
 <p><a name='together'></a></p>
 <h3 id="putting-it-all-together-training-a-softmax-classifier">Putting it all together: Training a Softmax Classifier<a class="headerlink" href="#putting-it-all-together-training-a-softmax-classifier" title="Permanent link">&para;</a></h3>
 <p>Putting all of this together, here is the full code for training a Softmax classifier with Gradient descent:</p>
-<div class="codehilite"><pre><span></span><span class="c1">#Train a Linear Classifier</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">#Train a Linear Classifier</span>
 
 <span class="c1"># initialize parameters randomly</span>
 <span class="n">W</span> <span class="o">=</span> <span class="mf">0.01</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">K</span><span class="p">)</span>
@@ -2913,9 +3005,29 @@ p_k = \frac{e^{f_k}}{ \sum_j e^{f_j} } \hspace{1in} L_i =-\log\left(p_{y_i}\righ
   <span class="n">W</span> <span class="o">+=</span> <span class="o">-</span><span class="n">step_size</span> <span class="o">*</span> <span class="n">dW</span>
   <span class="n">b</span> <span class="o">+=</span> <span class="o">-</span><span class="n">step_size</span> <span class="o">*</span> <span class="n">db</span>
 </pre></div>
+</td></tr></table>
 
 <p>Running this prints the output:</p>
-<div class="codehilite"><pre><span></span>iteration 0: loss 1.096956
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>iteration 0: loss 1.096956
 iteration 10: loss 0.917265
 iteration 20: loss 0.851503
 iteration 30: loss 0.822336
@@ -2936,13 +3048,18 @@ iteration 170: loss 0.786373
 iteration 180: loss 0.786331
 iteration 190: loss 0.786302
 </pre></div>
+</td></tr></table>
 
 <p>We see that we've converged to something after about 190 iterations. We can evaluate the training set accuracy:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># evaluate training set accuracy</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># evaluate training set accuracy</span>
 <span class="n">scores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span>
 <span class="n">predicted_class</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">scores</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="k">print</span> <span class="s1">&#39;training accuracy: </span><span class="si">%.2f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">predicted_class</span> <span class="o">==</span> <span class="n">y</span><span class="p">))</span>
 </pre></div>
+</td></tr></table>
 
 <p>This prints <strong>49%</strong>. Not very good at all, but also not surprising given that the dataset is constructed so it is not linearly separable. We can also plot the learned decision boundaries:</p>
 <div class="fig figcenter fighighlight">
@@ -2955,45 +3072,120 @@ iteration 190: loss 0.786302
 <p><a name='net'></a></p>
 <h2 id="training-a-neural-network">Training a Neural Network<a class="headerlink" href="#training-a-neural-network" title="Permanent link">&para;</a></h2>
 <p>Clearly, a linear classifier is inadequate for this dataset and we would like to use a Neural Network. One additional hidden layer will suffice for this toy data. We will now need two sets of weights and biases (for the first and second layers):</p>
-<div class="codehilite"><pre><span></span><span class="c1"># initialize parameters randomly</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># initialize parameters randomly</span>
 <span class="n">h</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># size of hidden layer</span>
 <span class="n">W</span> <span class="o">=</span> <span class="mf">0.01</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">h</span><span class="p">)</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="n">h</span><span class="p">))</span>
 <span class="n">W2</span> <span class="o">=</span> <span class="mf">0.01</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">K</span><span class="p">)</span>
 <span class="n">b2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="n">K</span><span class="p">))</span>
 </pre></div>
+</td></tr></table>
 
 <p>The forward pass to compute scores now changes form:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># evaluate class scores with a 2-layer Neural Network</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># evaluate class scores with a 2-layer Neural Network</span>
 <span class="n">hidden_layer</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="c1"># note, ReLU activation</span>
 <span class="n">scores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">hidden_layer</span><span class="p">,</span> <span class="n">W2</span><span class="p">)</span> <span class="o">+</span> <span class="n">b2</span>
 </pre></div>
+</td></tr></table>
 
 <p>Notice that the only change from before is one extra line of code, where we first compute the hidden layer representation and then the scores based on this hidden layer. Crucially, we've also added a non-linearity, which in this case is simple ReLU that thresholds the activations on the hidden layer at zero.</p>
 <p>Everything else remains the same. We compute the loss based on the scores exactly as before, and get the gradient for the scores <code>dscores</code> exactly as before. However, the way we backpropagate that gradient into the model parameters now changes form, of course. First lets backpropagate the second layer of the Neural Network. This looks identical to the code we had for the Softmax classifier, except we're replacing <code>X</code> (the raw data), with the variable <code>hidden_layer</code>):</p>
-<div class="codehilite"><pre><span></span><span class="c1"># backpropate the gradient to the parameters</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># backpropate the gradient to the parameters</span>
 <span class="c1"># first backprop into parameters W2 and b2</span>
 <span class="n">dW2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">hidden_layer</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">dscores</span><span class="p">)</span>
 <span class="n">db2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dscores</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
+</td></tr></table>
 
 <p>However, unlike before we are not yet done, because <code>hidden_layer</code> is itself a function of other parameters and the data! We need to continue backpropagation through this variable. Its gradient can be computed as:</p>
-<div class="codehilite"><pre><span></span><span class="n">dhidden</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">dscores</span><span class="p">,</span> <span class="n">W2</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">dhidden</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">dscores</span><span class="p">,</span> <span class="n">W2</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
 </pre></div>
+</td></tr></table>
 
 <p>Now we have the gradient on the outputs of the hidden layer. Next, we have to backpropagate the ReLU non-linearity. This turns out to be easy because ReLU during the backward pass is effectively a switch. Since <span><span class="MathJax_Preview">r = max(0, x)</span><script type="math/tex">r = max(0, x)</script></span>, we have that $\frac{dr}{dx} = 1(x &gt; 0) $. Combined with the chain rule, we see that the ReLU unit lets the gradient pass through unchanged if its input was greater than 0, but <em>kills it</em> if its input was less than zero during the forward pass. Hence, we can backpropagate the ReLU in place simply with:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># backprop the ReLU non-linearity</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># backprop the ReLU non-linearity</span>
 <span class="n">dhidden</span><span class="p">[</span><span class="n">hidden_layer</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
 </pre></div>
+</td></tr></table>
 
 <p>And now we finally continue to the first layer weights and biases:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># finally into W,b</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># finally into W,b</span>
 <span class="n">dW</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">dhidden</span><span class="p">)</span>
 <span class="n">db</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dhidden</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
+</td></tr></table>
 
 <p>We're done! We have the gradients <code>dW,db,dW2,db2</code> and can perform the parameter update. Everything else remains unchanged. The full code looks very similar:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># initialize parameters randomly</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># initialize parameters randomly</span>
 <span class="n">h</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># size of hidden layer</span>
 <span class="n">W</span> <span class="o">=</span> <span class="mf">0.01</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">D</span><span class="p">,</span><span class="n">h</span><span class="p">)</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="n">h</span><span class="p">))</span>
@@ -3051,9 +3243,19 @@ iteration 190: loss 0.786302
   <span class="n">W2</span> <span class="o">+=</span> <span class="o">-</span><span class="n">step_size</span> <span class="o">*</span> <span class="n">dW2</span>
   <span class="n">b2</span> <span class="o">+=</span> <span class="o">-</span><span class="n">step_size</span> <span class="o">*</span> <span class="n">db2</span>
 </pre></div>
+</td></tr></table>
 
 <p>This prints:</p>
-<div class="codehilite"><pre><span></span>iteration 0: loss 1.098744
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>iteration 0: loss 1.098744
 iteration 1000: loss 0.294946
 iteration 2000: loss 0.259301
 iteration 3000: loss 0.248310
@@ -3064,14 +3266,20 @@ iteration 7000: loss 0.245400
 iteration 8000: loss 0.245335
 iteration 9000: loss 0.245292
 </pre></div>
+</td></tr></table>
 
 <p>The training accuracy is now:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># evaluate training set accuracy</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># evaluate training set accuracy</span>
 <span class="n">hidden_layer</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
 <span class="n">scores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">hidden_layer</span><span class="p">,</span> <span class="n">W2</span><span class="p">)</span> <span class="o">+</span> <span class="n">b2</span>
 <span class="n">predicted_class</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">scores</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="k">print</span> <span class="s1">&#39;training accuracy: </span><span class="si">%.2f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">predicted_class</span> <span class="o">==</span> <span class="n">y</span><span class="p">))</span>
 </pre></div>
+</td></tr></table>
 
 <p>Which prints <strong>98%</strong>!. We can also visualize the decision boundaries:</p>
 <div class="fig figcenter fighighlight">

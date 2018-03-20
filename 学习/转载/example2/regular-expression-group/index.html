@@ -819,8 +819,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -855,20 +867,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2425,6 +2425,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2626,8 +2638,9 @@
 <p>之前我对正则表达式也是略有研究，想尝试一下。其实我对正则表达式的学习基本完全来源于犀牛书的第10章，真正看懂这一章，我觉得操作正则表达式应该不在话下。</p>
 <h2 id="_2">我的答案<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>先给出我的答案吧：</p>
-<div class="codehilite"><pre><span></span><span class="s1">&#39;abbccddd&#39;</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/(\w)\1*/g</span><span class="p">)</span> <span class="c1">// [&quot;a&quot;, &quot;bb&quot;, &quot;cc&quot;, &quot;ddd&quot;]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s1">&#39;abbccddd&#39;</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/(\w)\1*/g</span><span class="p">)</span> <span class="c1">// [&quot;a&quot;, &quot;bb&quot;, &quot;cc&quot;, &quot;ddd&quot;]</span>
 </pre></div>
+</td></tr></table>
 
 <h2 id="_3">说明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>拿到这个问题，首先要匹配字符<code>[a-zA-Z0-9]</code>，这里直接使用<code>\w</code>。然后是全局匹配，在最后加上<code>g</code>。难点在于怎么判断重复。</p>

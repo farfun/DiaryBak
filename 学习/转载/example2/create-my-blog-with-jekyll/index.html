@@ -819,8 +819,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -855,20 +867,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2472,6 +2472,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2760,8 +2772,9 @@
 <h2 id="_4">可能出现的问题<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <h3 id="hitimeshitimes-loaderror"><code>hitimes/hitimes (LoadError)</code><a class="headerlink" href="#hitimeshitimes-loaderror" title="Permanent link">&para;</a></h3>
 <p><strong>错误代码：</strong></p>
-<div class="codehilite"><pre><span></span>C:/Ruby22/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require&#39;: cannot load such file -- hitimes/hitimes (LoadError)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>C:/Ruby22/lib/ruby/2.2.0/rubygems/core_ext/kernel_require.rb:54:in `require&#39;: cannot load such file -- hitimes/hitimes (LoadError)
 </pre></div>
+</td></tr></table>
 
 <p><strong>解决方法：</strong></p>
 <p>在stackoverflow上又一个很好的解决方法。<a href="http://stackoverflow.com/questions/28985481/hitimes-require-error-when-running-jekyll-serve-on-windows-8-1">hitimes require error when running jekyll serve on windows 8.1</a> 虽然上面的题主问的是 win 8.1 系统下的情况，但是同样适用于 win7。下面我简单翻译一下错误原因和解决方法。</p>
@@ -2769,16 +2782,37 @@
 <p>可能是 Ruby 2.2 和 hitimes-1.2.2-x86-mingw32 中有一些 ABI 变化，少了一些相关的类库。</p>
 <p>所以卸载 hitimes 并通过 <code>--platform ruby</code> 重装即可。代码如下：</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>gem uni hitimes
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>gem uni hitimes
 **Remove ALL versions**
 gem ins hitimes -v 1.2.1 --platform ruby
 </pre></div>
+</td></tr></table>
 
 <blockquote>
 <p>然后将自动重新编译 hitimes 并适用于 Ruby 2.2</p>
 </blockquote>
 <p>下面是我自己的卸载和安装过程：</p>
-<div class="codehilite"><pre><span></span>E:\GitWorkSpace\gaohaoyang.github.io&gt;gem uni hitimes
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>E:\GitWorkSpace\gaohaoyang.github.io&gt;gem uni hitimes
 
 You have requested to uninstall the gem:
         hitimes-1.2.2-x86-mingw32
@@ -2798,6 +2832,7 @@ Installing ri documentation for hitimes-1.2.1
 Done installing documentation for hitimes after 1 seconds
 1 gem installed
 </pre></div>
+</td></tr></table>
 
 <p>关于，<a href="https://rubygems.org/gems/hitimes/versions/1.2.2">hitimes</a> 是一个快速的高效的定时器解决方案库，详情可以去官网查看。</p>
                 

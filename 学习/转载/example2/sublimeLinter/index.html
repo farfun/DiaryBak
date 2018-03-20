@@ -819,8 +819,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -855,20 +867,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2465,6 +2465,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2704,7 +2716,27 @@
 </ol>
 <p><img alt="SublimeLinter" src="http://7q5cdt.com1.z0.glb.clouddn.com/SublimeLinter-sublimeLinter.jpg" />   </p>
 <p>安装完成后可以看到这样一段话：   </p>
-<div class="codehilite"><pre><span></span>Welcome to SublimeLinter, a linter framework for Sublime Text 3.
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Welcome to SublimeLinter, a linter framework for Sublime Text 3.
 
                   * * * IMPORTANT! * * *
 
@@ -2726,6 +2758,7 @@
 
  http://www.sublimelinter.com
 </pre></div>
+</td></tr></table>
 
 <p>可以看到具体的 Linters 组件**不**被包含在 SublimeLinter 3 中，所以我们要额外独立安装组件。 <br />
 可以针对不同的语言安装不同的组件。   </p>
@@ -2743,7 +2776,16 @@
 <p>如下图   </p>
 <p><img alt="SublimeLinter-jshint" src="http://7q5cdt.com1.z0.glb.clouddn.com/SublimeLinter-jshint.jpg" />   </p>
 <p>安装完成后我们可以看到下面的一段话   </p>
-<div class="codehilite"><pre><span></span>SublimeLinter-jshint
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>SublimeLinter-jshint
   -------------------------------
   This linter plugin for SublimeLinter provides an interface to jshint.
 
@@ -2754,6 +2796,7 @@
 
   https://github.com/SublimeLinter/SublimeLinter-jshint
 </pre></div>
+</td></tr></table>
 
 <h3 id="nodejs-jshint">安装 nodeJS 和 jshint<a class="headerlink" href="#nodejs-jshint" title="Permanent link">&para;</a></h3>
 <p>在插件开始工作之前，我们必须再看一下上述插件的<a href="https://github.com/SublimeLinter/SublimeLinter-jshint">安装说明</a> <br />
@@ -2768,7 +2811,16 @@
 </td></tr></table>
 
 <p>安装完成后命令行中出现如下的信息   </p>
-<div class="codehilite"><pre><span></span>C:\Users\Administrator\AppData\Roaming\npm\jshint -&gt; C:\Users\Administrator\AppData\Roaming\npm\node_modules\jshint\bin\jshint
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>C:\Users\Administrator\AppData\Roaming\npm\jshint -&gt; C:\Users\Administrator\AppData\Roaming\npm\node_modules\jshint\bin\jshint
 jshint@2.6.3 C:\Users\Administrator\AppData\Roaming\npm\node_modules\jshint
 ├── strip-json-comments@1.0.2
 ├── underscore@1.6.0
@@ -2779,11 +2831,14 @@ jshint@2.6.3 C:\Users\Administrator\AppData\Roaming\npm\node_modules\jshint
 ├── minimatch@1.0.0 (sigmund@1.0.0, lru-cache@2.5.0)
 └── cli@0.6.6 (glob@3.2.11)
 </pre></div>
+</td></tr></table>
 
 <p>可以查看 jshint 版本，已确认安装完成。  </p>
-<div class="codehilite"><pre><span></span>C:\Users\Administrator&gt;jshint -v
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>C:\Users\Administrator&gt;jshint -v
 jshint v2.6.3
 </pre></div>
+</td></tr></table>
 
 <p>现在，恭喜你，我们使用 Sublime 编辑 JavaScript 文件，就会有语法检查了！   </p>
 <p>在编辑过程中，会有如下提示   </p>
@@ -2803,7 +2858,16 @@ jshint v2.6.3
 <p>如下图   </p>
 <p><img alt="SublimeLinter-csslint" src="http://7q5cdt.com1.z0.glb.clouddn.com/SublimeLinter-csslint.jpg" />   </p>
 <p>安装完成后我们可以看到下面的一段话   </p>
-<div class="codehilite"><pre><span></span>SublimeLinter-csslint
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>SublimeLinter-csslint
 -------------------------------
 This linter plugin for SublimeLinter provides an interface to csslint.
 
@@ -2814,6 +2878,7 @@ follow the installation instructions here:
 
 https://github.com/SublimeLinter/SublimeLinter-csslint
 </pre></div>
+</td></tr></table>
 
 <p>在使用插件之前，必须遵循上述网址中的<a href="https://github.com/SublimeLinter/SublimeLinter-csslint">安装说明</a>   </p>
 <h3 id="nodejs-csslint">在 nodeJS 下安装 csslint<a class="headerlink" href="#nodejs-csslint" title="Permanent link">&para;</a></h3>
@@ -2821,19 +2886,25 @@ https://github.com/SublimeLinter/SublimeLinter-csslint
 <p>这里安装 nodeJS 过程省略。 <br />
 只需用 npm 安装 csslint 即可。   </p>
 <p>在命令行中输入     </p>
-<div class="codehilite"><pre><span></span>npm install -g csslint   
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>npm install -g csslint   
 </pre></div>
+</td></tr></table>
 
 <p>安装完成后命令行中出现如下的信息     </p>
-<div class="codehilite"><pre><span></span>C:\Users\Administrator\AppData\Roaming\npm\csslint -&gt; C:\Users\Administrator\AppData\Roaming\npm\node_modules\csslint\cli.js
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>C:\Users\Administrator\AppData\Roaming\npm\csslint -&gt; C:\Users\Administrator\AppData\Roaming\npm\node_modules\csslint\cli.js
 csslint@0.10.0 C:\Users\Administrator\AppData\Roaming\npm\node_modules\csslint
 └── parserlib@0.2.5
 </pre></div>
+</td></tr></table>
 
 <p>可以查看 csslint 版本，已确认安装完成。   </p>
-<div class="codehilite"><pre><span></span>C:\Users\Administrator&gt;csslint --version
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>C:\Users\Administrator&gt;csslint --version
 v0.10.0
 </pre></div>
+</td></tr></table>
 
 <p>现在，恭喜你，我们使用 Sublime 编辑 css 文件，就会有语法检查了！     </p>
 <p>在编辑过程中，会有如下提示   </p>

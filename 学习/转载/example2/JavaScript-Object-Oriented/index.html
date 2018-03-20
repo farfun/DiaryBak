@@ -819,8 +819,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -855,20 +867,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2547,6 +2547,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2875,16 +2887,16 @@
  7
  8
  9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">Foo() {</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">y</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">Foo</span><span class="p">.</span><span class="nx">prototype</span><span class="p">);</span> <span class="c1">//object</span>
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>function Foo() {
+    this.y = 2;
+}
+console.log(typeof Foo.prototype); //object
 
-<span class="nx">Foo</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">obj3</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Foo</span><span class="p">();</span>
+Foo.prototype.x = 1;
+var obj3 = new Foo();
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obj3</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span> <span class="c1">//2</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obj3</span><span class="p">.</span><span class="nx">x</span><span class="p">);</span> <span class="c1">//1</span>
+console.log(obj3.y); //2
+console.log(obj3.x); //1
 </pre></div>
 </td></tr></table>
 
@@ -2936,45 +2948,45 @@
 36
 37
 38
-39</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">age</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
-<span class="p">}</span>
+39</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
 
-<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">LEGS_NUM</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">ARMS_NUM</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+Person.prototype.LEGS_NUM = 2;
+Person.prototype.ARMS_NUM = 2;
 
-<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">hi</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hi, my name is &#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&quot;. I&#39;m &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">+</span> <span class="s1">&#39; years old now&#39;</span><span class="p">);</span>
-<span class="p">};</span>
+Person.prototype.hi = function() {
+    console.log(&#39;Hi, my name is &#39; + this.name + &quot;. I&#39;m &quot; + this.age + &#39; years old now&#39;);
+};
 
-<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">walking</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s1">&#39; is walking...&#39;</span><span class="p">);</span>
-<span class="p">};</span>
+Person.prototype.walking = function() {
+    console.log(this.name + &#39; is walking...&#39;);
+};
 
-<span class="kd">function</span> <span class="nx">Student</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">age</span><span class="p">,</span> <span class="nx">className</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">Person</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">age</span><span class="p">);</span> <span class="c1">//使 Person 中的 this 指向 Student</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="nx">className</span><span class="p">;</span>
-<span class="p">}</span>
+function Student(name, age, className) {
+    Person.call(this, name, age); //使 Person 中的 this 指向 Student
+    this.className = className;
+}
 
-<span class="nx">Student</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">);</span>
-<span class="nx">Student</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="kr">constructor</span> <span class="o">=</span> <span class="nx">Student</span><span class="p">;</span>
+Student.prototype = Object.create(Person.prototype);
+Student.prototype.constructor = Student;
 
-<span class="nx">Student</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">hi</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hi, my name is &#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&quot;. I&#39;m &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">+</span> <span class="s1">&#39; years old now, and from &#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">className</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span><span class="p">);</span>
-<span class="p">};</span>
+Student.prototype.hi = function() {
+    console.log(&#39;Hi, my name is &#39; + this.name + &quot;. I&#39;m &quot; + this.age + &#39; years old now, and from &#39; + this.className + &quot;.&quot;);
+};
 
-<span class="nx">Student</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">learn</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">subject</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s1">&#39; is learning &#39;</span> <span class="o">+</span> <span class="nx">subject</span> <span class="o">+</span> <span class="s1">&#39; at &#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">className</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span><span class="p">);</span>
-<span class="p">}</span>
+Student.prototype.learn = function(subject) {
+    console.log(this.name + &#39; is learning &#39; + subject + &#39; at &#39; + this.className + &#39;.&#39;);
+}
 
-<span class="c1">//test</span>
-<span class="kd">var</span> <span class="nx">gao</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Student</span><span class="p">(</span><span class="s1">&#39;Gao&#39;</span><span class="p">,</span> <span class="s1">&#39;24&#39;</span><span class="p">,</span> <span class="s1">&#39;Class 3123&#39;</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">gao</span><span class="p">);</span> <span class="c1">// 这个对象的具体内容见下图</span>
-<span class="nx">gao</span><span class="p">.</span><span class="nx">hi</span><span class="p">();</span> <span class="c1">//Hi, my name is Gao. I&#39;m 24 years old now, and from Class 3123.</span>
-<span class="nx">gao</span><span class="p">.</span><span class="nx">LEGS_NUM</span><span class="p">;</span> <span class="c1">//2</span>
-<span class="nx">gao</span><span class="p">.</span><span class="nx">walking</span><span class="p">();</span> <span class="c1">//Gao is walking...</span>
-<span class="nx">gao</span><span class="p">.</span><span class="nx">learn</span><span class="p">(</span><span class="s1">&#39;JavaScript&#39;</span><span class="p">);</span> <span class="c1">//Gao is learning JavaScript at Class 3123.</span>
+//test
+var gao = new Student(&#39;Gao&#39;, &#39;24&#39;, &#39;Class 3123&#39;);
+console.log(gao); // 这个对象的具体内容见下图
+gao.hi(); //Hi, my name is Gao. I&#39;m 24 years old now, and from Class 3123.
+gao.LEGS_NUM; //2
+gao.walking(); //Gao is walking...
+gao.learn(&#39;JavaScript&#39;); //Gao is learning JavaScript at Class 3123.
 </pre></div>
 </td></tr></table>
 
@@ -3128,17 +3140,17 @@ console.log(new Object() instanceof Array); //false
  8
  9
 10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">Person() {</span><span class="p">}</span>
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>function Person() {}
 
-<span class="kd">function</span> <span class="nx">Student() {</span><span class="p">}</span>
+function Student() {}
 
-<span class="nx">Student</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span> <span class="c1">//1</span>
+Student.prototype = Person.prototype; //1
 
-<span class="nx">Student</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">();</span> <span class="c1">//2</span>
+Student.prototype = new Person(); //2
 
-<span class="nx">Student</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">);</span> <span class="c1">//3</span>
+Student.prototype = Object.create(Person.prototype); //3
 
-<span class="nx">Student</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="kr">constructor</span> <span class="o">=</span> <span class="nx">Student</span><span class="p">;</span>
+Student.prototype.constructor = Student;
 </pre></div>
 </td></tr></table>
 
@@ -3192,35 +3204,35 @@ console.log(new Object() instanceof Array); //false
 26
 27
 28
-29</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">Person() {</span>
-    <span class="kd">var</span> <span class="nx">args</span> <span class="o">=</span> <span class="nx">arguments</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">===</span> <span class="s1">&#39;object&#39;</span> <span class="o">&amp;&amp;</span> <span class="nx">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">args</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">args</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">name</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="k">if</span><span class="p">(</span><span class="nx">args</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">age</span><span class="p">){</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">args</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">age</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="p">{</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">args</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-        <span class="p">}</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">args</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">args</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+29</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>function Person() {
+    var args = arguments;
+    if (typeof args[0] === &#39;object&#39; &amp;&amp; args[0]) {
+        if (args[0].name) {
+            this.name = args[0].name;
+        }
+        if(args[0].age){
+            this.age = args[0].age;
+        }
+    } else {
+        if (args[0]) {
+            this.name = args[0];
+        }
+        if (args[1]) {
+            this.age = args[1];
+        }
+    }
+}
 
-<span class="c1">//重写 toString 方法</span>
-<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">toString</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;name=&#39;</span><span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="o">+</span><span class="s1">&#39;, age=&#39;</span><span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="nx">age</span><span class="p">);</span>
-<span class="p">};</span>
+//重写 toString 方法
+Person.prototype.toString = function() {
+    console.log(&#39;name=&#39;+this.name+&#39;, age=&#39;+this.age);
+};
 
-<span class="kd">var</span> <span class="nx">gao</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">({</span><span class="nx">name</span><span class="o">:</span><span class="s1">&#39;Gao&#39;</span><span class="p">,</span><span class="nx">age</span>:<span class="kt">24</span><span class="p">});</span>
-<span class="nx">gao</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span> <span class="c1">// name=Gao, age=24</span>
+var gao = new Person({name:&#39;Gao&#39;,age:24});
+gao.toString(); // name=Gao, age=24
 
-<span class="kd">var</span> <span class="nx">ying</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s1">&#39;Ying&#39;</span><span class="p">,</span><span class="mi">25</span><span class="p">);</span>
-<span class="nx">ying</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span> <span class="c1">// name=Ying, age=25</span>
+var ying = new Person(&#39;Ying&#39;,25);
+ying.toString(); // name=Ying, age=25
 </pre></div>
 </td></tr></table>
 
@@ -3244,24 +3256,24 @@ console.log(new Object() instanceof Array); //false
 15
 16
 17
-18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
-<span class="p">}</span>
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>function Person(name) {
+    this.name = name;
+}
 
-<span class="kd">function</span> <span class="nx">Student</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">className</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="nx">className</span><span class="p">;</span>
-    <span class="nx">Person</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">name</span><span class="p">);</span> <span class="c1">// 调用基类的构造器</span>
-<span class="p">}</span>
+function Student(name, className) {
+    this.className = className;
+    Person.call(this, name); // 调用基类的构造器
+}
 
-<span class="kd">var</span> <span class="nx">gao</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Student</span><span class="p">(</span><span class="s1">&#39;Gao&#39;</span><span class="p">,</span> <span class="s1">&#39;3123&#39;</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">gao</span><span class="p">);</span> <span class="c1">// Student {className: &quot;3123&quot;, name: &quot;Gao&quot;}</span>
+var gao = new Student(&#39;Gao&#39;, &#39;3123&#39;);
+console.log(gao); // Student {className: &quot;3123&quot;, name: &quot;Gao&quot;}
 
-<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">init</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{};</span>
+Person.prototype.init = function() {};
 
-<span class="nx">Student</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">init</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="c1">// do sth...</span>
-    <span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">init</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">arguments</span><span class="p">);</span> <span class="c1">// 同时也想调用父类被覆盖的方法</span>
-<span class="p">};</span>
+Student.prototype.init = function() {
+    // do sth...
+    Person.prototype.init.apply(this, arguments); // 同时也想调用父类被覆盖的方法
+};
 </pre></div>
 </td></tr></table>
 
@@ -3278,17 +3290,17 @@ console.log(new Object() instanceof Array); //false
  8
  9
 10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">ClassManager() {</span><span class="p">}</span>
-<span class="nx">ClassManager</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">addClass</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Class: &#39;</span> <span class="o">+</span> <span class="nx">str</span> <span class="o">+</span> <span class="s1">&#39; added&#39;</span><span class="p">);</span>
-    <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
-<span class="p">};</span>
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>function ClassManager() {}
+ClassManager.prototype.addClass = function(str) {
+    console.log(&#39;Class: &#39; + str + &#39; added&#39;);
+    return this;
+};
 
-<span class="kd">var</span> <span class="nx">manager</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ClassManager</span><span class="p">();</span>
-<span class="nx">manager</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;classA&#39;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;classB&#39;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;classC&#39;</span><span class="p">);</span>
-<span class="c1">// Class: classA added</span>
-<span class="c1">// Class: classB added</span>
-<span class="c1">// Class: classC added</span>
+var manager = new ClassManager();
+manager.addClass(&#39;classA&#39;).addClass(&#39;classB&#39;).addClass(&#39;classC&#39;);
+// Class: classA added
+// Class: classB added
+// Class: classC added
 </pre></div>
 </td></tr></table>
 
@@ -3319,30 +3331,30 @@ console.log(new Object() instanceof Array); //false
 21
 22
 23
-24</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">DetectorBase() {</span>
-    <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Abstract class can not be invoked directly!&#39;</span><span class="p">);</span>
-<span class="p">}</span>
+24</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>function DetectorBase() {
+    throw new Error(&#39;Abstract class can not be invoked directly!&#39;);
+}
 
-<span class="nx">DetectorBase</span><span class="p">.</span><span class="nx">detect</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Detection starting...&#39;</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="nx">DetectorBase</span><span class="p">.</span><span class="nx">stop</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Detection stopped.&#39;</span><span class="p">);</span>
-<span class="p">};</span>
-<span class="nx">DetectorBase</span><span class="p">.</span><span class="nx">init</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Error&#39;</span><span class="p">);</span>
-<span class="p">}</span>
+DetectorBase.detect = function() {
+    console.log(&#39;Detection starting...&#39;);
+}
+DetectorBase.stop = function() {
+    console.log(&#39;Detection stopped.&#39;);
+};
+DetectorBase.init = function() {
+    throw new Error(&#39;Error&#39;);
+}
 
-<span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DetectorBase</span><span class="p">();</span><span class="c1">// Uncaught Error: Abstract class can not be invoked directly!</span>
+var d = new DetectorBase();// Uncaught Error: Abstract class can not be invoked directly!
 
-<span class="kd">function</span> <span class="nx">LinkDetector() {</span><span class="p">}</span>
-<span class="nx">LinkDetector</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">DetectorBase</span><span class="p">.</span><span class="nx">prototype</span><span class="p">);</span>
-<span class="nx">LinkDetector</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="kr">constructor</span> <span class="o">=</span> <span class="nx">LinkDetector</span><span class="p">;</span>
+function LinkDetector() {}
+LinkDetector.prototype = Object.create(DetectorBase.prototype);
+LinkDetector.prototype.constructor = LinkDetector;
 
-<span class="kd">var</span> <span class="nx">l</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">LinkDetector</span><span class="p">();</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">l</span><span class="p">);</span> <span class="c1">//LinkDetector {}__proto__: LinkDetector</span>
-<span class="nx">l</span><span class="p">.</span><span class="nx">detect</span><span class="p">();</span> <span class="c1">//Uncaught TypeError: l.detect is not a function</span>
-<span class="nx">l</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span> <span class="c1">//Uncaught TypeError: l.init is not a function</span>
+var l = new LinkDetector();
+console.log(l); //LinkDetector {}__proto__: LinkDetector
+l.detect(); //Uncaught TypeError: l.detect is not a function
+l.init(); //Uncaught TypeError: l.init is not a function
 </pre></div>
 </td></tr></table>
 
@@ -3373,30 +3385,30 @@ console.log(new Object() instanceof Array); //false
 21
 22
 23
-24</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">DetectorBase() {</span>
-    <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Abstract class can not be invoked directly!&#39;</span><span class="p">);</span>
-<span class="p">}</span>
+24</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>function DetectorBase() {
+    throw new Error(&#39;Abstract class can not be invoked directly!&#39;);
+}
 
-<span class="nx">DetectorBase</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">detect</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Detection starting...&#39;</span><span class="p">);</span>
-<span class="p">};</span>
-<span class="nx">DetectorBase</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">stop</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Detection stopped.&#39;</span><span class="p">);</span>
-<span class="p">};</span>
-<span class="nx">DetectorBase</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">init</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Error&#39;</span><span class="p">);</span>
-<span class="p">};</span>
+DetectorBase.prototype.detect = function() {
+    console.log(&#39;Detection starting...&#39;);
+};
+DetectorBase.prototype.stop = function() {
+    console.log(&#39;Detection stopped.&#39;);
+};
+DetectorBase.prototype.init = function() {
+    throw new Error(&#39;Error&#39;);
+};
 
-<span class="c1">// var d = new DetectorBase();// Uncaught Error: Abstract class can not be invoked directly!</span>
+// var d = new DetectorBase();// Uncaught Error: Abstract class can not be invoked directly!
 
-<span class="kd">function</span> <span class="nx">LinkDetector() {</span><span class="p">}</span>
-<span class="nx">LinkDetector</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">DetectorBase</span><span class="p">.</span><span class="nx">prototype</span><span class="p">);</span>
-<span class="nx">LinkDetector</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="kr">constructor</span> <span class="o">=</span> <span class="nx">LinkDetector</span><span class="p">;</span>
+function LinkDetector() {}
+LinkDetector.prototype = Object.create(DetectorBase.prototype);
+LinkDetector.prototype.constructor = LinkDetector;
 
-<span class="kd">var</span> <span class="nx">l</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">LinkDetector</span><span class="p">();</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">l</span><span class="p">);</span> <span class="c1">//LinkDetector {}__proto__: LinkDetector</span>
-<span class="nx">l</span><span class="p">.</span><span class="nx">detect</span><span class="p">();</span> <span class="c1">//Detection starting...</span>
-<span class="nx">l</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span> <span class="c1">//Uncaught Error: Error</span>
+var l = new LinkDetector();
+console.log(l); //LinkDetector {}__proto__: LinkDetector
+l.detect(); //Detection starting...
+l.init(); //Uncaught Error: Error
 </pre></div>
 </td></tr></table>
 
@@ -3435,13 +3447,13 @@ moduleA = function() {
 5
 6
 7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">moduleA</span> = <span class="nb">new</span> <span class="n">function</span>() {
-    <span class="n">var</span> <span class="n">prop</span> = <span class="mi">1</span>;
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>moduleA = new function() {
+    var prop = 1;
 
-    <span class="n">function</span> <span class="n">func</span>() {}
+    function func() {}
 
-    <span class="n">this</span>.<span class="n">func</span> = <span class="n">func</span>;
-    <span class="n">this</span>.<span class="n">prop</span> = <span class="n">prop</span>;
+    this.func = func;
+    this.prop = prop;
 }
 </pre></div>
 </td></tr></table>

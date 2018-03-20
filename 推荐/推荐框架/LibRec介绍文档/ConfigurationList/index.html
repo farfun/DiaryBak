@@ -817,8 +817,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../学习/深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../../学习/深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -853,20 +865,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../学习/深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../../学习/深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../../学习/深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2435,6 +2435,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2630,7 +2642,64 @@
                 
                 
                 <h1 id="configuration-list">Configuration list<a class="headerlink" href="#configuration-list" title="Permanent link">&para;</a></h1>
-<div class="codehilite"><pre><span></span><span class="c1"># set data directory</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># set data directory</span>
 <span class="n">dfs</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">dir</span><span class="o">=../</span><span class="n">data</span>
 <span class="c1"># set result directory</span>
 <span class="c1"># recommender result will output in this folder</span>
@@ -2689,26 +2758,31 @@
 <span class="c1">#can use user,item,social similarity, default value is user, maximum values:user,item,social</span>
 <span class="c1">#rec.recommender.similarities=user</span>
 </pre></div>
+</td></tr></table>
 
 <h2 id="others">others<a class="headerlink" href="#others" title="Permanent link">&para;</a></h2>
 <h3 id="random">random<a class="headerlink" href="#random" title="Permanent link">&para;</a></h3>
 <p>为了保证每次生成的结果是可以复现的, 随机数字的初始值通过配置项<code>rec.ramdom.seed</code>来设置
 示例配置如下:</p>
-<div class="codehilite"><pre><span></span>rec.random.seed=1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.random.seed=1
 </pre></div>
+</td></tr></table>
 
 <p>java示例代码如下</p>
-<div class="codehilite"><pre><span></span><span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;rec.random.seed&quot;</span><span class="o">,</span><span class="s">&quot;1&quot;</span><span class="o">);</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;rec.random.seed&quot;</span><span class="o">,</span><span class="s">&quot;1&quot;</span><span class="o">);</span>
 </pre></div>
+</td></tr></table>
 
 <h3 id="verbose">verbose<a class="headerlink" href="#verbose" title="Permanent link">&para;</a></h3>
 <p>对于部分推荐算法, 可以选择将每次迭代的学习情况打印输出. 涉及到的配置项为<code>rec.recommender.verbose</code>. 示例配置如下:</p>
-<div class="codehilite"><pre><span></span><span class="n">rec</span><span class="o">.</span><span class="na">recommender</span><span class="o">.</span><span class="na">verbose</span><span class="o">=</span><span class="kc">true</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">rec</span><span class="o">.</span><span class="na">recommender</span><span class="o">.</span><span class="na">verbose</span><span class="o">=</span><span class="kc">true</span>
 </pre></div>
+</td></tr></table>
 
 <p>java示例代码如下:</p>
-<div class="codehilite"><pre><span></span><span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;rec.recommender.verbose&quot;</span><span class="o">,</span><span class="s">&quot;true&quot;</span><span class="o">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;rec.recommender.verbose&quot;</span><span class="o">,</span><span class="s">&quot;true&quot;</span><span class="o">)</span>
 </pre></div>
+</td></tr></table>
                 
                   
                 

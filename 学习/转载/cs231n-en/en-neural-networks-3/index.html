@@ -819,8 +819,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -855,20 +867,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2561,6 +2561,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2997,13 +3009,19 @@
 <p><a name='ratio'></a></p>
 <h4 id="ratio-of-weightsupdates">Ratio of weights:updates<a class="headerlink" href="#ratio-of-weightsupdates" title="Permanent link">&para;</a></h4>
 <p>The last quantity you might want to track is the ratio of the update magnitudes to the value magnitudes. Note: <em>updates</em>, not the raw gradients (e.g. in vanilla sgd this would be the gradient multiplied by the learning rate). You might want to evaluate and track this ratio for every set of parameters independently. A rough heuristic is that this ratio should be somewhere around 1e-3. If it is lower than this then the learning rate might be too low. If it is higher then the learning rate is likely too high. Here is a specific example:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># assume parameter vector W and its gradient vector dW</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># assume parameter vector W and its gradient vector dW</span>
 <span class="n">param_scale</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">W</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>
 <span class="n">update</span> <span class="o">=</span> <span class="o">-</span><span class="n">learning_rate</span><span class="o">*</span><span class="n">dW</span> <span class="c1"># simple SGD update</span>
 <span class="n">update_scale</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">update</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>
 <span class="n">W</span> <span class="o">+=</span> <span class="n">update</span> <span class="c1"># the actual update</span>
 <span class="k">print</span> <span class="n">update_scale</span> <span class="o">/</span> <span class="n">param_scale</span> <span class="c1"># want ~1e-3</span>
 </pre></div>
+</td></tr></table>
 
 <p>Instead of tracking the min or the max, some people prefer to compute and track the norm of the gradients and their updates instead. These metrics are usually correlated and often give approximately the same results.</p>
 <p><a name='distr'></a></p>
@@ -3027,17 +3045,22 @@
 <p><a name='sgd'></a></p>
 <h4 id="sgd-and-bells-and-whistles">SGD and bells and whistles<a class="headerlink" href="#sgd-and-bells-and-whistles" title="Permanent link">&para;</a></h4>
 <p><strong>Vanilla update</strong>. The simplest form of update is to change the parameters along the negative gradient direction (since the gradient indicates the direction of increase, but we usually wish to minimize a loss function). Assuming a vector of parameters <code>x</code> and the gradient <code>dx</code>, the simplest update has the form:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># Vanilla update</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Vanilla update</span>
 <span class="n">x</span> <span class="o">+=</span> <span class="o">-</span> <span class="n">learning_rate</span> <span class="o">*</span> <span class="n">dx</span>
 </pre></div>
+</td></tr></table>
 
 <p>where <code>learning_rate</code> is a hyperparameter - a fixed constant. When evaluated on the full dataset, and when the learning rate is low enough, this is guaranteed to make non-negative progress on the loss function.</p>
 <p><strong>Momentum update</strong> is another approach that almost always enjoys better converge rates on deep networks. This update can be motivated from a physical perspective of the optimization problem. In particular, the loss can be interpreted as the height of a hilly terrain (and therefore also to the potential energy since <span><span class="MathJax_Preview">U = mgh</span><script type="math/tex">U = mgh</script></span> and therefore $ U \propto h $ ). Initializing the parameters with random numbers is equivalent to setting a particle with zero initial velocity at some location. The optimization process can then be seen as equivalent to the process of simulating the parameter vector (i.e. a particle) as rolling on the landscape.</p>
 <p>Since the force on the particle is related to the gradient of potential energy (i.e. $F = - \nabla U $ ), the <strong>force</strong> felt by the particle is precisely the (negative) <strong>gradient</strong> of the loss function. Moreover, $F = ma $ so the (negative) gradient is in this view proportional to the acceleration of the particle. Note that this is different from the SGD update shown above, where the gradient directly integrates the position. Instead, the physics view suggests an update in which the gradient only directly influences the velocity, which in turn has an effect on the position:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># Momentum update</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Momentum update</span>
 <span class="n">v</span> <span class="o">=</span> <span class="n">mu</span> <span class="o">*</span> <span class="n">v</span> <span class="o">-</span> <span class="n">learning_rate</span> <span class="o">*</span> <span class="n">dx</span> <span class="c1"># integrate velocity</span>
 <span class="n">x</span> <span class="o">+=</span> <span class="n">v</span> <span class="c1"># integrate position</span>
 </pre></div>
+</td></tr></table>
 
 <p>Here we see an introduction of a <code>v</code> variable that is initialized at zero, and an additional hyperparameter (<code>mu</code>). As an unfortunate misnomer, this variable is in optimization referred to as <em>momentum</em> (its typical value is about 0.9), but its physical meaning is more consistent with the coefficient of friction. Effectively, this variable damps the velocity and reduces the kinetic energy of the system, or otherwise the particle would never come to a stop at the bottom of a hill. When cross-validated, this parameter is usually set to values such as [0.5, 0.9, 0.95, 0.99]. Similar to annealing schedules for learning rates (discussed later, below), optimization can sometimes benefit a little from momentum schedules, where the momentum is increased in later stages of learning. A typical setting is to start with momentum of about 0.5 and anneal it to 0.99 or so over multiple epochs.</p>
 <blockquote>
@@ -3053,17 +3076,24 @@
 </div>
 
 <p>That is, in a slightly awkward notation, we would like to do the following:</p>
-<div class="codehilite"><pre><span></span><span class="n">x_ahead</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">mu</span> <span class="o">*</span> <span class="n">v</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x_ahead</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">mu</span> <span class="o">*</span> <span class="n">v</span>
 <span class="c1"># evaluate dx_ahead (the gradient at x_ahead instead of at x)</span>
 <span class="n">v</span> <span class="o">=</span> <span class="n">mu</span> <span class="o">*</span> <span class="n">v</span> <span class="o">-</span> <span class="n">learning_rate</span> <span class="o">*</span> <span class="n">dx_ahead</span>
 <span class="n">x</span> <span class="o">+=</span> <span class="n">v</span>
 </pre></div>
+</td></tr></table>
 
 <p>However, in practice people prefer to express the update to look as similar to vanilla SGD or to the previous momentum update as possible. This is possible to achieve by manipulating the update above with a variable transform <code>x_ahead = x + mu * v</code>, and then expressing the update in terms of <code>x_ahead</code> instead of <code>x</code>. That is, the parameter vector we are actually storing is always the ahead version. The equations in terms of <code>x_ahead</code> (but renaming it back to <code>x</code>) then become:</p>
-<div class="codehilite"><pre><span></span><span class="n">v_prev</span> <span class="o">=</span> <span class="n">v</span> <span class="c1"># back this up</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">v_prev</span> <span class="o">=</span> <span class="n">v</span> <span class="c1"># back this up</span>
 <span class="n">v</span> <span class="o">=</span> <span class="n">mu</span> <span class="o">*</span> <span class="n">v</span> <span class="o">-</span> <span class="n">learning_rate</span> <span class="o">*</span> <span class="n">dx</span> <span class="c1"># velocity update stays the same</span>
 <span class="n">x</span> <span class="o">+=</span> <span class="o">-</span><span class="n">mu</span> <span class="o">*</span> <span class="n">v_prev</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">mu</span><span class="p">)</span> <span class="o">*</span> <span class="n">v</span> <span class="c1"># position update changes form</span>
 </pre></div>
+</td></tr></table>
 
 <p>We recommend this further reading to understand the source of these equations and the mathematical formulation of Nesterov's Accelerated Momentum (NAG):</p>
 <ul>
@@ -3103,32 +3133,46 @@ x \leftarrow x - [H f(x)]^{-1} \nabla f(x)
 <h4 id="per-parameter-adaptive-learning-rate-methods">Per-parameter adaptive learning rate methods<a class="headerlink" href="#per-parameter-adaptive-learning-rate-methods" title="Permanent link">&para;</a></h4>
 <p>All previous approaches we've discussed so far manipulated the learning rate globally and equally for all parameters. Tuning the learning rates is an expensive process, so much work has gone into devising methods that can adaptively tune the learning rates, and even do so per parameter. Many of these methods may still require other hyperparameter settings, but the argument is that they are well-behaved for a broader range of hyperparameter values than the raw learning rate. In this section we highlight some common adaptive methods you may encounter in practice:</p>
 <p><strong>Adagrad</strong> is an adaptive learning rate method originally proposed by <a href="http://jmlr.org/papers/v12/duchi11a.html">Duchi et al.</a>.</p>
-<div class="codehilite"><pre><span></span><span class="c1"># Assume the gradient dx and parameter vector x</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Assume the gradient dx and parameter vector x</span>
 <span class="n">cache</span> <span class="o">+=</span> <span class="n">dx</span><span class="o">**</span><span class="mi">2</span>
 <span class="n">x</span> <span class="o">+=</span> <span class="o">-</span> <span class="n">learning_rate</span> <span class="o">*</span> <span class="n">dx</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">cache</span><span class="p">)</span> <span class="o">+</span> <span class="n">eps</span><span class="p">)</span>
 </pre></div>
+</td></tr></table>
 
 <p>Notice that the variable <code>cache</code> has size equal to the size of the gradient, and keeps track of per-parameter sum of squared gradients. This is then used to normalize the parameter update step, element-wise. Notice that the weights that receive high gradients will have their effective learning rate reduced, while weights that receive small or infrequent updates will have their effective learning rate increased. Amusingly, the square root operation turns out to be very important and without it the algorithm performs much worse. The smoothing term <code>eps</code> (usually set somewhere in range from 1e-4 to 1e-8) avoids division by zero. A downside of Adagrad is that in case of Deep Learning, the monotonic learning rate usually proves too aggressive and stops learning too early.</p>
 <p><strong>RMSprop.</strong> RMSprop is a very effective, but currently unpublished adaptive learning rate method. Amusingly, everyone who uses this method in their work currently cites <a href="http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf">slide 29 of Lecture 6</a> of Geoff Hinton's Coursera class. The RMSProp update adjusts the Adagrad method in a very simple way in an attempt to reduce its aggressive, monotonically decreasing learning rate. In particular, it uses a moving average of squared gradients instead, giving:</p>
-<div class="codehilite"><pre><span></span><span class="n">cache</span> <span class="o">=</span> <span class="n">decay_rate</span> <span class="o">*</span> <span class="n">cache</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">decay_rate</span><span class="p">)</span> <span class="o">*</span> <span class="n">dx</span><span class="o">**</span><span class="mi">2</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">cache</span> <span class="o">=</span> <span class="n">decay_rate</span> <span class="o">*</span> <span class="n">cache</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">decay_rate</span><span class="p">)</span> <span class="o">*</span> <span class="n">dx</span><span class="o">**</span><span class="mi">2</span>
 <span class="n">x</span> <span class="o">+=</span> <span class="o">-</span> <span class="n">learning_rate</span> <span class="o">*</span> <span class="n">dx</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">cache</span><span class="p">)</span> <span class="o">+</span> <span class="n">eps</span><span class="p">)</span>
 </pre></div>
+</td></tr></table>
 
 <p>Here, <code>decay_rate</code> is a hyperparameter and typical values are [0.9, 0.99, 0.999]. Notice that the <code>x+=</code> update is identical to Adagrad, but the <code>cache</code> variable is a "leaky". Hence, RMSProp still modulates the learning rate of each weight based on the magnitudes of its gradients, which has a beneficial equalizing effect, but unlike Adagrad the updates do not get monotonically smaller.</p>
 <p><strong>Adam.</strong> <a href="http://arxiv.org/abs/1412.6980">Adam</a> is a recently proposed update that looks a bit like RMSProp with momentum. The (simplified) update looks as follows:</p>
-<div class="codehilite"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">beta1</span><span class="o">*</span><span class="n">m</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta1</span><span class="p">)</span><span class="o">*</span><span class="n">dx</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">beta1</span><span class="o">*</span><span class="n">m</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta1</span><span class="p">)</span><span class="o">*</span><span class="n">dx</span>
 <span class="n">v</span> <span class="o">=</span> <span class="n">beta2</span><span class="o">*</span><span class="n">v</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">+=</span> <span class="o">-</span> <span class="n">learning_rate</span> <span class="o">*</span> <span class="n">m</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">+</span> <span class="n">eps</span><span class="p">)</span>
 </pre></div>
+</td></tr></table>
 
 <p>Notice that the update looks exactly as RMSProp update, except the "smooth" version of the gradient <code>m</code> is used instead of the raw (and perhaps noisy) gradient vector <code>dx</code>. Recommended values in the paper are <code>eps = 1e-8</code>, <code>beta1 = 0.9</code>, <code>beta2 = 0.999</code>. In practice Adam is currently recommended as the default algorithm to use, and often works slightly better than RMSProp. However, it is often also worth trying SGD+Nesterov Momentum as an alternative. The full Adam update also includes a <em>bias correction</em> mechanism, which compensates for the fact that in the first few time steps the vectors <code>m,v</code> are both initialized and therefore biased at zero, before they fully "warm up". With the <em>bias correction</em> mechanism, the update looks as follows:</p>
-<p><div class="codehilite"><pre><span></span><span class="c1"># t is your iteration counter going from 1 to infinity</span>
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># t is your iteration counter going from 1 to infinity</span>
 <span class="n">m</span> <span class="o">=</span> <span class="n">beta1</span><span class="o">*</span><span class="n">m</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta1</span><span class="p">)</span><span class="o">*</span><span class="n">dx</span>
 <span class="n">mt</span> <span class="o">=</span> <span class="n">m</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta1</span><span class="o">**</span><span class="n">t</span><span class="p">)</span>
 <span class="n">v</span> <span class="o">=</span> <span class="n">beta2</span><span class="o">*</span><span class="n">v</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">vt</span> <span class="o">=</span> <span class="n">v</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">beta2</span><span class="o">**</span><span class="n">t</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">+=</span> <span class="o">-</span> <span class="n">learning_rate</span> <span class="o">*</span> <span class="n">mt</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">vt</span><span class="p">)</span> <span class="o">+</span> <span class="n">eps</span><span class="p">)</span>
 </pre></div>
+</td></tr></table>
 Note that the update is now a function of the iteration as well as the other parameters.
 We refer the reader to the paper for the details, or the course slides where this is expanded on.</p>
 <p>Additional References:</p>

@@ -819,8 +819,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -855,20 +867,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2493,6 +2493,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2837,7 +2849,28 @@ L = & (L_0 + L_1 + L_2)/3
 <p><a name='opt1'></a></p>
 <h4 id="strategy-1-a-first-very-bad-idea-solution-random-search">Strategy #1: A first very bad idea solution: Random search<a class="headerlink" href="#strategy-1-a-first-very-bad-idea-solution-random-search" title="Permanent link">&para;</a></h4>
 <p>Since it is so simple to check how good a given set of parameters <strong>W</strong> is, the first (very bad) idea that may come to mind is to simply try out many different random weights and keep track of what works best. This procedure might look as follows:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># assume X_train is the data where each column is an example (e.g. 3073 x 50,000)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># assume X_train is the data where each column is an example (e.g. 3073 x 50,000)</span>
 <span class="c1"># assume Y_train are the labels (e.g. 1D array of 50,000)</span>
 <span class="c1"># assume the function L evaluates the loss function</span>
 
@@ -2860,9 +2893,16 @@ L = & (L_0 + L_1 + L_2)/3
 <span class="c1"># in attempt 6 the loss was 8.605604, best 8.605604</span>
 <span class="c1"># ... (trunctated: continues for 1000 lines)</span>
 </pre></div>
+</td></tr></table>
 
 <p>In the code above, we see that we tried out several random weight vectors <strong>W</strong>, and some of them work better than others. We can take the best weights <strong>W</strong> found by this search and try it out on the test set:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># Assume X_test is [3073 x 10000], Y_test [10000 x 1]</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Assume X_test is [3073 x 10000], Y_test [10000 x 1]</span>
 <span class="n">scores</span> <span class="o">=</span> <span class="n">Wbest</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">Xte_cols</span><span class="p">)</span> <span class="c1"># 10 x 10000, the class scores for all test examples</span>
 <span class="c1"># find the index with max score in each column (the predicted class)</span>
 <span class="n">Yte_predict</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">scores</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
@@ -2870,6 +2910,7 @@ L = & (L_0 + L_1 + L_2)/3
 <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">Yte_predict</span> <span class="o">==</span> <span class="n">Yte</span><span class="p">)</span>
 <span class="c1"># returns 0.1555</span>
 </pre></div>
+</td></tr></table>
 
 <p>With the best <strong>W</strong> this gives an accuracy of about <strong>15.5%</strong>. Given that guessing classes completely at random achieves only 10%, that's not a very bad outcome for a such a brain-dead random search solution!</p>
 <p><strong>Core idea: iterative refinement</strong>. Of course, it turns out that we can do much better. The core idea is that finding the best set of weights <strong>W</strong> is a very difficult or even impossible problem (especially once <strong>W</strong> contains weights for entire complex neural networks), but the problem of refining a specific set of weights <strong>W</strong> to be slightly better is significantly less difficult. In other words, our approach will be to start with a random <strong>W</strong> and then iteratively refine it, making it slightly better each time.</p>
@@ -2880,7 +2921,16 @@ L = & (L_0 + L_1 + L_2)/3
 <p><a name='opt2'></a></p>
 <h4 id="strategy-2-random-local-search">Strategy #2: Random Local Search<a class="headerlink" href="#strategy-2-random-local-search" title="Permanent link">&para;</a></h4>
 <p>The first strategy you may think of is to try to extend one foot in a random direction and then take a step only if it leads downhill. Concretely, we will start out with a random <span><span class="MathJax_Preview">W</span><script type="math/tex">W</script></span>, generate random perturbations $ \delta W $ to it and if the loss at the perturbed <span><span class="MathJax_Preview">W + \delta W</span><script type="math/tex">W + \delta W</script></span> is lower, we will perform an update. The code for this procedure is as follows:</p>
-<div class="codehilite"><pre><span></span><span class="n">W</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3073</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.001</span> <span class="c1"># generate random starting W</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">W</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3073</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.001</span> <span class="c1"># generate random starting W</span>
 <span class="n">bestloss</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
   <span class="n">step_size</span> <span class="o">=</span> <span class="mf">0.0001</span>
@@ -2891,6 +2941,7 @@ L = & (L_0 + L_1 + L_2)/3
     <span class="n">bestloss</span> <span class="o">=</span> <span class="n">loss</span>
   <span class="k">print</span> <span class="s1">&#39;iter </span><span class="si">%d</span><span class="s1"> loss is </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">bestloss</span><span class="p">)</span>
 </pre></div>
+</td></tr></table>
 
 <p>Using the same number of loss function evaluations as before (1000), this approach achieves test set classification accuracy of <strong>21.4%</strong>. This is better, but still wasteful and computationally expensive.</p>
 <p><a name='opt3'></a></p>
@@ -2912,7 +2963,33 @@ L = & (L_0 + L_1 + L_2)/3
 <p><a name='numerical'></a></p>
 <h4 id="computing-the-gradient-numerically-with-finite-differences">Computing the gradient numerically with finite differences<a class="headerlink" href="#computing-the-gradient-numerically-with-finite-differences" title="Permanent link">&para;</a></h4>
 <p>The formula given above allows us to compute the gradient numerically. Here is a generic function that takes a function <code>f</code>, a vector <code>x</code> to evaluate the gradient on, and returns the gradient of <code>f</code> at <code>x</code>:</p>
-<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">eval_numerical_gradient</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">eval_numerical_gradient</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
   <span class="sd">&quot;&quot;&quot; </span>
 <span class="sd">  a naive implementation of numerical gradient of f at x </span>
 <span class="sd">  - f should be a function that takes a single argument</span>
@@ -2940,11 +3017,18 @@ L = & (L_0 + L_1 + L_2)/3
 
   <span class="k">return</span> <span class="n">grad</span>
 </pre></div>
+</td></tr></table>
 
 <p>Following the gradient formula we gave above, the code above iterates over all dimensions one by one, makes a small change <code>h</code> along that dimension and calculates the partial derivative of the loss function along that dimension by seeing how much the function changed. The variable <code>grad</code> holds the full gradient in the end. </p>
 <p><strong>Practical considerations</strong>. Note that in the mathematical formulation the gradient is defined in the limit as <strong>h</strong> goes towards zero, but in practice it is often sufficient to use a very small value (such as 1e-5 as seen in the example). Ideally, you want to use the smallest step size that does not lead to numerical issues. Additionally, in practice it often works better to compute the numeric gradient using the <strong>centered difference formula</strong>: $ [f(x+h) - f(x-h)] / 2 h $ . See <a href="http://en.wikipedia.org/wiki/Numerical_differentiation">wiki</a> for details.</p>
 <p>We can use the function given above to compute the gradient at any point and for any function. Lets compute the gradient for the CIFAR-10 loss function at some random point in the weight space:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># to use the generic code above we want a function that takes a single argument</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># to use the generic code above we want a function that takes a single argument</span>
 <span class="c1"># (the weights in our case) so we close over X_train and Y_train</span>
 <span class="k">def</span> <span class="nf">CIFAR10_loss_fun</span><span class="p">(</span><span class="n">W</span><span class="p">):</span>
   <span class="k">return</span> <span class="n">L</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span>
@@ -2952,9 +3036,31 @@ L = & (L_0 + L_1 + L_2)/3
 <span class="n">W</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3073</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.001</span> <span class="c1"># random weight vector</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">eval_numerical_gradient</span><span class="p">(</span><span class="n">CIFAR10_loss_fun</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span> <span class="c1"># get the gradient</span>
 </pre></div>
+</td></tr></table>
 
 <p>The gradient tells us the slope of the loss function along every dimension, which we can use to make an update:</p>
-<div class="codehilite"><pre><span></span><span class="n">loss_original</span> <span class="o">=</span> <span class="n">CIFAR10_loss_fun</span><span class="p">(</span><span class="n">W</span><span class="p">)</span> <span class="c1"># the original loss</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">loss_original</span> <span class="o">=</span> <span class="n">CIFAR10_loss_fun</span><span class="p">(</span><span class="n">W</span><span class="p">)</span> <span class="c1"># the original loss</span>
 <span class="k">print</span> <span class="s1">&#39;original loss: </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">loss_original</span><span class="p">,</span> <span class="p">)</span>
 
 <span class="c1"># lets see the effect of multiple step sizes</span>
@@ -2977,6 +3083,7 @@ L = & (L_0 + L_1 + L_2)/3
 <span class="c1"># for step size 1.000000e-02 new loss: 2539.370888</span>
 <span class="c1"># for step size 1.000000e-01 new loss: 25392.214036</span>
 </pre></div>
+</td></tr></table>
 
 <p><strong>Update in negative gradient direction</strong>. In the code above, notice that to compute <code>W_new</code> we are making an update in the negative direction of the gradient <code>df</code> since we wish our loss function to decrease, not increase.</p>
 <p><strong>Effect of step size</strong>. The gradient tells us the direction in which the function has the steepest rate of increase, but it does not tell us how far along this direction we should step. As we will see later in the course, choosing the step size (also called the <em>learning rate</em>) will become one of the most important (and most headache-inducing) hyperparameter settings in training a neural network. In our blindfolded hill-descent analogy, we feel the hill below our feet sloping in some direction, but the step length we should take is uncertain. If we shuffle our feet carefully we can expect to make consistent but very small progress (this corresponds to having a small step size). Conversely, we can choose to make a large, confident step in an attempt to descend faster, but this may not pay off. As you can see in the code example above, at some point taking a bigger step gives a higher loss as we "overstep".</p>
@@ -3023,22 +3130,33 @@ L_i = \sum_{j\neq y_i} \left[ \max(0, w_j^Tx_i - w_{y_i}^Tx_i + \Delta) \right]
 <p><a name='gd'></a></p>
 <h3 id="gradient-descent">Gradient Descent<a class="headerlink" href="#gradient-descent" title="Permanent link">&para;</a></h3>
 <p>Now that we can compute the gradient of the loss function, the procedure of repeatedly evaluating the gradient and then performing a parameter update is called <em>Gradient Descent</em>. Its <strong>vanilla</strong> version looks as follows:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># Vanilla Gradient Descent</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Vanilla Gradient Descent</span>
 
 <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
   <span class="n">weights_grad</span> <span class="o">=</span> <span class="n">evaluate_gradient</span><span class="p">(</span><span class="n">loss_fun</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
   <span class="n">weights</span> <span class="o">+=</span> <span class="o">-</span> <span class="n">step_size</span> <span class="o">*</span> <span class="n">weights_grad</span> <span class="c1"># perform parameter update</span>
 </pre></div>
+</td></tr></table>
 
 <p>This simple loop is at the core of all Neural Network libraries. There are other ways of performing the optimization (e.g. LBFGS), but Gradient Descent is currently by far the most common and established way of optimizing Neural Network loss functions. Throughout the class we will put some bells and whistles on the details of this loop (e.g. the exact details of the update equation), but the core idea of following the gradient until we're happy with the results will remain the same.</p>
 <p><strong>Mini-batch gradient descent.</strong> In large-scale applications (such as the ILSVRC challenge), the training data can have on order of millions of examples. Hence, it seems wasteful to compute the full loss function over the entire training set in order to perform only a single parameter update. A very common approach to addressing this challenge is to compute the gradient over <strong>batches</strong> of the training data. For example, in current state of the art ConvNets, a typical batch contains 256 examples from the entire training set of 1.2 million. This batch is then used to perform a parameter update:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># Vanilla Minibatch Gradient Descent</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># Vanilla Minibatch Gradient Descent</span>
 
 <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
   <span class="n">data_batch</span> <span class="o">=</span> <span class="n">sample_training_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">256</span><span class="p">)</span> <span class="c1"># sample 256 examples</span>
   <span class="n">weights_grad</span> <span class="o">=</span> <span class="n">evaluate_gradient</span><span class="p">(</span><span class="n">loss_fun</span><span class="p">,</span> <span class="n">data_batch</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
   <span class="n">weights</span> <span class="o">+=</span> <span class="o">-</span> <span class="n">step_size</span> <span class="o">*</span> <span class="n">weights_grad</span> <span class="c1"># perform parameter update</span>
 </pre></div>
+</td></tr></table>
 
 <p>The reason this works well is that the examples in the training data are correlated. To see this, consider the extreme case where all 1.2 million images in ILSVRC are in fact made up of exact duplicates of only 1000 unique images (one for each class, or in other words 1200 identical copies of each image). Then it is clear that the gradients we would compute for all 1200 identical copies would all be the same, and when we average the data loss over all 1.2 million images we would get the exact same loss as if we only evaluated on a small subset of 1000. In practice of course, the dataset would not contain duplicate images, the gradient from a mini-batch is a good approximation of the gradient of the full objective. Therefore, much faster convergence can be achieved in practice by evaluating the mini-batch gradients to perform more frequent parameter updates.</p>
 <p>The extreme case of this is a setting where the mini-batch contains only a single example. This process is called <strong>Stochastic Gradient Descent (SGD)</strong> (or also sometimes <strong>on-line</strong> gradient descent). This is relatively less common to see because in practice due to vectorized code optimizations it can be computationally much more efficient to evaluate the gradient for 100 examples, than the gradient for one example 100 times. Even though SGD technically refers to using a single example at a time to evaluate the gradient, you will hear people use the term SGD even when referring to mini-batch gradient descent (i.e. mentions of MGD for "Minibatch Gradient Descent", or BGD for "Batch gradient descent" are rare to see), where it is usually assumed that mini-batches are used. The size of the mini-batch is a hyperparameter but it is not very common to cross-validate it. It is usually based on memory constraints (if any), or set to some value, e.g. 32, 64 or 128. We use powers of 2 in practice because many vectorized operation implementations work faster when their inputs are sized in powers of 2.</p>

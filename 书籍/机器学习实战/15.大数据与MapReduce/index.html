@@ -954,8 +954,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../学习/深度学习/主成分分析-2/" title="主成分分析 2" class="md-nav__link">
-      主成分分析 2
+    <a href="../../../学习/深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../学习/深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -980,18 +992,6 @@
   <li class="md-nav__item">
     <a href="../../../学习/深度学习/最小二乘法/" title="最小二乘法" class="md-nav__link">
       最小二乘法
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../学习/深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
     </a>
   </li>
 
@@ -2508,6 +2508,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2781,17 +2793,23 @@
 <h2 id="_1">大数据 概述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p><code>大数据: 收集到的数据已经远远超出了我们的处理能力。</code></p>
 <h2 id="_2">大数据 场景<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>假如你为一家网络购物商店工作，很多用户访问该网站，其中有些人会购买商品，有些人则随意浏览后就离开。
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>假如你为一家网络购物商店工作，很多用户访问该网站，其中有些人会购买商品，有些人则随意浏览后就离开。
 对于你来说，可能很想识别那些有购物意愿的用户。
 那么问题就来了，数据集可能会非常大，在单机上训练要运行好几天。
 接下来：我们讲讲 MapRedece 如何来解决这样的问题
 </pre></div>
+</td></tr></table>
 
 <h2 id="mapredece">MapRedece<a class="headerlink" href="#mapredece" title="Permanent link">&para;</a></h2>
 <h3 id="hadoop">Hadoop 概述<a class="headerlink" href="#hadoop" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>Hadoop 是 MapRedece 框架的一个免费开源实现。
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Hadoop 是 MapRedece 框架的一个免费开源实现。
 MapReduce: 分布式的计算框架，可以将单个计算作业分配给多台计算机执行。
 </pre></div>
+</td></tr></table>
 
 <h3 id="mapredece_1">MapRedece 原理<a class="headerlink" href="#mapredece_1" title="Permanent link">&para;</a></h3>
 <blockquote>
@@ -2809,24 +2827,38 @@ MapReduce: 分布式的计算框架，可以将单个计算作业分配给多台
 <blockquote>
 <p>MapRedece 特点</p>
 </blockquote>
-<div class="codehilite"><pre><span></span>优点: 使程序以并行的方式执行，可在短时间内完成大量工作。
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>优点: 使程序以并行的方式执行，可在短时间内完成大量工作。
 缺点: 算法必须经过重写，需要对系统工程有一定的理解。
 适用数据类型: 数值型和标称型数据。
 </pre></div>
+</td></tr></table>
 
 <h3 id="hadoop-python">Hadoop 流(Python 调用)<a class="headerlink" href="#hadoop-python" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p>理论简介</p>
 </blockquote>
 <p>例如: Hadoop流可以像Linux命令一样执行</p>
-<div class="codehilite"><pre><span></span>cat inputFile.txt <span class="p">|</span> python mapper.py <span class="p">|</span> sort <span class="p">|</span> python reducer.py &gt; outputFile.txt
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>cat inputFile.txt <span class="p">|</span> python mapper.py <span class="p">|</span> sort <span class="p">|</span> python reducer.py &gt; outputFile.txt
 </pre></div>
+</td></tr></table>
 
 <p>类似的Hadoop流就可以在多台机器上分布式执行，用户可以通过Linux命令来测试Python语言编写的MapReduce脚本。</p>
 <blockquote>
 <p>实战脚本</p>
 </blockquote>
-<div class="codehilite"><pre><span></span># 测试 Mapper
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># 测试 Mapper
 # Linux
 cat input/15.BigData_MapReduce/inputFile.txt | python src/python/15.BigData_MapReduce/mrMeanMapper.py
 # Window
@@ -2838,6 +2870,7 @@ cat input/15.BigData_MapReduce/inputFile.txt | python src/python/15.BigData_MapR
 # Window
 # python src/python/15.BigData_MapReduce/mrMeanMapper.py &lt; input/15.BigData_MapReduce/inputFile.txt | python src/python/15.BigData_MapReduce/mrMeanReducer.py
 </pre></div>
+</td></tr></table>
 
 <h3 id="mapreduce">MapReduce 机器学习<a class="headerlink" href="#mapreduce" title="Permanent link">&para;</a></h3>
 <h4 id="mahout-in-action">Mahout in Action<a class="headerlink" href="#mahout-in-action" title="Permanent link">&para;</a></h4>
@@ -2856,18 +2889,24 @@ cat input/15.BigData_MapReduce/inputFile.txt | python src/python/15.BigData_MapR
 <li>MapReduce 作业流自动化的框架：Cascading 和 Oozie.</li>
 <li>mrjob 是一个不错的学习工具，与2010年底实现了开源，来之于 Yelp(一个餐厅点评网站).</li>
 </ul>
-<div class="codehilite"><pre><span></span>python src/python/15.BigData_MapReduce/mrMean.py &lt; input/15.BigData_MapReduce/inputFile.txt &gt; input/15.BigData_MapReduce/myOut.txt
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python src/python/15.BigData_MapReduce/mrMean.py &lt; input/15.BigData_MapReduce/inputFile.txt &gt; input/15.BigData_MapReduce/myOut.txt
 </pre></div>
+</td></tr></table>
 
 <blockquote>
 <p>实战脚本</p>
 </blockquote>
-<div class="codehilite"><pre><span></span># 测试 mrjob的案例
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># 测试 mrjob的案例
 # 先测试一下mapper方法
 # python src/python/15.BigData_MapReduce/mrMean.py --mapper &lt; input/15.BigData_MapReduce/inputFile.txt
 # 运行整个程序，移除 --mapper 就行
 python src/python/15.BigData_MapReduce/mrMean.py &lt; input/15.BigData_MapReduce/inputFile.txt
 </pre></div>
+</td></tr></table>
 
 <h3 id="svm-pegasos">项目案例：分布式 SVM 的 Pegasos 算法<a class="headerlink" href="#svm-pegasos" title="Permanent link">&para;</a></h3>
 <p>Pegasos是指原始估计梯度求解器(Peimal Estimated sub-GrAdient Solver)</p>
@@ -2882,7 +2921,13 @@ python src/python/15.BigData_MapReduce/mrMean.py &lt; input/15.BigData_MapReduce
 <li>批处理完毕后，权重向量按照这些错分的样本进行更新。</li>
 </ol>
 <p>上述算法伪代码如下：</p>
-<div class="codehilite"><pre><span></span>将 回归系数w 初始化为0
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>将 回归系数w 初始化为0
 对每次批处理
     随机选择 k 个样本点(向量)
     对每个向量
@@ -2890,32 +2935,54 @@ python src/python/15.BigData_MapReduce/mrMean.py &lt; input/15.BigData_MapReduce
             更新权重向量 w
     累加对 w 的更新
 </pre></div>
+</td></tr></table>
 
 <h4 id="_3">开发流程<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span>收集数据：数据按文本格式存放。
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>收集数据：数据按文本格式存放。
 准备数据：输入数据已经是可用的格式，所以不需任何准备工作。如果你需要解析一个大规模的数据集，建议使用 map 作业来完成，从而达到并行处理的目的。
 分析数据：无。
 训练算法：与普通的 SVM 一样，在分类器训练上仍需花费大量的时间。
 测试算法：在二维空间上可视化之后，观察超平面，判断算法是否有效。
 使用算法：本例不会展示一个完整的应用，但会展示如何在大数据集上训练SVM。该算法其中一个应用场景就是本文分类，通常在文本分类里可能有大量的文档和成千上万的特征。
 </pre></div>
+</td></tr></table>
 
 <blockquote>
 <p>收集数据</p>
 </blockquote>
 <p>文本文件数据格式如下：</p>
-<div class="codehilite"><pre><span></span><span class="mf">0.365032</span>        <span class="mf">2.465645</span>        <span class="o">-</span><span class="mi">1</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="mf">0.365032</span>        <span class="mf">2.465645</span>        <span class="o">-</span><span class="mi">1</span>
 <span class="o">-</span><span class="mf">2.494175</span>       <span class="o">-</span><span class="mf">0.292380</span>       <span class="o">-</span><span class="mi">1</span>
 <span class="o">-</span><span class="mf">3.039364</span>       <span class="o">-</span><span class="mf">0.123108</span>       <span class="o">-</span><span class="mi">1</span>
 <span class="mf">1.348150</span>        <span class="mf">0.255696</span>        <span class="mi">1</span>
 <span class="mf">2.768494</span>        <span class="mf">1.234954</span>        <span class="mi">1</span>
 <span class="mf">1.232328</span>        <span class="o">-</span><span class="mf">0.601198</span>       <span class="mi">1</span>
 </pre></div>
+</td></tr></table>
 
 <blockquote>
 <p>准备数据</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">loadDataSet</span><span class="p">(</span><span class="n">fileName</span><span class="p">):</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">loadDataSet</span><span class="p">(</span><span class="n">fileName</span><span class="p">):</span>
     <span class="n">dataMat</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">labelMat</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">fr</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">fileName</span><span class="p">)</span>
@@ -2926,12 +2993,47 @@ python src/python/15.BigData_MapReduce/mrMean.py &lt; input/15.BigData_MapReduce
         <span class="n">labelMat</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">lineArr</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
     <span class="k">return</span> <span class="n">dataMat</span><span class="p">,</span> <span class="n">labelMat</span>
 </pre></div>
+</td></tr></table>
 
 <blockquote>
 <p>分析数据: 无</p>
 <p>训练算法</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">batchPegasos</span><span class="p">(</span><span class="n">dataSet</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">lam</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">batchPegasos</span><span class="p">(</span><span class="n">dataSet</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">lam</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;batchPegasos()</span>
 
 <span class="sd">    Args:</span>
@@ -2967,6 +3069,7 @@ python src/python/15.BigData_MapReduce/mrMean.py &lt; input/15.BigData_MapReduce
     <span class="c1"># print &#39;++++++&#39;, w</span>
     <span class="k">return</span> <span class="n">w</span>
 </pre></div>
+</td></tr></table>
 
 <p><a href="https://github.com/apachecn/MachineLearning/blob/master/src/python/15.BigData_MapReduce/pegasos.py">完整代码地址</a>: <a href="https://github.com/apachecn/MachineLearning/blob/master/src/python/15.BigData_MapReduce/pegasos.py">https://github.com/apachecn/MachineLearning/blob/master/src/python/15.BigData_MapReduce/pegasos.py</a></p>
 <p>运行方式：<code>python /opt/git/MachineLearning/src/python/15.BigData_MapReduce/mrSVM.py &lt; input/15.BigData_MapReduce/inputFile.txt</code>

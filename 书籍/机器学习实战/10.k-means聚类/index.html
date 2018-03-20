@@ -982,8 +982,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../学习/深度学习/主成分分析-2/" title="主成分分析 2" class="md-nav__link">
-      主成分分析 2
+    <a href="../../../学习/深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../学习/深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -1008,18 +1020,6 @@
   <li class="md-nav__item">
     <a href="../../../学习/深度学习/最小二乘法/" title="最小二乘法" class="md-nav__link">
       最小二乘法
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../学习/深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
     </a>
   </li>
 
@@ -2536,6 +2536,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2840,10 +2852,13 @@
 K-Means 是发现给定数据集的 K 个簇的聚类算法, 之所以称之为 <code>K-均值</code> 是因为它可以发现 K 个不同的簇, 且每个簇的中心采用簇中所含值的均值计算而成.<br />
 簇个数 K 是用户指定的, 每一个簇通过其质心（centroid）, 即簇中所有点的中心来描述.<br />
 聚类与分类算法的最大区别在于, 分类的目标类别已知, 而聚类的目标类别是未知的.  </p>
-<div class="codehilite"><pre><span></span>优点: 容易实现
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>优点: 容易实现
 缺点:可能收敛到局部最小值, 在大规模数据集上收敛较慢
 使用数据类型 : 数值型数据
 </pre></div>
+</td></tr></table>
 
 <h3 id="k-means_1">K-Means 场景<a class="headerlink" href="#k-means_1" title="Permanent link">&para;</a></h3>
 <p>主要用来聚类, 但是类别是未知的.<br />
@@ -2878,17 +2893,31 @@ K-Means 是发现给定数据集的 K 个簇的聚类算法, 之所以称之为 
 </li>
 </ul>
 <h3 id="k-means_4">K-Means 开发流程<a class="headerlink" href="#k-means_4" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>收集数据：使用任意方法
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>收集数据：使用任意方法
 准备数据：需要数值型数据类计算距离, 也可以将标称型数据映射为二值型数据再用于距离计算
 分析数据：使用任意方法
 训练算法：此步骤不适用于 K-Means 算法
 测试算法：应用聚类算法、观察结果.可以使用量化的误差指标如误差平方和（后面会介绍）来评价算法的结果.
 使用算法：可以用于所希望的任何应用.通常情况下, 簇质心可以代表整个簇的数据来做出决策.
 </pre></div>
+</td></tr></table>
 
 <h3 id="k-means_5">K-Means 聚类算法函数<a class="headerlink" href="#k-means_5" title="Permanent link">&para;</a></h3>
 <h4 id="_1">从文件加载数据集<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="c1"># 从文本中构建矩阵，加载文本文件，然后处理</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># 从文本中构建矩阵，加载文本文件，然后处理</span>
 <span class="k">def</span> <span class="nf">loadDataSet</span><span class="p">(</span><span class="n">fileName</span><span class="p">):</span>    <span class="c1"># 通用函数，用来解析以 tab 键分隔的 floats（浮点数），例如: 1.658985    4.285136</span>
     <span class="n">dataMat</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">fr</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">fileName</span><span class="p">)</span>
@@ -2898,15 +2927,27 @@ K-Means 是发现给定数据集的 K 个簇的聚类算法, 之所以称之为 
         <span class="n">dataMat</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fltLine</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">dataMat</span>
 </pre></div>
+</td></tr></table>
 
 <h4 id="_2">计算两个向量的欧氏距离<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="c1"># 计算两个向量的欧式距离（可根据场景选择）</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># 计算两个向量的欧式距离（可根据场景选择）</span>
 <span class="k">def</span> <span class="nf">distEclud</span><span class="p">(</span><span class="n">vecA</span><span class="p">,</span> <span class="n">vecB</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">sqrt</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">power</span><span class="p">(</span><span class="n">vecA</span> <span class="o">-</span> <span class="n">vecB</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span> <span class="c1"># la.norm(vecA-vecB)</span>
 </pre></div>
+</td></tr></table>
 
 <h4 id="k">构建一个包含 K 个随机质心的集合<a class="headerlink" href="#k" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="c1"># 为给定数据集构建一个包含 k 个随机质心的集合。随机质心必须要在整个数据集的边界之内，这可以通过找到数据集每一维的最小和最大值来完成。然后生成 0~1.0 之间的随机数并通过取值范围和最小值，以便确保随机点在数据的边界之内。</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># 为给定数据集构建一个包含 k 个随机质心的集合。随机质心必须要在整个数据集的边界之内，这可以通过找到数据集每一维的最小和最大值来完成。然后生成 0~1.0 之间的随机数并通过取值范围和最小值，以便确保随机点在数据的边界之内。</span>
 <span class="k">def</span> <span class="nf">randCent</span><span class="p">(</span><span class="n">dataSet</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="n">shape</span><span class="p">(</span><span class="n">dataSet</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># 列的数量</span>
     <span class="n">centroids</span> <span class="o">=</span> <span class="n">mat</span><span class="p">(</span><span class="n">zeros</span><span class="p">((</span><span class="n">k</span><span class="p">,</span><span class="n">n</span><span class="p">)))</span> <span class="c1"># 创建k个质心矩阵</span>
@@ -2916,9 +2957,34 @@ K-Means 是发现给定数据集的 K 个簇的聚类算法, 之所以称之为 
         <span class="n">centroids</span><span class="p">[:,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">mat</span><span class="p">(</span><span class="n">minJ</span> <span class="o">+</span> <span class="n">rangeJ</span> <span class="o">*</span> <span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>    <span class="c1"># 随机生成</span>
     <span class="k">return</span> <span class="n">centroids</span>
 </pre></div>
+</td></tr></table>
 
 <h4 id="k-means_6">K-Means 聚类算法<a class="headerlink" href="#k-means_6" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="c1"># k-means 聚类算法</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># k-means 聚类算法</span>
 <span class="c1"># 该算法会创建k个质心，然后将每个点分配到最近的质心，再重新计算质心。</span>
 <span class="c1"># 这个过程重复数次，直到数据点的簇分配结果不再改变位置。</span>
 <span class="c1"># 运行结果（多次运行结果可能会不一样，可以试试，原因为随机质心的影响，但总的结果是对的， 因为数据足够相似，也可能会陷入局部最小值）</span>
@@ -2944,6 +3010,7 @@ K-Means 是发现给定数据集的 K 个簇的聚类算法, 之所以称之为 
             <span class="n">centroids</span><span class="p">[</span><span class="n">cent</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">mean</span><span class="p">(</span><span class="n">ptsInClust</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># 将质心修改为簇中所有点的平均值，mean 就是求平均值的</span>
     <span class="k">return</span> <span class="n">centroids</span><span class="p">,</span> <span class="n">clusterAssment</span>
 </pre></div>
+</td></tr></table>
 
 <h4 id="_3">测试函数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <ol>
@@ -2979,7 +3046,37 @@ K-Means 是发现给定数据集的 K 个簇的聚类算法, 之所以称之为 
 <p>另一种做法是选择 SSE 最大的簇进行划分，直到簇数目达到用户指定的数目位置。
 接下来主要介绍该做法。</p>
 <h4 id="k-means_10">二分 K-Means 聚类算法代码<a class="headerlink" href="#k-means_10" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="c1"># 二分 KMeans 聚类算法, 基于 kMeans 基础之上的优化，以避免陷入局部最小值</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># 二分 KMeans 聚类算法, 基于 kMeans 基础之上的优化，以避免陷入局部最小值</span>
 <span class="k">def</span> <span class="nf">biKMeans</span><span class="p">(</span><span class="n">dataSet</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">distMeas</span><span class="o">=</span><span class="n">distEclud</span><span class="p">):</span>
     <span class="n">m</span> <span class="o">=</span> <span class="n">shape</span><span class="p">(</span><span class="n">dataSet</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">clusterAssment</span> <span class="o">=</span> <span class="n">mat</span><span class="p">(</span><span class="n">zeros</span><span class="p">((</span><span class="n">m</span><span class="p">,</span><span class="mi">2</span><span class="p">)))</span> <span class="c1"># 保存每个数据点的簇分配结果和平方误差</span>
@@ -3011,6 +3108,7 @@ K-Means 是发现给定数据集的 K 个簇的聚类算法, 之所以称之为 
         <span class="n">clusterAssment</span><span class="p">[</span><span class="n">nonzero</span><span class="p">(</span><span class="n">clusterAssment</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">A</span> <span class="o">==</span> <span class="n">bestCentToSplit</span><span class="p">)[</span><span class="mi">0</span><span class="p">],:]</span><span class="o">=</span> <span class="n">bestClustAss</span> <span class="c1"># 重新分配最好簇下的数据（质心）以及SSE</span>
     <span class="k">return</span> <span class="n">mat</span><span class="p">(</span><span class="n">centList</span><span class="p">),</span> <span class="n">clusterAssment</span>
 </pre></div>
+</td></tr></table>
 
 <h4 id="kmeans">测试二分 KMeans 聚类算法<a class="headerlink" href="#kmeans" title="Permanent link">&para;</a></h4>
 <ul>

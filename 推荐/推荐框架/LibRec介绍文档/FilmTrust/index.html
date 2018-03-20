@@ -817,8 +817,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../学习/深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../../学习/深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -853,20 +865,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../学习/深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../../学习/深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../../学习/深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2386,6 +2386,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2549,7 +2561,13 @@
 <p>本数据集由两部分组成：ratings.txt 和 trust.txt.其中
 ratings.txt包含35497条数据, 保存形式为 userid, movieid, movieRating
 trust.txt包含1853条数据，保存形式为 trustorId, trusteeId, trustRating</p>
-<p><div class="codehilite"><pre><span></span>@INPROCEEDINGS{guo2013novel,
+<p><table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>@INPROCEEDINGS{guo2013novel,
    author = {Guo, G. and Zhang, J. and Yorke-Smith, N.},
    title = {A Novel Bayesian Similarity Measure for Recommender Systems},
    booktitle = {Proceedings of the 23rd International Joint Conference on Artificial Intelligence (IJCAI)},
@@ -2557,18 +2575,26 @@ trust.txt包含1853条数据，保存形式为 trustorId, trusteeId, trustRating
    pages = {2619-2625}
 }
 </pre></div>
+</td></tr></table>
 在配置文件中配置使用该文件的配置项为</p>
-<div class="codehilite"><pre><span></span># set data directory
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># set data directory
 dfs.data.dir=../data
 
 # setting dataset name
 data.input.path=filmtrust
 </pre></div>
+</td></tr></table>
 
 <p>在java程序中配置方法为</p>
-<div class="codehilite"><pre><span></span><span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;dfs.data.dir&quot;</span><span class="o">,</span> <span class="s">&quot;../data&quot;</span><span class="o">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;dfs.data.dir&quot;</span><span class="o">,</span> <span class="s">&quot;../data&quot;</span><span class="o">)</span>
 <span class="n">conf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&quot;data.input.path&quot;</span><span class="o">,</span> <span class="s">&quot;filmtrust&quot;</span><span class="o">);</span>
 </pre></div>
+</td></tr></table>
                 
                   
                 

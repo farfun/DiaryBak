@@ -819,8 +819,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -855,20 +867,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2493,6 +2493,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2928,7 +2940,52 @@ L = \frac{1}{N} \sum_i \sum_{j\neq y_i} \left[ \max(0, f(x_i; W)_j - f(x_i; W)_{
 <p>The most appealing property is that penalizing large weights tends to improve generalization, because it means that no input dimension can have a very large influence on the scores all by itself. For example, suppose that we have some input vector $x = [1,1,1,1] $ and two weight vectors <span><span class="MathJax_Preview">w_1 = [1,0,0,0]</span><script type="math/tex">w_1 = [1,0,0,0]</script></span>, $w_2 = [0.25,0.25,0.25,0.25] $. Then <span><span class="MathJax_Preview">w_1^Tx = w_2^Tx = 1</span><script type="math/tex">w_1^Tx = w_2^Tx = 1</script></span> so both weight vectors lead to the same dot product, but the L2 penalty of <span><span class="MathJax_Preview">w_1</span><script type="math/tex">w_1</script></span> is 1.0 while the L2 penalty of <span><span class="MathJax_Preview">w_2</span><script type="math/tex">w_2</script></span> is only 0.25. Therefore, according to the L2 penalty the weight vector <span><span class="MathJax_Preview">w_2</span><script type="math/tex">w_2</script></span> would be preferred since it achieves a lower regularization loss. Intuitively, this is because the weights in <span><span class="MathJax_Preview">w_2</span><script type="math/tex">w_2</script></span> are smaller and more diffuse. Since the L2 penalty prefers smaller and more diffuse weight vectors, the final classifier is encouraged to take into account all input dimensions to small amounts rather than a few input dimensions and very strongly. As we will see later in the class, this effect can improve the generalization performance of the classifiers on test images and lead to less <em>overfitting</em>.</p>
 <p>Note that biases do not have the same effect since, unlike the weights, they do not control the strength of influence of an input dimension. Therefore, it is common to only regularize the weights <span><span class="MathJax_Preview">W</span><script type="math/tex">W</script></span> but not the biases <span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>. However, in practice this often turns out to have a negligible effect. Lastly, note that due to the regularization penalty we can never achieve loss of exactly 0.0 on all examples, because this would only be possible in the pathological setting of <span><span class="MathJax_Preview">W = 0</span><script type="math/tex">W = 0</script></span>.</p>
 <p><strong>Code</strong>. Here is the loss function (without regularization) implemented in Python, in both unvectorized and half-vectorized form:</p>
-<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">L_i</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">W</span><span class="p">):</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">L_i</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">W</span><span class="p">):</span>
   <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">  unvectorized version. Compute the multiclass svm loss for a single example (x,y)</span>
 <span class="sd">  - x is a column vector representing an image (e.g. 3073 x 1 in CIFAR-10)</span>
@@ -2975,6 +3032,7 @@ L = \frac{1}{N} \sum_i \sum_{j\neq y_i} \left[ \max(0, f(x_i; W)_j - f(x_i; W)_{
   <span class="c1"># evaluate loss over all examples in X without using any for loops</span>
   <span class="c1"># left as exercise to reader in the assignment</span>
 </pre></div>
+</td></tr></table>
 
 <p>The takeaway from this section is that the SVM loss takes one particular approach to measuring how consistent the predictions on training data are with the ground truth labels. Additionally, making good predictions on the training set is equivalent to minimizing the loss.</p>
 <blockquote>
@@ -3040,13 +3098,19 @@ P(y_i \mid x_i; W) = \frac{e^{f_{y_i}}}{\sum_j e^{f_j} }
 </script>
 </div>
 <p>We are free to choose the value of <span><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span>. This will not change any of the results, but we can use this value to improve the numerical stability of the computation. A common choice for <span><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> is to set $\log C = -\max_j f_j $. This simply states that we should shift the values inside the vector <span><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> so that the highest value is zero. In code:</p>
-<div class="codehilite"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">123</span><span class="p">,</span> <span class="mi">456</span><span class="p">,</span> <span class="mi">789</span><span class="p">])</span> <span class="c1"># example with 3 classes and each having large scores</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">123</span><span class="p">,</span> <span class="mi">456</span><span class="p">,</span> <span class="mi">789</span><span class="p">])</span> <span class="c1"># example with 3 classes and each having large scores</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">f</span><span class="p">))</span> <span class="c1"># Bad: Numeric problem, potential blowup</span>
 
 <span class="c1"># instead: first shift the values of f so that the highest number is 0:</span>
 <span class="n">f</span> <span class="o">-=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="c1"># f becomes [-666, -333, 0]</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">f</span><span class="p">))</span> <span class="c1"># safe to do, gives the correct answer</span>
 </pre></div>
+</td></tr></table>
 
 <p><strong>Possibly confusing naming conventions</strong>. To be precise, the <em>SVM classifier</em> uses the <em>hinge loss</em>, or also sometimes called the <em>max-margin loss</em>. The <em>Softmax classifier</em> uses the <em>cross-entropy loss</em>. The Softmax classifier gets its name from the <em>softmax function</em>, which is used to squash the raw class scores into normalized positive values that sum to one, so that the cross-entropy loss can be applied. In particular, note that technically it doesn't make sense to talk about the "softmax loss", since softmax is just the squashing function, but it is a relatively commonly used shorthand.</p>
 <p><a name='svmvssoftmax'></a></p>

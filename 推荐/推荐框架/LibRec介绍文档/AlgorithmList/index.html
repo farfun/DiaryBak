@@ -817,8 +817,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../学习/深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../../学习/深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../学习/深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -853,20 +865,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../../学习/深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../../学习/深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../../学习/深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -3000,6 +3000,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -4167,45 +4179,69 @@
 <h3 id="algorithm-configuration-list">Algorithm Configuration List<a class="headerlink" href="#algorithm-configuration-list" title="Permanent link">&para;</a></h3>
 <h4 id="baseline">Baseline<a class="headerlink" href="#baseline" title="Permanent link">&para;</a></h4>
 <h5 id="constantguessrecommender">ConstantGuessRecommender<a class="headerlink" href="#constantguessrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=constantguess
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=constantguess
 </pre></div>
+</td></tr></table>
 
 <h5 id="globalaveragerecommender">GlobalAverageRecommender<a class="headerlink" href="#globalaveragerecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=globalaverage
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=globalaverage
 </pre></div>
+</td></tr></table>
 
 <h5 id="itemaveragerecommender">ItemAverageRecommender<a class="headerlink" href="#itemaveragerecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=itemaverage
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=itemaverage
 </pre></div>
+</td></tr></table>
 
 <h5 id="itemclusterrecommender">ItemClusterRecommender<a class="headerlink" href="#itemclusterrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=itemcluster
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=itemcluster
 rec.pgm.number=10
 rec.iterator.maximum=20
 </pre></div>
+</td></tr></table>
 
 <h5 id="mostpopularrecommender">MostPopularRecommender<a class="headerlink" href="#mostpopularrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=mostpopular
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=mostpopular
 rec.recommender.isranking=true
 </pre></div>
+</td></tr></table>
 
 <h5 id="randomguessrecommender">RandomGuessRecommender<a class="headerlink" href="#randomguessrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=randomguess
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=randomguess
 </pre></div>
+</td></tr></table>
 
 <h5 id="useraveragerecommender">UserAverageRecommender<a class="headerlink" href="#useraveragerecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=useraverage
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=useraverage
 </pre></div>
+</td></tr></table>
 
 <h5 id="userclusterrecommender">UserClusterRecommender<a class="headerlink" href="#userclusterrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=usercluster
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=usercluster
 rec.factory.number=10
 rec.iterator.maximum=20
 </pre></div>
+</td></tr></table>
 
 <h4 id="collaborative-filtering-item-ranking">Collaborative Filtering (item ranking)<a class="headerlink" href="#collaborative-filtering-item-ranking" title="Permanent link">&para;</a></h4>
 <h5 id="aobprrecommender">AOBPRRecommender<a class="headerlink" href="#aobprrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=aobpr
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=aobpr
 rec.item.distribution.parameter = 500
 rec.iterator.learnrate=0.01
 rec.iterator.learnrate.maximum=0.01
@@ -4218,9 +4254,17 @@ rec.learnrate.decay=1.0
 rec.recommender.isranking=true
 rec.recommender.ranking.topn=10
 </pre></div>
+</td></tr></table>
 
 <h5 id="aspectmodelrecommender">AspectModelRecommender<a class="headerlink" href="#aspectmodelrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=aspectmodelranking
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=aspectmodelranking
 rec.iterator.maximum=20
 rec.recommender.isranking=true
 rec.recommender.ranking.topn=10
@@ -4229,9 +4273,20 @@ rec.pgm.burnin=10
 rec.pgm.samplelag=10
 rec.topic.number=10
 </pre></div>
+</td></tr></table>
 
 <h5 id="bprrecommender">BPRRecommender<a class="headerlink" href="#bprrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=bpr
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=bpr
 rec.iterator.learnrate=0.01
 rec.iterator.learnrate.maximum=0.01
 rec.iterator.maximum=100
@@ -4243,9 +4298,20 @@ rec.learnRate.decay=1.0
 rec.recommender.isranking=true
 rec.recommender.ranking.topn=10
 </pre></div>
+</td></tr></table>
 
 <h5 id="climfrecommender">CLIMFRecommender<a class="headerlink" href="#climfrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=climf
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=climf
 rec.iterator.learnrate=0.001
 rec.iterator.learnrate.maximum=0.01
 rec.iterator.maximum=100
@@ -4257,9 +4323,28 @@ rec.learnrate.decay=1.0
 rec.recommender.isranking=true
 rec.recommender.ranking.topn=10
 </pre></div>
+</td></tr></table>
 
 <h5 id="ealsrecommender">EALSRecommender<a class="headerlink" href="#ealsrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=eals
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=eals
 rec.iterator.maximum=10
 rec.user.regularization=0.01
 rec.item.regularization=0.01
@@ -4279,9 +4364,23 @@ rec.eals.ratio=0.4
 # confidence weight coefficient, alpha in original paper
 rec.wrmf.weight.coefficient=4.0
 </pre></div>
+</td></tr></table>
 
 <h5 id="fismaucrecommender">FISMaucRecommender<a class="headerlink" href="#fismaucrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=fismauc
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=fismauc
 rec.iterator.learnrate=0.01
 rec.iterator.learnrate.maximum=0.01
 rec.iterator.maximum=10
@@ -4296,9 +4395,16 @@ rec.recommender.ranking.topn=10
 rec.fismauc.rho=2
 rec.fismauc.alpha=1.5
 </pre></div>
+</td></tr></table>
 
 <h5 id="fismrmserecommender">FISMrmseRecommender<a class="headerlink" href="#fismrmserecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=fismrmse
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=fismrmse
 rec.iteration.learnrate=0.01
 rec.iterator.maximum=100
 rec.recommender.isranking=true
@@ -4306,9 +4412,20 @@ rec.recommender.isranking=true
 rec.fismrmse.rho=1
 rec.fismrmse.alpha=1.5
 </pre></div>
+</td></tr></table>
 
 <h5 id="gbprrecommender">GBPRRecommender<a class="headerlink" href="#gbprrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=gbpr
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=gbpr
 rec.iterator.learnrate=0.01
 rec.iterator.learnrate.maximum=0.01
 rec.iterator.maximum=100
@@ -4320,9 +4437,20 @@ rec.learnrate.decay=1.0
 rec.recommender.isranking=true
 rec.recommender.ranking.topn=10
 </pre></div>
+</td></tr></table>
 
 <h5 id="itembigramrecommender">ItemBigramRecommender<a class="headerlink" href="#itembigramrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=itembigram
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=itembigram
 data.column.format=UIRT
 data.input.path=test/ratings-date.txt
 rec.iterator.maximum=100
@@ -4334,9 +4462,21 @@ rec.topic.dirichlet.prior=0.01
 rec.pgm.burnin=10
 rec.pgm.samplelag=10
 </pre></div>
+</td></tr></table>
 
 <h5 id="ldarecommender">LDARecommender<a class="headerlink" href="#ldarecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=lda
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=lda
 rec.iterator.maximum=100
 rec.topic.number = 10
 rec.recommender.isranking=true
@@ -4349,9 +4489,20 @@ data.splitter.cv.number=5
 # (0.0 may be a better choose than -1.0)
 data.convert.binarize.threshold=0.0
 </pre></div>
+</td></tr></table>
 
 <h5 id="listwisemfrecommender">ListwiseMFRecommender<a class="headerlink" href="#listwisemfrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=listwisemf
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=listwisemf
 rec.iterator.learnrate=0.01
 rec.iterator.learnrate.maximum=0.01
 rec.iterator.maximum=100
@@ -4363,9 +4514,17 @@ rec.learnrate.decay=1.0
 rec.recommender.isranking=true
 rec.recommender.ranking.topn=10
 </pre></div>
+</td></tr></table>
 
 <h5 id="plsarecommender">PLSARecommender<a class="headerlink" href="#plsarecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=plsa
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=plsa
 rec.iteration.learnrate=0.01
 rec.iterator.maximum=100
 rec.recommender.isranking=true
@@ -4374,9 +4533,22 @@ rec.recommender.ranking.topn=10
 # (0.0 may be a better choose than -1.0)
 data.convert.binarize.threshold=0.0
 </pre></div>
+</td></tr></table>
 
 <h5 id="rankalsrecommender">RankALSRecommender<a class="headerlink" href="#rankalsrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=rankals
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=rankals
 rec.iterator.learnrate=0.01
 rec.iterator.learnrate.maximum=0.01
 rec.iterator.maximum=100
@@ -4390,9 +4562,20 @@ rec.recommender.ranking.topn=10
 
 rec.rankals.support.weight=true
 </pre></div>
+</td></tr></table>
 
 <h5 id="ranksgdrecommender">RankSGDRecommender<a class="headerlink" href="#ranksgdrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=ranksgd
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=ranksgd
 rec.iterator.learnrate=0.01
 rec.iterator.learnrate.maximum=0.01
 rec.iterator.maximum=30
@@ -4404,9 +4587,22 @@ rec.learnrate.decay=1.0
 rec.recommender.isranking=true
 rec.recommender.ranking.topn=10
 </pre></div>
+</td></tr></table>
 
 <h5 id="slimrecommender">SLIMRecommender<a class="headerlink" href="#slimrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=slim
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=slim
 rec.similarity.class=cos
 # can only use item similarity
 rec.recommender.similarities=item
@@ -4420,9 +4616,21 @@ rec.recommender.earlystop=true
 rec.slim.regularization.l1=1
 rec.slim.regularization.l2=5
 </pre></div>
+</td></tr></table>
 
 <h5 id="wbprrecommender">WBPRRecommender<a class="headerlink" href="#wbprrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=wbpr
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=wbpr
 rec.iterator.learnrate=0.01
 rec.iterator.learnrate.maximum=0.01
 rec.iterator.maximum=10
@@ -4435,9 +4643,19 @@ rec.learnrate.decay=1.0
 rec.recommender.isranking=true
 rec.recommender.ranking.topn=10
 </pre></div>
+</td></tr></table>
 
 <h5 id="wrmfrecommender">WRMFRecommender<a class="headerlink" href="#wrmfrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=wrmf
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=wrmf
 rec.iterator.maximum=20
 rec.user.regularization=0.01
 rec.item.regularization=0.01
@@ -4448,22 +4666,38 @@ rec.recommender.ranking.topn=10
 # confidence weight coefficient, alpha in original paper
 rec.wrmf.weight.coefficient=4.0
 </pre></div>
+</td></tr></table>
 
 <h4 id="collaborative-filtering-rating-prediction">Collaborative Filtering (rating prediction)<a class="headerlink" href="#collaborative-filtering-rating-prediction" title="Permanent link">&para;</a></h4>
 <h5 id="aspectmodelrecommender_1">AspectModelRecommender<a class="headerlink" href="#aspectmodelrecommender_1" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=aspectmodelrating
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=aspectmodelrating
 rec.iteration.learnrate=0.01
 rec.iterator.maximum=100
 </pre></div>
+</td></tr></table>
 
 <h5 id="asvdplusplusrecommender">ASVDPlusPlusRecommender<a class="headerlink" href="#asvdplusplusrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=asvdpp
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=asvdpp
 rec.iteration.learnrate=0.01
 rec.iterator.maximum=20
 </pre></div>
+</td></tr></table>
 
 <h5 id="biasedmfrecommender">BiasedMFRecommender<a class="headerlink" href="#biasedmfrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=biasedmf
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=biasedmf
 rec.iterator.learnrate=0.01
 rec.iterator.learnrate.maximum=0.01
 rec.iterator.maximum=1
@@ -4474,9 +4708,18 @@ rec.factor.number=10
 rec.learnrate.bolddriver=false
 rec.learnrate.decay=1.0
 </pre></div>
+</td></tr></table>
 
 <h5 id="bnpoissmfrecommender">BNPoissMFRecommender<a class="headerlink" href="#bnpoissmfrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=bnpoissmf
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=bnpoissmf
 rec.iterator.learnrate=0.01
 rec.iterator.learnrate.maximum=0.01
 rec.iterator.maximum=100
@@ -4486,17 +4729,31 @@ rec.factor.number=10
 rec.learnrate.bolddriver=false
 rec.learnrate.decay=1.0
 </pre></div>
+</td></tr></table>
 
 <h5 id="bpmfrecommender">BPMFRecommender<a class="headerlink" href="#bpmfrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=bpmf
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=bpmf
 rec.iterator.maximum=100
 rec.user.regularization=0.01
 rec.item.regularization=0.01
 rec.factor.number=10
 </pre></div>
+</td></tr></table>
 
 <h5 id="bpoissmfrecommender">BPoissMFRecommender<a class="headerlink" href="#bpoissmfrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=bpoissmf
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=bpoissmf
 rec.iterator.learnrate=0.01
 rec.iterator.learnrate.maximum=0.01
 rec.iterator.maximum=100
@@ -4506,9 +4763,19 @@ rec.factor.number=10
 rec.learnrate.bolddriver=false
 rec.learnrate.decay=1.0
 </pre></div>
+</td></tr></table>
 
 <h5 id="fmalsrecommender">FMALSRecommender<a class="headerlink" href="#fmalsrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>data.input.path=arfftest/data.arff
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>data.input.path=arfftest/data.arff
 data.column.format=UIR
 data.model.splitter=ratio
 data.convertor.format=arff
@@ -4519,9 +4786,19 @@ rec.iterator.learnRate=0.01
 rec.iterator.maximum=100
 rec.factor.number=10
 </pre></div>
+</td></tr></table>
 
 <h5 id="fmsgdrecommender">FMSGDRecommender<a class="headerlink" href="#fmsgdrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>data.input.path=arfftest/data.arff
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>data.input.path=arfftest/data.arff
 data.column.format=UIR
 data.model.splitter=ratio
 data.convertor.format=arff
@@ -4532,24 +4809,43 @@ rec.iterator.learnRate=0.001
 rec.iterator.maximum=100
 rec.factor.number=10
 </pre></div>
+</td></tr></table>
 
 <h5 id="gplsarecommender">GPLSARecommender<a class="headerlink" href="#gplsarecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=gplsa
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=gplsa
 rec.iteration.learnrate=0.01
 rec.iterator.maximum=100
 rec.recommender.smoothWeight=2
 rec.recommender.isranking=false
 rec.topic.number = 10
 </pre></div>
+</td></tr></table>
 
 <h5 id="ldccrecommender">LDCCRecommender<a class="headerlink" href="#ldccrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=ldcc
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=ldcc
 rec.iteration.learnrate=0.01
 rec.iterator.maximum=100
 </pre></div>
+</td></tr></table>
 
 <h5 id="llormarecommender">LLORMARecommender<a class="headerlink" href="#llormarecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=llorma
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=llorma
 rec.llorma.global.factors.num = 10
 rec.iterator.learnrate=0.01
 rec.iterator.learnrate.maximum=0.01
@@ -4560,17 +4856,31 @@ rec.factor.number=10
 rec.learnrate.bolddriver=false
 rec.learnrate.decay=1.0
 </pre></div>
+</td></tr></table>
 
 <h5 id="mfalsrecommender">MFALSRecommender<a class="headerlink" href="#mfalsrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=mfals
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=mfals
 rec.iterator.maximum=100
 rec.user.regularization=0.01
 rec.item.regularization=0.01
 rec.factor.number=10
 </pre></div>
+</td></tr></table>
 
 <h5 id="nmfrecommender">NMFRecommender<a class="headerlink" href="#nmfrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=nmf
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=nmf
 rec.iterator.learnrate=0.01
 rec.iterator.learnrate.maximum=0.01
 rec.iterator.maximum=100
@@ -4580,9 +4890,18 @@ rec.factor.number=10
 rec.learnrate.bolddriver=false
 rec.learnrate.decay=1.0
 </pre></div>
+</td></tr></table>
 
 <h5 id="pmfrecommender">PMFRecommender<a class="headerlink" href="#pmfrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=pmf
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=pmf
 rec.iterator.learnrate=0.01
 rec.iterator.learnrate.maximum=0.01
 rec.iterator.maximum=50
@@ -4592,9 +4911,21 @@ rec.factor.number=10
 rec.learnrate.bolddriver=false
 rec.learnrate.decay=1.0
 </pre></div>
+</td></tr></table>
 
 <h5 id="rbmrecommender">RBMRecommender<a class="headerlink" href="#rbmrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=rbm
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=rbm
 rec.iterator.maximum=20
 data.input.path=movielens/ml-100k/ratings.txt
 rec.factor.number=500
@@ -4607,9 +4938,18 @@ rec.lamtaw=0.01
 rec.lamtab=0.0
 rec.predictiontype=mean
 </pre></div>
+</td></tr></table>
 
 <h5 id="rfrecrecommender">RFRecRecommender<a class="headerlink" href="#rfrecrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=rfrec
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=rfrec
 rec.iterator.learnrate=0.01
 rec.iterator.learnrate.maximum=0.01
 rec.iterator.maximum=100
@@ -4619,9 +4959,19 @@ rec.factor.number=10
 rec.learnrate.bolddriver=false
 rec.learnrate.decay=1.0
 </pre></div>
+</td></tr></table>
 
 <h5 id="svdplusplusrecommender">SVDPlusPlusRecommender<a class="headerlink" href="#svdplusplusrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=svdpp
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=svdpp
 rec.iterator.learnrate=0.01
 rec.iterator.learnrate.maximum=0.01
 rec.iterator.maximum=13
@@ -4632,16 +4982,26 @@ rec.factor.number=10
 rec.learnrate.bolddriver=false
 rec.learnrate.decay=1.0
 </pre></div>
+</td></tr></table>
 
 <h5 id="urprecommender">URPRecommender<a class="headerlink" href="#urprecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=urp
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=urp
 rec.iteration.learnrate=0.01
 rec.iterator.maximum=100
 </pre></div>
+</td></tr></table>
 
 <h4 id="collaborative-filtering-rating-prediction-and-item-ranking">Collaborative Filtering (rating prediction and item ranking)<a class="headerlink" href="#collaborative-filtering-rating-prediction-and-item-ranking" title="Permanent link">&para;</a></h4>
 <h5 id="bhfreerecommender">BHFreeRecommender<a class="headerlink" href="#bhfreerecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=bhfree
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=bhfree
 rec.pgm.burnin=10
 rec.pgm.samplelag=10
 rec.iterator.maximum=100
@@ -4649,9 +5009,21 @@ rec.iterator.maximum=100
 rec.recommender.isranking=true
 rec.recommender.ranking.topn=10
 </pre></div>
+</td></tr></table>
 
 <h5 id="bucmrecommender">BUCMRecommender<a class="headerlink" href="#bucmrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=bucm
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=bucm
 rec.pgm.burnin=10
 rec.pgm.samplelag=10
 
@@ -4664,9 +5036,17 @@ rec.bucm.gamma=0.01
 rec.recommender.isranking=true
 rec.recommender.ranking.topn=10
 </pre></div>
+</td></tr></table>
 
 <h5 id="itemknnrecommender">ItemKNNRecommender<a class="headerlink" href="#itemknnrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=itemknn
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=itemknn
 # true for item ranking, false for rating prediction
 rec.recommender.isranking=false
 rec.recommender.ranking.topn=10
@@ -4675,9 +5055,18 @@ rec.similarity.class=pcc
 rec.neighbors.knn.number=50
 rec.similarity.shrinkage=10
 </pre></div>
+</td></tr></table>
 
 <h5 id="userknnrecommender">UserKNNRecommender<a class="headerlink" href="#userknnrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.similarity.class=pcc
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.similarity.class=pcc
 rec.neighbors.knn.number=50
 rec.recommender.class=userknn
 rec.recommender.similarities=user
@@ -4687,10 +5076,23 @@ rec.recommender.ranking.topn=10
 rec.filter.class=generic
 rec.similarity.shrinkage=10
 </pre></div>
+</td></tr></table>
 
 <h4 id="content">Content<a class="headerlink" href="#content" title="Permanent link">&para;</a></h4>
 <h5 id="efmrecommender">EFMRecommender<a class="headerlink" href="#efmrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>data.input.path=efmtest/efm.txt
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>data.input.path=efmtest/efm.txt
 rec.recommender.class=efm
 rec.iterator.learnrate=0.01
 rec.iterator.learnrate.maximum=0.01
@@ -4704,9 +5106,23 @@ rec.recommender.lambda.user=0.05
 rec.recommender.lambda.item=0.05
 rec.bias.regularization = 0.01
 </pre></div>
+</td></tr></table>
 
 <h5 id="hftrecommender">HFTRecommender<a class="headerlink" href="#hftrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>data.input.path=hfttest/hft.txt/
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>data.input.path=hfttest/hft.txt/
 rec.recommender.class=hft
 rec.iterator.learnrate=0.01
 rec.iterator.learnrate.maximum=0.01
@@ -4721,10 +5137,27 @@ rec.recommender.lambda.user=0.05
 rec.recommender.lambda.item=0.05
 rec.bias.regularization = 0.01
 </pre></div>
+</td></tr></table>
 
 <h4 id="contextitem-ranking">Context(item ranking)<a class="headerlink" href="#contextitem-ranking" title="Permanent link">&para;</a></h4>
 <h5 id="sbprrecommender">SBPRRecommender<a class="headerlink" href="#sbprrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>data.appender.class=social
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>data.appender.class=social
 data.appender.path=test/test-append-dir
 
 rec.recommender.class=sbpr
@@ -4742,22 +5175,44 @@ rec.recommender.verbose=true
 rec.recommender.isranking=true
 rec.recommender.ranking.topn=10
 </pre></div>
+</td></tr></table>
 
 <h4 id="contextrating-prediction">Context(rating prediction)<a class="headerlink" href="#contextrating-prediction" title="Permanent link">&para;</a></h4>
 <h5 id="bptfrecommender">BPTFRecommender<a class="headerlink" href="#bptfrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=bptf
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=bptf
 rec.iteration.learnrate=0.01
 rec.iterator.maximum=100
 </pre></div>
+</td></tr></table>
 
 <h5 id="pitfrecommender">PITFRecommender<a class="headerlink" href="#pitfrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=pitf
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=pitf
 rec.iteration.learnrate=0.01
 rec.iterator.maximum=100
 </pre></div>
+</td></tr></table>
 
 <h5 id="rsterecommender">RSTERecommender<a class="headerlink" href="#rsterecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>data.appender.class=social
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>data.appender.class=social
 data.appender.path=test/test-append-dir
 
 rec.recommender.class=rste
@@ -4774,9 +5229,24 @@ rec.recommender.earlystop=false
 rec.recommender.verbose=true
 rec.user.social.ratio=0.8
 </pre></div>
+</td></tr></table>
 
 <h5 id="socialmfrecommender">SocialMFRecommender<a class="headerlink" href="#socialmfrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>data.appender.class=social
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>data.appender.class=social
 data.appender.path=test/test-append-dir
 
 rec.recommender.class=socialmf
@@ -4792,9 +5262,26 @@ rec.learnrate.decay=1.0
 rec.recommender.earlystop=false
 rec.recommender.verbose=true
 </pre></div>
+</td></tr></table>
 
 <h5 id="sorecrecommender">SoRecRecommender<a class="headerlink" href="#sorecrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>data.appender.class=social
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>data.appender.class=social
 data.appender.path=test/test-append-dir
 
 rec.recommender.class=sorec
@@ -4812,9 +5299,27 @@ rec.learnrate.decay=1.0
 rec.recommender.earlystop=false
 rec.recommender.verbose=true
 </pre></div>
+</td></tr></table>
 
 <h5 id="soregrecommender">SoRegRecommender<a class="headerlink" href="#soregrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>data.appender.class=social
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>data.appender.class=social
 data.appender.path=test/test-append-dir
 
 rec.recommender.class=soreg
@@ -4833,9 +5338,18 @@ rec.recommender.earlystop=false
 rec.recommender.verbose=true
 rec.similarity.shrinkage=10
 </pre></div>
+</td></tr></table>
 
 <h5 id="timesvdrecommender">TimeSVDRecommender<a class="headerlink" href="#timesvdrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=timesvd
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=timesvd
 data.column.format=UIRT
 data.input.path=test/ratings-date.txt
 rec.iterator.learnrate=0.01
@@ -4845,9 +5359,25 @@ rec.user.regularization=0.01
 rec.item.regularization=0.01
 rec.learnrate.decay=1.0
 </pre></div>
+</td></tr></table>
 
 <h5 id="trustmfrecommender">TrustMFRecommender<a class="headerlink" href="#trustmfrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>data.appender.class=social
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>data.appender.class=social
 data.appender.path=test/test-append-dir
 
 rec.recommender.class=trustmf
@@ -4864,9 +5394,25 @@ rec.recommender.earlystop=false
 rec.recommender.verbose=true
 rec.social.model=T
 </pre></div>
+</td></tr></table>
 
 <h5 id="trustsvdrecommender">TrustSVDRecommender<a class="headerlink" href="#trustsvdrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>data.appender.class=social
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>data.appender.class=social
 data.appender.path=test/test-append-dir
 
 rec.recommender.class=trustsvd
@@ -4883,23 +5429,40 @@ rec.learnrate.decay=1.0
 rec.recommender.earlystop=false
 rec.recommender.verbose=true
 </pre></div>
+</td></tr></table>
 
 <h4 id="extra">Extra<a class="headerlink" href="#extra" title="Permanent link">&para;</a></h4>
 <h5 id="associationrulerecommender">AssociationRuleRecommender<a class="headerlink" href="#associationrulerecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=associationrule
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=associationrule
 </pre></div>
+</td></tr></table>
 
 <h5 id="externalrecommender">ExternalRecommender<a class="headerlink" href="#externalrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=external
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=external
 </pre></div>
+</td></tr></table>
 
 <h5 id="personalitydiagnosisrecommender">PersonalityDiagnosisRecommender<a class="headerlink" href="#personalitydiagnosisrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=personalitydiagnosis
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=personalitydiagnosis
 rec.PersonalityDiagnosis.sigma=0.1
 </pre></div>
+</td></tr></table>
 
 <h5 id="prankdrecommender">PRankDRecommender<a class="headerlink" href="#prankdrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=prankd
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=prankd
 rec.similarity.class=cos
 rec.recommender.similarities=item
 rec.similarity.shrinkage=10
@@ -4913,9 +5476,16 @@ rec.learnrate.bolddriver=false
 rec.learnrate.decay=1.0
 rec.sim.filter=4.0
 </pre></div>
+</td></tr></table>
 
 <h5 id="slopeonerecommender">SlopeOneRecommender<a class="headerlink" href="#slopeonerecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=slopeone
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=slopeone
 rec.eval.enable=true
 rec.iterator.maximum=50
 rec.factory.number=30
@@ -4923,10 +5493,17 @@ rec.iterator.learn.rate=0.001
 rec.recommender.lambda.user=0.05
 rec.recommender.lambda.item=0.05
 </pre></div>
+</td></tr></table>
 
 <h4 id="hybrid">Hybrid<a class="headerlink" href="#hybrid" title="Permanent link">&para;</a></h4>
 <h5 id="hybridrecommender">HybridRecommender<a class="headerlink" href="#hybridrecommender" title="Permanent link">&para;</a></h5>
-<div class="codehilite"><pre><span></span>rec.recommender.class=hybrid
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>rec.recommender.class=hybrid
 rec.hybrid.lambda=0.1
 rec.iterator.maximum=50
 rec.factory.number=30
@@ -4934,6 +5511,7 @@ rec.iterator.learn.rate=0.001
 rec.recommender.lambda.user=0.05
 rec.recommender.lambda.item=0.05
 </pre></div>
+</td></tr></table>
                 
                   
                 

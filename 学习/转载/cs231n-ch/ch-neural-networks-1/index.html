@@ -819,8 +819,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/主成分分析-2/" title="主成分分析 (2)" class="md-nav__link">
-      主成分分析 (2)
+    <a href="../../../深度学习/02激活函数/" title="02激活函数" class="md-nav__link">
+      02激活函数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../深度学习/04损失函数/" title="04损失函数" class="md-nav__link">
+      04损失函数
     </a>
   </li>
 
@@ -855,20 +867,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵分解/" title="矩阵分解" class="md-nav__link">
-      矩阵分解
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../深度学习/矩阵求导/" title="矩阵求导" class="md-nav__link">
-      矩阵求导
+    <a href="../../../深度学习/矩阵求导/" title="前提及说明" class="md-nav__link">
+      前提及说明
     </a>
   </li>
 
@@ -2500,6 +2500,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../推荐/推荐框架/YouTube/" title="YouTube" class="md-nav__link">
+      YouTube
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2800,7 +2812,13 @@
 </div>
 
 <p>An example code for forward-propagating a single neuron might look as follows:</p>
-<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Neuron</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Neuron</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
   <span class="c1"># ... </span>
   <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; assume inputs and weights are 1-D numpy arrays and bias is a number &quot;&quot;&quot;</span>
@@ -2808,6 +2826,7 @@
     <span class="n">firing_rate</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">cell_body_sum</span><span class="p">))</span> <span class="c1"># sigmoid activation function</span>
     <span class="k">return</span> <span class="n">firing_rate</span>
 </pre></div>
+</td></tr></table>
 
 <p>In other words, each neuron performs a dot product with the input and its weights, adds the bias and applies the non-linearity (or activation function), in this case the sigmoid <span><span class="MathJax_Preview">\sigma(x) = 1/(1+e^{-x})</span><script type="math/tex">\sigma(x) = 1/(1+e^{-x})</script></span>. We will go into more details about different activation functions at the end of this section.</p>
 <p><strong>Coarse model.</strong> It's important to stress that this model of a biological neuron is very coarse: For example, there are many different types of neurons, each with different properties. The dendrites in biological neurons perform complex nonlinear computations. The synapses are not just a single weight, they're a complex non-linear dynamical system. The exact timing of the output spikes in many systems is known to be important, suggesting that the rate code approximation may not hold. Due to all these and many other simplifications, be prepared to hear groaning sounds from anyone with some neuroscience background if you draw analogies between Neural Networks and real brains. See this <a href="https://physics.ucsd.edu/neurophysics/courses/physics_171/annurev.neuro.28.061604.135703.pdf">review</a> (pdf), or more recently this <a href="http://www.sciencedirect.com/science/article/pii/S0959438814000130">review</a> if you are interested.</p>
@@ -2873,13 +2892,19 @@
 <p><a name='feedforward'></a></p>
 <h3 id="example-feed-forward-computation">Example feed-forward computation<a class="headerlink" href="#example-feed-forward-computation" title="Permanent link">&para;</a></h3>
 <p><em>Repeated matrix multiplications interwoven with activation function</em>. One of the primary reasons that Neural Networks are organized into layers is that this structure makes it very simple and efficient to evaluate Neural Networks using matrix vector operations. Working with the example three-layer neural network in the diagram above, the input would be a [3x1] vector. All connection strengths for a layer can be stored in a single matrix. For example, the first hidden layer's weights <code>W1</code> would be of size [4x3], and the biases for all units would be in the vector <code>b1</code>, of size [4x1]. Here, every single neuron has its weights in a row of <code>W1</code>, so the matrix vector multiplication <code>np.dot(W1,x)</code> evaluates the activations of all neurons in that layer. Similarly, <code>W2</code> would be a [4x4] matrix that stores the connections of the second hidden layer, and <code>W3</code> a [1x4] matrix for the last (output) layer. The full forward pass of this 3-layer neural network is then simply three matrix multiplications, interwoven with the application of the activation function:</p>
-<div class="codehilite"><pre><span></span><span class="c1"># forward-pass of a 3-layer neural network:</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># forward-pass of a 3-layer neural network:</span>
 <span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mf">1.0</span><span class="o">/</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">))</span> <span class="c1"># activation function (use sigmoid)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># random input vector of three numbers (3x1)</span>
 <span class="n">h1</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">W1</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">b1</span><span class="p">)</span> <span class="c1"># calculate first hidden layer activations (4x1)</span>
 <span class="n">h2</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">W2</span><span class="p">,</span> <span class="n">h1</span><span class="p">)</span> <span class="o">+</span> <span class="n">b2</span><span class="p">)</span> <span class="c1"># calculate second hidden layer activations (4x1)</span>
 <span class="n">out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">W3</span><span class="p">,</span> <span class="n">h2</span><span class="p">)</span> <span class="o">+</span> <span class="n">b3</span> <span class="c1"># output neuron (1x1)</span>
 </pre></div>
+</td></tr></table>
 
 <p>In the above code, <code>W1,W2,W3,b1,b2,b3</code> are the learnable parameters of the network. Notice also that instead of having a single input column vector, the variable <code>x</code> could hold an entire batch of training data (where each input example would be a column of <code>x</code>) and then all examples would be efficiently evaluated in parallel. Notice that the final Neural Network layer usually doesn't have an activation function (e.g. it represents a (real-valued) class score in a classification setting).</p>
 <blockquote>
