@@ -76,10 +76,10 @@ pages:
   - tensorflow:
     - 学习/tensorflow/如何选择优化器 optimizer.md
   - 深度学习:
-    - 学习/深度学习/主成分分析-2.md
+    - 学习/深度学习/02激活函数.md
+    - 学习/深度学习/04损失函数.md
     - 学习/深度学习/主成分分析.md
     - 学习/深度学习/最小二乘法.md
-    - 学习/深度学习/矩阵分解.md
     - 学习/深度学习/矩阵求导.md
   - 转载:
     - cs231n-ch:
@@ -196,6 +196,7 @@ pages:
       - 推荐/推荐框架/LibRec介绍文档/Introduction.md
       - 推荐/推荐框架/LibRec介绍文档/LibrecDocument.md
       - 推荐/推荐框架/LibRec介绍文档/Recommender.md
+    - 推荐/推荐框架/YouTube.md
 - 文章:
   - 文章/index.md
 - 日常:

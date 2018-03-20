@@ -2,152 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd812bb5-d92d-442c-ba5d-56d41b5654b8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/dl/28A308A65B43D79482C913803F349716.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/dl/4A3B4A39AB8E5C556359147B882B4788.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/dl/5D5166A3D3712E7C03AF74B1CCACBEAC.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/dl/62F8D6CAC0120E34CAC75B59A467B1D8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/dl/76BCC65FF39FB153D377EEF08FABEB16.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/dl/98F724EDF6695476F6B38F7F172B59F5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/dl/BE69409D8ECB330D775F9E6F1E99A239.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/google37146165abfb0ec3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/学习/深度学习/04损失函数.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/推荐/推荐框架/LibRec.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/推荐/推荐框架/LibRec介绍文档/AlgorithmList.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/推荐/推荐框架/LibRec介绍文档/CLIWalkthrough.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/推荐/推荐框架/LibRec介绍文档/ConfigurationList.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/推荐/推荐框架/LibRec介绍文档/Context.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/推荐/推荐框架/LibRec介绍文档/DataFileFormat.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/推荐/推荐框架/LibRec介绍文档/DataModel.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/推荐/推荐框架/LibRec介绍文档/Evaluator.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/推荐/推荐框架/LibRec介绍文档/FilmTrust.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/推荐/推荐框架/LibRec介绍文档/Filter.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/推荐/推荐框架/LibRec介绍文档/Introduction.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/推荐/推荐框架/LibRec介绍文档/LibrecDocument.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/推荐/推荐框架/LibRec介绍文档/Recommender.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/推荐/推荐框架/YouTube.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/推荐/推荐框架/index.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/google37146165abfb0ec3.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/深度学习/主成分分析-2.md" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/学习/深度学习/矩阵分解.md" afterPath="$PROJECT_DIR$/docs/推荐/个人理解的.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/Quiver Tutorial/0039E536-1343-4E82-908A-34B77B7ED2D9.png" afterPath="$PROJECT_DIR$/assets/images/Quiver Tutorial/0039E536-1343-4E82-908A-34B77B7ED2D9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/bg.svg" afterPath="$PROJECT_DIR$/assets/images/bg.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/machine.jpg" afterPath="$PROJECT_DIR$/assets/images/machine.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/name_cn.png" afterPath="$PROJECT_DIR$/assets/images/name_cn.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/owl.jpg" afterPath="$PROJECT_DIR$/assets/images/owl.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/perceptron.png" afterPath="$PROJECT_DIR$/assets/images/perceptron.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/bias-variance-model-complexity.png" afterPath="$PROJECT_DIR$/assets/images/posts/bias-variance-model-complexity.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/bias-variance-proof.png" afterPath="$PROJECT_DIR$/assets/images/posts/bias-variance-proof.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/bias-variance.png" afterPath="$PROJECT_DIR$/assets/images/posts/bias-variance.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/bitcoin-explained-1.png" afterPath="$PROJECT_DIR$/assets/images/posts/bitcoin-explained-1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/bitcoin-explained-10.png" afterPath="$PROJECT_DIR$/assets/images/posts/bitcoin-explained-10.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/bitcoin-explained-11.png" afterPath="$PROJECT_DIR$/assets/images/posts/bitcoin-explained-11.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/bitcoin-explained-2.gif" afterPath="$PROJECT_DIR$/assets/images/posts/bitcoin-explained-2.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/bitcoin-explained-3.png" afterPath="$PROJECT_DIR$/assets/images/posts/bitcoin-explained-3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/bitcoin-explained-4.png" afterPath="$PROJECT_DIR$/assets/images/posts/bitcoin-explained-4.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/bitcoin-explained-5.png" afterPath="$PROJECT_DIR$/assets/images/posts/bitcoin-explained-5.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/bitcoin-explained-6.png" afterPath="$PROJECT_DIR$/assets/images/posts/bitcoin-explained-6.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/bitcoin-explained-7.jpeg" afterPath="$PROJECT_DIR$/assets/images/posts/bitcoin-explained-7.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/bitcoin-explained-8.png" afterPath="$PROJECT_DIR$/assets/images/posts/bitcoin-explained-8.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/bitcoin-explained-9.png" afterPath="$PROJECT_DIR$/assets/images/posts/bitcoin-explained-9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/blockchain.png" afterPath="$PROJECT_DIR$/assets/images/posts/blockchain.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/bulls-eye-diagram.png" afterPath="$PROJECT_DIR$/assets/images/posts/bulls-eye-diagram.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/bulls-eye-label-diagram.png" afterPath="$PROJECT_DIR$/assets/images/posts/bulls-eye-label-diagram.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/directional_derivation.png" afterPath="$PROJECT_DIR$/assets/images/posts/directional_derivation.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/directional_derivation_definition.png" afterPath="$PROJECT_DIR$/assets/images/posts/directional_derivation_definition.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/exec.png" afterPath="$PROJECT_DIR$/assets/images/posts/exec.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/fork.png" afterPath="$PROJECT_DIR$/assets/images/posts/fork.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/function-calls.png" afterPath="$PROJECT_DIR$/assets/images/posts/function-calls.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/generator.png" afterPath="$PROJECT_DIR$/assets/images/posts/generator.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/gradient_definition.png" afterPath="$PROJECT_DIR$/assets/images/posts/gradient_definition.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/gradient_proof2.png" afterPath="$PROJECT_DIR$/assets/images/posts/gradient_proof2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/gradient_proof3.png" afterPath="$PROJECT_DIR$/assets/images/posts/gradient_proof3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/mac-chinese.png" afterPath="$PROJECT_DIR$/assets/images/posts/mac-chinese.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/mac-font.png" afterPath="$PROJECT_DIR$/assets/images/posts/mac-font.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/naivechain.png" afterPath="$PROJECT_DIR$/assets/images/posts/naivechain.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/nosql.png" afterPath="$PROJECT_DIR$/assets/images/posts/nosql.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/sketch.png" afterPath="$PROJECT_DIR$/assets/images/posts/sketch.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/source.png" afterPath="$PROJECT_DIR$/assets/images/posts/source.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/spark-glossary.png" afterPath="$PROJECT_DIR$/assets/images/posts/spark-glossary.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/tendermint-abci.png" afterPath="$PROJECT_DIR$/assets/images/posts/tendermint-abci.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/tendermint-state-machine.png" afterPath="$PROJECT_DIR$/assets/images/posts/tendermint-state-machine.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/texstudio.png" afterPath="$PROJECT_DIR$/assets/images/posts/texstudio.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/vim-python-ide-screenshot.png" afterPath="$PROJECT_DIR$/assets/images/posts/vim-python-ide-screenshot.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/vim-python-ide-tmux.png" afterPath="$PROJECT_DIR$/assets/images/posts/vim-python-ide-tmux.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/winedt.png" afterPath="$PROJECT_DIR$/assets/images/posts/winedt.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/posts/yield-from.png" afterPath="$PROJECT_DIR$/assets/images/posts/yield-from.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/rails.jpg" afterPath="$PROJECT_DIR$/assets/images/rails.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/tag.jpg" afterPath="$PROJECT_DIR$/assets/images/tag.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/think.jpg" afterPath="$PROJECT_DIR$/assets/images/think.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/tools.jpg" afterPath="$PROJECT_DIR$/assets/images/tools.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/x.gif" afterPath="$PROJECT_DIR$/assets/images/x.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/1AA2D38B130E8EB6B4FCA11E6FD536FC.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/1AA2D38B130E8EB6B4FCA11E6FD536FC.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/1C2F2B8D41CE8A162010C55DC174AA82.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/1C2F2B8D41CE8A162010C55DC174AA82.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/1FEC91E3C19437FA1A142526EF7D3472.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/1FEC91E3C19437FA1A142526EF7D3472.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/242C54A98F0B61CA36D87C702C3F2372.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/242C54A98F0B61CA36D87C702C3F2372.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/319CEC768D2D05E4AF569A3635F4D14E.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/319CEC768D2D05E4AF569A3635F4D14E.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/37A328214BFC9BDB75F73A5CA3EABE17.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/37A328214BFC9BDB75F73A5CA3EABE17.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/3A779DD6C1FE66C388F69A77C911B5C8.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/3A779DD6C1FE66C388F69A77C911B5C8.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/4145690EACEA8CA4F1B5760EE0B77D09.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/4145690EACEA8CA4F1B5760EE0B77D09.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/463BD2513E78D91E4336BD3E977CC681.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/463BD2513E78D91E4336BD3E977CC681.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/492B41A3AB2E81224EBCE0B2D275B99A (1).jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/492B41A3AB2E81224EBCE0B2D275B99A (1).jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/492B41A3AB2E81224EBCE0B2D275B99A.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/492B41A3AB2E81224EBCE0B2D275B99A.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/4D873FCCD7FA0C25450A186D82C6DF52.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/4D873FCCD7FA0C25450A186D82C6DF52.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/4EE05BAB3CE8C243E39BFF13C16B1AC3.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/4EE05BAB3CE8C243E39BFF13C16B1AC3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/52AEA613A2327DCFC85873E5106194A1.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/52AEA613A2327DCFC85873E5106194A1.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/567AB2A67AC7AB594144F91ABD9E1164.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/567AB2A67AC7AB594144F91ABD9E1164.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/5B9FEF5E943B82B179028AC100CBF468.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/5B9FEF5E943B82B179028AC100CBF468.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/61A4BB5869A472F901258735BEAF70B0.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/61A4BB5869A472F901258735BEAF70B0.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/6311003EC0AB4B6090F449FF4F02ED59.png" afterPath="$PROJECT_DIR$/assets/images/深度学习/6311003EC0AB4B6090F449FF4F02ED59.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/66BEABE38971597F36AB4F7BBF788AA5.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/66BEABE38971597F36AB4F7BBF788AA5.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/67EA539D3B60F74AA93BA6ABD6958D08.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/67EA539D3B60F74AA93BA6ABD6958D08.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/6876282D3A28997E054FBECBB8C251EF.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/6876282D3A28997E054FBECBB8C251EF.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/6982652D0714C2C2B1DE20D04979AF23.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/6982652D0714C2C2B1DE20D04979AF23.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/69D88091D516A0064551D8F2881A2EDE.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/69D88091D516A0064551D8F2881A2EDE.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/72A253894762F3360E735532E86FBBF4.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/72A253894762F3360E735532E86FBBF4.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/73A584A79F6B881C96F7D6EBE1488B54.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/73A584A79F6B881C96F7D6EBE1488B54.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/745EFEBF20DB540F740231A40BDDB93F.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/745EFEBF20DB540F740231A40BDDB93F.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/75D505A58D5B23BD4ED7207C087B5F04.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/75D505A58D5B23BD4ED7207C087B5F04.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/76D9BCEC64BFCC5381ECC2E3E1AE31AE.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/76D9BCEC64BFCC5381ECC2E3E1AE31AE.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/7895887E9B9E285689A63D381E0F1DED.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/7895887E9B9E285689A63D381E0F1DED.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/88CD04F0F7824346A051B9899AD4AD0C.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/88CD04F0F7824346A051B9899AD4AD0C.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/8D90FF4FA2A8A73A23B6D3C61E0892AA.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/8D90FF4FA2A8A73A23B6D3C61E0892AA.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/9855D67C9F3647DC082A83D06F277494.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/9855D67C9F3647DC082A83D06F277494.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/9AE45D505BB5FA976AC76A42B6D89227.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/9AE45D505BB5FA976AC76A42B6D89227.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/9D5E659DF66FC15E23F2030FC56D7E41.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/9D5E659DF66FC15E23F2030FC56D7E41.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/B1A76A5DD5CBF7038828C6B8B2F27DA3.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/B1A76A5DD5CBF7038828C6B8B2F27DA3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/B912D0B49B333C84810B9F42FDC2C371.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/B912D0B49B333C84810B9F42FDC2C371.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/B96C0EBC0E38C68850DC072A41D4144B.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/B96C0EBC0E38C68850DC072A41D4144B.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/B9DA6A4845C16156E47AD335D18EA6E0.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/B9DA6A4845C16156E47AD335D18EA6E0.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/BF3AE035A8B7E2564F73AED4603E1520.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/BF3AE035A8B7E2564F73AED4603E1520.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/D501436FE83B8D4B25450A022482D5A4.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/D501436FE83B8D4B25450A022482D5A4.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/DA34EBDDA776378A81AB97551EC955E5.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/DA34EBDDA776378A81AB97551EC955E5.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/DB0C770D8DD55E5A433B6306D7085BF3.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/DB0C770D8DD55E5A433B6306D7085BF3.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/DB20D997144CF9996852C476A8DAD68F.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/DB20D997144CF9996852C476A8DAD68F.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/E3BB7229FE186AD66453CB55DC592D2E.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/E3BB7229FE186AD66453CB55DC592D2E.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/E3F2CDC77D07F2B67E553E5509E9DC00.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/E3F2CDC77D07F2B67E553E5509E9DC00.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/E578D1F44B5105769765DA185C78FA67.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/E578D1F44B5105769765DA185C78FA67.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/EF5167A0E01E8F9A623E79F0ABEFCF09.png" afterPath="$PROJECT_DIR$/assets/images/深度学习/EF5167A0E01E8F9A623E79F0ABEFCF09.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/EFCC9AD8E9BC39738EE632040917A49D.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/EFCC9AD8E9BC39738EE632040917A49D.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/EFFB9F8B22BE1164FFAC6ECA32189919.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/EFFB9F8B22BE1164FFAC6ECA32189919.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/F08BE5320B509F0294C2FFA7A78149F0.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/F08BE5320B509F0294C2FFA7A78149F0.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/深度学习/F1D8D0B4A5EC505A658C80C322D4AE65.jpg" afterPath="$PROJECT_DIR$/assets/images/深度学习/F1D8D0B4A5EC505A658C80C322D4AE65.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/python/Test1.py" afterPath="$PROJECT_DIR$/diary/src/python/Test1.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/python/paperfromjupyter/__init__.py" afterPath="$PROJECT_DIR$/diary/src/python/paperfromjupyter/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/python/paperfromjupyter/data.csv" afterPath="$PROJECT_DIR$/diary/src/python/paperfromjupyter/data.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/python/paperfromjupyter/data2.csv" afterPath="$PROJECT_DIR$/diary/src/python/paperfromjupyter/data2.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/python/paperfromjupyter/handsonml.py" afterPath="$PROJECT_DIR$/diary/src/python/paperfromjupyter/handsonml.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/python/paperfromjupyter/test2.py" afterPath="$PROJECT_DIR$/diary/src/python/paperfromjupyter/test2.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/tensorflow/resources/28A308A65B43D79482C913803F349716.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/tensorflow/resources/4A3B4A39AB8E5C556359147B882B4788.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/tensorflow/resources/5D5166A3D3712E7C03AF74B1CCACBEAC.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/tensorflow/resources/62F8D6CAC0120E34CAC75B59A467B1D8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/tensorflow/resources/76BCC65FF39FB153D377EEF08FABEB16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/tensorflow/resources/98F724EDF6695476F6B38F7F172B59F5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/tensorflow/resources/BE69409D8ECB330D775F9E6F1E99A239.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/学习/深度学习/05优化方法" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/images/dl/28A308A65B43D79482C913803F349716.png" afterPath="$PROJECT_DIR$/docs/学习/深度学习/resources/28A308A65B43D79482C913803F349716.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/images/dl/4A3B4A39AB8E5C556359147B882B4788.gif" afterPath="$PROJECT_DIR$/docs/学习/深度学习/resources/4A3B4A39AB8E5C556359147B882B4788.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/images/dl/5D5166A3D3712E7C03AF74B1CCACBEAC.gif" afterPath="$PROJECT_DIR$/docs/学习/深度学习/resources/5D5166A3D3712E7C03AF74B1CCACBEAC.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/images/dl/62F8D6CAC0120E34CAC75B59A467B1D8.png" afterPath="$PROJECT_DIR$/docs/学习/深度学习/resources/62F8D6CAC0120E34CAC75B59A467B1D8.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/images/dl/76BCC65FF39FB153D377EEF08FABEB16.png" afterPath="$PROJECT_DIR$/docs/学习/深度学习/resources/76BCC65FF39FB153D377EEF08FABEB16.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/images/dl/98F724EDF6695476F6B38F7F172B59F5.png" afterPath="$PROJECT_DIR$/docs/学习/深度学习/resources/98F724EDF6695476F6B38F7F172B59F5.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/images/dl/BE69409D8ECB330D775F9E6F1E99A239.png" afterPath="$PROJECT_DIR$/docs/学习/深度学习/resources/BE69409D8ECB330D775F9E6F1E99A239.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/学习/深度学习/主成分分析.md" afterPath="$PROJECT_DIR$/docs/学习/深度学习/201PCA主成分分析.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/学习/深度学习/最小二乘法.md" afterPath="$PROJECT_DIR$/docs/学习/基础知识/最小二乘法.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/学习/深度学习/矩阵求导.md" afterPath="$PROJECT_DIR$/docs/学习/基础知识/矩阵求导.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jupyters/others/handson-ml" afterPath="$PROJECT_DIR$/jupyters/others/handson-ml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/ToDo.md" afterPath="$PROJECT_DIR$/docs/ToDo.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/书籍/机器学习实战/04.朴素贝叶斯.md" afterPath="$PROJECT_DIR$/docs/书籍/机器学习实战/04.朴素贝叶斯.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/学习/深度学习/矩阵求导.md" afterPath="$PROJECT_DIR$/docs/学习/深度学习/矩阵求导.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/material/partials/integrations/analytics.html" afterPath="$PROJECT_DIR$/material/partials/integrations/analytics.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mkdocs.bak.yml" afterPath="$PROJECT_DIR$/mkdocs.bak.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mkdocs.yml" afterPath="$PROJECT_DIR$/mkdocs.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/sitemap.xml" afterPath="$PROJECT_DIR$/site/sitemap.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/学习/转载/cs231n-ch/ch-convolutional-networks/index.html" afterPath="$PROJECT_DIR$/site/学习/转载/cs231n-ch/ch-convolutional-networks/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/学习/转载/cs231n-en/en-convolutional-networks/index.html" afterPath="$PROJECT_DIR$/site/学习/转载/cs231n-en/en-convolutional-networks/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -163,32 +39,19 @@
     <SUITE FILE_PATH="coverage/Diary$server.coverage" NAME="server Coverage Results" MODIFIED="1519026357862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Editor" />
     <SUITE FILE_PATH="coverage/Diary$Test1.coverage" NAME="Test1 Coverage Results" MODIFIED="1519356574170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diary/src" />
     <SUITE FILE_PATH="coverage/Diary$handsonml.coverage" NAME="handsonml Coverage Results" MODIFIED="1520944177407" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/python/paperfromjupyter" />
-    <SUITE FILE_PATH="coverage/Diary$GetAll.coverage" NAME="GetAll Coverage Results" MODIFIED="1521377684708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diary/src" />
+    <SUITE FILE_PATH="coverage/Diary$GetAll.coverage" NAME="GetAll Coverage Results" MODIFIED="1521554373003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/diary/src" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="02激活函数.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/学习/深度学习/02激活函数.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="225">
-                <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="如何选择优化器 optimizer.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docs/学习/tensorflow/如何选择优化器 optimizer.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="225">
-                <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
+      <file leaf-file-name="GetAll.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/diary/src/GetAll.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="855">
+              <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+              <folding>
+                <element signature="e#159#168#0" expanded="true" />
+                <element signature="e#1510#1908#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -266,7 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/docs/转载/cs231n-ch/2018-02-21-ch-google_cloud_tutorial.md" />
         <option value="$PROJECT_DIR$/docs/机器学习实战/01.机器学习基础.md" />
         <option value="$PROJECT_DIR$/docs/books/DeepLearning.md" />
         <option value="$PROJECT_DIR$/docs/深度学习/最小二乘法.md" />
@@ -317,6 +179,7 @@
         <option value="$PROJECT_DIR$/docs/推荐/推荐框架/index.md" />
         <option value="$PROJECT_DIR$/docs/学习/深度学习/损失函数.md" />
         <option value="$PROJECT_DIR$/docs/学习/深度学习/矩阵求导.md" />
+        <option value="$PROJECT_DIR$/docs/学习/tensorflow/如何选择优化器 optimizer.md" />
       </list>
     </option>
   </component>
@@ -394,6 +257,11 @@
             <path>
               <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
               <item name="Diary" type="462c0819:PsiDirectoryNode" />
+              <item name="diary" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Diary" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -407,15 +275,7 @@
               <item name="Diary" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
               <item name="学习" type="462c0819:PsiDirectoryNode" />
-              <item name="tensorflow" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Diary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Diary" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="学习" type="462c0819:PsiDirectoryNode" />
-              <item name="tensorflow" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="深度学习" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -430,18 +290,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/学习/深度学习/resources" />
       <recent name="$PROJECT_DIR$/assets/images/dl" />
       <recent name="$PROJECT_DIR$/docs" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/docs/推荐/推荐框架/LibRec" />
-      <recent name="$PROJECT_DIR$/diary/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/学习/基础知识" />
+      <recent name="$PROJECT_DIR$/docs/学习/深度学习" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/docs" />
       <recent name="$PROJECT_DIR$/assets" />
-      <recent name="$PROJECT_DIR$/docs/学习/深度学习/resources" />
-      <recent name="$PROJECT_DIR$/docs/学习/深度学习" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -737,16 +597,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/学习/转载/example2/History-API.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="345">
-            <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/学习/转载/example2/create-my-blog-with-jekyll.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -974,17 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/diary/src/GetAll.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-          <folding>
-            <element signature="e#159#168#0" expanded="true" />
-            <element signature="e#1510#1908#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/推荐/推荐框架/LibRec介绍文档/FilmTrust.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1139,39 +978,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/学习/深度学习/矩阵求导.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="180">
-            <caret line="12" column="3" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/学习/深度学习/主成分分析.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="232">
-            <caret line="270" column="0" lean-forward="true" selection-start-line="270" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/学习/深度学习/最小二乘法.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-398">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/推荐/推荐框架/YouTube.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1213,6 +1019,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docs/学习/深度学习/05优化方法">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="195">
+            <caret line="26" column="3" lean-forward="true" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/docs/学习/深度学习/02激活函数.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1224,14 +1047,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/学习/tensorflow/如何选择优化器 optimizer.md">
+    <entry file="file://$PROJECT_DIR$/docs/学习/深度学习/05优化方法.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="225">
-            <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <first_editor relative-caret-position="465">
+            <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/学习/基础知识/矩阵求导.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-4118">
+            <caret line="12" column="3" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/学习/基础知识/最小二乘法.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-221">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/学习/深度学习/201PCA主成分分析.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="3948">
+            <caret line="270" column="0" lean-forward="false" selection-start-line="270" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diary/src/GetAll.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <element signature="e#159#168#0" expanded="true" />
+            <element signature="e#1510#1908#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
