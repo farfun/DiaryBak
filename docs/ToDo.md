@@ -50,3 +50,18 @@ https://cyent.github.io/markdown-with-mkdocs-material/
 
 https://github.com/ageron/handson-ml
 
+
+# 博客生成
+https://wklchris.github.io/Data-science-support-blog-skills.html
+
+https://github.com/ctgk/PRML/blob/master/notebooks/ch09_Mixture_Models_and_EM.ipynb
+https://github.com/ugik/notebooks
+https://github.com/explosion/spacy-notebooks
+https://github.com/ageron/handson-ml
+https://github.com/googledatalab/notebooks
+https://github.com/search?o=desc&q=notebooks&s=stars&type=Repositories&utf8=%E2%9C%93
+https://github.com/ecomfe/spec
+
+
+
+

@@ -12,10 +12,14 @@ extra:
     type: linkedin
 extra_javascript:
 - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
+google_analytics:
+- UA-115879584-1
+- auto
 markdown_extensions:
 - markdown.extensions.admonition
 - markdown.extensions.codehilite:
     guess_lang: false
+    linenums: true
 - markdown.extensions.def_list
 - markdown.extensions.footnotes
 - markdown.extensions.meta
@@ -41,7 +45,6 @@ markdown_extensions:
 pages:
 - Home: ToDo.md
 - Home:
-  - AboutMe.md
   - index.md
   - Nothing.md
   - ToDo.md
@@ -175,9 +178,28 @@ pages:
     - 工具/常用工具/10分钟上手Latex.md
     - 工具/常用工具/10分钟上手Pandas.md
     - 工具/常用工具/10分钟上手Python.md
+- 推荐:
+  - 推荐/个人理解的.md
+  - 推荐框架:
+    - 推荐/推荐框架/index.md
+    - 推荐/推荐框架/LibRec.md
+    - LibRec介绍文档:
+      - 推荐/推荐框架/LibRec介绍文档/AlgorithmList.md
+      - 推荐/推荐框架/LibRec介绍文档/CLIWalkthrough.md
+      - 推荐/推荐框架/LibRec介绍文档/ConfigurationList.md
+      - 推荐/推荐框架/LibRec介绍文档/Context.md
+      - 推荐/推荐框架/LibRec介绍文档/DataFileFormat.md
+      - 推荐/推荐框架/LibRec介绍文档/DataModel.md
+      - 推荐/推荐框架/LibRec介绍文档/Evaluator.md
+      - 推荐/推荐框架/LibRec介绍文档/FilmTrust.md
+      - 推荐/推荐框架/LibRec介绍文档/Filter.md
+      - 推荐/推荐框架/LibRec介绍文档/Introduction.md
+      - 推荐/推荐框架/LibRec介绍文档/LibrecDocument.md
+      - 推荐/推荐框架/LibRec介绍文档/Recommender.md
 - 文章:
   - 文章/index.md
 - 日常:
+  - 日常/AboutMe.md
   - 日常/index.md
   - test:
     - 日常/test/testtest.md

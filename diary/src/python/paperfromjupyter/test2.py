@@ -14,22 +14,26 @@ DIR_ROOT = "/Users/weidian/Documents/Diary/"
 
 
 # Move the images under "/ipynb/<fname>_files" to "/assets/ipynb-images"
-def moveallfiles(origindir, destinationdir, filename):
-    if not os.path.exists(origindir):
+def move_image(from_dir, to_dir):
+    print ("##################")
+    print (from_dir + "\t" + to_dir)
+    print ("##################")
+    if not os.path.exists(from_dir):
+        print "输入路径不存在"
         return
-    # Delete all image files which contain "fname" in their filename
-    for file in os.listdir(destinationdir):
-        if file[:len(filename)] == filename:
-            os.remove(os.path.join(destinationdir, file))
-    for file in os.listdir(origindir):
-        originfile = os.path.join(origindir, file)
-        destinationfile = os.path.join(destinationdir, file)
+    if not os.path.exists(to_dir):
+        os.mkdir(to_dir)
+
+    #
+    for file_name in os.listdir(from_dir):
+        from_file = os.path.join(from_dir, file_name)
+        to_file = os.path.join(to_dir, file_name)
         # If it exists, then delete it and then conduct the movement
-        if os.path.isfile(destinationfile):
-            os.remove(destinationfile)
-        shutil.move(originfile, destinationfile)
-        # Delete the origin image path
-        # shutil.rmtree(ipynb_image_path)
+        if os.path.isfile(to_file):
+            os.remove(to_file)
+        shutil.move(from_file, to_file)
+
+    shutil.rmtree(from_dir)
 
 
 # Convert HTML table to markdown table
@@ -112,30 +116,32 @@ if __name__ == '__main__':
             # post_path = os.path.join(thepath, r'_posts/{}.md').format(date + '-' + fname)
 
             # Convert ipynb to markdown
-            os.system('jupyter nbconvert --to markdown '.format(from_file))
+            os.system('jupyter nbconvert --to markdown ' + from_file)
             # Move it to "/_posts" and renameit
 
-            shutil.move(from_file.replace(".ipynb", ".md"), to_file)
             if os.path.isfile(to_file):
                 os.remove(to_file)
-                # os.rename(os.path.join(thepath, r'_posts/{}.md').format(fname), post_path)
 
-                # moveallfiles(ipynb_image_path, destination_path, fname)
+            image_from = os.path.join(DIR_ROOT, os.path.dirname(from_file), file_name + "_files")
+            image_to = os.path.join(DIR_ROOT, to_path, "resources")
+            move_image(image_from, image_to)
 
-                # with io.open(post_path, 'r', encoding='utf8') as f:
-                #     fstr = f.read()
-                #
-                # # Replace the image link strings
-                # fstr = re.compile(r'{}_files'.format(fname)).sub(r'https://wklchris.github.io/assets/ipynb-images', fstr)
-                # fstr = headstr + fstr
-                #
-                # tablehtmllst = re.compile(r'<table>[\s\S]*?</table>').findall(fstr)
-                # if tablehtmllst:
-                #     for
-                # table in tablehtmllst:
-                # fstr = re.compile(table).sub(transfertable(table), fstr)
-                #
-                # os.remove(post_path)
-                # fstr = re.sub(r"\n{5,}", "\n", fstr)
-                # with io.open(post_path, 'w', encoding='utf8') as f:
-                #     f.write(fstr)
+            md_from_file = from_file.replace(".ipynb", ".md")
+            md_to_file = to_file
+            # shutil.move(from_file.replace(".ipynb", ".md"), to_file)
+
+            content = ""
+            with io.open(md_from_file, 'r', encoding='utf8') as f:
+                content = f.read()
+            content = re.compile(r'{}_files'.format(file_name)).sub(r'resources', content)
+            #
+            tables = re.compile(r'<table[\s\S]*?</table>').findall(content)
+            if tables:
+                for table in tables:
+                    pass
+                    # content = re.compile(table).sub(transfertable(table), content)
+
+            # os.remove(post_path)
+            content = re.sub(r"\n{5,}", "\n", content)
+            with io.open(md_to_file, 'w', encoding='utf8') as f:
+                f.write(content)
