@@ -29,6 +29,12 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>https://1007530194.github.io/Diary//主题/</loc>
+     <lastmod>2018-05-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
@@ -126,6 +132,12 @@
     <url>
      <loc>https://1007530194.github.io/Diary//推荐/个人理解的/</loc>
      <lastmod>2018-05-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://1007530194.github.io/Diary/</loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
